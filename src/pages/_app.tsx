@@ -1,15 +1,22 @@
 import "@/styles/globals.css";
-import { Container } from "@mui/material";
 import type { AppProps } from "next/app";
 import Header from "@/modules/Header";
+import { Montserrat } from "next/font/google";
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+});
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
+      <style jsx global>{`
+        html {
+          font-family: ${montserrat.style.fontFamily};
+        }
+      `}</style>
       <Header />
-      <Container>
-        <Component {...pageProps} />
-      </Container>
+      <Component {...pageProps} />
     </>
   );
 }

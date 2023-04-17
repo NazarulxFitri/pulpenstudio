@@ -1,23 +1,28 @@
-import { Box } from "@mui/material";
-import { Montserrat } from "next/font/google";
+import { Box, styled } from "@mui/material";
+import Link from "next/link";
 
-const montserrat = Montserrat({ subsets: ["latin"] });
+const LinkMenu = styled(Link)(({ theme }) => ({
+  alignSelf: "center",
+  color: "#333",
+  fontWeight: 800,
+  margin: "0 8px",
+  textDecoration: "none",
+}));
 
 const Header = () => {
   return (
-    <Box px={2} display="flex" sx={{ boxShadow: "0 4px 8px #00e4ff" }}>
-      <Box>
-        <h1
-          className={montserrat.className}
-          style={{ textShadow: "1px 4px #898999", margin: "8px 0" }}
-        >
-          <span style={{ color: "#FFF" }}>D</span>
-          <span style={{ color: "#D413D4" }}>O</span>
-          <span style={{ color: "#00E4FF" }}>C</span>
-          <span style={{ color: "#FFF" }}>K</span>
-          <span style={{ color: "#D413D4" }}>E</span>
-          <span style={{ color: "#00E4FF" }}>T</span>
-        </h1>
+    <Box
+      display="flex"
+      px={{ xs: 1, md: 2, lg: 6 }}
+      sx={{ boxShadow: "1px 1px 10px #E0E0E0" }}
+    >
+      <span
+        style={{ fontSize: "48px", fontWeight: "800" }}
+        dangerouslySetInnerHTML={{ __html: "Lumie" }}
+      />
+      <Box display="flex" sx={{ margin: "0 0 0 auto" }}>
+        <LinkMenu href="/e-invite">e-Invite</LinkMenu>
+        <LinkMenu href="/e-card">e-Card</LinkMenu>
       </Box>
     </Box>
   );

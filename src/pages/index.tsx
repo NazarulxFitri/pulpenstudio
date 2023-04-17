@@ -1,8 +1,9 @@
-import Head from "next/head";
-import Image from "next/image";
-import styles from "@/styles/Home.module.css";
-import { Box, Container } from "@mui/material";
+import { BoxContainer } from "@/components";
 
 export default function Home() {
-  return <Container></Container>;
+  return (
+    <BoxContainer>
+      <h1>Home</h1>
+    </BoxContainer>
+  );
 }
