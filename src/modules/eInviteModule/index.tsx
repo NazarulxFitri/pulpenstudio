@@ -1,3 +1,5 @@
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 import {
   BoxContainer,
   CardSelection,
@@ -6,41 +8,44 @@ import {
   Popup,
 } from "@/components";
 import Button from "@/components/Button";
-import useAddTest from "@/data/useAddTest";
+import usePostAddTest from "@/data/postAddTest";
 import useCheckWhiteSpace from "@/data/useCheckWhiteSpace";
 import useCheckCapitalCase from "@/data/useCheckCapitalCase";
 import { Box, TextField } from "@mui/material";
-import { useRouter } from "next/router";
-import { useState } from "react";
+
+const cardData = [
+  {
+    name: "Fire Red",
+    id: "001",
+  },
+  {
+    name: "Ocean Blue",
+    id: "002",
+  },
+  {
+    name: "Leaf Green",
+    id: "003",
+  },
+  {
+    name: "Rock brown",
+    id: "004",
+  },
+];
 
 const EInviteModule = () => {
   const router = useRouter();
   const { layoutid } = router.query;
   const [itemName, setName] = useState<string>("");
-  const [itemLayout, setItemLayout] = useState<string>("");
+  const { action, loading } = usePostAddTest(itemName, layoutid as string);
   const [showPopup, setShowPopup] = useState(false);
   const whiteSpace = useCheckWhiteSpace(itemName);
   const capitalCase = useCheckCapitalCase(itemName);
   const disabled = !!whiteSpace || !!capitalCase || !itemName;
 
-  const cardData = [
-    {
-      name: "Fire Red",
-      id: "001",
-    },
-    {
-      name: "Ocean Blue",
-      id: "002",
-    },
-    {
-      name: "Leaf Green",
-      id: "003",
-    },
-    {
-      name: "Rock brown",
-      id: "004",
-    },
-  ];
+  const onSuccess = async () => {
+    await action();
+    setShowPopup(true);
+  };
 
   function handleChange(e: any) {
     e.preventDefault();
@@ -48,10 +53,7 @@ const EInviteModule = () => {
   }
 
   function handleClickButton() {
-    if (disabled) return null;
-    // @ts-ignore
-    useAddTest(itemName, layoutid as string);
-    setShowPopup(true);
+    onSuccess();
   }
 
   return (
