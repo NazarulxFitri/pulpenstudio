@@ -26,7 +26,7 @@ export default function useGetTest() {
 
   useEffect(() => {
     getValue();
-  }, []);
+  });
 
   return {
     data,

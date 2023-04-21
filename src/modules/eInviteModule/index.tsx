@@ -49,17 +49,16 @@ const EInviteModule = () => {
 
   function handleClickButton() {
     if (disabled) return null;
-    else {
-      useAddTest(itemName, layoutid as string);
-      setShowPopup(true);
-    }
+    // @ts-ignore
+    useAddTest(itemName, layoutid as string);
+    setShowPopup(true);
   }
 
   return (
     <BoxContainer>
       <h1>e-Invite</h1>
       <p style={{ marginTop: "16px" }}>
-        Let's start create your e-Invite. Choose your selections below !
+        Let&apos;s start create your e-Invite. Choose your selections below !
       </p>
       <Box>
         <Box display="flex" mt={2}>
@@ -88,8 +87,8 @@ const EInviteModule = () => {
           <h4>Choose layout</h4>
         </Box>
         <Box display="flex" mt={1} gap={2}>
-          {cardData.map((card) => (
-            <CardSelection {...{ card }} />
+          {cardData.map((card, idx) => (
+            <CardSelection {...{ card }} key={`Lumie | ${card} + ${idx}`} />
           ))}
         </Box>
       </Box>
