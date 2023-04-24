@@ -1,17 +1,16 @@
-import { collection, addDoc } from "firebase/firestore";
 import db from "../../services/firebaseApp";
 import { useState } from "react";
+import { ref, set } from "firebase/database";
 
-export default function usePostAddTest(itemName: string, itemLayout: string) {
+export default function usePostAddEinvite(name: string, layout: string) {
   const [loading, setLoading] = useState(false);
-  const dbInstance = collection(db, "eInviteApp");
 
   const action = async () => {
     try {
       setLoading(true);
-      const result = addDoc(dbInstance, {
-        itemName: itemName,
-        itemLayout: itemLayout,
+      set(ref(db, "eInviteApp/" + name), {
+        name: name,
+        layout: layout,
       });
     } catch (err) {
       console.log(err);

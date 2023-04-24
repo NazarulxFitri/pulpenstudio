@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import {
   BoxContainer,
   CardSelection,
@@ -8,10 +8,12 @@ import {
   Popup,
 } from "@/components";
 import Button from "@/components/Button";
-import usePostAddTest from "@/data/postAddTest";
+import usePostAddEinvite from "@/data/postAddEinvite";
 import useCheckWhiteSpace from "@/data/useCheckWhiteSpace";
 import useCheckCapitalCase from "@/data/useCheckCapitalCase";
 import { Box, TextField } from "@mui/material";
+import useGetEinvite from "@/data/useGetEinvite";
+import useCheckExistence from "@/data/useCheckExistence";
 
 const cardData = [
   {
@@ -36,8 +38,11 @@ const EInviteModule = () => {
   const router = useRouter();
   const { layoutid } = router.query;
   const [itemName, setName] = useState<string>("");
-  const { action, loading } = usePostAddTest(itemName, layoutid as string);
+  const { data } = useGetEinvite();
+  const { action, loading } = usePostAddEinvite(itemName, layoutid as string);
   const [showPopup, setShowPopup] = useState(false);
+  // @ts-ignore
+  const existence = useCheckExistence(data, itemName);
   const whiteSpace = useCheckWhiteSpace(itemName);
   const capitalCase = useCheckCapitalCase(itemName);
   const disabled = !!whiteSpace || !!capitalCase || !itemName;
@@ -80,6 +85,9 @@ const EInviteModule = () => {
           )}
           {!!capitalCase && (
             <ErrorMessage message="Please make sure no capital case" />
+          )}
+          {!!existence && (
+            <ErrorMessage message="Please try a different name. This name has been used" />
           )}
         </Box>
       </Box>

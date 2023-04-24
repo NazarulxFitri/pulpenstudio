@@ -1,68 +1,48 @@
-import { BoxContainer } from "@/components";
-import { useRouter } from "next/router";
-import { Box, Grid, TextField } from "@mui/material";
-import useGetTest from "@/data/useGetTest";
-import Layout1 from "@/assets/einvite/layout-1";
-import Layout2 from "@/assets/einvite/layout-2";
-import Layout3 from "@/assets/einvite/layout-3";
 import { useState } from "react";
+import { BoxContainer, TitleForm, DescriptionForm } from "@/components";
+import { useRouter } from "next/router";
+import { Grid } from "@mui/material";
+import useGetEinvite from "@/data/useGetEinvite";
+import useListLayout from "@/data/useListLayout";
 
 const EinviteId = () => {
   const router = useRouter();
   const eInviteId = router.query.eInviteId;
-  const { data } = useGetTest();
-  // @ts-ignore
-  const item = data?.find((i) => i.itemName === eInviteId);
-
+  const { data: item } = useGetEinvite(eInviteId as string);
   const [title1, setTitle1] = useState("");
   const [title1Color, setTitle1Color] = useState("");
+  const [title1Size, setTitle1Size] = useState("");
+  const [title1Shadow, setTitle1Shadow] = useState("");
   const [title2, setTitle2] = useState("");
   const [title2Color, setTitle2Color] = useState("");
+  const [title2Size, setTitle2Size] = useState("");
   const [description1, setDescription1] = useState("");
+  const [description1Color, setDescription1Color] = useState("");
+  const [description1Size, setDescription1Size] = useState("");
   const [description2, setDescription2] = useState("");
+  const [description2Color, setDescription2Color] = useState("");
+  const [description2Size, setDescription2Size] = useState("");
   const [description3, setDescription3] = useState("");
-
-  const listLayout = {
-    "001": (
-      <Layout1
-        {...{
-          title1,
-          title1Color,
-          title2,
-          title2Color,
-          description1,
-          description2,
-          description3,
-        }}
-      />
-    ),
-    "002": (
-      <Layout2
-        {...{
-          title1,
-          title1Color,
-          title2,
-          title2Color,
-          description1,
-          description2,
-          description3,
-        }}
-      />
-    ),
-    "003": (
-      <Layout3
-        {...{
-          title1,
-          title1Color,
-          title2,
-          title2Color,
-          description1,
-          description2,
-          description3,
-        }}
-      />
-    ),
-  };
+  const [description3Color, setDescription3Color] = useState("");
+  const [description3Size, setDescription3Size] = useState("");
+  const listLayout = useListLayout(
+    title1,
+    title1Color,
+    title1Size,
+    title1Shadow,
+    title2,
+    title2Color,
+    title2Size,
+    description1,
+    description1Color,
+    description1Size,
+    description2,
+    description2Color,
+    description2Size,
+    description3,
+    description3Color,
+    description3Size
+  );
 
   return (
     <BoxContainer fullWidth={true}>
@@ -75,73 +55,53 @@ const EinviteId = () => {
         >
           <Grid container rowSpacing={2}>
             <Grid item xs={12}>
-              <TextField
-                label="Title 1"
-                fullWidth
-                onChange={(e) => {
-                  setTitle1(e.target.value);
-                }}
+              <TitleForm
+                accordionTitle="Title one"
+                setTitle={setTitle1}
+                setTitleColor={setTitle1Color}
+                setTitleSize={setTitle1Size}
+                setTitleShadow={setTitle1Shadow}
               />
             </Grid>
             <Grid item xs={12}>
-              <TextField
-                label="Title 1 Color (Enter color code)"
-                fullWidth
-                onChange={(e) => {
-                  setTitle1Color(e.target.value);
-                }}
+              <TitleForm
+                accordionTitle="Title two"
+                setTitle={setTitle2}
+                setTitleColor={setTitle2Color}
+                setTitleSize={setTitle2Size}
+                setTitleShadow={setTitle1Shadow}
+              />
+            </Grid>
+
+            <Grid item xs={12}>
+              <DescriptionForm
+                accordionTitle="Description one"
+                setDescription={setDescription1}
+                setDescriptionColor={setDescription1Color}
+                setDescriptionSize={setDescription1Size}
               />
             </Grid>
             <Grid item xs={12}>
-              <TextField
-                label="Title 2"
-                fullWidth
-                onChange={(e) => {
-                  setTitle2(e.target.value);
-                }}
+              <DescriptionForm
+                accordionTitle="Description two"
+                setDescription={setDescription2}
+                setDescriptionColor={setDescription2Color}
+                setDescriptionSize={setDescription2Size}
               />
             </Grid>
             <Grid item xs={12}>
-              <TextField
-                label="Title 2 Color (Enter color code)"
-                fullWidth
-                onChange={(e) => {
-                  setTitle2Color(e.target.value);
-                }}
-              />
-            </Grid>
-            <Grid item xs={12}>
-              <TextField
-                label="Desciption 1"
-                fullWidth
-                onChange={(e) => {
-                  setDescription1(e.target.value);
-                }}
-              />
-            </Grid>
-            <Grid item xs={12}>
-              <TextField
-                label="Desciption 2"
-                fullWidth
-                onChange={(e) => {
-                  setDescription2(e.target.value);
-                }}
-              />
-            </Grid>
-            <Grid item xs={12}>
-              <TextField
-                label="Desciption 3"
-                fullWidth
-                onChange={(e) => {
-                  setDescription3(e.target.value);
-                }}
+              <DescriptionForm
+                accordionTitle="Description three"
+                setDescription={setDescription3}
+                setDescriptionColor={setDescription3Color}
+                setDescriptionSize={setDescription3Size}
               />
             </Grid>
           </Grid>
         </Grid>
         <Grid item xs={10}>
           {/* @ts-ignore */}
-          {listLayout[item?.itemLayout]}
+          {listLayout[item?.layout]}
         </Grid>
       </Grid>
     </BoxContainer>
