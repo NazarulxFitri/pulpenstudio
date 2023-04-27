@@ -1,14 +1,29 @@
 import { useState } from "react";
-import { BoxContainer, TitleForm, DescriptionForm } from "@/components";
+import {
+  BoxContainer,
+  TitleForm,
+  DescriptionForm,
+  StylingForm,
+} from "@/components";
 import { useRouter } from "next/router";
 import { Grid } from "@mui/material";
 import useGetEinvite from "@/data/useGetEinvite";
 import useListLayout from "@/data/useListLayout";
 
+export interface FontFamilyConfig {
+  className: string;
+  style: {
+    fontFamily: string;
+    fontStyle: string;
+    fontWeight: number;
+  };
+}
+
 const EinviteId = () => {
   const router = useRouter();
   const eInviteId = router.query.eInviteId;
   const { data: item } = useGetEinvite(eInviteId as string);
+  const [fontFamily, setFontFamily] = useState<FontFamilyConfig>();
   const [title1, setTitle1] = useState("");
   const [title1Color, setTitle1Color] = useState("");
   const [title1Size, setTitle1Size] = useState("");
@@ -16,6 +31,7 @@ const EinviteId = () => {
   const [title2, setTitle2] = useState("");
   const [title2Color, setTitle2Color] = useState("");
   const [title2Size, setTitle2Size] = useState("");
+  const [title2Shadow, setTitle2Shadow] = useState("");
   const [description1, setDescription1] = useState("");
   const [description1Color, setDescription1Color] = useState("");
   const [description1Size, setDescription1Size] = useState("");
@@ -26,6 +42,7 @@ const EinviteId = () => {
   const [description3Color, setDescription3Color] = useState("");
   const [description3Size, setDescription3Size] = useState("");
   const listLayout = useListLayout(
+    fontFamily,
     title1,
     title1Color,
     title1Size,
@@ -33,6 +50,7 @@ const EinviteId = () => {
     title2,
     title2Color,
     title2Size,
+    title2Shadow,
     description1,
     description1Color,
     description1Size,
@@ -55,8 +73,11 @@ const EinviteId = () => {
         >
           <Grid container rowSpacing={2}>
             <Grid item xs={12}>
+              <StylingForm accordionTitle="General" {...{ setFontFamily }} />
+            </Grid>
+            <Grid item xs={12}>
               <TitleForm
-                accordionTitle="Title one"
+                accordionTitle="Title-one"
                 setTitle={setTitle1}
                 setTitleColor={setTitle1Color}
                 setTitleSize={setTitle1Size}
@@ -65,11 +86,11 @@ const EinviteId = () => {
             </Grid>
             <Grid item xs={12}>
               <TitleForm
-                accordionTitle="Title two"
+                accordionTitle="Title-two"
                 setTitle={setTitle2}
                 setTitleColor={setTitle2Color}
                 setTitleSize={setTitle2Size}
-                setTitleShadow={setTitle1Shadow}
+                setTitleShadow={setTitle2Shadow}
               />
             </Grid>
 

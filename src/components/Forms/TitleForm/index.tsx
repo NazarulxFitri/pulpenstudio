@@ -62,7 +62,7 @@ const TitleForm: React.FC<TitleFormProps> = ({
             setTitleSize(e.target.value);
           }}
         />
-        <RadioButton {...{ setTitleShadow }} />
+        <RadioButton {...{ setTitleShadow }} targetInput={accordionTitle} />
       </AccordionDetails>
     </Accordion>
   );

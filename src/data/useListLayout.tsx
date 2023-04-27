@@ -1,6 +1,8 @@
 import { Layout1, Layout2, Layout3 } from "@/assets";
+import { FontFamilyConfig } from "@/pages/e-invite/[eInviteId]";
 
 export default function useListLayout(
+  fontFamily?: FontFamilyConfig,
   title1?: string,
   title1Color?: string,
   title1Size?: string,
@@ -8,6 +10,7 @@ export default function useListLayout(
   title2?: string,
   title2Color?: string,
   title2Size?: string,
+  title2Shadow?: string,
   description1?: string,
   description1Color?: string,
   description1Size?: string,
@@ -22,6 +25,7 @@ export default function useListLayout(
     "001": (
       <Layout1
         {...{
+          fontFamily,
           title1,
           title1Color,
           title1Size,
@@ -29,6 +33,7 @@ export default function useListLayout(
           title2,
           title2Color,
           title2Size,
+          title2Shadow,
           description1,
           description1Color,
           description1Size,
@@ -44,6 +49,7 @@ export default function useListLayout(
     "002": (
       <Layout2
         {...{
+          fontFamily,
           title1,
           title1Color,
           title1Size,
@@ -65,6 +71,7 @@ export default function useListLayout(
     "003": (
       <Layout3
         {...{
+          fontFamily,
           title1,
           title1Color,
           title1Size,

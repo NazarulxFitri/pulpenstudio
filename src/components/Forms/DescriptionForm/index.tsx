@@ -13,7 +13,7 @@ interface DescriptionFormProps {
   setDescriptionSize: (value: string) => void;
 }
 
-const Input = styled(TextField)(({ theme }) => ({
+const Input = styled(TextField)(() => ({
   background: "#FFF",
   margin: "4px 0",
 }));

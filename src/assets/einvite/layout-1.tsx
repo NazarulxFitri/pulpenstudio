@@ -1,10 +1,8 @@
 import type { AssetLayoutProps } from "@/type";
 import { Box } from "@mui/material";
-import { Righteous } from "next/font/google";
-
-const righteous = Righteous({ subsets: ["latin"], weight: "400" });
 
 const Layout1: React.FC<AssetLayoutProps> = ({
+  fontFamily,
   title1,
   title1Color,
   title1Size,
@@ -12,6 +10,7 @@ const Layout1: React.FC<AssetLayoutProps> = ({
   title2,
   title2Color,
   title2Size,
+  title2Shadow,
   description1,
   description1Color,
   description1Size,
@@ -24,8 +23,9 @@ const Layout1: React.FC<AssetLayoutProps> = ({
 }) => {
   return (
     <Box
+      p={2}
       sx={{
-        fontFamily: righteous.style.fontFamily,
+        fontFamily: `${fontFamily?.style?.fontFamily} !important` || "auto",
         backgroundImage:
           "linear-gradient(to bottom, #fa93c3, #fd94d0, #fe96de, #fc98ec, #f99cfc)",
         height: "100vh",
@@ -35,8 +35,9 @@ const Layout1: React.FC<AssetLayoutProps> = ({
         <h1
           style={{
             color: title1Color,
-            fontSize: title1Size,
-            textShadow: title1Shadow === "on" ? "6px 4px 4px #EEEE" : "unset",
+            fontSize: !!title1Size ? `${title1Size}px` : "56px",
+            textShadow:
+              title1Shadow === "on-Title-one" ? "6px 4px 4px #EEEE" : "unset",
           }}
         >
           {title1}
@@ -44,17 +45,39 @@ const Layout1: React.FC<AssetLayoutProps> = ({
         <h1
           style={{
             color: title2Color,
-            fontSize: title2Size,
-            textShadow: "6px 4px 0 #000",
+            fontSize: `${title2Size}px`,
+            textShadow:
+              title2Shadow === "on-Title-two" ? "6px 4px 4px #EEEE" : "unset",
           }}
         >
           {title2}
         </h1>
       </Box>
       <Box sx={{ margin: "0 auto", width: "fit-content" }}>
-        <p style={{ fontSize: description1Size }}>{description1}</p>
-        <p style={{ fontSize: description2Size }}>{description2}</p>
-        <p style={{ fontSize: description3Size }}>{description3}</p>
+        <p
+          style={{
+            color: description1Color,
+            fontSize: `${description1Size}px`,
+          }}
+        >
+          {description1}
+        </p>
+        <p
+          style={{
+            color: description2Color,
+            fontSize: `${description1Size}px`,
+          }}
+        >
+          {description2}
+        </p>
+        <p
+          style={{
+            color: description3Color,
+            fontSize: `${description1Size}px`,
+          }}
+        >
+          {description3}
+        </p>
       </Box>
     </Box>
   );
