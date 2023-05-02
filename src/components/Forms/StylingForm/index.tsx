@@ -5,6 +5,7 @@ import {
   AccordionSummary,
   MenuItem,
   TextField,
+  styled,
 } from "@mui/material";
 import {
   ABeeZee,
@@ -45,11 +46,18 @@ const monoton = Monoton({ subsets: ["latin"], weight: "400" });
 interface StylingFormProps {
   accordionTitle: string;
   setFontFamily: (value: FontFamilyConfig) => void;
+  setBgColor: (value: string) => void;
 }
+
+const Input = styled(TextField)(() => ({
+  background: "#FFF",
+  margin: "4px 0",
+}));
 
 const StylingForm: React.FC<StylingFormProps> = ({
   accordionTitle,
   setFontFamily,
+  setBgColor,
 }) => {
   const fontList = [
     { text: "Abeezee", value: abeezee },
@@ -100,6 +108,11 @@ const StylingForm: React.FC<StylingFormProps> = ({
             </MenuItem>
           ))}
         </TextField>
+        <Input
+          label="Background Color"
+          fullWidth
+          onChange={(e) => setBgColor(e.target.value)}
+        />
       </AccordionDetails>
     </Accordion>
   );

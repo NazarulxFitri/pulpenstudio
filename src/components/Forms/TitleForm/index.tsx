@@ -13,6 +13,7 @@ interface TitleFormProps {
   setTitleColor: (value: string) => void;
   setTitleSize: (value: string) => void;
   setTitleShadow: (value: string) => void;
+  setTitlePos: (value: string) => void;
 }
 
 const Input = styled(TextField)(({ theme }) => ({
@@ -26,6 +27,7 @@ const TitleForm: React.FC<TitleFormProps> = ({
   setTitleColor,
   setTitleSize,
   setTitleShadow,
+  setTitlePos,
 }) => {
   return (
     <Accordion sx={{ boxShadow: "1px 1px 8px #333" }}>
@@ -42,26 +44,27 @@ const TitleForm: React.FC<TitleFormProps> = ({
       </AccordionSummary>
       <AccordionDetails sx={{ m: 1, padding: "0" }}>
         <Input
-          label={`${accordionTitle}`}
+          label="Text"
           fullWidth
           onChange={(e) => {
             setTitle(e.target.value);
           }}
         />
         <Input
-          label={`${accordionTitle} color`}
+          label="Color"
           fullWidth
           onChange={(e) => {
             setTitleColor(e.target.value);
           }}
         />
         <Input
-          label={`${accordionTitle} font size`}
+          label="Font size"
           fullWidth
           onChange={(e) => {
             setTitleSize(e.target.value);
           }}
         />
+        <RadioButton {...{ setTitlePos }} targetInput={accordionTitle} />
         <RadioButton {...{ setTitleShadow }} targetInput={accordionTitle} />
       </AccordionDetails>
     </Accordion>

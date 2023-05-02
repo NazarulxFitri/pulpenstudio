@@ -1,3 +1,4 @@
+import { RadioButton } from "@/components";
 import {
   Accordion,
   AccordionDetails,
@@ -11,6 +12,7 @@ interface DescriptionFormProps {
   setDescription: (value: string) => void;
   setDescriptionColor: (value: string) => void;
   setDescriptionSize: (value: string) => void;
+  setDescriptionPos: (value: string) => void;
 }
 
 const Input = styled(TextField)(() => ({
@@ -23,6 +25,7 @@ const DescriptionForm: React.FC<DescriptionFormProps> = ({
   setDescription,
   setDescriptionColor,
   setDescriptionSize,
+  setDescriptionPos,
 }) => {
   return (
     <Accordion sx={{ boxShadow: "1px 1px 8px #333" }}>
@@ -41,26 +44,28 @@ const DescriptionForm: React.FC<DescriptionFormProps> = ({
       </AccordionSummary>
       <AccordionDetails sx={{ m: 1, padding: "0" }}>
         <Input
-          label={`${accordionTitle}`}
+          label="Text"
           fullWidth
           onChange={(e) => {
             setDescription(e.target.value);
           }}
         />
         <Input
-          label={`${accordionTitle} color`}
+          label="Color"
           fullWidth
           onChange={(e) => {
             setDescriptionColor(e.target.value);
           }}
         />
         <Input
-          label={`${accordionTitle} font size`}
+          label="Font size"
           fullWidth
           onChange={(e) => {
             setDescriptionSize(e.target.value);
           }}
         />
+
+        <RadioButton {...{ setDescriptionPos }} targetInput={accordionTitle} />
       </AccordionDetails>
     </Accordion>
   );
