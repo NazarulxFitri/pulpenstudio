@@ -1,5 +1,13 @@
 import type { AssetLayoutProps } from "@/type";
 import { Box } from "@mui/material";
+import {
+  FlowePurpleTheme,
+  FlowerArtTheme,
+  LightningTheme,
+  Love,
+  ThunderMusicBody,
+} from "./components";
+import LoveBody from "./components/theme/body/Love";
 
 const Layout1: React.FC<AssetLayoutProps> = ({
   fontFamily,
@@ -27,25 +35,6 @@ const Layout1: React.FC<AssetLayoutProps> = ({
   description3Size,
   description3Pos,
 }) => {
-  // function createSnowFlake() {
-  //   const snow_flake = document.createElement("img");
-  //   snow_flake.classList.add("fas");
-  //   snow_flake.classList.add("fa-heart");
-  //   snow_flake.src
-  //   snow_flake.style.left = Math.random() * window.innerWidth - 25 + "px";
-  //   snow_flake.style.animationDuration = Math.random() * 5 + 5 + "s";
-  //   snow_flake.style.opacity = `${Math.random()}`;
-  //   snow_flake.style.fontSize = Math.random() * 10 + 10 + "px";
-
-  //   document.body.appendChild(snow_flake);
-
-  //   setTimeout(() => {
-  //     snow_flake.remove();
-  //   }, 5000);
-  // }
-
-  // setInterval(createSnowFlake, 500);
-
   return (
     <Box
       px={20}
@@ -55,98 +44,108 @@ const Layout1: React.FC<AssetLayoutProps> = ({
         height: "100vh",
       }}
     >
-      <Box sx={{ py: 6, textAlign: "center" }}>
-        <h1
-          style={{
-            color: title1Color,
-            fontSize: !!title1Size ? `${title1Size}px` : "56px",
-            textShadow:
-              title1Shadow === "on-Title-one" ? "6px 4px 4px #EEEE" : "unset",
-            // @ts-ignore
-            textAlign:
-              title1Pos === "center-Title-one"
-                ? "center"
-                : title1Pos === "left-Title-one"
-                ? "left"
-                : title1Pos === "right-Title-one"
-                ? "right"
-                : "center",
-          }}
-        >
-          {title1}
-        </h1>
-        <h1
-          style={{
-            color: title2Color,
-            fontSize: `${title2Size}px`,
-            textShadow:
-              title2Shadow === "on-Title-two" ? "6px 4px 4px #EEEE" : "unset",
-            // @ts-ignore
-            textAlign:
-              title2Pos === "center-Title-two"
-                ? "center"
-                : title2Pos === "left-Title-two"
-                ? "left"
-                : title2Pos === "right-Title-two"
-                ? "right"
-                : "center",
-          }}
-        >
-          {title2}
-        </h1>
-      </Box>
-      <Box sx={{ py: 6, textAlign: "center" }}>
-        <p
-          style={{
-            color: description1Color,
-            fontSize: `${description1Size}px`,
-            // @ts-ignore
-            textAlign:
-              description1Pos === "center-Description-one"
-                ? "center"
-                : description1Pos === "left-Description-one"
-                ? "left"
-                : description1Pos === "right-Description-one"
-                ? "right"
-                : "center",
-          }}
-        >
-          {description1}
-        </p>
-        <p
-          style={{
-            color: description2Color,
-            fontSize: `${description2Size}px`,
-            // @ts-ignore
-            textAlign:
-              description2Pos === "center-Description-two"
-                ? "center"
-                : description2Pos === "left-Description-two"
-                ? "left"
-                : description2Pos === "right-Description-two"
-                ? "right"
-                : "center",
-          }}
-        >
-          {description2}
-        </p>
-        <p
-          style={{
-            color: description3Color,
-            fontSize: `${description3Size}px`,
-            // @ts-ignore
-            textAlign:
-              description3Pos === "center-Description-three"
-                ? "center"
-                : description3Pos === "left-Description-three"
-                ? "left"
-                : description3Pos === "right-Description-three"
-                ? "right"
-                : "center",
-          }}
-        >
-          {description3}
-        </p>
+      <Box sx={{ position: "relative" }}>
+        <FlowerArtTheme />
+        <FlowePurpleTheme />
+        <LightningTheme />
+        <Love />
+        <LoveBody left={true} right={false} />
+        <LoveBody left={false} right={true} />
+        <ThunderMusicBody left={false} right={true} />
+        <ThunderMusicBody left={true} right={false} />
+        <Box sx={{ py: 6, textAlign: "center" }}>
+          <h1
+            style={{
+              color: title1Color,
+              fontSize: !!title1Size ? `${title1Size}px` : "56px",
+              textShadow:
+                title1Shadow === "on-Title-one" ? "6px 4px 4px #EEEE" : "unset",
+              // @ts-ignore
+              textAlign:
+                title1Pos === "center-Title-one"
+                  ? "center"
+                  : title1Pos === "left-Title-one"
+                  ? "left"
+                  : title1Pos === "right-Title-one"
+                  ? "right"
+                  : "center",
+            }}
+          >
+            {title1}
+          </h1>
+          <h1
+            style={{
+              color: title2Color,
+              fontSize: `${title2Size}px`,
+              textShadow:
+                title2Shadow === "on-Title-two" ? "6px 4px 4px #EEEE" : "unset",
+              // @ts-ignore
+              textAlign:
+                title2Pos === "center-Title-two"
+                  ? "center"
+                  : title2Pos === "left-Title-two"
+                  ? "left"
+                  : title2Pos === "right-Title-two"
+                  ? "right"
+                  : "center",
+            }}
+          >
+            {title2}
+          </h1>
+        </Box>
+        <Box sx={{ py: 6, textAlign: "center" }}>
+          <p
+            style={{
+              color: description1Color,
+              fontSize: `${description1Size}px`,
+              // @ts-ignore
+              textAlign:
+                description1Pos === "center-Description-one"
+                  ? "center"
+                  : description1Pos === "left-Description-one"
+                  ? "left"
+                  : description1Pos === "right-Description-one"
+                  ? "right"
+                  : "center",
+            }}
+          >
+            {description1}
+          </p>
+          <p
+            style={{
+              color: description2Color,
+              fontSize: `${description2Size}px`,
+              // @ts-ignore
+              textAlign:
+                description2Pos === "center-Description-two"
+                  ? "center"
+                  : description2Pos === "left-Description-two"
+                  ? "left"
+                  : description2Pos === "right-Description-two"
+                  ? "right"
+                  : "center",
+            }}
+          >
+            {description2}
+          </p>
+          <p
+            style={{
+              color: description3Color,
+              fontSize: `${description3Size}px`,
+              // @ts-ignore
+              textAlign:
+                description3Pos === "center-Description-three"
+                  ? "center"
+                  : description3Pos === "left-Description-three"
+                  ? "left"
+                  : description3Pos === "right-Description-three"
+                  ? "right"
+                  : "center",
+            }}
+          >
+            {description3}
+          </p>
+        </Box>
       </Box>
     </Box>
   );
