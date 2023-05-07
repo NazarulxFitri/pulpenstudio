@@ -4,7 +4,10 @@ import Image from "next/image";
 const FlowerArtTheme = () => {
   return (
     <>
-      <Box position="absolute" sx={{ left: "0", transform: "scaleX(-1)" }}>
+      <Box
+        position="absolute"
+        sx={{ left: "0", transform: "scaleX(-1)", maxWidth: "264px" }}
+      >
         <Image
           src="/media/theme/header/flowerart.webp"
           width={300}
@@ -13,7 +16,7 @@ const FlowerArtTheme = () => {
           style={{ width: "100%", height: "100%" }}
         />
       </Box>
-      <Box position="absolute" sx={{ right: "0" }}>
+      <Box position="absolute" sx={{ right: "0", maxWidth: "264px" }}>
         <Image
           src="/media/theme/header/flowerart.webp"
           width={300}

@@ -1,7 +1,6 @@
 import type { AssetLayoutProps } from "@/type";
 import { Box } from "@mui/material";
 import {
-  FlowePurpleTheme,
   FlowerArtTheme,
   LightningTheme,
   Love,
@@ -11,7 +10,10 @@ import LoveBody from "./components/theme/body/Love";
 
 const Layout1: React.FC<AssetLayoutProps> = ({
   fontFamily,
+  textFontFamily,
   bgColor,
+  headerImage,
+  bodyImage,
   title1,
   title1Color,
   title1Size,
@@ -37,27 +39,50 @@ const Layout1: React.FC<AssetLayoutProps> = ({
 }) => {
   return (
     <Box
-      px={20}
+      px={10}
+      py={6}
       sx={{
-        fontFamily: `${fontFamily?.style?.fontFamily} !important` || "auto",
         background: bgColor,
         height: "100vh",
       }}
     >
       <Box sx={{ position: "relative" }}>
-        <FlowerArtTheme />
-        <FlowePurpleTheme />
-        <LightningTheme />
-        <Love />
-        <LoveBody left={true} right={false} />
-        <LoveBody left={false} right={true} />
-        <ThunderMusicBody left={false} right={true} />
-        <ThunderMusicBody left={true} right={false} />
-        <Box sx={{ py: 6, textAlign: "center" }}>
+        {headerImage === "Flower" && <FlowerArtTheme />}
+        {headerImage === "Music" && <LightningTheme />}
+        {headerImage === "Love" && <Love />}
+
+        {bodyImage === "Love" && (
+          <>
+            <LoveBody left={true} right={false} />
+            <LoveBody left={false} right={true} />
+          </>
+        )}
+        {bodyImage === "Thunder" && (
+          <>
+            <ThunderMusicBody left={true} right={false} />
+            <ThunderMusicBody left={false} right={true} />
+          </>
+        )}
+
+        <Box
+          className="box"
+          sx={{
+            mx: "264px",
+            pt: 6,
+            textAlign: "center",
+            fontFamily: `${fontFamily?.style?.fontFamily} !important` || "auto",
+          }}
+        >
           <h1
             style={{
+              borderTop: "2px solid",
+              borderLeft: "2px solid",
+              borderImage:
+                "linear-gradient(0.25turn, #800080, #FFC0CB, #FFFF00)",
+              borderImageSlice: "1",
               color: title1Color,
               fontSize: !!title1Size ? `${title1Size}px` : "56px",
+              paddingTop: "16px",
               textShadow:
                 title1Shadow === "on-Title-one" ? "6px 4px 4px #EEEE" : "unset",
               // @ts-ignore
@@ -75,8 +100,14 @@ const Layout1: React.FC<AssetLayoutProps> = ({
           </h1>
           <h1
             style={{
+              borderBottom: "2px solid",
+              borderRight: "2px solid",
+              borderImage:
+                "linear-gradient(0.25turn, #FFFF00, #FFC0CB, #800080)",
+              borderImageSlice: "1",
               color: title2Color,
-              fontSize: `${title2Size}px`,
+              fontSize: !!title2Size ? `${title2Size}px` : "56px",
+              paddingBottom: "16px",
               textShadow:
                 title2Shadow === "on-Title-two" ? "6px 4px 4px #EEEE" : "unset",
               // @ts-ignore
@@ -93,7 +124,15 @@ const Layout1: React.FC<AssetLayoutProps> = ({
             {title2}
           </h1>
         </Box>
-        <Box sx={{ py: 6, textAlign: "center" }}>
+        <Box
+          sx={{
+            py: 6,
+            mx: "264px",
+            textAlign: "center",
+            fontFamily:
+              `${textFontFamily?.style?.fontFamily} !important` || "auto",
+          }}
+        >
           <p
             style={{
               color: description1Color,

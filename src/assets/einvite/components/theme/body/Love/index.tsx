@@ -13,7 +13,7 @@ const LoveBody: React.FC<LoveBodyProps> = ({ left, right }) => {
         position: "absolute",
         right: right ? "0" : "unset",
         left: left ? "0" : "unset",
-        top: "100%",
+        top: "28vh",
       }}
     >
       <Image

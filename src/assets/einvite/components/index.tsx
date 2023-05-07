@@ -1,5 +1,4 @@
 export { default as FlowerArtTheme } from "./theme/header/FlowerArt";
-export { default as FlowePurpleTheme } from "./theme/header/FlowerPurple";
 export { default as LightningTheme } from "./theme/header/Lightning";
 export { default as Love } from "./theme/header/Love";
 

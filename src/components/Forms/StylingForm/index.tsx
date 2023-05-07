@@ -31,12 +31,15 @@ const rockSalt = Rock_Salt({ subsets: ["latin"], weight: "400" });
 const michroma = Michroma({ subsets: ["latin"], weight: "400" });
 const badScript = Bad_Script({ subsets: ["latin"], weight: "400" });
 const abeezee = ABeeZee({ subsets: ["latin"], weight: "400" });
-const crimsonPro = Crimson_Pro({ subsets: ["latin"], weight: "400" });
+const crimsonPro = Crimson_Pro({
+  subsets: ["latin"],
+  weight: ["200", "400", "700"],
+});
 const greatVibes = Great_Vibes({ subsets: ["latin"], weight: "400" });
-const cinzel = Cinzel({ subsets: ["latin"], weight: "900" });
-const amatic = Amatic_SC({ subsets: ["latin"], weight: "700" });
+const cinzel = Cinzel({ subsets: ["latin"], weight: ["400", "900"] });
+const amatic = Amatic_SC({ subsets: ["latin"], weight: ["400", "700"] });
 const satisfy = Satisfy({ subsets: ["latin"], weight: "400" });
-const rubik = Rubik({ subsets: ["latin"], weight: "900" });
+const rubik = Rubik({ subsets: ["latin"], weight: ["300", "900"] });
 const russo = Russo_One({ subsets: ["latin"], weight: "400" });
 const sawarabi = Sawarabi_Gothic({ subsets: ["latin"], weight: "400" });
 const poiretOne = Poiret_One({ subsets: ["latin"], weight: "400" });
@@ -46,7 +49,10 @@ const monoton = Monoton({ subsets: ["latin"], weight: "400" });
 interface StylingFormProps {
   accordionTitle: string;
   setFontFamily: (value: FontFamilyConfig) => void;
+  setTextFontFamily: (value: FontFamilyConfig) => void;
   setBgColor: (value: string) => void;
+  setHeaderImage: (value: string) => void;
+  setBodyImage: (value: string) => void;
 }
 
 const Input = styled(TextField)(() => ({
@@ -57,7 +63,10 @@ const Input = styled(TextField)(() => ({
 const StylingForm: React.FC<StylingFormProps> = ({
   accordionTitle,
   setFontFamily,
+  setTextFontFamily,
   setBgColor,
+  setHeaderImage,
+  setBodyImage,
 }) => {
   const fontList = [
     { text: "Abeezee", value: abeezee },
@@ -78,6 +87,9 @@ const StylingForm: React.FC<StylingFormProps> = ({
     { text: "Michroma", value: michroma },
   ];
 
+  const headerImage = ["Flower", "Music", "Love"];
+  const bodyImage = ["Love", "Thunder"];
+
   return (
     <Accordion sx={{ boxShadow: "1px 1px 8px #333" }}>
       <AccordionSummary
@@ -94,12 +106,26 @@ const StylingForm: React.FC<StylingFormProps> = ({
       <AccordionDetails sx={{ m: 1, padding: "0" }}>
         <TextField
           fullWidth
-          id="outlined-select-currency"
           select
-          label="Select Font Family"
+          label="Title Font Family"
           sx={{ m: "4px 0" }}
           // @ts-ignore
           onChange={(e) => setFontFamily(e.target.value)}
+        >
+          {fontList.map((font, idx) => (
+            // @ts-ignore
+            <MenuItem key={idx} value={font.value}>
+              {font.text}
+            </MenuItem>
+          ))}
+        </TextField>
+        <TextField
+          fullWidth
+          select
+          label="Text Font Family"
+          sx={{ m: "4px 0" }}
+          // @ts-ignore
+          onChange={(e) => setTextFontFamily(e.target.value)}
         >
           {fontList.map((font, idx) => (
             // @ts-ignore
@@ -113,6 +139,36 @@ const StylingForm: React.FC<StylingFormProps> = ({
           fullWidth
           onChange={(e) => setBgColor(e.target.value)}
         />
+        <TextField
+          fullWidth
+          select
+          label="Header image"
+          sx={{ m: "4px 0" }}
+          // @ts-ignore
+          onChange={(e) => setHeaderImage(e.target.value)}
+        >
+          {headerImage.map((item, idx) => (
+            // @ts-ignore
+            <MenuItem key={idx} value={item}>
+              {item}
+            </MenuItem>
+          ))}
+        </TextField>
+        <TextField
+          fullWidth
+          select
+          label="Body image"
+          sx={{ m: "4px 0" }}
+          // @ts-ignore
+          onChange={(e) => setBodyImage(e.target.value)}
+        >
+          {bodyImage.map((item, idx) => (
+            // @ts-ignore
+            <MenuItem key={idx} value={item}>
+              {item}
+            </MenuItem>
+          ))}
+        </TextField>
       </AccordionDetails>
     </Accordion>
   );

@@ -13,7 +13,7 @@ const ThunderMusicBody: React.FC<ThunderMusicBodyProps> = ({ left, right }) => {
         position: "absolute",
         right: right ? "0" : "unset",
         left: left ? "0" : "unset",
-        top: "100%",
+        top: "28vh",
       }}
     >
       <Image
@@ -21,7 +21,7 @@ const ThunderMusicBody: React.FC<ThunderMusicBodyProps> = ({ left, right }) => {
         src="/media/theme/body/lightning.png"
         alt="Music"
         width={100}
-        height={600}
+        height={300}
       />
     </Box>
   );

@@ -24,7 +24,10 @@ const EinviteId = () => {
   const eInviteId = router.query.eInviteId;
   const { data: item } = useGetEinvite(eInviteId as string);
   const [fontFamily, setFontFamily] = useState<FontFamilyConfig>();
+  const [textFontFamily, setTextFontFamily] = useState<FontFamilyConfig>();
   const [bgColor, setBgColor] = useState("");
+  const [headerImage, setHeaderImage] = useState("");
+  const [bodyImage, setBodyImage] = useState("");
   const [title1, setTitle1] = useState("");
   const [title1Color, setTitle1Color] = useState("");
   const [title1Size, setTitle1Size] = useState("");
@@ -49,7 +52,10 @@ const EinviteId = () => {
   const [description3Pos, setDescription3Pos] = useState("");
   const listLayout = useListLayout(
     fontFamily,
+    textFontFamily,
     bgColor,
+    headerImage,
+    bodyImage,
     title1,
     title1Color,
     title1Size,
@@ -87,7 +93,13 @@ const EinviteId = () => {
             <Grid item xs={12}>
               <StylingForm
                 accordionTitle="General"
-                {...{ setFontFamily, setBgColor }}
+                {...{
+                  setFontFamily,
+                  setTextFontFamily,
+                  setBgColor,
+                  setHeaderImage,
+                  setBodyImage,
+                }}
               />
             </Grid>
             <Grid item xs={12}>

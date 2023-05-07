@@ -2,7 +2,10 @@ import { FontFamilyConfig } from "@/pages/e-invite/[eInviteId]";
 
 export interface AssetLayoutProps {
   fontFamily?: FontFamilyConfig;
+  textFontFamily?: FontFamilyConfig;
   bgColor?: string;
+  headerImage?: string;
+  bodyImage?: string;
   title1?: string;
   title1Color?: string;
   title1Size?: string;
