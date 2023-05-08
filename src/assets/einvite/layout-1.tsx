@@ -1,5 +1,5 @@
 import type { AssetLayoutProps } from "@/type";
-import { Box } from "@mui/material";
+import { Box, Grid } from "@mui/material";
 import {
   FlowerArtTheme,
   LightningTheme,
@@ -7,6 +7,7 @@ import {
   ThunderMusicBody,
 } from "./components";
 import LoveBody from "./components/theme/body/Love";
+import { ChatIcon, ClockIcon, MapIcon, WhatsappIcon } from "@/components";
 
 const Layout1: React.FC<AssetLayoutProps> = ({
   fontFamily,
@@ -28,14 +29,26 @@ const Layout1: React.FC<AssetLayoutProps> = ({
   description1Color,
   description1Size,
   description1Pos,
+  description1TopSpacing,
+  description1BotSpacing,
   description2,
   description2Color,
   description2Size,
   description2Pos,
+  description2TopSpacing,
+  description2BotSpacing,
   description3,
   description3Color,
   description3Size,
   description3Pos,
+  description3TopSpacing,
+  description3BotSpacing,
+  description4,
+  description4Color,
+  description4Size,
+  description4Pos,
+  description4TopSpacing,
+  description4BotSpacing,
 }) => {
   return (
     <Box
@@ -65,9 +78,9 @@ const Layout1: React.FC<AssetLayoutProps> = ({
         )}
 
         <Box
-          className="box"
           sx={{
             mx: "264px",
+            wordWrap: "break-word",
             pt: 6,
             textAlign: "center",
             fontFamily: `${fontFamily?.style?.fontFamily} !important` || "auto",
@@ -95,9 +108,9 @@ const Layout1: React.FC<AssetLayoutProps> = ({
                   ? "right"
                   : "center",
             }}
-          >
-            {title1}
-          </h1>
+            dangerouslySetInnerHTML={{ __html: title1! }}
+          />
+
           <h1
             style={{
               borderBottom: "2px solid",
@@ -120,13 +133,13 @@ const Layout1: React.FC<AssetLayoutProps> = ({
                   ? "right"
                   : "center",
             }}
-          >
-            {title2}
-          </h1>
+            dangerouslySetInnerHTML={{ __html: title2! }}
+          />
         </Box>
         <Box
           sx={{
             py: 6,
+            wordWrap: "break-word",
             mx: "264px",
             textAlign: "center",
             fontFamily:
@@ -146,10 +159,11 @@ const Layout1: React.FC<AssetLayoutProps> = ({
                   : description1Pos === "right-Description-one"
                   ? "right"
                   : "center",
+              marginTop: description1TopSpacing + "px",
+              marginBottom: description1BotSpacing + "px",
             }}
-          >
-            {description1}
-          </p>
+            dangerouslySetInnerHTML={{ __html: description1! }}
+          />
           <p
             style={{
               color: description2Color,
@@ -163,10 +177,11 @@ const Layout1: React.FC<AssetLayoutProps> = ({
                   : description2Pos === "right-Description-two"
                   ? "right"
                   : "center",
+              marginTop: description2TopSpacing + "px",
+              marginBottom: description2BotSpacing + "px",
             }}
-          >
-            {description2}
-          </p>
+            dangerouslySetInnerHTML={{ __html: description2! }}
+          />
           <p
             style={{
               color: description3Color,
@@ -180,12 +195,45 @@ const Layout1: React.FC<AssetLayoutProps> = ({
                   : description3Pos === "right-Description-three"
                   ? "right"
                   : "center",
+              marginTop: description3TopSpacing + "px",
+              marginBottom: description3BotSpacing + "px",
             }}
-          >
-            {description3}
-          </p>
+            dangerouslySetInnerHTML={{ __html: description3! }}
+          />
+          <p
+            style={{
+              color: description4Color,
+              fontSize: `${description4Size}px`,
+              // @ts-ignore
+              textAlign:
+                description4Pos === "center-Description-four"
+                  ? "center"
+                  : description4Pos === "left-Description-four"
+                  ? "left"
+                  : description4Pos === "right-Description-four"
+                  ? "right"
+                  : "center",
+              marginTop: description4TopSpacing + "px",
+              marginBottom: description4BotSpacing + "px",
+            }}
+            dangerouslySetInnerHTML={{ __html: description4! }}
+          />
         </Box>
       </Box>
+      <Grid container justifyContent="center" columnGap={8}>
+        <Grid item>
+          <WhatsappIcon color="#fff" size="32" />
+        </Grid>
+        <Grid>
+          <MapIcon color="#fff" size="32" />
+        </Grid>
+        <Grid>
+          <ChatIcon color="#fff" size="32" />
+        </Grid>
+        <Grid>
+          <ClockIcon color="#fff" size="32" />
+        </Grid>
+      </Grid>
     </Box>
   );
 };

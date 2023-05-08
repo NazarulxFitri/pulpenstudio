@@ -20,12 +20,24 @@ export interface AssetLayoutProps {
   description1Color?: string;
   description1Size?: string;
   description1Pos?: string;
+  description1TopSpacing?: string;
+  description1BotSpacing?: string;
   description2?: string;
   description2Color?: string;
   description2Size?: string;
   description2Pos?: string;
+  description2TopSpacing?: string;
+  description2BotSpacing?: string;
   description3?: string;
   description3Color?: string;
   description3Size?: string;
   description3Pos?: string;
+  description3TopSpacing?: string;
+  description3BotSpacing?: string;
+  description4?: string;
+  description4Color?: string;
+  description4Size?: string;
+  description4Pos?: string;
+  description4TopSpacing?: string;
+  description4BotSpacing?: string;
 }

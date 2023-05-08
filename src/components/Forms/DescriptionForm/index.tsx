@@ -13,6 +13,8 @@ interface DescriptionFormProps {
   setDescriptionColor: (value: string) => void;
   setDescriptionSize: (value: string) => void;
   setDescriptionPos: (value: string) => void;
+  setDescriptionTopSpacing: (value: string) => void;
+  setDescriptionBotSpacing: (value: string) => void;
 }
 
 const Input = styled(TextField)(() => ({
@@ -26,6 +28,8 @@ const DescriptionForm: React.FC<DescriptionFormProps> = ({
   setDescriptionColor,
   setDescriptionSize,
   setDescriptionPos,
+  setDescriptionTopSpacing,
+  setDescriptionBotSpacing,
 }) => {
   return (
     <Accordion sx={{ boxShadow: "1px 1px 8px #333" }}>
@@ -49,6 +53,7 @@ const DescriptionForm: React.FC<DescriptionFormProps> = ({
           onChange={(e) => {
             setDescription(e.target.value);
           }}
+          multiline
         />
         <Input
           label="Color"
@@ -62,6 +67,20 @@ const DescriptionForm: React.FC<DescriptionFormProps> = ({
           fullWidth
           onChange={(e) => {
             setDescriptionSize(e.target.value);
+          }}
+        />
+        <Input
+          label="Top spacing"
+          fullWidth
+          onChange={(e) => {
+            setDescriptionTopSpacing(e.target.value);
+          }}
+        />
+        <Input
+          label="Bottom spacing"
+          fullWidth
+          onChange={(e) => {
+            setDescriptionBotSpacing(e.target.value);
           }}
         />
 
