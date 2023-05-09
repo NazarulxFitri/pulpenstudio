@@ -1,4 +1,4 @@
-import type { FontFamilyConfig } from "@/pages/e-invite/[eInviteId]";
+import type { FontFamilyConfig } from "@/pages/e-invite/edit/[eInviteId]";
 import {
   Accordion,
   AccordionDetails,

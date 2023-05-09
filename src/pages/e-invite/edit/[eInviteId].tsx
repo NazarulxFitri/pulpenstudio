@@ -4,11 +4,13 @@ import {
   TitleForm,
   DescriptionForm,
   StylingForm,
+  WidgetForm,
 } from "@/components";
 import { useRouter } from "next/router";
 import { Grid } from "@mui/material";
 import useGetEinvite from "@/data/useGetEinvite";
 import useListLayout from "@/data/useListLayout";
+import usePostUpdateEinvite from "@/data/postUpdateEinvite";
 
 export interface FontFamilyConfig {
   className: string;
@@ -23,11 +25,17 @@ const EinviteId = () => {
   const router = useRouter();
   const eInviteId = router.query.eInviteId;
   const { data: item } = useGetEinvite(eInviteId as string);
+
   const [fontFamily, setFontFamily] = useState<FontFamilyConfig>();
   const [textFontFamily, setTextFontFamily] = useState<FontFamilyConfig>();
   const [bgColor, setBgColor] = useState("");
   const [headerImage, setHeaderImage] = useState("");
   const [bodyImage, setBodyImage] = useState("");
+  const [widgetBgColor, setWidgetBgColor] = useState("");
+  const [widgetColor, setWidgetColor] = useState("");
+  const [widgetWsCta, setWidgetWsCta] = useState("");
+  const [widgetMapCta, setWidgetMapCta] = useState("");
+  // const [widgetCountdown, setWidgetCountdown] = useState("");
   const [title1, setTitle1] = useState("");
   const [title1Color, setTitle1Color] = useState("");
   const [title1Size, setTitle1Size] = useState("");
@@ -62,12 +70,17 @@ const EinviteId = () => {
   const [description4Pos, setDescription4Pos] = useState("");
   const [description4TopSpacing, setDescription4TopSpacing] = useState("");
   const [description4BotSpacing, setDescription4BotSpacing] = useState("");
+  const [success, setSuccess] = useState(false);
   const listLayout = useListLayout(
     fontFamily,
     textFontFamily,
     bgColor,
     headerImage,
     bodyImage,
+    widgetBgColor,
+    widgetColor,
+    widgetWsCta,
+    widgetMapCta,
     title1,
     title1Color,
     title1Size,
@@ -104,6 +117,64 @@ const EinviteId = () => {
     description4BotSpacing
   );
 
+  const { action } = usePostUpdateEinvite(
+    {
+      // @ts-ignore
+      fontFamily,
+      // @ts-ignore
+      textFontFamily,
+      bgColor,
+      headerImage,
+      bodyImage,
+      widgetBgColor,
+      widgetColor,
+      widgetWsCta,
+      widgetMapCta,
+      title1,
+      title1Color,
+      title1Size,
+      title1Pos,
+      title1Shadow,
+      title2,
+      title2Color,
+      title2Size,
+      title2Pos,
+      title2Shadow,
+      description1,
+      description1Color,
+      description1Size,
+      description1Pos,
+      description1TopSpacing,
+      description1BotSpacing,
+      description2,
+      description2Color,
+      description2Size,
+      description2Pos,
+      description2TopSpacing,
+      description2BotSpacing,
+      description3,
+      description3Color,
+      description3Size,
+      description3Pos,
+      description3TopSpacing,
+      description3BotSpacing,
+      description4,
+      description4Color,
+      description4Size,
+      description4Pos,
+      description4TopSpacing,
+      description4BotSpacing,
+    },
+    // @ts-ignore
+    item?.layout,
+    eInviteId as string
+  );
+
+  function handleSubmit() {
+    action();
+    setSuccess(true);
+  }
+
   return (
     <BoxContainer fullWidth={true}>
       <Grid container>
@@ -123,6 +194,17 @@ const EinviteId = () => {
                   setBgColor,
                   setHeaderImage,
                   setBodyImage,
+                }}
+              />
+            </Grid>
+            <Grid item xs={12}>
+              <WidgetForm
+                accordionTitle="Widget Form"
+                {...{
+                  setWidgetBgColor,
+                  setWidgetColor,
+                  setWidgetWsCta,
+                  setWidgetMapCta,
                 }}
               />
             </Grid>
@@ -191,6 +273,22 @@ const EinviteId = () => {
                 setDescriptionBotSpacing={setDescription4BotSpacing}
               />
             </Grid>
+          </Grid>
+          <Grid
+            item
+            textAlign="center"
+            sx={{
+              backgroundColor: "#1976d2",
+              borderRadius: "24px",
+              boxShadow: "1px 1px 10px #333",
+              color: "#FFF",
+              fontWeight: "600",
+              mt: 8,
+              py: 2,
+            }}
+            onClick={handleSubmit}
+          >
+            Submit
           </Grid>
         </Grid>
         <Grid item xs={10}>

@@ -1,5 +1,5 @@
 import { Layout1 } from "@/assets";
-import { FontFamilyConfig } from "@/pages/e-invite/[eInviteId]";
+import { FontFamilyConfig } from "@/pages/e-invite/edit/[eInviteId]";
 
 export default function useListLayout(
   fontFamily?: FontFamilyConfig,
@@ -7,6 +7,10 @@ export default function useListLayout(
   bgColor?: string,
   headerImage?: string,
   bodyImage?: string,
+  widgetBgColor?: string,
+  widgetColor?: string,
+  widgetWsCta?: string,
+  widgetMapCta?: string,
   title1?: string,
   title1Color?: string,
   title1Size?: string,
@@ -51,6 +55,10 @@ export default function useListLayout(
           bgColor,
           headerImage,
           bodyImage,
+          widgetBgColor,
+          widgetColor,
+          widgetWsCta,
+          widgetMapCta,
           title1,
           title1Color,
           title1Size,

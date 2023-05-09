@@ -39,9 +39,9 @@ const Popup: React.FC<PopupProps> = ({
         Please find your link here :{" "}
         <Link
           style={{ color: "#1976d2", fontWeight: 800, textDecoration: "none" }}
-          href={`/e-invite/${itemName}`}
+          href={`/e-invite/edit/${itemName}`}
         >
-          lumie/eInvite/{itemName}
+          lumie/eInvite/edit/{itemName}
         </Link>
       </Box>
       <Box mt={2}>

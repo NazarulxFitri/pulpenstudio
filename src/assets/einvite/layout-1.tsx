@@ -15,6 +15,10 @@ const Layout1: React.FC<AssetLayoutProps> = ({
   bgColor,
   headerImage,
   bodyImage,
+  widgetBgColor,
+  widgetColor,
+  widgetWsCta,
+  widgetMapCta,
   title1,
   title1Color,
   title1Size,
@@ -57,6 +61,7 @@ const Layout1: React.FC<AssetLayoutProps> = ({
       sx={{
         background: bgColor,
         height: "100vh",
+        position: "relative",
       }}
     >
       <Box sx={{ position: "relative" }}>
@@ -220,18 +225,33 @@ const Layout1: React.FC<AssetLayoutProps> = ({
           />
         </Box>
       </Box>
-      <Grid container justifyContent="center" columnGap={8}>
+      <Grid
+        container
+        rowGap={6}
+        flexDirection="column"
+        sx={{
+          boxShadow: "1px 1px 10px",
+          position: "fixed",
+          p: "48px 24px",
+          background: widgetBgColor || "transparent",
+          borderTopLeftRadius: "24px",
+          borderBottomLeftRadius: "24px",
+          top: "32%",
+          right: 0,
+          width: "fit-content",
+        }}
+      >
         <Grid item>
-          <WhatsappIcon color="#fff" size="32" />
+          <WhatsappIcon color={widgetColor} size="32" />
         </Grid>
         <Grid>
-          <MapIcon color="#fff" size="32" />
+          <MapIcon color={widgetColor} size="32" />
         </Grid>
         <Grid>
-          <ChatIcon color="#fff" size="32" />
+          <ChatIcon color={widgetColor} size="32" />
         </Grid>
         <Grid>
-          <ClockIcon color="#fff" size="32" />
+          <ClockIcon color={widgetColor} size="32" />
         </Grid>
       </Grid>
     </Box>

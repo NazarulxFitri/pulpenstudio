@@ -4,12 +4,16 @@ import Header from "@/modules/Header";
 import { Montserrat } from "next/font/google";
 import { ThemeProvider } from "@mui/material";
 import { theme } from "@/theme";
+import { useRouter } from "next/router";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
 });
 
 export default function App({ Component, pageProps }: AppProps) {
+  const router = useRouter();
+  const liveUrl = router.pathname.includes("live");
+
   return (
     <ThemeProvider theme={theme}>
       <style jsx global>{`
@@ -17,7 +21,8 @@ export default function App({ Component, pageProps }: AppProps) {
           font-family: ${montserrat.style.fontFamily};
         }
       `}</style>
-      <Header />
+
+      {!liveUrl && <Header />}
       <Component {...pageProps} />
     </ThemeProvider>
   );

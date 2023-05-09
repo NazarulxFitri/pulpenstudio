@@ -1,6 +1,13 @@
 import { ref, get, child } from "firebase/database";
 import { useEffect, useRef, useState } from "react";
 import db from "../../services/firebaseApp";
+import type { AssetLayoutProps } from "../type";
+
+interface EInviteConfig {
+  data?: AssetLayoutProps;
+  layout: string;
+  name: string;
+}
 
 export default function useGetEinvite(id?: string) {
   const [isLoading, setIsLoading] = useState(true);
@@ -29,7 +36,7 @@ export default function useGetEinvite(id?: string) {
     return { data, isLoading };
   } else {
     const rawData = snapshot.current;
-    const data = rawData?.[id];
+    const data: EInviteConfig | undefined = rawData?.[id];
 
     return { data };
   }
