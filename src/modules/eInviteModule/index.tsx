@@ -105,7 +105,7 @@ const EInviteModule = () => {
       <Box onClick={handleClickButton} sx={{ width: "fit-content" }}>
         <Button disabled={disabled}>Proceed</Button>
       </Box>
-      {showPopup && (
+      {!!showPopup && (
         <Popup
           title="e-Invite"
           message="Congratulations ! You have successfully created your e-Invite."

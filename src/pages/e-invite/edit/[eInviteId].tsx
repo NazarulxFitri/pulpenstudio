@@ -5,6 +5,7 @@ import {
   DescriptionForm,
   StylingForm,
   WidgetForm,
+  Popup,
 } from "@/components";
 import { useRouter } from "next/router";
 import { Grid } from "@mui/material";
@@ -25,6 +26,7 @@ const EinviteId = () => {
   const router = useRouter();
   const eInviteId = router.query.eInviteId;
   const { data: item } = useGetEinvite(eInviteId as string);
+  const [showPopup, setShowPopup] = useState(false);
 
   const [fontFamily, setFontFamily] = useState<FontFamilyConfig>();
   const [textFontFamily, setTextFontFamily] = useState<FontFamilyConfig>();
@@ -70,7 +72,7 @@ const EinviteId = () => {
   const [description4Pos, setDescription4Pos] = useState("");
   const [description4TopSpacing, setDescription4TopSpacing] = useState("");
   const [description4BotSpacing, setDescription4BotSpacing] = useState("");
-  const [success, setSuccess] = useState(false);
+
   const listLayout = useListLayout(
     fontFamily,
     textFontFamily,
@@ -172,7 +174,7 @@ const EinviteId = () => {
 
   function handleSubmit() {
     action();
-    setSuccess(true);
+    setShowPopup(true);
   }
 
   return (
@@ -282,9 +284,14 @@ const EinviteId = () => {
               borderRadius: "24px",
               boxShadow: "1px 1px 10px #333",
               color: "#FFF",
+              cursor: "pointer",
               fontWeight: "600",
               mt: 8,
               py: 2,
+              "&:hover": {
+                background: "#fff",
+                color: "#1976d2",
+              },
             }}
             onClick={handleSubmit}
           >
@@ -296,6 +303,16 @@ const EinviteId = () => {
           {listLayout[item?.layout]}
         </Grid>
       </Grid>
+      {!!showPopup && (
+        <Popup
+          title="e-Invite"
+          message="Congratulations ! You have successfully submitted your design."
+          disclaimer="Check out your live eInvite now !"
+          itemName={eInviteId as string}
+          live={true}
+          // {...{ itemName }}
+        />
+      )}
     </BoxContainer>
   );
 };
