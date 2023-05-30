@@ -310,6 +310,7 @@ const Layout1: React.FC<AssetLayoutProps> = ({
             <Grid item py={2} xs={12}>
               {comments?.map((comment: any, idx: string) => (
                 <Box
+                  key={idx}
                   mb={2}
                   sx={{
                     background:
