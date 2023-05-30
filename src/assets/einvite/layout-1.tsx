@@ -1,260 +1,344 @@
 import type { AssetLayoutProps } from "@/type";
-import { Box, Grid } from "@mui/material";
+import { Box, Container, Grid, styled } from "@mui/material";
 import {
-  FlowerArtTheme,
-  LightningTheme,
-  Love,
-  ThunderMusicBody,
-} from "./components";
-import LoveBody from "./components/theme/body/Love";
-import { ChatIcon, ClockIcon, MapIcon, WhatsappIcon } from "@/components";
+  ChatIcon,
+  ClockIcon,
+  CommentForm,
+  MapIcon,
+  WhatsappIcon,
+} from "@/components";
+import { Great_Vibes, Poiret_One } from "next/font/google";
+import useGetEinvite from "@/data/useGetEinvite";
+import { useRouter } from "next/router";
+
+const greatVibes = Great_Vibes({ subsets: ["latin"], weight: "400" });
+const poiretOne = Poiret_One({ subsets: ["latin"], weight: "400" });
+
+const Title = styled("h1")(({ theme }) => ({
+  fontFamily: `${greatVibes.style.fontFamily} !important` || "auto",
+  fontSize: "40px",
+  fontWeight: "lighter",
+  textAlign: "center",
+  [theme.breakpoints.up("md")]: {
+    fontSize: "80px",
+  },
+}));
+
+const SubTitle = styled("h2")(({ theme }) => ({
+  fontFamily: `${greatVibes.style.fontFamily} !important` || "auto",
+  fontSize: "32px",
+  textAlign: "center",
+  [theme.breakpoints.up("md")]: {
+    fontSize: "40px",
+  },
+}));
+
+const Text = styled("p")(({ theme }) => ({
+  fontFamily: `${poiretOne.style.fontFamily} !important` || "auto",
+  fontSize: "16px",
+  textAlign: "center",
+  [theme.breakpoints.up("md")]: {
+    fontSize: "32px",
+  },
+}));
+
+const MiniText = styled("p")(({ theme }) => ({
+  fontFamily: `${poiretOne.style.fontFamily} !important` || "auto",
+  fontSize: "16px",
+  textAlign: "center",
+  [theme.breakpoints.up("md")]: {
+    fontSize: "24px",
+  },
+}));
+
+const Link = styled("a")(() => ({
+  color: "unset",
+  textDecoration: "none",
+  "& :hover": {
+    color: "#FDE6E8",
+  },
+}));
 
 const Layout1: React.FC<AssetLayoutProps> = ({
-  fontFamily,
-  textFontFamily,
-  bgColor,
-  headerImage,
-  bodyImage,
+  firstIntro,
+  secondIntro,
+  title,
+  date,
+  day,
+  time,
+  location,
+  descTitle,
+  descOne,
+  descTwo,
+  descThree,
+  infoTitle,
+  infoAddress,
+  infoAddressMap,
+  infoFirstPhoneName,
+  infoFirstPhoneNum,
+  infoSecondPhoneName,
+  infoSecondPhoneNum,
+  wishTitleForm,
+  wishDescForm,
   widgetBgColor,
   widgetColor,
-  widgetWsCta,
-  widgetMapCta,
-  title1,
-  title1Color,
-  title1Size,
-  title1Pos,
-  title1Shadow,
-  title2,
-  title2Color,
-  title2Size,
-  title2Pos,
-  title2Shadow,
-  description1,
-  description1Color,
-  description1Size,
-  description1Pos,
-  description1TopSpacing,
-  description1BotSpacing,
-  description2,
-  description2Color,
-  description2Size,
-  description2Pos,
-  description2TopSpacing,
-  description2BotSpacing,
-  description3,
-  description3Color,
-  description3Size,
-  description3Pos,
-  description3TopSpacing,
-  description3BotSpacing,
-  description4,
-  description4Color,
-  description4Size,
-  description4Pos,
-  description4TopSpacing,
-  description4BotSpacing,
 }) => {
+  const router = useRouter();
+  const eInviteId = router.query.eInviteId;
+  const { data } = useGetEinvite(eInviteId as string);
+  // @ts-ignore
+  const comments = data?.comments;
+
   return (
-    <Box
-      px={10}
-      py={6}
-      sx={{
-        background: bgColor,
-        height: "100vh",
-        position: "relative",
-      }}
-    >
-      <Box sx={{ position: "relative" }}>
-        {headerImage === "Flower" && <FlowerArtTheme />}
-        {headerImage === "Music" && <LightningTheme />}
-        {headerImage === "Love" && <Love />}
-
-        {bodyImage === "Love" && (
-          <>
-            <LoveBody left={true} right={false} />
-            <LoveBody left={false} right={true} />
-          </>
-        )}
-        {bodyImage === "Thunder" && (
-          <>
-            <ThunderMusicBody left={true} right={false} />
-            <ThunderMusicBody left={false} right={true} />
-          </>
-        )}
-
-        <Box
-          sx={{
-            mx: "264px",
-            wordWrap: "break-word",
-            pt: 6,
-            textAlign: "center",
-            fontFamily: `${fontFamily?.style?.fontFamily} !important` || "auto",
-          }}
-        >
-          <h1
-            style={{
-              borderTop: "2px solid",
-              borderLeft: "2px solid",
-              borderImage:
-                "linear-gradient(0.25turn, #800080, #FFC0CB, #FFFF00)",
-              borderImageSlice: "1",
-              color: title1Color,
-              fontSize: !!title1Size ? `${title1Size}px` : "56px",
-              paddingTop: "16px",
-              textShadow:
-                title1Shadow === "on-Title-one" ? "6px 4px 4px #EEEE" : "unset",
-              // @ts-ignore
-              textAlign:
-                title1Pos === "center-Title-one"
-                  ? "center"
-                  : title1Pos === "left-Title-one"
-                  ? "left"
-                  : title1Pos === "right-Title-one"
-                  ? "right"
-                  : "center",
-            }}
-            dangerouslySetInnerHTML={{ __html: title1! }}
-          />
-
-          <h1
-            style={{
-              borderBottom: "2px solid",
-              borderRight: "2px solid",
-              borderImage:
-                "linear-gradient(0.25turn, #FFFF00, #FFC0CB, #800080)",
-              borderImageSlice: "1",
-              color: title2Color,
-              fontSize: !!title2Size ? `${title2Size}px` : "56px",
-              paddingBottom: "16px",
-              textShadow:
-                title2Shadow === "on-Title-two" ? "6px 4px 4px #EEEE" : "unset",
-              // @ts-ignore
-              textAlign:
-                title2Pos === "center-Title-two"
-                  ? "center"
-                  : title2Pos === "left-Title-two"
-                  ? "left"
-                  : title2Pos === "right-Title-two"
-                  ? "right"
-                  : "center",
-            }}
-            dangerouslySetInnerHTML={{ __html: title2! }}
-          />
-        </Box>
-        <Box
-          sx={{
-            py: 6,
-            wordWrap: "break-word",
-            mx: "264px",
-            textAlign: "center",
-            fontFamily:
-              `${textFontFamily?.style?.fontFamily} !important` || "auto",
-          }}
-        >
-          <p
-            style={{
-              color: description1Color,
-              fontSize: `${description1Size}px`,
-              // @ts-ignore
-              textAlign:
-                description1Pos === "center-Description-one"
-                  ? "center"
-                  : description1Pos === "left-Description-one"
-                  ? "left"
-                  : description1Pos === "right-Description-one"
-                  ? "right"
-                  : "center",
-              marginTop: description1TopSpacing + "px",
-              marginBottom: description1BotSpacing + "px",
-            }}
-            dangerouslySetInnerHTML={{ __html: description1! }}
-          />
-          <p
-            style={{
-              color: description2Color,
-              fontSize: `${description2Size}px`,
-              // @ts-ignore
-              textAlign:
-                description2Pos === "center-Description-two"
-                  ? "center"
-                  : description2Pos === "left-Description-two"
-                  ? "left"
-                  : description2Pos === "right-Description-two"
-                  ? "right"
-                  : "center",
-              marginTop: description2TopSpacing + "px",
-              marginBottom: description2BotSpacing + "px",
-            }}
-            dangerouslySetInnerHTML={{ __html: description2! }}
-          />
-          <p
-            style={{
-              color: description3Color,
-              fontSize: `${description3Size}px`,
-              // @ts-ignore
-              textAlign:
-                description3Pos === "center-Description-three"
-                  ? "center"
-                  : description3Pos === "left-Description-three"
-                  ? "left"
-                  : description3Pos === "right-Description-three"
-                  ? "right"
-                  : "center",
-              marginTop: description3TopSpacing + "px",
-              marginBottom: description3BotSpacing + "px",
-            }}
-            dangerouslySetInnerHTML={{ __html: description3! }}
-          />
-          <p
-            style={{
-              color: description4Color,
-              fontSize: `${description4Size}px`,
-              // @ts-ignore
-              textAlign:
-                description4Pos === "center-Description-four"
-                  ? "center"
-                  : description4Pos === "left-Description-four"
-                  ? "left"
-                  : description4Pos === "right-Description-four"
-                  ? "right"
-                  : "center",
-              marginTop: description4TopSpacing + "px",
-              marginBottom: description4BotSpacing + "px",
-            }}
-            dangerouslySetInnerHTML={{ __html: description4! }}
-          />
-        </Box>
-      </Box>
-      <Grid
-        container
-        rowGap={6}
-        flexDirection="column"
+    <>
+      <Box
+        px={{ xs: 0, md: 10 }}
+        py={{ xs: 0, md: 6 }}
         sx={{
-          boxShadow: "1px 1px 10px",
-          position: "fixed",
-          p: "48px 24px",
-          background: widgetBgColor || "transparent",
-          borderTopLeftRadius: "24px",
-          borderBottomLeftRadius: "24px",
-          top: "32%",
-          right: 0,
-          width: "fit-content",
+          backgroundImage: "url('/media/layout/layout-1.jpeg')",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "100% 100%",
+          margin: { xs: "0", md: "16px 96px" },
+          position: "relative",
+          height: { xs: "80vh", md: "800px" },
         }}
       >
-        <Grid item>
-          <WhatsappIcon color={widgetColor} size="32" />
+        <Box
+          sx={{
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            textAlign: "center",
+            transform: "translate(-50%,-50%)",
+            maxWidth: "80%",
+            wordBreak: "break-word",
+            width: "100%",
+          }}
+        >
+          <SubTitle
+            sx={{ mb: 5 }}
+            dangerouslySetInnerHTML={{ __html: firstIntro }}
+          />
+          <MiniText
+            sx={{ letterSpacing: "0.5em", mb: 5 }}
+            dangerouslySetInnerHTML={{ __html: secondIntro }}
+          />
+          <Title
+            sx={{ mb: 5, textShadow: "8px 8px 8px #FDE6E8" }}
+            dangerouslySetInnerHTML={{ __html: title }}
+          />
+          <Grid container justifyContent="center" mb={5}>
+            <Grid item borderRight="2px solid #FDE6E8" px={2}>
+              <Text dangerouslySetInnerHTML={{ __html: date }} />
+            </Grid>
+            <Grid item borderRight="2px solid #FDE6E8" px={2}>
+              <Text dangerouslySetInnerHTML={{ __html: day }} />
+            </Grid>
+            <Grid item borderRight="2px solid #FDE6E8" px={2}>
+              <Text dangerouslySetInnerHTML={{ __html: time }} />
+            </Grid>
+            <Grid item px={2}>
+              <Text dangerouslySetInnerHTML={{ __html: location }} />
+            </Grid>
+          </Grid>
+        </Box>
+        <Grid
+          container
+          columnGap={{ xs: 4, md: 0 }}
+          rowGap={{ xs: 0, md: 6 }}
+          flexDirection={{ xs: "row", md: "column" }}
+          justifyContent="space-evenly"
+          sx={{
+            background: {
+              xs: widgetBgColor || "white",
+              md: widgetBgColor || "transparent",
+            },
+            borderTopLeftRadius: "24px",
+            borderTopRightRadius: "24px",
+            bottom: { xs: "0", md: "unset" },
+            boxShadow: "1px 1px 10px #FDE6E8",
+            padding: { xs: "16px 0", md: "48px 24px" },
+            position: "fixed",
+            top: { xs: "unset", md: "32%" },
+            right: { xs: "unset", md: "0" },
+            width: { xs: "100%", md: "fit-content" },
+          }}
+        >
+          <Grid>
+            <Link href="#contact-info">
+              <WhatsappIcon color={widgetColor} size="32" />
+            </Link>
+          </Grid>
+          <Grid>
+            <Link href="#contact-info">
+              <MapIcon color={widgetColor} size="32" />
+            </Link>
+          </Grid>
+          <Grid>
+            <Link href="#comment">
+              <ChatIcon color={widgetColor} size="32" />
+            </Link>
+          </Grid>
+          <Grid>
+            <ClockIcon color={widgetColor} size="32" />
+          </Grid>
         </Grid>
-        <Grid>
-          <MapIcon color={widgetColor} size="32" />
-        </Grid>
-        <Grid>
-          <ChatIcon color={widgetColor} size="32" />
-        </Grid>
-        <Grid>
-          <ClockIcon color={widgetColor} size="32" />
-        </Grid>
-      </Grid>
-    </Box>
+      </Box>
+      <Container
+        sx={{
+          backgroundImage: "url('/media/cuba.png')",
+          backgroundRepeat: { xs: "repeat-y", md: "no-repeat" },
+          backgroundSize: { xs: "contain", md: "100% 100%" },
+        }}
+      >
+        <Box
+          mb={5}
+          mx="auto"
+          sx={{
+            background: "rgba(255,255,255,0.8)",
+            boxShadow: "1px 1px 16px #FDE6E8",
+            borderRadius: "24px",
+            p: { xs: "24px 16px", md: 8 },
+          }}
+        >
+          <MiniText
+            sx={{ mb: 3 }}
+            dangerouslySetInnerHTML={{
+              __html: descOne,
+            }}
+          />
+          <Text
+            sx={{ fontWeight: "bolder", mb: 3 }}
+            dangerouslySetInnerHTML={{
+              __html: descTitle,
+            }}
+          />
+          <MiniText
+            sx={{ mb: 3 }}
+            dangerouslySetInnerHTML={{
+              __html: descTwo,
+            }}
+          />
+          <MiniText
+            sx={{ mb: 3 }}
+            dangerouslySetInnerHTML={{
+              __html: descThree,
+            }}
+          />
+        </Box>
+        <Box
+          sx={{
+            background: "rgba(253,230,232, 0.8)",
+            borderRadius: "24px",
+            boxShadow: "1px 1px 10px #EFEFEF",
+            mb: 5,
+            px: 2,
+            py: 4,
+          }}
+        >
+          <SubTitle
+            dangerouslySetInnerHTML={{ __html: infoTitle }}
+            sx={{ pb: 2 }}
+          />
+          <Box id="address" mb={3}>
+            <MiniText
+              sx={{ textAlign: "left", mb: 2 }}
+              dangerouslySetInnerHTML={{
+                __html: infoAddress,
+              }}
+            />
+            <Link href={`${infoAddressMap}`}>
+              <Box
+                sx={{
+                  background: "#FFF",
+                  boxShadow: "1px 1px 10px #FFF",
+                  border: "1px solid #FDE6E8",
+                  borderRadius: "24px",
+                  p: "8px 64px",
+                  width: "fit-content",
+                }}
+              >
+                <MapIcon size="32" />
+              </Box>
+            </Link>
+          </Box>
+          <Box id="contact-info">
+            <MiniText
+              sx={{ textAlign: "left", mr: 2 }}
+              dangerouslySetInnerHTML={{
+                __html: `${infoFirstPhoneName} - ${infoFirstPhoneNum}`,
+              }}
+            />
+
+            <MiniText
+              sx={{ textAlign: "left", mr: 2 }}
+              dangerouslySetInnerHTML={{
+                __html: `${infoSecondPhoneName} - ${infoSecondPhoneNum}`,
+              }}
+            />
+          </Box>
+        </Box>
+        <Box
+          id="comment"
+          mb={10}
+          sx={{
+            background: "rgba(255,255,255,0.8)",
+            boxShadow: "1px 1px 16px #FDE6E8",
+            borderRadius: "24px",
+            px: 2,
+            py: 4,
+          }}
+        >
+          <SubTitle
+            dangerouslySetInnerHTML={{ __html: wishTitleForm }}
+            sx={{ pb: 2 }}
+          />
+          <MiniText
+            dangerouslySetInnerHTML={{ __html: wishDescForm }}
+            sx={{ pb: 2 }}
+          />
+          <Grid container>
+            <Grid item py={2} xs={12}>
+              <CommentForm
+                textName="Name"
+                textComment="Write your wish here !"
+                textButton="Hantar"
+                themeColor="#FDE6E8"
+                font={poiretOne.style.fontFamily}
+              />
+            </Grid>
+            <Grid item py={2} xs={12}>
+              {comments?.map((comment: any, idx: string) => (
+                <Box
+                  mb={2}
+                  sx={{
+                    background:
+                      Number(idx) % 2 === 0
+                        ? "rgba(253,230,232, 0.4)"
+                        : "rgba(240,240,240, 0.4)",
+                    borderRadius: "24px",
+                    p: "16px 24px",
+                  }}
+                >
+                  <MiniText
+                    sx={{
+                      textAlign: "left",
+                      fontWeight: "bolder",
+                      marginBottom: "8px",
+                    }}
+                    dangerouslySetInnerHTML={{ __html: comment?.name! }}
+                  />
+                  <MiniText
+                    sx={{ textAlign: "left" }}
+                    dangerouslySetInnerHTML={{ __html: comment?.message! }}
+                  />
+                </Box>
+              ))}
+            </Grid>
+          </Grid>
+        </Box>
+      </Container>
+    </>
   );
 };
 

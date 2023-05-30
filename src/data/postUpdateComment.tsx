@@ -2,15 +2,22 @@ import db from "../../services/firebaseApp";
 import { useState } from "react";
 import { ref, update } from "firebase/database";
 
-export default function usePostUpdateEinvite(layoutId: any, eInviteId: string) {
+export default function usePostUpdateComment(eInviteId: string) {
   const [loading, setLoading] = useState(false);
 
-  const action = async (cms: any) => {
+  const action = async (
+    name: string,
+    message: string,
+    commentsLength: number
+  ) => {
     try {
+      const key = commentsLength;
       setLoading(true);
-      update(ref(db, `eInviteApp/${eInviteId}`), {
-        data: cms,
-        layout: layoutId,
+      update(ref(db, `eInviteApp/${eInviteId}/comments`), {
+        [key]: {
+          name,
+          message,
+        },
       });
     } catch (err) {
       console.log(err);

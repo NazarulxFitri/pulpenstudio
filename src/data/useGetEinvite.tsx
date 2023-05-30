@@ -37,7 +37,11 @@ export default function useGetEinvite(id?: string) {
   } else {
     const rawData = snapshot.current;
     const data: EInviteConfig | undefined = rawData?.[id];
+    // @ts-ignore
+    const commentsLength = data?.comments?.length || 0;
+    // @ts-ignore
+    const layout = data?.layout;
 
-    return { data };
+    return { data, layout, commentsLength };
   }
 }

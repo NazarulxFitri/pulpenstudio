@@ -1,1 +1,1 @@
-export { default as Layout1 } from "../assets/einvite/layout-1";
+export { default as Layout1 } from "./einvite/layout-1";

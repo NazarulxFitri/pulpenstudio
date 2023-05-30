@@ -6,12 +6,12 @@ import {
   styled,
 } from "@mui/material";
 
-interface WidgetFormProps {
+interface WishFormProps {
   accordionTitle: string;
-  setWidgetBgColor: (value: string) => void;
-  setWidgetColor: (value: string) => void;
-  widgetBgColor: string;
-  widgetColor: string;
+  setWishFormTitle: (value: string) => void;
+  setWishFormDesc: (value: string) => void;
+  wishTitleForm: string;
+  wishDescForm: string;
 }
 
 const Input = styled(TextField)(() => ({
@@ -19,12 +19,12 @@ const Input = styled(TextField)(() => ({
   margin: "4px 0",
 }));
 
-const WidgetForm: React.FC<WidgetFormProps> = ({
+const WishForm: React.FC<WishFormProps> = ({
   accordionTitle,
-  setWidgetBgColor,
-  setWidgetColor,
-  widgetBgColor,
-  widgetColor,
+  setWishFormTitle,
+  setWishFormDesc,
+  wishTitleForm,
+  wishDescForm,
 }) => {
   return (
     <Accordion sx={{ boxShadow: "1px 1px 8px #333" }}>
@@ -43,24 +43,30 @@ const WidgetForm: React.FC<WidgetFormProps> = ({
       </AccordionSummary>
       <AccordionDetails sx={{ m: 1, padding: "0" }}>
         <Input
-          defaultValue={widgetBgColor}
-          label="Background Color"
+          InputLabelProps={{ shrink: true }}
+          defaultValue={wishTitleForm}
+          label="Wish Form Title"
           fullWidth
           onChange={(e) => {
-            setWidgetBgColor(e.target.value);
+            setWishFormTitle(e.target.value);
           }}
+          multiline
+          variant="standard"
         />
         <Input
-          defaultValue={widgetColor}
-          label="Icon Color"
+          InputLabelProps={{ shrink: true }}
+          defaultValue={wishDescForm}
+          label="Wish Form Desc"
           fullWidth
           onChange={(e) => {
-            setWidgetColor(e.target.value);
+            setWishFormDesc(e.target.value);
           }}
+          multiline
+          variant="standard"
         />
       </AccordionDetails>
     </Accordion>
   );
 };
 
-export default WidgetForm;
+export default WishForm;

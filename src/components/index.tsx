@@ -5,11 +5,12 @@ export { default as ErrorMessage } from "./ErrorMessage";
 export { default as ListNumber } from "./ListNumber";
 export { default as Popup } from "./Popup";
 
-export { default as TitleForm } from "./Forms/TitleForm";
+export { default as CommentForm } from "./Forms/CommentForm";
 export { default as WidgetForm } from "./Forms/WidgetForm";
-export { default as DescriptionForm } from "./Forms/DescriptionForm";
-export { default as StylingForm } from "./Forms/StylingForm";
-export { default as RadioButton } from "./Forms/RadioButton";
+export { default as TopContentForm } from "./Forms/TopContentForm";
+export { default as FirstCardForm } from "./Forms/FirstCardForm";
+export { default as InformationForm } from "./Forms/InformationForm";
+export { default as WishForm } from "./Forms/WishForm";
 
 export { default as WhatsappIcon } from "./Icons/WhatsappIcon";
 export { default as MapIcon } from "./Icons/MapIcon";

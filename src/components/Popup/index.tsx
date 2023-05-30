@@ -61,7 +61,7 @@ const Popup: React.FC<PopupProps> = ({
               live ? `/e-invite/live/${itemName}` : `/e-invite/edit/${itemName}`
             }
           >
-            lumie/eInvite/edit/{itemName}
+            lumie/eInvite/{live ? "live" : "edit"}/{itemName}
           </Link>
         </Box>
         <Box mt={2}>
