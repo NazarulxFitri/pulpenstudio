@@ -22,7 +22,6 @@ const Header = () => {
       />
       <Box display="flex" sx={{ margin: "0 0 0 auto" }}>
         <LinkMenu href="/e-invite">e-Invite</LinkMenu>
-        <LinkMenu href="/e-card">e-Card</LinkMenu>
       </Box>
     </Box>
   );

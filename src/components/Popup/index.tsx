@@ -24,7 +24,7 @@ const Popup: React.FC<PopupProps> = ({
           background: "rgba(0,0,0,0.8)",
           position: "absolute",
           width: "100vw",
-          height: "100vh",
+          height: "100%",
           left: "0",
           top: "0",
         }}

@@ -17,20 +17,9 @@ import useCheckExistence from "@/data/useCheckExistence";
 
 const cardData = [
   {
-    name: "Fire Red",
+    name: "Mewrita",
     id: "001",
-  },
-  {
-    name: "Ocean Blue",
-    id: "002",
-  },
-  {
-    name: "Leaf Green",
-    id: "003",
-  },
-  {
-    name: "Rock brown",
-    id: "004",
+    src: "/media/cardSelection/mewrita.png",
   },
 ];
 
@@ -96,7 +85,7 @@ const EInviteModule = () => {
           <ListNumber circle={true} number={2} />
           <h4>Choose layout</h4>
         </Box>
-        <Box display="flex" mt={1} gap={2}>
+        <Box display="flex" mt={2} gap={2}>
           {cardData.map((card, idx) => (
             <CardSelection {...{ card }} key={`Lumie | ${card} + ${idx}`} />
           ))}

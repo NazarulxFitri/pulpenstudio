@@ -251,7 +251,6 @@ const EinviteId = () => {
           disclaimer="Check out your live eInvite now !"
           itemName={eInviteId as string}
           live={true}
-          // {...{ itemName }}
         />
       )}
     </BoxContainer>
