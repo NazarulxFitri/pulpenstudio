@@ -6,6 +6,7 @@ interface PopupProps {
   message: string;
   disclaimer: string;
   itemName: string;
+  heightvh?: boolean;
   live?: boolean;
 }
 
@@ -15,6 +16,7 @@ const Popup: React.FC<PopupProps> = ({
   disclaimer,
   itemName,
   live,
+  heightvh,
 }) => {
   return (
     <>
@@ -24,7 +26,7 @@ const Popup: React.FC<PopupProps> = ({
           background: "rgba(0,0,0,0.8)",
           position: "absolute",
           width: "100vw",
-          height: "100%",
+          height: heightvh ? "100vh" : "100%",
           left: "0",
           top: "0",
         }}

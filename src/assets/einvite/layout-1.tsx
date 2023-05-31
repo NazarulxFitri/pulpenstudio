@@ -64,6 +64,7 @@ const Layout1: React.FC<AssetLayoutProps> = ({
   secondIntro,
   title,
   date,
+  countdownDate,
   day,
   time,
   location,
@@ -86,6 +87,7 @@ const Layout1: React.FC<AssetLayoutProps> = ({
   const router = useRouter();
   const eInviteId = router.query.eInviteId;
   const { data } = useGetEinvite(eInviteId as string);
+
   // @ts-ignore
   const comments = data?.comments;
 
@@ -179,7 +181,9 @@ const Layout1: React.FC<AssetLayoutProps> = ({
             </Link>
           </Grid>
           <Grid>
-            <ClockIcon color={widgetColor} size="32" />
+            <Link href="#countdown">
+              <ClockIcon color={widgetColor} size="32" />
+            </Link>
           </Grid>
         </Grid>
       </Box>
@@ -190,6 +194,25 @@ const Layout1: React.FC<AssetLayoutProps> = ({
           backgroundSize: { xs: "contain", md: "100% 100%" },
         }}
       >
+        <Box
+          id="countdown"
+          sx={{
+            background: "#FFF",
+            mt: 1,
+            mb: 8,
+            boxShadow: "1px 1px 10px pink",
+            borderRadius: "32px",
+            padding: "16px 72px",
+            width: "fit-content",
+            mx: "auto",
+          }}
+        >
+          <Title
+            dangerouslySetInnerHTML={{
+              __html: `${countdownDate} <span style="font-size: 48px">days to go</span>`,
+            }}
+          />
+        </Box>
         <Box
           mb={5}
           mx="auto"

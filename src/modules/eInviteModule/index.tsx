@@ -99,6 +99,7 @@ const EInviteModule = () => {
           title="e-Invite"
           message="Congratulations ! You have successfully created your e-Invite."
           disclaimer="Thank you"
+          heightvh={true}
           {...{ itemName }}
         />
       )}

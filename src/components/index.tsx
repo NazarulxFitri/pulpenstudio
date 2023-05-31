@@ -16,3 +16,4 @@ export { default as WhatsappIcon } from "./Icons/WhatsappIcon";
 export { default as MapIcon } from "./Icons/MapIcon";
 export { default as ChatIcon } from "./Icons/ChatIcon";
 export { default as ClockIcon } from "./Icons/ClockIcon";
+export { default as HelpIcon } from "./Icons/HelpIcon";

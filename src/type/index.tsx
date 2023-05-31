@@ -3,6 +3,7 @@ export interface AssetLayoutProps {
   secondIntro: string;
   title: string;
   date: string;
+  countdownDate: any;
   day: string;
   time: string;
   location: string;

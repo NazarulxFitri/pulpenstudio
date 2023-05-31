@@ -1,8 +1,11 @@
+import HelpIcon from "@/components/Icons/HelpIcon";
 import {
   Accordion,
   AccordionDetails,
   AccordionSummary,
+  Box,
   TextField,
+  Tooltip,
   styled,
 } from "@mui/material";
 
@@ -12,6 +15,7 @@ interface TopContentFormProps {
   setSecondIntro: (value: string) => void;
   setTitle: (value: string) => void;
   setDate: (value: string) => void;
+  setCountdownDate: (value: any) => void;
   setDay: (value: string) => void;
   setTime: (value: string) => void;
   setLocation: (value: string) => void;
@@ -35,6 +39,7 @@ const TopContentForm: React.FC<TopContentFormProps> = ({
   setSecondIntro,
   setTitle,
   setDate,
+  setCountdownDate,
   setDay,
   setTime,
   setLocation,
@@ -46,6 +51,22 @@ const TopContentForm: React.FC<TopContentFormProps> = ({
   time,
   location,
 }) => {
+  function handleChangeDate(e: any) {
+    const cd = new Date();
+    const d = new Date(e.target.value);
+    const dYear = d.getFullYear();
+    const dMonth = d.toLocaleString("default", { month: "long" });
+    const dDay = d.getDate();
+    const fullDate = `${dDay}  ${dMonth} ${dYear}`;
+    setDate(fullDate);
+
+    // @ts-ignore
+    const diff = d - cd;
+    const daysDiff = Math.floor(diff / (1000 * 60 * 60 * 24));
+
+    setCountdownDate(daysDiff);
+  }
+
   return (
     <Accordion sx={{ boxShadow: "1px 1px 8px #333" }}>
       <AccordionSummary
@@ -98,11 +119,22 @@ const TopContentForm: React.FC<TopContentFormProps> = ({
         <Input
           InputLabelProps={{ shrink: true }}
           defaultValue={date}
-          label="Date"
+          label={
+            <Box display="flex">
+              <span style={{ marginRight: "8px" }}>Date</span>
+              <Tooltip
+                title="Enter input with DD-MM-YYYY format to enable the countdown timer"
+                arrow
+                placement="right-start"
+              >
+                <Box>
+                  <HelpIcon />
+                </Box>
+              </Tooltip>
+            </Box>
+          }
           fullWidth
-          onChange={(e) => {
-            setDate(e.target.value);
-          }}
+          onChange={handleChangeDate}
           multiline
           variant="standard"
         />

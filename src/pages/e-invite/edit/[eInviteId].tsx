@@ -33,6 +33,7 @@ const EinviteId = () => {
   const [secondIntro, setSecondIntro] = useState("WALIMATULURUS");
   const [title, setTitle] = useState("Nazarul Fitri & Nurul Izzati");
   const [date, setDate] = useState("22 Februari 2022");
+  const [countdownDate, setCountdownDate] = useState();
   const [day, setDay] = useState("Saturday");
   const [time, setTime] = useState("11.00am until 4.00pm");
   const [location, setLocation] = useState("GlassHall Cheras");
@@ -73,6 +74,7 @@ const EinviteId = () => {
     secondIntro,
     title,
     date,
+    countdownDate,
     day,
     time,
     location,
@@ -105,6 +107,7 @@ const EinviteId = () => {
       secondIntro,
       title,
       date,
+      countdownDate,
       day,
       time,
       location,
@@ -134,7 +137,10 @@ const EinviteId = () => {
           item
           xs={2}
           p={2}
-          sx={{ border: "4px solid #EFEFEF", height: "100vh" }}
+          sx={{
+            height: "100vh",
+            position: "fixed",
+          }}
         >
           <Grid container rowSpacing={2}>
             <Grid item xs={12}>
@@ -145,6 +151,7 @@ const EinviteId = () => {
                   setSecondIntro,
                   setTitle,
                   setDate,
+                  setCountdownDate,
                   setDay,
                   setTime,
                   setLocation,
@@ -239,7 +246,8 @@ const EinviteId = () => {
             Submit
           </Grid>
         </Grid>
-        <Grid item xs={10}>
+        <Grid item xs={2} />
+        <Grid item xs={10} borderLeft="1px solid #F0F0F0">
           {/* @ts-ignore */}
           {listLayout[item?.layout]}
         </Grid>

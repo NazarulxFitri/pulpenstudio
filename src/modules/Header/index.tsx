@@ -17,6 +17,7 @@ const Header = () => {
       sx={{ boxShadow: "1px 1px 10px #E0E0E0" }}
     >
       <span
+        id="lumie"
         style={{ fontSize: "48px", fontWeight: "800" }}
         dangerouslySetInnerHTML={{ __html: "Lumie" }}
       />
