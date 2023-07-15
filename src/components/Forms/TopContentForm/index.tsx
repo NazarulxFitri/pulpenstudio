@@ -1,13 +1,13 @@
-import HelpIcon from "@/components/Icons/HelpIcon";
+import useGetCountDownTimer from "@/data/useGetCountDownTimer";
 import {
   Accordion,
   AccordionDetails,
   AccordionSummary,
-  Box,
   TextField,
-  Tooltip,
   styled,
 } from "@mui/material";
+import { DateTimePicker } from "@mui/x-date-pickers";
+import dayjs from "dayjs";
 
 interface TopContentFormProps {
   accordionTitle: string;
@@ -15,17 +15,17 @@ interface TopContentFormProps {
   setSecondIntro: (value: string) => void;
   setTitle: (value: string) => void;
   setDate: (value: string) => void;
-  setCountdownDate: (value: any) => void;
   setDay: (value: string) => void;
+  setDateTime: (value: string) => void;
+  dateTime: any;
+  setCountdownDate: (value: any) => void;
   setTime: (value: string) => void;
   setLocation: (value: string) => void;
   firstIntro: string;
   secondIntro: string;
   title: string;
-  date: string;
-  day: string;
-  time: string;
   location: string;
+  addedItem: any;
 }
 
 const Input = styled(TextField)(() => ({
@@ -39,33 +39,34 @@ const TopContentForm: React.FC<TopContentFormProps> = ({
   setSecondIntro,
   setTitle,
   setDate,
-  setCountdownDate,
   setDay,
+  setDateTime,
+  dateTime,
+  setCountdownDate,
   setTime,
   setLocation,
   firstIntro,
   secondIntro,
   title,
-  date,
-  day,
-  time,
   location,
+  addedItem,
 }) => {
-  function handleChangeDate(e: any) {
-    const cd = new Date();
-    const d = new Date(e.target.value);
-    const dYear = d.getFullYear();
-    const dMonth = d.toLocaleString("default", { month: "long" });
-    const dDay = d.getDate();
-    const fullDate = `${dDay}  ${dMonth} ${dYear}`;
-    setDate(fullDate);
-
-    // @ts-ignore
-    const diff = d - cd;
-    const daysDiff = Math.floor(diff / (1000 * 60 * 60 * 24));
-
-    setCountdownDate(daysDiff);
+  const countdownTimerParam = useGetCountDownTimer(dateTime);
+  function getCountDownTimer() {
+    setCountdownDate(countdownTimerParam);
   }
+
+  const myInputDate = dateTime?.toLocaleString("ms-MY", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+  });
+
+  const myInputTime = dateTime?.toLocaleTimeString("en", {
+    timeStyle: "short",
+  });
+
+  const myInputDay = dateTime?.toLocaleDateString("en", { weekday: "long" });
 
   return (
     <Accordion sx={{ boxShadow: "1px 1px 8px #333" }}>
@@ -116,51 +117,22 @@ const TopContentForm: React.FC<TopContentFormProps> = ({
           multiline
           variant="standard"
         />
-        <Input
-          InputLabelProps={{ shrink: true }}
-          defaultValue={date}
-          label={
-            <Box display="flex">
-              <span style={{ marginRight: "8px" }}>Date</span>
-              <Tooltip
-                title="Enter input with DD-MM-YYYY format to enable the countdown timer"
-                arrow
-                placement="right-start"
-              >
-                <Box>
-                  <HelpIcon />
-                </Box>
-              </Tooltip>
-            </Box>
-          }
-          fullWidth
-          onChange={handleChangeDate}
-          multiline
-          variant="standard"
-        />
-        <Input
-          InputLabelProps={{ shrink: true }}
-          defaultValue={day}
-          label="Day"
-          fullWidth
+        <DateTimePicker
+          sx={{ m: "16px 0", width: "100%" }}
+          label="Enter Date & Time"
+          value={dayjs(`Sun Feb 04 2024 12:00:00 GMT+0800 (Malaysia Time)`)}
           onChange={(e) => {
-            setDay(e.target.value);
+            // @ts-ignore
+            setDateTime(e.$d);
+            // @ts-ignore
+            setDate(myInputDate);
+            // @ts-ignore
+            setDay(myInputDay);
+            // @ts-ignore
+            setTime(myInputTime);
+            getCountDownTimer();
           }}
-          multiline
-          variant="standard"
         />
-        <Input
-          InputLabelProps={{ shrink: true }}
-          defaultValue={time}
-          label="Time"
-          fullWidth
-          onChange={(e) => {
-            setTime(e.target.value);
-          }}
-          multiline
-          variant="standard"
-        />
-
         <Input
           InputLabelProps={{ shrink: true }}
           defaultValue={location}

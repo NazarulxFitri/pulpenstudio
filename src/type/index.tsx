@@ -4,6 +4,7 @@ export interface AssetLayoutProps {
   title: string;
   date: string;
   countdownDate: any;
+  dateTime: any;
   day: string;
   time: string;
   location: string;

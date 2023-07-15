@@ -5,6 +5,8 @@ import { Montserrat } from "next/font/google";
 import { ThemeProvider } from "@mui/material";
 import { theme } from "@/theme";
 import { useRouter } from "next/router";
+import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
+import { LocalizationProvider } from "@mui/x-date-pickers";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -23,7 +25,9 @@ export default function App({ Component, pageProps }: AppProps) {
       `}</style>
 
       {!liveUrl && <Header />}
-      <Component {...pageProps} />
+      <LocalizationProvider dateAdapter={AdapterDayjs}>
+        <Component {...pageProps} />
+      </LocalizationProvider>
     </ThemeProvider>
   );
 }

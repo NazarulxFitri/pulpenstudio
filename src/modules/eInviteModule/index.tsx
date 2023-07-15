@@ -9,11 +9,11 @@ import {
 } from "@/components";
 import Button from "@/components/Button";
 import usePostAddEinvite from "@/data/postAddEinvite";
-import useCheckWhiteSpace from "@/data/useCheckWhiteSpace";
-import useCheckCapitalCase from "@/data/useCheckCapitalCase";
+import useCheckWhiteSpace from "@/utils/useCheckWhiteSpace";
+import useCheckCapitalCase from "@/utils/useCheckCapitalCase";
 import { Box, TextField } from "@mui/material";
 import useGetEinvite from "@/data/useGetEinvite";
-import useCheckExistence from "@/data/useCheckExistence";
+import useCheckExistence from "@/utils/useCheckExistence";
 
 const cardData = [
   {
@@ -28,13 +28,14 @@ const EInviteModule = () => {
   const { layoutid } = router.query;
   const [itemName, setName] = useState<string>("");
   const { data } = useGetEinvite();
-  const { action, loading } = usePostAddEinvite(itemName, layoutid as string);
+  const { action } = usePostAddEinvite(itemName, layoutid as string);
   const [showPopup, setShowPopup] = useState(false);
   // @ts-ignore
   const existence = useCheckExistence(data, itemName);
   const whiteSpace = useCheckWhiteSpace(itemName);
   const capitalCase = useCheckCapitalCase(itemName);
-  const disabled = !!whiteSpace || !!capitalCase || !itemName;
+  const disabled =
+    !!whiteSpace || !!capitalCase || !itemName || !layoutid || !!existence;
 
   const onSuccess = async () => {
     await action();
@@ -47,6 +48,7 @@ const EInviteModule = () => {
   }
 
   function handleClickButton() {
+    if (disabled) return null;
     onSuccess();
   }
 

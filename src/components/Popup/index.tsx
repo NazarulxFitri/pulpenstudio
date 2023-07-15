@@ -36,7 +36,7 @@ const Popup: React.FC<PopupProps> = ({
           background: "#FFF",
           borderRadius: "16px",
           position: "absolute",
-          top: "20%",
+          top: "10%",
           left: 0,
           right: 0,
           padding: "16px 72px",

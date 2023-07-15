@@ -17,6 +17,7 @@ const EinviteLive: React.FC<EinviteLiveProps> = () => {
   const title = item?.title;
   const date = item?.date;
   const countdownDate = item?.countdownDate;
+  const dateTime = item?.dateTime;
   const day = item?.day;
   const time = item?.time;
   const location = item?.location;
@@ -42,6 +43,7 @@ const EinviteLive: React.FC<EinviteLiveProps> = () => {
     title,
     date,
     countdownDate,
+    dateTime,
     day,
     time,
     location,

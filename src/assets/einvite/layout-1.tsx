@@ -1,15 +1,11 @@
 import type { AssetLayoutProps } from "@/type";
-import { Box, Container, Grid, styled } from "@mui/material";
-import {
-  ChatIcon,
-  ClockIcon,
-  CommentForm,
-  MapIcon,
-  WhatsappIcon,
-} from "@/components";
+import { Box, Container, Grid, Skeleton, styled } from "@mui/material";
+import { CommentForm, MapIcon } from "@/components";
 import { Great_Vibes, Poiret_One } from "next/font/google";
 import useGetEinvite from "@/data/useGetEinvite";
 import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
+import useGetCountDownTimer from "@/data/useGetCountDownTimer";
 
 const greatVibes = Great_Vibes({ subsets: ["latin"], weight: "400" });
 const poiretOne = Poiret_One({ subsets: ["latin"], weight: "400" });
@@ -59,12 +55,24 @@ const Link = styled("a")(() => ({
   },
 }));
 
+const TimeBox = styled(Box)(() => ({
+  background: "#333",
+  borderRadius: "24px",
+  color: "#FFF",
+  fontWeight: "700",
+  fontSize: "32px",
+  minWidth: "80px",
+  textAlign: "center",
+  padding: "16px 32px",
+  width: "fit-content",
+}));
+
 const Layout1: React.FC<AssetLayoutProps> = ({
   firstIntro,
   secondIntro,
   title,
   date,
-  countdownDate,
+  dateTime,
   day,
   time,
   location,
@@ -74,15 +82,12 @@ const Layout1: React.FC<AssetLayoutProps> = ({
   descThree,
   infoTitle,
   infoAddress,
-  infoAddressMap,
   infoFirstPhoneName,
   infoFirstPhoneNum,
   infoSecondPhoneName,
   infoSecondPhoneNum,
   wishTitleForm,
   wishDescForm,
-  widgetBgColor,
-  widgetColor,
 }) => {
   const router = useRouter();
   const eInviteId = router.query.eInviteId;
@@ -90,6 +95,25 @@ const Layout1: React.FC<AssetLayoutProps> = ({
 
   // @ts-ignore
   const comments = data?.comments;
+  const [latestCDTimer, setLatestCDTimer] = useState();
+  const counting =
+    // @ts-ignore
+    latestCDTimer?.countdownTimer.d <= 0 &&
+    // @ts-ignore
+    latestCDTimer?.countdownTimer.h <= 0 &&
+    // @ts-ignore
+    latestCDTimer?.countdownTimer.m <= 0 &&
+    // @ts-ignore
+    latestCDTimer?.countdownTimer.s;
+  const countdownTimerParam = useGetCountDownTimer(dateTime);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      // @ts-ignore
+      setLatestCDTimer(countdownTimerParam);
+    }, 1000);
+    return () => clearInterval(interval);
+  }, [dateTime]);
 
   return (
     <>
@@ -144,48 +168,6 @@ const Layout1: React.FC<AssetLayoutProps> = ({
             </Grid>
           </Grid>
         </Box>
-        <Grid
-          container
-          columnGap={{ xs: 4, md: 0 }}
-          rowGap={{ xs: 0, md: 6 }}
-          flexDirection={{ xs: "row", md: "column" }}
-          justifyContent="space-evenly"
-          sx={{
-            background: {
-              xs: widgetBgColor || "white",
-              md: widgetBgColor || "transparent",
-            },
-            borderRadius: "24px",
-            bottom: { xs: "0", md: "unset" },
-            boxShadow: "1px 1px 10px #FDE6E8",
-            padding: { xs: "16px 0", md: "48px 24px" },
-            position: "fixed",
-            top: { xs: "unset", md: "32%" },
-            right: { xs: "unset", md: "0" },
-            width: { xs: "100%", md: "fit-content" },
-          }}
-        >
-          <Grid>
-            <Link href="#contact-info">
-              <WhatsappIcon color={widgetColor} size="32" />
-            </Link>
-          </Grid>
-          <Grid>
-            <Link href="#contact-info">
-              <MapIcon color={widgetColor} size="32" />
-            </Link>
-          </Grid>
-          <Grid>
-            <Link href="#comment">
-              <ChatIcon color={widgetColor} size="32" />
-            </Link>
-          </Grid>
-          <Grid>
-            <Link href="#countdown">
-              <ClockIcon color={widgetColor} size="32" />
-            </Link>
-          </Grid>
-        </Grid>
       </Box>
       <Container
         sx={{
@@ -194,25 +176,49 @@ const Layout1: React.FC<AssetLayoutProps> = ({
           backgroundSize: { xs: "contain", md: "100% 100%" },
         }}
       >
-        <Box
-          id="countdown"
-          sx={{
-            background: "#FFF",
-            mt: 1,
-            mb: 8,
-            boxShadow: "1px 1px 10px pink",
-            borderRadius: "32px",
-            padding: "16px 72px",
-            width: "fit-content",
-            mx: "auto",
-          }}
-        >
-          <Title
-            dangerouslySetInnerHTML={{
-              __html: `${countdownDate} <span style="font-size: 48px">days to go</span>`,
+        {counting ? (
+          <Box
+            id="countdown"
+            columnGap={2}
+            sx={{
+              mt: 1,
+              mb: 8,
+              boxShadow: "1px 1px 10px #FDE6E8",
+              borderRadius: "32px",
+              padding: "16px 72px",
+              width: "fit-content",
+              mx: "auto",
+              display: "flex",
             }}
-          />
-        </Box>
+          >
+            <TimeBox>Today is the day !</TimeBox>
+          </Box>
+        ) : (
+          <Box
+            id="countdown"
+            columnGap={2}
+            sx={{
+              mt: 1,
+              mb: 8,
+              boxShadow: "1px 1px 10px #FDE6E8",
+              borderRadius: "32px",
+              padding: "16px 72px",
+              width: "fit-content",
+              mx: "auto",
+              display: "flex",
+            }}
+          >
+            {/* @ts-ignore */}
+            <TimeBox>{`${latestCDTimer?.countdownTimer.d} d`}</TimeBox>
+            {/* @ts-ignore */}
+            <TimeBox>{`${latestCDTimer?.countdownTimer.h} h`}</TimeBox>
+            {/* @ts-ignore */}
+            <TimeBox>{`${latestCDTimer?.countdownTimer.m} m`}</TimeBox>
+            {/* @ts-ignore */}
+            <TimeBox>{`${latestCDTimer?.countdownTimer.s} s`}</TimeBox>
+          </Box>
+        )}
+
         <Box
           mb={5}
           mx="auto"
@@ -269,7 +275,7 @@ const Layout1: React.FC<AssetLayoutProps> = ({
                 __html: infoAddress,
               }}
             />
-            <Link href={`${infoAddressMap}`}>
+            <Link>
               <Box
                 sx={{
                   background: "#FFF",

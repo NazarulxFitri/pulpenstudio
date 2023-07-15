@@ -5,11 +5,10 @@ import {
   InformationForm,
   Popup,
   TopContentForm,
-  WidgetForm,
   WishForm,
 } from "@/components";
 import { useRouter } from "next/router";
-import { Grid } from "@mui/material";
+import { Box, Grid, Skeleton } from "@mui/material";
 import useGetEinvite from "@/data/useGetEinvite";
 import useListLayout from "@/data/useListLayout";
 import usePostUpdateEinvite from "@/data/postUpdateEinvite";
@@ -26,48 +25,43 @@ export interface FontFamilyConfig {
 const EinviteId = () => {
   const router = useRouter();
   const eInviteId = router.query.eInviteId;
-  const { data: item } = useGetEinvite(eInviteId as string);
+  const { data: item, isLoading } = useGetEinvite(eInviteId as string);
   const [showPopup, setShowPopup] = useState(false);
+  // @ts-ignore
+  const addedItem = item?.data;
 
-  const [firstIntro, setFirstIntro] = useState("﷽");
-  const [secondIntro, setSecondIntro] = useState("WALIMATULURUS");
-  const [title, setTitle] = useState("Nazarul Fitri & Nurul Izzati");
-  const [date, setDate] = useState("22 Februari 2022");
-  const [countdownDate, setCountdownDate] = useState();
-  const [day, setDay] = useState("Saturday");
-  const [time, setTime] = useState("11.00am until 4.00pm");
-  const [location, setLocation] = useState("GlassHall Cheras");
+  const [firstIntro, setFirstIntro] = useState<string>("");
+  const [secondIntro, setSecondIntro] = useState<string>("");
+  const [title, setTitle] = useState<string>("");
+  const [date, setDate] = useState<string>("");
+  const [countdownDate, setCountdownDate] = useState({
+    d: "--",
+    h: "--",
+    m: "--",
+  });
+  const [dateTime, setDateTime] = useState<any>();
+  const [day, setDay] = useState<string>("");
+  const [time, setTime] = useState<string>("");
+  const [location, setLocation] = useState<string>("");
 
-  const [descTitle, setDescTitle] = useState(
-    "Mohd Azman & Lily Rusnah serta Mohd Rafie & Aidah"
-  );
-  const [descOne, setDescOne] = useState(
-    "Assalamualaikum w.b.t & Salam sejahtera"
-  );
-  const [descTwo, setDescTwo] = useState(
-    "Dengan rasa rendah diri, kami sekeluarga menjemput Dato' / Datin / Tuan / Puan / Encik / Cik untuk hadir ke Majlis Perkahwinan anakanda kami"
-  );
-  const [descThree, setDescThree] = useState("Description three");
+  const [descTitle, setDescTitle] = useState<string>("");
+  const [descOne, setDescOne] = useState<string>("");
+  const [descTwo, setDescTwo] = useState<string>("");
+  const [descThree, setDescThree] = useState<string>("");
 
-  const [infoTitle, setInfoTitle] = useState("Alamat & Cara hubungi kami");
-  const [infoAddress, setInfoAddress] = useState(
-    "GlassHall Cheras, Lot 3071, Bandar Mahkota Cheras, 43200 Cheras, Selangor"
-  );
-  const [infoAddressMap, setInfoAddressMap] = useState(
-    "https://www.google.com/maps?q=46,+Jalan+Damai+Perdana+7/1b,+Bandar+Damai+Perdana,+56000+Kuala+Lumpur,+Selangor,+Malaysia&ftid=0x31cc3515e374827b:0x53deac970632fb2b&hl=en-MY&gl=my&entry=gps&g_ep=CAISBjYuNjMuMhgAINeCA0ICU0c%3D&g_st=iw"
-  );
-  const [infoFirstPhoneName, setInfoFirstPhoneName] =
-    useState("Fitri ( Abang )");
-  const [infoFirstPhoneNum, setInfoFirstPhoneNum] = useState("01156271776");
-  const [infoSecondPhoneName, setInfoSecondPhoneName] =
-    useState("Izzati ( Adik )");
-  const [infoSecondPhoneNum, setInfoSecondPhoneNum] = useState("01156271776");
+  const [infoTitle, setInfoTitle] = useState<string>("");
+  const [infoAddress, setInfoAddress] = useState<string>("");
+  const [infoAddressMap, setInfoAddressMap] = useState<string>("");
+  const [infoFirstPhoneName, setInfoFirstPhoneName] = useState<string>("");
+  const [infoFirstPhoneNum, setInfoFirstPhoneNum] = useState<string>("");
+  const [infoSecondPhoneName, setInfoSecondPhoneName] = useState<string>("");
+  const [infoSecondPhoneNum, setInfoSecondPhoneNum] = useState<string>("");
 
-  const [wishTitleForm, setWishFormTitle] = useState("Ruangan Ucapan");
-  const [wishDescForm, setWishFormDesc] = useState("Letak je apa apa");
+  const [wishTitleForm, setWishFormTitle] = useState<string>("");
+  const [wishDescForm, setWishFormDesc] = useState<string>("");
 
-  const [widgetColor, setWidgetColor] = useState("black");
-  const [widgetBgColor, setWidgetBgColor] = useState("white");
+  const [widgetColor, setWidgetColor] = useState<string>("");
+  const [widgetBgColor, setWidgetBgColor] = useState<string>("");
 
   const listLayout = useListLayout(
     firstIntro,
@@ -75,6 +69,7 @@ const EinviteId = () => {
     title,
     date,
     countdownDate,
+    dateTime,
     day,
     time,
     location,
@@ -108,6 +103,7 @@ const EinviteId = () => {
       title,
       date,
       countdownDate,
+      dateTime,
       day,
       time,
       location,
@@ -128,6 +124,7 @@ const EinviteId = () => {
       widgetColor,
     });
     setShowPopup(true);
+    window.scrollTo({ top: 100, behavior: "smooth" });
   }
 
   return (
@@ -139,7 +136,7 @@ const EinviteId = () => {
           p={2}
           sx={{
             height: "100vh",
-            position: "fixed",
+            position: "absolute",
           }}
         >
           <Grid container rowSpacing={2}>
@@ -152,6 +149,8 @@ const EinviteId = () => {
                   setTitle,
                   setDate,
                   setCountdownDate,
+                  setDateTime,
+                  dateTime,
                   setDay,
                   setTime,
                   setLocation,
@@ -162,6 +161,7 @@ const EinviteId = () => {
                   day,
                   time,
                   location,
+                  addedItem,
                 }}
               />
             </Grid>
@@ -212,17 +212,6 @@ const EinviteId = () => {
                 }}
               />
             </Grid>
-            <Grid item xs={12}>
-              <WidgetForm
-                accordionTitle="Widget Section"
-                {...{
-                  setWidgetBgColor,
-                  setWidgetColor,
-                  widgetBgColor,
-                  widgetColor,
-                }}
-              />
-            </Grid>
           </Grid>
           <Grid
             item
@@ -253,13 +242,15 @@ const EinviteId = () => {
         </Grid>
       </Grid>
       {!!showPopup && (
-        <Popup
-          title="e-Invite"
-          message="Congratulations ! You have successfully submitted your design."
-          disclaimer="Check out your live eInvite now !"
-          itemName={eInviteId as string}
-          live={true}
-        />
+        <Box id="popup">
+          <Popup
+            title="e-Invite"
+            message="Congratulations ! You have successfully submitted your design."
+            disclaimer="Check out your live eInvite now !"
+            itemName={eInviteId as string}
+            live={true}
+          />
+        </Box>
       )}
     </BoxContainer>
   );

@@ -64,7 +64,6 @@ const InformationForm: React.FC<LocationContactFormProps> = ({
       <AccordionDetails sx={{ m: 1, padding: "0" }}>
         <Input
           InputLabelProps={{ shrink: true }}
-          defaultValue="Alamat & Cara hubungi kami"
           label="Info Title"
           fullWidth
           onChange={(e) => {
@@ -75,7 +74,6 @@ const InformationForm: React.FC<LocationContactFormProps> = ({
         />
         <Input
           InputLabelProps={{ shrink: true }}
-          defaultValue="GlassHall Cheras, Lot 3071, Bandar Mahkota Cheras, 43200 Cheras, Selangor"
           label="Address"
           fullWidth
           onChange={(e) => {
@@ -86,7 +84,6 @@ const InformationForm: React.FC<LocationContactFormProps> = ({
         />
         <Input
           InputLabelProps={{ shrink: true }}
-          defaultValue="https://www.google.com/maps?q=46,+Jalan+Damai+Perdana+7/1b,+Bandar+Damai+Perdana,+56000+Kuala+Lumpur,+Selangor,+Malaysia&ftid=0x31cc3515e374827b:0x53deac970632fb2b&hl=en-MY&gl=my&entry=gps&g_ep=CAISBjYuNjMuMhgAINeCA0ICU0c%3D&g_st=iw"
           label="Google Map Url"
           fullWidth
           onChange={(e) => {
@@ -97,7 +94,6 @@ const InformationForm: React.FC<LocationContactFormProps> = ({
         />
         <Input
           InputLabelProps={{ shrink: true }}
-          defaultValue="Nazarul Fitri"
           label="Contact Name 1"
           fullWidth
           onChange={(e) => {
@@ -108,7 +104,6 @@ const InformationForm: React.FC<LocationContactFormProps> = ({
         />
         <Input
           InputLabelProps={{ shrink: true }}
-          defaultValue="011 562 71776"
           label="Contact Number 1"
           fullWidth
           onChange={(e) => {
@@ -119,7 +114,6 @@ const InformationForm: React.FC<LocationContactFormProps> = ({
         />
         <Input
           InputLabelProps={{ shrink: true }}
-          defaultValue="Izzati"
           label="Contact Name 2"
           fullWidth
           onChange={(e) => {
@@ -130,7 +124,6 @@ const InformationForm: React.FC<LocationContactFormProps> = ({
         />
         <Input
           InputLabelProps={{ shrink: true }}
-          defaultValue="010 212 1936"
           label="Contact Number 2"
           fullWidth
           onChange={(e) => {

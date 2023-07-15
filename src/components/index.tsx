@@ -6,7 +6,6 @@ export { default as ListNumber } from "./ListNumber";
 export { default as Popup } from "./Popup";
 
 export { default as CommentForm } from "./Forms/CommentForm";
-export { default as WidgetForm } from "./Forms/WidgetForm";
 export { default as TopContentForm } from "./Forms/TopContentForm";
 export { default as FirstCardForm } from "./Forms/FirstCardForm";
 export { default as InformationForm } from "./Forms/InformationForm";

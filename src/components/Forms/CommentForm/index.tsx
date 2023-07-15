@@ -26,19 +26,18 @@ const CommentForm: React.FC<CommentFormProps> = ({
 }) => {
   const router = useRouter();
   const id = router.query.eInviteId;
+
+  const isEditting = router.pathname.includes("edit");
   const { commentsLength } = useGetEinvite(id as string);
   const { action } = usePostUpdateComment(id as string);
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");
 
   async function handleClick() {
+    if (isEditting) return null;
     await action(name, message, commentsLength);
     router.reload();
   }
-
-  useEffect(() => {
-    document.getElementById("comment")?.scrollIntoView();
-  }, [handleClick]);
 
   return (
     <Box>
@@ -72,7 +71,7 @@ const CommentForm: React.FC<CommentFormProps> = ({
       />
       <Box
         sx={{
-          background: themeColor,
+          background: !isEditting ? themeColor : "grey",
           boxShadow: "1px 1px solid #EFEFEF",
           width: "fit-content",
           borderRadius: "24px",
