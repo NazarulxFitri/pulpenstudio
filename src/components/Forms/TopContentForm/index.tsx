@@ -49,24 +49,21 @@ const TopContentForm: React.FC<TopContentFormProps> = ({
   secondIntro,
   title,
   location,
-  addedItem,
 }) => {
-  const countdownTimerParam = useGetCountDownTimer(dateTime);
-  function getCountDownTimer() {
-    setCountdownDate(countdownTimerParam);
-  }
-
   const myInputDate = dateTime?.toLocaleString("ms-MY", {
     day: "numeric",
     month: "long",
     year: "numeric",
   });
-
   const myInputTime = dateTime?.toLocaleTimeString("en", {
     timeStyle: "short",
   });
-
   const myInputDay = dateTime?.toLocaleDateString("en", { weekday: "long" });
+
+  const countdownTimerParam = useGetCountDownTimer(dateTime);
+  function getCountDownTimer() {
+    setCountdownDate(countdownTimerParam);
+  }
 
   return (
     <Accordion sx={{ boxShadow: "1px 1px 8px #333" }}>
@@ -120,16 +117,15 @@ const TopContentForm: React.FC<TopContentFormProps> = ({
         <DateTimePicker
           sx={{ m: "16px 0", width: "100%" }}
           label="Enter Date & Time"
-          value={dayjs(`Sun Feb 04 2024 12:00:00 GMT+0800 (Malaysia Time)`)}
           onChange={(e) => {
-            // @ts-ignore
-            setDateTime(e.$d);
             // @ts-ignore
             setDate(myInputDate);
             // @ts-ignore
             setDay(myInputDay);
             // @ts-ignore
             setTime(myInputTime);
+            // @ts-ignore
+            setDateTime(e.$d);
             getCountDownTimer();
           }}
         />

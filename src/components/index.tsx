@@ -16,3 +16,6 @@ export { default as MapIcon } from "./Icons/MapIcon";
 export { default as ChatIcon } from "./Icons/ChatIcon";
 export { default as ClockIcon } from "./Icons/ClockIcon";
 export { default as HelpIcon } from "./Icons/HelpIcon";
+export { default as UserIcon } from "./Icons/UserIcon";
+export { default as EyeOpenIcon } from "./Icons/EyeOpenIcon";
+export { default as EyeCloseIcon } from "./Icons/EyeCloseIcon";

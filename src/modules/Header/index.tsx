@@ -22,7 +22,7 @@ const Header = () => {
       sx={{ boxShadow: "1px 1px 10px #E0E0E0" }}
     >
       <span
-        id="lumie"
+        id="n"
         style={{
           fontFamily: pressStart2p.style.fontFamily,
           fontSize: "48px",

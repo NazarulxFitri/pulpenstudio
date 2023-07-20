@@ -1,5 +1,5 @@
 import type { AssetLayoutProps } from "@/type";
-import { Box, Container, Grid, Skeleton, styled } from "@mui/material";
+import { Box, Container, Grid, styled } from "@mui/material";
 import { CommentForm, MapIcon } from "@/components";
 import { Great_Vibes, Poiret_One } from "next/font/google";
 import useGetEinvite from "@/data/useGetEinvite";
