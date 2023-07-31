@@ -33,6 +33,7 @@ const Header = () => {
         }}
       />
       <Box display="flex" sx={{ margin: "0 0 0 auto" }}>
+        <LinkMenu href="/account">My Account</LinkMenu>
         <LinkMenu href="/e-invite">e-Invite</LinkMenu>
       </Box>
     </Box>

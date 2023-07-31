@@ -1,9 +1,5 @@
-import {
-  ErrorMessage,
-  EyeCloseIcon,
-  EyeOpenIcon,
-  UserIcon,
-} from "@/components";
+import { ErrorMessage, EyeCloseIcon, EyeOpenIcon } from "@/components";
+import Cookies from "universal-cookie";
 import {
   Box,
   FormControl,
@@ -15,7 +11,6 @@ import {
 import { useState } from "react";
 import RegisterAcc from "./RegisterAcc";
 import useGetUser from "@/data/useGetUser";
-import useCheckauth from "@/utils/useCheckAuth";
 import { useRouter } from "next/router";
 
 const Login = () => {
@@ -40,8 +35,9 @@ const Login = () => {
   };
 
   function onSuccess() {
-    sessionStorage.setItem("authToken", keyId);
-    router.push("/");
+    const cookies = new Cookies();
+    cookies.set("authToken", keyId, { path: "/" });
+    window.location.reload();
   }
 
   function handleClick() {

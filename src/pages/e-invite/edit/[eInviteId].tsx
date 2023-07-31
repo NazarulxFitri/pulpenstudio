@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   BoxContainer,
   FirstCardForm,
@@ -12,6 +12,7 @@ import { Box, Grid, Skeleton } from "@mui/material";
 import useGetEinvite from "@/data/useGetEinvite";
 import useListLayout from "@/data/useListLayout";
 import usePostUpdateEinvite from "@/data/postUpdateEinvite";
+import useGetUserId from "@/utils/useGetUserId";
 
 export interface FontFamilyConfig {
   className: string;
@@ -25,6 +26,7 @@ export interface FontFamilyConfig {
 const EinviteId = () => {
   const router = useRouter();
   const eInviteId = router.query.eInviteId;
+  const userId = useGetUserId();
   const { data: item, isLoading } = useGetEinvite(eInviteId as string);
   const [showPopup, setShowPopup] = useState(false);
   // @ts-ignore
@@ -62,6 +64,8 @@ const EinviteId = () => {
 
   const [widgetColor, setWidgetColor] = useState<string>("");
   const [widgetBgColor, setWidgetBgColor] = useState<string>("");
+
+  if (!isLoading && userId !== item?.userId) return null;
 
   const listLayout = useListLayout(
     firstIntro,

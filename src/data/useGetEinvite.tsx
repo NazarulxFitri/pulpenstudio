@@ -10,12 +10,11 @@ interface EInviteConfig {
 }
 
 export default function useGetEinvite(id?: string) {
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const snapshot = useRef(null);
   const error = useRef(null);
 
   const getValue = async () => {
-    setIsLoading(true);
     try {
       const root = ref(db);
       const dbGet = await get(child(root, "eInviteApp"));

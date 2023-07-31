@@ -1,14 +1,15 @@
 import { useEffect, useState } from "react";
+import Cookies from "universal-cookie";
 
 export default function useCheckauth() {
-  const [isAuth, setIsAuth] = useState(false);
-  const [loading, setLoading] = useState(false);
+  const cookies = new Cookies();
+  const [loading, setLoading] = useState(true);
+  const [auth, setAuth] = useState();
 
   useEffect(() => {
-    setLoading(true);
-    !!sessionStorage.getItem("authToken") && setIsAuth(true);
+    setAuth(cookies.get("authToken"));
     setLoading(false);
-  }, []);
+  }, [2000]);
 
-  return { isAuth, loading };
+  return { auth, loading };
 }
