@@ -5,6 +5,7 @@ import {
   TextField,
   styled,
 } from "@mui/material";
+import { useEffect } from "react";
 
 interface FirstCardFormProps {
   accordionTitle: string;
@@ -16,6 +17,7 @@ interface FirstCardFormProps {
   descOne: string;
   descTwo: string;
   descThree: string;
+  addedItem: any;
 }
 
 const Input = styled(TextField)(() => ({
@@ -33,7 +35,15 @@ const FirstCardForm: React.FC<FirstCardFormProps> = ({
   descOne,
   descTwo,
   descThree,
+  addedItem,
 }) => {
+  useEffect(() => {
+    setDescTitle(addedItem?.descTitle);
+    setDescOne(addedItem?.descOne);
+    setDescTwo(addedItem?.descTwo);
+    setDescThree(addedItem?.descThree);
+  }, [addedItem]);
+
   return (
     <Accordion sx={{ boxShadow: "1px 1px 8px #333" }}>
       <AccordionSummary

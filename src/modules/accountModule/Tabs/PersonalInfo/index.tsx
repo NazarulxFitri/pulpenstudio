@@ -7,12 +7,10 @@ interface PersonalInfoProps {
 
 const PersonalInfo: React.FC<PersonalInfoProps> = ({ userId }) => {
   const { data, isLoading } = useGetUser();
+  // @ts-ignore
+  const currUser = data?.find((i) => i.id === +userId) || "";
 
   if (isLoading) return null;
-
-  const currUser = data?.find((i) => i.id === +userId);
-
-  console.log("xxx currUser", currUser);
 
   return (
     <>

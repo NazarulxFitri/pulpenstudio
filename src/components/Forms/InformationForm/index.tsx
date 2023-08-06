@@ -5,6 +5,7 @@ import {
   TextField,
   styled,
 } from "@mui/material";
+import { useEffect } from "react";
 
 interface LocationContactFormProps {
   accordionTitle: string;
@@ -22,6 +23,7 @@ interface LocationContactFormProps {
   infoFirstPhoneNum: string;
   infoSecondPhoneName: string;
   infoSecondPhoneNum: string;
+  addedItem: any;
 }
 
 const Input = styled(TextField)(() => ({
@@ -45,7 +47,17 @@ const InformationForm: React.FC<LocationContactFormProps> = ({
   infoFirstPhoneNum,
   infoSecondPhoneName,
   infoSecondPhoneNum,
+  addedItem,
 }) => {
+  useEffect(() => {
+    setInfoTitle(addedItem?.infoTitle);
+    setInfoAddress(addedItem?.infoAddress);
+    setInfoAddressMap(addedItem?.infoAddressMap);
+    setInfoFirstPhoneName(addedItem?.infoFirstPhoneName);
+    setInfoFirstPhoneNum(addedItem?.infoFirstPhoneNum);
+    setInfoSecondPhoneName(addedItem?.infoSecondPhoneName);
+    setInfoSecondPhoneNum(addedItem?.infoSecondPhoneNum);
+  }, [addedItem]);
   return (
     <Accordion sx={{ boxShadow: "1px 1px 8px #333" }}>
       <AccordionSummary
@@ -66,6 +78,7 @@ const InformationForm: React.FC<LocationContactFormProps> = ({
           InputLabelProps={{ shrink: true }}
           label="Info Title"
           fullWidth
+          defaultValue={infoTitle}
           onChange={(e) => {
             setInfoTitle(e.target.value);
           }}
@@ -76,6 +89,7 @@ const InformationForm: React.FC<LocationContactFormProps> = ({
           InputLabelProps={{ shrink: true }}
           label="Address"
           fullWidth
+          defaultValue={infoAddress}
           onChange={(e) => {
             setInfoAddress(e.target.value);
           }}
@@ -86,6 +100,7 @@ const InformationForm: React.FC<LocationContactFormProps> = ({
           InputLabelProps={{ shrink: true }}
           label="Google Map Url"
           fullWidth
+          defaultValue={infoAddressMap}
           onChange={(e) => {
             setInfoAddressMap(e.target.value);
           }}
@@ -96,6 +111,7 @@ const InformationForm: React.FC<LocationContactFormProps> = ({
           InputLabelProps={{ shrink: true }}
           label="Contact Name 1"
           fullWidth
+          defaultValue={infoFirstPhoneName}
           onChange={(e) => {
             setInfoFirstPhoneName(e.target.value);
           }}
@@ -106,6 +122,7 @@ const InformationForm: React.FC<LocationContactFormProps> = ({
           InputLabelProps={{ shrink: true }}
           label="Contact Number 1"
           fullWidth
+          defaultValue={infoFirstPhoneNum}
           onChange={(e) => {
             setInfoFirstPhoneNum(e.target.value);
           }}
@@ -116,6 +133,7 @@ const InformationForm: React.FC<LocationContactFormProps> = ({
           InputLabelProps={{ shrink: true }}
           label="Contact Name 2"
           fullWidth
+          defaultValue={infoSecondPhoneName}
           onChange={(e) => {
             setInfoSecondPhoneName(e.target.value);
           }}
@@ -126,6 +144,7 @@ const InformationForm: React.FC<LocationContactFormProps> = ({
           InputLabelProps={{ shrink: true }}
           label="Contact Number 2"
           fullWidth
+          defaultValue={infoSecondPhoneNum}
           onChange={(e) => {
             setInfoSecondPhoneNum(e.target.value);
           }}

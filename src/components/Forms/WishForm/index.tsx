@@ -5,6 +5,7 @@ import {
   TextField,
   styled,
 } from "@mui/material";
+import { useEffect } from "react";
 
 interface WishFormProps {
   accordionTitle: string;
@@ -12,6 +13,7 @@ interface WishFormProps {
   setWishFormDesc: (value: string) => void;
   wishTitleForm: string;
   wishDescForm: string;
+  addedItem: any;
 }
 
 const Input = styled(TextField)(() => ({
@@ -25,7 +27,12 @@ const WishForm: React.FC<WishFormProps> = ({
   setWishFormDesc,
   wishTitleForm,
   wishDescForm,
+  addedItem,
 }) => {
+  useEffect(() => {
+    setWishFormTitle(addedItem?.wishTitleForm);
+    setWishFormDesc(addedItem?.wishDescForm);
+  }, [addedItem]);
   return (
     <Accordion sx={{ boxShadow: "1px 1px 8px #333" }}>
       <AccordionSummary

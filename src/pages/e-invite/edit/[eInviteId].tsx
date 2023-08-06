@@ -65,8 +65,6 @@ const EinviteId = () => {
   const [widgetColor, setWidgetColor] = useState<string>("");
   const [widgetBgColor, setWidgetBgColor] = useState<string>("");
 
-  if (!isLoading && userId !== item?.userId) return null;
-
   const listLayout = useListLayout(
     firstIntro,
     secondIntro,
@@ -131,6 +129,9 @@ const EinviteId = () => {
     window.scrollTo({ top: 100, behavior: "smooth" });
   }
 
+  // @ts-ignore
+  if (!isLoading && userId !== item?.userId!) return null;
+
   return (
     <BoxContainer fullWidth={true}>
       <Grid container>
@@ -181,6 +182,7 @@ const EinviteId = () => {
                   descOne,
                   descTwo,
                   descThree,
+                  addedItem,
                 }}
               />
             </Grid>
@@ -202,6 +204,7 @@ const EinviteId = () => {
                   infoFirstPhoneNum,
                   infoSecondPhoneName,
                   infoSecondPhoneNum,
+                  addedItem,
                 }}
               />
             </Grid>
@@ -213,6 +216,7 @@ const EinviteId = () => {
                   setWishFormDesc,
                   wishTitleForm,
                   wishDescForm,
+                  addedItem,
                 }}
               />
             </Grid>

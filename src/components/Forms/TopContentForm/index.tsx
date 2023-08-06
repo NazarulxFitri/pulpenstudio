@@ -7,7 +7,7 @@ import {
   styled,
 } from "@mui/material";
 import { DateTimePicker } from "@mui/x-date-pickers";
-import dayjs from "dayjs";
+import { useEffect } from "react";
 
 interface TopContentFormProps {
   accordionTitle: string;
@@ -49,6 +49,7 @@ const TopContentForm: React.FC<TopContentFormProps> = ({
   secondIntro,
   title,
   location,
+  addedItem,
 }) => {
   const myInputDate = dateTime?.toLocaleString("ms-MY", {
     day: "numeric",
@@ -64,6 +65,13 @@ const TopContentForm: React.FC<TopContentFormProps> = ({
   function getCountDownTimer() {
     setCountdownDate(countdownTimerParam);
   }
+
+  useEffect(() => {
+    setFirstIntro(addedItem?.firstIntro);
+    setSecondIntro(addedItem?.secondIntro);
+    setTitle(addedItem?.title);
+    setLocation(addedItem?.location);
+  }, [addedItem]);
 
   return (
     <Accordion sx={{ boxShadow: "1px 1px 8px #333" }}>
@@ -83,9 +91,8 @@ const TopContentForm: React.FC<TopContentFormProps> = ({
       <AccordionDetails sx={{ m: 1, padding: "0" }}>
         <Input
           InputLabelProps={{ shrink: true }}
-          defaultValue={firstIntro}
-          label="First Intro"
           fullWidth
+          defaultValue={firstIntro}
           onChange={(e) => {
             setFirstIntro(e.target.value);
           }}
@@ -94,9 +101,9 @@ const TopContentForm: React.FC<TopContentFormProps> = ({
         />
         <Input
           InputLabelProps={{ shrink: true }}
-          defaultValue={secondIntro}
           label="Second Intro"
           fullWidth
+          defaultValue={secondIntro}
           onChange={(e) => {
             setSecondIntro(e.target.value);
           }}
