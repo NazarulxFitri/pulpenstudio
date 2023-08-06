@@ -18,9 +18,9 @@ import useGetUserId from "@/utils/useGetUserId";
 
 const cardData = [
   {
-    name: "Mewrita",
+    name: "light-pink",
     id: "001",
-    src: "/media/cardSelection/mewrita.png",
+    src: "/media/cardSelection/light-pink.png",
   },
 ];
 

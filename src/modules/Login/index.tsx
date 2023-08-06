@@ -62,7 +62,7 @@ const Login = () => {
     <Box
       sx={{
         borderRadius: "24px",
-        boxShadow: "1px 1px 10px #f0f0f0",
+        boxShadow: "1px 1px 10px #DDD0C8",
         margin: "56px auto",
         padding: "32px 56px",
         width: "368px",
@@ -114,12 +114,13 @@ const Login = () => {
           onClick={handleClick}
           sx={{
             borderRadius: "24px",
-            boxShadow: "1px 1px 10px pink",
+            boxShadow: "1px 1px 10px #DDD0C8",
+            cursor: "pointer",
             mt: 2,
             p: "8px 24px",
             width: "fit-content",
             "&:hover": {
-              background: "pink",
+              background: "#DDD0C8",
             },
           }}
         >

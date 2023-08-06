@@ -11,8 +11,7 @@ export default function Home() {
 
   return (
     <BoxContainer>
-      {!auth && <Login />}
-      <Box onClick={useRemoveAuth}>Loogout</Box>
+      <></>
     </BoxContainer>
   );
 }
