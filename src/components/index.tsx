@@ -20,3 +20,6 @@ export { default as HelpIcon } from "./Icons/HelpIcon";
 export { default as UserIcon } from "./Icons/UserIcon";
 export { default as EyeOpenIcon } from "./Icons/EyeOpenIcon";
 export { default as EyeCloseIcon } from "./Icons/EyeCloseIcon";
+export { default as PenIcon } from "./Icons/PenIcon";
+export { default as SupportIcon } from "./Icons/SupportIcon";
+export { default as GiftIcon } from "./Icons/GiftIcon";
