@@ -6,8 +6,8 @@ interface PricingPlanModuleProps {}
 const PricingPlanModule: React.FC<PricingPlanModuleProps> = () => {
   return (
     <BoxContainer>
-      <h1>Pricing Plan</h1>
-      <Box mt={4} sx={{ display: "flex", justifyContent: "center" }} gap={2}>
+      <h1 style={{ textAlign: "center" }}>Pricing Plan</h1>
+      <Box mt={4} sx={{ display: "flex", justifyContent: "center" }} gap={4}>
         <Box
           sx={{
             borderRadius: "24px",

@@ -57,13 +57,12 @@ const Link = styled("a")(() => ({
 
 const TimeBox = styled(Box)(() => ({
   background: "#333",
-  borderRadius: "24px",
+  borderRadius: "16px",
   color: "#FFF",
   fontWeight: "700",
-  fontSize: "32px",
-  minWidth: "80px",
+  fontSize: "16px",
   textAlign: "center",
-  padding: "16px 32px",
+  padding: "16px",
   width: "fit-content",
 }));
 
@@ -202,7 +201,6 @@ const Layout1: React.FC<AssetLayoutProps> = ({
               mb: 8,
               boxShadow: "1px 1px 10px #FDE6E8",
               borderRadius: "32px",
-              padding: "16px 72px",
               width: "fit-content",
               mx: "auto",
               display: "flex",
