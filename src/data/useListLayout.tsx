@@ -1,62 +1,8 @@
 import { Layout1 } from "@/assets";
 
-export default function useListLayout(
-  firstIntro: string,
-  secondIntro: string,
-  title: string,
-  date: string,
-  countdownDate: any,
-  dateTime: any,
-  day: string,
-  time: string,
-  location: string,
-  descTitle: string,
-  descOne: string,
-  descTwo: string,
-  descThree: string,
-  infoTitle: string,
-  infoAddress: string,
-  infoAddressMap: string,
-  infoFirstPhoneName: string,
-  infoFirstPhoneNum: string,
-  infoSecondPhoneName: string,
-  infoSecondPhoneNum: string,
-  wishTitleForm: string,
-  wishDescForm: string,
-  widgetBgColor: string,
-  widgetColor: string
-) {
+export default function useListLayout() {
   const listLayout = {
-    "001": (
-      <Layout1
-        {...{
-          firstIntro,
-          secondIntro,
-          title,
-          date,
-          countdownDate,
-          dateTime,
-          day,
-          time,
-          location,
-          descTitle,
-          descOne,
-          descTwo,
-          descThree,
-          infoTitle,
-          infoAddress,
-          infoAddressMap,
-          infoFirstPhoneName,
-          infoFirstPhoneNum,
-          infoSecondPhoneName,
-          infoSecondPhoneNum,
-          wishTitleForm,
-          wishDescForm,
-          widgetBgColor,
-          widgetColor,
-        }}
-      />
-    ),
+    "001": <Layout1 />,
   };
 
   return listLayout;

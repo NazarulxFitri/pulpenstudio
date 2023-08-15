@@ -22,19 +22,20 @@ const CardSelection: React.FC<CardSelectionProps> = ({ card }) => {
     <Box
       onClick={handleClick}
       sx={{
-        boxShadow:
-          layoutid === card.id
-            ? "1px 1px 10px #1976d2"
-            : "1px 1px 10px #E0E0E0",
         borderRadius: "24px",
+        width: "fit-content",
+        textAlign: "center",
       }}
     >
       <Image
         src={card.src}
         alt="Lumie | Mewrita"
-        width={500}
-        height={300}
-        style={{ borderRadius: "24px" }}
+        height={500}
+        width={300}
+        style={{
+          borderRadius: "24px",
+          width: "fit-content",
+        }}
       />
     </Box>
   );

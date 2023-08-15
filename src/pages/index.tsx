@@ -16,8 +16,8 @@ export default function Home() {
         <Image
           src="/media/cardSelection/light-pink.png"
           alt="Pulpen Studio | Light Pink"
-          height={288}
-          width={496}
+          height={496}
+          width={288}
         />
       </Box>
       <Box

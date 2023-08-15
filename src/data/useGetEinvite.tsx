@@ -1,12 +1,15 @@
 import { ref, get, child } from "firebase/database";
 import { useEffect, useRef, useState } from "react";
 import db from "../../services/firebaseApp";
-import type { AssetLayoutProps } from "../type";
 
 interface EInviteConfig {
-  data?: AssetLayoutProps;
+  data?: any;
   layout: string;
   name: string;
+  flag: "new" | "updated";
+  paid: boolean;
+  userId: string;
+  createdAt: string;
 }
 
 export default function useGetEinvite(id?: string) {
@@ -37,9 +40,9 @@ export default function useGetEinvite(id?: string) {
   } else {
     const rawData = snapshot.current;
     const data: EInviteConfig | undefined = rawData?.[id];
-    // @ts-ignore
+    // @ts-ignores
     const commentsLength = data?.comments?.length || 0;
-    // @ts-ignore
+    // @ts-ignores
     const layout = data?.layout;
 
     return { data, layout, commentsLength, isLoading };
