@@ -4,7 +4,7 @@ import useGetEinvite from "@/data/useGetEinvite";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import useGetCountDownTimer from "@/data/useGetCountDownTimer";
-import CommentForm from "@/components/Forms/CommentForm";
+import Widget from "@/components/Widget";
 
 const greatVibes = Great_Vibes({ subsets: ["latin"], weight: "400" });
 const poiretOne = Poiret_One({ subsets: ["latin"], weight: "400" });
@@ -77,10 +77,6 @@ const Layout1: React.FC = () => {
     minute: "numeric",
     hour12: true,
   });
-  const day = dateJs?.getDay();
-  const hour = dateJs.getHours();
-  const min = dateJs.getMinutes();
-  const sec = dateJs.getSeconds();
 
   const currentDate = new Date().getTime();
   const selectedDate = dateJs.getTime();
@@ -99,7 +95,12 @@ const Layout1: React.FC = () => {
   return (
     <Box
       maxWidth="400px"
-      sx={{ boxShadow: "0px -10px 10px #FDE6E8", m: "auto" }}
+      sx={{
+        boxShadow: "0px -10px 10px #FDE6E8",
+        m: "auto",
+        position: "relative",
+        overflow: "hidden",
+      }}
     >
       <Box
         sx={{
@@ -112,7 +113,9 @@ const Layout1: React.FC = () => {
       >
         <Box
           sx={{
-            background: "rgba(255,255,255, 0.8)",
+            background: "#FFF",
+            borderTopLeftRadius: "100px",
+            borderBottomRightRadius: "100px",
             p: "80px 16px",
             position: "absolute",
             top: "50%",
@@ -136,10 +139,10 @@ const Layout1: React.FC = () => {
             }}
           />
           <Grid container justifyContent="left" mb={5} rowSpacing={0.5}>
-            <Grid item borderLeft="2px solid #FDE6E8" px={2}>
+            <Grid item borderLeft="8px solid #FDE6E8" px={2}>
               <Text dangerouslySetInnerHTML={{ __html: fullDate }} />
             </Grid>
-            <Grid item borderLeft="2px solid #FDE6E8" px={2}>
+            <Grid item borderLeft="8px solid #FDE6E8" px={2}>
               <Text dangerouslySetInnerHTML={{ __html: item?.location }} />
             </Grid>
           </Grid>
@@ -237,7 +240,7 @@ const Layout1: React.FC = () => {
                 width: "fit-content",
               }}
             >
-              <TimeBox>Harinya sudah tiba !</TimeBox>
+              <SubTitle>Harinya sudah tiba !</SubTitle>
             </Box>
           ) : (
             <Box
@@ -274,7 +277,7 @@ const Layout1: React.FC = () => {
         </Box>
         <Box
           id="comment"
-          mb={10}
+          mb={2}
           sx={{
             px: 2,
             py: 4,
@@ -333,6 +336,16 @@ const Layout1: React.FC = () => {
           </Grid>
         </Box>
       </Container>
+      <Widget
+        color="#FDE6E8"
+        location={{ text: item?.location, mapUrl: item?.mapUrl }}
+        contact={{
+          number1: item?.phonePerson1,
+          number2: item?.phonePerson2,
+          name1: item?.namePerson1,
+          name2: item?.namePerson2,
+        }}
+      />
     </Box>
   );
 };

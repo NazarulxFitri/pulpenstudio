@@ -9,11 +9,9 @@ interface CommentFormProps {
   textComment: string;
   textButton: string;
   themeColor: string;
-  font: string;
 }
 
 const Input = styled(TextField)(() => ({
-  background: "transparent",
   margin: "4px 0",
 }));
 
@@ -22,19 +20,21 @@ const CommentForm: React.FC<CommentFormProps> = ({
   textComment,
   textButton,
   themeColor,
-  font,
 }) => {
   const router = useRouter();
   const id = router.query.eInviteId;
 
-  const isEditting = router.pathname.includes("edit");
   const { commentsLength } = useGetEinvite(id as string);
   const { action } = usePostUpdateComment(id as string);
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState(false);
 
   async function handleClick() {
-    if (isEditting) return null;
+    if (!name || !message) {
+      setErrorMessage(true);
+      return null;
+    }
     await action(name, message, commentsLength);
     router.reload();
   }
@@ -44,11 +44,14 @@ const CommentForm: React.FC<CommentFormProps> = ({
       <Input
         InputLabelProps={{ shrink: true }}
         sx={{
-          "& .MuiInput-input": {
-            fontFamily: `${font} !important` || "auto",
-            fontSize: "24px",
+          "& label.Mui-focused": {
+            color: "#333",
+          },
+          "& .MuiInput-underline:after": {
+            borderBottomColor: themeColor,
           },
         }}
+        error={errorMessage && !name}
         label={textName}
         multiline
         variant="standard"
@@ -58,11 +61,15 @@ const CommentForm: React.FC<CommentFormProps> = ({
       <Input
         InputLabelProps={{ shrink: true }}
         sx={{
-          "& .MuiInput-input": {
-            fontFamily: `${font} !important` || "auto",
-            fontSize: "24px",
+          "& label.Mui-focused": {
+            color: "#333",
           },
+          "& .MuiInput-underline:after": {
+            borderBottomColor: themeColor,
+          },
+          mt: 2,
         }}
+        error={errorMessage && !message}
         label={textComment}
         fullWidth
         multiline
@@ -71,7 +78,7 @@ const CommentForm: React.FC<CommentFormProps> = ({
       />
       <Box
         sx={{
-          background: !isEditting ? themeColor : "grey",
+          background: themeColor,
           boxShadow: "1px 1px solid #EFEFEF",
           width: "fit-content",
           borderRadius: "24px",
@@ -84,7 +91,6 @@ const CommentForm: React.FC<CommentFormProps> = ({
           style={{
             cursor: "pointer",
             padding: "12px 32px",
-            fontFamily: `${font} !important` || "auto",
             fontWeight: "bolder",
           }}
           dangerouslySetInnerHTML={{ __html: textButton }}
