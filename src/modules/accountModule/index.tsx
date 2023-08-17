@@ -5,7 +5,6 @@ import { Box, Grid } from "@mui/material";
 import { useState } from "react";
 import PersonalInfo from "./Tabs/PersonalInfo";
 import MyWork from "./Tabs/MyWork";
-import useCheckauth from "@/utils/useCheckAuth";
 
 interface AccountModuleProps {}
 

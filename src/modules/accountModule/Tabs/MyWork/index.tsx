@@ -39,6 +39,10 @@ const MyWork: React.FC<MyWorkProps> = ({ userAssets }) => {
                   </TableCell>
                   <TableCell>
                     <a
+                      style={{
+                        color: "unset",
+                        textDecoration: "none",
+                      }}
                       target="__blank"
                       href={`/e-invite/live/${item.name}`}
                     >{`/e-invite/live/${item.name}`}</a>

@@ -64,8 +64,8 @@ const Login = () => {
         borderRadius: "24px",
         boxShadow: "1px 1px 10px #DDD0C8",
         margin: "56px auto",
-        padding: "32px 56px",
-        width: "368px",
+        padding: { xs: "32px 16px", md: "32px 56px" },
+        width: { xs: "320px", md: "368px" },
       }}
     >
       <Box
