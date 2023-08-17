@@ -68,13 +68,17 @@ const ContactPopup: React.FC<ContactPopupProps> = ({
             </p>
             <Box sx={{ m: "0 0 0 auto" }}>
               <a
-                style={{ marginRight: "16px" }}
+                style={{ marginRight: "16px", color: "unset" }}
                 target="__blank"
                 href={`https://api.whatsapp.com/send?phone=6${contact?.number1}&text=Hi%20%2C%20saya%20datang%20dari%20e-invite%20!%20`}
               >
                 <WhatsappIcon />
               </a>
-              <a target="__blank" href={`tel:6${contact?.number1}`}>
+              <a
+                style={{ color: "unset" }}
+                target="__blank"
+                href={`tel:6${contact?.number1}`}
+              >
                 <PhoneIcon size="20" />
               </a>
             </Box>
@@ -85,13 +89,17 @@ const ContactPopup: React.FC<ContactPopupProps> = ({
             </p>
             <Box sx={{ m: "0 0 0 auto" }}>
               <a
-                style={{ marginRight: "16px" }}
+                style={{ marginRight: "16px", color: "unset" }}
                 target="__blank"
                 href={`https://api.whatsapp.com/send?phone=6${contact?.number2}&text=Hi%20%2C%20saya%20datang%20dari%20e-invite%20!%20`}
               >
                 <WhatsappIcon />
               </a>
-              <a target="__blank" href={`tel:6${contact?.number2}`}>
+              <a
+                style={{ color: "unset" }}
+                target="__blank"
+                href={`tel:6${contact?.number2}`}
+              >
                 <PhoneIcon size="20" />
               </a>
             </Box>

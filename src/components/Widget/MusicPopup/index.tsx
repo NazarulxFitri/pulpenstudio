@@ -57,11 +57,12 @@ const MusicPopup: React.FC<MusicPopupProps> = ({
           sx={{ textAlign: "left", p: "0 16px", width: "auto", height: "auto" }}
         >
           <ReactPlayer
-            url="https://www.youtube.com/embed/M-iIFo6wJ_w"
+            url="https://www.youtube.com/embed/M-iIFo6wJ_w?autoplay=1"
             playing={true}
             loop={true}
             width="100%"
             height="100%"
+            playsinline={true}
           />
         </Box>
       </Box>
