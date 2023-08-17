@@ -13,14 +13,23 @@ const PersonalInfo: React.FC<PersonalInfoProps> = ({ userId }) => {
   if (isLoading) return null;
 
   return (
-    <>
-      <h1>PersonalInfo</h1>
-      <Box>
-        <p>Name : {currUser?.name}</p>
-        <p>Contact Number : {currUser?.contactNumber}</p>
-        <p>Email address : {currUser?.emailAddress}</p>
+    <Box>
+      <p style={{ fontSize: "24px", fontWeight: "700" }}>Personal Info</p>
+      <Box mt={4}>
+        <Box sx={{ display: "flex" }}>
+          <p style={{ fontWeight: "700", width: "160px" }}>Name</p>
+          <p>{currUser?.name}</p>
+        </Box>
+        <Box sx={{ display: "flex", mt: 2 }}>
+          <p style={{ fontWeight: "700", width: "160px" }}>Contact Number</p>
+          <p>{currUser?.contactNumber}</p>
+        </Box>
+        <Box sx={{ display: "flex", mt: 2 }}>
+          <p style={{ fontWeight: "700", width: "160px" }}>Email address</p>
+          <p>{currUser?.emailAddress}</p>
+        </Box>
       </Box>
-    </>
+    </Box>
   );
 };
 

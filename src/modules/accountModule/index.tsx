@@ -24,21 +24,30 @@ const AccountModule: React.FC<AccountModuleProps> = () => {
 
   return (
     <BoxContainer>
-      <h1>Account</h1>
-      <Grid container mt={4}>
-        <Grid item xs={4} sx={{ cursor: "pointer" }}>
+      <h1 style={{ fontSize: "32px" }}>Account</h1>
+      <Grid container mt={4} spacing={4}>
+        <Grid
+          item
+          xs={2}
+          sx={{
+            borderRight: "1px solid #DDD0C8",
+            cursor: "pointer",
+            fontWeight: "700",
+            height: "100vh",
+          }}
+        >
           <Box mb={2} onClick={() => setTabSelection("PersonalInfo")}>
-            <h4>Personal Info</h4>
+            <p style={{ fontSize: "24px", fontWeight: "700" }}>Personal Info</p>
           </Box>
           <Box mb={2} onClick={() => setTabSelection("MyWork")}>
-            <h4>My work</h4>
+            <p style={{ fontSize: "24px", fontWeight: "700" }}>My work</p>
           </Box>
         </Grid>
-        <Grid item xs={8}>
+        <Grid item xs={10}>
           {tabSelection === "PersonalInfo" ? (
             <PersonalInfo {...{ userId }} />
           ) : tabSelection === "MyWork" ? (
-            <MyWork />
+            <MyWork {...{ userAssets }} />
           ) : (
             <PersonalInfo {...{ userId }} />
           )}

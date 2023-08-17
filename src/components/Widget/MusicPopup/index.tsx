@@ -53,6 +53,7 @@ const MusicPopup: React.FC<MusicPopupProps> = ({
             <CloseIcon />
           </Box>
         </Box>
+
         <Box
           sx={{ textAlign: "left", p: "0 16px", width: "auto", height: "auto" }}
         >

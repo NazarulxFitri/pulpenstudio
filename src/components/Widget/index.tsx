@@ -4,7 +4,7 @@ import MapIcon from "../Icons/MapIcon";
 import WhatsappIcon from "../Icons/WhatsappIcon";
 import PenIcon from "../Icons/PenIcon";
 import CommentPopup from "./CommentPopup";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import LocationPopup from "./LocationPopup";
 import ContactPopup from "./ContactPopup";
 import MusicIcon from "../Icons/MusicIcon";

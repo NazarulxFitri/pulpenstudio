@@ -3,6 +3,7 @@ import {
   ChatIcon,
   GiftIcon,
   PenIcon,
+  RocketIcon,
   SupportIcon,
 } from "@/components";
 import { Box, Grid } from "@mui/material";
@@ -12,7 +13,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <BoxContainer>
-      <Box sx={{ textAlign: "center" }}>
+      <Box sx={{ textAlign: "center", mt: { xs: 3, md: 5 } }}>
         <Image
           src="/media/cardSelection/light-pink.png"
           alt="Pulpen Studio | Light Pink"
@@ -28,8 +29,8 @@ export default function Home() {
           textAlign: "justify",
           textAlignLast: "center",
           lineHeight: "1.5em",
-          mt: 6,
-          mx: "-48px",
+          mt: { xs: 4, md: 6 },
+          mx: { xs: "-16px", md: "-48px" },
           py: 4,
         }}
       >
@@ -65,17 +66,38 @@ export default function Home() {
         >
           Features +
         </h4>
-        <Grid container mt={3} spacing={1}>
+        <Grid container mt={3}>
           <Grid
             item
             sx={{
               p: 2,
               textAlign: "center",
             }}
-            xs={3}
+            xs={6}
+            md={3}
           >
-            <ChatIcon size="48" />
-            <p style={{ fontWeight: "700" }}>Real time comment</p>
+            <RocketIcon size="40" />
+            <p style={{ fontWeight: "700", marginTop: "8px" }}>
+              Quick & Free design
+            </p>
+            <p style={{ marginTop: "16px" }}>
+              Create your dream e-invite card as quick as you can. You can view
+              the finished product without any charges.
+            </p>
+          </Grid>
+          <Grid
+            item
+            sx={{
+              p: 2,
+              textAlign: "center",
+            }}
+            xs={6}
+            md={3}
+          >
+            <ChatIcon size="40" />
+            <p style={{ fontWeight: "700", marginTop: "8px" }}>
+              Real time comment
+            </p>
             <p style={{ marginTop: "16px" }}>
               Enjoy the realtime live comment with other guest and share your
               fun or thought at the provided space
@@ -87,13 +109,16 @@ export default function Home() {
               p: 2,
               textAlign: "center",
             }}
-            xs={3}
+            xs={6}
+            md={3}
           >
-            <PenIcon size="48" />
-            <p style={{ fontWeight: "700" }}>Configure widgets</p>
+            <PenIcon size="40" />
+            <p style={{ fontWeight: "700", marginTop: "8px" }}>
+              For your guest
+            </p>
             <p style={{ marginTop: "16px" }}>
-              Not only designing, you also able to attach widgets like map,
-              whatsapp number to assist your guest to reach you
+              Choose your music, insert your whatsapp link and enter map
+              location to help and entertain your guest !
             </p>
           </Grid>
           <Grid
@@ -102,29 +127,14 @@ export default function Home() {
               p: 2,
               textAlign: "center",
             }}
-            xs={3}
+            xs={6}
+            md={3}
           >
-            <SupportIcon size="48" />
-            <p style={{ fontWeight: "700" }}>Live Support</p>
+            <SupportIcon size="40" />
+            <p style={{ fontWeight: "700", marginTop: "8px" }}>Live Support</p>
             <p style={{ marginTop: "16px" }}>
-              Our support will assist you to translate your imagination into a
-              full fledge design
-            </p>
-          </Grid>
-          <Grid
-            item
-            sx={{
-              p: 2,
-              textAlign: "center",
-            }}
-            xs={3}
-          >
-            <GiftIcon size="48" />
-            <p style={{ fontWeight: "700" }}>Gift for you</p>
-            <p style={{ marginTop: "16px" }}>
-              Not only a card in form of website, you will also be getting a
-              softcopy in PDF format from your card design as a gift for the
-              event you are working on
+              Our live support will always be there for you from the starting
+              creation of your design until your event day !
             </p>
           </Grid>
         </Grid>

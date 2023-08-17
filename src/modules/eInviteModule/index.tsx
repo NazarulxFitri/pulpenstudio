@@ -91,14 +91,14 @@ const EInviteModule = () => {
 
   return (
     <BoxContainer>
-      <h1>e-Invite</h1>
+      <h1 style={{ fontSize: "32px" }}>e-Invite</h1>
       <p style={{ marginTop: "16px" }}>
         Let&apos;s start create your e-Invite. Choose your selections below !
       </p>
       <Box>
         <Box display="flex" mt={2}>
           <ListNumber circle={true} number={1} />
-          <h4>Enter your e-Invite name</h4>
+          <h4>Create card name (url)</h4>
         </Box>
         <Box mt={1}>
           <TextField
@@ -119,22 +119,11 @@ const EInviteModule = () => {
           )}
         </Box>
       </Box>
-      <Box>
-        <Box display="flex" mt={4}>
-          <ListNumber circle={true} number={2} />
-          <h4>Choose layout</h4>
-        </Box>
-        <Box display="flex" mt={2} gap={2}>
-          {cardData.map((card, idx) => (
-            <CardSelection {...{ card }} key={`Lumie | ${card} + ${idx}`} />
-          ))}
-        </Box>
-      </Box>
       <Grid container spacing={4}>
         <Grid item xs={6}>
           <Box display="flex" mt={4}>
-            <ListNumber circle={true} number={3} />
-            <h4>Display things</h4>
+            <ListNumber circle={true} number={2} />
+            <h4>Card content</h4>
           </Box>
           <Box mt={2} gap={2} sx={{ display: "flex", flexDirection: "column" }}>
             <TextField
@@ -180,14 +169,14 @@ const EInviteModule = () => {
 
         <Grid item xs={6}>
           <Box display="flex" mt={4}>
-            <ListNumber circle={true} number={4} />
-            <h4>Linking things</h4>
+            <ListNumber circle={true} number={3} />
+            <h4>Widget configuration</h4>
           </Box>
           <Box mt={2} gap={2} sx={{ display: "flex", flexDirection: "column" }}>
             <TextField
               id="standard-basic"
               placeholder="Zack"
-              label="Nama 1"
+              label="Nama orang untuk dihubungi 1"
               variant="standard"
               sx={{ width: "50%" }}
               onChange={(e) => setNamePerson1(e.currentTarget.value)}
@@ -195,7 +184,7 @@ const EInviteModule = () => {
             <TextField
               id="standard-basic"
               placeholder="01156271776"
-              label="Nombor telefon 1"
+              label="Nombor orang untuk dihubungi  telefon 1"
               variant="standard"
               sx={{ width: "50%" }}
               onChange={(e) => setPhonePerson1(e.currentTarget.value)}
@@ -203,7 +192,7 @@ const EInviteModule = () => {
             <TextField
               id="standard-basic"
               placeholder="Wendy"
-              label="Nama 2"
+              label="Nama orang untuk dihubungi  2"
               variant="standard"
               sx={{ width: "50%" }}
               onChange={(e) => setNamePerson2(e.currentTarget.value)}
@@ -211,7 +200,7 @@ const EInviteModule = () => {
             <TextField
               id="standard-basic"
               placeholder="01156271776"
-              label="Nombor telefon 2"
+              label="Nombor orang untuk dihubungi  telefon 2"
               variant="standard"
               sx={{ width: "50%" }}
               onChange={(e) => setPhonePerson2(e.currentTarget.value)}
@@ -221,6 +210,14 @@ const EInviteModule = () => {
               id="standard-basic"
               placeholder="https://www.google.com/maps/dir//glasshall+forest+valley/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x31cc358ea1ca26ff:0xed9060ff23e7def2?sa=X&ved=2ahUKEwi7nsWm3cyAAxU_wTgGHUmXCJEQ9Rd6BAhOEAA&ved=2ahUKEwi7nsWm3cyAAxU_wTgGHUmXCJEQ9Rd6BAhWEAQ"
               label="Google Map URL"
+              variant="standard"
+              sx={{ width: "50%" }}
+              onChange={(e) => setMapUrl(e.currentTarget.value)}
+            />
+            <TextField
+              id="standard-basic"
+              placeholder="https://www.google.com/maps/dir//glasshall+forest+valley/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x31cc358ea1ca26ff:0xed9060ff23e7def2?sa=X&ved=2ahUKEwi7nsWm3cyAAxU_wTgGHUmXCJEQ9Rd6BAhOEAA&ved=2ahUKEwi7nsWm3cyAAxU_wTgGHUmXCJEQ9Rd6BAhWEAQ"
+              label="Pilihan lagu (youtube)"
               variant="standard"
               sx={{ width: "50%" }}
               onChange={(e) => setMapUrl(e.currentTarget.value)}

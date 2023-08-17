@@ -8,6 +8,7 @@ export { default as RibbonBanner } from "./RibbonBanner";
 
 export { default as WhatsappIcon } from "./Icons/WhatsappIcon";
 export { default as MapIcon } from "./Icons/MapIcon";
+export { default as MenuIcon } from "./Icons/MenuIcon";
 export { default as ChatIcon } from "./Icons/ChatIcon";
 export { default as ClockIcon } from "./Icons/ClockIcon";
 export { default as CloseIcon } from "./Icons/CloseIcon";
@@ -20,3 +21,4 @@ export { default as SupportIcon } from "./Icons/SupportIcon";
 export { default as GiftIcon } from "./Icons/GiftIcon";
 export { default as PhoneIcon } from "./Icons/PhoneIcon";
 export { default as MusicIcon } from "./Icons/MusicIcon";
+export { default as RocketIcon } from "./Icons/RocketIcon";

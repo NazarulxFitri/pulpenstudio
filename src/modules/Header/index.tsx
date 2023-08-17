@@ -1,6 +1,8 @@
 import { Box, styled } from "@mui/material";
 import Link from "next/link";
 import { Sacramento } from "next/font/google";
+import { CloseIcon, MenuIcon } from "@/components";
+import { useState } from "react";
 
 const sacramento = Sacramento({ subsets: ["latin"], weight: ["400"] });
 
@@ -8,21 +10,29 @@ const LinkMenu = styled(Link)(({ theme }) => ({
   alignSelf: "center",
   color: "#333",
   fontWeight: 800,
-  margin: "0 8px",
+  margin: "16px 0",
   textDecoration: "none",
   "&:hover": {
     color: "#DDD0C8",
   },
+  display: "block",
+  fontSize: "20px",
+  [theme.breakpoints.up("md")]: {
+    margin: "0 8px",
+  },
 }));
 
 const Header = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <Box
-      display="flex"
+      display={{ xs: "block", md: "flex" }}
       px={{ xs: 1, md: 2, lg: 6 }}
       py={0.5}
       sx={{
         boxShadow: "1px 1px 10px #DDD0C8",
+        textAlign: { xs: "center", md: "unset" },
       }}
     >
       <LinkMenu href="/">
@@ -38,11 +48,30 @@ const Header = () => {
           }}
         />
       </LinkMenu>
-      <Box display="flex" sx={{ margin: "0 0 0 auto" }}>
+      <Box
+        my={2}
+        display={{ xs: "block", md: "none" }}
+        onClick={() => {
+          menuOpen ? setMenuOpen(false) : setMenuOpen(true);
+        }}
+      >
+        {menuOpen ? <CloseIcon /> : <MenuIcon />}
+      </Box>
+      <Box display={{ xs: "none", md: "flex" }} sx={{ margin: "0 0 0 auto" }}>
         <LinkMenu href="/account">My Account</LinkMenu>
         <LinkMenu href="/e-invite">e-Invite</LinkMenu>
         <LinkMenu href="/pricingPlan">Pricing Plan</LinkMenu>
       </Box>
+      {menuOpen && (
+        <Box
+          display={{ xs: "block", md: "none" }}
+          sx={{ margin: "0 0 0 auto" }}
+        >
+          <LinkMenu href="/account">My Account</LinkMenu>
+          <LinkMenu href="/e-invite">e-Invite</LinkMenu>
+          <LinkMenu href="/pricingPlan">Pricing Plan</LinkMenu>
+        </Box>
+      )}
     </Box>
   );
 };

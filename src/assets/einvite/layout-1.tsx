@@ -1,4 +1,4 @@
-import { Box, Container, Grid, styled } from "@mui/material";
+import { Box, Container, Grid, List, Paper, styled } from "@mui/material";
 import { Great_Vibes, Poiret_One, Ubuntu } from "next/font/google";
 import useGetEinvite from "@/data/useGetEinvite";
 import { useRouter } from "next/router";
@@ -294,44 +294,44 @@ const Layout1: React.FC = () => {
             sx={{ pb: 2 }}
           />
           <Grid container>
-            {/* <Grid item py={2} xs={12}>
-              <CommentForm
-                textName="Name"
-                textComment="Write your wish here !"
-                textButton="Hantar"
-                themeColor="#FDE6E8"
-                font={poiretOne.style.fontFamily}
-              />
-            </Grid> */}
             <Grid item py={2} xs={12}>
-              {/* @ts-ignore */}
-              {comments?.map((comment: any, idx: string) => (
-                <Box
-                  key={idx}
-                  mb={2}
-                  sx={{
-                    background:
-                      Number(idx) % 2 === 0
-                        ? "rgba(253,230,232, 0.4)"
-                        : "rgba(240,240,240, 0.4)",
-                    borderRadius: "24px",
-                    p: "16px 24px",
-                  }}
-                >
-                  <UbuntuText
-                    sx={{
-                      textAlign: "left",
-                      fontWeight: "bolder",
-                      marginBottom: "8px",
-                    }}
-                    dangerouslySetInnerHTML={{ __html: comment?.name! }}
-                  />
-                  <MiniText
-                    sx={{ textAlign: "left" }}
-                    dangerouslySetInnerHTML={{ __html: comment?.message! }}
-                  />
-                </Box>
-              ))}
+              <Paper
+                sx={{
+                  boxShadow: "unset",
+                  maxHeight: "400px",
+                  overflow: "scroll",
+                }}
+              >
+                <List>
+                  {comments?.map((comment: any, idx: string) => (
+                    <Box
+                      key={idx}
+                      mb={2}
+                      sx={{
+                        background:
+                          Number(idx) % 2 === 0
+                            ? "rgba(253,230,232, 0.4)"
+                            : "rgba(240,240,240, 0.4)",
+                        borderRadius: "24px",
+                        p: "16px 24px",
+                      }}
+                    >
+                      <UbuntuText
+                        sx={{
+                          textAlign: "left",
+                          fontWeight: "bolder",
+                          marginBottom: "8px",
+                        }}
+                        dangerouslySetInnerHTML={{ __html: comment?.name! }}
+                      />
+                      <MiniText
+                        sx={{ textAlign: "left" }}
+                        dangerouslySetInnerHTML={{ __html: comment?.message! }}
+                      />
+                    </Box>
+                  ))}
+                </List>
+              </Paper>
             </Grid>
           </Grid>
         </Box>
