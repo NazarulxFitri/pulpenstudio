@@ -85,6 +85,7 @@ const Layout1: React.FC = () => {
   const countdownTimerParam: DateTimeConfig = useGetCountDownTimer(
     item?.dateTime
   );
+  const [open, setOpen] = useState(false);
   const [musicStart, setMusicStart] = useState(false);
 
   useEffect(() => {
@@ -161,7 +162,29 @@ const Layout1: React.FC = () => {
           </Grid>
         </Box>
       </Box>
-      <Container sx={{}}>
+      <Box
+        sx={{
+          background: "#FFF",
+          borderRadius: "24px",
+          boxShadow: "1px 1px 10px #FDE6E8",
+          display: open ? "none" : "block",
+          left: "0",
+          right: "0",
+          px: 4,
+          py: 2,
+          position: "absolute",
+          m: "-128px auto 0",
+          width: "fit-content",
+          zIndex: 2,
+        }}
+        onClick={() => {
+          setMusicStart(true);
+          setOpen(true);
+        }}
+      >
+        <UbuntuText>Klik untuk buka</UbuntuText>
+      </Box>
+      <Container sx={{ display: open ? "block" : "none" }}>
         <Box
           my={5}
           mx="auto"
@@ -349,17 +372,19 @@ const Layout1: React.FC = () => {
           </Grid>
         </Box>
       </Container>
-      <Widget
-        {...{ musicStart }}
-        color="#FDE6E8"
-        location={{ text: item?.location, mapUrl: item?.mapUrl }}
-        contact={{
-          number1: item?.phonePerson1,
-          number2: item?.phonePerson2,
-          name1: item?.namePerson1,
-          name2: item?.namePerson2,
-        }}
-      />
+      <Box sx={{ display: open ? "block" : "none" }}>
+        <Widget
+          {...{ musicStart }}
+          color="#FDE6E8"
+          location={{ text: item?.location, mapUrl: item?.mapUrl }}
+          contact={{
+            number1: item?.phonePerson1,
+            number2: item?.phonePerson2,
+            name1: item?.namePerson1,
+            name2: item?.namePerson2,
+          }}
+        />
+      </Box>
     </Box>
   );
 };
