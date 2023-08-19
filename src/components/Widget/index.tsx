@@ -7,7 +7,6 @@ import { useState } from "react";
 import LocationPopup from "./LocationPopup";
 import ContactPopup from "./ContactPopup";
 import MusicIcon from "../Icons/MusicIcon";
-import MusicPopup from "./MusicPopup";
 
 interface WidgetProps {
   musicStart: boolean;
