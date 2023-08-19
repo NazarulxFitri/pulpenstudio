@@ -13,7 +13,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <BoxContainer>
-      <Box sx={{ textAlign: "center", mt: { xs: 3, md: 5 } }}>
+      <Box sx={{ textAlign: "center", mt: { xs: 4, md: 6 } }}>
         <Image
           src="/media/cardSelection/light-pink.png"
           alt="Pulpen Studio | Light Pink"

@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import useGetCountDownTimer from "@/data/useGetCountDownTimer";
 import Widget from "@/components/Widget";
+import ReactPlayer from "react-player";
 
 const greatVibes = Great_Vibes({ subsets: ["latin"], weight: "400" });
 const poiretOne = Poiret_One({ subsets: ["latin"], weight: "400" });
@@ -84,6 +85,7 @@ const Layout1: React.FC = () => {
   const countdownTimerParam: DateTimeConfig = useGetCountDownTimer(
     item?.dateTime
   );
+  const [musicStart, setMusicStart] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -101,7 +103,18 @@ const Layout1: React.FC = () => {
         position: "relative",
         overflow: "hidden",
       }}
+      onClick={() => setMusicStart(true)}
     >
+      <Box sx={{ visibility: "hidden", position: "absolute" }}>
+        <ReactPlayer
+          url="https://www.youtube.com/embed/M-iIFo6wJ_w"
+          playing={musicStart}
+          loop={true}
+          width="1%"
+          height="1%"
+          controls={true}
+        />
+      </Box>
       <Box
         sx={{
           backgroundImage: "url('/media/layout/layout-1.jpeg')",
@@ -337,6 +350,7 @@ const Layout1: React.FC = () => {
         </Box>
       </Container>
       <Widget
+        {...{ musicStart }}
         color="#FDE6E8"
         location={{ text: item?.location, mapUrl: item?.mapUrl }}
         contact={{

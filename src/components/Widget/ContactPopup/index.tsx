@@ -16,7 +16,6 @@ interface ContactPopupProps {
   setCommentPopup: (value: boolean) => void;
   setLocationPopup: (value: boolean) => void;
   setContactPopup: (value: boolean) => void;
-  setMusicPopup: (value: boolean) => void;
 }
 
 const ContactPopup: React.FC<ContactPopupProps> = ({
@@ -26,7 +25,6 @@ const ContactPopup: React.FC<ContactPopupProps> = ({
   setCommentPopup,
   setLocationPopup,
   setContactPopup,
-  setMusicPopup,
 }) => {
   return (
     <Box
@@ -55,7 +53,6 @@ const ContactPopup: React.FC<ContactPopupProps> = ({
               setCommentPopup(false);
               setContactPopup(false);
               setLocationPopup(false);
-              setMusicPopup(false);
             }}
           >
             <CloseIcon />

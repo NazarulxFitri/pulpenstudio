@@ -8,7 +8,6 @@ interface CommentPopupProps {
   setCommentPopup: (value: boolean) => void;
   setLocationPopup: (value: boolean) => void;
   setContactPopup: (value: boolean) => void;
-  setMusicPopup: (value: boolean) => void;
 }
 
 const CommentPopup: React.FC<CommentPopupProps> = ({
@@ -17,7 +16,6 @@ const CommentPopup: React.FC<CommentPopupProps> = ({
   setCommentPopup,
   setLocationPopup,
   setContactPopup,
-  setMusicPopup,
 }) => {
   return (
     <Box
@@ -46,7 +44,6 @@ const CommentPopup: React.FC<CommentPopupProps> = ({
               setCommentPopup(false);
               setContactPopup(false);
               setLocationPopup(false);
-              setMusicPopup(false);
             }}
           >
             <CloseIcon />

@@ -1,10 +1,12 @@
 import CloseIcon from "@/components/Icons/CloseIcon";
 import ReactPlayer from "react-player";
 import { Box } from "@mui/material";
+import { useState } from "react";
 
 interface MusicPopupProps {
   title: string;
   musicPopup: boolean;
+  musicStart: boolean;
   setCommentPopup: (value: boolean) => void;
   setLocationPopup: (value: boolean) => void;
   setContactPopup: (value: boolean) => void;
@@ -14,11 +16,13 @@ interface MusicPopupProps {
 const MusicPopup: React.FC<MusicPopupProps> = ({
   title,
   musicPopup,
+  musicStart,
   setCommentPopup,
   setLocationPopup,
   setContactPopup,
   setMusicPopup,
 }) => {
+  const [musicTest, setMusicTest] = useState(false);
   return (
     <Box
       sx={{
@@ -53,18 +57,24 @@ const MusicPopup: React.FC<MusicPopupProps> = ({
             <CloseIcon />
           </Box>
         </Box>
-
+        <Box onClick={() => setMusicTest(true)}>Click</Box>
         <Box
-          sx={{ textAlign: "left", p: "0 16px", width: "auto", height: "auto" }}
+          sx={{
+            textAlign: "left",
+            p: "0 16px",
+            width: "auto",
+            height: "auto",
+            visibility: "hidden",
+          }}
         >
-          <ReactPlayer
-            url="https://www.youtube.com/embed/M-iIFo6wJ_w?autoplay=1"
-            playing={true}
+          {/* <ReactPlayer
+            url="https://www.youtube.com/embed/M-iIFo6wJ_w"
+            playing={musicTest}
             loop={true}
             width="100%"
             height="100%"
-            playsinline={true}
-          />
+            controls={true}
+          /> */}
         </Box>
       </Box>
     </Box>
