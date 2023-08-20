@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import useGetCountDownTimer from "@/data/useGetCountDownTimer";
 import Widget from "@/components/Widget";
 import ReactPlayer from "react-player";
+import { CommentList } from "@/components";
 
 const greatVibes = Great_Vibes({ subsets: ["latin"], weight: "400" });
 const poiretOne = Poiret_One({ subsets: ["latin"], weight: "400" });
@@ -20,31 +21,31 @@ interface DateTimeConfig {
   };
 }
 
-const Title = styled("h1")(({ theme }) => ({
+const Title = styled("h1")(() => ({
   fontFamily: `${greatVibes.style.fontFamily} !important` || "auto",
   fontSize: "56px",
   fontWeight: "lighter",
   textAlign: "center",
 }));
 
-const SubTitle = styled("p")(({ theme }) => ({
+const SubTitle = styled("p")(() => ({
   fontFamily: `${greatVibes.style.fontFamily} !important` || "auto",
   fontSize: "32px",
   textAlign: "center",
 }));
 
-const Text = styled("p")(({ theme }) => ({
+const Text = styled("p")(() => ({
   fontFamily: `${poiretOne.style.fontFamily} !important` || "auto",
   fontSize: "16px",
 }));
 
-const MiniText = styled("p")(({ theme }) => ({
+const MiniText = styled("p")(() => ({
   fontFamily: `${poiretOne.style.fontFamily} !important` || "auto",
   fontSize: "16px",
   textAlign: "center",
 }));
 
-const UbuntuText = styled("p")(({ theme }) => ({
+const UbuntuText = styled("p")(() => ({
   fontFamily: `${ubuntu.style.fontFamily} !important` || "auto",
   fontWeight: "700",
   fontSize: "16px",
@@ -61,11 +62,11 @@ const Layout1: React.FC = () => {
   const eInviteId = router.query.eInviteId;
   const [countdownTimer, setCountdownTimer] = useState<DateTimeConfig>();
 
-  const { data } = useGetEinvite(eInviteId as string);
+  const { data, isLoading } = useGetEinvite(eInviteId as string);
   // @ts-ignore
   const item = data?.data;
   // @ts-ignore
-  const comments = data?.comments;
+  const listComments = data?.comments;
 
   const dateJs = new Date(item?.dateTime);
   const fullDate = dateJs?.toLocaleString("ms-MY", {
@@ -85,7 +86,6 @@ const Layout1: React.FC = () => {
   const countdownTimerParam: DateTimeConfig = useGetCountDownTimer(
     item?.dateTime
   );
-  const [open, setOpen] = useState(false);
   const [musicStart, setMusicStart] = useState(false);
 
   useEffect(() => {
@@ -104,6 +104,7 @@ const Layout1: React.FC = () => {
         position: "relative",
         overflow: "hidden",
       }}
+      onTouchStart={() => setMusicStart(true)}
       onClick={() => setMusicStart(true)}
     >
       <Box sx={{ visibility: "hidden", position: "absolute" }}>
@@ -162,29 +163,7 @@ const Layout1: React.FC = () => {
           </Grid>
         </Box>
       </Box>
-      <Box
-        sx={{
-          background: "#FFF",
-          borderRadius: "24px",
-          boxShadow: "1px 1px 10px #FDE6E8",
-          display: open ? "none" : "block",
-          left: "0",
-          right: "0",
-          px: 4,
-          py: 2,
-          position: "absolute",
-          m: "-128px auto 0",
-          width: "fit-content",
-          zIndex: 2,
-        }}
-        onClick={() => {
-          setMusicStart(true);
-          setOpen(true);
-        }}
-      >
-        <UbuntuText>Klik untuk buka</UbuntuText>
-      </Box>
-      <Container sx={{ display: open ? "block" : "none" }}>
+      <Container>
         <Box
           my={5}
           mx="auto"
@@ -339,32 +318,9 @@ const Layout1: React.FC = () => {
                 }}
               >
                 <List>
-                  {comments?.map((comment: any, idx: string) => (
-                    <Box
-                      key={idx}
-                      mb={2}
-                      sx={{
-                        background:
-                          Number(idx) % 2 === 0
-                            ? "rgba(253,230,232, 0.4)"
-                            : "rgba(240,240,240, 0.4)",
-                        borderRadius: "24px",
-                        p: "16px 24px",
-                      }}
-                    >
-                      <UbuntuText
-                        sx={{
-                          textAlign: "left",
-                          fontWeight: "bolder",
-                          marginBottom: "8px",
-                        }}
-                        dangerouslySetInnerHTML={{ __html: comment?.name! }}
-                      />
-                      <MiniText
-                        sx={{ textAlign: "left" }}
-                        dangerouslySetInnerHTML={{ __html: comment?.message! }}
-                      />
-                    </Box>
+                  {/* @ts-ignore */}
+                  {listComments?.map((comment: any, idx: string) => (
+                    <CommentList {...{ comment, idx }} />
                   ))}
                 </List>
               </Paper>
@@ -372,7 +328,7 @@ const Layout1: React.FC = () => {
           </Grid>
         </Box>
       </Container>
-      <Box sx={{ display: open ? "block" : "none" }}>
+      <Box>
         <Widget
           {...{ musicStart }}
           color="#FDE6E8"

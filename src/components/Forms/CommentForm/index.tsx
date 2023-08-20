@@ -1,8 +1,8 @@
 import usePostUpdateComment from "@/data/postUpdateComment";
 import useGetEinvite from "@/data/useGetEinvite";
-import { Box, Grid, TextField, styled } from "@mui/material";
+import { Box, TextField, styled } from "@mui/material";
 import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 interface CommentFormProps {
   textName: string;

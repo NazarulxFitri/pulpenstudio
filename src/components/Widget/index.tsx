@@ -6,10 +6,8 @@ import CommentPopup from "./CommentPopup";
 import { useState } from "react";
 import LocationPopup from "./LocationPopup";
 import ContactPopup from "./ContactPopup";
-import MusicIcon from "../Icons/MusicIcon";
 
 interface WidgetProps {
-  musicStart: boolean;
   color: string;
   location: {
     text: string;
@@ -23,44 +21,28 @@ interface WidgetProps {
   };
 }
 
-const Widget: React.FC<WidgetProps> = ({
-  musicStart,
-  color,
-  location,
-  contact,
-}) => {
+const Widget: React.FC<WidgetProps> = ({ color, location, contact }) => {
   const [commentPopup, setCommentPopup] = useState(false);
   const [locationPopup, setLocationPopup] = useState(false);
   const [contactPopup, setContactPopup] = useState(false);
-  const [musicPopup, setMusicPopup] = useState(false);
 
   function handleClick(item: string) {
     if (item === "comment") {
       setCommentPopup(true);
       setLocationPopup(false);
       setContactPopup(false);
-      setMusicPopup(false);
     }
 
     if (item === "location") {
       setCommentPopup(false);
       setLocationPopup(true);
       setContactPopup(false);
-      setMusicPopup(false);
     }
 
     if (item === "contact") {
       setCommentPopup(false);
       setLocationPopup(false);
       setContactPopup(true);
-      setMusicPopup(false);
-    }
-
-    if (item === "music") {
-      setCommentPopup(false);
-      setLocationPopup(false);
-      setContactPopup(false);
-      setMusicPopup(true);
     }
   }
 

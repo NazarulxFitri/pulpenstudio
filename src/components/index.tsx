@@ -5,6 +5,7 @@ export { default as ErrorMessage } from "./ErrorMessage";
 export { default as ListNumber } from "./ListNumber";
 export { default as Popup } from "./Popup";
 export { default as RibbonBanner } from "./RibbonBanner";
+export { default as CommentList } from "./CommentList";
 
 export { default as WhatsappIcon } from "./Icons/WhatsappIcon";
 export { default as MapIcon } from "./Icons/MapIcon";
