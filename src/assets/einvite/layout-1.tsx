@@ -67,6 +67,9 @@ const Layout1: React.FC = () => {
   const item = data?.data;
   // @ts-ignore
   const listComments = data?.comments;
+  const musicUrl = item?.musicUrl;
+
+  console.log("xxxmusicUrl", musicUrl);
 
   const dateJs = new Date(item?.dateTime);
   const fullDate = dateJs?.toLocaleString("ms-MY", {
@@ -79,6 +82,8 @@ const Layout1: React.FC = () => {
     minute: "numeric",
     hour12: true,
   });
+
+  console.log("xxx data", data);
 
   const currentDate = new Date().getTime();
   const selectedDate = dateJs.getTime();
@@ -109,7 +114,7 @@ const Layout1: React.FC = () => {
     >
       <Box sx={{ visibility: "hidden", position: "absolute" }}>
         <ReactPlayer
-          url="https://www.youtube.com/embed/M-iIFo6wJ_w"
+          url={musicUrl}
           playing={musicStart}
           loop={true}
           width="1%"
@@ -320,7 +325,7 @@ const Layout1: React.FC = () => {
                 <List>
                   {/* @ts-ignore */}
                   {listComments?.map((comment: any, idx: string) => (
-                    <CommentList {...{ comment, idx }} />
+                    <CommentList {...{ comment, idx }} key={idx} />
                   ))}
                 </List>
               </Paper>
@@ -330,7 +335,6 @@ const Layout1: React.FC = () => {
       </Container>
       <Box>
         <Widget
-          {...{ musicStart }}
           color="#FDE6E8"
           location={{ text: item?.location, mapUrl: item?.mapUrl }}
           contact={{

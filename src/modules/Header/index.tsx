@@ -1,8 +1,10 @@
-import { Box, styled } from "@mui/material";
+import { Box, Tooltip, styled } from "@mui/material";
 import Link from "next/link";
 import { Sacramento } from "next/font/google";
 import { CloseIcon, MenuIcon } from "@/components";
 import { useState } from "react";
+import useGetUserId from "@/utils/useGetUserId";
+import useGetEinvite from "@/data/useGetEinvite";
 
 const sacramento = Sacramento({ subsets: ["latin"], weight: ["400"] });
 
@@ -24,6 +26,17 @@ const LinkMenu = styled(Link)(({ theme }) => ({
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const userId = useGetUserId();
+  const { data: items } = useGetEinvite();
+  const userAssets: any = [];
+
+  //   @ts-ignore
+  for (const key in items) {
+    //   @ts-ignore
+    if (items[key].userId === userId) userAssets.push(items[key]);
+  }
+
+  const needAttention = !!userAssets?.find((i: any) => i.paid === false);
 
   return (
     <Box
@@ -58,7 +71,26 @@ const Header = () => {
         {menuOpen ? <CloseIcon /> : <MenuIcon />}
       </Box>
       <Box display={{ xs: "none", md: "flex" }} sx={{ margin: "0 0 0 auto" }}>
-        <LinkMenu href="/account">My Account</LinkMenu>
+        <LinkMenu href="/account">
+          My Account
+          {needAttention && (
+            <Tooltip title="Need attention">
+              <span
+                style={{
+                  background: "#DDD0C8",
+                  color: "#333",
+                  borderRadius: "24px",
+                  fontSize: "12px",
+                  padding: "4px 10px",
+                  marginLeft: "4px",
+                  verticalAlign: "super",
+                }}
+              >
+                i
+              </span>
+            </Tooltip>
+          )}
+        </LinkMenu>
         <LinkMenu href="/e-invite">e-Invite</LinkMenu>
         <LinkMenu href="/pricingPlan">Pricing Plan</LinkMenu>
       </Box>

@@ -42,6 +42,7 @@ const EInviteModule = () => {
   const [phonePerson1, setPhonePerson1] = useState<string>("");
   const [phonePerson2, setPhonePerson2] = useState<string>("");
   const [mapUrl, setMapUrl] = useState<string>("");
+  const [musicUrl, setMusicUrl] = useState<string>("");
 
   const { data } = useGetEinvite();
   const { action } = usePostAddEinvite(itemName, layoutid as string);
@@ -81,6 +82,7 @@ const EInviteModule = () => {
         phonePerson1,
         phonePerson2,
         mapUrl,
+        musicUrl,
       },
       currDate.toString()
     );
@@ -220,7 +222,7 @@ const EInviteModule = () => {
               label="Pilihan lagu (youtube)"
               variant="standard"
               sx={{ width: "50%" }}
-              onChange={(e) => setMapUrl(e.currentTarget.value)}
+              onChange={(e) => setMusicUrl(e.currentTarget.value)}
             />
           </Box>
         </Grid>

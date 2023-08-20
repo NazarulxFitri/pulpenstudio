@@ -14,7 +14,10 @@ const PersonalInfo: React.FC<PersonalInfoProps> = ({ userId }) => {
 
   return (
     <Box>
-      <p style={{ fontSize: "24px", fontWeight: "700" }}>Personal Info</p>
+      <p style={{ fontSize: "20px", fontWeight: "700" }}>Personal Info</p>
+      <p style={{ marginTop: "24px" }}>
+        To update personal info, please reach out to our live support.
+      </p>
       <Box mt={4}>
         <Box sx={{ display: "flex" }}>
           <p style={{ fontWeight: "700", width: "160px" }}>Name</p>
