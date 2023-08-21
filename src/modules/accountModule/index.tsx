@@ -6,9 +6,7 @@ import { useState } from "react";
 import PersonalInfo from "./Tabs/PersonalInfo";
 import MyWork from "./Tabs/MyWork";
 
-interface AccountModuleProps {}
-
-const AccountModule: React.FC<AccountModuleProps> = () => {
+const AccountModule = () => {
   const userId = useGetUserId();
   const { data: items } = useGetEinvite();
   const userAssets: any = [];
