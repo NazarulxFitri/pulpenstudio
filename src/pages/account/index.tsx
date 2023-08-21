@@ -1,6 +1,7 @@
 import { BoxContainer, RibbonBanner } from "@/components";
-import Login from "@/modules/Login";
 import AccountModule from "@/modules/AccountModule";
+import Login from "@/modules/Login";
+
 import useCheckauth from "@/utils/useCheckAuth";
 
 const Account = () => {
