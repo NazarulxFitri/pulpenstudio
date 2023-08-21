@@ -1,10 +1,10 @@
-import { BoxContainer, CloseIcon, MenuIcon } from "@/components";
+import { BoxContainer } from "@/components";
 import useGetEinvite from "@/data/useGetEinvite";
 import useGetUserId from "@/utils/useGetUserId";
 import { Box, Grid, Tooltip } from "@mui/material";
 import { useState } from "react";
-import PersonalInfo from "././Tabs/PersonalInfo";
-import MyWork from "././Tabs/MyWork";
+import PersonalInfo from "./Tabs/PersonalInfo";
+import MyWork from "./Tabs/MyWork";
 
 interface AccountModuleProps {}
 
