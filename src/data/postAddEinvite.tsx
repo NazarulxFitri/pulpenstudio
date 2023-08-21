@@ -9,7 +9,6 @@ export default function usePostAddEinvite(name: string, layout: string) {
 
   const action = async (cms: Object, currDate: string) => {
     try {
-      console.log("xxx cms", cms);
       setLoading(true);
       set(ref(db, "eInviteApp/" + name), {
         userId: userId,

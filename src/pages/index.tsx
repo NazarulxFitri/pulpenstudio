@@ -1,7 +1,6 @@
 import {
   BoxContainer,
   ChatIcon,
-  GiftIcon,
   PenIcon,
   RocketIcon,
   SupportIcon,
@@ -15,7 +14,7 @@ export default function Home() {
     <BoxContainer>
       <Box sx={{ textAlign: "center", mt: { xs: 4, md: 6 } }}>
         <Image
-          src="/media/cardSelection/light-pink.png"
+          src="/media/cardSelection/card-1/main.png"
           alt="Pulpen Studio | Light Pink"
           height={496}
           width={288}

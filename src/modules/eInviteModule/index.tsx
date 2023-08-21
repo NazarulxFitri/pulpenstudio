@@ -94,17 +94,17 @@ const EInviteModule = () => {
   return (
     <BoxContainer>
       <h1 style={{ fontSize: "32px" }}>e-Invite</h1>
-      <p style={{ marginTop: "16px" }}>
+      <p style={{ marginTop: "24px" }}>
         Let&apos;s start create your e-Invite. Choose your selections below !
       </p>
       <Box>
-        <Box display="flex" mt={2}>
+        <Box display="flex" mt={3}>
           <ListNumber circle={true} number={1} />
           <h4>Create card name (url)</h4>
         </Box>
         <Box mt={1}>
           <TextField
-            sx={{ width: "20%" }}
+            sx={{ width: { xs: "100%", md: "20%" } }}
             id="standard-basic"
             label="eg. kahwin-luwixmini , majlis-berbuka-puasa"
             variant="standard"
@@ -121,8 +121,8 @@ const EInviteModule = () => {
           )}
         </Box>
       </Box>
-      <Grid container spacing={4}>
-        <Grid item xs={6}>
+      <Grid container spacing={4} flexDirection={{ xs: "column", md: "row" }}>
+        <Grid item xs={12} md={6}>
           <Box display="flex" mt={4}>
             <ListNumber circle={true} number={2} />
             <h4>Card content</h4>
@@ -133,7 +133,7 @@ const EInviteModule = () => {
               placeholder="Judika"
               label="Title : Nama pengantin Lelaki"
               variant="standard"
-              sx={{ width: "50%" }}
+              sx={{ width: { xs: "100%", md: "50%" } }}
               onChange={(e) => setTitle1Groom(e.currentTarget.value)}
             />
             <TextField
@@ -141,7 +141,7 @@ const EInviteModule = () => {
               placeholder="Mahalini"
               label="Title : Nama pengantin Perempuan"
               variant="standard"
-              sx={{ width: "50%" }}
+              sx={{ width: { xs: "100%", md: "50%" } }}
               onChange={(e) => setTitle1Bride(e.currentTarget.value)}
             />
             <TextField
@@ -149,7 +149,7 @@ const EInviteModule = () => {
               placeholder="Leo Messi & Angelia serta Paul Robert & Marissa"
               label="Nama wakil penganjur"
               variant="standard"
-              sx={{ width: "50%" }}
+              sx={{ width: { xs: "100%", md: "50%" } }}
               onChange={(e) => setTitle2(e.currentTarget.value)}
             />
             <TextField
@@ -157,7 +157,7 @@ const EInviteModule = () => {
               placeholder="Glass Hall, Forest Valley, Cheras"
               label="Lokasi"
               variant="standard"
-              sx={{ width: "50%" }}
+              sx={{ width: { xs: "100%", md: "50%" } }}
               onChange={(e) => setLocation(e.currentTarget.value)}
             />
             <DateTimePicker
@@ -169,7 +169,7 @@ const EInviteModule = () => {
           </Box>
         </Grid>
 
-        <Grid item xs={6}>
+        <Grid item xs={12} md={6}>
           <Box display="flex" mt={4}>
             <ListNumber circle={true} number={3} />
             <h4>Widget configuration</h4>
@@ -180,31 +180,31 @@ const EInviteModule = () => {
               placeholder="Zack"
               label="Nama orang untuk dihubungi 1"
               variant="standard"
-              sx={{ width: "50%" }}
+              sx={{ width: { xs: "100%", md: "50%" } }}
               onChange={(e) => setNamePerson1(e.currentTarget.value)}
             />
             <TextField
               id="standard-basic"
               placeholder="01156271776"
-              label="Nombor orang untuk dihubungi  telefon 1"
+              label="Nombor orang untuk dihubungi telefon 1"
               variant="standard"
-              sx={{ width: "50%" }}
+              sx={{ width: { xs: "100%", md: "50%" } }}
               onChange={(e) => setPhonePerson1(e.currentTarget.value)}
             />
             <TextField
               id="standard-basic"
               placeholder="Wendy"
-              label="Nama orang untuk dihubungi  2"
+              label="Nama orang untuk dihubungi 2"
               variant="standard"
-              sx={{ width: "50%" }}
+              sx={{ width: { xs: "100%", md: "50%" } }}
               onChange={(e) => setNamePerson2(e.currentTarget.value)}
             />
             <TextField
               id="standard-basic"
               placeholder="01156271776"
-              label="Nombor orang untuk dihubungi  telefon 2"
+              label="Nombor orang untuk dihubungi telefon 2"
               variant="standard"
-              sx={{ width: "50%" }}
+              sx={{ width: { xs: "100%", md: "50%" } }}
               onChange={(e) => setPhonePerson2(e.currentTarget.value)}
             />
 
@@ -213,7 +213,7 @@ const EInviteModule = () => {
               placeholder="https://www.google.com/maps/dir//glasshall+forest+valley/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x31cc358ea1ca26ff:0xed9060ff23e7def2?sa=X&ved=2ahUKEwi7nsWm3cyAAxU_wTgGHUmXCJEQ9Rd6BAhOEAA&ved=2ahUKEwi7nsWm3cyAAxU_wTgGHUmXCJEQ9Rd6BAhWEAQ"
               label="Google Map URL"
               variant="standard"
-              sx={{ width: "50%" }}
+              sx={{ width: { xs: "100%", md: "50%" } }}
               onChange={(e) => setMapUrl(e.currentTarget.value)}
             />
             <TextField
@@ -221,7 +221,7 @@ const EInviteModule = () => {
               placeholder="https://www.google.com/maps/dir//glasshall+forest+valley/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x31cc358ea1ca26ff:0xed9060ff23e7def2?sa=X&ved=2ahUKEwi7nsWm3cyAAxU_wTgGHUmXCJEQ9Rd6BAhOEAA&ved=2ahUKEwi7nsWm3cyAAxU_wTgGHUmXCJEQ9Rd6BAhWEAQ"
               label="Pilihan lagu (youtube)"
               variant="standard"
-              sx={{ width: "50%" }}
+              sx={{ width: { xs: "100%", md: "50%" } }}
               onChange={(e) => setMusicUrl(e.currentTarget.value)}
             />
           </Box>

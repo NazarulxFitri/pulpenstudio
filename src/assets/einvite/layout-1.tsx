@@ -61,16 +61,12 @@ const Layout1: React.FC = () => {
   const router = useRouter();
   const eInviteId = router.query.eInviteId;
   const [countdownTimer, setCountdownTimer] = useState<DateTimeConfig>();
-
-  const { data, isLoading } = useGetEinvite(eInviteId as string);
+  const { data } = useGetEinvite(eInviteId as string);
   // @ts-ignore
   const item = data?.data;
   // @ts-ignore
   const listComments = data?.comments;
   const musicUrl = item?.musicUrl;
-
-  console.log("xxxmusicUrl", musicUrl);
-
   const dateJs = new Date(item?.dateTime);
   const fullDate = dateJs?.toLocaleString("ms-MY", {
     day: "numeric",
@@ -82,8 +78,6 @@ const Layout1: React.FC = () => {
     minute: "numeric",
     hour12: true,
   });
-
-  console.log("xxx data", data);
 
   const currentDate = new Date().getTime();
   const selectedDate = dateJs.getTime();

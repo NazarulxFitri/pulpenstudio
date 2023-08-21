@@ -18,7 +18,7 @@ const LinkMenu = styled(Link)(({ theme }) => ({
     color: "#DDD0C8",
   },
   display: "block",
-  fontSize: "20px",
+  fontSize: "16px",
   [theme.breakpoints.up("md")]: {
     margin: "0 8px",
   },
@@ -71,6 +71,8 @@ const Header = () => {
         {menuOpen ? <CloseIcon /> : <MenuIcon />}
       </Box>
       <Box display={{ xs: "none", md: "flex" }} sx={{ margin: "0 0 0 auto" }}>
+        <LinkMenu href="/catalogue">Catalogue</LinkMenu>
+        <LinkMenu href="/e-invite">e-Invite</LinkMenu>
         <LinkMenu href="/account">
           My Account
           {needAttention && (
@@ -91,17 +93,15 @@ const Header = () => {
             </Tooltip>
           )}
         </LinkMenu>
-        <LinkMenu href="/e-invite">e-Invite</LinkMenu>
-        <LinkMenu href="/pricingPlan">Pricing Plan</LinkMenu>
       </Box>
       {menuOpen && (
         <Box
           display={{ xs: "block", md: "none" }}
           sx={{ margin: "0 0 0 auto" }}
         >
-          <LinkMenu href="/account">My Account</LinkMenu>
+          <LinkMenu href="/catalogue">Catalogue</LinkMenu>
           <LinkMenu href="/e-invite">e-Invite</LinkMenu>
-          <LinkMenu href="/pricingPlan">Pricing Plan</LinkMenu>
+          <LinkMenu href="/account">My Account</LinkMenu>
         </Box>
       )}
     </Box>

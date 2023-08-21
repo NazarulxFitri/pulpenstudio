@@ -9,14 +9,14 @@ const ListNumber: React.FC<ListNumberProps> = ({ number }) => {
   return (
     <Box
       sx={{
-        background: "#000",
-        borderRadius: "20px",
-        color: "#FFF",
-        fontSize: "32px",
+        background: "#333",
+        borderRadius: "24px",
+        color: "#fff",
+        fontSize: "24px",
         fontWeight: "800",
         mr: 2,
         textAlign: "center",
-        width: "40px",
+        width: "30px",
       }}
     >
       {number}
