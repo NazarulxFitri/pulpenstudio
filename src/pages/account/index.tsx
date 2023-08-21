@@ -1,5 +1,5 @@
 import { BoxContainer, RibbonBanner } from "@/components";
-import AccountModule from "@/modules/AccountModule";
+import AccountModule from "@/components/AccountModule";
 import Login from "@/modules/Login";
 
 import useCheckauth from "@/utils/useCheckAuth";
