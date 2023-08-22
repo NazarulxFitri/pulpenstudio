@@ -1,5 +1,12 @@
 import { Box, Container, Grid, List, Paper, styled } from "@mui/material";
-import { Great_Vibes, Poiret_One, Ubuntu } from "next/font/google";
+import {
+  Arapey,
+  Cormorant_Garamond,
+  Poiret_One,
+  Sacramento,
+  Tangerine,
+  Ubuntu,
+} from "next/font/google";
 import useGetEinvite from "@/data/useGetEinvite";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
@@ -7,10 +14,17 @@ import useGetCountDownTimer from "@/data/useGetCountDownTimer";
 import Widget from "@/components/Widget";
 import ReactPlayer from "react-player";
 import { CommentList } from "@/components";
+import Image from "next/image";
 
-const greatVibes = Great_Vibes({ subsets: ["latin"], weight: "400" });
 const poiretOne = Poiret_One({ subsets: ["latin"], weight: "400" });
 const ubuntu = Ubuntu({ subsets: ["latin"], weight: "700" });
+const sacramento = Sacramento({ subsets: ["latin"], weight: ["400"] });
+const tangerine = Tangerine({ subsets: ["latin"], weight: ["400", "700"] });
+const arapey = Arapey({ subsets: ["latin"], weight: ["400"] });
+const coromont = Cormorant_Garamond({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "700"],
+});
 
 interface DateTimeConfig {
   countdownTimer: {
@@ -22,21 +36,25 @@ interface DateTimeConfig {
 }
 
 const Title = styled("h1")(() => ({
-  fontFamily: `${greatVibes.style.fontFamily} !important` || "auto",
-  fontSize: "56px",
-  fontWeight: "lighter",
+  fontFamily: `${tangerine.style.fontFamily} !important` || "auto",
+  fontWeight: "700",
   textAlign: "center",
 }));
 
 const SubTitle = styled("p")(() => ({
-  fontFamily: `${greatVibes.style.fontFamily} !important` || "auto",
-  fontSize: "32px",
+  fontFamily: `${tangerine.style.fontFamily} !important` || "auto",
+  fontWeight: "400",
   textAlign: "center",
 }));
 
 const Text = styled("p")(() => ({
-  fontFamily: `${poiretOne.style.fontFamily} !important` || "auto",
-  fontSize: "16px",
+  fontFamily: `${arapey.style.fontFamily} !important` || "auto",
+}));
+
+const CoromontText = styled("p")(() => ({
+  fontFamily: `${coromont.style.fontFamily} !important` || "auto",
+  fontSize: "20px",
+  fontWeight: "300",
 }));
 
 const MiniText = styled("p")(() => ({
@@ -57,7 +75,7 @@ const TimeBox = styled(Box)(() => ({
   textAlign: "center",
 }));
 
-const Layout1: React.FC = () => {
+const Layout2: React.FC = () => {
   const router = useRouter();
   const eInviteId = router.query.eInviteId;
   const [countdownTimer, setCountdownTimer] = useState<DateTimeConfig>();
@@ -98,7 +116,7 @@ const Layout1: React.FC = () => {
     <Box
       maxWidth="400px"
       sx={{
-        boxShadow: "0px -10px 10px #FDE6E8",
+        boxShadow: "0px -10px 10px #656041",
         m: "auto",
         position: "relative",
         overflow: "hidden",
@@ -118,48 +136,103 @@ const Layout1: React.FC = () => {
       </Box>
       <Box
         sx={{
-          backgroundImage: "url('/media/layout/layout-1.jpeg')",
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "100% 100%",
+          background: "#656041",
           position: "relative",
           height: "100vh",
+          display: "flex",
         }}
       >
         <Box
           sx={{
-            background: "#FFF",
-            borderTopLeftRadius: "100px",
-            borderBottomRightRadius: "100px",
-            p: "80px 16px",
+            background: "#7d7652",
+            border: "1px solid #FFF",
+            borderTopLeftRadius: "180px",
+            borderTopRightRadius: "180px",
+            boxShadow: "10px 1px 10px #333",
+            color: "#fff",
+            p: "20px 0",
             position: "absolute",
-            top: "50%",
+            top: "45%",
             left: "50%",
             textAlign: "center",
             transform: "translate(-50%,-50%)",
             maxWidth: "80%",
             wordBreak: "break-word",
+            minHeight: "500px",
             width: "100%",
+            zIndex: "2",
           }}
         >
-          <SubTitle sx={{ mb: 5 }} dangerouslySetInnerHTML={{ __html: "﷽" }} />
-          <MiniText
-            sx={{ letterSpacing: "0.5em", mb: 5 }}
-            dangerouslySetInnerHTML={{ __html: "WALIMATULURUS" }}
-          />
-          <Title
-            sx={{ mb: 5, textShadow: "8px 8px 8px #FDE6E8" }}
-            dangerouslySetInnerHTML={{
-              __html: `${item?.title1Groom} <br/> & <br/> ${item?.title1Bride}`,
+          <Box
+            sx={{
+              position: "absolute",
+              bottom: "-56px",
+              left: "-32px",
             }}
-          />
-          <Grid container justifyContent="left" mb={5} rowSpacing={0.5}>
-            <Grid item borderLeft="8px solid #FDE6E8" px={2}>
-              <Text dangerouslySetInnerHTML={{ __html: fullDate }} />
-            </Grid>
-            <Grid item borderLeft="8px solid #FDE6E8" px={2}>
-              <Text dangerouslySetInnerHTML={{ __html: item?.location }} />
-            </Grid>
-          </Grid>
+          >
+            <Image
+              src="/media/animation/layout2-flowers.png"
+              alt="layout2-flowers"
+              width="200"
+              height="200"
+            />
+          </Box>
+          <Box
+            sx={{
+              position: "absolute",
+              top: "-64px",
+              right: "-32px",
+            }}
+          >
+            <Image
+              src="/media/animation/layout2-flowers.png"
+              alt="layout2-flowers"
+              width="200"
+              height="200"
+              style={{ transform: "rotate(180deg)" }}
+            />
+          </Box>
+          <Box sx={{ width: "100px", margin: "16px auto 0" }}>
+            <SubTitle style={{ fontSize: "24px" }}>
+              The <br />
+              wedding <br />
+              of
+            </SubTitle>
+          </Box>
+          <Box sx={{ maxWidth: "280px", margin: "32px auto 0" }}>
+            <Title
+              style={{ fontSize: "64px", textShadow: "1px 1px 10px #333" }}
+            >
+              Fabian <br />
+              Mahalini
+            </Title>
+          </Box>
+          <Box>
+            <Box
+              sx={{
+                width: "100px",
+                background: "#FFF",
+                height: "1px",
+                mt: 4,
+                mx: "auto",
+              }}
+            />
+            <Box mt={4} px={2}>
+              <Text style={{ fontSize: "16px" }}>
+                Dengan segala hormatnya, pihak kami menjemput anda untuk
+                meraikan majlis perkahwinan kami
+              </Text>
+              <CoromontText
+                style={{
+                  marginTop: "32px",
+                }}
+              >
+                August 21, 2023
+              </CoromontText>
+              <CoromontText>2.30pm</CoromontText>
+              <CoromontText>Lokasi</CoromontText>
+            </Box>
+          </Box>
         </Box>
       </Box>
       <Container>
@@ -167,7 +240,7 @@ const Layout1: React.FC = () => {
           my={5}
           mx="auto"
           sx={{
-            p: { xs: "24px 16px", md: 8 },
+            p: "24px 16px",
           }}
         >
           <MiniText
@@ -189,11 +262,14 @@ const Layout1: React.FC = () => {
                 "Dengan segala hormatnya kami menjemput Dato | Datin | Tuan | Puan | Encik | Cik hadir ke majlis perkahwinan anakanda kami",
             }}
           />
-          <UbuntuText
+          <Title
             sx={{
+              background: "#7d7652",
+              color: "#FFF",
+              fontSize: "32px",
+              p: "8px 24px",
               fontWeight: "bolder",
               mb: 3,
-              textShadow: "1px 1px 10px #FDE6E8",
             }}
             dangerouslySetInnerHTML={{
               __html: `${item?.title1Groom} & ${item?.title1Bride}`,
@@ -203,30 +279,31 @@ const Layout1: React.FC = () => {
 
         <Box
           sx={{
-            borderTop: "1px solid #FDE6E8",
-            borderBottom: "1px solid #FDE6E8",
-            mx: -2,
+            background: "#656041",
+            borderTop: "1px solid #7d7652",
+            borderBottom: "1px solid #7d7652",
+            mx: -3,
             py: 8,
           }}
         >
-          <Box sx={{ mx: 2 }}>
+          <Box sx={{ color: "#fff" }}>
             <UbuntuText
               dangerouslySetInnerHTML={{
                 __html: "Aturcara majlis",
               }}
             />
             <Box mt={2} sx={{ textAlign: "center" }}>
-              <Text
+              <MiniText
                 dangerouslySetInnerHTML={{
                   __html: `Tarikh : ${fullDate} `,
                 }}
               />
-              <Text
+              <MiniText
                 dangerouslySetInnerHTML={{
                   __html: `Lokasi : ${item?.location} `,
                 }}
               />
-              <Text
+              <MiniText
                 dangerouslySetInnerHTML={{
                   __html: `Jamuan makan : ${timeStart} `,
                 }}
@@ -254,7 +331,9 @@ const Layout1: React.FC = () => {
                 width: "fit-content",
               }}
             >
-              <SubTitle>Harinya sudah tiba !</SubTitle>
+              <SubTitle style={{ fontSize: "32px" }}>
+                Harinya sudah tiba !
+              </SubTitle>
             </Box>
           ) : (
             <Box
@@ -322,8 +401,8 @@ const Layout1: React.FC = () => {
                     <CommentList
                       {...{ comment, idx }}
                       key={idx}
-                      bgColor="#FDE6E8"
-                      textColor="#333"
+                      bgColor="#656041"
+                      textColor="#FFF"
                     />
                   ))}
                 </List>
@@ -334,7 +413,8 @@ const Layout1: React.FC = () => {
       </Container>
       <Box>
         <Widget
-          color="#FDE6E8"
+          iconColor="#FFF"
+          color="#7d7652"
           location={{ text: item?.location, mapUrl: item?.mapUrl }}
           contact={{
             number1: item?.phonePerson1,
@@ -348,4 +428,4 @@ const Layout1: React.FC = () => {
   );
 };
 
-export default Layout1;
+export default Layout2;

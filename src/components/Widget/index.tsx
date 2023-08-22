@@ -8,6 +8,7 @@ import LocationPopup from "./LocationPopup";
 import ContactPopup from "./ContactPopup";
 
 interface WidgetProps {
+  iconColor?: string;
   color: string;
   location: {
     text: string;
@@ -21,7 +22,12 @@ interface WidgetProps {
   };
 }
 
-const Widget: React.FC<WidgetProps> = ({ color, location, contact }) => {
+const Widget: React.FC<WidgetProps> = ({
+  iconColor,
+  color,
+  location,
+  contact,
+}) => {
   const [commentPopup, setCommentPopup] = useState(false);
   const [locationPopup, setLocationPopup] = useState(false);
   const [contactPopup, setContactPopup] = useState(false);
@@ -50,9 +56,10 @@ const Widget: React.FC<WidgetProps> = ({ color, location, contact }) => {
     <Grid
       container
       sx={{
-        background: "#FDE6E8",
+        background: color,
         boxShadow: `1px 1px 10px ${color}`,
         bottom: "0",
+        color: iconColor || "unset",
         display: "flex",
         py: 2,
         position: "fixed",

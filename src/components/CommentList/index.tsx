@@ -4,6 +4,8 @@ import { Box, Container, Grid, List, Paper, styled } from "@mui/material";
 interface CommentListProps {
   comment: any;
   idx: string;
+  bgColor: string;
+  textColor: string;
 }
 
 const poiretOne = Poiret_One({ subsets: ["latin"], weight: "400" });
@@ -22,17 +24,20 @@ const MiniText = styled("p")(({ theme }) => ({
   textAlign: "center",
 }));
 
-const CommentList: React.FC<CommentListProps> = ({ comment, idx }) => {
+const CommentList: React.FC<CommentListProps> = ({
+  bgColor,
+  textColor,
+  comment,
+  idx,
+}) => {
   return (
     <Box
       key={comment}
       mb={2}
       sx={{
-        background:
-          Number(idx) % 2 === 0
-            ? "rgba(253,230,232, 0.4)"
-            : "rgba(240,240,240, 0.4)",
+        background: Number(idx) % 2 === 0 ? bgColor : "rgba(240,240,240, 0.4)",
         borderRadius: "24px",
+        color: Number(idx) % 2 === 0 ? textColor : "#333",
         p: "16px 24px",
       }}
     >
