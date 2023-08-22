@@ -19,14 +19,15 @@ const Popup: React.FC<PopupProps> = ({
   heightvh,
 }) => {
   return (
-    <>
+    <Box>
       <Box
         id="overlay"
         sx={{
           background: "rgba(0,0,0,0.8)",
           position: "absolute",
+          mt: -2,
           width: "100vw",
-          height: heightvh ? "100vh" : "100%",
+          height: "100vh",
           left: "0",
           top: "0",
         }}
@@ -45,32 +46,45 @@ const Popup: React.FC<PopupProps> = ({
           margin: "0 auto",
         }}
       >
-        <Box>
-          <p style={{ fontSize: "48px", fontWeight: 800 }}>{title}</p>
-        </Box>
-        <Box mt={2}>
-          <p style={{ fontSize: "16px", fontWeight: 600 }}>{message}</p>
-        </Box>
-        <Box mt={2}>
-          Please find your link here :{" "}
+        <p style={{ fontSize: "24px", fontWeight: "700" }}>
+          Congratz, your card is ready !
+        </p>
+        <p style={{ marginTop: "16px" }}>
+          Disclaimer : Card creation is free of charge. You can view it for 3
+          days
+        </p>
+        <Box mt={4} mb={2}>
           <Link
             style={{
-              color: "#1976d2",
-              fontWeight: 800,
+              background: "#DDD0C8",
+              borderRadius: "24px",
+              fontWeight: "700",
               textDecoration: "none",
+              color: "#333",
+              padding: "8px 16px",
+              margin: "0 8px",
             }}
-            href={
-              live ? `/e-invite/live/${itemName}` : `/e-invite/edit/${itemName}`
-            }
+            href={`/e-invite/live/${itemName}` as string}
           >
-            lumie/eInvite/{live ? "live" : "edit"}/{itemName}
+            Check the card
+          </Link>
+          <Link
+            style={{
+              borderRadius: "24px",
+              boxShadow: "1px 1px 10px #DDD0C8",
+              fontWeight: "700",
+              textDecoration: "none",
+              color: "#333",
+              padding: "8px 16px",
+              margin: "0 8px",
+            }}
+            href={`/account?tab=mywork`}
+          >
+            Confirm order
           </Link>
         </Box>
-        <Box mt={2}>
-          <p style={{ fontSize: "16px", fontWeight: 600 }}>{disclaimer}</p>
-        </Box>
       </Box>
-    </>
+    </Box>
   );
 };
 

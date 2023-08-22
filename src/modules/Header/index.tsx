@@ -36,7 +36,7 @@ const Header = () => {
     if (items[key].userId === userId) userAssets.push(items[key]);
   }
 
-  const needAttention = !!userAssets?.find((i: any) => i.paid === false);
+  const needAttention = userAssets?.filter((i: any) => i.paid === false);
 
   return (
     <Box
@@ -75,20 +75,23 @@ const Header = () => {
         <LinkMenu href="/e-invite">e-Invite</LinkMenu>
         <LinkMenu href="/account">
           My Account
-          {needAttention && (
-            <Tooltip title="Need attention">
+          {!!needAttention && (
+            <Tooltip
+              title={`You have ${needAttention.length} items in pending payment status`}
+            >
               <span
                 style={{
                   background: "#DDD0C8",
                   color: "#333",
                   borderRadius: "24px",
+                  fontWeight: "500",
                   fontSize: "12px",
                   padding: "4px 10px",
                   marginLeft: "4px",
                   verticalAlign: "super",
                 }}
               >
-                i
+                {needAttention.length}
               </span>
             </Tooltip>
           )}

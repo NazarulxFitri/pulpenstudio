@@ -6,6 +6,7 @@ export { default as ListNumber } from "./ListNumber";
 export { default as Popup } from "./Popup";
 export { default as RibbonBanner } from "./RibbonBanner";
 export { default as CommentList } from "./CommentList";
+export { default as LiveSupport } from "./LiveSupport";
 
 export { default as WhatsappIcon } from "./Icons/WhatsappIcon";
 export { default as MapIcon } from "./Icons/MapIcon";
@@ -23,3 +24,4 @@ export { default as GiftIcon } from "./Icons/GiftIcon";
 export { default as PhoneIcon } from "./Icons/PhoneIcon";
 export { default as MusicIcon } from "./Icons/MusicIcon";
 export { default as RocketIcon } from "./Icons/RocketIcon";
+export { default as LiveSupportIcon } from "./Icons/LiveSupportIcon";
