@@ -11,6 +11,8 @@ const EinviteLive: React.FC<EinviteLiveProps> = () => {
   const eInviteId = router.query.eInviteId;
   const { data } = useGetEinvite(eInviteId as string);
 
+  console.log("xxx daa", data?.layout);
+
   const listLayout = useListLayout();
 
   return (

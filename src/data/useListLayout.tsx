@@ -1,10 +1,10 @@
-import { Layout1 } from "@/assets";
-import Layout2 from "@/assets/einvite/layout-2";
+import { Layout1, Layout2, Layout3 } from "@/assets";
 
 export default function useListLayout() {
   const listLayout = {
     "001": <Layout1 />,
     "002": <Layout2 />,
+    "003": <Layout3 />,
   };
 
   return listLayout;

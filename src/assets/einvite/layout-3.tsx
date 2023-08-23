@@ -1,7 +1,6 @@
 import { Box, Container, Grid, List, Paper, styled } from "@mui/material";
 import {
-  Arapey,
-  Cormorant_Garamond,
+  Playfair_Display,
   Poiret_One,
   Tangerine,
   Ubuntu,
@@ -15,13 +14,12 @@ import ReactPlayer from "react-player";
 import { CommentList } from "@/components";
 import Image from "next/image";
 
+const tangerine = Tangerine({ subsets: ["latin"], weight: "400" });
 const poiretOne = Poiret_One({ subsets: ["latin"], weight: "400" });
 const ubuntu = Ubuntu({ subsets: ["latin"], weight: "700" });
-const tangerine = Tangerine({ subsets: ["latin"], weight: ["400", "700"] });
-const arapey = Arapey({ subsets: ["latin"], weight: ["400"] });
-const coromont = Cormorant_Garamond({
+const playfair = Playfair_Display({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "700"],
+  weight: ["400", "500", "700"],
 });
 
 interface DateTimeConfig {
@@ -35,28 +33,23 @@ interface DateTimeConfig {
 
 const Title = styled("h1")(() => ({
   fontFamily: `${tangerine.style.fontFamily} !important` || "auto",
-  fontWeight: "700",
   textAlign: "center",
 }));
 
 const SubTitle = styled("p")(() => ({
   fontFamily: `${tangerine.style.fontFamily} !important` || "auto",
-  fontWeight: "400",
+  fontSize: "32px",
   textAlign: "center",
 }));
 
 const Text = styled("p")(() => ({
-  fontFamily: `${arapey.style.fontFamily} !important` || "auto",
-}));
-
-const CoromontText = styled("p")(() => ({
-  fontFamily: `${coromont.style.fontFamily} !important` || "auto",
-  fontSize: "20px",
-  fontWeight: "300",
+  fontFamily: `${poiretOne.style.fontFamily} !important` || "auto",
+  fontSize: "16px",
+  textAlign: "center",
 }));
 
 const MiniText = styled("p")(() => ({
-  fontFamily: `${poiretOne.style.fontFamily} !important` || "auto",
+  fontFamily: `${playfair.style.fontFamily} !important` || "auto",
   fontSize: "16px",
   textAlign: "center",
 }));
@@ -73,7 +66,7 @@ const TimeBox = styled(Box)(() => ({
   textAlign: "center",
 }));
 
-const Layout2: React.FC = () => {
+const Layout3: React.FC = () => {
   const router = useRouter();
   const eInviteId = router.query.eInviteId;
   const [countdownTimer, setCountdownTimer] = useState<DateTimeConfig>();
@@ -114,7 +107,7 @@ const Layout2: React.FC = () => {
     <Box
       maxWidth="400px"
       sx={{
-        boxShadow: "0px -10px 10px #656041",
+        boxShadow: "0px -10px 10px #7c1d64",
         m: "auto",
         position: "relative",
         overflow: "hidden",
@@ -134,103 +127,98 @@ const Layout2: React.FC = () => {
       </Box>
       <Box
         sx={{
-          background: "#656041",
+          borderBottom: "1px solid #EFEFEF",
           position: "relative",
           height: "100vh",
-          display: "flex",
         }}
       >
+        <Box sx={{ position: "absolute", top: "0", left: "-20px" }}>
+          <Image
+            src="/media/animation/layout3-art.png"
+            alt="layout3-art"
+            width={200}
+            height={400}
+          />
+        </Box>
         <Box
           sx={{
-            background: "#7d7652",
-            border: "1px solid #FFF",
-            borderTopLeftRadius: "180px",
-            borderTopRightRadius: "180px",
-            boxShadow: "10px 1px 10px #333",
-            color: "#fff",
-            p: "20px 0",
             position: "absolute",
-            top: "45%",
-            left: "50%",
-            textAlign: "center",
-            transform: "translate(-50%,-50%)",
-            maxWidth: "80%",
-            wordBreak: "break-word",
-            minHeight: "500px",
-            width: "100%",
-            zIndex: "2",
+            bottom: "0",
+            right: "0",
+            transform: "rotate(180deg)",
           }}
         >
-          <Box
+          <Image
+            src="/media/animation/layout3-art-1.png"
+            alt="layout3-art"
+            width={400}
+            height={400}
+          />
+        </Box>
+        <Box
+          sx={{
+            borderTopLeftRadius: "100px",
+            borderBottomRightRadius: "100px",
+            p: "80px 0",
+            textAlign: "center",
+            wordBreak: "break-word",
+            width: "100%",
+          }}
+        >
+          <Text
             sx={{
-              position: "absolute",
-              bottom: "-56px",
-              left: "-32px",
+              color: "#7c1d64",
+              letterSpacing: "0.5em",
+              mb: 5,
+              fontSize: "20px",
             }}
-          >
+            dangerouslySetInnerHTML={{ __html: "WALIMATULURUS" }}
+          />
+          <Box sx={{ position: "relative" }}>
             <Image
-              src="/media/animation/layout2-flowers.png"
-              alt="layout2-flowers"
-              width="200"
-              height="200"
+              src="/media/animation/layout3-flowers.png"
+              alt="layout3-flowers"
+              width={400}
+              height={400}
             />
-          </Box>
-          <Box
-            sx={{
-              position: "absolute",
-              top: "-64px",
-              right: "-32px",
-            }}
-          >
-            <Image
-              src="/media/animation/layout2-flowers.png"
-              alt="layout2-flowers"
-              width="200"
-              height="200"
-              style={{ transform: "rotate(180deg)" }}
-            />
-          </Box>
-          <Box sx={{ width: "100px", margin: "16px auto 0" }}>
-            <SubTitle style={{ fontSize: "24px" }}>
-              The <br />
-              wedding <br />
-              of
-            </SubTitle>
-          </Box>
-          <Box sx={{ maxWidth: "280px", margin: "32px auto 0" }}>
-            <Title
-              style={{ fontSize: "64px", textShadow: "1px 1px 10px #333" }}
-            >
-              {item?.title1Groom} <br />
-              {item?.title1Bride}
-            </Title>
-          </Box>
-          <Box>
             <Box
               sx={{
-                width: "100px",
-                background: "#FFF",
-                height: "1px",
-                mt: 4,
-                mx: "auto",
+                background: "rgba(255,255,255,0.4)",
+                p: 3,
+                position: "absolute",
+                top: "50%",
+                left: "50%",
+                transform: "translate(-50%,-50%)",
+                width: "100%",
               }}
-            />
-            <Box mt={4} px={2}>
-              <Text style={{ fontSize: "16px" }}>
-                Dengan segala hormatnya, pihak kami menjemput anda untuk
-                meraikan majlis perkahwinan kami
-              </Text>
-              <CoromontText
-                style={{
-                  marginTop: "32px",
+            >
+              <Title
+                sx={{
+                  fontSize: "48px",
+                  fontWeight: "lighter",
+                  lineHeight: "0.5em",
                 }}
-              >
-                {fullDate}
-              </CoromontText>
-              <CoromontText>{timeStart}</CoromontText>
-              <CoromontText>{item?.location}</CoromontText>
+                dangerouslySetInnerHTML={{
+                  __html: `<span style="margin-left: -016px">${item?.title1Groom}</span> <br/><span style="font-size: 20px">&</span><br/><span style="margin-right: -16px">${item?.title1Bride}</span>`,
+                }}
+              />
             </Box>
           </Box>
+          <MiniText
+            sx={{
+              color: "#7c1d64",
+              fontWeight: "700",
+              letterSpacing: "0.25em",
+              textTransform: "uppercase",
+            }}
+            dangerouslySetInnerHTML={{ __html: fullDate }}
+          />
+          <Text
+            sx={{
+              color: "#7c1d64",
+            }}
+            dangerouslySetInnerHTML={{ __html: item?.location }}
+          />
         </Box>
       </Box>
       <Container>
@@ -238,7 +226,7 @@ const Layout2: React.FC = () => {
           my={5}
           mx="auto"
           sx={{
-            p: "24px 16px",
+            p: { xs: "24px 16px", md: 8 },
           }}
         >
           <MiniText
@@ -260,14 +248,11 @@ const Layout2: React.FC = () => {
                 "Dengan segala hormatnya kami menjemput Dato | Datin | Tuan | Puan | Encik | Cik hadir ke majlis perkahwinan anakanda kami",
             }}
           />
-          <Title
+          <UbuntuText
             sx={{
-              background: "#7d7652",
-              color: "#FFF",
-              fontSize: "32px",
-              p: "8px 24px",
               fontWeight: "bolder",
               mb: 3,
+              textShadow: "1px 1px 10px #FDE6E8",
             }}
             dangerouslySetInnerHTML={{
               __html: `${item?.title1Groom} & ${item?.title1Bride}`,
@@ -277,29 +262,13 @@ const Layout2: React.FC = () => {
 
         <Box
           sx={{
-            background: "#656041",
-            borderTop: "1px solid #7d7652",
-            borderBottom: "1px solid #7d7652",
-            mx: -3,
+            borderTop: "1px solid #FDE6E8",
+            borderBottom: "1px solid #FDE6E8",
+            mx: -2,
             py: 8,
-            position: "relative",
           }}
         >
-          <Box
-            sx={{
-              position: "absolute",
-              bottom: "-56px",
-              left: "-32px",
-            }}
-          >
-            <Image
-              src="/media/animation/layout2-flowers.png"
-              alt="layout2-flowers"
-              width="200"
-              height="200"
-            />
-          </Box>
-          <Box sx={{ color: "#fff" }}>
+          <Box sx={{ mx: 2 }}>
             <UbuntuText
               dangerouslySetInnerHTML={{
                 __html: "Aturcara majlis",
@@ -344,9 +313,7 @@ const Layout2: React.FC = () => {
                 width: "fit-content",
               }}
             >
-              <SubTitle style={{ fontSize: "32px" }}>
-                Harinya sudah tiba !
-              </SubTitle>
+              <SubTitle>Harinya sudah tiba !</SubTitle>
             </Box>
           ) : (
             <Box
@@ -414,7 +381,7 @@ const Layout2: React.FC = () => {
                     <CommentList
                       {...{ comment, idx }}
                       key={idx}
-                      bgColor="#656041"
+                      bgColor="#7c1d64"
                       textColor="#FFF"
                     />
                   ))}
@@ -427,7 +394,7 @@ const Layout2: React.FC = () => {
       <Box>
         <Widget
           iconColor="#FFF"
-          color="#7d7652"
+          color="#7c1d64"
           location={{ text: item?.location, mapUrl: item?.mapUrl }}
           contact={{
             number1: item?.phonePerson1,
@@ -441,4 +408,4 @@ const Layout2: React.FC = () => {
   );
 };
 
-export default Layout2;
+export default Layout3;
