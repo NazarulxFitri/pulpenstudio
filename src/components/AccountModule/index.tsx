@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import PersonalInfo from "./Tabs/PersonalInfo";
 import MyWork from "./Tabs/MyWork";
 import { useRouter } from "next/router";
+import BreadcrumbModule from "@/modules/BreadcrumbModule";
 
 const AccountModule = () => {
   const router = useRouter();
@@ -29,7 +30,16 @@ const AccountModule = () => {
 
   return (
     <BoxContainer>
-      <h1 style={{ fontSize: "32px" }}>Account</h1>
+      <h1 style={{ fontSize: "24px", marginTop: "40px" }}>Account</h1>
+      <Box mt={2}>
+        <BreadcrumbModule
+          text1="Home"
+          cta1="/"
+          text2="Account"
+          cta2="/account"
+          level="two"
+        />
+      </Box>
       <Grid container mt={4} spacing={4}>
         <Grid
           onClick={() => {

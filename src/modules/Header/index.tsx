@@ -5,6 +5,9 @@ import { CloseIcon, MenuIcon } from "@/components";
 import { useState } from "react";
 import useGetUserId from "@/utils/useGetUserId";
 import useGetEinvite from "@/data/useGetEinvite";
+import { useRemoveAuth } from "@/utils/useRemoveAuth";
+import useCheckauth from "@/utils/useCheckAuth";
+import { useRouter } from "next/router";
 
 const sacramento = Sacramento({ subsets: ["latin"], weight: ["400"] });
 
@@ -25,10 +28,13 @@ const LinkMenu = styled(Link)(({ theme }) => ({
 }));
 
 const Header = () => {
+  const router = useRouter();
   const [menuOpen, setMenuOpen] = useState(false);
   const userId = useGetUserId();
   const { data: items } = useGetEinvite();
   const userAssets: any = [];
+  const { auth } = useCheckauth();
+  const isLoggedIn = !!auth;
 
   //   @ts-ignore
   for (const key in items) {
@@ -37,6 +43,10 @@ const Header = () => {
   }
 
   const needAttention = userAssets?.filter((i: any) => i.paid === false);
+
+  function handleLogin() {
+    router.push("/account?target=login");
+  }
 
   return (
     <Box
@@ -72,10 +82,9 @@ const Header = () => {
       </Box>
       <Box display={{ xs: "none", md: "flex" }} sx={{ margin: "0 0 0 auto" }}>
         <LinkMenu href="/catalogue">Catalogue</LinkMenu>
-        <LinkMenu href="/e-invite">e-Invite</LinkMenu>
         <LinkMenu href="/account">
           My Account
-          {!!needAttention && (
+          {needAttention.length > 0 && (
             <Tooltip
               title={`You have ${needAttention.length} items in pending payment status`}
             >
@@ -96,6 +105,22 @@ const Header = () => {
             </Tooltip>
           )}
         </LinkMenu>
+        <LinkMenu href="/faq">FAQ</LinkMenu>
+        <LinkMenu
+          href="#"
+          style={{
+            background: "#333",
+            color: "#FFF",
+            padding: "8px 12px",
+            borderRadius: "24px",
+          }}
+        >
+          {isLoggedIn ? (
+            <Box onClick={useRemoveAuth}>Logout</Box>
+          ) : (
+            <Box onClick={handleLogin}>Login</Box>
+          )}
+        </LinkMenu>
       </Box>
       {menuOpen && (
         <Box
@@ -103,8 +128,23 @@ const Header = () => {
           sx={{ margin: "0 0 0 auto" }}
         >
           <LinkMenu href="/catalogue">Catalogue</LinkMenu>
-          <LinkMenu href="/e-invite">e-Invite</LinkMenu>
           <LinkMenu href="/account">My Account</LinkMenu>
+          <LinkMenu href="/faq">FAQ</LinkMenu>
+          <LinkMenu
+            href="#"
+            style={{
+              background: "#333",
+              color: "#FFF",
+              padding: "8px 12px",
+              borderRadius: "24px",
+            }}
+          >
+            {isLoggedIn ? (
+              <Box onClick={useRemoveAuth}>Logout</Box>
+            ) : (
+              <Box onClick={handleLogin}>Login</Box>
+            )}
+          </LinkMenu>
         </Box>
       )}
     </Box>

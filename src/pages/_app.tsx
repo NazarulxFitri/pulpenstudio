@@ -8,6 +8,7 @@ import { useRouter } from "next/router";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers";
 import { LiveSupport } from "@/components";
+import Footer from "@/modules/Footer";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -30,6 +31,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <Component {...pageProps} />
         <LiveSupport />
       </LocalizationProvider>
+      {!liveUrl && <Footer />}
     </ThemeProvider>
   );
 }

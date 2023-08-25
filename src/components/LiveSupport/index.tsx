@@ -12,23 +12,40 @@ const LiveSupport = () => {
   return (
     <Box
       sx={{
-        border: "1px solid #DDD0C8",
-        background: "#fff",
-        boxShadow: "1px 1px 10px #DDD0C8",
-        borderRadius: "24px",
-        p: 2,
         position: "fixed",
         bottom: "0",
         right: "0",
-        m: 4,
+        textAlign: "center",
+        m: { xs: 1, md: 4 },
       }}
     >
       <a
-        style={{ color: "#333" }}
+        style={{ color: "#FFF", textDecoration: "none" }}
         target="__blank"
         href="https://wa.link/nz0n3u"
       >
-        <LiveSupportIcon size={"32"} />
+        <Box
+          sx={{
+            background: "#333",
+            width: "fit-content",
+            borderTopLeftRadius: "24px",
+            borderTopRightRadius: "24px",
+            mx: "auto",
+            p: "8px 8px 0",
+          }}
+        >
+          <LiveSupportIcon size={"32"} />
+        </Box>
+        <Box
+          sx={{
+            background: "#333",
+            borderRadius: "24px",
+            px: 2,
+            py: 1,
+          }}
+        >
+          Need help ?
+        </Box>
       </a>
     </Box>
   );

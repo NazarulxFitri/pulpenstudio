@@ -1,10 +1,17 @@
-import { ErrorMessage } from "@/components";
+import { ErrorMessage, RibbonBanner } from "@/components";
 import usePostAddUser from "@/data/postAddUser";
 import useGetUser from "@/data/useGetUser";
 import useCheckCapitalCase from "@/utils/useCheckCapitalCase";
 import useCheckUsername from "@/utils/useCheckUserName";
 import useCheckWhiteSpace from "@/utils/useCheckWhiteSpace";
-import { Box, FormControl, Input, InputLabel } from "@mui/material";
+import {
+  Box,
+  FormControl,
+  Input,
+  InputAdornment,
+  InputLabel,
+  TextField,
+} from "@mui/material";
 import { useState } from "react";
 
 interface RegisterAccProps {
@@ -40,6 +47,7 @@ const RegisterAcc: React.FC<RegisterAccProps> = ({
       return;
     }
     action(name, password, contactNumber, emailAddress);
+    window.location.reload();
   }
 
   return (

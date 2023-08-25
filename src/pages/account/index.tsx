@@ -3,14 +3,19 @@ import AccountModule from "@/components/AccountModule";
 import Login from "@/modules/Login";
 
 import useCheckauth from "@/utils/useCheckAuth";
+import { useRouter } from "next/router";
 
 const Account = () => {
   const { auth } = useCheckauth();
+  const router = useRouter();
+  const fromLogin = !!router.query.target;
 
   if (!auth)
     return (
       <BoxContainer>
-        <RibbonBanner message="Please login first to access this feature" />
+        {!fromLogin && (
+          <RibbonBanner message="Please login first to access this feature" />
+        )}
         <Login />
       </BoxContainer>
     );

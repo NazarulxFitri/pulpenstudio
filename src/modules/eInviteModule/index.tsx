@@ -15,6 +15,7 @@ import useCheckCapitalCase from "@/utils/useCheckCapitalCase";
 import { Box, Grid, TextField } from "@mui/material";
 import useGetEinvite from "@/data/useGetEinvite";
 import useCheckExistence from "@/utils/useCheckExistence";
+import BreadcrumbModule from "../BreadcrumbModule";
 
 const cardData = [
   {
@@ -93,7 +94,16 @@ const EInviteModule = () => {
 
   return (
     <BoxContainer>
-      <h1 style={{ fontSize: "32px" }}>e-Invite</h1>
+      <h1 style={{ fontSize: "24px", marginTop: "40px" }}>e-Invite</h1>
+      <Box mt={2}>
+        <BreadcrumbModule
+          text1="Home"
+          cta1="/"
+          text2="e-Invite"
+          cta2="/e-invite"
+          level="two"
+        />
+      </Box>
       <p style={{ marginTop: "24px" }}>
         Let&apos;s start create your e-Invite. Choose your selections below !
       </p>
