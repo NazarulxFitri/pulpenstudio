@@ -3,6 +3,7 @@ import BoxContainer from "../../components/BoxContainer";
 import { layoutConfig } from "@/utils/LayoutConfig";
 import Link from "next/link";
 import BreadcrumbModule from "../BreadcrumbModule";
+import HowToOrderModule from "../HowToOrderModule";
 
 interface CatalogueModuleProps {}
 
@@ -59,7 +60,11 @@ const FaqModule: React.FC<CatalogueModuleProps> = ({}) => {
           level="two"
         />
       </Box>
-      <Box mt={4}>
+      <Box mb={6} pb={6} sx={{ borderBottom: "1px solid #EFEFEF" }}>
+        <HowToOrderModule />
+      </Box>
+
+      <Box>
         <p>
           <b>1. Does creating card cost me any charges ?</b>
         </p>

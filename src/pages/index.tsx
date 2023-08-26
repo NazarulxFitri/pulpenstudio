@@ -1,11 +1,11 @@
 import {
   BoxContainer,
   ChatIcon,
-  LiveSupportIcon,
   PenIcon,
   RocketIcon,
   SupportIcon,
 } from "@/components";
+import HowToOrderModule from "@/modules/HowToOrderModule";
 import { Box, Grid } from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
@@ -42,15 +42,15 @@ export default function Home() {
       </Box>
       <BoxContainer>
         <Box mt={6}>
-          <h4
+          <p
             style={{
-              fontSize: "32px",
+              fontSize: "24px",
               fontWeight: "700",
               textAlign: "center",
             }}
           >
             Features +
-          </h4>
+          </p>
           <Grid container mt={3}>
             <Grid
               item
@@ -163,6 +163,9 @@ export default function Home() {
               Let&apos;s start !
             </Box>
           </Link>
+        </Box>
+        <Box my={6}>
+          <HowToOrderModule />
         </Box>
       </BoxContainer>
     </Box>

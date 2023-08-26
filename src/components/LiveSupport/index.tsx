@@ -17,16 +17,17 @@ const LiveSupport = () => {
         right: "0",
         textAlign: "center",
         m: { xs: 1, md: 4 },
+        zIndex: "2",
       }}
     >
       <a
-        style={{ color: "#FFF", textDecoration: "none" }}
+        style={{ color: "#333", textDecoration: "none" }}
         target="__blank"
         href="https://wa.link/nz0n3u"
       >
         <Box
           sx={{
-            background: "#333",
+            background: "#eeece1",
             width: "fit-content",
             borderTopLeftRadius: "24px",
             borderTopRightRadius: "24px",
@@ -38,8 +39,9 @@ const LiveSupport = () => {
         </Box>
         <Box
           sx={{
-            background: "#333",
+            background: "#eeece1",
             borderRadius: "24px",
+            fontWeight: "700",
             px: 2,
             py: 1,
           }}

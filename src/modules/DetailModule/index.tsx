@@ -89,7 +89,7 @@ const DetailModule = ({}) => {
             </p>
             <p style={{ margin: "12px 0" }}>
               Choose any design that you like. Follow the steps provided you.
-              And tha&aposs it, your card is ready and can be viewed for free
+              And tha&apos;s it, your card is ready and can be viewed for free
             </p>
             <p style={{ margin: "12px 0" }}>
               Our policy : User can create card and feel it first for free. If

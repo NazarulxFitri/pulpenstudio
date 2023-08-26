@@ -44,10 +44,6 @@ const Header = () => {
 
   const needAttention = userAssets?.filter((i: any) => i.paid === false);
 
-  function handleLogin() {
-    router.push("/account?target=login");
-  }
-
   return (
     <Box
       display={{ xs: "block", md: "flex" }}
@@ -109,8 +105,8 @@ const Header = () => {
         <LinkMenu
           href="#"
           style={{
-            background: "#333",
-            color: "#FFF",
+            background: "#eeece1",
+            color: "#333",
             padding: "8px 12px",
             borderRadius: "24px",
           }}
@@ -118,7 +114,9 @@ const Header = () => {
           {isLoggedIn ? (
             <Box onClick={useRemoveAuth}>Logout</Box>
           ) : (
-            <Box onClick={handleLogin}>Login</Box>
+            <Box>
+              <LinkMenu href="/account">Login</LinkMenu>
+            </Box>
           )}
         </LinkMenu>
       </Box>
@@ -133,8 +131,8 @@ const Header = () => {
           <LinkMenu
             href="#"
             style={{
-              background: "#333",
-              color: "#FFF",
+              background: "#eeece1",
+              color: "#333",
               padding: "8px 12px",
               borderRadius: "24px",
             }}
@@ -142,7 +140,9 @@ const Header = () => {
             {isLoggedIn ? (
               <Box onClick={useRemoveAuth}>Logout</Box>
             ) : (
-              <Box onClick={handleLogin}>Login</Box>
+              <Box>
+                <LinkMenu href="/account">Login</LinkMenu>
+              </Box>
             )}
           </LinkMenu>
         </Box>
