@@ -43,7 +43,9 @@ const LocationPopup: React.FC<LocationPopupProps> = ({
         }}
       >
         <Box sx={{ display: "flex", p: 2 }}>
-          <p style={{ fontSize: "24px", fontWeight: "700" }}>{title}</p>
+          <p style={{ fontSize: "24px", fontWeight: "700", color: color }}>
+            {title}
+          </p>
           <Box
             sx={{ m: "0 0 0 auto" }}
             onClick={() => {
@@ -56,7 +58,7 @@ const LocationPopup: React.FC<LocationPopupProps> = ({
           </Box>
         </Box>
         <Box sx={{ textAlign: "left", p: "0 16px" }}>
-          <p>{location?.text}</p>
+          <p style={{ color: "#333" }}>{location?.text}</p>
           <a
             style={{ color: "unset", textDecoration: "none" }}
             href={location?.mapUrl}

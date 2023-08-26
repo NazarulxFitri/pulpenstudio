@@ -46,8 +46,6 @@ const Button2 = styled(Link)(() => ({
 }));
 
 const FaqModule: React.FC<CatalogueModuleProps> = ({}) => {
-  const listLayout = layoutConfig;
-
   return (
     <BoxContainer>
       <h1 style={{ fontSize: "24px", marginTop: "40px" }}>Catalogue</h1>
@@ -60,11 +58,10 @@ const FaqModule: React.FC<CatalogueModuleProps> = ({}) => {
           level="two"
         />
       </Box>
-      <Box mb={6} pb={6} sx={{ borderBottom: "1px solid #EFEFEF" }}>
+      {/* <Box mb={6} pb={6} sx={{ borderBottom: "1px solid #EFEFEF" }}>
         <HowToOrderModule />
-      </Box>
-
-      <Box>
+      </Box> */}
+      {/* <Box>
         <p>
           <b>1. Does creating card cost me any charges ?</b>
         </p>
@@ -158,7 +155,7 @@ const FaqModule: React.FC<CatalogueModuleProps> = ({}) => {
           You can chat with us by clicking the icon Need Help on your right
           bottom screen.
         </p>
-      </Box>
+      </Box> */}
     </BoxContainer>
   );
 };

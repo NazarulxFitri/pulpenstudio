@@ -46,7 +46,9 @@ const ContactPopup: React.FC<ContactPopupProps> = ({
         }}
       >
         <Box sx={{ display: "flex", p: 2 }}>
-          <p style={{ fontSize: "24px", fontWeight: "700" }}>{title}</p>
+          <p style={{ fontSize: "24px", fontWeight: "700", color: color }}>
+            {title}
+          </p>
           <Box
             sx={{ m: "0 0 0 auto" }}
             onClick={() => {
@@ -59,7 +61,7 @@ const ContactPopup: React.FC<ContactPopupProps> = ({
           </Box>
         </Box>
         <Box sx={{ textAlign: "left", p: "0 16px" }}>
-          <Box sx={{ display: "flex" }}>
+          <Box sx={{ color: "#333", display: "flex" }}>
             <p>
               {contact?.name1} - {contact?.number1}
             </p>
@@ -80,7 +82,7 @@ const ContactPopup: React.FC<ContactPopupProps> = ({
               </a>
             </Box>
           </Box>
-          <Box mt={2} sx={{ display: "flex" }}>
+          <Box mt={2} sx={{ color: "#333", display: "flex" }}>
             <p>
               {contact?.name2} - {contact?.number2}
             </p>
