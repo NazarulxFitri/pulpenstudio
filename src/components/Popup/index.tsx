@@ -40,7 +40,7 @@ const Popup: React.FC<PopupProps> = ({
           top: "10%",
           left: 0,
           right: 0,
-          padding: "16px 72px",
+          padding: { xs: "16px 24px", md: "16px 72px" },
           textAlign: "center",
           width: "fit-content",
           margin: "0 auto",
@@ -50,10 +50,15 @@ const Popup: React.FC<PopupProps> = ({
           Congratz, your card is ready !
         </p>
         <p style={{ marginTop: "16px" }}>
-          Disclaimer : Card creation is free of charge. You can view it for 3
-          days
+          Disclaimer : Card creation is free of charge. You can view it for 48
+          hours
         </p>
-        <Box mt={4} mb={2}>
+        <Box
+          mt={4}
+          mb={2}
+          display="flex"
+          flexDirection={{ xs: "row", md: "column" }}
+        >
           <Link
             style={{
               background: "#DDD0C8",
