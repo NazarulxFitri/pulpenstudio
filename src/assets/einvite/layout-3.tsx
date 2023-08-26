@@ -146,6 +146,7 @@ const Layout3: React.FC = () => {
             bottom: "0",
             right: "0",
             transform: "rotate(180deg)",
+            zIndex: "-1",
           }}
         >
           <Image
@@ -216,6 +217,7 @@ const Layout3: React.FC = () => {
           <Text
             sx={{
               color: "#7c1d64",
+              fontWeight: "bolder",
             }}
             dangerouslySetInnerHTML={{ __html: item?.location }}
           />

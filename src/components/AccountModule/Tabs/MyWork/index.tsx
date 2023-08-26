@@ -54,7 +54,7 @@ const MyWork: React.FC<MyWorkProps> = ({ userAssets }) => {
                         href=""
                         target="__blank"
                         style={{
-                          background: "#DDD0C8",
+                          background: "#eeece1",
                           borderRadius: "24px",
                           color: "unset",
                           textDecoration: "none",

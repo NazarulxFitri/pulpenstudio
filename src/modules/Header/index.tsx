@@ -17,9 +17,6 @@ const LinkMenu = styled(Link)(({ theme }) => ({
   fontWeight: 800,
   margin: "16px 0",
   textDecoration: "none",
-  "&:hover": {
-    color: "#DDD0C8",
-  },
   display: "block",
   fontSize: "16px",
   [theme.breakpoints.up("md")]: {
@@ -50,7 +47,7 @@ const Header = () => {
       px={{ xs: 1, md: 2, lg: 6 }}
       py={0.5}
       sx={{
-        boxShadow: "1px 1px 10px #DDD0C8",
+        boxShadow: "1px 1px 10px #eeece1",
         textAlign: { xs: "center", md: "unset" },
       }}
     >
@@ -74,7 +71,7 @@ const Header = () => {
           menuOpen ? setMenuOpen(false) : setMenuOpen(true);
         }}
       >
-        {menuOpen ? <CloseIcon /> : <MenuIcon />}
+        {menuOpen ? <CloseIcon color="#333" /> : <MenuIcon />}
       </Box>
       <Box display={{ xs: "none", md: "flex" }} sx={{ margin: "0 0 0 auto" }}>
         <LinkMenu href="/catalogue">Catalogue</LinkMenu>
@@ -86,7 +83,7 @@ const Header = () => {
             >
               <span
                 style={{
-                  background: "#DDD0C8",
+                  background: "#eeece1",
                   color: "#333",
                   borderRadius: "24px",
                   fontWeight: "500",
@@ -102,8 +99,7 @@ const Header = () => {
           )}
         </LinkMenu>
         <LinkMenu href="/faq">FAQ</LinkMenu>
-        <LinkMenu
-          href="#"
+        <p
           style={{
             background: "#eeece1",
             color: "#333",
@@ -112,13 +108,11 @@ const Header = () => {
           }}
         >
           {isLoggedIn ? (
-            <Box onClick={useRemoveAuth}>Logout</Box>
+            <p onClick={useRemoveAuth}>Logout</p>
           ) : (
-            <Box>
-              <LinkMenu href="/account">Login</LinkMenu>
-            </Box>
+            <LinkMenu href="/account">Login</LinkMenu>
           )}
-        </LinkMenu>
+        </p>
       </Box>
       {menuOpen && (
         <Box
@@ -128,23 +122,13 @@ const Header = () => {
           <LinkMenu href="/catalogue">Catalogue</LinkMenu>
           <LinkMenu href="/account">My Account</LinkMenu>
           <LinkMenu href="/faq">FAQ</LinkMenu>
-          <LinkMenu
-            href="#"
-            style={{
-              background: "#eeece1",
-              color: "#333",
-              padding: "8px 12px",
-              borderRadius: "24px",
-            }}
-          >
+          <p>
             {isLoggedIn ? (
-              <Box onClick={useRemoveAuth}>Logout</Box>
+              <p onClick={useRemoveAuth}>Logout</p>
             ) : (
-              <Box>
-                <LinkMenu href="/account">Login</LinkMenu>
-              </Box>
+              <LinkMenu href="/account">Login</LinkMenu>
             )}
-          </LinkMenu>
+          </p>
         </Box>
       )}
     </Box>

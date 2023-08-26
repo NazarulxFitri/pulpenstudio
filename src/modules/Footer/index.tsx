@@ -12,7 +12,7 @@ const Footer = () => {
       }}
     >
       <Container>
-        <p style={{ fontSize: "16px", fontWeight: "700" }}>
+        <p style={{ fontSize: "12px", fontWeight: "700" }}>
           Copyright © 2023 Pulpen Studio . All rights reserved
         </p>
       </Container>

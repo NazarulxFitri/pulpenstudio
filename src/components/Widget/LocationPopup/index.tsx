@@ -54,7 +54,7 @@ const LocationPopup: React.FC<LocationPopupProps> = ({
               setLocationPopup(false);
             }}
           >
-            <CloseIcon />
+            <CloseIcon color="#333" />
           </Box>
         </Box>
         <Box sx={{ textAlign: "left", p: "0 16px" }}>

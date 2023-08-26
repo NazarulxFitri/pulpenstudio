@@ -48,7 +48,7 @@ const CommentPopup: React.FC<CommentPopupProps> = ({
               setLocationPopup(false);
             }}
           >
-            <CloseIcon />
+            <CloseIcon color="#333" />
           </Box>
         </Box>
         <Box sx={{ display: "flex", textAlign: "left", p: "0 16px" }}>

@@ -24,7 +24,7 @@ export const CategoryText = styled("p")(() => ({
 }));
 
 export const Button1 = styled(Link)(() => ({
-  border: "1px solid #DDD0C8",
+  border: "1px solid #eeece1",
   borderRadius: "24px",
   cursor: "pointer",
   color: "#333",
@@ -34,7 +34,7 @@ export const Button1 = styled(Link)(() => ({
   margin: "8px 0",
   width: "fit-content",
   "&:hover": {
-    background: "#DDD0C8",
+    background: "#eeece1",
   },
 }));
 
@@ -58,10 +58,10 @@ const FaqModule: React.FC<CatalogueModuleProps> = ({}) => {
           level="two"
         />
       </Box>
-      {/* <Box mb={6} pb={6} sx={{ borderBottom: "1px solid #EFEFEF" }}>
+      <Box mb={6} pb={6} sx={{ borderBottom: "1px solid #EFEFEF" }}>
         <HowToOrderModule />
-      </Box> */}
-      {/* <Box>
+      </Box>
+      <Box>
         <p>
           <b>1. Does creating card cost me any charges ?</b>
         </p>
@@ -155,7 +155,7 @@ const FaqModule: React.FC<CatalogueModuleProps> = ({}) => {
           You can chat with us by clicking the icon Need Help on your right
           bottom screen.
         </p>
-      </Box> */}
+      </Box>
     </BoxContainer>
   );
 };

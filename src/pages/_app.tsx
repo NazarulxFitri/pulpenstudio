@@ -26,12 +26,12 @@ export default function App({ Component, pageProps }: AppProps) {
         }
       `}</style>
 
-      {!liveUrl && <Header />}
       <LocalizationProvider dateAdapter={AdapterDayjs}>
+        {!liveUrl && <Header />}
         <Component {...pageProps} />
+        {!liveUrl && <Footer />}
         <LiveSupport />
       </LocalizationProvider>
-      {!liveUrl && <Footer />}
     </ThemeProvider>
   );
 }

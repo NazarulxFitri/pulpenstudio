@@ -61,7 +61,7 @@ const Popup: React.FC<PopupProps> = ({
         >
           <Link
             style={{
-              background: "#DDD0C8",
+              background: "#eeece1",
               borderRadius: "24px",
               fontWeight: "700",
               textDecoration: "none",
@@ -76,7 +76,7 @@ const Popup: React.FC<PopupProps> = ({
           <Link
             style={{
               borderRadius: "24px",
-              boxShadow: "1px 1px 10px #DDD0C8",
+              boxShadow: "1px 1px 10px #eeece1",
               fontWeight: "700",
               textDecoration: "none",
               color: "#333",

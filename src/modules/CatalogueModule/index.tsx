@@ -24,7 +24,7 @@ export const CategoryText = styled("p")(() => ({
 }));
 
 export const Button1 = styled(Link)(() => ({
-  border: "1px solid #DDD0C8",
+  border: "1px solid #eeece1",
   borderRadius: "24px",
   cursor: "pointer",
   color: "#333",
@@ -34,7 +34,7 @@ export const Button1 = styled(Link)(() => ({
   margin: "8px 0",
   width: "fit-content",
   "&:hover": {
-    background: "#DDD0C8",
+    background: "#eeece1",
   },
 }));
 

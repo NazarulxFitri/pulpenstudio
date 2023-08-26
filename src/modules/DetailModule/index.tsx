@@ -26,7 +26,7 @@ const DetailModule = ({}) => {
         />
       </Box>
       <Grid container mt={8} gap={4}>
-        <Grid item xs={12} md={4} sx={{ borderRight: "1px solid #DDD0C8" }}>
+        <Grid item xs={12} md={4} sx={{ borderRight: "1px solid #eeece1" }}>
           <Box sx={{ display: "flex", overflow: "scroll" }}>
             {selectedLayout?.images.map((image, idx) => (
               <Image
@@ -77,7 +77,7 @@ const DetailModule = ({}) => {
           ))}
           <Box
             sx={{
-              background: "#DDD0C8",
+              background: "#eeece1",
               borderRadius: "24px",
               p: { xs: 2, md: 6 },
               my: 2,

@@ -49,7 +49,7 @@ const AccountModule = () => {
           xs={openPanel ? 8 : 2}
           md={2}
           sx={{
-            borderRight: "1px solid #DDD0C8",
+            borderRight: "1px solid #eeece1",
             color: { xs: openPanel ? "#333" : "#FFF", md: "unset" },
             cursor: "pointer",
             fontWeight: "700",
@@ -69,7 +69,7 @@ const AccountModule = () => {
                 >
                   <span
                     style={{
-                      background: "#DDD0C8",
+                      background: "#eeece1",
                       color: "#333",
                       borderRadius: "24px",
                       fontWeight: "500",

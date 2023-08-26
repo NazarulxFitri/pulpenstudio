@@ -98,12 +98,12 @@ const RegisterAcc: React.FC<RegisterAccProps> = ({
         sx={{
           background: isDisabled ? "#EEEEEE" : "#FFFFFF",
           borderRadius: "24px",
-          boxShadow: "1px 1px 10px #DDD0C8",
+          boxShadow: "1px 1px 10px #eeece1",
           mt: 2,
           p: "8px 24px",
           width: "fit-content",
           "&:hover": {
-            background: isDisabled ? "EEEEEE" : "#DDD0C8",
+            background: isDisabled ? "EEEEEE" : "#eeece1",
           },
         }}
         onClick={handleSubmit}

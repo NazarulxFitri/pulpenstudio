@@ -9,7 +9,7 @@ const Button: React.FC<ButtonProps> = ({ children, disabled }) => {
   return (
     <Box
       sx={{
-        background: disabled ? "#EFEFEF" : "#DDD0C8",
+        background: disabled ? "#EFEFEF" : "#eeece1",
         borderRadius: "24px",
         boxShadow: "1px 1px 10px #E0E0E0",
         color: "#FFF",
