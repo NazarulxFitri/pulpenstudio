@@ -164,7 +164,9 @@ export default function Home() {
             </Box>
           </Link>
         </Box>
-        <Box my={6}>{/* <HowToOrderModule /> */}</Box>
+        <Box my={6}>
+          <HowToOrderModule />
+        </Box>
       </BoxContainer>
     </Box>
   );
