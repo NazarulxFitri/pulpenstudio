@@ -13,7 +13,7 @@ const PersonalInfo: React.FC<PersonalInfoProps> = ({ userId }) => {
   if (isLoading) return null;
 
   return (
-    <Box>
+    <Box sx={{ overflow: "scroll" }}>
       <p style={{ fontSize: "20px", fontWeight: "700" }}>Personal Info</p>
       <p style={{ marginTop: "24px" }}>
         To update personal info, please reach out to our live support.

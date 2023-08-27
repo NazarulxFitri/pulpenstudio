@@ -25,11 +25,12 @@ const Popup: React.FC<PopupProps> = ({
         sx={{
           background: "rgba(0,0,0,0.8)",
           position: "absolute",
-          mt: -2,
+          mt: -5,
           width: "100vw",
-          height: "100vh",
+          height: { xs: "100%", md: "100vh" },
           left: "0",
           top: "0",
+          pb: { xs: "104px", md: "24px" },
         }}
       />
       <Box

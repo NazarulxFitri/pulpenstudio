@@ -40,10 +40,9 @@ const EInvite = () => {
 
   if (!auth)
     return (
-      <BoxContainer>
-        <RibbonBanner message="Please login first to access this feature" />
+      <Box sx={{ minHeight: "76vh" }}>
         <Login />
-      </BoxContainer>
+      </Box>
     );
 
   return <EInviteModule />;
