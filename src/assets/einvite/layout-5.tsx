@@ -1,5 +1,8 @@
 import { Box, Container, Grid, List, Paper, styled } from "@mui/material";
 import {
+  Ballet,
+  Dancing_Script,
+  Great_Vibes,
   Playfair_Display,
   Poiret_One,
   Tangerine,
@@ -15,12 +18,16 @@ import { CommentList } from "@/components";
 import Image from "next/image";
 
 const tangerine = Tangerine({ subsets: ["latin"], weight: "400" });
-const poiretOne = Poiret_One({ subsets: ["latin"], weight: "400" });
+const dancingScript = Dancing_Script({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+});
 const ubuntu = Ubuntu({ subsets: ["latin"], weight: "700" });
 const playfair = Playfair_Display({
   subsets: ["latin"],
   weight: ["400", "500", "700"],
 });
+const greatVibes = Great_Vibes({ subsets: ["latin"], weight: "400" });
 
 interface DateTimeConfig {
   countdownTimer: {
@@ -32,7 +39,7 @@ interface DateTimeConfig {
 }
 
 const Title = styled("h1")(() => ({
-  fontFamily: `${tangerine.style.fontFamily} !important` || "auto",
+  fontFamily: `${dancingScript.style.fontFamily} !important` || "auto",
   textAlign: "center",
 }));
 
@@ -43,14 +50,14 @@ const SubTitle = styled("p")(() => ({
 }));
 
 const Text = styled("p")(() => ({
-  fontFamily: `${poiretOne.style.fontFamily} !important` || "auto",
+  fontFamily: `${dancingScript.style.fontFamily} !important` || "auto",
   fontSize: "16px",
   textAlign: "center",
 }));
 
 const MiniText = styled("p")(() => ({
   fontFamily: `${playfair.style.fontFamily} !important` || "auto",
-  fontSize: "16px",
+  fontSize: "12px",
   textAlign: "center",
 }));
 
@@ -66,7 +73,7 @@ const TimeBox = styled(Box)(() => ({
   textAlign: "center",
 }));
 
-const Layout3: React.FC = () => {
+const Layout5: React.FC = () => {
   const router = useRouter();
   const eInviteId = router.query.eInviteId;
   const [countdownTimer, setCountdownTimer] = useState<DateTimeConfig>();
@@ -88,6 +95,28 @@ const Layout3: React.FC = () => {
     hour12: true,
   });
 
+  const dayRaw = dateJs.getDay();
+  const daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  const dayText = daysOfWeek[dayRaw];
+  const monthRaw = dateJs.getMonth();
+  const monthsList = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "June",
+    "July",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+  const monthText = monthsList[monthRaw];
+  const dateText = dateJs.getDate();
+  const yearText = dateJs.getFullYear();
+
   const currentDate = new Date().getTime();
   const selectedDate = dateJs.getTime();
   const isCounting = currentDate < selectedDate;
@@ -107,7 +136,8 @@ const Layout3: React.FC = () => {
     <Box
       maxWidth="400px"
       sx={{
-        boxShadow: "0px -10px 10px #7c1d64",
+        background: "#fcf5f3",
+        boxShadow: "0px -10px 10px #fcf5f3",
         m: "auto",
         position: "relative",
         overflow: "hidden",
@@ -130,97 +160,102 @@ const Layout3: React.FC = () => {
           borderBottom: "1px solid #EFEFEF",
           position: "relative",
           height: "100vh",
+          overflow: "hidden",
         }}
       >
-        <Box sx={{ position: "absolute", top: "0", left: "-20px" }}>
-          <Image
-            src="/media/animation/layout3-art.png"
-            alt="layout3-art"
-            width={200}
-            height={400}
-          />
-        </Box>
         <Box
-          sx={{
-            position: "absolute",
-            bottom: "0",
-            right: "0",
-            transform: "rotate(180deg)",
-            zIndex: "-1",
-          }}
+          sx={{ color: "#5a0819", padding: "344px 16px", position: "relative" }}
         >
-          <Image
-            src="/media/animation/layout3-art-1.png"
-            alt="layout3-art"
-            width={400}
-            height={400}
-          />
-        </Box>
-        <Box
-          sx={{
-            borderTopLeftRadius: "100px",
-            borderBottomRightRadius: "100px",
-            p: "80px 0",
-            textAlign: "center",
-            wordBreak: "break-word",
-            width: "100%",
-          }}
-        >
-          <Text
-            sx={{
-              color: "#7c1d64",
-              letterSpacing: "0.5em",
-              mb: 5,
-              fontSize: "20px",
-            }}
-            dangerouslySetInnerHTML={{ __html: "WALIMATULURUS" }}
-          />
-          <Box sx={{ position: "relative" }}>
+          <Box sx={{ position: "absolute", top: "-56px", left: "-40px" }}>
             <Image
-              src="/media/animation/layout3-flowers.png"
-              alt="layout3-flowers"
+              src="/media/animation/layout5-flowers.png"
+              alt="layout3-art"
               width={400}
               height={400}
             />
+          </Box>
+          <Box sx={{ position: "absolute", bottom: "72px", right: "-96px" }}>
+            <Image
+              src="/media/animation/layout5-flowers-1.png"
+              alt="layout3-art"
+              width={400}
+              height={400}
+            />
+          </Box>
+          <Box sx={{ position: "absolute", bottom: "180px", left: "0" }}>
+            <Image
+              src="/media/animation/layout5-art.webp"
+              alt="layout3-art"
+              width={161}
+              height={297}
+            />
+          </Box>
+          <Box sx={{ position: "absolute", top: "200px", right: "48px" }}>
+            <Text
+              style={{ fontSize: "32px", fontWeight: "700" }}
+              dangerouslySetInnerHTML={{ __html: "The <br/>wedding <br/>of" }}
+            />
+          </Box>
+          <Box>
+            <MiniText
+              style={{ letterSpacing: "0.5em" }}
+              dangerouslySetInnerHTML={{ __html: "WALIMATULURUS" }}
+            />
+            <Title
+              style={{ marginTop: "24px", lineHeight: "0.75em" }}
+              dangerouslySetInnerHTML={{
+                __html: `<span style="margin-right: 24px;">${item?.title1Groom}</span> <br><span style="font-size: 20px">&</span><br> <spanstyle="margin-left: 24px;">${item?.title1Bride}</span>`,
+              }}
+            />
             <Box
               sx={{
-                background: "rgba(255,255,255,0.4)",
-                p: 3,
-                position: "absolute",
-                top: "50%",
-                left: "50%",
-                transform: "translate(-50%,-50%)",
-                width: "100%",
+                display: "flex",
+                justifyContent: "center",
+                mt: 3,
+                letterSpacing: "0.15em",
               }}
             >
-              <Title
-                sx={{
-                  fontSize: "48px",
-                  fontWeight: "lighter",
-                  lineHeight: "0.5em",
+              <MiniText
+                style={{
+                  fontSize: "16px",
+                  borderRight: "1px solid #5a0819",
+                  marginRight: "12px",
+                  paddingRight: "12px",
                 }}
+                dangerouslySetInnerHTML={{ __html: `${monthText}` }}
+              />
+              <MiniText
+                style={{ fontSize: "16px" }}
                 dangerouslySetInnerHTML={{
-                  __html: `<span style="margin-left: -016px">${item?.title1Groom}</span> <br/><span style="font-size: 20px">&</span><br/><span style="margin-right: -16px">${item?.title1Bride}</span>`,
+                  __html: `${dayText} <br> ${dateText}`,
                 }}
               />
+              <MiniText
+                style={{
+                  fontSize: "16px",
+                  borderLeft: "1px solid #5a0819",
+                  marginLeft: "12px",
+                  paddingLeft: "12px",
+                }}
+                dangerouslySetInnerHTML={{ __html: `${yearText}` }}
+              />
             </Box>
+            <MiniText
+              style={{
+                fontSize: "12px",
+              }}
+              dangerouslySetInnerHTML={{ __html: item?.location }}
+            />
+            <MiniText
+              style={{
+                fontSize: "12px",
+                marginTop: "24px",
+              }}
+              dangerouslySetInnerHTML={{
+                __html: `#${item?.title1Groom}${item?.title1Bride}`,
+              }}
+            />
           </Box>
-          <MiniText
-            sx={{
-              color: "#7c1d64",
-              fontWeight: "700",
-              letterSpacing: "0.25em",
-              textTransform: "uppercase",
-            }}
-            dangerouslySetInnerHTML={{ __html: fullDate }}
-          />
-          <Text
-            sx={{
-              color: "#7c1d64",
-              fontWeight: "bolder",
-            }}
-            dangerouslySetInnerHTML={{ __html: item?.location }}
-          />
         </Box>
       </Box>
       <Container>
@@ -384,7 +419,7 @@ const Layout3: React.FC = () => {
                     <CommentList
                       {...{ comment, idx }}
                       key={idx}
-                      bgColor="#7c1d64"
+                      bgColor="#5a0819"
                       textColor="#FFF"
                     />
                   ))}
@@ -396,8 +431,8 @@ const Layout3: React.FC = () => {
       </Container>
       <Box>
         <Widget
-          iconColor="#FFF"
-          color="#7c1d64"
+          iconColor="#333"
+          color="#fbecec"
           location={{ text: item?.location, mapUrl: item?.mapUrl }}
           contact={{
             number1: item?.phonePerson1,
@@ -411,4 +446,4 @@ const Layout3: React.FC = () => {
   );
 };
 
-export default Layout3;
+export default Layout5;

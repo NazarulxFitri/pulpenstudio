@@ -78,4 +78,24 @@ export const layoutConfig = [
       "Include / Exclude suitable helper widgets - Money Gift, RSVP, Contact Number, Google Map Location",
     ],
   },
+  {
+    layoutid: "005",
+    name: "Flourish Gloom",
+    category: "Wedding",
+    originalPrice: "RM60.00",
+    discountedPrice: "RM50.00",
+    images: [
+      "/media/cardSelection/card-5/main.png",
+      "/media/cardSelection/card-5/main.png",
+      "/media/cardSelection/card-5/main.png",
+    ],
+    font: ["Dancing Script", "Playfair", "Poiret One"],
+    description:
+      "Mixture of soft and dark color creates a harmony scenery that will surely make your guest feels calm.",
+
+    features: [
+      "Choose your desired music from Youtube !",
+      "Include / Exclude suitable helper widgets - Money Gift, RSVP, Contact Number, Google Map Location",
+    ],
+  },
 ];

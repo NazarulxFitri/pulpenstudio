@@ -311,6 +311,7 @@ const Layout1: React.FC = () => {
             <Grid item py={2} xs={12}>
               <Paper
                 sx={{
+                  background: "transparent",
                   boxShadow: "unset",
                   maxHeight: "400px",
                   overflow: "scroll",
