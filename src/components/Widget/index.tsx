@@ -6,8 +6,10 @@ import CommentPopup from "./CommentPopup";
 import { useState } from "react";
 import LocationPopup from "./LocationPopup";
 import ContactPopup from "./ContactPopup";
+import { locale } from "@/utils/Locale";
 
 interface WidgetProps {
+  language: string;
   iconColor?: string;
   color: string;
   location: {
@@ -23,6 +25,7 @@ interface WidgetProps {
 }
 
 const Widget: React.FC<WidgetProps> = ({
+  language,
   iconColor,
   color,
   location,
@@ -70,8 +73,9 @@ const Widget: React.FC<WidgetProps> = ({
     >
       {commentPopup && (
         <CommentPopup
-          title="Ucapan"
+          title={locale?.[language!]?.WIDGET_WISH_TITLE!}
           {...{
+            language,
             color,
             setCommentPopup,
             setLocationPopup,
@@ -81,7 +85,7 @@ const Widget: React.FC<WidgetProps> = ({
       )}
       {locationPopup && (
         <LocationPopup
-          title="Lokasi"
+          title={locale?.[language!]?.WIDGET_LOCATION_TITLE!}
           {...{
             color,
             location,
@@ -93,7 +97,7 @@ const Widget: React.FC<WidgetProps> = ({
       )}
       {contactPopup && (
         <ContactPopup
-          title="Hubungi kami"
+          title={locale?.[language!]?.WIDGET_CONTACTUS_TITLE!}
           {...{
             color,
             contact,

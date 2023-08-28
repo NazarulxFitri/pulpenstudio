@@ -1,8 +1,10 @@
 import CommentForm from "@/components/Forms/CommentForm";
 import CloseIcon from "@/components/Icons/CloseIcon";
+import { locale } from "@/utils/Locale";
 import { Box } from "@mui/material";
 
 interface CommentPopupProps {
+  language: string;
   title: string;
   color: string;
   setCommentPopup: (value: boolean) => void;
@@ -11,6 +13,7 @@ interface CommentPopupProps {
 }
 
 const CommentPopup: React.FC<CommentPopupProps> = ({
+  language,
   title,
   color,
   setCommentPopup,
@@ -53,9 +56,9 @@ const CommentPopup: React.FC<CommentPopupProps> = ({
         </Box>
         <Box sx={{ display: "flex", textAlign: "left", p: "0 16px" }}>
           <CommentForm
-            textName="Nama"
-            textComment="Tulis ucapan di sini"
-            textButton="Hantar"
+            textName={locale?.[language]?.WIDGET_WISH_PLACEHOLDER_FIRST}
+            textComment={locale?.[language]?.WIDGET_WISH_PLACEHOLDER_SECOND}
+            textButton={locale?.[language]?.WIDGET_WISH_BUTTON}
             themeColor={color}
           />
         </Box>

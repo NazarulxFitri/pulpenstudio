@@ -3,13 +3,31 @@ import { useEffect, useRef, useState } from "react";
 import db from "../../services/firebaseApp";
 
 export interface EInviteConfig {
-  data?: any;
+  data?: {
+    dateTime: string;
+    itemName: string;
+    language: string;
+    location: string;
+    mapUrl: string;
+    musicUrl: string;
+    namePerson1: string;
+    namePerson2: string;
+    phonePerson1: string;
+    phonePerson2: string;
+    title1Bride: string;
+    title1Groom: string;
+    title2: string;
+  };
   layout: string;
   name: string;
   flag: "new" | "updated";
   paid: boolean;
   userId: string;
   createdAt: string;
+  comments?: {
+    message: string;
+    name: string;
+  }[];
 }
 
 export default function useGetEinvite(id?: string) {
@@ -39,10 +57,8 @@ export default function useGetEinvite(id?: string) {
     return { data, isLoading };
   } else {
     const rawData = snapshot.current;
-    const data: EInviteConfig | undefined = rawData?.[id];
-    // @ts-ignores
+    const data: EInviteConfig = rawData?.[id]!;
     const commentsLength = data?.comments?.length || 0;
-    // @ts-ignores
     const layout = data?.layout;
 
     return { data, layout, commentsLength, isLoading };

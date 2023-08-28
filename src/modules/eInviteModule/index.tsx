@@ -1,37 +1,32 @@
 import { useRouter } from "next/router";
 import { DateTimePicker } from "@mui/x-date-pickers";
 import { useState } from "react";
-import {
-  BoxContainer,
-  CardSelection,
-  ErrorMessage,
-  ListNumber,
-  Popup,
-} from "@/components";
+import { BoxContainer, ErrorMessage, ListNumber, Popup } from "@/components";
 import Button from "@/components/Button";
 import usePostAddEinvite from "@/data/postAddEinvite";
 import useCheckWhiteSpace from "@/utils/useCheckWhiteSpace";
 import useCheckCapitalCase from "@/utils/useCheckCapitalCase";
-import { Box, Grid, TextField } from "@mui/material";
+import {
+  Box,
+  FormControl,
+  Grid,
+  InputLabel,
+  MenuItem,
+  Select,
+  TextField,
+} from "@mui/material";
 import useGetEinvite from "@/data/useGetEinvite";
 import useCheckExistence from "@/utils/useCheckExistence";
 import BreadcrumbModule from "../BreadcrumbModule";
 
-const cardData = [
-  {
-    name: "light-pink",
-    id: "001",
-    src: "/media/cardSelection/light-pink.png",
-  },
-];
-
 const EInviteModule = () => {
   const router = useRouter();
   const { layoutid } = router.query;
-
   const currDate = new Date();
 
   const [itemName, setName] = useState<string>("");
+  const [language, setLanguage] = useState<string>("bm");
+
   const [title1Groom, setTitle1Groom] = useState<string>("");
   const [title1Bride, setTitle1Bride] = useState<string>("");
   const [title2, setTitle2] = useState<string>("");
@@ -73,6 +68,7 @@ const EInviteModule = () => {
     await action(
       {
         itemName,
+        language,
         title1Groom,
         title1Bride,
         title2,
@@ -110,7 +106,7 @@ const EInviteModule = () => {
       <Box>
         <Box display="flex" mt={3}>
           <ListNumber circle={true} number={1} />
-          <h4>Create card name (url)</h4>
+          <h4>Card Configuration</h4>
         </Box>
         <Box mt={1}>
           <TextField
@@ -129,6 +125,25 @@ const EInviteModule = () => {
           {!!existence && (
             <ErrorMessage message="Please try a different name. This name has been used" />
           )}
+        </Box>
+        <Box>
+          <FormControl
+            sx={{
+              width: { xs: "100%", md: "20%" },
+              mt: 4,
+            }}
+          >
+            <InputLabel>Choose language</InputLabel>
+            <Select
+              defaultValue={"bm"}
+              onChange={(e) => setLanguage(e.target.value)}
+            >
+              <MenuItem defaultChecked value={"bm"}>
+                Bahasa Melayu
+              </MenuItem>
+              <MenuItem value={"en"}>Bahasa Inggeris</MenuItem>
+            </Select>
+          </FormControl>
         </Box>
       </Box>
       <Grid container spacing={4} flexDirection={{ xs: "column", md: "row" }}>
