@@ -35,7 +35,7 @@ const CommentForm: React.FC<CommentFormProps> = ({
       setErrorMessage(true);
       return null;
     }
-    await action(name, message, commentsLength);
+    await action(name, message, commentsLength!);
     router.reload();
   }
 

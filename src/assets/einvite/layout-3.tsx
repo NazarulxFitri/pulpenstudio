@@ -13,6 +13,7 @@ import Widget from "@/components/Widget";
 import ReactPlayer from "react-player";
 import { CommentList } from "@/components";
 import Image from "next/image";
+import { locale } from "@/utils/Locale";
 
 const tangerine = Tangerine({ subsets: ["latin"], weight: "400" });
 const poiretOne = Poiret_One({ subsets: ["latin"], weight: "400" });
@@ -71,12 +72,10 @@ const Layout3: React.FC = () => {
   const eInviteId = router.query.eInviteId;
   const [countdownTimer, setCountdownTimer] = useState<DateTimeConfig>();
   const { data } = useGetEinvite(eInviteId as string);
-  // @ts-ignore
   const item = data?.data;
-  // @ts-ignore
   const listComments = data?.comments;
   const musicUrl = item?.musicUrl;
-  const dateJs = new Date(item?.dateTime);
+  const dateJs = new Date(item?.dateTime!);
   const fullDate = dateJs?.toLocaleString("ms-MY", {
     day: "numeric",
     month: "long",
@@ -173,7 +172,9 @@ const Layout3: React.FC = () => {
               mb: 5,
               fontSize: "20px",
             }}
-            dangerouslySetInnerHTML={{ __html: "WALIMATULURUS" }}
+            dangerouslySetInnerHTML={{
+              __html: locale?.[item?.language!]?.INTRO_FIRST,
+            }}
           />
           <Box sx={{ position: "relative" }}>
             <Image
@@ -219,7 +220,7 @@ const Layout3: React.FC = () => {
               color: "#7c1d64",
               fontWeight: "bolder",
             }}
-            dangerouslySetInnerHTML={{ __html: item?.location }}
+            dangerouslySetInnerHTML={{ __html: item?.location! }}
           />
         </Box>
       </Box>
@@ -234,20 +235,19 @@ const Layout3: React.FC = () => {
           <MiniText
             sx={{ mb: 3 }}
             dangerouslySetInnerHTML={{
-              __html: "Assalamualaikum w.b.t & Salam Sejahtera",
+              __html: locale?.[item?.language!]?.CARD_INTRO,
             }}
           />
           <UbuntuText
             sx={{ fontWeight: "bolder", mb: 3 }}
             dangerouslySetInnerHTML={{
-              __html: item?.title2,
+              __html: item?.title2!,
             }}
           />
           <MiniText
             sx={{ mb: 3 }}
             dangerouslySetInnerHTML={{
-              __html:
-                "Dengan segala hormatnya kami menjemput Dato | Datin | Tuan | Puan | Encik | Cik hadir ke majlis perkahwinan anakanda kami",
+              __html: locale?.[item?.language!]?.CARD_TEXT,
             }}
           />
           <UbuntuText
@@ -273,23 +273,29 @@ const Layout3: React.FC = () => {
           <Box sx={{ mx: 2 }}>
             <UbuntuText
               dangerouslySetInnerHTML={{
-                __html: "Aturcara majlis",
+                __html: locale?.[item?.language!]?.CARD_TITLE_FIRST,
               }}
             />
             <Box mt={2} sx={{ textAlign: "center" }}>
               <MiniText
                 dangerouslySetInnerHTML={{
-                  __html: `Tarikh : ${fullDate} `,
+                  __html: `${
+                    locale?.[item?.language!]?.CARD_SUBTITLE_FIRST
+                  } : ${fullDate} `,
                 }}
               />
               <MiniText
                 dangerouslySetInnerHTML={{
-                  __html: `Lokasi : ${item?.location} `,
+                  __html: `${locale?.[item?.language!]?.CARD_SUBTITLE_TWO} : ${
+                    item?.location
+                  } `,
                 }}
               />
               <MiniText
                 dangerouslySetInnerHTML={{
-                  __html: `Jamuan makan : ${timeStart} `,
+                  __html: `${
+                    locale?.[item?.language!]?.CARD_SUBTITLE_THREE
+                  } : ${timeStart} `,
                 }}
               />
             </Box>
@@ -303,7 +309,9 @@ const Layout3: React.FC = () => {
           }}
         >
           <UbuntuText
-            dangerouslySetInnerHTML={{ __html: "Menghitung Hari" }}
+            dangerouslySetInnerHTML={{
+              __html: locale?.[item?.language!]?.CARD_COUNTDOWN_TITLE,
+            }}
             sx={{ pb: 2 }}
           />
           {!isCounting ? (
@@ -315,7 +323,11 @@ const Layout3: React.FC = () => {
                 width: "fit-content",
               }}
             >
-              <SubTitle>Harinya sudah tiba !</SubTitle>
+              <SubTitle
+                dangerouslySetInnerHTML={{
+                  __html: locale?.[item?.language!]?.CARD_COUNTDOWN_FINISH_TEXT,
+                }}
+              />
             </Box>
           ) : (
             <Box
@@ -330,22 +342,22 @@ const Layout3: React.FC = () => {
               <TimeBox>
                 {countdownTimer?.countdownTimer.d}
                 <br />
-                hari
+                {locale?.[item?.language!]?.COUNTDOWN_DAYS}
               </TimeBox>
               <TimeBox>
                 {countdownTimer?.countdownTimer.h}
                 <br />
-                jam
+                {locale?.[item?.language!]?.COUNTDOWN_HOUR}
               </TimeBox>
               <TimeBox>
                 {countdownTimer?.countdownTimer.m}
                 <br />
-                minit
+                {locale?.[item?.language!]?.COUNTDOWN_MINUTE}
               </TimeBox>
               <TimeBox>
                 {countdownTimer?.countdownTimer.s}
                 <br />
-                saat
+                {locale?.[item?.language!]?.COUNTDOWN_SECOND}
               </TimeBox>
             </Box>
           )}
@@ -359,7 +371,9 @@ const Layout3: React.FC = () => {
           }}
         >
           <UbuntuText
-            dangerouslySetInnerHTML={{ __html: "Ucapan" }}
+            dangerouslySetInnerHTML={{
+              __html: locale?.[item?.language!]?.CARD_WISH_TITLE,
+            }}
             sx={{ pb: 2 }}
           />
           <MiniText
@@ -396,14 +410,15 @@ const Layout3: React.FC = () => {
       </Container>
       <Box>
         <Widget
+          language={item?.language!}
           iconColor="#FFF"
           color="#7c1d64"
-          location={{ text: item?.location, mapUrl: item?.mapUrl }}
+          location={{ text: item?.location!, mapUrl: item?.mapUrl! }}
           contact={{
-            number1: item?.phonePerson1,
-            number2: item?.phonePerson2,
-            name1: item?.namePerson1,
-            name2: item?.namePerson2,
+            number1: item?.phonePerson1!,
+            number2: item?.phonePerson2!,
+            name1: item?.namePerson1!,
+            name2: item?.namePerson2!,
           }}
         />
       </Box>
