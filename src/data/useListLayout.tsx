@@ -1,4 +1,4 @@
-import { Layout1, Layout2, Layout3, Layout4, Layout5 } from "@/assets";
+import { Layout1, Layout2, Layout3, Layout4, Layout5, Layout6 } from "@/assets";
 
 export default function useListLayout() {
   const listLayout = {
@@ -7,6 +7,7 @@ export default function useListLayout() {
     "003": <Layout3 />,
     "004": <Layout4 />,
     "005": <Layout5 />,
+    "006": <Layout6 />,
   };
 
   return listLayout;

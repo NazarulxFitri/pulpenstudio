@@ -98,4 +98,24 @@ export const layoutConfig = [
       "Include / Exclude suitable helper widgets - Money Gift, RSVP, Contact Number, Google Map Location",
     ],
   },
+  {
+    layoutid: "006",
+    name: "Sky Ambience Breath",
+    category: "Wedding",
+    originalPrice: "RM60.00",
+    discountedPrice: "RM50.00",
+    images: [
+      "/media/cardSelection/card-6/main.png",
+      "/media/cardSelection/card-6/main.png",
+      "/media/cardSelection/card-6/main.png",
+    ],
+    font: ["Allura", "Playfair", "Tangerine"],
+    description:
+      "Combination of light green and soft brown surely will provide you with great deep breathing look",
+
+    features: [
+      "Choose your desired music from Youtube !",
+      "Include / Exclude suitable helper widgets - Money Gift, RSVP, Contact Number, Google Map Location",
+    ],
+  },
 ];
