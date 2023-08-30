@@ -1,33 +1,28 @@
 import { useRouter } from "next/router";
-import { DateTimePicker } from "@mui/x-date-pickers";
 import { useState } from "react";
-import { BoxContainer, ErrorMessage, ListNumber, Popup } from "@/components";
-import Button from "@/components/Button";
+import { BoxContainer, Popup, TickIcon } from "@/components";
 import usePostAddEinvite from "@/data/postAddEinvite";
 import useCheckWhiteSpace from "@/utils/useCheckWhiteSpace";
 import useCheckCapitalCase from "@/utils/useCheckCapitalCase";
-import {
-  Box,
-  FormControl,
-  Grid,
-  InputLabel,
-  MenuItem,
-  Select,
-  TextField,
-} from "@mui/material";
+import { Box } from "@mui/material";
 import useGetEinvite from "@/data/useGetEinvite";
 import useCheckExistence from "@/utils/useCheckExistence";
 import BreadcrumbModule from "../BreadcrumbModule";
+import FirstStep from "./FirstStep";
+import SecondStep from "./SecondStep";
+import ThirdStep from "./ThirdStep";
 
 const EInviteModule = () => {
   const router = useRouter();
   const { layoutid } = router.query;
   const currDate = new Date();
+  const [curTab, setCurTab] = useState<number>(0);
 
   const [itemName, setName] = useState<string>("");
   const [language, setLanguage] = useState<string>("bm");
 
   const [title1Groom, setTitle1Groom] = useState<string>("");
+  console.log("xxx title1", title1Groom);
   const [title1Bride, setTitle1Bride] = useState<string>("");
   const [title2, setTitle2] = useState<string>("");
   const [location, setLocation] = useState<string>("");
@@ -63,7 +58,7 @@ const EInviteModule = () => {
   const disabled =
     !!whiteSpace || !!capitalCase || !layoutid || !!existence || !!emptyField;
 
-  async function handleClickButton() {
+  async function handleSubmit() {
     if (disabled) return null;
     await action(
       {
@@ -100,164 +95,142 @@ const EInviteModule = () => {
           level="two"
         />
       </Box>
-      <p style={{ marginTop: "24px" }}>
-        Let&apos;s start create your e-Invite. Choose your selections below !
-      </p>
-      <Box>
-        <Box display="flex" mt={3}>
-          <ListNumber circle={true} number={1} />
-          <h4>Card Configuration</h4>
-        </Box>
-        <Box mt={1}>
-          <TextField
-            sx={{ width: { xs: "100%", md: "20%" } }}
-            id="standard-basic"
-            label="eg. kahwin-luwixmini , majlis-berbuka-puasa"
-            variant="standard"
-            onChange={(e) => setName(e.target.value)}
-          />
-          {!!whiteSpace && (
-            <ErrorMessage message="Please make sure no whitespace" />
-          )}
-          {!!capitalCase && (
-            <ErrorMessage message="Please make sure no capital case" />
-          )}
-          {!!existence && (
-            <ErrorMessage message="Please try a different name. This name has been used" />
-          )}
-        </Box>
-        <Box>
-          <FormControl
-            sx={{
-              width: { xs: "100%", md: "20%" },
-              mt: 4,
-            }}
-          >
-            <InputLabel>Choose language</InputLabel>
-            <Select
-              defaultValue={"bm"}
-              onChange={(e) => setLanguage(e.target.value)}
-            >
-              <MenuItem defaultChecked value={"bm"}>
-                Bahasa Melayu
-              </MenuItem>
-              <MenuItem value={"en"}>Bahasa Inggeris</MenuItem>
-            </Select>
-          </FormControl>
-        </Box>
-      </Box>
-      <Grid container spacing={4} flexDirection={{ xs: "column", md: "row" }}>
-        <Grid item xs={12} md={6}>
-          <Box display="flex" mt={4}>
-            <ListNumber circle={true} number={2} />
-            <h4>Card content</h4>
-          </Box>
-          <Box mt={2} gap={2} sx={{ display: "flex", flexDirection: "column" }}>
-            <TextField
-              id="standard-basic"
-              placeholder="Judika"
-              label="Title : Nama pengantin Lelaki"
-              variant="standard"
-              sx={{ width: { xs: "100%", md: "50%" } }}
-              onChange={(e) => setTitle1Groom(e.currentTarget.value)}
-            />
-            <TextField
-              id="standard-basic"
-              placeholder="Mahalini"
-              label="Title : Nama pengantin Perempuan"
-              variant="standard"
-              sx={{ width: { xs: "100%", md: "50%" } }}
-              onChange={(e) => setTitle1Bride(e.currentTarget.value)}
-            />
-            <TextField
-              id="standard-basic"
-              placeholder="Leo Messi & Angelia serta Paul Robert & Marissa"
-              label="Nama wakil penganjur"
-              variant="standard"
-              sx={{ width: { xs: "100%", md: "50%" } }}
-              onChange={(e) => setTitle2(e.currentTarget.value)}
-            />
-            <TextField
-              id="standard-basic"
-              placeholder="Glass Hall, Forest Valley, Cheras"
-              label="Lokasi"
-              variant="standard"
-              sx={{ width: { xs: "100%", md: "50%" } }}
-              onChange={(e) => setLocation(e.currentTarget.value)}
-            />
-            <DateTimePicker
-              sx={{ m: "16px 0", width: "50%" }}
-              label="Tarikh & Masa"
-              // @ts-ignore
-              onChange={(e) => setDateTime(e.$d.toString())}
-            />
-          </Box>
-        </Grid>
-
-        <Grid item xs={12} md={6}>
-          <Box display="flex" mt={4}>
-            <ListNumber circle={true} number={3} />
-            <h4>Widget configuration</h4>
-          </Box>
-          <Box mt={2} gap={2} sx={{ display: "flex", flexDirection: "column" }}>
-            <TextField
-              id="standard-basic"
-              placeholder="Zack"
-              label="Nama orang untuk dihubungi 1"
-              variant="standard"
-              sx={{ width: { xs: "100%", md: "50%" } }}
-              onChange={(e) => setNamePerson1(e.currentTarget.value)}
-            />
-            <TextField
-              id="standard-basic"
-              placeholder="01156271776"
-              label="Nombor orang untuk dihubungi telefon 1"
-              variant="standard"
-              sx={{ width: { xs: "100%", md: "50%" } }}
-              onChange={(e) => setPhonePerson1(e.currentTarget.value)}
-            />
-            <TextField
-              id="standard-basic"
-              placeholder="Wendy"
-              label="Nama orang untuk dihubungi 2"
-              variant="standard"
-              sx={{ width: { xs: "100%", md: "50%" } }}
-              onChange={(e) => setNamePerson2(e.currentTarget.value)}
-            />
-            <TextField
-              id="standard-basic"
-              placeholder="01156271776"
-              label="Nombor orang untuk dihubungi telefon 2"
-              variant="standard"
-              sx={{ width: { xs: "100%", md: "50%" } }}
-              onChange={(e) => setPhonePerson2(e.currentTarget.value)}
-            />
-            <TextField
-              id="standard-basic"
-              placeholder="https://www.google.com/maps/dir//glasshall+forest+valley/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x31cc358ea1ca26ff:0xed9060ff23e7def2?sa=X&ved=2ahUKEwi7nsWm3cyAAxU_wTgGHUmXCJEQ9Rd6BAhOEAA&ved=2ahUKEwi7nsWm3cyAAxU_wTgGHUmXCJEQ9Rd6BAhWEAQ"
-              label="Google Map URL"
-              variant="standard"
-              sx={{ width: { xs: "100%", md: "50%" } }}
-              onChange={(e) => setMapUrl(e.currentTarget.value)}
-            />
-            <TextField
-              id="standard-basic"
-              placeholder="https://www.google.com/maps/dir//glasshall+forest+valley/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x31cc358ea1ca26ff:0xed9060ff23e7def2?sa=X&ved=2ahUKEwi7nsWm3cyAAxU_wTgGHUmXCJEQ9Rd6BAhOEAA&ved=2ahUKEwi7nsWm3cyAAxU_wTgGHUmXCJEQ9Rd6BAhWEAQ"
-              label="Pilihan lagu (youtube)"
-              variant="standard"
-              sx={{ width: { xs: "100%", md: "50%" } }}
-              onChange={(e) => setMusicUrl(e.currentTarget.value)}
-            />
-          </Box>
-        </Grid>
-      </Grid>
 
       <Box
-        onClick={handleClickButton}
-        sx={{ m: "64px auto", width: "fit-content" }}
+        sx={{
+          display: { xs: "block", md: "flex" },
+          my: 6,
+          justifyContent: "center",
+        }}
       >
-        <Button disabled={disabled}>Proceed</Button>
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: { xs: "center", md: "unset" },
+          }}
+        >
+          <Box mr={1}>
+            {curTab > 0 ? (
+              <TickIcon color={curTab < 1 ? "#A9A9A9" : "unset"} />
+            ) : (
+              ""
+            )}
+          </Box>
+          <p
+            style={{
+              color: curTab < 1 ? "#A9A9A9" : "unset",
+              fontWeight: curTab < 1 ? "300" : "700",
+              padding: "0 8px 0 0",
+            }}
+            dangerouslySetInnerHTML={{ __html: "General" }}
+          />
+          <Box
+            display={{ xs: "none", md: "block" }}
+            sx={{
+              background: curTab > 0 ? "#000000" : "#A9A9A9",
+              width: "100px",
+              height: "2px",
+              m: "auto",
+            }}
+          />
+        </Box>
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: { xs: "center", md: "unset" },
+            mt: { xs: 1, md: "unset" },
+          }}
+        >
+          <Box mx={1}>
+            {curTab > 1 ? (
+              <TickIcon color={curTab < 2 ? "#A9A9A9" : "unset"} />
+            ) : (
+              ""
+            )}
+          </Box>
+          <p
+            style={{
+              color: curTab < 2 ? "#A9A9A9" : "unset",
+              fontWeight: curTab < 2 ? "300" : "700",
+              padding: "0 8px 0 0",
+            }}
+            dangerouslySetInnerHTML={{ __html: "Event Details" }}
+          />
+          <Box
+            display={{ xs: "none", md: "block" }}
+            sx={{
+              background: curTab > 1 ? "#000000" : "#A9A9A9",
+              width: "100px",
+              height: "2px",
+              m: "auto",
+            }}
+          />
+        </Box>
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: { xs: "center", md: "unset" },
+            mt: { xs: 1, md: "unset" },
+          }}
+        >
+          <Box mx={1}>
+            {curTab > 2 ? (
+              <TickIcon color={curTab < 3 ? "#A9A9A9" : "unset"} />
+            ) : (
+              ""
+            )}
+          </Box>
+          <p
+            style={{
+              color: curTab < 3 ? "#A9A9A9" : "unset",
+              fontWeight: curTab < 3 ? "300" : "700",
+              padding: "0 8px 0 0",
+            }}
+            dangerouslySetInnerHTML={{ __html: "Content" }}
+          />
+        </Box>
       </Box>
+
+      {curTab === 0 ? (
+        <FirstStep
+          {...{
+            whiteSpace,
+            capitalCase,
+            existence,
+            setName,
+            setLanguage,
+            curTab,
+            setCurTab,
+          }}
+        />
+      ) : curTab === 1 ? (
+        <SecondStep
+          {...{
+            setTitle1Groom,
+            setTitle1Bride,
+            setTitle2,
+            setLocation,
+            setDateTime,
+            curTab,
+            setCurTab,
+          }}
+        />
+      ) : curTab === 2 ? (
+        <ThirdStep
+          {...{
+            setNamePerson1,
+            setPhonePerson1,
+            setNamePerson2,
+            setPhonePerson2,
+            setMapUrl,
+            setMusicUrl,
+            curTab,
+            setCurTab,
+            handleSubmit,
+          }}
+        />
+      ) : null}
+
       {!!showPopup && (
         <Popup
           title="e-Invite"

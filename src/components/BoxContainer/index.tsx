@@ -14,7 +14,7 @@ const BoxContainer: React.FC<ContainerProps> = ({ children, fullWidth }) => {
         md: fullWidth ? 0 : 2,
         lg: fullWidth ? 0 : 6,
       }}
-      sx={{ my: 2, position: "relative" }}
+      sx={{ my: 2, position: "relative", minHeight: "100vh" }}
     >
       {children}
     </Box>
