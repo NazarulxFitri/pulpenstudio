@@ -27,10 +27,11 @@ const Popup: React.FC<PopupProps> = ({
           position: "absolute",
           mt: -5,
           width: "100vw",
-          height: { xs: "100%", md: "100vh" },
+          height: { xs: "100%", md: "100%" },
           left: "0",
           top: "0",
-          pb: { xs: "104px", md: "24px" },
+          ml: { xs: 0, md: -8 },
+          pb: { xs: "104px", md: "100px" },
         }}
       />
       <Box
@@ -58,12 +59,14 @@ const Popup: React.FC<PopupProps> = ({
           mt={4}
           mb={2}
           display="flex"
-          flexDirection={{ xs: "row", md: "column" }}
+          flexDirection={{ xs: "column", md: "row" }}
+          justifyContent={"center"}
+          rowGap={2}
         >
           <Link
             style={{
               background: "#eeece1",
-              borderRadius: "24px",
+              borderRadius: "8px",
               fontWeight: "700",
               textDecoration: "none",
               color: "#333",
@@ -76,8 +79,8 @@ const Popup: React.FC<PopupProps> = ({
           </Link>
           <Link
             style={{
-              borderRadius: "24px",
-              boxShadow: "1px 1px 10px #eeece1",
+              borderRadius: "8px",
+              border: "1px solid #eeece1",
               fontWeight: "700",
               textDecoration: "none",
               color: "#333",

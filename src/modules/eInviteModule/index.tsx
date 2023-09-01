@@ -2,11 +2,8 @@ import { useRouter } from "next/router";
 import { useState } from "react";
 import { BoxContainer, Popup, TickIcon } from "@/components";
 import usePostAddEinvite from "@/data/postAddEinvite";
-import useCheckWhiteSpace from "@/utils/useCheckWhiteSpace";
-import useCheckCapitalCase from "@/utils/useCheckCapitalCase";
 import { Box } from "@mui/material";
 import useGetEinvite from "@/data/useGetEinvite";
-import useCheckExistence from "@/utils/useCheckExistence";
 import BreadcrumbModule from "../BreadcrumbModule";
 import FirstStep from "./FirstStep";
 import SecondStep from "./SecondStep";
@@ -38,27 +35,7 @@ const EInviteModule = () => {
   const { action } = usePostAddEinvite(itemName, layoutid as string);
   const [showPopup, setShowPopup] = useState(false);
 
-  // @ts-ignore
-  const existence = useCheckExistence(data, itemName);
-  const whiteSpace = useCheckWhiteSpace(itemName);
-  const capitalCase = useCheckCapitalCase(itemName);
-  const emptyField =
-    !itemName ||
-    !title1Bride ||
-    !title1Groom ||
-    !title2 ||
-    !location ||
-    !dateTime ||
-    !namePerson1 ||
-    !namePerson2 ||
-    !phonePerson1 ||
-    !phonePerson2 ||
-    !mapUrl;
-  const disabled =
-    !!whiteSpace || !!capitalCase || !layoutid || !!existence || !!emptyField;
-
   async function handleSubmit() {
-    if (disabled) return null;
     await action(
       {
         itemName,
@@ -203,6 +180,11 @@ const EInviteModule = () => {
       ) : curTab === 1 ? (
         <SecondStep
           {...{
+            title1Groom,
+            title1Bride,
+            title2,
+            location,
+            dateTime,
             setTitle1Groom,
             setTitle1Bride,
             setTitle2,
@@ -215,6 +197,12 @@ const EInviteModule = () => {
       ) : curTab === 2 ? (
         <ThirdStep
           {...{
+            namePerson1,
+            namePerson2,
+            phonePerson1,
+            phonePerson2,
+            mapUrl,
+            musicUrl,
             setNamePerson1,
             setPhonePerson1,
             setNamePerson2,

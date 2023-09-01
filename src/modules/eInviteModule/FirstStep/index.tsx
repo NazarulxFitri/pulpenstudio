@@ -97,7 +97,13 @@ const FirstStep: React.FC<FirstStepProps> = ({
           </Box>
         </Grid>
         <Grid xs={12} md={8}>
-          <Box sx={{ display: "flex", overflow: "scroll" }}>
+          <Box
+            sx={{
+              display: "flex",
+              overflow: "scroll",
+              justifyContent: { xs: "left", md: "center" },
+            }}
+          >
             <Box>
               <p
                 style={{
@@ -136,7 +142,7 @@ const FirstStep: React.FC<FirstStepProps> = ({
         </Grid>
       </Grid>
       <Box
-        sx={{ width: "fit-content", mx: "auto", my: 2 }}
+        sx={{ width: "fit-content", mx: "auto", my: 1 }}
         onClick={() => {
           !disabled ? setCurTab(1) : null;
           setShowError(true);
