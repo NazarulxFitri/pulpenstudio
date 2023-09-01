@@ -55,7 +55,7 @@ const MyWork: React.FC<MyWorkProps> = ({ userAssets }) => {
                         target="__blank"
                         style={{
                           background: "#eeece1",
-                          borderRadius: "24px",
+                          borderRadius: "8px",
                           color: "unset",
                           textDecoration: "none",
                           padding: "4px 16px",

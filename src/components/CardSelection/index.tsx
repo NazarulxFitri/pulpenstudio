@@ -22,7 +22,7 @@ const CardSelection: React.FC<CardSelectionProps> = ({ card }) => {
     <Box
       onClick={handleClick}
       sx={{
-        borderRadius: "24px",
+        borderRadius: "8px",
         width: "fit-content",
         textAlign: "center",
       }}
@@ -33,7 +33,7 @@ const CardSelection: React.FC<CardSelectionProps> = ({ card }) => {
         height={500}
         width={300}
         style={{
-          borderRadius: "24px",
+          borderRadius: "8px",
           width: "fit-content",
         }}
       />

@@ -10,7 +10,7 @@ const Button: React.FC<ButtonProps> = ({ children, disabled }) => {
     <Box
       sx={{
         background: disabled ? "#EFEFEF" : "#eeece1",
-        borderRadius: "24px",
+        borderRadius: "8px",
         boxShadow: "1px 1px 10px #E0E0E0",
         color: "#FFF",
         cursor: disabled ? "unset" : "pointer",

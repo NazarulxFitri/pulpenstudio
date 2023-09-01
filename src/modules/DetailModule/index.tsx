@@ -3,7 +3,7 @@ import { layoutConfig } from "@/utils/LayoutConfig";
 import { Box, Grid } from "@mui/material";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import { Button1, CategoryText, Text } from "../CatalogueModule";
+import { Button2, CategoryText, Text } from "../CatalogueModule";
 import BreadcrumbModule from "../BreadcrumbModule";
 
 const DetailModule = ({}) => {
@@ -53,12 +53,12 @@ const DetailModule = ({}) => {
             </span>
           </Text>
           <Box my={6}>
-            <Button1
+            <Button2
               style={{ padding: "12px 16px" }}
               href={`/e-invite?layoutid=${selectedLayout?.layoutid}`}
             >
               Try now for free
-            </Button1>
+            </Button2>
           </Box>
           <p style={{ margin: "12px 0" }}>{selectedLayout?.description}</p>
           <p style={{ margin: "12px 0", fontWeight: "700" }}>Fonts used :</p>
@@ -78,7 +78,7 @@ const DetailModule = ({}) => {
           <Box
             sx={{
               background: "#eeece1",
-              borderRadius: "24px",
+              borderRadius: "8px",
               p: { xs: 2, md: 6 },
               my: 2,
             }}

@@ -71,7 +71,7 @@ const AccountModule = () => {
                     style={{
                       background: "#eeece1",
                       color: "#333",
-                      borderRadius: "24px",
+                      borderRadius: "8px",
                       fontWeight: "500",
                       fontSize: "12px",
                       padding: "4px 10px",

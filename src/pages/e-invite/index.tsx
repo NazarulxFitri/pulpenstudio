@@ -2,7 +2,8 @@ import { BoxContainer, RibbonBanner } from "@/components";
 import Login from "@/modules/Login";
 import EInviteModule from "@/modules/eInviteModule";
 import useCheckauth from "@/utils/useCheckAuth";
-import { Box, Typography } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
+import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
@@ -13,29 +14,66 @@ const EInvite = () => {
 
   if (!layout)
     return (
-      <Box m={{ xs: 4, md: 12 }} textAlign="center" minHeight="68vh">
-        <Typography
-          sx={{ fontSize: { xs: "16px", md: "24px" }, fontWeight: "700" }}
-        >
-          Please choose your design from our catalogue. Click below to visit our
-          catalogue
-        </Typography>
-        <Box mt={4}>
-          <Link
-            style={{
-              borderRadius: "24px",
-              color: "#333",
-              textDecoration: "none",
-              fontSize: "24px",
-              boxShadow: "1px 1px 10px #333",
-              padding: "4px 12px",
-            }}
-            href="/catalogue"
-          >
-            Catalogue
-          </Link>
-        </Box>
-      </Box>
+      <BoxContainer>
+        <Grid container mt={8}>
+          <Grid item xs={12} md={6}>
+            <p style={{ fontSize: "24px", fontWeight: "700" }}>
+              Oops, something is missing ...
+            </p>
+            <p
+              style={{
+                fontSize: "16px",
+                margin: "24px 0",
+                textAlign: "justify",
+                lineHeight: "1.25em",
+              }}
+            >
+              Good news, we know what is the missing part. Looks like you
+              reached here before selecting any design. Let us help you. Click
+              on below button to navigate to our catalogue. You can choose your
+              design there. See you there !
+            </p>
+            <Box
+              sx={{
+                background: "#eeece1",
+                borderRadius: "8px",
+                cursor: "pointer",
+                textAlign: "center",
+                mt: 3,
+                padding: "12px 0",
+                width: "100%",
+              }}
+            >
+              <Link
+                href="/catalogue"
+                style={{
+                  textDecoration: "none",
+                  color: "#333",
+                  fontWeight: "700",
+                }}
+              >
+                Go to Catalogue
+              </Link>
+            </Box>
+          </Grid>
+          <Grid item xs={12} md={6}>
+            <Box overflow="scroll" display="flex">
+              <Image
+                src="/media/cardSelection/card-3/main.png"
+                alt="card-3/main"
+                height={496}
+                width={288}
+              />
+              <Image
+                src="/media/cardSelection/card-3/2-image.png"
+                alt="card-3/main"
+                height={496}
+                width={288}
+              />
+            </Box>
+          </Grid>
+        </Grid>
+      </BoxContainer>
     );
 
   if (!auth)

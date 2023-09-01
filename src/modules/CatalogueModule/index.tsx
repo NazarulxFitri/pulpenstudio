@@ -20,29 +20,17 @@ export const CategoryText = styled("p")(() => ({
   margin: "8px 0",
   padding: "4px 12px",
   width: "fit-content",
-  borderRadius: "24px",
+  borderRadius: "8px",
 }));
 
-export const Button1 = styled(Link)(() => ({
-  border: "1px solid #eeece1",
-  borderRadius: "24px",
-  cursor: "pointer",
+export const Button2 = styled(Link)(() => ({
+  background: "#eeece1",
   color: "#333",
+  cursor: "pointer",
+  fontWeight: "500",
   textDecoration: "none",
-  fontWeight: "700",
   padding: "8px 24px",
   margin: "8px 0",
-  width: "fit-content",
-  "&:hover": {
-    background: "#eeece1",
-  },
-}));
-
-const Button2 = styled(Link)(() => ({
-  color: "#333",
-  cursor: "pointer",
-  fontWeight: "700",
-  textDecoration: "none",
 }));
 
 const CatalogueModule: React.FC<CatalogueModuleProps> = ({}) => {
@@ -61,7 +49,7 @@ const CatalogueModule: React.FC<CatalogueModuleProps> = ({}) => {
         />
       </Box>
       <Box mt={4}>
-        <Grid container rowGap={6}>
+        <Grid container rowGap={6} columnSpacing={2}>
           {listLayout?.map((item) => (
             <Grid item xs={6} md={4} lg={3} key={item.name}>
               <Box
@@ -93,8 +81,14 @@ const CatalogueModule: React.FC<CatalogueModuleProps> = ({}) => {
                 />
               </Box>
               <Box>
-                <CategoryText>{item.category}</CategoryText>
-                <Text sx={{ height: { xs: "40px", md: "unset" } }}>
+                <Text
+                  style={{
+                    textOverflow: "ellipsis",
+                    overflow: "hidden",
+                    maxHeight: "19.5px",
+                    whiteSpace: "nowrap",
+                  }}
+                >
                   {item.name}
                 </Text>
                 <Text>
@@ -104,21 +98,8 @@ const CatalogueModule: React.FC<CatalogueModuleProps> = ({}) => {
                   </span>
                 </Text>
               </Box>
-              <Box
-                display={"flex"}
-                justifyContent={{ xs: "center", md: "left" }}
-                flexDirection={{ xs: "column", md: "row" }}
-              >
-                <Button1 href={`/e-invite?layoutid=${item.layoutid}`}>
-                  Select
-                </Button1>
-                <Button2
-                  sx={{
-                    padding: { xs: "0", md: "8px 24px" },
-                    margin: { xs: "0 24px", md: "8px 0" },
-                  }}
-                  href={`/detail?layoutid=${item.layoutid}`}
-                >
+              <Box mt={3}>
+                <Button2 href={`/detail?layoutid=${item.layoutid}`}>
                   More Info
                 </Button2>
               </Box>

@@ -36,7 +36,7 @@ const CommentList: React.FC<CommentListProps> = ({
       mb={2}
       sx={{
         background: Number(idx) % 2 === 0 ? bgColor : "rgba(240,240,240, 0.4)",
-        borderRadius: "24px",
+        borderRadius: "8px",
         color: Number(idx) % 2 === 0 ? textColor : "#333",
         p: "16px 24px",
       }}

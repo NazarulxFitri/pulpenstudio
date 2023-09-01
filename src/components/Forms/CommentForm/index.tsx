@@ -81,7 +81,7 @@ const CommentForm: React.FC<CommentFormProps> = ({
           background: themeColor,
           boxShadow: "1px 1px solid #EFEFEF",
           width: "fit-content",
-          borderRadius: "24px",
+          borderRadius: "8px",
           mt: 2,
           cursor: "pointer",
         }}

@@ -31,7 +31,7 @@ const Popup: React.FC<PopupProps> = ({
           left: "0",
           top: "0",
           ml: { xs: 0, md: -8 },
-          pb: { xs: "104px", md: "100px" },
+          pb: "104px",
         }}
       />
       <Box

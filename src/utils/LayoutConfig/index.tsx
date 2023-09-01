@@ -7,7 +7,7 @@ export const layoutConfig = [
     discountedPrice: "RM50.00",
     images: [
       "/media/cardSelection/card-1/main.png",
-      "/media/cardSelection/card-1/main.png",
+      "/media/cardSelection/card-1/2-image.png",
     ],
     font: ["Poiret One", "Great Vibes", "Ubuntu"],
     description:

@@ -47,6 +47,8 @@ const Header = () => {
       px={{ xs: 1, md: 2, lg: 6 }}
       py={0.5}
       sx={{
+        backgroundImage:
+          "linear-gradient(to top, #eeece1, #f8efe9, #fcf4f4, #fcf9fb, #ffffff)",
         boxShadow: "1px 1px 10px #eeece1",
         textAlign: { xs: "center", md: "unset" },
       }}
@@ -85,7 +87,7 @@ const Header = () => {
                 style={{
                   background: "#eeece1",
                   color: "#333",
-                  borderRadius: "24px",
+                  borderRadius: "8px",
                   fontWeight: "500",
                   fontSize: "12px",
                   padding: "4px 10px",
@@ -104,7 +106,7 @@ const Header = () => {
             background: "#eeece1",
             color: "#333",
             padding: "8px 12px",
-            borderRadius: "24px",
+            borderRadius: "8px",
           }}
         >
           {isLoggedIn ? (

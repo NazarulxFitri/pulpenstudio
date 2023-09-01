@@ -20,12 +20,12 @@ export const CategoryText = styled("p")(() => ({
   margin: "8px 0",
   padding: "4px 12px",
   width: "fit-content",
-  borderRadius: "24px",
+  borderRadius: "8px",
 }));
 
 export const Button1 = styled(Link)(() => ({
   border: "1px solid #eeece1",
-  borderRadius: "24px",
+  borderRadius: "8px",
   cursor: "pointer",
   color: "#333",
   textDecoration: "none",

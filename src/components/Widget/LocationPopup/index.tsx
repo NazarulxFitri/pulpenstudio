@@ -68,7 +68,7 @@ const LocationPopup: React.FC<LocationPopupProps> = ({
               mt={4}
               sx={{
                 background: color,
-                borderRadius: "24px",
+                borderRadius: "8px",
                 cursor: "pointer",
                 display: "flex",
                 p: 2,

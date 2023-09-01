@@ -61,7 +61,7 @@ const Login = () => {
   return (
     <Box
       sx={{
-        borderRadius: "24px",
+        borderRadius: "8px",
         boxShadow: "1px 1px 10px #eeece1",
         margin: "56px auto",
         padding: { xs: "32px 16px", md: "32px 56px" },
@@ -113,8 +113,8 @@ const Login = () => {
         <Box
           onClick={handleClick}
           sx={{
-            borderRadius: "24px",
-            boxShadow: "1px 1px 10px #eeece1",
+            borderRadius: "8px",
+            background: "#eeece1",
             cursor: "pointer",
             mt: 2,
             p: "8px 24px",

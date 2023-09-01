@@ -40,7 +40,7 @@ const LiveSupport = () => {
         <Box
           sx={{
             background: "#eeece1",
-            borderRadius: "24px",
+            borderRadius: "8px",
             fontWeight: "700",
             px: 2,
             py: 1,

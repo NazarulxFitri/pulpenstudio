@@ -24,7 +24,7 @@ const RegisterAcc: React.FC<RegisterAccProps> = ({
   setShowRegister,
 }) => {
   const { data } = useGetUser();
-  const { action, loading } = usePostAddUser();
+  const { action } = usePostAddUser();
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
   const [contactNumber, setContactNumber] = useState("");
@@ -96,9 +96,9 @@ const RegisterAcc: React.FC<RegisterAccProps> = ({
       </FormControl>
       <Box
         sx={{
-          background: isDisabled ? "#EEEEEE" : "#FFFFFF",
-          borderRadius: "24px",
-          boxShadow: "1px 1px 10px #eeece1",
+          background: isDisabled ? "#efefef" : "#eeece1",
+          borderRadius: "8px",
+          color: isDisabled ? "#d0d0d0" : "unset",
           mt: 2,
           p: "8px 24px",
           width: "fit-content",

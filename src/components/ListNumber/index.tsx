@@ -10,7 +10,7 @@ const ListNumber: React.FC<ListNumberProps> = ({ number }) => {
     <Box
       sx={{
         background: "#333",
-        borderRadius: "24px",
+        borderRadius: "8px",
         color: "#fff",
         fontSize: "24px",
         fontWeight: "800",
