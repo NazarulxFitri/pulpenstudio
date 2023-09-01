@@ -7,6 +7,7 @@ export { default as Popup } from "./Popup";
 export { default as RibbonBanner } from "./RibbonBanner";
 export { default as CommentList } from "./CommentList";
 export { default as LiveSupport } from "./LiveSupport";
+export { default as NextButton } from "./Button/Next";
 
 export { default as WhatsappIcon } from "./Icons/WhatsappIcon";
 export { default as TickIcon } from "./Icons/TickIcon";

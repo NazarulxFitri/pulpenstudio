@@ -22,7 +22,6 @@ const EInviteModule = () => {
   const [language, setLanguage] = useState<string>("bm");
 
   const [title1Groom, setTitle1Groom] = useState<string>("");
-  console.log("xxx title1", title1Groom);
   const [title1Bride, setTitle1Bride] = useState<string>("");
   const [title2, setTitle2] = useState<string>("");
   const [location, setLocation] = useState<string>("");
@@ -101,6 +100,7 @@ const EInviteModule = () => {
           display: { xs: "block", md: "flex" },
           my: 6,
           justifyContent: "center",
+          minHeight: "28px",
         }}
       >
         <Box
@@ -119,7 +119,6 @@ const EInviteModule = () => {
           <p
             style={{
               color: curTab < 1 ? "#A9A9A9" : "unset",
-              fontWeight: curTab < 1 ? "300" : "700",
               padding: "0 8px 0 0",
             }}
             dangerouslySetInnerHTML={{ __html: "General" }}
@@ -151,7 +150,6 @@ const EInviteModule = () => {
           <p
             style={{
               color: curTab < 2 ? "#A9A9A9" : "unset",
-              fontWeight: curTab < 2 ? "300" : "700",
               padding: "0 8px 0 0",
             }}
             dangerouslySetInnerHTML={{ __html: "Event Details" }}
@@ -183,7 +181,6 @@ const EInviteModule = () => {
           <p
             style={{
               color: curTab < 3 ? "#A9A9A9" : "unset",
-              fontWeight: curTab < 3 ? "300" : "700",
               padding: "0 8px 0 0",
             }}
             dangerouslySetInnerHTML={{ __html: "Content" }}
@@ -194,9 +191,9 @@ const EInviteModule = () => {
       {curTab === 0 ? (
         <FirstStep
           {...{
-            whiteSpace,
-            capitalCase,
-            existence,
+            data,
+            itemName,
+            language,
             setName,
             setLanguage,
             curTab,

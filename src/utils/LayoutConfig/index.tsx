@@ -8,7 +8,6 @@ export const layoutConfig = [
     images: [
       "/media/cardSelection/card-1/main.png",
       "/media/cardSelection/card-1/main.png",
-      "/media/cardSelection/card-1/main.png",
     ],
     font: ["Poiret One", "Great Vibes", "Ubuntu"],
     description:
@@ -27,8 +26,7 @@ export const layoutConfig = [
     discountedPrice: "RM50.00",
     images: [
       "/media/cardSelection/card-2/main.png",
-      "/media/cardSelection/card-2/main.png",
-      "/media/cardSelection/card-2/main.png",
+      "/media/cardSelection/card-2/2-image.png",
     ],
     font: ["Sacramento", "Arapey", "Tangerine"],
     description:
@@ -46,8 +44,7 @@ export const layoutConfig = [
     discountedPrice: "RM50.00",
     images: [
       "/media/cardSelection/card-3/main.png",
-      "/media/cardSelection/card-3/main.png",
-      "/media/cardSelection/card-3/main.png",
+      "/media/cardSelection/card-3/2-image.png",
     ],
     font: ["Playfair", "Tangerine", "Poiret One"],
     description:
@@ -65,7 +62,6 @@ export const layoutConfig = [
     originalPrice: "RM60.00",
     discountedPrice: "RM50.00",
     images: [
-      "/media/cardSelection/card-4/main.png",
       "/media/cardSelection/card-4/main.png",
       "/media/cardSelection/card-4/main.png",
     ],
@@ -87,7 +83,6 @@ export const layoutConfig = [
     images: [
       "/media/cardSelection/card-5/main.png",
       "/media/cardSelection/card-5/main.png",
-      "/media/cardSelection/card-5/main.png",
     ],
     font: ["Dancing Script", "Playfair", "Poiret One"],
     description:
@@ -105,7 +100,6 @@ export const layoutConfig = [
     originalPrice: "RM60.00",
     discountedPrice: "RM50.00",
     images: [
-      "/media/cardSelection/card-6/main.png",
       "/media/cardSelection/card-6/main.png",
       "/media/cardSelection/card-6/main.png",
     ],

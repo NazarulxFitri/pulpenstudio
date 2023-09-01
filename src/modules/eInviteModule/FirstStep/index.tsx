@@ -1,81 +1,153 @@
-import { ErrorMessage, ListNumber } from "@/components";
+import { ErrorMessage, ListNumber, NextButton } from "@/components";
+import useCheckCapitalCase from "@/utils/useCheckCapitalCase";
+import useCheckExistence from "@/utils/useCheckExistence";
+import useCheckWhiteSpace from "@/utils/useCheckWhiteSpace";
 import {
   Box,
   FormControl,
+  Grid,
   InputLabel,
   MenuItem,
   Select,
   TextField,
 } from "@mui/material";
+import Image from "next/image";
+import { useState } from "react";
 
 interface FirstStepProps {
-  whiteSpace: any;
-  capitalCase: any;
-  existence: any;
+  data: any;
   curTab: number;
+  itemName: string;
+  language: string;
   setName: (value: string) => void;
   setLanguage: (value: string) => void;
   setCurTab: (value: number) => void;
 }
 
 const FirstStep: React.FC<FirstStepProps> = ({
-  whiteSpace,
-  capitalCase,
-  existence,
+  data,
   curTab,
+  itemName,
+  language,
   setName,
   setLanguage,
   setCurTab,
 }) => {
+  const [showError, setShowError] = useState(false);
+  const existence = useCheckExistence(data, itemName);
+  const whiteSpace = useCheckWhiteSpace(itemName);
+  const capitalCase = useCheckCapitalCase(itemName);
+
+  const disabled =
+    !!existence || !!whiteSpace || !!capitalCase!! || !itemName || !language;
+
   return (
     <Box>
       <Box display="flex" mt={3}>
         <ListNumber circle={true} number={1} />
         <h4 dangerouslySetInnerHTML={{ __html: "General" }} />
       </Box>
-      <Box mt={1}>
-        <Box></Box>
-        <TextField
-          sx={{ width: { xs: "100%", md: "50%" } }}
-          id="standard-basic"
-          label="eg. kahwin-luwixmini , majlis-berbuka-puasa"
-          variant="standard"
-          onChange={(e) => setName(e.target.value)}
-        />
-        {!!whiteSpace && (
-          <ErrorMessage message="Please make sure no whitespace" />
-        )}
-        {!!capitalCase && (
-          <ErrorMessage message="Please make sure no capital case" />
-        )}
-        {!!existence && (
-          <ErrorMessage message="Please try a different name. This name has been used" />
-        )}
-      </Box>
-      <Box>
-        <FormControl
-          sx={{
-            width: { xs: "100%", md: "50%" },
-            mt: 4,
-          }}
-        >
-          <InputLabel>Choose language</InputLabel>
-          <Select
-            defaultValue={"bm"}
-            onChange={(e) => setLanguage(e.target.value)}
-          >
-            <MenuItem defaultChecked value={"bm"}>
-              Bahasa Melayu
-            </MenuItem>
-            <MenuItem value={"en"}>Bahasa Inggeris</MenuItem>
-          </Select>
-        </FormControl>
-      </Box>
+      <Grid container mt={2} rowGap={4}>
+        <Grid item xs={12} md={4}>
+          <Box>
+            <TextField
+              InputLabelProps={{ shrink: true }}
+              sx={{ width: { xs: "100%", md: "100%" } }}
+              placeholder="fabianxmahalini"
+              id="standard-basic"
+              label="Card Name (Will be used as URL)"
+              variant="standard"
+              onChange={(e) => setName(e.target.value)}
+              value={itemName}
+            />
+            {showError && !itemName && (
+              <ErrorMessage message="This field is required" />
+            )}
+            {!!whiteSpace && (
+              <ErrorMessage message="Please make sure no whitespace" />
+            )}
+            {!!capitalCase && (
+              <ErrorMessage message="Please make sure no capital case" />
+            )}
+            {!!existence && (
+              <ErrorMessage message="Please try a different name. This name has been used" />
+            )}
+          </Box>
+          <Box>
+            <FormControl
+              variant="standard"
+              sx={{
+                width: { xs: "100%", md: "100%" },
+                mt: 4,
+              }}
+            >
+              <InputLabel>
+                Choose language (Will be use for the card content)
+              </InputLabel>
+              <Select
+                defaultValue={"bm"}
+                onChange={(e) => setLanguage(e.target.value)}
+              >
+                <MenuItem defaultChecked value={"bm"}>
+                  Bahasa Melayu
+                </MenuItem>
+                <MenuItem value={"en"}>English</MenuItem>
+              </Select>
+            </FormControl>
+          </Box>
+        </Grid>
+        <Grid xs={12} md={8}>
+          <Box sx={{ display: "flex", overflow: "scroll" }}>
+            <Box>
+              <p
+                style={{
+                  fontSize: "12px",
+                  textAlign: "center",
+                  marginBottom: "8px",
+                }}
+              >
+                Example of english translation
+              </p>
+              <Image
+                src="/media/cardSelection/card-3/2-image.png"
+                alt=""
+                width={288}
+                height={496}
+              />
+            </Box>
+            <Box>
+              <p
+                style={{
+                  fontSize: "12px",
+                  textAlign: "center",
+                  marginBottom: "8px",
+                }}
+              >
+                Example of Bahasa Malaysia translation
+              </p>
+              <Image
+                src="/media/cardSelection/card-2/2-image.png"
+                alt=""
+                width={288}
+                height={496}
+              />
+            </Box>
+          </Box>
+        </Grid>
+      </Grid>
       <Box
-        sx={{ width: "fit-content", mx: "auto", my: 8 }}
-        onClick={() => setCurTab(1)}
+        sx={{ width: "fit-content", mx: "auto", my: 2 }}
+        onClick={() => {
+          !disabled ? setCurTab(1) : null;
+          setShowError(true);
+        }}
       >
-        Next
+        <Box mb={1}>
+          {showError && disabled && (
+            <ErrorMessage message="Please check on the error and try again" />
+          )}
+        </Box>
+        <NextButton disabled={disabled} />
       </Box>
     </Box>
   );

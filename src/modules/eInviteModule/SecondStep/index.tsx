@@ -1,6 +1,7 @@
-import { ListNumber } from "@/components";
+import { ListNumber, NextButton } from "@/components";
 import { DateTimePicker } from "@mui/x-date-pickers";
 import { Box, TextField } from "@mui/material";
+import PrevButton from "@/components/Button/Prev";
 
 interface SecondStepProps {
   curTab: number;
@@ -71,8 +72,12 @@ const SecondStep: React.FC<SecondStepProps> = ({
         sx={{ display: "flex", width: "fit-content", mx: "auto", mt: 8 }}
         gap={4}
       >
-        <Box onClick={() => setCurTab(0)}>Prev</Box>
-        <Box onClick={() => setCurTab(2)}>Next</Box>
+        <Box onClick={() => setCurTab(0)}>
+          <PrevButton disabled={false} />
+        </Box>
+        <Box onClick={() => setCurTab(2)}>
+          <NextButton disabled={true} />
+        </Box>
       </Box>
     </Box>
   );
