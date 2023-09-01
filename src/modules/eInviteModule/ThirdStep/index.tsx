@@ -1,4 +1,4 @@
-import { ErrorMessage, ListNumber, NextButton } from "@/components";
+import { ErrorMessage, ListNumber } from "@/components";
 import PrevButton from "@/components/Button/Prev";
 import { Box, Grid, TextField } from "@mui/material";
 import { useState } from "react";
@@ -104,37 +104,40 @@ const ThirdStep: React.FC<ThirdStepProps> = ({
             What should I fill in here ?
           </h4>
           <p style={{ marginTop: "12px" }}>
-            1. "Nama orang untuk dihubungi 1" & "Nama orang untuk dihubungi 2" -
-            Name of the person who can be called during the event day. It is for
-            your guest to reach them
+            1. &quot;Nama orang untuk dihubungi 1&quot; & &quot;Nama orang untuk
+            dihubungi 2&quot; - Name of the person who can be called during the
+            event day. It is for your guest to reach them
           </p>
           <p style={{ marginTop: "12px" }}>
-            2. "Nombor orang untuk dihubungi telefon 1" & "Nombor orang untuk
-            dihubungi telefon 2" - Phone number of the person who can be called
-            during the event day. It is for your guest to reach them
+            2. &quot;Nombor orang untuk dihubungi telefon 1&quot; & &quot;Nombor
+            orang untuk dihubungi telefon 2&quot; - Phone number of the person
+            who can be called during the event day. It is for your guest to
+            reach them
           </p>
           <p style={{ marginTop: "12px" }}>
-            3. "Google Map URL" - Event venue Url address from google.{" "}
+            3. &quot;Google Map URL&quot; - Event venue Url address from google.{" "}
             <b>How to get this ?</b>
             <span
               style={{ display: "block", margin: "8px 0", fontWeight: "700" }}
             >
-              -Search your event venue name on google browser. Click on "Get
-              direction" (You can find this usually at the right of the screen).
-              Copy the url address and placed it inside the field.
+              -Search your event venue name on google browser. Click on
+              &quot;Get direction&quot; (You can find this usually at the right
+              of the screen). Copy the url address and placed it inside the
+              field.
             </span>{" "}
             If you need help on how to get this, please reach our Live Support
             (click on the icon at your right bottom screen)
           </p>
           <p style={{ marginTop: "12px" }}>
-            4. "Pilihan lagu (Youtube)" - Song from Youtube that will be for
-            your card background music. <b>How to get this ?</b>{" "}
+            4. &quot;Pilihan lagu (Youtube)&quot; - Song from Youtube that will
+            be for your card background music. <b>How to get this ?</b>{" "}
             <span
               style={{ display: "block", margin: "8px 0", fontWeight: "700" }}
             >
-              -Search your event venue name on google browser. Click on "Get
-              direction" (You can find this usually at the right of the screen).
-              Copy the url address and placed it inside the field.
+              -Search your event venue name on google browser. Click on
+              &quot;Get direction&quot; (You can find this usually at the right
+              of the screen). Copy the url address and placed it inside the
+              field.
             </span>{" "}
             . If you need help on how to get this, please reach our Live Support
             (click on the icon at your right bottom screen)

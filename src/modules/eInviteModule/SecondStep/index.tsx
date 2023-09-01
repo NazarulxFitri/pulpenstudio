@@ -91,23 +91,23 @@ const SecondStep: React.FC<SecondStepProps> = ({
             What should I fill in here ?
           </h4>
           <p style={{ marginTop: "12px" }}>
-            1. "Title : Nama pengantin Lelaki" & "Title : Nama pengantin
-            Perempuan" - The groom and bride name. Will be applied at front of
-            the card and few other places such as on hashtag and on the
-            invitation text
+            1. &quot;Title : Nama pengantin Lelaki&quot; & &quot;Title : Nama
+            pengantin Perempuan&quot; - The groom and bride name. Will be
+            applied at front of the card and few other places such as on hashtag
+            and on the invitation text
           </p>
           <p style={{ marginTop: "12px" }}>
-            2. "Nama wakil penganjur" - Can be paretns of the bride or groom ,
-            also can be just a any text to be represented etc. "Me & Family".
-            Will be applied at invitation text.
+            2. &quot;Nama wakil penganjur&quot; - Can be paretns of the bride or
+            groom , also can be just a any text to be represented etc. &quot;Me
+            & Family&quot;. Will be applied at invitation text.
           </p>
           <p style={{ marginTop: "12px" }}>
-            3. "Lokasi" - Name of the event place. Will be applied at front of
-            the card and few other places
+            3. &quot;Lokasi&quot; - Name of the event place. Will be applied at
+            front of the card and few other places
           </p>
           <p style={{ marginTop: "12px" }}>
-            4. "Tarikh & Masa" - Date & time for the event. Applied at front of
-            the card and few other places
+            4. &quot;Tarikh & Masa&quot; - Date & time for the event. Applied at
+            front of the card and few other places
           </p>
         </Grid>
       </Grid>
