@@ -15,7 +15,7 @@ const EInvite = () => {
   if (!layout)
     return (
       <BoxContainer>
-        <Grid container mt={8}>
+        <Grid container mt={8} rowGap={4}>
           <Grid item xs={12} md={6}>
             <p style={{ fontSize: "24px", fontWeight: "700" }}>
               Oops, something is missing ...

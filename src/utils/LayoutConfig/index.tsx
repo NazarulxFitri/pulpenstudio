@@ -112,4 +112,23 @@ export const layoutConfig = [
       "Include / Exclude suitable helper widgets - Money Gift, RSVP, Contact Number, Google Map Location",
     ],
   },
+  {
+    layoutid: "007",
+    name: "Black Gold Label",
+    category: "Wedding",
+    originalPrice: "RM60.00",
+    discountedPrice: "RM50.00",
+    images: [
+      "/media/cardSelection/card-7/main.png",
+      "/media/cardSelection/card-7/2-image.png",
+    ],
+    font: ["Cinzel", "Cormorant", "Tangerine"],
+    description:
+      "Premium black and gold look. Combination of majestic colors designed with modest art will make your card look ultra exclusive !",
+
+    features: [
+      "Choose your desired music from Youtube !",
+      "Include / Exclude suitable helper widgets - Money Gift, RSVP, Contact Number, Google Map Location",
+    ],
+  },
 ];
