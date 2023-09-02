@@ -131,4 +131,23 @@ export const layoutConfig = [
       "Include / Exclude suitable helper widgets - Money Gift, RSVP, Contact Number, Google Map Location",
     ],
   },
+  {
+    layoutid: "008",
+    name: "Vitamin Sea",
+    category: "Wedding",
+    originalPrice: "RM60.00",
+    discountedPrice: "RM50.00",
+    images: [
+      "/media/cardSelection/card-8/main.png",
+      "/media/cardSelection/card-8/2-image.png",
+    ],
+    font: ["Great Vibes", "Cormorant", "Cinzel"],
+    description:
+      "Presenting blue flowers mimicking sea to display calmness with minimalism look. One of our best seller that will surely make your guest fall in love with the design",
+
+    features: [
+      "Choose your desired music from Youtube !",
+      "Include / Exclude suitable helper widgets - Money Gift, RSVP, Contact Number, Google Map Location",
+    ],
+  },
 ];
