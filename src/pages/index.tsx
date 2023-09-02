@@ -1,18 +1,20 @@
-import {
-  BoxContainer,
-  ChatIcon,
-  PenIcon,
-  RocketIcon,
-  SupportIcon,
-} from "@/components";
+import { ChatIcon, PenIcon, RocketIcon, SupportIcon } from "@/components";
 import HowToOrderModule from "@/modules/HowToOrderModule";
 import { Box, Grid } from "@mui/material";
+import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
   return (
     <Box>
+      <Head>
+        <title>Pulpen Studio | Home</title>
+        <meta
+          name="Pulpen Studio - Digital invitation card"
+          content="Check out our digital invitation card and create your dream digital card for your big day !"
+        />
+      </Head>
       <Box display={{ xs: "none", lg: "block" }}>
         <Image
           src="/media/general/desktop-top-banner.png"
