@@ -1,11 +1,12 @@
-import { BoxContainer, RibbonBanner } from "@/components";
+import { BoxContainer } from "@/components";
 import Login from "@/modules/Login";
 import EInviteModule from "@/modules/eInviteModule";
 import useCheckauth from "@/utils/useCheckAuth";
-import { Box, Grid, Typography } from "@mui/material";
+import { Box, Grid } from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import Head from "next/head";
 
 const EInvite = () => {
   const { auth } = useCheckauth();
@@ -83,6 +84,17 @@ const EInvite = () => {
       </Box>
     );
 
-  return <EInviteModule />;
+  return (
+    <Box>
+      <Head>
+        <title>Pulpen Studio | e-Invite</title>
+        <meta
+          name="Pulpen Studio - e-Invite"
+          content="Create digital invitation card by entering information following steps provided"
+        />
+      </Head>
+      <EInviteModule />
+    </Box>
+  );
 };
 export default EInvite;

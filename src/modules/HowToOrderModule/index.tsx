@@ -45,7 +45,7 @@ const HowToOrderModule = () => {
             <Box sx={{ fontWeight: "700" }}>
               <span style={{ fontSize: "32px" }}>3.</span> After you click to
               submit the card, a popup will be displayed and you are done ! Your
-              card will be ready to be view
+              card will be ready to be viewed
             </Box>
           </Box>
         </Grid>

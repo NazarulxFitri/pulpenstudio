@@ -74,14 +74,11 @@ const FaqModule: React.FC<CatalogueModuleProps> = ({}) => {
           after event day)
         </p>
         <p style={{ marginTop: "16px" }}>
-          <b>
-            2. How long will the card stay online before and after event day ?
-          </b>
+          <b>2. How long will the card stay online after made the payment ?</b>
         </p>
         <p>
           The card will stay online from the moment you succesfully made payment
-          or 2 months before event day (which ever shorter) until after 2 weeks
-          of your event day
+          until after 2 weeks of your event day
         </p>
         <p style={{ marginTop: "16px" }}>
           <b>3. Is it guaranteed that there will be no issue ?</b>

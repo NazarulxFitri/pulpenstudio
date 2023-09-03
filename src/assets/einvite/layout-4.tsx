@@ -353,7 +353,7 @@ const Layout4: React.FC = () => {
                 mb: 3,
               }}
               dangerouslySetInnerHTML={{
-                __html: `${item?.title1Groom} & ${item?.title1Bride}`,
+                __html: `${item?.fullNameGroom} & ${item?.fullNameBride}`,
               }}
             />
             <Box

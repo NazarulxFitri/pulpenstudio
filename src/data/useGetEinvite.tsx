@@ -16,6 +16,8 @@ export interface EInviteConfig {
     phonePerson2: string;
     title1Bride: string;
     title1Groom: string;
+    fullNameGroom: string;
+    fullNameBride: string;
     title2: string;
   };
   layout: string;

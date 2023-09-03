@@ -8,6 +8,7 @@ import useGetEinvite from "@/data/useGetEinvite";
 import { useRemoveAuth } from "@/utils/useRemoveAuth";
 import useCheckauth from "@/utils/useCheckAuth";
 import { useRouter } from "next/router";
+import Image from "next/image";
 
 const sacramento = Sacramento({ subsets: ["latin"], weight: ["400"] });
 
@@ -54,16 +55,11 @@ const Header = () => {
       }}
     >
       <LinkMenu href="/">
-        <span
-          id="n"
-          style={{
-            fontFamily: sacramento.style.fontFamily,
-            fontSize: "48px",
-            fontWeight: "800",
-          }}
-          dangerouslySetInnerHTML={{
-            __html: `Pulpen Studio`,
-          }}
+        <Image
+          src="/media/general/pulpen_logo.png"
+          alt="Pulpen Studio - Logo"
+          width={175}
+          height={89}
         />
       </LinkMenu>
       <Box

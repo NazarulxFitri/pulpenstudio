@@ -20,6 +20,8 @@ const EInviteModule = () => {
 
   const [title1Groom, setTitle1Groom] = useState<string>("");
   const [title1Bride, setTitle1Bride] = useState<string>("");
+  const [fullNameGroom, setFullNameGroom] = useState<string>("");
+  const [fullNameBride, setFullNameBride] = useState<string>("");
   const [title2, setTitle2] = useState<string>("");
   const [location, setLocation] = useState<string>("");
   const [dateTime, setDateTime] = useState<string>("");
@@ -182,11 +184,15 @@ const EInviteModule = () => {
           {...{
             title1Groom,
             title1Bride,
+            fullNameGroom,
+            fullNameBride,
             title2,
             location,
             dateTime,
             setTitle1Groom,
             setTitle1Bride,
+            setFullNameGroom,
+            setFullNameBride,
             setTitle2,
             setLocation,
             setDateTime,

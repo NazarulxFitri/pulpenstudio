@@ -285,7 +285,7 @@ const Layout5: React.FC = () => {
               textShadow: "1px 1px 10px #FDE6E8",
             }}
             dangerouslySetInnerHTML={{
-              __html: `${item?.title1Groom} & ${item?.title1Bride}`,
+              __html: `${item?.fullNameGroom} & ${item?.fullNameBride}`,
             }}
           />
         </Box>

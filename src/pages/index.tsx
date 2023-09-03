@@ -1,4 +1,5 @@
 import { ChatIcon, PenIcon, RocketIcon, SupportIcon } from "@/components";
+import BannerModule from "@/modules/BannerModule";
 import HowToOrderModule from "@/modules/HowToOrderModule";
 import { Box, Grid } from "@mui/material";
 import Head from "next/head";
@@ -42,10 +43,10 @@ export default function Home() {
           style={{ width: "100%", height: "100%", display: "block" }}
         />
       </Box>
+      <BannerModule />
       <Box my={6} mx={8}>
         <HowToOrderModule />
       </Box>
-
       <Box
         sx={{
           background: "#eeece1",

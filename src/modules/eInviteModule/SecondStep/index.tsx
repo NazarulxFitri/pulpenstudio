@@ -8,11 +8,15 @@ interface SecondStepProps {
   curTab: number;
   title1Groom: string;
   title1Bride: string;
+  fullNameGroom: string;
+  fullNameBride: string;
   title2: string;
   location: string;
   dateTime: string;
   setTitle1Groom: (value: string) => void;
   setTitle1Bride: (value: string) => void;
+  setFullNameGroom: (value: string) => void;
+  setFullNameBride: (value: string) => void;
   setTitle2: (value: string) => void;
   setLocation: (value: string) => void;
   setDateTime: (value: string) => void;
@@ -23,11 +27,15 @@ const SecondStep: React.FC<SecondStepProps> = ({
   curTab,
   title1Groom,
   title1Bride,
+  fullNameGroom,
+  fullNameBride,
   title2,
   location,
   dateTime,
   setTitle1Groom,
   setTitle1Bride,
+  setFullNameGroom,
+  setFullNameBride,
   setTitle2,
   setLocation,
   setDateTime,
@@ -35,7 +43,13 @@ const SecondStep: React.FC<SecondStepProps> = ({
 }) => {
   const [showError, setShowError] = useState(false);
   const disabled =
-    !title1Groom || !title1Bride || !title2 || !location || !dateTime;
+    !title1Groom ||
+    !title1Bride ||
+    !fullNameGroom ||
+    !fullNameBride ||
+    !title2 ||
+    !location ||
+    !dateTime;
 
   return (
     <Box>
@@ -49,18 +63,34 @@ const SecondStep: React.FC<SecondStepProps> = ({
             <TextField
               InputLabelProps={{ shrink: true }}
               placeholder="Judika"
-              label="Title : Nama pengantin Lelaki"
+              label="Card Title : Nama pengantin lelaki"
               variant="standard"
               value={title1Groom}
               onChange={(e) => setTitle1Groom(e.currentTarget.value)}
             />
             <TextField
               InputLabelProps={{ shrink: true }}
+              placeholder="Ahmad Judika Ramlan"
+              label="Nama Penuh pengantin lelaki"
+              variant="standard"
+              value={fullNameGroom}
+              onChange={(e) => setFullNameGroom(e.currentTarget.value)}
+            />
+            <TextField
+              InputLabelProps={{ shrink: true }}
               placeholder="Mahalini"
-              label="Title : Nama pengantin Perempuan"
+              label="Card Title : Nama pengantin perempuan"
               variant="standard"
               value={title1Bride}
               onChange={(e) => setTitle1Bride(e.currentTarget.value)}
+            />
+            <TextField
+              InputLabelProps={{ shrink: true }}
+              placeholder="Nur Mahalini Yura"
+              label="Nama Penuh pengantin perempuan"
+              variant="standard"
+              value={fullNameBride}
+              onChange={(e) => setFullNameBride(e.currentTarget.value)}
             />
             <TextField
               InputLabelProps={{ shrink: true }}
@@ -97,7 +127,7 @@ const SecondStep: React.FC<SecondStepProps> = ({
             and on the invitation text
           </p>
           <p style={{ marginTop: "12px" }}>
-            2. &quot;Nama wakil penganjur&quot; - Can be paretns of the bride or
+            2. &quot;Nama wakil penganjur&quot; - Can be parents of the bride or
             groom , also can be just a any text to be represented etc. &quot;Me
             & Family&quot;. Will be applied at invitation text.
           </p>
@@ -107,7 +137,7 @@ const SecondStep: React.FC<SecondStepProps> = ({
           </p>
           <p style={{ marginTop: "12px" }}>
             4. &quot;Tarikh & Masa&quot; - Date & time for the event. Applied at
-            front of the card and few other places
+            front of the card and few other places.
           </p>
         </Grid>
       </Grid>
