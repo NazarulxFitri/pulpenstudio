@@ -4,7 +4,13 @@ interface ErrorMessageProps {
 
 const ErrorMessage: React.FC<ErrorMessageProps> = ({ message }) => {
   return (
-    <p style={{ color: "#FF0000", fontSize: "12px", marginTop: "8px" }}>
+    <p
+      style={{
+        color: "#FF0000",
+        fontSize: "12px",
+        marginTop: "8px",
+      }}
+    >
       {message}
     </p>
   );

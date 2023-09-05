@@ -16,7 +16,6 @@ import { useState } from "react";
 
 interface FirstStepProps {
   data: any;
-  curTab: number;
   itemName: string;
   language: string;
   setName: (value: string) => void;
@@ -26,7 +25,6 @@ interface FirstStepProps {
 
 const FirstStep: React.FC<FirstStepProps> = ({
   data,
-  curTab,
   itemName,
   language,
   setName,

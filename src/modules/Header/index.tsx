@@ -97,14 +97,7 @@ const Header = () => {
           )}
         </LinkMenu>
         <LinkMenu href="/faq">FAQ</LinkMenu>
-        <p
-          style={{
-            background: "#eeece1",
-            color: "#333",
-            padding: "8px 12px",
-            borderRadius: "8px",
-          }}
-        >
+        <p>
           {isLoggedIn ? (
             <p onClick={useRemoveAuth}>Logout</p>
           ) : (

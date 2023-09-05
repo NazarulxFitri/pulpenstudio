@@ -5,7 +5,6 @@ import PrevButton from "@/components/Button/Prev";
 import { useState } from "react";
 
 interface SecondStepProps {
-  curTab: number;
   title1Groom: string;
   title1Bride: string;
   fullNameGroom: string;
@@ -24,7 +23,6 @@ interface SecondStepProps {
 }
 
 const SecondStep: React.FC<SecondStepProps> = ({
-  curTab,
   title1Groom,
   title1Bride,
   fullNameGroom,

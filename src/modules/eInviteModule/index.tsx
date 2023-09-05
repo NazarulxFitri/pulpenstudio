@@ -44,6 +44,8 @@ const EInviteModule = () => {
         language,
         title1Groom,
         title1Bride,
+        fullNameGroom,
+        fullNameBride,
         title2,
         location,
         dateTime,
@@ -174,9 +176,8 @@ const EInviteModule = () => {
             itemName,
             language,
             setName,
-            setLanguage,
-            curTab,
             setCurTab,
+            setLanguage,
           }}
         />
       ) : curTab === 1 ? (
@@ -196,7 +197,6 @@ const EInviteModule = () => {
             setTitle2,
             setLocation,
             setDateTime,
-            curTab,
             setCurTab,
           }}
         />
@@ -215,7 +215,6 @@ const EInviteModule = () => {
             setPhonePerson2,
             setMapUrl,
             setMusicUrl,
-            curTab,
             setCurTab,
             handleSubmit,
           }}

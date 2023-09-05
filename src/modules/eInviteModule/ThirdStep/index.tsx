@@ -4,7 +4,6 @@ import { Box, Grid, TextField } from "@mui/material";
 import { useState } from "react";
 
 interface ThirdStepProps {
-  curTab: number;
   namePerson1: string;
   namePerson2: string;
   phonePerson1: string;
@@ -22,7 +21,6 @@ interface ThirdStepProps {
 }
 
 const ThirdStep: React.FC<ThirdStepProps> = ({
-  curTab,
   namePerson1,
   namePerson2,
   phonePerson1,
@@ -55,6 +53,7 @@ const ThirdStep: React.FC<ThirdStepProps> = ({
               placeholder="Zack"
               label="Nama orang untuk dihubungi 1 *"
               variant="standard"
+              value={namePerson1}
               onChange={(e) => setNamePerson1(e.currentTarget.value)}
             />
             <TextField
@@ -62,6 +61,7 @@ const ThirdStep: React.FC<ThirdStepProps> = ({
               placeholder="01156271776"
               label="Nombor orang untuk dihubungi telefon 1 *"
               variant="standard"
+              value={phonePerson1}
               onChange={(e) => setPhonePerson1(e.currentTarget.value)}
             />
             <TextField
@@ -69,6 +69,7 @@ const ThirdStep: React.FC<ThirdStepProps> = ({
               placeholder="Wendy"
               label="Nama orang untuk dihubungi 2"
               variant="standard"
+              value={namePerson2}
               onChange={(e) => setNamePerson2(e.currentTarget.value)}
             />
             <TextField
@@ -76,6 +77,7 @@ const ThirdStep: React.FC<ThirdStepProps> = ({
               placeholder="01156271776"
               label="Nombor orang untuk dihubungi telefon 2"
               variant="standard"
+              value={phonePerson2}
               onChange={(e) => setPhonePerson2(e.currentTarget.value)}
             />
             <TextField
@@ -83,6 +85,7 @@ const ThirdStep: React.FC<ThirdStepProps> = ({
               placeholder="https://www.google.com/maps/dir//glasshall+forest+valley/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x31cc358ea1ca26ff:0xed9060ff23e7def2?sa=X&ved=2ahUKEwi7nsWm3cyAAxU_wTgGHUmXCJEQ9Rd6BAhOEAA&ved=2ahUKEwi7nsWm3cyAAxU_wTgGHUmXCJEQ9Rd6BAhWEAQ"
               label="Google Map URL *"
               variant="standard"
+              value={mapUrl}
               onChange={(e) => setMapUrl(e.currentTarget.value)}
             />
             <TextField
@@ -90,6 +93,7 @@ const ThirdStep: React.FC<ThirdStepProps> = ({
               placeholder="https://www.youtube.com/watch?v=cacRynmN07Q"
               label="Pilihan lagu (Youtube) *"
               variant="standard"
+              value={musicUrl}
               onChange={(e) => setMusicUrl(e.currentTarget.value)}
             />
           </Box>
