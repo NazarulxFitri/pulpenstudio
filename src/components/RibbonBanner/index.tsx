@@ -8,9 +8,7 @@ const RibbonBanner: React.FC<RibbonBannerProps> = ({ message }) => {
   return (
     <Box
       sx={{
-        background: "#eeece1",
-        borderRadius: "8px",
-        fontWeight: "500",
+        cursor: "pointer",
         p: 2,
       }}
     >

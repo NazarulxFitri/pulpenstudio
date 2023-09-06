@@ -28,7 +28,7 @@ const PersonalInfo: React.FC<PersonalInfoProps> = ({ userId }) => {
           <p>{currUser?.contactNumber}</p>
         </Box>
         <Box sx={{ display: "flex", mt: 2 }}>
-          <p style={{ fontWeight: "700", width: "160px" }}>Email address</p>
+          <p style={{ fontWeight: "700", minWidth: "160px" }}>Email Address</p>
           <p>{currUser?.emailAddress}</p>
         </Box>
       </Box>

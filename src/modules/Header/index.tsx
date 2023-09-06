@@ -1,16 +1,12 @@
 import { Box, Tooltip, styled } from "@mui/material";
 import Link from "next/link";
-import { Sacramento } from "next/font/google";
 import { CloseIcon, MenuIcon } from "@/components";
 import { useState } from "react";
 import useGetUserId from "@/utils/useGetUserId";
 import useGetEinvite from "@/data/useGetEinvite";
 import { useRemoveAuth } from "@/utils/useRemoveAuth";
 import useCheckauth from "@/utils/useCheckAuth";
-import { useRouter } from "next/router";
 import Image from "next/image";
-
-const sacramento = Sacramento({ subsets: ["latin"], weight: ["400"] });
 
 const LinkMenu = styled(Link)(({ theme }) => ({
   alignSelf: "center",
@@ -25,8 +21,20 @@ const LinkMenu = styled(Link)(({ theme }) => ({
   },
 }));
 
+const LogoutText = styled("p")(({ theme }) => ({
+  alignSelf: "center",
+  color: "#333",
+  fontWeight: 800,
+  margin: "16px 0",
+  textDecoration: "none",
+  display: "block",
+  fontSize: "16px",
+  [theme.breakpoints.up("md")]: {
+    margin: "0 8px",
+  },
+}));
+
 const Header = () => {
-  const router = useRouter();
   const [menuOpen, setMenuOpen] = useState(false);
   const userId = useGetUserId();
   const { data: items } = useGetEinvite();
@@ -97,13 +105,12 @@ const Header = () => {
           )}
         </LinkMenu>
         <LinkMenu href="/faq">FAQ</LinkMenu>
-        <p>
-          {isLoggedIn ? (
-            <p onClick={useRemoveAuth}>Logout</p>
-          ) : (
-            <LinkMenu href="/account">Login</LinkMenu>
-          )}
-        </p>
+
+        {isLoggedIn ? (
+          <LogoutText onClick={useRemoveAuth}>Logout</LogoutText>
+        ) : (
+          <LinkMenu href="/account">Login</LinkMenu>
+        )}
       </Box>
       {menuOpen && (
         <Box
@@ -113,13 +120,12 @@ const Header = () => {
           <LinkMenu href="/catalogue">Catalogue</LinkMenu>
           <LinkMenu href="/account">My Account</LinkMenu>
           <LinkMenu href="/faq">FAQ</LinkMenu>
-          <p>
-            {isLoggedIn ? (
-              <p onClick={useRemoveAuth}>Logout</p>
-            ) : (
-              <LinkMenu href="/account">Login</LinkMenu>
-            )}
-          </p>
+
+          {isLoggedIn ? (
+            <LogoutText onClick={useRemoveAuth}>Logout</LogoutText>
+          ) : (
+            <LinkMenu href="/account">Login</LinkMenu>
+          )}
         </Box>
       )}
     </Box>

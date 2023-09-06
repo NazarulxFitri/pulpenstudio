@@ -51,7 +51,7 @@ const MyWork: React.FC<MyWorkProps> = ({ userAssets }) => {
                   <TableCell>
                     {!item.paid && (
                       <a
-                        href=""
+                        href={`https://wa.me/601156271776?text=Hi%20Pulpen%20Studio%20,%20saya%20ingin%20membuat%20bayaran%20untuk%20-%20Digital%20Card:%20${item.name}%20User%20ID:${item.userId}`}
                         target="__blank"
                         style={{
                           background: "#eeece1",
