@@ -79,7 +79,7 @@ const Layout8: React.FC = () => {
   const [countdownTimer, setCountdownTimer] = useState<DateTimeConfig>();
   const { data } = useGetEinvite(eInviteId as string);
   const item = data?.data;
-  const listComments = data?.comments;
+  const listComments = data?.comments && [...data?.comments!].reverse();
   const musicUrl = item?.musicUrl;
   const dateJs = new Date(item?.dateTime!);
   const fullDate = dateJs?.toLocaleString("ms-MY", {
@@ -93,16 +93,6 @@ const Layout8: React.FC = () => {
     hour12: true,
   });
 
-  const dayRaw = dateJs.getDay();
-  const daysOfWeek = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
   const monthRaw = dateJs.getMonth();
   const monthsList = [
     "January",

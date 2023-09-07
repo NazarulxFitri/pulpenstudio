@@ -9,7 +9,8 @@ const RibbonBanner: React.FC<RibbonBannerProps> = ({ message }) => {
     <Box
       sx={{
         cursor: "pointer",
-        p: 2,
+        px: 2,
+        py: 1,
       }}
     >
       {message}

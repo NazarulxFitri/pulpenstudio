@@ -28,7 +28,7 @@ const EinviteLive: React.FC<EinviteLiveProps> = () => {
         {!data?.paid && (
           <Box
             sx={{
-              background: "rgba(238,236,225,0.8)",
+              background: "rgba(238,236,225,0.6)",
               fontWeight: "600",
               position: "fixed",
               width: "400px",
