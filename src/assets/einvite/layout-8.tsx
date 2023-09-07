@@ -175,7 +175,6 @@ const Layout8: React.FC = () => {
             height: "400px",
             background: "#FFF",
             boxShadow: "-4px -0 6px -4px #131313",
-            zIndex: "2",
             bottom: "160px",
             left: "40px",
           }}

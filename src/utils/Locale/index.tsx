@@ -11,9 +11,16 @@ interface LocaleConfig {
     CARD_COUNTDOWN_TITLE: string;
     CARD_COUNTDOWN_FINISH_TEXT: string;
     CARD_WISH_TITLE: string;
+    WIDGET_RSVP_TITLE: string;
     WIDGET_WISH_TITLE: string;
     WIDGET_LOCATION_TITLE: string;
     WIDGET_CONTACTUS_TITLE: string;
+    WIDGET_RSVP_ATTEND_TEXT: string;
+    WIDGET_RSVP_NOTATTEND_TEXT: string;
+    WIDGET_RSVP_PLACEHOLDER_FIRST: string;
+    WIDGET_RSVP_PLACEHOLDER_SECOND: string;
+    WIDGET_RSVP_PLACEHOLDER_THIRD: string;
+    WIDGET_RSVP_PLACEHOLDER_FOURTH: string;
     WIDGET_WISH_PLACEHOLDER_FIRST: string;
     WIDGET_WISH_PLACEHOLDER_SECOND: string;
     WIDGET_WISH_BUTTON: string;
@@ -38,9 +45,16 @@ export const locale: LocaleConfig = {
     CARD_COUNTDOWN_TITLE: "Menghitung Hari",
     CARD_COUNTDOWN_FINISH_TEXT: "Harinya sudah tiba",
     CARD_WISH_TITLE: "Kongsi ucapan anda bersama kami",
+    WIDGET_RSVP_TITLE: "RSVP",
     WIDGET_WISH_TITLE: "Ucapan",
     WIDGET_LOCATION_TITLE: "Lokasi",
     WIDGET_CONTACTUS_TITLE: "Hubungi Kami",
+    WIDGET_RSVP_ATTEND_TEXT: "Saya akan hadir",
+    WIDGET_RSVP_NOTATTEND_TEXT: "Maaf, saya tidak dapat hadir",
+    WIDGET_RSVP_PLACEHOLDER_FIRST: "Kehadiran",
+    WIDGET_RSVP_PLACEHOLDER_SECOND: "Nama",
+    WIDGET_RSVP_PLACEHOLDER_THIRD: "Nombor telefon",
+    WIDGET_RSVP_PLACEHOLDER_FOURTH: "Jumlah pax",
     WIDGET_WISH_PLACEHOLDER_FIRST: "Nama",
     WIDGET_WISH_PLACEHOLDER_SECOND: "Tulis ucapan di sini",
     WIDGET_WISH_BUTTON: "Hantar",
@@ -62,9 +76,16 @@ export const locale: LocaleConfig = {
     CARD_COUNTDOWN_TITLE: "Counting days",
     CARD_COUNTDOWN_FINISH_TEXT: "The Day",
     CARD_WISH_TITLE: "Share your wish",
+    WIDGET_RSVP_TITLE: "RSVP",
     WIDGET_WISH_TITLE: "Wish",
     WIDGET_LOCATION_TITLE: "Location",
     WIDGET_CONTACTUS_TITLE: "Reach Us",
+    WIDGET_RSVP_ATTEND_TEXT: "I will be attending",
+    WIDGET_RSVP_NOTATTEND_TEXT: "Sorry, I cant make it",
+    WIDGET_RSVP_PLACEHOLDER_FIRST: "Attendance",
+    WIDGET_RSVP_PLACEHOLDER_SECOND: "Name",
+    WIDGET_RSVP_PLACEHOLDER_THIRD: "Phone number",
+    WIDGET_RSVP_PLACEHOLDER_FOURTH: "Number of pax",
     WIDGET_WISH_PLACEHOLDER_FIRST: "Name",
     WIDGET_WISH_PLACEHOLDER_SECOND: "Write your wish here",
     WIDGET_WISH_BUTTON: "Submit",

@@ -7,6 +7,7 @@ interface CommentPopupProps {
   language: string;
   title: string;
   color: string;
+  setRsvpPopup: (value: boolean) => void;
   setCommentPopup: (value: boolean) => void;
   setLocationPopup: (value: boolean) => void;
   setContactPopup: (value: boolean) => void;
@@ -16,6 +17,7 @@ const CommentPopup: React.FC<CommentPopupProps> = ({
   language,
   title,
   color,
+  setRsvpPopup,
   setCommentPopup,
   setLocationPopup,
   setContactPopup,
@@ -46,6 +48,7 @@ const CommentPopup: React.FC<CommentPopupProps> = ({
           <Box
             sx={{ m: "0 0 0 auto" }}
             onClick={() => {
+              setRsvpPopup(false);
               setCommentPopup(false);
               setContactPopup(false);
               setLocationPopup(false);

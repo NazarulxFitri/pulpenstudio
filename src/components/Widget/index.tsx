@@ -7,6 +7,8 @@ import { useState } from "react";
 import LocationPopup from "./LocationPopup";
 import ContactPopup from "./ContactPopup";
 import { locale } from "@/utils/Locale";
+import RsvpIcon from "../Icons/RsvpIcon";
+import RsvpPopup from "./RsvpPopup";
 
 interface WidgetProps {
   language: string;
@@ -34,21 +36,31 @@ const Widget: React.FC<WidgetProps> = ({
   const [commentPopup, setCommentPopup] = useState(false);
   const [locationPopup, setLocationPopup] = useState(false);
   const [contactPopup, setContactPopup] = useState(false);
+  const [rsvpPopup, setRsvpPopup] = useState(false);
 
   function handleClick(item: string) {
+    if (item === "rsvp") {
+      setRsvpPopup(true);
+      setCommentPopup(false);
+      setLocationPopup(false);
+      setContactPopup(false);
+    }
     if (item === "comment") {
+      setRsvpPopup(false);
       setCommentPopup(true);
       setLocationPopup(false);
       setContactPopup(false);
     }
 
     if (item === "location") {
+      setRsvpPopup(false);
       setCommentPopup(false);
       setLocationPopup(true);
       setContactPopup(false);
     }
 
     if (item === "contact") {
+      setRsvpPopup(false);
       setCommentPopup(false);
       setLocationPopup(false);
       setContactPopup(true);
@@ -71,12 +83,26 @@ const Widget: React.FC<WidgetProps> = ({
         textAlign: "center",
       }}
     >
+      {rsvpPopup && (
+        <RsvpPopup
+          title={locale?.[language!]?.WIDGET_RSVP_TITLE!}
+          {...{
+            language,
+            color,
+            setRsvpPopup,
+            setCommentPopup,
+            setLocationPopup,
+            setContactPopup,
+          }}
+        />
+      )}
       {commentPopup && (
         <CommentPopup
           title={locale?.[language!]?.WIDGET_WISH_TITLE!}
           {...{
             language,
             color,
+            setRsvpPopup,
             setCommentPopup,
             setLocationPopup,
             setContactPopup,
@@ -89,6 +115,7 @@ const Widget: React.FC<WidgetProps> = ({
           {...{
             color,
             location,
+            setRsvpPopup,
             setCommentPopup,
             setLocationPopup,
             setContactPopup,
@@ -101,24 +128,29 @@ const Widget: React.FC<WidgetProps> = ({
           {...{
             color,
             contact,
+            setRsvpPopup,
             setCommentPopup,
             setLocationPopup,
             setContactPopup,
           }}
         />
       )}
-
-      <Grid item xs={4}>
+      <Grid item xs={3}>
+        <Box onClick={() => handleClick("rsvp")}>
+          <RsvpIcon />
+        </Box>
+      </Grid>
+      <Grid item xs={3}>
         <Box onClick={() => handleClick("comment")}>
           <PenIcon />
         </Box>
       </Grid>
-      <Grid item xs={4}>
+      <Grid item xs={3}>
         <Box onClick={() => handleClick("location")}>
           <MapIcon />
         </Box>
       </Grid>
-      <Grid item xs={4}>
+      <Grid item xs={3}>
         <Box onClick={() => handleClick("contact")}>
           <WhatsappIcon />
         </Box>

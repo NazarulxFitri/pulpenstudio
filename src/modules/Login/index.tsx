@@ -11,10 +11,8 @@ import {
 import { useState } from "react";
 import RegisterAcc from "./RegisterAcc";
 import useGetUser from "@/data/useGetUser";
-import { useRouter } from "next/router";
 
 const Login = () => {
-  const router = useRouter();
   const { data } = useGetUser();
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");

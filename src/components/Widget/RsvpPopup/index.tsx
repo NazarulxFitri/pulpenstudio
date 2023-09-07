@@ -1,25 +1,22 @@
-import CommentForm from "@/components/Forms/CommentForm";
+import RsvpForm from "@/components/Forms/RsvpForm";
 import CloseIcon from "@/components/Icons/CloseIcon";
-import MapIcon from "@/components/Icons/MapIcon";
+import { locale } from "@/utils/Locale";
 import { Box } from "@mui/material";
 
-interface LocationPopupProps {
+interface RsvpPopupProp {
+  language: string;
   title: string;
   color: string;
-  location: {
-    text: string;
-    mapUrl: string;
-  };
   setRsvpPopup: (value: boolean) => void;
   setCommentPopup: (value: boolean) => void;
   setLocationPopup: (value: boolean) => void;
   setContactPopup: (value: boolean) => void;
 }
 
-const LocationPopup: React.FC<LocationPopupProps> = ({
+const RsvpPopup: React.FC<RsvpPopupProp> = ({
+  language,
   title,
   color,
-  location,
   setRsvpPopup,
   setCommentPopup,
   setLocationPopup,
@@ -40,7 +37,7 @@ const LocationPopup: React.FC<LocationPopupProps> = ({
           background: "#FFF",
           bottom: "0",
           position: "absolute",
-          height: "296px",
+          height: "416px",
           width: "100%",
         }}
       >
@@ -60,32 +57,21 @@ const LocationPopup: React.FC<LocationPopupProps> = ({
             <CloseIcon color="#333" />
           </Box>
         </Box>
-        <Box sx={{ textAlign: "left", p: "0 16px" }}>
-          <p style={{ color: "#333" }}>{location?.text}</p>
-          <a
-            style={{ color: "unset", textDecoration: "none" }}
-            href={location?.mapUrl}
-            target="__blank"
-          >
-            <Box
-              mt={4}
-              sx={{
-                background: color,
-                borderRadius: "8px",
-                cursor: "pointer",
-                display: "flex",
-                p: 2,
-                justifyContent: "center",
-              }}
-              gap={2}
-            >
-              Google Map <MapIcon />
-            </Box>
-          </a>
+        <Box sx={{ display: "flex", textAlign: "left", p: "0 16px" }}>
+          <RsvpForm
+            localeAttend={locale?.[language]?.WIDGET_RSVP_ATTEND_TEXT}
+            localeNotAttend={locale?.[language]?.WIDGET_RSVP_NOTATTEND_TEXT}
+            textAttendance={locale?.[language]?.WIDGET_RSVP_PLACEHOLDER_FIRST}
+            textName={locale?.[language]?.WIDGET_RSVP_PLACEHOLDER_SECOND}
+            textPhoneNumber={locale?.[language]?.WIDGET_RSVP_PLACEHOLDER_THIRD}
+            textPax={locale?.[language]?.WIDGET_RSVP_PLACEHOLDER_FOURTH}
+            textButton={locale?.[language]?.WIDGET_WISH_BUTTON}
+            themeColor={color}
+          />
         </Box>
       </Box>
     </Box>
   );
 };
 
-export default LocationPopup;
+export default RsvpPopup;

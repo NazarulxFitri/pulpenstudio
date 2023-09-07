@@ -13,6 +13,7 @@ interface ContactPopupProps {
     name1: string;
     name2: string;
   };
+  setRsvpPopup: (value: boolean) => void;
   setCommentPopup: (value: boolean) => void;
   setLocationPopup: (value: boolean) => void;
   setContactPopup: (value: boolean) => void;
@@ -22,6 +23,7 @@ const ContactPopup: React.FC<ContactPopupProps> = ({
   title,
   color,
   contact,
+  setRsvpPopup,
   setCommentPopup,
   setLocationPopup,
   setContactPopup,
@@ -52,6 +54,7 @@ const ContactPopup: React.FC<ContactPopupProps> = ({
           <Box
             sx={{ m: "0 0 0 auto" }}
             onClick={() => {
+              setRsvpPopup(false);
               setCommentPopup(false);
               setContactPopup(false);
               setLocationPopup(false);

@@ -26,6 +26,12 @@ export interface EInviteConfig {
   paid: boolean;
   userId: string;
   createdAt: string;
+  rsvp?: {
+    attendance: string;
+    name: string;
+    phoneNumber: string;
+    pax: number;
+  }[];
   comments?: {
     message: string;
     name: string;
@@ -61,8 +67,9 @@ export default function useGetEinvite(id?: string) {
     const rawData = snapshot.current;
     const data: EInviteConfig = rawData?.[id]!;
     const commentsLength = data?.comments?.length || 0;
+    const rsvpLength = data?.rsvp?.length || 0;
     const layout = data?.layout;
 
-    return { data, layout, commentsLength, isLoading };
+    return { data, layout, commentsLength, rsvpLength, isLoading };
   }
 }
