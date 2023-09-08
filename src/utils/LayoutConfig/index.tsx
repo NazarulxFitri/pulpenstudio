@@ -63,7 +63,7 @@ export const layoutConfig = [
     discountedPrice: "RM50.00",
     images: [
       "/media/cardSelection/card-4/main.png",
-      "/media/cardSelection/card-4/main.png",
+      "/media/cardSelection/card-4/2-image.png",
     ],
     font: ["Quicksand", "Tangerine", "Poiret One"],
     description:
@@ -82,7 +82,7 @@ export const layoutConfig = [
     discountedPrice: "RM50.00",
     images: [
       "/media/cardSelection/card-5/main.png",
-      "/media/cardSelection/card-5/main.png",
+      "/media/cardSelection/card-5/2-image.png",
     ],
     font: ["Dancing Script", "Playfair", "Poiret One"],
     description:
@@ -101,7 +101,7 @@ export const layoutConfig = [
     discountedPrice: "RM50.00",
     images: [
       "/media/cardSelection/card-6/main.png",
-      "/media/cardSelection/card-6/main.png",
+      "/media/cardSelection/card-6/2-image.png",
     ],
     font: ["Allura", "Playfair", "Tangerine"],
     description:

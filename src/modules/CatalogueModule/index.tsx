@@ -11,6 +11,7 @@ export const Text = styled("p")(() => ({
   background: "#FFF",
   fontWeight: "700",
   margin: "8px 0",
+  textAlign: "center",
 }));
 
 export const CategoryText = styled("p")(() => ({
@@ -24,13 +25,17 @@ export const CategoryText = styled("p")(() => ({
 }));
 
 export const Button2 = styled(Link)(() => ({
-  background: "#eeece1",
+  border: "2px solid #eeece1",
+  borderRadius: "24px",
   color: "#333",
   cursor: "pointer",
   fontWeight: "500",
   textDecoration: "none",
   padding: "8px 24px",
   margin: "8px 0",
+  "&:hover": {
+    background: "#eeece1",
+  },
 }));
 
 const CatalogueModule: React.FC<CatalogueModuleProps> = ({}) => {
@@ -61,8 +66,8 @@ const CatalogueModule: React.FC<CatalogueModuleProps> = ({}) => {
               >
                 <Image
                   src={item.images?.[0]!}
-                  width={288}
-                  height={496}
+                  width={248}
+                  height={480}
                   alt={item.layoutid}
                 />
               </Box>
@@ -75,7 +80,7 @@ const CatalogueModule: React.FC<CatalogueModuleProps> = ({}) => {
               >
                 <Image
                   src={item.images?.[0]!}
-                  width={144}
+                  width={128}
                   height={248}
                   alt={item.layoutid}
                 />
@@ -98,7 +103,7 @@ const CatalogueModule: React.FC<CatalogueModuleProps> = ({}) => {
                   </span>
                 </Text>
               </Box>
-              <Box mt={3}>
+              <Box sx={{ width: "fit-content", margin: "24px auto 0" }}>
                 <Button2 href={`/detail?layoutid=${item.layoutid}`}>
                   More Info
                 </Button2>

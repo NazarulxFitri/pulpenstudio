@@ -1,10 +1,16 @@
 import { BoxContainer } from "@/components";
 import { layoutConfig } from "@/utils/LayoutConfig";
-import { Box, Grid } from "@mui/material";
+import { Box, Grid, styled } from "@mui/material";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import { Button2, CategoryText, Text } from "../CatalogueModule";
+import { Button2, CategoryText } from "../CatalogueModule";
 import BreadcrumbModule from "../BreadcrumbModule";
+
+export const Text = styled("p")(() => ({
+  background: "#FFF",
+  fontWeight: "700",
+  margin: "8px 0",
+}));
 
 const DetailModule = ({}) => {
   const router = useRouter();
@@ -35,6 +41,7 @@ const DetailModule = ({}) => {
                 alt={selectedLayout?.layoutid!}
                 width={288}
                 height={496}
+                style={{ marginRight: "24px" }}
               />
             ))}
           </Box>

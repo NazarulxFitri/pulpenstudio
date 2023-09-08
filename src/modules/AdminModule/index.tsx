@@ -19,8 +19,6 @@ const AdminModule: React.FC<AdminModuleProps> = ({ data }) => {
   const [totalPax, setTotalPax] = useState(0);
   const rsvpData = data?.rsvp;
 
-  console.log("xxxx rsvpdata", rsvpData);
-
   useEffect(() => {
     let total = 0;
     rsvpData?.forEach((i) => {
