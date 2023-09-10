@@ -1,4 +1,13 @@
-import { ChatIcon, PenIcon, RocketIcon, SupportIcon } from "@/components";
+import {
+  ChatIcon,
+  MapIcon,
+  MusicIcon,
+  PenIcon,
+  RocketIcon,
+  SupportIcon,
+  WhatsappIcon,
+  WrenchIcon,
+} from "@/components";
 import BannerModule from "@/modules/BannerModule";
 import { layoutConfig } from "@/utils/LayoutConfig";
 import { Box, Container, Grid } from "@mui/material";
@@ -109,7 +118,7 @@ export default function Home() {
         </Link>
       </Box>
       <Container>
-        <Box mt={6} mx={{ xs: 1, md: 8 }}>
+        <Box mt={6}>
           <p
             style={{
               fontSize: "24px",
@@ -129,8 +138,20 @@ export default function Home() {
               xs={6}
               md={3}
             >
+              <WrenchIcon size="40" />
+              <p style={{ marginTop: "8px" }}>Customizable</p>
+            </Grid>
+            <Grid
+              item
+              sx={{
+                p: 2,
+                textAlign: "center",
+              }}
+              xs={6}
+              md={3}
+            >
               <RocketIcon size="40" />
-              <p style={{ marginTop: "8px" }}>Quick & Free design</p>
+              <p style={{ marginTop: "8px" }}>Quick setup</p>
             </Grid>
             <Grid
               item
@@ -142,7 +163,7 @@ export default function Home() {
               md={3}
             >
               <ChatIcon size="40" />
-              <p style={{ marginTop: "8px" }}>Real time comment</p>
+              <p style={{ marginTop: "8px" }}>Share wishes</p>
             </Grid>
             <Grid
               item
@@ -154,7 +175,7 @@ export default function Home() {
               md={3}
             >
               <PenIcon size="40" />
-              <p style={{ marginTop: "8px" }}>Configureable widgets</p>
+              <p style={{ marginTop: "8px" }}>RSVP</p>
             </Grid>
             <Grid
               item
@@ -167,6 +188,42 @@ export default function Home() {
             >
               <SupportIcon size="40" />
               <p style={{ marginTop: "8px" }}>Live Support</p>
+            </Grid>
+            <Grid
+              item
+              sx={{
+                p: 2,
+                textAlign: "center",
+              }}
+              xs={6}
+              md={3}
+            >
+              <MusicIcon size="40" />
+              <p style={{ marginTop: "8px" }}>Choose Music</p>
+            </Grid>
+            <Grid
+              item
+              sx={{
+                p: 2,
+                textAlign: "center",
+              }}
+              xs={6}
+              md={3}
+            >
+              <MapIcon size="40" />
+              <p style={{ marginTop: "8px" }}>Add Location</p>
+            </Grid>
+            <Grid
+              item
+              sx={{
+                p: 2,
+                textAlign: "center",
+              }}
+              xs={6}
+              md={3}
+            >
+              <WhatsappIcon size="40" />
+              <p style={{ marginTop: "8px" }}>Link to Whatsapp</p>
             </Grid>
           </Grid>
         </Box>

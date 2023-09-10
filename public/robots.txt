@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.pulpenstudio.com
+
+# Sitemaps
+Sitemap: https://www.pulpenstudio.com/sitemap.xml

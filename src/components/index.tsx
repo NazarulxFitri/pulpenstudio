@@ -30,3 +30,4 @@ export { default as LiveSupportIcon } from "./Icons/LiveSupportIcon";
 export { default as RsvpIcon } from "./Icons/RsvpIcon";
 export { default as InstagramIcon } from "./Icons/InstagramIcon";
 export { default as HomeIcon } from "./Icons/HomeIcon";
+export { default as WrenchIcon } from "./Icons/WrenchIcon";

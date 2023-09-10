@@ -1,3 +1,4 @@
+import { InstagramIcon } from "@/components";
 import { Box } from "@mui/material";
 import Link from "next/link";
 
@@ -13,23 +14,79 @@ const Footer = () => {
         zIndex: { xs: "3", md: "unset" },
       }}
     >
-      <Box sx={{ display: "flex", mx: "auto", py: 2, width: "fit-content" }}>
-        <Link
-          href="https://instagram.com/pulpenstudio?utm_source=qr&igshid=MThlNWY1MzQwNA=="
-          target="__blank"
-          style={{ color: "#333", textDecoration: "none" }}
+      <Box
+        sx={{
+          display: "flex",
+          mx: "auto",
+          py: { xs: 2, md: 8 },
+          width: "fit-content",
+          flexDirection: { xs: "column", md: "row" },
+        }}
+      >
+        <Box
+          mr={{ xs: 0, md: 6 }}
+          sx={{
+            display: "flex",
+            textAlign: { xs: "center", md: "unset" },
+            flexDirection: "column",
+            pr: { xs: 0, md: 6 },
+            py: { xs: 6, md: 0 },
+            borderRight: { xs: "none", md: "1px solid #D0D0D0" },
+          }}
         >
-          <p
+          <Link
+            href="/account"
             style={{
-              textAlign: "center",
-              fontSize: "12px",
-              fontWeight: "700",
+              color: "#333333",
+              fontSize: "16px",
+              textDecoration: "none",
             }}
           >
-            Follow us at Instagram{" "}
-            <span style={{ fontSize: "24px" }}>@pulpenstudio</span>
-          </p>
-        </Link>
+            My Account
+          </Link>
+          <Link
+            style={{
+              color: "#333333",
+              fontSize: "16px",
+              textDecoration: "none",
+              marginTop: "12px",
+            }}
+            href="/catalogue"
+          >
+            Catalogue
+          </Link>
+          <Link
+            style={{
+              color: "#333333",
+              fontSize: "16px",
+              textDecoration: "none",
+              marginTop: "12px",
+            }}
+            href="/faq"
+          >
+            FAQ
+          </Link>
+        </Box>
+        <Box sx={{ height: "fit-content", my: "auto" }}>
+          <Link
+            href="https://instagram.com/pulpenstudio?utm_source=qr&igshid=MThlNWY1MzQwNA=="
+            target="__blank"
+            style={{ color: "#333", textDecoration: "none" }}
+          >
+            <p
+              style={{
+                textAlign: "center",
+                fontSize: "12px",
+              }}
+            >
+              Follow us at Instagram
+              <span style={{ fontSize: "24px", margin: "0 8px" }}>
+                @pulpenstudio
+              </span>
+              <InstagramIcon />
+            </p>
+          </Link>
+        </Box>
       </Box>
 
       <Box
@@ -47,7 +104,6 @@ const Footer = () => {
             color: "#909090",
             textAlign: "center",
             fontSize: "12px",
-            fontWeight: "700",
           }}
         >
           Copyright © 2023 Pulpen Studio . All rights reserved
