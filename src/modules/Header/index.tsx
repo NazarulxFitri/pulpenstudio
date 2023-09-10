@@ -1,6 +1,6 @@
 import { Box, Tooltip, styled } from "@mui/material";
 import Link from "next/link";
-import { CloseIcon, MenuIcon } from "@/components";
+import { CloseIcon, HomeIcon, MenuIcon } from "@/components";
 import { useState } from "react";
 import useGetUserId from "@/utils/useGetUserId";
 import useGetEinvite from "@/data/useGetEinvite";
@@ -80,6 +80,9 @@ const Header = () => {
         {menuOpen ? <CloseIcon color="#333" /> : <MenuIcon />}
       </Box>
       <Box display={{ xs: "none", md: "flex" }} sx={{ margin: "0 0 0 auto" }}>
+        <LinkMenu href="/">
+          <HomeIcon />
+        </LinkMenu>
         <LinkMenu href="/catalogue">Catalogue</LinkMenu>
         <LinkMenu href="/account">
           My Account
@@ -117,6 +120,9 @@ const Header = () => {
           display={{ xs: "block", md: "none" }}
           sx={{ margin: "0 0 0 auto" }}
         >
+          <LinkMenu href="/">
+            <HomeIcon />
+          </LinkMenu>
           <LinkMenu href="/catalogue">Catalogue</LinkMenu>
           <LinkMenu href="/account">My Account</LinkMenu>
           <LinkMenu href="/faq">FAQ</LinkMenu>

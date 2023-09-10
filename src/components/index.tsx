@@ -29,3 +29,4 @@ export { default as RocketIcon } from "./Icons/RocketIcon";
 export { default as LiveSupportIcon } from "./Icons/LiveSupportIcon";
 export { default as RsvpIcon } from "./Icons/RsvpIcon";
 export { default as InstagramIcon } from "./Icons/InstagramIcon";
+export { default as HomeIcon } from "./Icons/HomeIcon";
