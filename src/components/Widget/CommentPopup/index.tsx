@@ -25,7 +25,6 @@ const CommentPopup: React.FC<CommentPopupProps> = ({
   return (
     <Box
       sx={{
-        background: "rgba(0,0,0,0.4)",
         bottom: "60px",
         width: "100%",
         height: "100vh",
@@ -33,6 +32,7 @@ const CommentPopup: React.FC<CommentPopupProps> = ({
       }}
     >
       <Box
+        className="animate__animated animate__backInUp"
         sx={{
           background: "#FFF",
           bottom: "0",

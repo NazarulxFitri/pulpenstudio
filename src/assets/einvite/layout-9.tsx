@@ -1,12 +1,9 @@
 import { Box, Container, Grid, List, Paper, styled } from "@mui/material";
 import {
-  Cinzel,
   Clicker_Script,
-  Cormorant,
   Great_Vibes,
   Petit_Formal_Script,
   Playfair_Display,
-  Rouge_Script,
   Ubuntu,
 } from "next/font/google";
 import useGetEinvite from "@/data/useGetEinvite";
@@ -24,9 +21,7 @@ const playfair = Playfair_Display({
   subsets: ["latin"],
   weight: ["400", "500", "700"],
 });
-const petit = Petit_Formal_Script({ subsets: ["latin"], weight: "400" });
 const clickerScript = Clicker_Script({ subsets: ["latin"], weight: ["400"] });
-const greatVibes = Great_Vibes({ subsets: ["latin"], weight: ["400"] });
 
 interface DateTimeConfig {
   countdownTimer: {
@@ -54,12 +49,6 @@ const SubTitle = styled("p")(() => ({
   textTransform: "uppercase",
   fontFamily: `${playfair.style.fontFamily} !important` || "auto",
   textAlign: "center",
-}));
-
-const Text = styled("p")(() => ({
-  color: " #2573A2",
-  fontSize: "16px",
-  fontFamily: `${playfair.style.fontFamily} !important` || "auto",
 }));
 
 const MiniText = styled("p")(() => ({
@@ -323,12 +312,16 @@ const Layout9: React.FC = () => {
           />
 
           <Title
+            className="animate__animated animate__zoomIn animate__slow"
             style={{ margin: "48px 0" }}
             dangerouslySetInnerHTML={{
               __html: `${item?.title1Groom} <span style="display: block; font-size: 24px;">&</span>${item?.title1Bride}`,
             }}
           />
-          <Box display="flex">
+          <Box
+            display="flex"
+            className="animate__animated animate__zoomIn animate__delay-1s animate__slow"
+          >
             <Box sx={{ height: "fit-content", m: "auto", px: 2 }}>
               <SubTitle
                 style={{ fontSize: "16px", letterSpacing: "0.15em" }}
@@ -377,12 +370,14 @@ const Layout9: React.FC = () => {
             </Box>
           </Box>
           <SubTitle
+            className="animate__animated animate__zoomIn animate__delay-2s animate__slow"
             style={{ marginTop: "24px" }}
             dangerouslySetInnerHTML={{
               __html: timeStart,
             }}
           />
           <SubTitle
+            className="animate__animated animate__zoomIn animate__delay-3s animate__slow"
             dangerouslySetInnerHTML={{
               __html: item?.location!,
             }}

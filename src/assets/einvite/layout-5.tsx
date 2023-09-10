@@ -194,12 +194,14 @@ const Layout5: React.FC = () => {
               }}
             />
             <Title
+              className="animate__animated animate__zoomIn animate__slow"
               style={{ marginTop: "24px", lineHeight: "0.75em" }}
               dangerouslySetInnerHTML={{
                 __html: `<span style="margin-right: 24px;">${item?.title1Groom}</span> <br><span style="font-size: 20px">&</span><br> <spanstyle="margin-left: 24px;">${item?.title1Bride}</span>`,
               }}
             />
             <Box
+              className="animate__animated animate__zoomIn animate__slow animate__delay-1s"
               sx={{
                 display: "flex",
                 justifyContent: "center",
@@ -233,15 +235,17 @@ const Layout5: React.FC = () => {
               />
             </Box>
             <MiniText
+              className="animate__animated animate__zoomIn animate__slow animate__delay-2s"
               style={{
+                marginTop: "24px",
                 fontSize: "12px",
               }}
               dangerouslySetInnerHTML={{ __html: item?.location! }}
             />
             <MiniText
+              className="animate__animated animate__zoomIn animate__slow animate__delay-3s"
               style={{
                 fontSize: "12px",
-                marginTop: "24px",
               }}
               dangerouslySetInnerHTML={{
                 __html: `#${item?.title1Groom}${item?.title1Bride}`,

@@ -191,6 +191,7 @@ const Layout8: React.FC = () => {
         >
           <Box mb={3}>
             <MiniText
+              className="animate__animated animate__zoomIn animate__delay-1s animate__slow"
               style={{ fontSize: "16px" }}
               dangerouslySetInnerHTML={{
                 __html: locale?.[item?.language!]?.INTRO_FIRST,
@@ -204,6 +205,7 @@ const Layout8: React.FC = () => {
             />
           </Box>
           <Title
+            className="animate__animated animate__zoomIn animate__slow"
             style={{ textShadow: "4px 4px 4px #c4d3ec" }}
             dangerouslySetInnerHTML={{
               __html: `${item?.title1Groom}<br>& ${item?.title1Bride}`,
@@ -217,6 +219,7 @@ const Layout8: React.FC = () => {
               height={9}
             />
             <Text
+              className="animate__animated animate__zoomIn animate__delay-1s animate__slow"
               style={{ fontSize: "24px", marginTop: "8px" }}
               dangerouslySetInnerHTML={{
                 __html: `${dateText} ${monthText} ${yearText}`,

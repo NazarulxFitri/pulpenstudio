@@ -147,22 +147,34 @@ const Layout1: React.FC = () => {
             }}
           />
           <MiniText
+            className="animate__animated animate__zoomIn animate__slow animate__delay-1s"
             sx={{ letterSpacing: "0.25em", mb: 5, textTransform: "uppercase" }}
             dangerouslySetInnerHTML={{
               __html: locale[item?.language!]?.INTRO_FIRST!,
             }}
           />
           <Title
+            className="animate__animated animate__zoomIn animate__slow"
             sx={{ mb: 5, textShadow: "8px 8px 8px #FDE6E8" }}
             dangerouslySetInnerHTML={{
               __html: `${item?.title1Groom} <br/> & <br/> ${item?.title1Bride}`,
             }}
           />
           <Grid container justifyContent="left" mb={5} rowSpacing={0.5}>
-            <Grid item borderLeft="8px solid #FDE6E8" px={2}>
+            <Grid
+              item
+              borderLeft="8px solid #FDE6E8"
+              px={2}
+              className="animate__animated animate__zoomIn animate__slow animate__delay-1s"
+            >
               <Text dangerouslySetInnerHTML={{ __html: fullDate }} />
             </Grid>
-            <Grid item borderLeft="8px solid #FDE6E8" px={2}>
+            <Grid
+              item
+              borderLeft="8px solid #FDE6E8"
+              px={2}
+              className="animate__animated animate__zoomIn animate__slow animate__delay-2s"
+            >
               <Text dangerouslySetInnerHTML={{ __html: item?.location! }} />
             </Grid>
           </Grid>

@@ -25,7 +25,7 @@ const EinviteLive: React.FC<EinviteLiveProps> = () => {
         />
       </Head>
       <Grid item xs={12}>
-        {!data?.paid && (
+        {/* {!data?.paid && (
           <Box
             sx={{
               background: "rgba(238,236,225,0.6)",
@@ -45,7 +45,7 @@ const EinviteLive: React.FC<EinviteLiveProps> = () => {
               <RibbonBanner message="The card is now ready. Please click here to confirm the card and proceed with payment." />
             </Link>
           </Box>
-        )}
+        )} */}
         {listLayout[data?.layout]}
       </Grid>
     </Box>

@@ -166,11 +166,13 @@ const Layout3: React.FC = () => {
           }}
         >
           <Text
+            className="animate__animated animate__zoomIn animate__slow"
             sx={{
               color: "#7c1d64",
               letterSpacing: "0.5em",
               mb: 5,
               fontSize: "20px",
+              textTransform: "uppercase",
             }}
             dangerouslySetInnerHTML={{
               __html: locale?.[item?.language!]?.INTRO_FIRST,
@@ -195,6 +197,7 @@ const Layout3: React.FC = () => {
               }}
             >
               <Title
+                className="animate__animated animate__zoomIn animate__slow"
                 sx={{
                   fontSize: "48px",
                   fontWeight: "lighter",
@@ -207,6 +210,7 @@ const Layout3: React.FC = () => {
             </Box>
           </Box>
           <MiniText
+            className="animate__animated animate__zoomIn animate__slow animate__delay-1s"
             sx={{
               color: "#7c1d64",
               fontWeight: "700",
@@ -216,9 +220,12 @@ const Layout3: React.FC = () => {
             dangerouslySetInnerHTML={{ __html: fullDate }}
           />
           <Text
+            className="animate__animated animate__zoomIn animate__slow animate__delay-2s"
             sx={{
               color: "#7c1d64",
               fontWeight: "bolder",
+              marginTop: "16px",
+              letterSpacing: "0.15em",
             }}
             dangerouslySetInnerHTML={{ __html: item?.location! }}
           />

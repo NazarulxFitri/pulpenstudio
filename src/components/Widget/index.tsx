@@ -9,6 +9,7 @@ import ContactPopup from "./ContactPopup";
 import { locale } from "@/utils/Locale";
 import RsvpIcon from "../Icons/RsvpIcon";
 import RsvpPopup from "./RsvpPopup";
+import PhoneIcon from "../Icons/PhoneIcon";
 
 interface WidgetProps {
   language: string;
@@ -152,7 +153,7 @@ const Widget: React.FC<WidgetProps> = ({
       </Grid>
       <Grid item xs={3}>
         <Box onClick={() => handleClick("contact")}>
-          <WhatsappIcon />
+          <PhoneIcon />
         </Box>
       </Grid>
     </Grid>

@@ -186,6 +186,7 @@ const Layout6: React.FC = () => {
           }}
         >
           <MiniText
+            className="animate__animated animate__zoomIn animate__slow animate__delay-1s"
             style={{
               letterSpacing: "0.25em",
               fontSize: "14px",
@@ -195,6 +196,7 @@ const Layout6: React.FC = () => {
             }}
           />
           <MiniText
+            className="animate__animated animate__zoomIn animate__slow"
             style={{
               fontWeight: "bolder",
               letterSpacing: "0.15em",
@@ -247,6 +249,7 @@ const Layout6: React.FC = () => {
           </Box>
           <Box sx={{ position: "relative", zIndex: 2 }}>
             <Title
+              className="animate__animated animate__zoomIn animate__slow"
               style={{ lineHeight: "0.75em" }}
               dangerouslySetInnerHTML={{
                 __html: `<span style="margin-right: 24px;">${item?.title1Groom}</span> <br><span style="font-size: 20px">&</span><br> <spanstyle="margin-left: 24px;">${item?.title1Bride}</span>`,
@@ -256,6 +259,7 @@ const Layout6: React.FC = () => {
         </Box>
 
         <Box
+          className="animate__animated animate__zoomIn animate__slow animate__delay-1s"
           sx={{
             position: "absolute",
             bottom: "15%",

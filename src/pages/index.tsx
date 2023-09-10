@@ -1,12 +1,14 @@
 import { ChatIcon, PenIcon, RocketIcon, SupportIcon } from "@/components";
 import BannerModule from "@/modules/BannerModule";
-import HowToOrderModule from "@/modules/HowToOrderModule";
-import { Box, Grid } from "@mui/material";
+import { layoutConfig } from "@/utils/LayoutConfig";
+import { Box, Container, Grid } from "@mui/material";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
+  const layouts = layoutConfig;
+
   return (
     <Box>
       <Head>
@@ -44,14 +46,34 @@ export default function Home() {
         />
       </Box>
       <BannerModule />
-      <Box my={6} mx={8}>
-        <HowToOrderModule />
-      </Box>
+      <Container>
+        <Box
+          sx={{
+            whiteSpace: "nowrap",
+            display: "flex",
+            my: 8,
+            overflow: "scroll",
+          }}
+        >
+          {layouts?.map((i, idx) => (
+            <Box px={2} key={idx}>
+              <Link href={`/detail?layoutid=${i.layoutid}`}>
+                <Image
+                  key={i.name}
+                  src={i.images[0]}
+                  alt={i.name}
+                  width={248}
+                  height={480}
+                />
+              </Link>
+            </Box>
+          ))}
+        </Box>
+      </Container>
       <Box
         sx={{
           background: "#eeece1",
           fontSize: "16px",
-          fontWeight: "700",
           textAlign: "justify",
           textAlignLast: "center",
           lineHeight: "1.5em",
@@ -59,10 +81,12 @@ export default function Home() {
           py: 4,
         }}
       >
-        <Box sx={{ mx: 6 }}>
-          Create your own digital invitation card. Pulpen Studio will help you
-          with variety tools we provided. Let your creativity colors your dream
-        </Box>
+        <Container>
+          Try our digital invitation card for <b>FREE</b> !
+          <br />
+          Check out our designs and create your dream digital invitation card
+          now
+        </Container>
         <Link
           href="/catalogue"
           style={{ textDecoration: "none", color: "unset" }}
@@ -84,88 +108,69 @@ export default function Home() {
           </Box>
         </Link>
       </Box>
-      <Box mt={6} mx={{ xs: 1, md: 8 }}>
-        <p
-          style={{
-            fontSize: "24px",
-            fontWeight: "700",
-            textAlign: "center",
-          }}
-        >
-          Features +
-        </p>
-        <Grid container mt={3}>
-          <Grid
-            item
-            sx={{
-              p: 2,
+      <Container>
+        <Box mt={6} mx={{ xs: 1, md: 8 }}>
+          <p
+            style={{
+              fontSize: "24px",
+              fontWeight: "700",
               textAlign: "center",
             }}
-            xs={6}
-            md={3}
           >
-            <RocketIcon size="40" />
-            <p style={{ fontWeight: "700", marginTop: "8px" }}>
-              Quick & Free design
-            </p>
-            <p style={{ marginTop: "16px", textAlign: "justify" }}>
-              Create your card within 10 minutes ! The card will be ready to be
-              viewed as soon you completed it
-            </p>
+            Features +
+          </p>
+          <Grid container mt={3}>
+            <Grid
+              item
+              sx={{
+                p: 2,
+                textAlign: "center",
+              }}
+              xs={6}
+              md={3}
+            >
+              <RocketIcon size="40" />
+              <p style={{ marginTop: "8px" }}>Quick & Free design</p>
+            </Grid>
+            <Grid
+              item
+              sx={{
+                p: 2,
+                textAlign: "center",
+              }}
+              xs={6}
+              md={3}
+            >
+              <ChatIcon size="40" />
+              <p style={{ marginTop: "8px" }}>Real time comment</p>
+            </Grid>
+            <Grid
+              item
+              sx={{
+                p: 2,
+                textAlign: "center",
+              }}
+              xs={6}
+              md={3}
+            >
+              <PenIcon size="40" />
+              <p style={{ marginTop: "8px" }}>Configureable widgets</p>
+            </Grid>
+            <Grid
+              item
+              sx={{
+                p: 2,
+                textAlign: "center",
+              }}
+              xs={6}
+              md={3}
+            >
+              <SupportIcon size="40" />
+              <p style={{ marginTop: "8px" }}>Live Support</p>
+            </Grid>
           </Grid>
-          <Grid
-            item
-            sx={{
-              p: 2,
-              textAlign: "center",
-            }}
-            xs={6}
-            md={3}
-          >
-            <ChatIcon size="40" />
-            <p style={{ fontWeight: "700", marginTop: "8px" }}>
-              Real time comment
-            </p>
-            <p style={{ marginTop: "16px", textAlign: "justify" }}>
-              Enjoy the realtime live comment with your guest
-            </p>
-          </Grid>
-          <Grid
-            item
-            sx={{
-              p: 2,
-              textAlign: "center",
-            }}
-            xs={6}
-            md={3}
-          >
-            <PenIcon size="40" />
-            <p style={{ fontWeight: "700", marginTop: "8px" }}>
-              Configureable widgets
-            </p>
-            <p style={{ marginTop: "16px", textAlign: "justify" }}>
-              You can choose your own music, insert google map location and
-              whatsapp link to entertain and assist your guest
-            </p>
-          </Grid>
-          <Grid
-            item
-            sx={{
-              p: 2,
-              textAlign: "center",
-            }}
-            xs={6}
-            md={3}
-          >
-            <SupportIcon size="40" />
-            <p style={{ fontWeight: "700", marginTop: "8px" }}>Live Support</p>
-            <p style={{ marginTop: "16px", textAlign: "justify" }}>
-              Our live support will always be there for you to ensure every
-              process runs smooth for you
-            </p>
-          </Grid>
-        </Grid>
-      </Box>
+        </Box>
+      </Container>
     </Box>
   );
 }

@@ -2,7 +2,6 @@ import { Box, Container, Grid, List, Paper, styled } from "@mui/material";
 import {
   Cinzel,
   Cormorant,
-  Dancing_Script,
   Playfair_Display,
   Tangerine,
   Ubuntu,
@@ -117,9 +116,6 @@ const Layout7: React.FC = () => {
     "Nov",
     "Dec",
   ];
-  const monthText = monthsList[monthRaw];
-  const dateText = dateJs.getDate();
-  const yearText = dateJs.getFullYear();
 
   const currentDate = new Date().getTime();
   const selectedDate = dateJs.getTime();
@@ -231,6 +227,7 @@ const Layout7: React.FC = () => {
               height={25}
             />
             <SubTitle
+              className="animate__animated animate__zoomIn animate__slow animate__delay-1s"
               style={{
                 fontSize: "12px",
                 margin: "8px auto 0",
@@ -244,12 +241,14 @@ const Layout7: React.FC = () => {
             />
           </Box>
           <Title
+            className="animate__animated animate__zoomIn animate__slow"
             dangerouslySetInnerHTML={{
               __html: `${item?.title1Groom!}<span style="display: block;font-size: 32px">&</span>${item?.title1Bride!}`,
             }}
           />
           <Box mt={6}>
             <Text
+              className="animate__animated animate__zoomIn animate__slow animate__delay-1s"
               style={{ fontSize: "16px" }}
               dangerouslySetInnerHTML={{
                 __html: item?.location!,
@@ -257,12 +256,14 @@ const Layout7: React.FC = () => {
             />
 
             <Text
+              className="animate__animated animate__zoomIn animate__slow animate__delay-2s"
               style={{ fontSize: "16px" }}
               dangerouslySetInnerHTML={{
                 __html: `<span style="font-size: 20px">${dayText} ,</span> ${fullDate}`,
               }}
             />
             <Text
+              className="animate__animated animate__zoomIn animate__slow animate__delay-3s"
               style={{ fontSize: "16px" }}
               dangerouslySetInnerHTML={{
                 __html: timeStart!,

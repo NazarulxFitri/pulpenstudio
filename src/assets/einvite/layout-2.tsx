@@ -199,6 +199,7 @@ const Layout2: React.FC = () => {
           </Box>
           <Box sx={{ maxWidth: "280px", margin: "32px auto 0" }}>
             <Title
+              className="animate__animated animate__zoomIn animate__slow"
               style={{ fontSize: "64px", textShadow: "1px 1px 10px #333" }}
               dangerouslySetInnerHTML={{
                 __html: `${item?.title1Groom} <br />
@@ -218,20 +219,27 @@ const Layout2: React.FC = () => {
             />
             <Box mt={4} px={2}>
               <Text
+                className="animate__animated animate__zoomIn animate__slow"
                 style={{ fontSize: "16px" }}
                 dangerouslySetInnerHTML={{
                   __html: `#${item?.title1Groom}${item?.title1Bride}`,
                 }}
               />
               <CoromontText
+                className="animate__animated animate__zoomIn animate__slow animate__delay-1s"
                 style={{
                   marginTop: "32px",
                 }}
               >
                 {fullDate}
               </CoromontText>
-              <CoromontText>{timeStart}</CoromontText>
-              <CoromontText style={{ fontWeight: "700" }}>
+              <CoromontText className="animate__animated animate__zoomIn animate__slow animate__delay-2s">
+                {timeStart}
+              </CoromontText>
+              <CoromontText
+                className="animate__animated animate__zoomIn animate__slow animate__delay-3s"
+                style={{ fontWeight: "700" }}
+              >
                 {item?.location}
               </CoromontText>
             </Box>

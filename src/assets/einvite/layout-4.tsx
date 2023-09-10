@@ -237,6 +237,7 @@ const Layout4: React.FC = () => {
           </Box>
           <Box sx={{ maxWidth: "280px", margin: "32px auto 0" }}>
             <Title
+              className="animate__animated animate__zoomIn animate__slow"
               style={{ lineHeight: "0.75em" }}
               dangerouslySetInnerHTML={{
                 __html: `${item?.title1Groom} <br /><span style="color: #333;font-size: 20px !important">&</span> <br />
@@ -263,6 +264,7 @@ const Layout4: React.FC = () => {
             >
               <Box sx={{ my: "auto" }}>
                 <QuicksandText
+                  className="animate__animated animate__zoomIn animate__slow animate__delay-1s"
                   style={{
                     fontWeight: "300",
                     fontSize: "16px",
@@ -273,7 +275,7 @@ const Layout4: React.FC = () => {
                   dangerouslySetInnerHTML={{ __html: dayText }}
                 />
               </Box>
-              <Box>
+              <Box className="animate__animated animate__zoomIn animate__slow animate__delay-2s">
                 <QuicksandText
                   style={{
                     fontWeight: "700",
@@ -296,6 +298,7 @@ const Layout4: React.FC = () => {
               </Box>
               <Box sx={{ my: "auto" }}>
                 <QuicksandText
+                  className="animate__animated animate__zoomIn animate__slow animate__delay-3s"
                   style={{
                     fontWeight: "300",
                     fontSize: "16px",
@@ -309,6 +312,7 @@ const Layout4: React.FC = () => {
             </Box>
             <Box mt={4}>
               <QuicksandText
+                className="animate__animated animate__zoomIn animate__slow"
                 style={{
                   fontWeight: "300",
                   fontSize: "14px",
