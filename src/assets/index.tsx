@@ -6,3 +6,4 @@ export { default as Layout5 } from "./einvite/layout-5";
 export { default as Layout6 } from "./einvite/layout-6";
 export { default as Layout7 } from "./einvite/layout-7";
 export { default as Layout8 } from "./einvite/layout-8";
+export { default as Layout9 } from "./einvite/layout-9";

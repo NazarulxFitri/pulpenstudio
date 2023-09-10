@@ -101,6 +101,7 @@ const FirstStep: React.FC<FirstStepProps> = ({
               overflow: "scroll",
               justifyContent: { xs: "left", md: "center" },
             }}
+            gap={4}
           >
             <Box>
               <p
@@ -113,10 +114,10 @@ const FirstStep: React.FC<FirstStepProps> = ({
                 Example of english translation
               </p>
               <Image
-                src="/media/cardSelection/card-3/2-image.png"
+                src="/media/cardSelection/card-8/2-image.png"
                 alt=""
-                width={288}
-                height={496}
+                width={248}
+                height={470}
               />
             </Box>
             <Box>
@@ -130,10 +131,10 @@ const FirstStep: React.FC<FirstStepProps> = ({
                 Example of Bahasa Malaysia translation
               </p>
               <Image
-                src="/media/cardSelection/card-2/2-image.png"
+                src="/media/cardSelection/card-3/2-image.png"
                 alt=""
-                width={288}
-                height={496}
+                width={248}
+                height={480}
               />
             </Box>
           </Box>
