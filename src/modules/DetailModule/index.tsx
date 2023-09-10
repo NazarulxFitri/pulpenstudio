@@ -68,12 +68,6 @@ const DetailModule = ({}) => {
             </Button2>
           </Box>
           <p style={{ margin: "12px 0" }}>{selectedLayout?.description}</p>
-          <p style={{ margin: "12px 0", fontWeight: "700" }}>Fonts used :</p>
-          {selectedLayout?.font.map((font, idx) => (
-            <p key={idx} style={{ margin: "8px 0" }}>
-              - {font}
-            </p>
-          ))}
           <p style={{ margin: "12px 0", fontWeight: "700" }}>
             Features included :
           </p>
