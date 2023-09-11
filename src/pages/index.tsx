@@ -28,33 +28,6 @@ export default function Home() {
           key="desc"
         />
       </Head>
-      <Box display={{ xs: "none", lg: "block" }}>
-        <Image
-          src="/media/general/desktop-top-banner.png"
-          alt="Pulpen Studio Digital Invitation Card"
-          height={536}
-          width={1680}
-          style={{ display: "block", width: "100%" }}
-        />
-      </Box>
-      <Box display={{ xs: "none", md: "block", lg: "none" }}>
-        <Image
-          src="/media/general/tablet-top-banner.png"
-          alt="Pulpen Studio Digital Invitation Card"
-          height={480}
-          width={1024}
-          style={{ width: "100%", height: "100%", display: "block" }}
-        />
-      </Box>
-      <Box display={{ xs: "block", md: "none", lg: "none" }}>
-        <Image
-          src="/media/general/mobile-top-banner.png"
-          alt="Pulpen Studio Digital Invitation Card"
-          height={600}
-          width={400}
-          style={{ width: "100%", height: "100%", display: "block" }}
-        />
-      </Box>
       <BannerModule />
       <Container>
         <Box
