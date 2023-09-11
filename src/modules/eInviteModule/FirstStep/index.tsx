@@ -115,7 +115,7 @@ const FirstStep: React.FC<FirstStepProps> = ({
               </p>
               <Image
                 src="/media/cardSelection/card-8/2-image.png"
-                alt=""
+                alt="Pulpen Studio Digital Invitation Card"
                 width={248}
                 height={470}
               />
@@ -132,7 +132,7 @@ const FirstStep: React.FC<FirstStepProps> = ({
               </p>
               <Image
                 src="/media/cardSelection/card-3/2-image.png"
-                alt=""
+                alt="Pulpen Studio Digital Invitation Card"
                 width={248}
                 height={480}
               />

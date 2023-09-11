@@ -169,7 +169,7 @@ const Layout2: React.FC = () => {
           >
             <Image
               src="/media/animation/layout2-flowers.png"
-              alt="layout2-flowers"
+              alt="Pulpen Studio - Majestic Dark Brown"
               width="200"
               height="200"
             />
@@ -183,7 +183,7 @@ const Layout2: React.FC = () => {
           >
             <Image
               src="/media/animation/layout2-flowers.png"
-              alt="layout2-flowers"
+              alt="Pulpen Studio - Majestic Dark Brown"
               width="200"
               height="200"
               style={{ transform: "rotate(180deg)" }}
@@ -305,7 +305,7 @@ const Layout2: React.FC = () => {
           >
             <Image
               src="/media/animation/layout2-flowers.png"
-              alt="layout2-flowers"
+              alt="Pulpen Studio - Majestic Dark Brown"
               width="200"
               height="200"
             />

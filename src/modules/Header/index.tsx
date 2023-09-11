@@ -65,7 +65,7 @@ const Header = () => {
       <LinkMenu href="/">
         <Image
           src="/media/general/pulpen_logo.png"
-          alt="Pulpen Studio - Logo"
+          alt="Pulpen Studio Logo"
           width={175}
           height={89}
         />

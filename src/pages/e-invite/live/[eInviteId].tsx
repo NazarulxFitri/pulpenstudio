@@ -20,8 +20,9 @@ const EinviteLive: React.FC<EinviteLiveProps> = () => {
       <Head>
         <title>Pulpen Studio | Live</title>
         <meta
-          name="Pulpen Studio - Live digital invitation card"
-          content="Live digital invitation card"
+          name="description"
+          content="Pulpen Studio Live - Finished product for our client's guest. Enjoy the card !"
+          key="desc"
         />
       </Head>
       <Grid item xs={12}>

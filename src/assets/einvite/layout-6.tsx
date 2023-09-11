@@ -172,7 +172,7 @@ const Layout6: React.FC = () => {
         >
           <Image
             src="/media/animation/layout6-flowers-1.webp"
-            alt="layout6-flowers"
+            alt="Pulpen Studio - Sky Ambience Breath"
             width={400}
             height={400}
           />
@@ -225,7 +225,7 @@ const Layout6: React.FC = () => {
           >
             <Image
               src="/media/animation/layout6-art-2.png"
-              alt="layout6-art-2"
+              alt="Pulpen Studio - Sky Ambience Breath"
               width={260}
               height={240}
               style={{ position: "relative", zIndex: 1, opacity: "0.9" }}
@@ -241,7 +241,7 @@ const Layout6: React.FC = () => {
           >
             <Image
               src="/media/animation/layout6-art-1.webp"
-              alt="layout6-art-2"
+              alt="Pulpen Studio - Sky Ambience Breath"
               width={260}
               height={240}
               style={{ position: "relative", opacity: "0.6", zIndex: 0 }}

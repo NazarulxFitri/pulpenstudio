@@ -22,8 +22,9 @@ const Account = () => {
       <Head>
         <title>Pulpen Studio | My Account</title>
         <meta
-          name="Pulpen Studio - My Account"
-          content="Check out design created by you and personal information regarding your Pulpen Studio account"
+          name="description"
+          content="Pulpen Studio My Account is a for user to see their personal information and card that they have made"
+          key="desc"
         />
       </Head>
       <AccountModule />

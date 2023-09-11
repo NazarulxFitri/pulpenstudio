@@ -33,8 +33,9 @@ const EinviteAdmin: React.FC<EinviteAdminProps> = () => {
       <Head>
         <title>Pulpen Studio | Admin</title>
         <meta
-          name="Pulpen Studio - Admin Dashboard"
-          content="Admin dashboard"
+          name="description"
+          content="Pulpen Studio Admin Dashboard for our client to view the card activity"
+          key="desc"
         />
       </Head>
       <AdminModule {...{ data }} />

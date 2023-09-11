@@ -165,7 +165,7 @@ const Layout5: React.FC = () => {
           <Box sx={{ position: "absolute", top: "-56px", left: "-40px" }}>
             <Image
               src="/media/animation/layout5-flowers.png"
-              alt="layout3-art"
+              alt="Pulpen Studio - Flourish Gloom"
               width={400}
               height={400}
             />
@@ -173,7 +173,7 @@ const Layout5: React.FC = () => {
           <Box sx={{ position: "absolute", bottom: "72px", right: "-96px" }}>
             <Image
               src="/media/animation/layout5-flowers-1.png"
-              alt="layout3-art"
+              alt="Pulpen Studio - Flourish Gloom"
               width={400}
               height={400}
             />
@@ -181,7 +181,7 @@ const Layout5: React.FC = () => {
           <Box sx={{ position: "absolute", bottom: "180px", left: "0" }}>
             <Image
               src="/media/animation/layout5-art.webp"
-              alt="layout3-art"
+              alt="Pulpen Studio - Flourish Gloom"
               width={161}
               height={297}
             />

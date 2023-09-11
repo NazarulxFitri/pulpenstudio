@@ -68,7 +68,7 @@ const CatalogueModule: React.FC<CatalogueModuleProps> = ({}) => {
                   src={item.images?.[0]!}
                   width={248}
                   height={480}
-                  alt={item.layoutid}
+                  alt={`Pulpen Studio | ${item.name}`}
                 />
               </Box>
               <Box
@@ -82,7 +82,7 @@ const CatalogueModule: React.FC<CatalogueModuleProps> = ({}) => {
                   src={item.images?.[0]!}
                   width={128}
                   height={248}
-                  alt={item.layoutid}
+                  alt={`Pulpen Studio | ${item.name}`}
                 />
               </Box>
               <Box>

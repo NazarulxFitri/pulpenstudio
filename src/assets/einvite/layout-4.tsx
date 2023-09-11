@@ -172,7 +172,7 @@ const Layout4: React.FC = () => {
         <Box sx={{ position: "absolute", left: "-80px", top: "40px" }}>
           <Image
             src="/media/animation/layout4-art.png"
-            alt="layout4-art"
+            alt="Pulpen Studio - Cinnamon Blue Petal"
             width={600}
             height={600}
           />
@@ -207,7 +207,7 @@ const Layout4: React.FC = () => {
           >
             <Image
               src="/media/animation/layout4-flowers.png"
-              alt="layout4-flowers"
+              alt="Pulpen Studio - Cinnamon Blue Petal"
               width={200}
               height={200}
             />
@@ -222,7 +222,7 @@ const Layout4: React.FC = () => {
           >
             <Image
               src="/media/animation/layout4-flowers.png"
-              alt="layout4-flowers"
+              alt="Pulpen Studio - Cinnamon Blue Petal"
               width={200}
               height={200}
             />
@@ -370,7 +370,7 @@ const Layout4: React.FC = () => {
             >
               <Image
                 src="/media/animation/layout4-flowers-1.png"
-                alt="layout4-flowers"
+                alt="Pulpen Studio - Cinnamon Blue Petal"
                 width={160}
                 height={160}
               />

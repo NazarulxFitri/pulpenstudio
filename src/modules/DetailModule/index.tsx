@@ -38,7 +38,7 @@ const DetailModule = ({}) => {
               <Image
                 key={idx}
                 src={image}
-                alt={selectedLayout?.layoutid!}
+                alt={`Pulpen Studio | ${selectedLayout?.name}`}
                 width={288}
                 height={496}
                 style={{ marginRight: "24px" }}

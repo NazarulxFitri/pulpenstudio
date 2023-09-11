@@ -8,8 +8,9 @@ const Faq = () => {
       <Head>
         <title>Pulpen Studio | FAQ</title>
         <meta
-          name="Pulpen Studio - FAQ will assist you to find what you need"
-          content="Answering any ambiguity that might hold you up"
+          name="description"
+          content="Pulpen Studio FAQ to help user get what they need and clear any ambiguition they had"
+          key="desc"
         />
       </Head>
       <FaqModule />

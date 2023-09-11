@@ -134,7 +134,7 @@ const Layout3: React.FC = () => {
         <Box sx={{ position: "absolute", top: "0", left: "-20px" }}>
           <Image
             src="/media/animation/layout3-art.png"
-            alt="layout3-art"
+            alt="Pulpen Studio - Tulips in the Morning"
             width={200}
             height={400}
           />
@@ -150,7 +150,7 @@ const Layout3: React.FC = () => {
         >
           <Image
             src="/media/animation/layout3-art-1.png"
-            alt="layout3-art"
+            alt="Pulpen Studio - Tulips in the Morning"
             width={400}
             height={400}
           />
@@ -181,7 +181,7 @@ const Layout3: React.FC = () => {
           <Box sx={{ position: "relative" }}>
             <Image
               src="/media/animation/layout3-flowers.png"
-              alt="layout3-flowers"
+              alt="Pulpen Studio - Tulips in the Morning"
               width={400}
               height={400}
             />

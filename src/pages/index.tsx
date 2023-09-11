@@ -23,14 +23,15 @@ export default function Home() {
       <Head>
         <title>Pulpen Studio | Home</title>
         <meta
-          name="Pulpen Studio - Digital invitation card"
-          content="Check out our digital invitation card and create your dream digital card for your big day !"
+          name="description"
+          content="Pulpen Studio offers service to create digital invitation card specially made for wedding, birthday and any events. Here in Pulpen Studio, user can create their digital card for free and only pay once they confirmed to purchase it"
+          key="desc"
         />
       </Head>
       <Box display={{ xs: "none", lg: "block" }}>
         <Image
           src="/media/general/desktop-top-banner.png"
-          alt="Pulpen Studio"
+          alt="Pulpen Studio Digital Invitation Card"
           height={536}
           width={1680}
           style={{ display: "block", width: "100%" }}
@@ -39,7 +40,7 @@ export default function Home() {
       <Box display={{ xs: "none", md: "block", lg: "none" }}>
         <Image
           src="/media/general/tablet-top-banner.png"
-          alt="Pulpen Studio"
+          alt="Pulpen Studio Digital Invitation Card"
           height={480}
           width={1024}
           style={{ width: "100%", height: "100%", display: "block" }}
@@ -48,7 +49,7 @@ export default function Home() {
       <Box display={{ xs: "block", md: "none", lg: "none" }}>
         <Image
           src="/media/general/mobile-top-banner.png"
-          alt="Pulpen Studio"
+          alt="Pulpen Studio Digital Invitation Card"
           height={600}
           width={400}
           style={{ width: "100%", height: "100%", display: "block" }}
@@ -70,7 +71,7 @@ export default function Home() {
                 <Image
                   key={i.name}
                   src={i.images[0]}
-                  alt={i.name}
+                  alt={`Pulpen Studio | ${i.name}`}
                   width={248}
                   height={480}
                 />

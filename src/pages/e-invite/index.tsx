@@ -61,13 +61,13 @@ const EInvite = () => {
             <Box overflow="scroll" display="flex">
               <Image
                 src="/media/cardSelection/card-3/main.png"
-                alt="card-3/main"
+                alt="Pulpen Studio Digital Invitation Card"
                 height={496}
                 width={288}
               />
               <Image
                 src="/media/cardSelection/card-3/2-image.png"
-                alt="card-3/main"
+                alt="Pulpen Studio Digital Invitation Card"
                 height={496}
                 width={288}
               />
@@ -89,8 +89,9 @@ const EInvite = () => {
       <Head>
         <title>Pulpen Studio | e-Invite</title>
         <meta
-          name="Pulpen Studio - e-Invite"
-          content="Create digital invitation card by entering information following steps provided"
+          name="description"
+          content="Create your digital invitation card now. Follow the 3 easy steps given and your card will be ready in the blink of eye"
+          key="desc"
         />
       </Head>
       <EInviteModule />

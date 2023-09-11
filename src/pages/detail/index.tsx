@@ -9,8 +9,9 @@ const Detail = () => {
       <Head>
         <title>Pulpen Studio | Detail</title>
         <meta
-          name="Pulpen Studio - Detail"
-          content="More information on the selected design. Check out all information that we provided to assist you make your choice"
+          name="description"
+          content="Detail of your selected design of digital card. Pulpen Studio provides you variety of information that can help you to decide your favourite design"
+          key="desc"
         />
       </Head>
       <DetailModule />

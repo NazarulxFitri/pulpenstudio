@@ -169,7 +169,7 @@ const Layout7: React.FC = () => {
         <Box sx={{ position: "absolute", right: "24px", top: "24px" }}>
           <Image
             src="/media/animation/layout7-art-1.webp"
-            alt="layout7-art"
+            alt="Pulpen Studio - Black Gold Label"
             width={100}
             height={100}
           />
@@ -205,7 +205,7 @@ const Layout7: React.FC = () => {
         >
           <Image
             src="/media/animation/layout7-art-2.png"
-            alt="layout7-art"
+            alt="Pulpen Studio - Black Gold Label"
             width={100}
             height={100}
           />
@@ -222,7 +222,7 @@ const Layout7: React.FC = () => {
           <Box mb={6} sx={{ textAlign: "center" }}>
             <Image
               src="/media/animation/layout7-art-3.webp"
-              alt="layout7-art-3"
+              alt="Pulpen Studio - Black Gold Label"
               width={50}
               height={25}
             />

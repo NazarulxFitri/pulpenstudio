@@ -162,7 +162,7 @@ const Layout9: React.FC = () => {
         >
           <Image
             src="/media/animation/layout9-art-1.webp"
-            alt="layout9-art-1"
+            alt="Pulpen Studio - Evening Turqoise Pastel"
             width={149}
             height={247}
           />
@@ -177,7 +177,7 @@ const Layout9: React.FC = () => {
         >
           <Image
             src="/media/animation/layout9-art-2.webp"
-            alt="layout9-art-1"
+            alt="Pulpen Studio - Evening Turqoise Pastel"
             width={149}
             height={247}
           />
@@ -192,7 +192,7 @@ const Layout9: React.FC = () => {
         >
           <Image
             src="/media/animation/layout9-art-3.webp"
-            alt="layout9-art-1"
+            alt="Pulpen Studio - Evening Turqoise Pastel"
             width={318}
             height={419}
           />
@@ -207,7 +207,7 @@ const Layout9: React.FC = () => {
         >
           <Image
             src="/media/animation/layout9-art-4.webp"
-            alt="layout9-art-1"
+            alt="Pulpen Studio - Evening Turqoise Pastel"
             width={189}
             height={266}
           />
@@ -221,7 +221,7 @@ const Layout9: React.FC = () => {
         >
           <Image
             src="/media/animation/layout9-art-5.webp"
-            alt="layout9-art-1"
+            alt="Pulpen Studio - Evening Turqoise Pastel"
             width={184}
             height={149}
           />
@@ -235,7 +235,7 @@ const Layout9: React.FC = () => {
         >
           <Image
             src="/media/animation/layout9-art-6.webp"
-            alt="layout9-art-1"
+            alt="Pulpen Studio - Evening Turqoise Pastel"
             width={100}
             height={78}
           />
@@ -249,7 +249,7 @@ const Layout9: React.FC = () => {
         >
           <Image
             src="/media/animation/layout9-art-7.webp"
-            alt="layout9-art-1"
+            alt="Pulpen Studio - Evening Turqoise Pastel"
             width={139}
             height={117}
           />
@@ -263,7 +263,7 @@ const Layout9: React.FC = () => {
         >
           <Image
             src="/media/animation/layout9-art-8.webp"
-            alt="layout9-art-1"
+            alt="Pulpen Studio - Evening Turqoise Pastel"
             width={89}
             height={71}
           />
@@ -278,7 +278,7 @@ const Layout9: React.FC = () => {
         >
           <Image
             src="/media/animation/layout9-art-3.webp"
-            alt="layout9-art-1"
+            alt="Pulpen Studio - Evening Turqoise Pastel"
             width={318}
             height={419}
           />
@@ -292,7 +292,7 @@ const Layout9: React.FC = () => {
         >
           <Image
             src="/media/animation/layout9-art-2.webp"
-            alt="layout9-art-1"
+            alt="Pulpen Studio - Evening Turqoise Pastel"
             width={149}
             height={247}
           />
@@ -433,7 +433,7 @@ const Layout9: React.FC = () => {
           <Box sx={{ position: "absolute", bottom: "0", right: "0" }}>
             <Image
               src="/media/animation/layout9-art-8.webp"
-              alt="layout9-art-1"
+              alt="Pulpen Studio - Evening Turqoise Pastel"
               width={89}
               height={71}
             />

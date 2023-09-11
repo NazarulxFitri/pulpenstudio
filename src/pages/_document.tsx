@@ -7,7 +7,7 @@ export default function Document() {
         <link
           rel="icon"
           href="/media/general/pulpenstudioxicon.png"
-          type="image/x-icon"
+          type="image/png"
         />
         <link
           rel="stylesheet"

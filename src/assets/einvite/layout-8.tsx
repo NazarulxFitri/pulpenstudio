@@ -163,7 +163,7 @@ const Layout8: React.FC = () => {
         >
           <Image
             src="/media/animation/layout8-flower-1.webp"
-            alt="layout8-flower-1"
+            alt="Pulpen Studio - Vitamin Sea"
             width={480}
             height={750}
           />
@@ -199,7 +199,7 @@ const Layout8: React.FC = () => {
             />
             <Image
               src="/media/animation/layout8-art-1.svg"
-              alt="layout8-art-1.svg"
+              alt="Pulpen Studio - Vitamin Sea"
               width={193}
               height={9}
             />
@@ -214,7 +214,7 @@ const Layout8: React.FC = () => {
           <Box mt={3}>
             <Image
               src="/media/animation/layout8-art-1.svg"
-              alt="layout8-art-1.svg"
+              alt="Pulpen Studio - Vitamin Sea"
               width={193}
               height={9}
             />
