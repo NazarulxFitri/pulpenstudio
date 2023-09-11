@@ -11,7 +11,7 @@ import Image from "next/image";
 const LinkMenu = styled(Link)(({ theme }) => ({
   alignSelf: "center",
   color: "#333",
-  fontWeight: 800,
+
   margin: "16px 0",
   textDecoration: "none",
   display: "block",
@@ -24,7 +24,7 @@ const LinkMenu = styled(Link)(({ theme }) => ({
 const LogoutText = styled("p")(({ theme }) => ({
   alignSelf: "center",
   color: "#333",
-  fontWeight: 800,
+  fontWeight: 700,
   margin: "16px 0",
   textDecoration: "none",
   display: "block",
@@ -84,6 +84,7 @@ const Header = () => {
           <HomeIcon />
         </LinkMenu>
         <LinkMenu href="/catalogue">Catalogue</LinkMenu>
+        <LinkMenu href="/customize">Customize</LinkMenu>
         <LinkMenu href="/account">
           My Account
           {needAttention.length > 0 && (
@@ -95,7 +96,7 @@ const Header = () => {
                   background: "#eeece1",
                   color: "#333",
                   borderRadius: "8px",
-                  fontWeight: "500",
+
                   fontSize: "12px",
                   padding: "4px 10px",
                   marginLeft: "4px",
@@ -112,7 +113,9 @@ const Header = () => {
         {isLoggedIn ? (
           <LogoutText onClick={useRemoveAuth}>Logout</LogoutText>
         ) : (
-          <LinkMenu href="/account">Login</LinkMenu>
+          <LinkMenu href="/account" style={{ fontWeight: "700" }}>
+            Login
+          </LinkMenu>
         )}
       </Box>
       {menuOpen && (
@@ -124,13 +127,16 @@ const Header = () => {
             <HomeIcon />
           </LinkMenu>
           <LinkMenu href="/catalogue">Catalogue</LinkMenu>
+          <LinkMenu href="/customize">Customize</LinkMenu>
           <LinkMenu href="/account">My Account</LinkMenu>
           <LinkMenu href="/faq">FAQ</LinkMenu>
 
           {isLoggedIn ? (
             <LogoutText onClick={useRemoveAuth}>Logout</LogoutText>
           ) : (
-            <LinkMenu href="/account">Login</LinkMenu>
+            <LinkMenu href="/account" style={{ fontWeight: "700" }}>
+              Login
+            </LinkMenu>
           )}
         </Box>
       )}

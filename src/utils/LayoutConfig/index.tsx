@@ -1,5 +1,26 @@
 export const layoutConfig = [
   {
+    layoutid: "000",
+    name: "Customize Design",
+    category: "Custom",
+    originalPrice: "RM70.00",
+    discountedPrice: "RM60.00",
+    images: [
+      "/media/cardSelection/card-0/main.png",
+      "/media/cardSelection/card-3/main.png",
+      "/media/cardSelection/card-5/main.png",
+      "/media/cardSelection/card-6/main.png",
+      "/media/cardSelection/card-9/main.png",
+    ],
+    description:
+      "Customize digital invitation card for those who wants to express their own creativity on digital invitation card",
+
+    features: [
+      "Choose your desired music from Youtube !",
+      "Include / Exclude suitable helper widgets - Money Gift, RSVP, Contact Number, Google Map Location",
+    ],
+  },
+  {
     layoutid: "001",
     name: "Light Pink Rosie",
     category: "Wedding",

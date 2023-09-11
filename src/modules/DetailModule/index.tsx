@@ -60,12 +60,21 @@ const DetailModule = ({}) => {
             </span>
           </Text>
           <Box my={6}>
-            <Button2
-              style={{ padding: "12px 16px" }}
-              href={`/e-invite?layoutid=${selectedLayout?.layoutid}`}
-            >
-              Try now for free
-            </Button2>
+            {selectedLayout?.layoutid !== "000" ? (
+              <Button2
+                style={{ padding: "12px 16px" }}
+                href={`/e-invite?layoutid=${selectedLayout?.layoutid}`}
+              >
+                Try now for free
+              </Button2>
+            ) : (
+              <Button2
+                style={{ padding: "12px 16px" }}
+                href={`https://api.whatsapp.com/send?phone=601156271776&text=Hi%20%2C%20saya%20datang%20dari%20e-invite%20!%20#CustomizeDesign%20`}
+              >
+                Proceed with Admin
+              </Button2>
+            )}
           </Box>
           <p style={{ margin: "12px 0" }}>{selectedLayout?.description}</p>
           <p style={{ margin: "12px 0", fontWeight: "700" }}>

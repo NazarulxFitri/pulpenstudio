@@ -41,7 +41,7 @@ const LiveSupport = () => {
           sx={{
             background: "#eeece1",
             borderRadius: "8px",
-            fontWeight: "700",
+
             px: 2,
             py: 1,
           }}

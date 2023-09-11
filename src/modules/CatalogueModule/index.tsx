@@ -9,7 +9,6 @@ interface CatalogueModuleProps {}
 
 export const Text = styled("p")(() => ({
   background: "#FFF",
-  fontWeight: "700",
   margin: "8px 0",
   textAlign: "center",
 }));
@@ -17,7 +16,6 @@ export const Text = styled("p")(() => ({
 export const CategoryText = styled("p")(() => ({
   background: "rgb(221, 208, 200)",
   fontSize: "12px",
-  fontWeight: "700",
   margin: "8px 0",
   padding: "4px 12px",
   width: "fit-content",
@@ -25,14 +23,12 @@ export const CategoryText = styled("p")(() => ({
 }));
 
 export const Button2 = styled(Link)(() => ({
-  border: "2px solid #eeece1",
+  border: "1px solid #eeece1",
   borderRadius: "24px",
   color: "#333",
   cursor: "pointer",
-  fontWeight: "500",
   textDecoration: "none",
   padding: "8px 24px",
-  margin: "8px 0",
   "&:hover": {
     background: "#eeece1",
   },

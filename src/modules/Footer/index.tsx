@@ -51,6 +51,17 @@ const Footer = () => {
               textDecoration: "none",
               marginTop: "12px",
             }}
+            href="/customize"
+          >
+            Customize
+          </Link>
+          <Link
+            style={{
+              color: "#333333",
+              fontSize: "16px",
+              textDecoration: "none",
+              marginTop: "12px",
+            }}
             href="/catalogue"
           >
             Catalogue
