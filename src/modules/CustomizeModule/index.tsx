@@ -71,13 +71,13 @@ const CustomizeModule = () => {
               </Link>
             </Box>
           </Grid>
-          <Grid item xs={12} md={6}>
+          <Grid item xs={12} md={6} mt={{ xs: 2, md: 0 }}>
             <Image
               src="/media/cardSelection/card-0/main.png"
               alt="Pulpen Studio Customize Design"
               width={248}
               height={480}
-              style={{ display: "block" }}
+              style={{ display: "block", margin: "auto" }}
             />
           </Grid>
         </Grid>

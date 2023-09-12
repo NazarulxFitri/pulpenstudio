@@ -124,6 +124,25 @@ const BannerModule = () => {
         <Box
           sx={{
             height: "240px",
+            background: "#242424",
+            width: "100%",
+          }}
+        >
+          <Box sx={{ width: "fit-content", mx: "auto", display: "flex" }}>
+            <Image
+              src="/media/general/qrinstagram.jpeg"
+              alt="Pulpen Studio Instagram"
+              width={160}
+              height={240}
+            />
+            <p style={{ color: "#EFEFEF", letterSpacing: "0.15em" }}>
+              Follow us on Instagram !
+            </p>
+          </Box>
+        </Box>
+        <Box
+          sx={{
+            height: "240px",
             width: "100%",
             textAlign: "center",
             position: "relative",
@@ -237,25 +256,6 @@ const BannerModule = () => {
               >
                 Check out our latest design
               </Link>
-            </p>
-          </Box>
-        </Box>
-        <Box
-          sx={{
-            height: "240px",
-            background: "#242424",
-            width: "100%",
-          }}
-        >
-          <Box sx={{ width: "fit-content", mx: "auto", display: "flex" }}>
-            <Image
-              src="/media/general/qrinstagram.jpeg"
-              alt="Pulpen Studio Instagram"
-              width={160}
-              height={240}
-            />
-            <p style={{ color: "#EFEFEF", letterSpacing: "0.15em" }}>
-              Follow us on Instagram !
             </p>
           </Box>
         </Box>

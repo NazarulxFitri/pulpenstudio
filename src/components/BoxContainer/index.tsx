@@ -10,7 +10,7 @@ const BoxContainer: React.FC<ContainerProps> = ({ children, fullWidth }) => {
   return (
     <Box
       px={{
-        xs: fullWidth ? 0 : 1,
+        xs: fullWidth ? 0 : 2,
         md: fullWidth ? 0 : 2,
         lg: fullWidth ? 0 : 6,
       }}

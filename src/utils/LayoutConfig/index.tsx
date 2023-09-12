@@ -181,4 +181,22 @@ export const layoutConfig = [
       "Include / Exclude suitable helper widgets - Money Gift, RSVP, Contact Number, Google Map Location",
     ],
   },
+  {
+    layoutid: "010",
+    name: "Aurora Glimpse",
+    category: "Wedding",
+    originalPrice: "RM60.00",
+    discountedPrice: "RM50.00",
+    images: [
+      "/media/cardSelection/card-10/main.png",
+      "/media/cardSelection/card-10/2-image.png",
+    ],
+    description:
+      "A little bit aurora green color mix with light brown. A combination of soft colors to put femine vibes",
+
+    features: [
+      "Choose your desired music from Youtube !",
+      "Include / Exclude suitable helper widgets - Money Gift, RSVP, Contact Number, Google Map Location",
+    ],
+  },
 ];
