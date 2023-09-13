@@ -52,11 +52,19 @@ const SubTitle = styled("p")(() => ({
   textAlign: "center",
 }));
 
-const MiniText = styled("p")(() => ({
-  color: "#909090",
+const Text = styled("p")(() => ({
+  color: "#1e1e1e",
   fontFamily: `${playfair.style.fontFamily} !important` || "auto",
-  fontSize: "12px",
+  fontSize: "16px",
   textAlign: "center",
+}));
+
+const MiniText = styled("p")(() => ({
+  color: "#1e1e1e",
+  fontFamily: `${playfair.style.fontFamily} !important` || "auto",
+  fontSize: "14px",
+  textAlign: "center",
+  letterSpacing: "0.1em",
 }));
 
 const UbuntuText = styled("p")(() => ({
@@ -352,6 +360,14 @@ const Layout10: React.FC = () => {
             position: "relative",
           }}
         >
+          <Box sx={{ position: "absolute", top: "0", left: "-20px" }}>
+            <Image
+              src="/media/animation/layout10-flower.webp"
+              alt="Pulpen Studio Aurora Glimpse"
+              width={108}
+              height={110}
+            />
+          </Box>
           <Box
             sx={{
               mx: 2,
@@ -364,6 +380,7 @@ const Layout10: React.FC = () => {
             />
             <Box mt={2} sx={{ textAlign: "center" }}>
               <MiniText
+                style={{ marginBottom: "8px" }}
                 dangerouslySetInnerHTML={{
                   __html: `${
                     locale?.[item?.language!]?.CARD_SUBTITLE_FIRST
@@ -371,6 +388,7 @@ const Layout10: React.FC = () => {
                 }}
               />
               <MiniText
+                style={{ marginBottom: "8px" }}
                 dangerouslySetInnerHTML={{
                   __html: `${locale?.[item?.language!]?.CARD_SUBTITLE_TWO} : ${
                     item?.location
@@ -420,31 +438,51 @@ const Layout10: React.FC = () => {
               id="countdown"
               columnGap={2}
               sx={{
+                boxShadow: "1px 10px 10px -10px #656041",
+                pb: 1,
                 width: "fit-content",
                 mx: "auto",
                 display: "flex",
               }}
             >
-              <TimeBox>
-                {countdownTimer?.countdownTimer.d}
-                <br />
-                {locale?.[item?.language!]?.COUNTDOWN_DAYS}
-              </TimeBox>
-              <TimeBox>
-                {countdownTimer?.countdownTimer.h}
-                <br />
-                {locale?.[item?.language!]?.COUNTDOWN_HOUR}
-              </TimeBox>
-              <TimeBox>
-                {countdownTimer?.countdownTimer.m}
-                <br />
-                {locale?.[item?.language!]?.COUNTDOWN_MINUTE}
-              </TimeBox>
-              <TimeBox>
-                {countdownTimer?.countdownTimer.s}
-                <br />
-                {locale?.[item?.language!]?.COUNTDOWN_SECOND}
-              </TimeBox>
+              <Box>
+                <Text
+                  style={{ fontSize: "48px" }}
+                  dangerouslySetInnerHTML={{
+                    __html: `${countdownTimer?.countdownTimer.d} `,
+                  }}
+                />
+              </Box>
+              <Box>
+                <Text
+                  style={{ fontSize: "24px" }}
+                  dangerouslySetInnerHTML={{
+                    __html: `${
+                      countdownTimer?.countdownTimer.h
+                    } <span style="font-size: 12px">${
+                      locale?.[item?.language!]?.COUNTDOWN_HOUR
+                    }</span>`,
+                  }}
+                />
+                <Text
+                  style={{ fontSize: "24px" }}
+                  dangerouslySetInnerHTML={{
+                    __html: `${
+                      countdownTimer?.countdownTimer.m
+                    } <span style="font-size: 12px">${
+                      locale?.[item?.language!]?.COUNTDOWN_MINUTE
+                    }</span>`,
+                  }}
+                />
+              </Box>
+              <Box>
+                <Text
+                  style={{ fontSize: "48px", color: "#945c13", width: "50px" }}
+                  dangerouslySetInnerHTML={{
+                    __html: `${countdownTimer?.countdownTimer.s} `,
+                  }}
+                />
+              </Box>
             </Box>
           )}
         </Box>

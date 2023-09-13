@@ -57,7 +57,7 @@ const Text = styled("p")(() => ({
 
 const MiniText = styled("p")(() => ({
   fontFamily: `${playfair.style.fontFamily} !important` || "auto",
-  fontSize: "12px",
+  fontSize: "14px",
   textAlign: "center",
 }));
 
@@ -336,8 +336,24 @@ const Layout6: React.FC = () => {
             borderBottom: "1px solid #FDE6E8",
             mx: -2,
             py: 8,
+            position: "relative",
           }}
         >
+          <Box
+            sx={{
+              position: "absolute",
+              top: "0",
+              left: "-100px",
+              transform: "rotate(45deg)",
+            }}
+          >
+            <Image
+              src="/media/animation/layout6-flowers-1.webp"
+              alt="Pulpen Studio - Sky Ambience Breath"
+              width={200}
+              height={200}
+            />
+          </Box>
           <Box
             sx={{
               mx: 2,
@@ -350,6 +366,7 @@ const Layout6: React.FC = () => {
             />
             <Box mt={2} sx={{ textAlign: "center" }}>
               <MiniText
+                style={{ marginBottom: "8px" }}
                 dangerouslySetInnerHTML={{
                   __html: `${
                     locale?.[item?.language!]?.CARD_SUBTITLE_FIRST
@@ -357,6 +374,7 @@ const Layout6: React.FC = () => {
                 }}
               />
               <MiniText
+                style={{ marginBottom: "8px" }}
                 dangerouslySetInnerHTML={{
                   __html: `${locale?.[item?.language!]?.CARD_SUBTITLE_TWO} : ${
                     item?.location
@@ -406,31 +424,51 @@ const Layout6: React.FC = () => {
               id="countdown"
               columnGap={2}
               sx={{
+                boxShadow: "1px 10px 10px -10px #656041",
+                pb: 1,
                 width: "fit-content",
                 mx: "auto",
                 display: "flex",
               }}
             >
-              <TimeBox>
-                {countdownTimer?.countdownTimer.d}
-                <br />
-                {locale?.[item?.language!]?.COUNTDOWN_DAYS}
-              </TimeBox>
-              <TimeBox>
-                {countdownTimer?.countdownTimer.h}
-                <br />
-                {locale?.[item?.language!]?.COUNTDOWN_HOUR}
-              </TimeBox>
-              <TimeBox>
-                {countdownTimer?.countdownTimer.m}
-                <br />
-                {locale?.[item?.language!]?.COUNTDOWN_MINUTE}
-              </TimeBox>
-              <TimeBox>
-                {countdownTimer?.countdownTimer.s}
-                <br />
-                {locale?.[item?.language!]?.COUNTDOWN_SECOND}
-              </TimeBox>
+              <Box>
+                <Text
+                  style={{ fontSize: "48px" }}
+                  dangerouslySetInnerHTML={{
+                    __html: `${countdownTimer?.countdownTimer.d} `,
+                  }}
+                />
+              </Box>
+              <Box>
+                <Text
+                  style={{ fontSize: "24px" }}
+                  dangerouslySetInnerHTML={{
+                    __html: `${
+                      countdownTimer?.countdownTimer.h
+                    } <span style="font-size: 12px">${
+                      locale?.[item?.language!]?.COUNTDOWN_HOUR
+                    }</span>`,
+                  }}
+                />
+                <Text
+                  style={{ fontSize: "24px" }}
+                  dangerouslySetInnerHTML={{
+                    __html: `${
+                      countdownTimer?.countdownTimer.m
+                    } <span style="font-size: 12px">${
+                      locale?.[item?.language!]?.COUNTDOWN_MINUTE
+                    }</span>`,
+                  }}
+                />
+              </Box>
+              <Box>
+                <Text
+                  style={{ fontSize: "48px", color: "#909090", width: "50px" }}
+                  dangerouslySetInnerHTML={{
+                    __html: `${countdownTimer?.countdownTimer.s} `,
+                  }}
+                />
+              </Box>
             </Box>
           )}
         </Box>

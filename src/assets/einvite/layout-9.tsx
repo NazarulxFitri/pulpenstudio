@@ -1,11 +1,5 @@
 import { Box, Container, Grid, List, Paper, styled } from "@mui/material";
-import {
-  Clicker_Script,
-  Great_Vibes,
-  Petit_Formal_Script,
-  Playfair_Display,
-  Ubuntu,
-} from "next/font/google";
+import { Clicker_Script, Playfair_Display, Ubuntu } from "next/font/google";
 import useGetEinvite from "@/data/useGetEinvite";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
@@ -51,21 +45,24 @@ const SubTitle = styled("p")(() => ({
   textAlign: "center",
 }));
 
+const Text = styled("p")(() => ({
+  color: "#909090",
+  fontFamily: `${playfair.style.fontFamily} !important` || "auto",
+  fontSize: "16px",
+  textAlign: "center",
+}));
+
 const MiniText = styled("p")(() => ({
   color: "#909090",
   fontFamily: `${playfair.style.fontFamily} !important` || "auto",
-  fontSize: "12px",
+  fontSize: "14px",
   textAlign: "center",
+  letterSpacing: "0.1em",
 }));
 
 const UbuntuText = styled("p")(() => ({
   fontFamily: `${ubuntu.style.fontFamily} !important` || "auto",
   fontWeight: "700",
-  fontSize: "16px",
-  textAlign: "center",
-}));
-
-const TimeBox = styled(Box)(() => ({
   fontSize: "16px",
   textAlign: "center",
 }));
@@ -297,6 +294,7 @@ const Layout9: React.FC = () => {
             height={247}
           />
         </Box>
+
         <Box
           sx={{
             position: "absolute",
@@ -423,13 +421,28 @@ const Layout9: React.FC = () => {
 
         <Box
           sx={{
-            borderTop: "1px solid #c4d3ec",
-            borderBottom: "1px solid #c4d3ec",
+            borderTop: "1px solid #EFEFEF",
+            borderBottom: "1px solid #EFEFEF",
             mx: -2,
             py: 8,
             position: "relative",
           }}
         >
+          <Box
+            sx={{
+              position: "absolute",
+              transform: "rotate(180deg)",
+              top: "-20px",
+              left: "-20px",
+            }}
+          >
+            <Image
+              src="/media/animation/layout9-art-3.webp"
+              alt="Pulpen Studio - Evening Turqoise Pastel"
+              width={318}
+              height={419}
+            />
+          </Box>
           <Box sx={{ position: "absolute", bottom: "0", right: "0" }}>
             <Image
               src="/media/animation/layout9-art-8.webp"
@@ -450,6 +463,7 @@ const Layout9: React.FC = () => {
             />
             <Box mt={2} sx={{ textAlign: "center" }}>
               <MiniText
+                style={{ marginBottom: "8px" }}
                 dangerouslySetInnerHTML={{
                   __html: `${
                     locale?.[item?.language!]?.CARD_SUBTITLE_FIRST
@@ -457,6 +471,7 @@ const Layout9: React.FC = () => {
                 }}
               />
               <MiniText
+                style={{ marginBottom: "8px" }}
                 dangerouslySetInnerHTML={{
                   __html: `${locale?.[item?.language!]?.CARD_SUBTITLE_TWO} : ${
                     item?.location
@@ -506,31 +521,51 @@ const Layout9: React.FC = () => {
               id="countdown"
               columnGap={2}
               sx={{
+                boxShadow: "1px 10px 10px -10px #656041",
+                pb: 1,
                 width: "fit-content",
                 mx: "auto",
                 display: "flex",
               }}
             >
-              <TimeBox>
-                {countdownTimer?.countdownTimer.d}
-                <br />
-                {locale?.[item?.language!]?.COUNTDOWN_DAYS}
-              </TimeBox>
-              <TimeBox>
-                {countdownTimer?.countdownTimer.h}
-                <br />
-                {locale?.[item?.language!]?.COUNTDOWN_HOUR}
-              </TimeBox>
-              <TimeBox>
-                {countdownTimer?.countdownTimer.m}
-                <br />
-                {locale?.[item?.language!]?.COUNTDOWN_MINUTE}
-              </TimeBox>
-              <TimeBox>
-                {countdownTimer?.countdownTimer.s}
-                <br />
-                {locale?.[item?.language!]?.COUNTDOWN_SECOND}
-              </TimeBox>
+              <Box>
+                <Text
+                  style={{ fontSize: "48px" }}
+                  dangerouslySetInnerHTML={{
+                    __html: `${countdownTimer?.countdownTimer.d} `,
+                  }}
+                />
+              </Box>
+              <Box>
+                <Text
+                  style={{ fontSize: "24px" }}
+                  dangerouslySetInnerHTML={{
+                    __html: `${
+                      countdownTimer?.countdownTimer.h
+                    } <span style="font-size: 12px">${
+                      locale?.[item?.language!]?.COUNTDOWN_HOUR
+                    }</span>`,
+                  }}
+                />
+                <Text
+                  style={{ fontSize: "24px" }}
+                  dangerouslySetInnerHTML={{
+                    __html: `${
+                      countdownTimer?.countdownTimer.m
+                    } <span style="font-size: 12px">${
+                      locale?.[item?.language!]?.COUNTDOWN_MINUTE
+                    }</span>`,
+                  }}
+                />
+              </Box>
+              <Box>
+                <Text
+                  style={{ fontSize: "48px", color: "#38629F", width: "50px" }}
+                  dangerouslySetInnerHTML={{
+                    __html: `${countdownTimer?.countdownTimer.s} `,
+                  }}
+                />
+              </Box>
             </Box>
           )}
         </Box>

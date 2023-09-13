@@ -165,7 +165,7 @@ export const layoutConfig = [
   },
   {
     layoutid: "009",
-    name: "Evening Turqoise Pastel",
+    name: "Evening Turquoise Pastel",
     category: "Wedding",
     originalPrice: "RM60.00",
     discountedPrice: "RM50.00",

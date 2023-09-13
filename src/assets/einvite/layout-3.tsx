@@ -237,8 +237,17 @@ const Layout3: React.FC = () => {
           mx="auto"
           sx={{
             p: { xs: "24px 16px", md: 8 },
+            position: "relative",
           }}
         >
+          <Box sx={{ position: "absolute", top: "0", left: "-20px" }}>
+            <Image
+              src="/media/animation/layout3-art.png"
+              alt="Pulpen Studio - Tulips in the Morning"
+              width={200}
+              height={400}
+            />
+          </Box>
           <MiniText
             sx={{ mb: 3 }}
             dangerouslySetInnerHTML={{
@@ -257,11 +266,9 @@ const Layout3: React.FC = () => {
               __html: locale?.[item?.language!]?.CARD_TEXT,
             }}
           />
-          <UbuntuText
+          <Title
             sx={{
-              fontWeight: "bolder",
               mb: 3,
-              textShadow: "1px 1px 10px #FDE6E8",
             }}
             dangerouslySetInnerHTML={{
               __html: `${item?.fullNameGroom} & ${item?.fullNameBride}`,
@@ -277,7 +284,15 @@ const Layout3: React.FC = () => {
             py: 8,
           }}
         >
-          <Box sx={{ mx: 2 }}>
+          <Box sx={{ mx: 2, position: "relative" }}>
+            <Box sx={{ position: "absolute", top: "0", right: "-150px" }}>
+              <Image
+                src="/media/animation/layout3-flowers.png"
+                alt="Pulpen Studio - Tulips in the Morning"
+                width={200}
+                height={200}
+              />
+            </Box>
             <UbuntuText
               dangerouslySetInnerHTML={{
                 __html: locale?.[item?.language!]?.CARD_TITLE_FIRST,
@@ -285,6 +300,7 @@ const Layout3: React.FC = () => {
             />
             <Box mt={2} sx={{ textAlign: "center" }}>
               <MiniText
+                style={{ marginBottom: "8px" }}
                 dangerouslySetInnerHTML={{
                   __html: `${
                     locale?.[item?.language!]?.CARD_SUBTITLE_FIRST
@@ -292,6 +308,7 @@ const Layout3: React.FC = () => {
                 }}
               />
               <MiniText
+                style={{ marginBottom: "8px" }}
                 dangerouslySetInnerHTML={{
                   __html: `${locale?.[item?.language!]?.CARD_SUBTITLE_TWO} : ${
                     item?.location
@@ -313,8 +330,17 @@ const Layout3: React.FC = () => {
           sx={{
             px: 2,
             py: 4,
+            position: "relative",
           }}
         >
+          <Box sx={{ position: "absolute", top: "0", left: "50%" }}>
+            <Image
+              src="/media/animation/layout3-art.png"
+              alt="Pulpen Studio - Tulips in the Morning"
+              width={200}
+              height={400}
+            />
+          </Box>
           <UbuntuText
             dangerouslySetInnerHTML={{
               __html: locale?.[item?.language!]?.CARD_COUNTDOWN_TITLE,
@@ -341,31 +367,51 @@ const Layout3: React.FC = () => {
               id="countdown"
               columnGap={2}
               sx={{
+                boxShadow: "1px 10px 10px -10px #656041",
+                pb: 1,
                 width: "fit-content",
                 mx: "auto",
                 display: "flex",
               }}
             >
-              <TimeBox>
-                {countdownTimer?.countdownTimer.d}
-                <br />
-                {locale?.[item?.language!]?.COUNTDOWN_DAYS}
-              </TimeBox>
-              <TimeBox>
-                {countdownTimer?.countdownTimer.h}
-                <br />
-                {locale?.[item?.language!]?.COUNTDOWN_HOUR}
-              </TimeBox>
-              <TimeBox>
-                {countdownTimer?.countdownTimer.m}
-                <br />
-                {locale?.[item?.language!]?.COUNTDOWN_MINUTE}
-              </TimeBox>
-              <TimeBox>
-                {countdownTimer?.countdownTimer.s}
-                <br />
-                {locale?.[item?.language!]?.COUNTDOWN_SECOND}
-              </TimeBox>
+              <Box>
+                <Text
+                  style={{ fontSize: "48px" }}
+                  dangerouslySetInnerHTML={{
+                    __html: `${countdownTimer?.countdownTimer.d} `,
+                  }}
+                />
+              </Box>
+              <Box>
+                <Text
+                  style={{ fontSize: "24px" }}
+                  dangerouslySetInnerHTML={{
+                    __html: `${
+                      countdownTimer?.countdownTimer.h
+                    } <span style="font-size: 12px">${
+                      locale?.[item?.language!]?.COUNTDOWN_HOUR
+                    }</span>`,
+                  }}
+                />
+                <Text
+                  style={{ fontSize: "24px" }}
+                  dangerouslySetInnerHTML={{
+                    __html: `${
+                      countdownTimer?.countdownTimer.m
+                    } <span style="font-size: 12px">${
+                      locale?.[item?.language!]?.COUNTDOWN_MINUTE
+                    }</span>`,
+                  }}
+                />
+              </Box>
+              <Box>
+                <Text
+                  style={{ fontSize: "48px", color: "#7c1d64", width: "50px" }}
+                  dangerouslySetInnerHTML={{
+                    __html: `${countdownTimer?.countdownTimer.s} `,
+                  }}
+                />
+              </Box>
             </Box>
           )}
         </Box>

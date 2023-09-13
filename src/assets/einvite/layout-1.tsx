@@ -53,11 +53,6 @@ const UbuntuText = styled("p")(() => ({
   textAlign: "center",
 }));
 
-const TimeBox = styled(Box)(() => ({
-  fontSize: "16px",
-  textAlign: "center",
-}));
-
 const Layout1: React.FC = () => {
   const router = useRouter();
   const eInviteId = router.query.eInviteId;
@@ -126,10 +121,9 @@ const Layout1: React.FC = () => {
       >
         <Box
           sx={{
-            background: "#FFF",
-            borderTopLeftRadius: "100px",
-            borderBottomRightRadius: "100px",
-            p: "80px 16px",
+            background: "rgba(255,255,255,0.8)",
+            boxShadow: "inset 1px 1px 10px #FDE6E8",
+            p: "48px 16px",
             position: "absolute",
             top: "50%",
             left: "50%",
@@ -140,12 +134,6 @@ const Layout1: React.FC = () => {
             width: "100%",
           }}
         >
-          <SubTitle
-            sx={{ mb: 5 }}
-            dangerouslySetInnerHTML={{
-              __html: locale[item?.language!]?.INTRO_OPTIONAL!,
-            }}
-          />
           <MiniText
             className="animate__animated animate__zoomIn animate__slow animate__delay-1s"
             sx={{ letterSpacing: "0.25em", mb: 5, textTransform: "uppercase" }}
@@ -160,22 +148,26 @@ const Layout1: React.FC = () => {
               __html: `${item?.title1Groom} <br/> & <br/> ${item?.title1Bride}`,
             }}
           />
-          <Grid container justifyContent="left" mb={5} rowSpacing={0.5}>
+          <Grid container justifyContent="center" mb={5} rowSpacing={0.5}>
             <Grid
               item
-              borderLeft="8px solid #FDE6E8"
               px={2}
               className="animate__animated animate__zoomIn animate__slow animate__delay-1s"
             >
-              <Text dangerouslySetInnerHTML={{ __html: fullDate }} />
+              <Text
+                style={{ letterSpacing: "0.1em" }}
+                dangerouslySetInnerHTML={{ __html: fullDate }}
+              />
             </Grid>
             <Grid
               item
-              borderLeft="8px solid #FDE6E8"
               px={2}
               className="animate__animated animate__zoomIn animate__slow animate__delay-2s"
             >
-              <Text dangerouslySetInnerHTML={{ __html: item?.location! }} />
+              <Text
+                style={{ letterSpacing: "0.1em" }}
+                dangerouslySetInnerHTML={{ __html: item?.location! }}
+              />
             </Grid>
           </Grid>
         </Box>
@@ -206,8 +198,9 @@ const Layout1: React.FC = () => {
               __html: locale[item?.language!]?.CARD_TEXT!,
             }}
           />
-          <UbuntuText
+          <Text
             sx={{
+              fontSize: "16px",
               fontWeight: "bolder",
               mb: 3,
               textShadow: "1px 1px 10px #FDE6E8",
@@ -220,9 +213,10 @@ const Layout1: React.FC = () => {
 
         <Box
           sx={{
+            background: "#FDE6E8",
             borderTop: "1px solid #FDE6E8",
             borderBottom: "1px solid #FDE6E8",
-            mx: -2,
+            mx: -3,
             py: 8,
           }}
         >
@@ -234,12 +228,14 @@ const Layout1: React.FC = () => {
             />
             <Box mt={2} sx={{ textAlign: "center" }}>
               <Text
+                style={{ marginBottom: "8px" }}
                 dangerouslySetInnerHTML={{
                   __html: `${locale[item?.language!]
                     ?.CARD_SUBTITLE_FIRST!} : ${fullDate} `,
                 }}
               />
               <Text
+                style={{ marginBottom: "8px" }}
                 dangerouslySetInnerHTML={{
                   __html: `${locale[item?.language!]?.CARD_SUBTITLE_TWO!}: ${
                     item?.location
@@ -262,11 +258,11 @@ const Layout1: React.FC = () => {
             py: 4,
           }}
         >
-          <UbuntuText
+          <Title
             dangerouslySetInnerHTML={{
               __html: locale[item?.language!]?.CARD_COUNTDOWN_TITLE!,
             }}
-            sx={{ pb: 2 }}
+            sx={{ pb: 2, fontSize: "32px" }}
           />
           {!isCounting ? (
             <Box
@@ -288,31 +284,51 @@ const Layout1: React.FC = () => {
               id="countdown"
               columnGap={2}
               sx={{
+                boxShadow: "1px 10px 10px -10px #656041",
+                pb: 1,
                 width: "fit-content",
                 mx: "auto",
                 display: "flex",
               }}
             >
-              <TimeBox>
-                {countdownTimer?.countdownTimer.d}
-                <br />
-                {locale?.[item?.language!]?.COUNTDOWN_DAYS}
-              </TimeBox>
-              <TimeBox>
-                {countdownTimer?.countdownTimer.h}
-                <br />
-                {locale?.[item?.language!]?.COUNTDOWN_HOUR}
-              </TimeBox>
-              <TimeBox>
-                {countdownTimer?.countdownTimer.m}
-                <br />
-                {locale?.[item?.language!]?.COUNTDOWN_MINUTE}
-              </TimeBox>
-              <TimeBox>
-                {countdownTimer?.countdownTimer.s}
-                <br />
-                {locale?.[item?.language!]?.COUNTDOWN_SECOND}
-              </TimeBox>
+              <Box>
+                <Text
+                  style={{ fontSize: "48px" }}
+                  dangerouslySetInnerHTML={{
+                    __html: `${countdownTimer?.countdownTimer.d} `,
+                  }}
+                />
+              </Box>
+              <Box>
+                <Text
+                  style={{ fontSize: "24px" }}
+                  dangerouslySetInnerHTML={{
+                    __html: `${
+                      countdownTimer?.countdownTimer.h
+                    } <span style="font-size: 12px">${
+                      locale?.[item?.language!]?.COUNTDOWN_HOUR
+                    }</span>`,
+                  }}
+                />
+                <Text
+                  style={{ fontSize: "24px" }}
+                  dangerouslySetInnerHTML={{
+                    __html: `${
+                      countdownTimer?.countdownTimer.m
+                    } <span style="font-size: 12px">${
+                      locale?.[item?.language!]?.COUNTDOWN_MINUTE
+                    }</span>`,
+                  }}
+                />
+              </Box>
+              <Box>
+                <Text
+                  style={{ fontSize: "48px", color: "pink", width: "50px" }}
+                  dangerouslySetInnerHTML={{
+                    __html: `${countdownTimer?.countdownTimer.s} `,
+                  }}
+                />
+              </Box>
             </Box>
           )}
         </Box>

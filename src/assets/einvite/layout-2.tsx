@@ -1,11 +1,5 @@
 import { Box, Container, Grid, List, Paper, styled } from "@mui/material";
-import {
-  Arapey,
-  Cormorant_Garamond,
-  Poiret_One,
-  Tangerine,
-  Ubuntu,
-} from "next/font/google";
+import { Arapey, Poiret_One, Tangerine, Ubuntu } from "next/font/google";
 import useGetEinvite from "@/data/useGetEinvite";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
@@ -20,11 +14,6 @@ const poiretOne = Poiret_One({ subsets: ["latin"], weight: "400" });
 const ubuntu = Ubuntu({ subsets: ["latin"], weight: "700" });
 const tangerine = Tangerine({ subsets: ["latin"], weight: ["400", "700"] });
 const arapey = Arapey({ subsets: ["latin"], weight: ["400"] });
-const coromont = Cormorant_Garamond({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "700"],
-});
-
 interface DateTimeConfig {
   countdownTimer: {
     d: number;
@@ -50,12 +39,6 @@ const Text = styled("p")(() => ({
   fontFamily: `${arapey.style.fontFamily} !important` || "auto",
 }));
 
-const CoromontText = styled("p")(() => ({
-  fontFamily: `${coromont.style.fontFamily} !important` || "auto",
-  fontSize: "20px",
-  fontWeight: "300",
-}));
-
 const MiniText = styled("p")(() => ({
   fontFamily: `${poiretOne.style.fontFamily} !important` || "auto",
   fontSize: "16px",
@@ -65,11 +48,6 @@ const MiniText = styled("p")(() => ({
 const UbuntuText = styled("p")(() => ({
   fontFamily: `${ubuntu.style.fontFamily} !important` || "auto",
   fontWeight: "700",
-  fontSize: "16px",
-  textAlign: "center",
-}));
-
-const TimeBox = styled(Box)(() => ({
   fontSize: "16px",
   textAlign: "center",
 }));
@@ -157,7 +135,6 @@ const Layout2: React.FC = () => {
             wordBreak: "break-word",
             minHeight: "500px",
             width: "100%",
-            zIndex: "2",
           }}
         >
           <Box
@@ -189,7 +166,7 @@ const Layout2: React.FC = () => {
               style={{ transform: "rotate(180deg)" }}
             />
           </Box>
-          <Box sx={{ width: "100px", margin: "16px auto 0" }}>
+          <Box sx={{ margin: "16px auto 0" }}>
             <SubTitle
               style={{ fontSize: "24px" }}
               dangerouslySetInnerHTML={{
@@ -220,28 +197,32 @@ const Layout2: React.FC = () => {
             <Box mt={4} px={2}>
               <Text
                 className="animate__animated animate__zoomIn animate__slow"
-                style={{ fontSize: "16px" }}
+                style={{ fontSize: "16px", letterSpacing: "0.15em" }}
                 dangerouslySetInnerHTML={{
                   __html: `#${item?.title1Groom}${item?.title1Bride}`,
                 }}
               />
-              <CoromontText
+              <Text
                 className="animate__animated animate__zoomIn animate__slow animate__delay-1s"
                 style={{
                   marginTop: "32px",
+                  letterSpacing: "0.15em",
                 }}
               >
                 {fullDate}
-              </CoromontText>
-              <CoromontText className="animate__animated animate__zoomIn animate__slow animate__delay-2s">
+              </Text>
+              <Text
+                style={{ letterSpacing: "0.15em" }}
+                className="animate__animated animate__zoomIn animate__slow animate__delay-2s"
+              >
                 {timeStart}
-              </CoromontText>
-              <CoromontText
+              </Text>
+              <Text
+                style={{ letterSpacing: "0.15em" }}
                 className="animate__animated animate__zoomIn animate__slow animate__delay-3s"
-                style={{ fontWeight: "700" }}
               >
                 {item?.location}
-              </CoromontText>
+              </Text>
             </Box>
           </Box>
         </Box>
@@ -318,6 +299,7 @@ const Layout2: React.FC = () => {
             />
             <Box mt={2} sx={{ textAlign: "center" }}>
               <MiniText
+                style={{ marginBottom: "8px" }}
                 dangerouslySetInnerHTML={{
                   __html: `${
                     locale?.[item?.language!]?.CARD_SUBTITLE_FIRST
@@ -325,6 +307,7 @@ const Layout2: React.FC = () => {
                 }}
               />
               <MiniText
+                style={{ marginBottom: "8px" }}
                 dangerouslySetInnerHTML={{
                   __html: `${locale?.[item?.language!]?.CARD_SUBTITLE_TWO} : ${
                     item?.location
@@ -332,6 +315,7 @@ const Layout2: React.FC = () => {
                 }}
               />
               <MiniText
+                style={{ marginBottom: "8px" }}
                 dangerouslySetInnerHTML={{
                   __html: `${
                     locale?.[item?.language!]?.CARD_SUBTITLE_THREE
@@ -345,10 +329,11 @@ const Layout2: React.FC = () => {
         <Box
           sx={{
             px: 2,
-            py: 4,
+            py: 8,
           }}
         >
-          <UbuntuText
+          <Title
+            style={{ color: "#656041" }}
             dangerouslySetInnerHTML={{
               __html: locale?.[item?.language!]?.CARD_COUNTDOWN_TITLE,
             }}
@@ -375,31 +360,51 @@ const Layout2: React.FC = () => {
               id="countdown"
               columnGap={2}
               sx={{
+                boxShadow: "1px 10px 10px -10px #656041",
+                pb: 1,
                 width: "fit-content",
                 mx: "auto",
                 display: "flex",
               }}
             >
-              <TimeBox>
-                {countdownTimer?.countdownTimer.d}
-                <br />
-                {locale?.[item?.language!]?.COUNTDOWN_DAYS}
-              </TimeBox>
-              <TimeBox>
-                {countdownTimer?.countdownTimer.h}
-                <br />
-                {locale?.[item?.language!]?.COUNTDOWN_HOUR}
-              </TimeBox>
-              <TimeBox>
-                {countdownTimer?.countdownTimer.m}
-                <br />
-                {locale?.[item?.language!]?.COUNTDOWN_MINUTE}
-              </TimeBox>
-              <TimeBox>
-                {countdownTimer?.countdownTimer.s}
-                <br />
-                {locale?.[item?.language!]?.COUNTDOWN_SECOND}
-              </TimeBox>
+              <Box>
+                <Text
+                  style={{ fontSize: "48px" }}
+                  dangerouslySetInnerHTML={{
+                    __html: `${countdownTimer?.countdownTimer.d} `,
+                  }}
+                />
+              </Box>
+              <Box>
+                <Text
+                  style={{ fontSize: "24px" }}
+                  dangerouslySetInnerHTML={{
+                    __html: `${
+                      countdownTimer?.countdownTimer.h
+                    } <span style="font-size: 12px">${
+                      locale?.[item?.language!]?.COUNTDOWN_HOUR
+                    }</span>`,
+                  }}
+                />
+                <Text
+                  style={{ fontSize: "24px" }}
+                  dangerouslySetInnerHTML={{
+                    __html: `${
+                      countdownTimer?.countdownTimer.m
+                    } <span style="font-size: 12px">${
+                      locale?.[item?.language!]?.COUNTDOWN_MINUTE
+                    }</span>`,
+                  }}
+                />
+              </Box>
+              <Box>
+                <Text
+                  style={{ fontSize: "48px", color: "#656041", width: "50px" }}
+                  dangerouslySetInnerHTML={{
+                    __html: `${countdownTimer?.countdownTimer.s} `,
+                  }}
+                />
+              </Box>
             </Box>
           )}
         </Box>
@@ -411,9 +416,11 @@ const Layout2: React.FC = () => {
             py: 4,
           }}
         >
-          <UbuntuText
-            dangerouslySetInnerHTML={{ __html: "Ucapan" }}
-            sx={{ pb: 2 }}
+          <MiniText
+            dangerouslySetInnerHTML={{
+              __html: locale?.[item?.language!]?.CARD_WISH_TITLE,
+            }}
+            sx={{ pb: 2, fontSize: "16px" }}
           />
           <MiniText
             dangerouslySetInnerHTML={{
@@ -422,7 +429,7 @@ const Layout2: React.FC = () => {
             sx={{ pb: 2 }}
           />
           <Grid container>
-            <Grid item py={2} xs={12}>
+            <Grid item pb={2} xs={12}>
               <Paper
                 sx={{
                   background: "transparent",
@@ -431,7 +438,7 @@ const Layout2: React.FC = () => {
                   overflow: "scroll",
                 }}
               >
-                <List>
+                <List sx={{ py: 0 }}>
                   {/* @ts-ignore */}
                   {listComments?.map((comment: any, idx: string) => (
                     <CommentList

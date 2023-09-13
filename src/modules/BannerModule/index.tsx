@@ -244,10 +244,8 @@ const BannerModule = () => {
               style={{
                 fontSize: "16px",
                 fontWeight: "700",
-                background: "#FFF",
+                background: "rgba(255,255,255,0.8)",
                 padding: "8px 16px",
-                borderRadius: "24px",
-                boxShadow: "1px 1px 10px #c3edf3",
               }}
             >
               <Link
