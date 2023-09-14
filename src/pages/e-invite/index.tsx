@@ -7,6 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import Head from "next/head";
+import HeadContent from "@/modules/HeadContent";
 
 const EInvite = () => {
   const { auth } = useCheckauth();
@@ -16,6 +17,10 @@ const EInvite = () => {
   if (!layout)
     return (
       <BoxContainer>
+        <HeadContent
+          title=" e-Invite"
+          description="Create your digital invitation card now. Follow the 3 easy steps given and your card will be ready in the blink of eye"
+        />
         <Grid container mt={8} rowGap={4}>
           <Grid item xs={12} md={6}>
             <p style={{ fontSize: "24px", fontWeight: "700" }}>
@@ -80,20 +85,20 @@ const EInvite = () => {
   if (!auth)
     return (
       <Box sx={{ minHeight: "76vh" }}>
+        <HeadContent
+          title=" e-Invite"
+          description="Create your digital invitation card now. Follow the 3 easy steps given and your card will be ready in the blink of eye"
+        />
         <Login />
       </Box>
     );
 
   return (
     <Box>
-      <Head>
-        <title>Pulpen Studio | e-Invite</title>
-        <meta
-          name="description"
-          content="Create your digital invitation card now. Follow the 3 easy steps given and your card will be ready in the blink of eye"
-          key="desc"
-        />
-      </Head>
+      <HeadContent
+        title=" e-Invite"
+        description="Create your digital invitation card now. Follow the 3 easy steps given and your card will be ready in the blink of eye"
+      />
       <EInviteModule />
     </Box>
   );

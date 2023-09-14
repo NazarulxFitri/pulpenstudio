@@ -14,10 +14,15 @@ export const layoutConfig = [
     ],
     description:
       "Customize digital invitation card for those who wants to express their own creativity on digital invitation card",
-
+    demo: "",
     features: [
-      "Choose your desired music from Youtube !",
-      "Include / Exclude suitable helper widgets - Money Gift, RSVP, Contact Number, Google Map Location",
+      "RSVP + Admin Dashboard incl.",
+      "Wishes",
+      "Google Map Location / Waze Location",
+      "Choose any song from Youtube",
+      "Link to Whatsapp & Phone Call",
+      "Add Photo section (Upon request)",
+      "Live support during Event Day",
     ],
   },
   {
@@ -32,10 +37,15 @@ export const layoutConfig = [
     ],
     description:
       "Light Pink Rosie demonstrates the color of pink mix with flowers. By having a soft theme colors, it will surely brighten your guests mood.",
-
+    demo: "/layout1-example",
     features: [
-      "Choose your desired music from Youtube !",
-      "Include / Exclude suitable helper widgets - Money Gift, RSVP, Contact Number, Google Map Location",
+      "RSVP + Admin Dashboard incl.",
+      "Wishes",
+      "Google Map Location / Waze Location",
+      "Choose any song from Youtube",
+      "Link to Whatsapp & Phone Call",
+      "Add Photo section (Upon request)",
+      "Live support during Event Day",
     ],
   },
   {
@@ -50,9 +60,15 @@ export const layoutConfig = [
     ],
     description:
       "Dark premium theme colors blended with soft color hand-writting. Mix with golden colors",
+    demo: "/layout2-example",
     features: [
-      "Choose your desired music from Youtube !",
-      "Include / Exclude suitable helper widgets - Money Gift, RSVP, Contact Number, Google Map Location",
+      "RSVP + Admin Dashboard incl.",
+      "Wishes",
+      "Google Map Location / Waze Location",
+      "Choose any song from Youtube",
+      "Link to Whatsapp & Phone Call",
+      "Add Photo section (Upon request)",
+      "Live support during Event Day",
     ],
   },
   {
@@ -67,10 +83,15 @@ export const layoutConfig = [
     ],
     description:
       "Refreshing looks brought in by Tulips with combination of purple , blue and green color. One of highest subscribed by our customer. Surely this design will never dissapoint you",
-
+    demo: "/layout3-example",
     features: [
-      "Choose your desired music from Youtube !",
-      "Include / Exclude suitable helper widgets - Money Gift, RSVP, Contact Number, Google Map Location",
+      "RSVP + Admin Dashboard incl.",
+      "Wishes",
+      "Google Map Location / Waze Location",
+      "Choose any song from Youtube",
+      "Link to Whatsapp & Phone Call",
+      "Add Photo section (Upon request)",
+      "Live support during Event Day",
     ],
   },
   {
@@ -85,10 +106,15 @@ export const layoutConfig = [
     ],
     description:
       "Mixture of soft and dark color creates a harmony scenery that will surely make your guest feels calm.",
-
+    demo: "/layout4-example",
     features: [
-      "Choose your desired music from Youtube !",
-      "Include / Exclude suitable helper widgets - Money Gift, RSVP, Contact Number, Google Map Location",
+      "RSVP + Admin Dashboard incl.",
+      "Wishes",
+      "Google Map Location / Waze Location",
+      "Choose any song from Youtube",
+      "Link to Whatsapp & Phone Call",
+      "Add Photo section (Upon request)",
+      "Live support during Event Day",
     ],
   },
   {
@@ -103,10 +129,15 @@ export const layoutConfig = [
     ],
     description:
       "Mixture of soft and dark color creates a harmony scenery that will surely make your guest feels calm.",
-
+    demo: "/layout5-example",
     features: [
-      "Choose your desired music from Youtube !",
-      "Include / Exclude suitable helper widgets - Money Gift, RSVP, Contact Number, Google Map Location",
+      "RSVP + Admin Dashboard incl.",
+      "Wishes",
+      "Google Map Location / Waze Location",
+      "Choose any song from Youtube",
+      "Link to Whatsapp & Phone Call",
+      "Add Photo section (Upon request)",
+      "Live support during Event Day",
     ],
   },
   {
@@ -121,10 +152,15 @@ export const layoutConfig = [
     ],
     description:
       "Combination of light green and soft brown surely will provide you with great deep breathing look",
-
+    demo: "/layout6-example",
     features: [
-      "Choose your desired music from Youtube !",
-      "Include / Exclude suitable helper widgets - Money Gift, RSVP, Contact Number, Google Map Location",
+      "RSVP + Admin Dashboard incl.",
+      "Wishes",
+      "Google Map Location / Waze Location",
+      "Choose any song from Youtube",
+      "Link to Whatsapp & Phone Call",
+      "Add Photo section (Upon request)",
+      "Live support during Event Day",
     ],
   },
   {
@@ -139,10 +175,15 @@ export const layoutConfig = [
     ],
     description:
       "Premium black and gold look. Combination of majestic colors designed with modest art will make your card look ultra exclusive !",
-
+    demo: "/layout7-example",
     features: [
-      "Choose your desired music from Youtube !",
-      "Include / Exclude suitable helper widgets - Money Gift, RSVP, Contact Number, Google Map Location",
+      "RSVP + Admin Dashboard incl.",
+      "Wishes",
+      "Google Map Location / Waze Location",
+      "Choose any song from Youtube",
+      "Link to Whatsapp & Phone Call",
+      "Add Photo section (Upon request)",
+      "Live support during Event Day",
     ],
   },
   {
@@ -157,10 +198,15 @@ export const layoutConfig = [
     ],
     description:
       "Presenting blue flowers mimicking sea to display calmness with minimalism look. One of our best seller that will surely make your guest fall in love with the design",
-
+    demo: "/layout8-example",
     features: [
-      "Choose your desired music from Youtube !",
-      "Include / Exclude suitable helper widgets - Money Gift, RSVP, Contact Number, Google Map Location",
+      "RSVP + Admin Dashboard incl.",
+      "Wishes",
+      "Google Map Location / Waze Location",
+      "Choose any song from Youtube",
+      "Link to Whatsapp & Phone Call",
+      "Add Photo section (Upon request)",
+      "Live support during Event Day",
     ],
   },
   {
@@ -175,10 +221,15 @@ export const layoutConfig = [
     ],
     description:
       "Turqoise pastel theme color designed to express softness and light to provide you a calm and refreshing look",
-
+    demo: "/layout9-example",
     features: [
-      "Choose your desired music from Youtube !",
-      "Include / Exclude suitable helper widgets - Money Gift, RSVP, Contact Number, Google Map Location",
+      "RSVP + Admin Dashboard incl.",
+      "Wishes",
+      "Google Map Location / Waze Location",
+      "Choose any song from Youtube",
+      "Link to Whatsapp & Phone Call",
+      "Add Photo section (Upon request)",
+      "Live support during Event Day",
     ],
   },
   {
@@ -193,10 +244,15 @@ export const layoutConfig = [
     ],
     description:
       "A little bit aurora green color mix with light brown. A combination of soft colors to put femine vibes",
-
+    demo: "/layout10-example",
     features: [
-      "Choose your desired music from Youtube !",
-      "Include / Exclude suitable helper widgets - Money Gift, RSVP, Contact Number, Google Map Location",
+      "RSVP + Admin Dashboard incl.",
+      "Wishes",
+      "Google Map Location / Waze Location",
+      "Choose any song from Youtube",
+      "Link to Whatsapp & Phone Call",
+      "Add Photo section (Upon request)",
+      "Live support during Event Day",
     ],
   },
 ];

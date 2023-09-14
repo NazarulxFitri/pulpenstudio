@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import { Button2, CategoryText } from "../CatalogueModule";
 import BreadcrumbModule from "../BreadcrumbModule";
+import Link from "next/link";
 
 export const Text = styled("p")(() => ({
   background: "#FFF",
@@ -47,7 +48,7 @@ const DetailModule = ({}) => {
           </Box>
         </Grid>
         <Grid item xs={12} md={6}>
-          <Box display="flex">
+          <Box>
             <p style={{ fontSize: "24px", fontWeight: "700" }}>
               {selectedLayout?.name}
             </p>
@@ -62,14 +63,20 @@ const DetailModule = ({}) => {
           <Box my={6}>
             {selectedLayout?.layoutid !== "000" ? (
               <Button2
-                style={{ padding: "12px 16px" }}
+                style={{
+                  padding: "12px 16px",
+                  textAlign: "center",
+                }}
                 href={`/e-invite?layoutid=${selectedLayout?.layoutid}`}
               >
                 Try now for free
               </Button2>
             ) : (
               <Button2
-                style={{ padding: "12px 16px" }}
+                style={{
+                  padding: "12px 16px",
+                  textAlign: "center",
+                }}
                 href={`https://api.whatsapp.com/send?phone=601156271776&text=Hi%20%2C%20saya%20datang%20dari%20e-invite%20!%20#CustomizeDesign%20`}
               >
                 Proceed with Admin
@@ -77,7 +84,7 @@ const DetailModule = ({}) => {
             )}
           </Box>
           <p style={{ margin: "12px 0" }}>{selectedLayout?.description}</p>
-          <p style={{ margin: "12px 0", fontWeight: "700" }}>
+          <p style={{ margin: "32px 0 12px", fontWeight: "700" }}>
             Features included :
           </p>
           {selectedLayout?.features.map((feat, idx) => (
@@ -85,28 +92,6 @@ const DetailModule = ({}) => {
               - {feat}
             </p>
           ))}
-          <Box
-            sx={{
-              background: "#eeece1",
-              borderRadius: "8px",
-              p: { xs: 2, md: 6 },
-              my: 2,
-            }}
-          >
-            <p style={{ margin: "12px 0", fontWeight: "700" }}>
-              Do you know that you can try all our examples here for free ? Now
-              you know !
-            </p>
-            <p style={{ margin: "12px 0" }}>
-              Choose any design that you like. Follow the steps provided you.
-              And tha&apos;s it, your card is ready and can be viewed for free
-            </p>
-            <p style={{ margin: "12px 0" }}>
-              Our policy : User can create card and feel it first for free. If
-              you like it , can proceed with payment and we will make it ready
-              for your event day !
-            </p>
-          </Box>
         </Grid>
       </Grid>
     </BoxContainer>

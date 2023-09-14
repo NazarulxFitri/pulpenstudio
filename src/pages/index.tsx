@@ -9,6 +9,7 @@ import {
   WrenchIcon,
 } from "@/components";
 import BannerModule from "@/modules/BannerModule";
+import HeadContent from "@/modules/HeadContent";
 import { layoutConfig } from "@/utils/LayoutConfig";
 import { Box, Container, Grid } from "@mui/material";
 import Head from "next/head";
@@ -20,14 +21,10 @@ export default function Home() {
 
   return (
     <Box>
-      <Head>
-        <title>Pulpen Studio | Home</title>
-        <meta
-          name="description"
-          content="Pulpen Studio offers service to create digital invitation card specially made for wedding, birthday and any events. Here in Pulpen Studio, user can create their digital card for free and only pay once they confirmed to purchase it"
-          key="desc"
-        />
-      </Head>
+      <HeadContent
+        title="Home"
+        description="Pulpen Studio offers service to create digital invitation card specially made for wedding, birthday and any events. Here in Pulpen Studio, user can create their digital card for free and only pay once they confirmed to purchase it"
+      />
       <BannerModule />
       <Container>
         <Box

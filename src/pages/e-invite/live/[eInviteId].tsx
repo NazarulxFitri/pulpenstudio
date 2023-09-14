@@ -6,6 +6,7 @@ import { useRouter } from "next/router";
 import Head from "next/head";
 import { RibbonBanner } from "@/components";
 import Link from "next/link";
+import HeadContent from "@/modules/HeadContent";
 
 interface EinviteLiveProps {}
 
@@ -17,14 +18,10 @@ const EinviteLive: React.FC<EinviteLiveProps> = () => {
 
   return (
     <Box>
-      <Head>
-        <title>Pulpen Studio | Live</title>
-        <meta
-          name="description"
-          content="Pulpen Studio Live - Finished product for our client's guest. Enjoy the card !"
-          key="desc"
-        />
-      </Head>
+      <HeadContent
+        title="Live"
+        description="Pulpen Studio Live - Finished product for our client's guest. Enjoy the card !"
+      />
       <Grid item xs={12}>
         {!isLoading && !data?.paid && (
           <Box

@@ -1,4 +1,5 @@
 import DetailModule from "@/modules/DetailModule";
+import HeadContent from "@/modules/HeadContent";
 
 import { Box } from "@mui/material";
 import Head from "next/head";
@@ -6,14 +7,10 @@ import Head from "next/head";
 const Detail = () => {
   return (
     <Box>
-      <Head>
-        <title>Pulpen Studio | Detail</title>
-        <meta
-          name="description"
-          content="Detail of your selected design of digital card. Pulpen Studio provides you variety of information that can help you to decide your favourite design"
-          key="desc"
-        />
-      </Head>
+      <HeadContent
+        title="Detail"
+        description="Detail of your selected design of digital card. Pulpen Studio provides you variety of information that can help you to decide your favourite design"
+      />
       <DetailModule />
     </Box>
   );

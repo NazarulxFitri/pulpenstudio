@@ -74,7 +74,9 @@ const FaqModule: React.FC<CatalogueModuleProps> = ({}) => {
           after event day)
         </p>
         <p style={{ marginTop: "16px" }}>
-          <b>2. How long will the card stay online after made the payment ?</b>
+          <b>
+            2. How long will the card stay online after making the payment ?
+          </b>
         </p>
         <p>
           The card will stay online from the moment you succesfully made payment
@@ -97,7 +99,13 @@ const FaqModule: React.FC<CatalogueModuleProps> = ({}) => {
         <p>
           Yes you can. We also offers a custom service with extra additional
           charges RM10.00 . The customization includes changing images, colors,
-          content and also any styling
+          content and also any styling.{" "}
+          <Link
+            style={{ color: "#945c13", textDecoration: "none" }}
+            href="/customize"
+          >
+            Click here to find out more
+          </Link>
         </p>
         <p style={{ marginTop: "16px" }}>
           <b>
@@ -141,9 +149,15 @@ const FaqModule: React.FC<CatalogueModuleProps> = ({}) => {
           <b>10. How can I make the payment?</b>
         </p>
         <p>
-          You can go to <Link href="/account">My Account</Link>, go to My Work
-          tab on the left section, and click pay for the card that you wanted to
-          purchase
+          You can go to{" "}
+          <Link
+            style={{ color: "#945c13", textDecoration: "none" }}
+            href="/acccount"
+          >
+            My Account
+          </Link>
+          , go to My Work tab on the left section, and click pay for the card
+          that you wanted to purchase
         </p>
         <p style={{ marginTop: "16px" }}>
           <b>11. How can I talk to Pulpen Studio support?</b>

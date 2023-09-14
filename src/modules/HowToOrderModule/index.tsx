@@ -15,17 +15,20 @@ const HowToOrderModule = () => {
         <Image
           src="/media/cardSelection/card-3/main.png"
           alt="Card Selection"
-          width={144}
-          height={248}
+          width={244}
+          height={480}
         />
       </Box>
       <Grid container spacing={2}>
         <Grid item xs={12} md={4}>
           <Box sx={{ textAlign: "center" }}>
-            <Box sx={{ fontWeight: "700" }}>
+            <Box>
               <span style={{ fontSize: "32px" }}>1.</span> Choose your design
               from our{" "}
-              <Link href="/catlogue" style={{ color: "#333" }}>
+              <Link
+                style={{ color: "#945c13", textDecoration: "none" }}
+                href="/catalogue"
+              >
                 catalogue
               </Link>
               . Click on &quot;Try for free&quot; button
@@ -34,7 +37,7 @@ const HowToOrderModule = () => {
         </Grid>
         <Grid item xs={12} md={4}>
           <Box sx={{ textAlign: "center" }}>
-            <Box sx={{ fontWeight: "700" }}>
+            <Box>
               <span style={{ fontSize: "32px" }}>2.</span> Follow the steps
               given. You will be asked to fill in your e-invite card content
             </Box>
@@ -42,7 +45,7 @@ const HowToOrderModule = () => {
         </Grid>
         <Grid item xs={12} md={4}>
           <Box sx={{ textAlign: "center" }}>
-            <Box sx={{ fontWeight: "700" }}>
+            <Box>
               <span style={{ fontSize: "32px" }}>3.</span> After you click to
               submit the card, a popup will be displayed and you are done ! Your
               card will be ready to be viewed

@@ -14,7 +14,7 @@ export const Text = styled("p")(() => ({
 }));
 
 export const CategoryText = styled("p")(() => ({
-  background: "rgb(221, 208, 200)",
+  background: "#eeece1",
   fontSize: "12px",
   margin: "8px 0",
   padding: "4px 12px",
@@ -27,8 +27,10 @@ export const Button2 = styled(Link)(() => ({
   borderRadius: "24px",
   color: "#333",
   cursor: "pointer",
+  display: "block",
   textDecoration: "none",
   padding: "8px 24px",
+  maxWidth: "100%",
   "&:hover": {
     background: "#eeece1",
   },

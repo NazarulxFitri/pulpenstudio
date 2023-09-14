@@ -7,6 +7,7 @@ import Head from "next/head";
 import AdminModule from "@/modules/AdminModule";
 import useCheckauth from "@/utils/useCheckAuth";
 import { BoxContainer } from "@/components";
+import HeadContent from "@/modules/HeadContent";
 
 interface EinviteAdminProps {}
 
@@ -30,14 +31,10 @@ const EinviteAdmin: React.FC<EinviteAdminProps> = () => {
 
   return (
     <Box>
-      <Head>
-        <title>Pulpen Studio | Admin</title>
-        <meta
-          name="description"
-          content="Pulpen Studio Admin Dashboard for our client to view the card activity"
-          key="desc"
-        />
-      </Head>
+      <HeadContent
+        title="Admin"
+        description="Pulpen Studio Admin Dashboard for our client to view the card activity"
+      />
       <AdminModule {...{ data }} />
     </Box>
   );
