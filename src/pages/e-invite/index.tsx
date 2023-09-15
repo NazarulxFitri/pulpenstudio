@@ -63,18 +63,23 @@ const EInvite = () => {
             </Box>
           </Grid>
           <Grid item xs={12} md={6}>
-            <Box overflow="scroll" display="flex">
+            <Box
+              overflow="scroll"
+              display="flex"
+              justifyContent={{ xs: "left", md: "center" }}
+              gap={4}
+            >
               <Image
                 src="/media/cardSelection/card-3/main.png"
                 alt="Pulpen Studio Digital Invitation Card"
-                height={496}
-                width={288}
+                height={480}
+                width={248}
               />
               <Image
                 src="/media/cardSelection/card-3/2-image.png"
                 alt="Pulpen Studio Digital Invitation Card"
-                height={496}
-                width={288}
+                height={480}
+                width={240}
               />
             </Box>
           </Grid>
