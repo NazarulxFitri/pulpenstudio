@@ -38,7 +38,7 @@ const ContactUsModule = () => {
     <BoxContainer>
       {showBanner && (
         <Box
-          mt={5}
+          mt={4}
           id="banner"
           sx={{ background: "#eeece1", p: 2, borderRadius: "24px" }}
         >
@@ -55,7 +55,7 @@ const ContactUsModule = () => {
           level="two"
         />
       </Box>
-      <Grid container mt={4} spacing={4}>
+      <Grid container mt={4} columnSpacing={4}>
         <Grid item md={6} xs={12}>
           <p>
             Pulpen Studio will always be ready to assist you regardless day or

@@ -109,6 +109,7 @@ const Header = () => {
           )}
         </LinkMenu>
         <LinkMenu href="/faq">FAQ</LinkMenu>
+        <LinkMenu href="/contactus">Contact Us</LinkMenu>
 
         {isLoggedIn ? (
           <LogoutText onClick={useRemoveAuth}>Logout</LogoutText>
@@ -130,6 +131,7 @@ const Header = () => {
           <LinkMenu href="/customize">Customize</LinkMenu>
           <LinkMenu href="/account">My Account</LinkMenu>
           <LinkMenu href="/faq">FAQ</LinkMenu>
+          <LinkMenu href="/contactus">Contact Us</LinkMenu>
 
           {isLoggedIn ? (
             <LogoutText onClick={useRemoveAuth}>Logout</LogoutText>
