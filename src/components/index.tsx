@@ -9,6 +9,7 @@ export { default as LiveSupport } from "./LiveSupport";
 export { default as NextButton } from "./Button/Next";
 
 export { default as WhatsappIcon } from "./Icons/WhatsappIcon";
+export { default as EmailIcon } from "./Icons/EmailIcon";
 export { default as TickIcon } from "./Icons/TickIcon";
 export { default as MapIcon } from "./Icons/MapIcon";
 export { default as MenuIcon } from "./Icons/MenuIcon";

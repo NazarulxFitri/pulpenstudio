@@ -9,7 +9,7 @@ const InstagramIcon: React.FC<InstagramIconProps> = ({ color, size }) => {
   return (
     <SvgIcon
       viewBox="0 0 448 512"
-      sx={{ fontSize: `${size}px`, verticalAlign: "sub" }}
+      sx={{ fontSize: `${size}px`, verticalAlign: "bottom" }}
     >
       <path
         fill={color}
