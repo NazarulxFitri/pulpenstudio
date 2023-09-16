@@ -1,7 +1,9 @@
 import { Box, Container, Grid, List, Paper, styled } from "@mui/material";
 import {
+  Bodoni_Moda,
   Cormorant_SC,
   Luxurious_Script,
+  Moon_Dance,
   Playfair_Display,
   Ubuntu,
 } from "next/font/google";
@@ -24,7 +26,8 @@ const cormorant = Cormorant_SC({
   subsets: ["latin"],
   weight: ["300", "500", "700"],
 });
-const luxurious = Luxurious_Script({ subsets: ["latin"], weight: "400" });
+const moonDance = Moon_Dance({ subsets: ["latin"], weight: ["400"] });
+const bodoni = Bodoni_Moda({ subsets: ["latin"], weight: ["400", "700"] });
 
 interface DateTimeConfig {
   countdownTimer: {
@@ -35,17 +38,25 @@ interface DateTimeConfig {
   };
 }
 
+const Special = styled("p")(() => ({
+  color: "#593a88",
+  fontFamily: `${moonDance.style.fontFamily} !important` || "auto",
+  fontSize: "24px",
+  textAlign: "center",
+}));
+
 const Title = styled("h1")(() => ({
-  color: "#945c13",
+  color: "#593a88",
   lineHeight: "0.75em",
-  fontFamily: `${luxurious.style.fontFamily} !important` || "auto",
-  fontSize: "56px",
+  fontFamily: `${bodoni.style.fontFamily} !important` || "auto",
+  fontSize: "36px",
   textAlign: "center",
   fontWeight: "lighter",
+  textShadow: "4px 4px 4px #909090",
 }));
 
 const SubTitle = styled("p")(() => ({
-  color: " #945c13",
+  color: "#696969",
   fontSize: "24px",
   fontWeight: "300",
   fontFamily: `${cormorant.style.fontFamily} !important` || "auto",
@@ -74,7 +85,12 @@ const UbuntuText = styled("p")(() => ({
   textAlign: "center",
 }));
 
-const Layout10: React.FC = () => {
+const TimeBox = styled(Box)(() => ({
+  fontSize: "16px",
+  textAlign: "center",
+}));
+
+const Layout11: React.FC = () => {
   const router = useRouter();
   const eInviteId = router.query.eInviteId;
   const [countdownTimer, setCountdownTimer] = useState<DateTimeConfig>();
@@ -144,8 +160,8 @@ const Layout10: React.FC = () => {
     <Box
       maxWidth="400px"
       sx={{
-        backgroundImage: "url('/media/animation/layout10-background.webp')",
-        boxShadow: "1px 1px 10px #e4ecf7",
+        background: "#FFF",
+        boxShadow: "1px 1px 10px #b99cd2",
         m: "auto",
         position: "relative",
         overflow: "hidden",
@@ -165,147 +181,137 @@ const Layout10: React.FC = () => {
         />
       </Box>
       <Box sx={{ height: "100vh", position: "relative" }}>
-        <Box sx={{ position: "absolute", top: "0", left: "-20px" }}>
+        <Box sx={{ position: "absolute", top: "-80px" }}>
           <Image
-            src="/media/animation/layout10-flower.webp"
-            alt="Pulpen Studio Aurora Glimpse"
-            width={108}
-            height={110}
-          />
-        </Box>
-        <Box sx={{ position: "absolute", bottom: "60px", right: "-40px" }}>
-          <Image
-            src="/media/animation/layout10-flower.webp"
-            alt="Pulpen Studio Aurora Glimpse"
-            width={108}
-            height={110}
+            src="/media/animation/layout11-flower.webp"
+            alt="Pulpen Studio Violet Blossom"
+            width={400}
+            height={180}
           />
         </Box>
         <Box
           sx={{
             position: "absolute",
+            mt: "-60px",
+            top: "50%",
+            left: "-72px",
+            opacity: "0.4",
+            transform: "translateY(-50%)",
+          }}
+        >
+          <Image
+            src="/media/animation/layout11-flower-1.webp"
+            alt="Pulpen Studio Violet Blossom"
+            width={144}
+            height={338}
+          />
+        </Box>
+        <Box
+          sx={{
+            p: "48px 24px",
+            position: "absolute",
+            mt: "-60px",
             top: "50%",
             left: "50%",
             transform: "translate(-50%, -50%)",
-          }}
-        >
-          <Image
-            src="/media/animation/layout10-art1.webp"
-            alt="Pulpen Studio Aurora Glimpse"
-            width={271}
-            height={271}
-          />
-        </Box>
-        <Box
-          sx={{
-            position: "absolute",
-            top: "80px",
-            left: "50%",
-            transform: "translate(-50%)",
+            width: "100%",
+            textAlign: "center",
           }}
         >
           <SubTitle
-            style={{ fontSize: "20px", letterSpacing: "0.1em" }}
+            style={{ fontSize: "20px", marginBottom: "48px" }}
             dangerouslySetInnerHTML={{
               __html: locale?.[item?.language!]?.INTRO_FIRST,
             }}
           />
-        </Box>
-        <Box
-          sx={{
-            position: "absolute",
-            top: "50%",
-            left: "50%",
-            transform: "translate(-50%,-50%)",
-            marginTop: "-60px",
-          }}
-        >
-          <Image
-            src="/media/animation/layout10-arch.webp"
-            alt="Pulpen Studio Aurora Glimpse"
-            width={351}
-            height={370}
-          />
-        </Box>
-        <Box
-          sx={{
-            position: "absolute",
-            top: "50%",
-            left: "50%",
-            marginTop: "-84px",
-            transform: "translate(-50%,-50%)",
-          }}
-        >
           <Title
             dangerouslySetInnerHTML={{
-              __html: `${item?.title1Groom} <span style="display: block; font-size: 32px">&</span> ${item?.title1Bride}`,
+              __html: `${item?.title1Groom}`,
             }}
           />
-        </Box>
-
-        <Box
-          sx={{
-            position: "absolute",
-            bottom: "160px",
-            left: "50%",
-            transform: "translate(-50%)",
-          }}
-        >
-          <Box display="flex">
+          <Special
+            dangerouslySetInnerHTML={{
+              __html: item?.language === "bm" ? "dan" : "and",
+            }}
+          />
+          <Title
+            dangerouslySetInnerHTML={{
+              __html: `${item?.title1Bride}`,
+            }}
+          />
+          <Box display="flex" mt={6} justifyContent={"center"}>
             <SubTitle
-              style={{
-                borderTop: "1px solid #945c13",
-                borderBottom: "1px solid #945c13",
-                padding: "8px 0",
-                fontSize: "20px",
-                letterSpacing: "0.1em",
-                minWidth: "100px",
-              }}
+              style={{ fontSize: "20px", marginRight: "8px" }}
               dangerouslySetInnerHTML={{
-                __html: dayText,
+                __html: `${dayText},`,
               }}
             />
-            <Box>
-              <SubTitle
-                style={{
-                  fontSize: "32px",
-                  fontWeight: "700",
-                  letterSpacing: "0.1em",
-                  minWidth: "100px",
-                }}
-                dangerouslySetInnerHTML={{
-                  __html: `${dateText}`,
-                }}
-              />
-              <SubTitle
-                style={{
-                  fontSize: "20px",
-                  letterSpacing: "0.1em",
-                  minWidth: "100px",
-                }}
-                dangerouslySetInnerHTML={{
-                  __html: monthText,
-                }}
-              />
-            </Box>
-
             <SubTitle
-              style={{
-                borderTop: "1px solid #945c13",
-                borderBottom: "1px solid #945c13",
-                padding: "8px 0",
-                fontSize: "20px",
-                letterSpacing: "0.1em",
-                minWidth: "100px",
-              }}
+              style={{ fontSize: "20px" }}
               dangerouslySetInnerHTML={{
-                __html: `${yearText}`,
+                __html: fullDate,
               }}
             />
           </Box>
           <SubTitle
             style={{ fontSize: "20px" }}
-            dangerouslySetInnerHTML={{ __html: item?.location! }}
+            dangerouslySetInnerHTML={{
+              __html: item?.location!,
+            }}
+          />
+        </Box>
+        <Box sx={{ position: "absolute", bottom: "0" }}>
+          <Image
+            src="/media/animation/layout11-flower.webp"
+            alt="Pulpen Studio Violet Blossom"
+            width={400}
+            height={180}
+          />
+        </Box>
+        <Box
+          sx={{
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            opacity: "0.3",
+            transform: "translate(-50%, -50%)",
+            marginTop: "-60px",
+          }}
+        >
+          <Image
+            src="/media/animation/layout11-art-2.webp"
+            alt="Pulpen Studio Violet Blossom"
+            width={312}
+            height={300}
+          />
+        </Box>
+        <Box
+          sx={{
+            position: "absolute",
+            top: "20%",
+            left: "20%",
+          }}
+        >
+          <Image
+            src="/media/animation/layout11-art-3.webp"
+            alt="Pulpen Studio Violet Blossom"
+            width={40}
+            height={40}
+          />
+        </Box>
+        <Box
+          sx={{
+            position: "absolute",
+            bottom: "20%",
+            right: "20%",
+            transform: "scaleX(-1)",
+          }}
+        >
+          <Image
+            src="/media/animation/layout11-art-3.webp"
+            alt="Pulpen Studio Violet Blossom"
+            width={40}
+            height={40}
           />
         </Box>
       </Box>
@@ -337,7 +343,7 @@ const Layout10: React.FC = () => {
           />
           <UbuntuText
             sx={{
-              color: "#945c13",
+              color: "#593a88",
               mb: 3,
             }}
             dangerouslySetInnerHTML={{
@@ -348,21 +354,42 @@ const Layout10: React.FC = () => {
 
         <Box
           sx={{
-            borderTop: "1px solid #c4d3ec",
-            borderBottom: "1px solid #c4d3ec",
+            borderTop: "1px solid #D4A5F7",
+            borderBottom: "1px solid #D4A5F7",
             mx: -2,
             py: 8,
             position: "relative",
           }}
         >
-          <Box sx={{ position: "absolute", top: "0", left: "-20px" }}>
+          <Box
+            sx={{
+              position: "absolute",
+              top: "20%",
+              right: "16px",
+              transform: "scaleX(-1)",
+            }}
+          >
             <Image
-              src="/media/animation/layout10-flower.webp"
-              alt="Pulpen Studio Aurora Glimpse"
-              width={108}
-              height={110}
+              src="/media/animation/layout11-art-3.webp"
+              alt="Pulpen Studio Violet Blossom"
+              width={40}
+              height={40}
             />
           </Box>
+          <Box
+            sx={{
+              position: "absolute",
+              opacity: "0.4",
+            }}
+          >
+            <Image
+              src="/media/animation/layout11-flower-1.webp"
+              alt="Pulpen Studio Violet Blossom"
+              width={72}
+              height={169}
+            />
+          </Box>
+
           <Box
             sx={{
               mx: 2,
@@ -472,7 +499,7 @@ const Layout10: React.FC = () => {
               </Box>
               <Box>
                 <Text
-                  style={{ fontSize: "48px", color: "#945c13", width: "50px" }}
+                  style={{ fontSize: "48px", color: "#593a88", width: "50px" }}
                   dangerouslySetInnerHTML={{
                     __html: `${countdownTimer?.countdownTimer.s} `,
                   }}
@@ -517,7 +544,7 @@ const Layout10: React.FC = () => {
                     <CommentList
                       {...{ comment, idx }}
                       key={idx}
-                      bgColor="#f1f0e5"
+                      bgColor="#E6E6FA"
                       textColor="#333"
                     />
                   ))}
@@ -531,7 +558,7 @@ const Layout10: React.FC = () => {
         <Widget
           language={item?.language!}
           iconColor="#131313"
-          color="#f1f0e5"
+          color="#b99cd2"
           location={{ text: item?.location!, mapUrl: item?.mapUrl! }}
           contact={{
             number1: item?.phonePerson1!,
@@ -545,4 +572,4 @@ const Layout10: React.FC = () => {
   );
 };
 
-export default Layout10;
+export default Layout11;

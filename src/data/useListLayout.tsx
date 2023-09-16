@@ -9,6 +9,7 @@ import {
   Layout8,
   Layout9,
   Layout10,
+  Layout11,
 } from "@/assets";
 
 export default function useListLayout() {
@@ -23,6 +24,7 @@ export default function useListLayout() {
     "008": <Layout8 />,
     "009": <Layout9 />,
     "010": <Layout10 />,
+    "011": <Layout11 />,
   };
 
   return listLayout;

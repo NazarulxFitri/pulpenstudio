@@ -8,3 +8,4 @@ export { default as Layout7 } from "./einvite/layout-7";
 export { default as Layout8 } from "./einvite/layout-8";
 export { default as Layout9 } from "./einvite/layout-9";
 export { default as Layout10 } from "./einvite/layout-10";
+export { default as Layout11 } from "./einvite/layout-11";
