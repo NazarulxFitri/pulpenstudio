@@ -12,12 +12,12 @@ import BannerModule from "@/modules/BannerModule";
 import HeadContent from "@/modules/HeadContent";
 import { layoutConfig } from "@/utils/LayoutConfig";
 import { Box, Container, Grid } from "@mui/material";
-import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
-  const layouts = layoutConfig;
+  const layoutsRaw = layoutConfig;
+  const layouts = [...layoutsRaw!].reverse();
 
   return (
     <Box>

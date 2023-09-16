@@ -255,4 +255,27 @@ export const layoutConfig = [
       "Live support during Event Day",
     ],
   },
+  {
+    layoutid: "011",
+    name: "Violet Blossom",
+    category: "Wedding",
+    originalPrice: "RM60.00",
+    discountedPrice: "RM50.00",
+    images: [
+      "/media/cardSelection/card-11/main.png",
+      "/media/cardSelection/card-11/2-image.png",
+    ],
+    description:
+      "Designed during Spring season. Violet Blossom is potraiting how one of the meaning og beauty that can be significant to flowers blooming. With purple as its main theme color, surely this will suits your big day!",
+    demo: "/layout11-example",
+    features: [
+      "RSVP + Admin Dashboard incl.",
+      "Wishes",
+      "Google Map Location / Waze Location",
+      "Choose any song from Youtube",
+      "Link to Whatsapp & Phone Call",
+      "Add Photo section (Upon request)",
+      "Live support during Event Day",
+    ],
+  },
 ];
