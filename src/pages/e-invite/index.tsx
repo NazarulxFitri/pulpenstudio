@@ -7,7 +7,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import Head from "next/head";
-import HeadContent from "@/modules/HeadContent";
 
 const EInvite = () => {
   const { auth } = useCheckauth();
@@ -17,10 +16,19 @@ const EInvite = () => {
   if (!layout)
     return (
       <BoxContainer>
-        <HeadContent
-          title=" e-Invite"
-          description="Create your digital invitation card now. Follow the 3 easy steps given and your card will be ready in the blink of eye"
-        />
+        <Head>
+          <title>Pulpen Studio | e-Invite</title>
+          <meta
+            name="description"
+            content="Create your digital invitation card now. Follow the 3 easy steps given and your card will be ready in the blink of eye"
+          />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <link
+            rel="icon"
+            href="/media/general/pulpenstudioxicon.png"
+            type="image/png"
+          />
+        </Head>
         <Grid container mt={8} rowGap={4}>
           <Grid item xs={12} md={6}>
             <p style={{ fontSize: "24px", fontWeight: "700" }}>
@@ -90,20 +98,34 @@ const EInvite = () => {
   if (!auth)
     return (
       <Box sx={{ minHeight: "76vh" }}>
-        <HeadContent
-          title=" e-Invite"
-          description="Create your digital invitation card now. Follow the 3 easy steps given and your card will be ready in the blink of eye"
-        />
+        <Head>
+          <title>Pulpen Studio | e-Invite</title>
+          <meta
+            name="description"
+            content="Create your digital invitation card now. Follow the 3 easy steps given and your card will be ready in the blink of eye"
+          />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <link
+            rel="icon"
+            href="/media/general/pulpenstudioxicon.png"
+            type="image/png"
+          />
+        </Head>
         <Login />
       </Box>
     );
 
   return (
     <Box>
-      <HeadContent
-        title=" e-Invite"
-        description="Create your digital invitation card now. Follow the 3 easy steps given and your card will be ready in the blink of eye"
-      />
+      <Head>
+        <title>Pulpen Studio | e-Invite</title>
+        <meta
+          name="description"
+          content="Create your digital invitation card now. Follow the 3 easy steps given and your card will be ready in the blink of eye"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/media/general/pulpenstudioxicon.png" />
+      </Head>
       <EInviteModule />
     </Box>
   );

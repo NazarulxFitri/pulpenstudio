@@ -18,10 +18,15 @@ const EinviteLive: React.FC<EinviteLiveProps> = () => {
 
   return (
     <Box>
-      <HeadContent
-        title="Live"
-        description="Pulpen Studio Live - Finished product for our client's guest. Enjoy the card !"
-      />
+      <Head>
+        <title>Pulpen Studio | Live</title>
+        <meta
+          name="description"
+          content="Pulpen Studio Live - Finished product for our client's guest. Enjoy the card !"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/media/general/pulpenstudioxicon.png" />
+      </Head>
       <Grid item xs={12}>
         {!isLoading && !data?.paid && (
           <Box

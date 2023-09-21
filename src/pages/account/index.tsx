@@ -5,7 +5,6 @@ import useCheckauth from "@/utils/useCheckAuth";
 import { Box } from "@mui/material";
 import { useRouter } from "next/router";
 import Head from "next/head";
-import HeadContent from "@/modules/HeadContent";
 
 const Account = () => {
   const { auth } = useCheckauth();
@@ -20,10 +19,15 @@ const Account = () => {
 
   return (
     <Box>
-      <HeadContent
-        title="My Account"
-        description="Pulpen Studio My Account is a for user to see their personal information and card that they have made"
-      />
+      <Head>
+        <title>Pulpen Studio | My Account</title>
+        <meta
+          name="description"
+          content="Pulpen Studio My Account is a for user to see their personal information and card that they have made"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/media/general/pulpenstudioxicon.png" />
+      </Head>
       <AccountModule />
     </Box>
   );

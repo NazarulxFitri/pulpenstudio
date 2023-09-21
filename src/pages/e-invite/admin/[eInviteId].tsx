@@ -31,10 +31,15 @@ const EinviteAdmin: React.FC<EinviteAdminProps> = () => {
 
   return (
     <Box>
-      <HeadContent
-        title="Admin"
-        description="Pulpen Studio Admin Dashboard for our client to view the card activity"
-      />
+      <Head>
+        <title>Pulpen Studio | Admin</title>
+        <meta
+          name="description"
+          content="Pulpen Studio Admin Dashboard for our client to view the card activity"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/media/general/pulpenstudioxicon.png" />
+      </Head>
       <AdminModule {...{ data }} />
     </Box>
   );
