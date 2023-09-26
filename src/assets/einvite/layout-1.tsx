@@ -202,6 +202,7 @@ const Layout1: React.FC = () => {
             sx={{
               fontSize: "16px",
               fontWeight: "bolder",
+              textAlign: "center",
               mb: 3,
               textShadow: "1px 1px 10px #FDE6E8",
             }}
