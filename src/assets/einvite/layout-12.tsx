@@ -171,6 +171,22 @@ const Layout12: React.FC = () => {
       </Box>
       <Box sx={{ height: "100vh", position: "relative" }}>
         <Box
+          sx={{
+            position: "absolute",
+            bottom: "0",
+            left: "0%",
+            marginTop: "-60px",
+            opacity: "0.5",
+          }}
+        >
+          <Image
+            src="/media/animation/layout12-art.webp"
+            alt="Pulpen Studio Green Leaf"
+            width={400}
+            height={400}
+          />
+        </Box>
+        <Box
           className="animate__animated animate__zoomIn animate__slow"
           sx={{
             position: "absolute",

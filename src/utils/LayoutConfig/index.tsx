@@ -278,4 +278,27 @@ export const layoutConfig = [
       "Live support during Event Day",
     ],
   },
+  {
+    layoutid: "012",
+    name: "Green Leaf",
+    category: "Wedding",
+    originalPrice: "RM60.00",
+    discountedPrice: "RM50.00",
+    images: [
+      "/media/cardSelection/card-12/main.png",
+      "/media/cardSelection/card-12/2-image.png",
+    ],
+    description:
+      "Inspired by the beauty of nature, Green leaf is a symbol for green theme colors that potrays nature mixed with art",
+    demo: "/layout12-example",
+    features: [
+      "RSVP + Admin Dashboard incl.",
+      "Wishes",
+      "Google Map Location / Waze Location",
+      "Choose any song from Youtube",
+      "Link to Whatsapp & Phone Call",
+      "Add Photo section (Upon request)",
+      "Live support during Event Day",
+    ],
+  },
 ];

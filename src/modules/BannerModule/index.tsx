@@ -150,78 +150,51 @@ const BannerModule = () => {
           }}
         >
           <Box
+            className="animate__animated animate__zoomIn animate__slow"
             sx={{
               position: "absolute",
-              top: "-20px",
-              left: "-46px",
-              transform: "rotate(35deg)",
+              bottom: "-80px",
+              transform: "rotate(-40deg) scaleX(-1)",
+              left: "-80px",
             }}
           >
             <Image
-              src="/media/animation/layout9-art-1.webp"
-              alt="Pulpen Studio - Evening Turqoise Pastel"
-              width={149}
-              height={247}
+              src="/media/animation/layout12-flower.webp"
+              alt="Pulpen Studio Green Leaf"
+              width={231}
+              height={441}
+            />
+          </Box>
+          <Box
+            className="animate__animated animate__zoomIn animate__slow"
+            sx={{
+              position: "absolute",
+              bottom: "-80px",
+              transform: "rotate(40deg)",
+              right: "-80px",
+            }}
+          >
+            <Image
+              src="/media/animation/layout12-flower.webp"
+              alt="Pulpen Studio Green Leaf"
+              width={231}
+              height={441}
             />
           </Box>
           <Box
             sx={{
               position: "absolute",
-              transform: "rotate(235deg)",
-              top: "-46px",
-              left: "60px",
+              bottom: "0",
+              left: "0%",
+              marginTop: "-60px",
+              opacity: "0.5",
             }}
           >
             <Image
-              src="/media/animation/layout9-art-2.webp"
-              alt="Pulpen Studio - Evening Turqoise Pastel"
-              width={149}
-              height={247}
-            />
-          </Box>
-          <Box
-            sx={{
-              position: "absolute",
-              right: "-40px",
-              top: "-24px",
-              transform: "rotate(-56deg)",
-            }}
-          >
-            <Image
-              src="/media/animation/layout9-art-4.webp"
-              alt="Pulpen Studio - Evening Turqoise Pastel"
-              width={189}
-              height={266}
-            />
-          </Box>
-          <Box
-            sx={{
-              position: "absolute",
-              transform: "rotate(180deg)",
-              top: "30%",
-              left: "10%",
-            }}
-          >
-            <Image
-              src="/media/animation/layout9-art-3.webp"
-              alt="Pulpen Studio - Evening Turqoise Pastel"
-              width={318}
-              height={419}
-            />
-          </Box>
-          <Box
-            sx={{
-              position: "absolute",
-              right: "-40px",
-              top: "-24px",
-              transform: "rotate(-56deg)",
-            }}
-          >
-            <Image
-              src="/media/animation/layout9-art-4.webp"
-              alt="Pulpen Studio - Evening Turqoise Pastel"
-              width={189}
-              height={266}
+              src="/media/animation/layout12-art.webp"
+              alt="Pulpen Studio Green Leaf"
+              width={400}
+              height={400}
             />
           </Box>
           <Box
@@ -233,7 +206,7 @@ const BannerModule = () => {
             }}
           >
             <Image
-              src="/media/cardSelection/card-9/main.png"
+              src="/media/cardSelection/card-12/main.png"
               alt="Pulpen Studio Latest Design"
               width={248}
               height={480}
@@ -249,7 +222,7 @@ const BannerModule = () => {
               }}
             >
               <Link
-                href="/detail?layoutid=009"
+                href="/detail?layoutid=012"
                 style={{ color: "#131313", textDecoration: "none" }}
               >
                 Check out our latest design
