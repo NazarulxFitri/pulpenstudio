@@ -1,5 +1,6 @@
 import { Box, Container, Grid, List, Paper, styled } from "@mui/material";
 import {
+  Allura,
   Bodoni_Moda,
   Cormorant_SC,
   Moon_Dance,
@@ -21,12 +22,7 @@ const playfair = Playfair_Display({
   subsets: ["latin"],
   weight: ["400", "500", "700"],
 });
-const cormorant = Cormorant_SC({
-  subsets: ["latin"],
-  weight: ["300", "500", "700"],
-});
-const moonDance = Moon_Dance({ subsets: ["latin"], weight: ["400"] });
-const bodoni = Bodoni_Moda({ subsets: ["latin"], weight: ["400", "700"] });
+const allura = Allura({ subsets: ["latin"], weight: ["400"] });
 
 interface DateTimeConfig {
   countdownTimer: {
@@ -38,39 +34,39 @@ interface DateTimeConfig {
 }
 
 const Special = styled("p")(() => ({
-  color: "#593a88",
-  fontFamily: `${moonDance.style.fontFamily} !important` || "auto",
+  color: "#293927",
+  fontFamily: `${allura.style.fontFamily} !important` || "auto",
   fontSize: "24px",
   textAlign: "center",
 }));
 
 const Title = styled("h1")(() => ({
-  color: "#593a88",
+  color: "#293927",
   lineHeight: "0.75em",
-  fontFamily: `${bodoni.style.fontFamily} !important` || "auto",
-  fontSize: "36px",
+  fontFamily: `${playfair.style.fontFamily} !important` || "auto",
+  fontSize: "32px",
   textAlign: "center",
   fontWeight: "lighter",
-  textShadow: "4px 4px 4px #909090",
 }));
 
 const SubTitle = styled("p")(() => ({
-  color: "#696969",
-  fontSize: "24px",
+  color: "#293927",
+  fontSize: "14px",
   fontWeight: "300",
-  fontFamily: `${cormorant.style.fontFamily} !important` || "auto",
+  fontFamily: `${playfair.style.fontFamily} !important` || "auto",
   textAlign: "center",
+  letterSpacing: "0.25em",
+  textTransform: "uppercase",
 }));
 
 const Text = styled("p")(() => ({
-  color: "#1e1e1e",
+  color: "#293927",
   fontFamily: `${playfair.style.fontFamily} !important` || "auto",
   fontSize: "16px",
   textAlign: "center",
 }));
 
 const MiniText = styled("p")(() => ({
-  color: "#1e1e1e",
   fontFamily: `${playfair.style.fontFamily} !important` || "auto",
   fontSize: "14px",
   textAlign: "center",
@@ -84,7 +80,7 @@ const UbuntuText = styled("p")(() => ({
   textAlign: "center",
 }));
 
-const Layout11: React.FC = () => {
+const Layout12: React.FC = () => {
   const router = useRouter();
   const eInviteId = router.query.eInviteId;
   const [countdownTimer, setCountdownTimer] = useState<DateTimeConfig>();
@@ -154,8 +150,7 @@ const Layout11: React.FC = () => {
     <Box
       maxWidth="400px"
       sx={{
-        background: "#FFF",
-        boxShadow: "1px 1px 10px #b99cd2",
+        boxShadow: "1px 1px 10px #b4bca9",
         m: "auto",
         position: "relative",
         overflow: "hidden",
@@ -175,91 +170,67 @@ const Layout11: React.FC = () => {
         />
       </Box>
       <Box sx={{ height: "100vh", position: "relative" }}>
-        <Box sx={{ position: "absolute", top: "-80px" }}>
-          <Image
-            src="/media/animation/layout11-flower.webp"
-            alt="Pulpen Studio Violet Blossom"
-            width={400}
-            height={180}
-          />
-        </Box>
         <Box
+          className="animate__animated animate__zoomIn animate__slow"
           sx={{
             position: "absolute",
-            mt: "-60px",
-            top: "50%",
-            left: "-72px",
-            opacity: "0.4",
-            transform: "translateY(-50%)",
+            top: "-200px",
+            transform: "rotate(220deg)",
           }}
         >
           <Image
-            src="/media/animation/layout11-flower-1.webp"
-            alt="Pulpen Studio Violet Blossom"
-            width={144}
-            height={338}
+            src="/media/animation/layout12-flower.webp"
+            alt="Pulpen Studio Green Leaf"
+            width={231}
+            height={441}
           />
         </Box>
         <Box
+          className="animate__animated animate__zoomIn animate__slow"
           sx={{
-            p: "48px 24px",
             position: "absolute",
-            mt: "-60px",
-            top: "50%",
-            left: "50%",
-            transform: "translate(-50%, -50%)",
-            width: "100%",
-            textAlign: "center",
+            top: "-160px",
+            right: "-60px",
+            transform: "rotate(140deg) scaleX(-1)",
           }}
         >
-          <SubTitle
-            style={{ fontSize: "20px", marginBottom: "48px" }}
-            dangerouslySetInnerHTML={{
-              __html: locale?.[item?.language!]?.INTRO_FIRST,
-            }}
-          />
-          <Title
-            dangerouslySetInnerHTML={{
-              __html: `${item?.title1Groom}`,
-            }}
-          />
-          <Special
-            dangerouslySetInnerHTML={{
-              __html: item?.language === "bm" ? "dan" : "and",
-            }}
-          />
-          <Title
-            dangerouslySetInnerHTML={{
-              __html: `${item?.title1Bride}`,
-            }}
-          />
-          <Box display="flex" mt={6} justifyContent={"center"}>
-            <SubTitle
-              style={{ fontSize: "20px", marginRight: "8px" }}
-              dangerouslySetInnerHTML={{
-                __html: `${dayText},`,
-              }}
-            />
-            <SubTitle
-              style={{ fontSize: "20px" }}
-              dangerouslySetInnerHTML={{
-                __html: fullDate,
-              }}
-            />
-          </Box>
-          <SubTitle
-            style={{ fontSize: "20px" }}
-            dangerouslySetInnerHTML={{
-              __html: item?.location!,
-            }}
+          <Image
+            src="/media/animation/layout12-flower.webp"
+            alt="Pulpen Studio Green Leaf"
+            width={231}
+            height={441}
           />
         </Box>
-        <Box sx={{ position: "absolute", bottom: "0" }}>
+        <Box
+          className="animate__animated animate__zoomIn animate__slow"
+          sx={{
+            position: "absolute",
+            bottom: "-80px",
+            transform: "rotate(40deg)",
+            right: "-80px",
+          }}
+        >
           <Image
-            src="/media/animation/layout11-flower.webp"
-            alt="Pulpen Studio Violet Blossom"
-            width={400}
-            height={180}
+            src="/media/animation/layout12-flower.webp"
+            alt="Pulpen Studio Green Leaf"
+            width={231}
+            height={441}
+          />
+        </Box>
+        <Box
+          className="animate__animated animate__zoomIn animate__slow"
+          sx={{
+            position: "absolute",
+            bottom: "-80px",
+            transform: "rotate(-40deg) scaleX(-1)",
+            left: "-80px",
+          }}
+        >
+          <Image
+            src="/media/animation/layout12-flower.webp"
+            alt="Pulpen Studio Green Leaf"
+            width={231}
+            height={441}
           />
         </Box>
         <Box
@@ -267,46 +238,67 @@ const Layout11: React.FC = () => {
             position: "absolute",
             top: "50%",
             left: "50%",
-            opacity: "0.3",
-            transform: "translate(-50%, -50%)",
+            transform: "translate(-50%,-50%)",
             marginTop: "-60px",
           }}
         >
-          <Image
-            src="/media/animation/layout11-art-2.webp"
-            alt="Pulpen Studio Violet Blossom"
-            width={312}
-            height={300}
-          />
-        </Box>
-        <Box
-          sx={{
-            position: "absolute",
-            top: "20%",
-            left: "20%",
-          }}
-        >
-          <Image
-            src="/media/animation/layout11-art-3.webp"
-            alt="Pulpen Studio Violet Blossom"
-            width={40}
-            height={40}
-          />
-        </Box>
-        <Box
-          sx={{
-            position: "absolute",
-            bottom: "20%",
-            right: "20%",
-            transform: "scaleX(-1)",
-          }}
-        >
-          <Image
-            src="/media/animation/layout11-art-3.webp"
-            alt="Pulpen Studio Violet Blossom"
-            width={40}
-            height={40}
-          />
+          <Box>
+            <SubTitle
+              className="animate__animated animate__zoomIn animate__slow"
+              dangerouslySetInnerHTML={{
+                __html: locale?.[item?.language!]?.INTRO_FIRST,
+              }}
+              sx={{ mb: 5 }}
+            />
+            <Box
+              mb={5}
+              className="animate__animated animate__zoomIn animate__slow animate__delay-1s"
+            >
+              <Title
+                dangerouslySetInnerHTML={{
+                  __html: `${item?.title1Groom}`,
+                }}
+                sx={{ mb: 2, ml: -4 }}
+              />
+              <Title
+                dangerouslySetInnerHTML={{
+                  __html: "<3",
+                }}
+                sx={{ mb: 2, fontSize: "16px" }}
+              />
+              <Title
+                dangerouslySetInnerHTML={{
+                  __html: `${item?.title1Bride}`,
+                }}
+                sx={{ mr: -4 }}
+              />
+            </Box>
+            <Box
+              sx={{ display: "flex", mb: 1 }}
+              className="animate__animated animate__zoomIn animate__slow animate__delay-2s"
+            >
+              <SubTitle
+                dangerouslySetInnerHTML={{ __html: dayText + `,` }}
+                sx={{ mr: 1 }}
+              />
+              <SubTitle
+                dangerouslySetInnerHTML={{ __html: `${dateText}` }}
+                sx={{ fontWeight: "bolder" }}
+              />
+              <SubTitle
+                dangerouslySetInnerHTML={{ __html: `${monthText}` }}
+                sx={{ fontWeight: "bolder" }}
+              />
+              <SubTitle
+                dangerouslySetInnerHTML={{ __html: `${yearText}` }}
+                sx={{ fontWeight: "bolder" }}
+              />
+            </Box>
+            <Special
+              dangerouslySetInnerHTML={{ __html: item?.location! }}
+              className="animate__animated animate__zoomIn animate__slow animate__delay-3s"
+            />
+          </Box>
         </Box>
       </Box>
       <Container>
@@ -337,7 +329,7 @@ const Layout11: React.FC = () => {
           />
           <UbuntuText
             sx={{
-              color: "#593a88",
+              color: "#293927",
               mb: 3,
             }}
             dangerouslySetInnerHTML={{
@@ -348,39 +340,27 @@ const Layout11: React.FC = () => {
 
         <Box
           sx={{
-            borderTop: "1px solid #D4A5F7",
-            borderBottom: "1px solid #D4A5F7",
+            borderTop: "1px solid #b4bca9",
+            borderBottom: "1px solid #b4bca9",
             mx: -2,
             py: 8,
             position: "relative",
+            overflow: "hidden",
           }}
         >
           <Box
             sx={{
               position: "absolute",
-              top: "20%",
-              right: "16px",
-              transform: "scaleX(-1)",
+              bottom: "-100px",
+              transform: "rotate(-40deg) scaleX(-1)",
+              left: "-180px",
             }}
           >
             <Image
-              src="/media/animation/layout11-art-3.webp"
-              alt="Pulpen Studio Violet Blossom"
-              width={40}
-              height={40}
-            />
-          </Box>
-          <Box
-            sx={{
-              position: "absolute",
-              opacity: "0.4",
-            }}
-          >
-            <Image
-              src="/media/animation/layout11-flower-1.webp"
-              alt="Pulpen Studio Violet Blossom"
-              width={72}
-              height={169}
+              src="/media/animation/layout12-flower.webp"
+              alt="Pulpen Studio Green Leaf"
+              width={231}
+              height={441}
             />
           </Box>
 
@@ -428,7 +408,7 @@ const Layout11: React.FC = () => {
             py: 4,
           }}
         >
-          <UbuntuText
+          <Special
             dangerouslySetInnerHTML={{
               __html: locale?.[item?.language!]?.CARD_COUNTDOWN_TITLE,
             }}
@@ -454,7 +434,7 @@ const Layout11: React.FC = () => {
               id="countdown"
               columnGap={2}
               sx={{
-                boxShadow: "1px 10px 10px -10px #656041",
+                boxShadow: "1px 10px 10px -10px #b4bca9",
                 pb: 1,
                 width: "fit-content",
                 mx: "auto",
@@ -493,7 +473,7 @@ const Layout11: React.FC = () => {
               </Box>
               <Box>
                 <Text
-                  style={{ fontSize: "48px", color: "#593a88", width: "50px" }}
+                  style={{ fontSize: "48px", color: "#293927", width: "50px" }}
                   dangerouslySetInnerHTML={{
                     __html: `${countdownTimer?.countdownTimer.s} `,
                   }}
@@ -510,7 +490,7 @@ const Layout11: React.FC = () => {
             py: 4,
           }}
         >
-          <UbuntuText
+          <Special
             dangerouslySetInnerHTML={{
               __html: locale?.[item?.language!]?.CARD_WISH_TITLE,
             }}
@@ -538,8 +518,8 @@ const Layout11: React.FC = () => {
                     <CommentList
                       {...{ comment, idx }}
                       key={idx}
-                      bgColor="#E6E6FA"
-                      textColor="#333"
+                      bgColor="#b4bca9"
+                      textColor="#131313"
                     />
                   ))}
                 </List>
@@ -552,7 +532,7 @@ const Layout11: React.FC = () => {
         <Widget
           language={item?.language!}
           iconColor="#131313"
-          color="#b99cd2"
+          color="#b4bca9"
           location={{ text: item?.location!, mapUrl: item?.mapUrl! }}
           contact={{
             number1: item?.phonePerson1!,
@@ -566,4 +546,4 @@ const Layout11: React.FC = () => {
   );
 };
 
-export default Layout11;
+export default Layout12;
