@@ -2,6 +2,7 @@ import {
   BoxContainer,
   EmailIcon,
   InstagramIcon,
+  TiktokIcon,
   WhatsappIcon,
 } from "@/components";
 import BreadcrumbModule from "../BreadcrumbModule";
@@ -55,7 +56,7 @@ const ContactUsModule = () => {
           level="two"
         />
       </Box>
-      <Grid container mt={4} columnSpacing={4}>
+      <Grid container mt={4} columnSpacing={4} rowSpacing={4}>
         <Grid item md={6} xs={12}>
           <p>
             Pulpen Studio will always be ready to assist you regardless day or
@@ -89,6 +90,16 @@ const ContactUsModule = () => {
               href={`https://www.instagram.com/pulpenstudio/`}
             >
               www.instagram.com/pulpenstudio/
+            </Link>
+          </p>
+          <p style={{ marginTop: "16px" }}>
+            <TiktokIcon /> Tiktok :{" "}
+            <Link
+              target="__blank"
+              style={{ textDecoration: "none", color: "#945c13" }}
+              href={`https://www.tiktok.com/@pulpen.studio?_t=8g9RBZ72Bhi&_r=1`}
+            >
+              @pulpen.studio
             </Link>
           </p>
         </Grid>

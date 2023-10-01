@@ -11,6 +11,7 @@ export { default as NextButton } from "./Button/Next";
 export { default as WhatsappIcon } from "./Icons/WhatsappIcon";
 export { default as EmailIcon } from "./Icons/EmailIcon";
 export { default as TickIcon } from "./Icons/TickIcon";
+export { default as TiktokIcon } from "./Icons/TiktokIcon";
 export { default as MapIcon } from "./Icons/MapIcon";
 export { default as MenuIcon } from "./Icons/MenuIcon";
 export { default as ChatIcon } from "./Icons/ChatIcon";

@@ -1,4 +1,4 @@
-import { InstagramIcon } from "@/components";
+import { InstagramIcon, TiktokIcon } from "@/components";
 import { Box } from "@mui/material";
 import Link from "next/link";
 
@@ -95,6 +95,29 @@ const Footer = () => {
                 @pulpenstudio
               </span>
               <InstagramIcon />
+            </p>
+          </Link>
+          <Link
+            href="https://www.tiktok.com/@pulpen.studio?_t=8g9RBZ72Bhi&_r=1"
+            target="__blank"
+            style={{
+              color: "#333",
+              textDecoration: "none",
+              marginTop: "8px",
+              display: "block",
+            }}
+          >
+            <p
+              style={{
+                textAlign: "center",
+                fontSize: "12px",
+              }}
+            >
+              Follow us at Tiktok
+              <span style={{ fontSize: "24px", margin: "0 8px" }}>
+                @pulpen.studio
+              </span>
+              <TiktokIcon />
             </p>
           </Link>
         </Box>
