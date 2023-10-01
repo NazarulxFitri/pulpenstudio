@@ -301,4 +301,27 @@ export const layoutConfig = [
       "Live support during Event Day",
     ],
   },
+  {
+    layoutid: "013",
+    name: "Astral Indigo",
+    category: "Wedding",
+    originalPrice: "RM60.00",
+    discountedPrice: "RM50.00",
+    images: [
+      "/media/cardSelection/card-13/main.png",
+      "/media/cardSelection/card-13/2-image.png",
+    ],
+    description:
+      "Potraying purple pastel color combined with some arts in gold, this design is meant to surface hint of soft majestic towards the guests. It is one of our popular design !",
+    demo: "/layout12-example",
+    features: [
+      "RSVP + Admin Dashboard incl.",
+      "Wishes",
+      "Google Map Location / Waze Location",
+      "Choose any song from Youtube",
+      "Link to Whatsapp & Phone Call",
+      "Add Photo section (Upon request)",
+      "Live support during Event Day",
+    ],
+  },
 ];

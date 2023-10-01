@@ -183,7 +183,7 @@ const Layout13: React.FC = () => {
           backgroundRepeat: "no-repeat",
         }}
       >
-        <Box sx={{ position: "absolute", top: "-80px", left: "-40px" }}>
+        <Box sx={{ position: "absolute", top: "-100px", left: "-80px" }}>
           <Image
             src="/media/animation/layout13-flower.webp"
             alt="Pulpen Studio Astral Indigo "
@@ -253,13 +253,13 @@ const Layout13: React.FC = () => {
           className="animate__animated animate__zoomIn animate__slow animate__delay-1s"
           sx={{
             position: "absolute",
-            top: "160px",
-            left: "50%",
-            transform: "translate(-50%,-50%)",
+            top: "100px",
+            right: "20px",
+            width: "200px",
           }}
         >
           <SubTitle
-            sx={{ padding: "0 4px", background: "#FFF" }}
+            sx={{ fontSize: "16px" }}
             dangerouslySetInnerHTML={{
               __html: locale?.[item?.language!]?.INTRO_FIRST,
             }}
@@ -269,7 +269,7 @@ const Layout13: React.FC = () => {
           className="animate__animated animate__zoomIn animate__slow animate__delay-1s"
           sx={{
             position: "absolute",
-            bottom: "200px",
+            bottom: "140px",
             mt: "-60px",
             py: 2,
           }}
