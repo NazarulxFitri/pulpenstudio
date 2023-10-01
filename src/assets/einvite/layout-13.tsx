@@ -1,9 +1,11 @@
 import { Box, Container, Grid, List, Paper, styled } from "@mui/material";
 import {
   Allura,
-  Bodoni_Moda,
-  Cormorant_SC,
-  Moon_Dance,
+  Clicker_Script,
+  Mr_De_Haviland,
+  Ms_Madi,
+  Oooh_Baby,
+  Parisienne,
   Playfair_Display,
   Ubuntu,
 } from "next/font/google";
@@ -23,6 +25,8 @@ const playfair = Playfair_Display({
   weight: ["400", "500", "700"],
 });
 const allura = Allura({ subsets: ["latin"], weight: ["400"] });
+const parisienne = Parisienne({ subsets: ["latin"], weight: ["400"] });
+const ooohBaby = Oooh_Baby({ subsets: ["latin"], weight: ["400"] });
 
 interface DateTimeConfig {
   countdownTimer: {
@@ -41,16 +45,16 @@ const Special = styled("p")(() => ({
 }));
 
 const Title = styled("h1")(() => ({
-  color: "#293927",
+  color: "#8950ab",
   lineHeight: "0.75em",
-  fontFamily: `${playfair.style.fontFamily} !important` || "auto",
-  fontSize: "32px",
+  fontFamily: `${ooohBaby.style.fontFamily} !important` || "auto",
+  fontSize: "40px",
   textAlign: "center",
   fontWeight: "lighter",
 }));
 
 const SubTitle = styled("p")(() => ({
-  color: "#293927",
+  color: "#8950ab",
   fontSize: "14px",
   fontWeight: "300",
   fontFamily: `${playfair.style.fontFamily} !important` || "auto",
@@ -60,7 +64,7 @@ const SubTitle = styled("p")(() => ({
 }));
 
 const Text = styled("p")(() => ({
-  color: "#293927",
+  color: "#8950ab",
   fontFamily: `${playfair.style.fontFamily} !important` || "auto",
   fontSize: "16px",
   textAlign: "center",
@@ -80,7 +84,7 @@ const UbuntuText = styled("p")(() => ({
   textAlign: "center",
 }));
 
-const Layout12: React.FC = () => {
+const Layout13: React.FC = () => {
   const router = useRouter();
   const eInviteId = router.query.eInviteId;
   const [countdownTimer, setCountdownTimer] = useState<DateTimeConfig>();
@@ -150,8 +154,7 @@ const Layout12: React.FC = () => {
     <Box
       maxWidth="400px"
       sx={{
-        background: "#fcfcf4",
-        boxShadow: "1px 1px 10px #b4bca9",
+        boxShadow: "1px 1px 10px #f5e1fd",
         m: "auto",
         position: "relative",
         overflow: "hidden",
@@ -170,84 +173,30 @@ const Layout12: React.FC = () => {
           controls={true}
         />
       </Box>
-      <Box sx={{ height: "100vh", position: "relative" }}>
-        <Box
-          sx={{
-            position: "absolute",
-            bottom: "0",
-            left: "0%",
-            marginTop: "-60px",
-            opacity: "0.5",
-          }}
-        >
+      <Box
+        sx={{
+          height: "100vh",
+          position: "relative",
+          backgroundImage: "url('/media/animation/layout13-background.webp')",
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+        <Box sx={{ position: "absolute", top: "-80px", left: "-40px" }}>
           <Image
-            src="/media/animation/layout12-art.webp"
-            alt="Pulpen Studio Green Leaf"
-            width={400}
-            height={400}
+            src="/media/animation/layout13-flower.webp"
+            alt="Pulpen Studio Astral Indigo "
+            width={193}
+            height={312}
           />
         </Box>
-        <Box
-          className="animate__animated animate__zoomIn animate__slow"
-          sx={{
-            position: "absolute",
-            top: "-200px",
-            transform: "rotate(220deg)",
-          }}
-        >
+        <Box sx={{ position: "absolute", bottom: "-80px", right: "-80px" }}>
           <Image
-            src="/media/animation/layout12-flower.webp"
-            alt="Pulpen Studio Green Leaf"
-            width={231}
-            height={441}
-          />
-        </Box>
-        <Box
-          className="animate__animated animate__zoomIn animate__slow"
-          sx={{
-            position: "absolute",
-            top: "-160px",
-            right: "-60px",
-            transform: "rotate(140deg) scaleX(-1)",
-          }}
-        >
-          <Image
-            src="/media/animation/layout12-flower.webp"
-            alt="Pulpen Studio Green Leaf"
-            width={231}
-            height={441}
-          />
-        </Box>
-        <Box
-          className="animate__animated animate__zoomIn animate__slow"
-          sx={{
-            position: "absolute",
-            bottom: "-80px",
-            transform: "rotate(40deg)",
-            right: "-80px",
-          }}
-        >
-          <Image
-            src="/media/animation/layout12-flower.webp"
-            alt="Pulpen Studio Green Leaf"
-            width={231}
-            height={441}
-          />
-        </Box>
-        <Box
-          className="animate__animated animate__zoomIn animate__slow"
-          sx={{
-            position: "absolute",
-            bottom: "-80px",
-            transform: "rotate(-40deg) scaleX(-1)",
-            left: "-80px",
-          }}
-        >
-          <Image
-            src="/media/animation/layout12-flower.webp"
-            alt="Pulpen Studio Green Leaf"
-            width={231}
-            height={441}
+            src="/media/animation/layout13-flower.webp"
+            alt="Pulpen Studio Astral Indigo "
+            width={193}
+            height={312}
           />
         </Box>
         <Box
@@ -259,14 +208,23 @@ const Layout12: React.FC = () => {
             marginTop: "-60px",
           }}
         >
+          <Image
+            src="/media/animation/layout13-arch.webp"
+            alt="Pulpen Studio Astral Indigo "
+            width={312}
+            height={334}
+          />
+        </Box>
+        <Box
+          sx={{
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%,-50%)",
+            marginTop: "-50px",
+          }}
+        >
           <Box>
-            <SubTitle
-              className="animate__animated animate__zoomIn animate__slow"
-              dangerouslySetInnerHTML={{
-                __html: locale?.[item?.language!]?.INTRO_FIRST,
-              }}
-              sx={{ mb: 5 }}
-            />
             <Box
               mb={5}
               className="animate__animated animate__zoomIn animate__slow animate__delay-1s"
@@ -275,47 +233,66 @@ const Layout12: React.FC = () => {
                 dangerouslySetInnerHTML={{
                   __html: `${item?.title1Groom}`,
                 }}
-                sx={{ mb: 2, ml: -4 }}
+                sx={{ mb: 2 }}
               />
-              <Title
+              <SubTitle
                 dangerouslySetInnerHTML={{
-                  __html: "<3",
+                  __html: item?.language === "bm" ? "dan" : "and",
                 }}
-                sx={{ mb: 2, fontSize: "16px" }}
+                sx={{ mb: 2, fontSize: "12px" }}
               />
               <Title
                 dangerouslySetInnerHTML={{
                   __html: `${item?.title1Bride}`,
                 }}
-                sx={{ mr: -4 }}
               />
             </Box>
-            <Box
-              sx={{ display: "flex", mb: 1 }}
-              className="animate__animated animate__zoomIn animate__slow animate__delay-2s"
-            >
-              <SubTitle
-                dangerouslySetInnerHTML={{ __html: dayText + `,` }}
-                sx={{ mr: 1 }}
-              />
-              <SubTitle
-                dangerouslySetInnerHTML={{ __html: `${dateText}` }}
-                sx={{ fontWeight: "bolder" }}
-              />
-              <SubTitle
-                dangerouslySetInnerHTML={{ __html: `${monthText}` }}
-                sx={{ fontWeight: "bolder" }}
-              />
-              <SubTitle
-                dangerouslySetInnerHTML={{ __html: `${yearText}` }}
-                sx={{ fontWeight: "bolder" }}
-              />
-            </Box>
-            <Special
-              dangerouslySetInnerHTML={{ __html: item?.location! }}
-              className="animate__animated animate__zoomIn animate__slow animate__delay-3s"
-            />
           </Box>
+        </Box>
+        <Box
+          className="animate__animated animate__zoomIn animate__slow animate__delay-1s"
+          sx={{
+            position: "absolute",
+            top: "160px",
+            left: "50%",
+            transform: "translate(-50%,-50%)",
+          }}
+        >
+          <SubTitle
+            sx={{ padding: "0 4px", background: "#FFF" }}
+            dangerouslySetInnerHTML={{
+              __html: locale?.[item?.language!]?.INTRO_FIRST,
+            }}
+          />
+        </Box>
+        <Box
+          className="animate__animated animate__zoomIn animate__slow animate__delay-1s"
+          sx={{
+            position: "absolute",
+            bottom: "200px",
+            mt: "-60px",
+            py: 2,
+          }}
+        >
+          <Box sx={{ display: "flex", justifyContent: "center" }}>
+            <SubTitle dangerouslySetInnerHTML={{ __html: monthText }} />
+            <Box mx={1} mb={2}>
+              <SubTitle dangerouslySetInnerHTML={{ __html: `${dayText}` }} />
+              <SubTitle
+                sx={{
+                  fontSize: "32px",
+                }}
+                dangerouslySetInnerHTML={{ __html: `${dateText}` }}
+              />
+            </Box>
+            <SubTitle dangerouslySetInnerHTML={{ __html: `${yearText}` }} />
+          </Box>
+          <SubTitle
+            sx={{ px: 2 }}
+            dangerouslySetInnerHTML={{
+              __html: item?.location!,
+            }}
+          />
         </Box>
       </Box>
       <Container>
@@ -346,7 +323,7 @@ const Layout12: React.FC = () => {
           />
           <UbuntuText
             sx={{
-              color: "#293927",
+              color: "#8950ab",
               mb: 3,
             }}
             dangerouslySetInnerHTML={{
@@ -357,8 +334,8 @@ const Layout12: React.FC = () => {
 
         <Box
           sx={{
-            borderTop: "1px solid #b4bca9",
-            borderBottom: "1px solid #b4bca9",
+            borderTop: "1px solid #f5e1fd",
+            borderBottom: "1px solid #f5e1fd",
             mx: -2,
             py: 8,
             position: "relative",
@@ -368,19 +345,20 @@ const Layout12: React.FC = () => {
           <Box
             sx={{
               position: "absolute",
-              bottom: "-100px",
-              transform: "rotate(-40deg) scaleX(-1)",
-              left: "-180px",
+              top: "50%",
+              left: "50%",
+              transform: "translate(-50%,-50%)",
+              marginTop: "-60px",
+              opacity: "0.2",
             }}
           >
             <Image
-              src="/media/animation/layout12-flower.webp"
-              alt="Pulpen Studio Green Leaf"
-              width={231}
-              height={441}
+              src="/media/animation/layout13-arch.webp"
+              alt="Pulpen Studio Astral Indigo "
+              width={312}
+              height={334}
             />
           </Box>
-
           <Box
             sx={{
               mx: 2,
@@ -451,7 +429,7 @@ const Layout12: React.FC = () => {
               id="countdown"
               columnGap={2}
               sx={{
-                boxShadow: "1px 10px 10px -10px #b4bca9",
+                boxShadow: "1px 10px 10px -10px #f5e1fd",
                 pb: 1,
                 width: "fit-content",
                 mx: "auto",
@@ -490,7 +468,7 @@ const Layout12: React.FC = () => {
               </Box>
               <Box>
                 <Text
-                  style={{ fontSize: "48px", color: "#293927", width: "50px" }}
+                  style={{ fontSize: "48px", color: "#8950ab", width: "50px" }}
                   dangerouslySetInnerHTML={{
                     __html: `${countdownTimer?.countdownTimer.s} `,
                   }}
@@ -535,7 +513,7 @@ const Layout12: React.FC = () => {
                     <CommentList
                       {...{ comment, idx }}
                       key={idx}
-                      bgColor="#b4bca9"
+                      bgColor="#f5e1fd"
                       textColor="#131313"
                     />
                   ))}
@@ -549,7 +527,7 @@ const Layout12: React.FC = () => {
         <Widget
           language={item?.language!}
           iconColor="#131313"
-          color="#b4bca9"
+          color="#f5e1fd"
           location={{ text: item?.location!, mapUrl: item?.mapUrl! }}
           contact={{
             number1: item?.phonePerson1!,
@@ -563,4 +541,4 @@ const Layout12: React.FC = () => {
   );
 };
 
-export default Layout12;
+export default Layout13;
