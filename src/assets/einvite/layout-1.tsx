@@ -1,5 +1,21 @@
 import { Box, Container, Grid, List, Paper, styled } from "@mui/material";
-import { Great_Vibes, Poiret_One, Ubuntu } from "next/font/google";
+import {
+  Alex_Brush,
+  Corinthia,
+  Cormorant_SC,
+  Dancing_Script,
+  Ephesis,
+  Great_Vibes,
+  Josefin_Slab,
+  Montez,
+  Mrs_Saint_Delafield,
+  Playfair_Display,
+  Poiret_One,
+  Sacramento,
+  Trirong,
+  Ubuntu,
+  Zen_Loop,
+} from "next/font/google";
 import useGetEinvite from "@/data/useGetEinvite";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
@@ -8,10 +24,19 @@ import Widget from "@/components/Widget";
 import ReactPlayer from "react-player";
 import { CommentList } from "@/components";
 import { locale } from "@/utils/Locale";
+import Image from "next/image";
 
-const greatVibes = Great_Vibes({ subsets: ["latin"], weight: "400" });
+const corinthia = Corinthia({ subsets: ["latin"], weight: "400" });
 const poiretOne = Poiret_One({ subsets: ["latin"], weight: "400" });
 const ubuntu = Ubuntu({ subsets: ["latin"], weight: "700" });
+const ephesis = Ephesis({
+  subsets: ["latin"],
+  weight: ["400"],
+});
+const cormorant = Cormorant_SC({
+  subsets: ["latin"],
+  weight: ["300", "400", "700"],
+});
 
 interface DateTimeConfig {
   countdownTimer: {
@@ -23,21 +48,25 @@ interface DateTimeConfig {
 }
 
 const Title = styled("h1")(() => ({
-  fontFamily: `${greatVibes.style.fontFamily} !important` || "auto",
-  fontSize: "56px",
-  fontWeight: "lighter",
+  fontFamily: `${cormorant.style.fontFamily} !important` || "auto",
+  fontSize: "40px",
+  fontWeight: "400",
   textAlign: "center",
+  textTransform: "uppercase",
+  color: "#5c9464",
 }));
 
 const SubTitle = styled("p")(() => ({
-  fontFamily: `${greatVibes.style.fontFamily} !important` || "auto",
-  fontSize: "32px",
+  color: "#333",
+  fontFamily: `${corinthia.style.fontFamily} !important` || "auto",
+  fontSize: "28px",
   textAlign: "center",
 }));
 
 const Text = styled("p")(() => ({
-  fontFamily: `${poiretOne.style.fontFamily} !important` || "auto",
+  fontFamily: `${cormorant.style.fontFamily} !important` || "auto",
   fontSize: "16px",
+  textAlign: "center",
 }));
 
 const MiniText = styled("p")(() => ({
@@ -64,7 +93,7 @@ const Layout1: React.FC = () => {
   const dateJs = new Date(item?.dateTime!);
   const fullDate = dateJs?.toLocaleString("ms-MY", {
     day: "numeric",
-    month: "long",
+    month: "numeric",
     year: "numeric",
   });
   const timeStart = dateJs.toLocaleTimeString("en-US", {
@@ -92,6 +121,8 @@ const Layout1: React.FC = () => {
     <Box
       maxWidth="400px"
       sx={{
+        backgroundImage: "url('/media/animation/layout1-background.webp')",
+        backgroundSize: "auto",
         boxShadow: "0px -10px 10px #FDE6E8",
         m: "auto",
         position: "relative",
@@ -112,64 +143,119 @@ const Layout1: React.FC = () => {
       </Box>
       <Box
         sx={{
-          backgroundImage: "url('/media/layout/layout-1.jpeg')",
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "100% 100%",
           position: "relative",
           height: "100vh",
         }}
       >
         <Box
           sx={{
-            background: "rgba(255,255,255,0.8)",
-            boxShadow: "inset 1px 1px 10px #FDE6E8",
-            p: "48px 16px",
+            background: "rgba(255,255,255)",
+            borderTopLeftRadius: "140px",
+            borderTopRightRadius: "140px",
+            boxShadow: "inset 1px 1px 10px #d9d9d9",
             position: "absolute",
             top: "50%",
             left: "50%",
+            width: "80%",
             textAlign: "center",
             transform: "translate(-50%,-50%)",
-            maxWidth: "80%",
-            wordBreak: "break-word",
-            width: "100%",
+            marginTop: "-30px",
+            py: 12,
           }}
         >
-          <MiniText
-            className="animate__animated animate__zoomIn animate__slow animate__delay-1s"
-            sx={{ letterSpacing: "0.25em", mb: 5, textTransform: "uppercase" }}
-            dangerouslySetInnerHTML={{
-              __html: locale[item?.language!]?.INTRO_FIRST!,
-            }}
-          />
-          <Title
-            className="animate__animated animate__zoomIn animate__slow"
-            sx={{ mb: 5, textShadow: "8px 8px 8px #FDE6E8" }}
-            dangerouslySetInnerHTML={{
-              __html: `${item?.title1Groom} <br/> & <br/> ${item?.title1Bride}`,
-            }}
-          />
-          <Grid container justifyContent="center" mb={5} rowSpacing={0.5}>
-            <Grid
-              item
-              px={2}
+          <Box sx={{ position: "relative" }}>
+            <Box
+              sx={{
+                position: "absolute",
+                transform: "scaleX(-1) rotate(-40deg)",
+                left: "-80px",
+              }}
+            >
+              <Image
+                src="/media/animation/layout1-flower.webp"
+                alt="Pulpen Studio Layout 1"
+                width={165}
+                height={195}
+              />
+            </Box>
+            <Box
+              sx={{
+                position: "absolute",
+                transform: "rotate(-64deg)",
+                right: "-80px",
+                top: "-80px",
+              }}
+            >
+              <Image
+                src="/media/animation/layout1-flower.webp"
+                alt="Pulpen Studio Layout 1"
+                width={165}
+                height={195}
+              />
+            </Box>
+            <Box
+              sx={{
+                position: "absolute",
+                transform: "rotate(45deg)",
+                bottom: "-180px",
+                left: "0",
+                right: "0",
+              }}
+            >
+              <Image
+                src="/media/animation/layout1-flower.webp"
+                alt="Pulpen Studio Layout 1"
+                width={165}
+                height={195}
+              />
+            </Box>
+            <SubTitle
               className="animate__animated animate__zoomIn animate__slow animate__delay-1s"
-            >
-              <Text
-                style={{ letterSpacing: "0.1em" }}
-                dangerouslySetInnerHTML={{ __html: fullDate }}
-              />
+              dangerouslySetInnerHTML={{
+                __html: locale[item?.language!]?.INTRO_FIRST!,
+              }}
+            />
+            <Title
+              className="animate__animated animate__zoomIn animate__slow"
+              sx={{ textShadow: "8px 8px 8px #FDE6E8", my: 3 }}
+              dangerouslySetInnerHTML={{
+                __html: `${item?.title1Groom} <br/> & <br/> ${item?.title1Bride}`,
+              }}
+            />
+            <Grid container justifyContent="center" rowSpacing={1}>
+              <Grid
+                item
+                px={2}
+                className="animate__animated animate__zoomIn animate__slow animate__delay-1s"
+              >
+                <Text
+                  style={{
+                    letterSpacing: "0.1em",
+                    borderTop: "0.5px solid #000",
+                    borderBottom: "0.5px solid #000",
+                    padding: "8px 16px",
+                  }}
+                  dangerouslySetInnerHTML={{ __html: fullDate }}
+                />
+              </Grid>
+              <Grid
+                item
+                px={2}
+                className="animate__animated animate__zoomIn animate__slow animate__delay-2s"
+              >
+                <Text
+                  style={{ letterSpacing: "0.1em" }}
+                  dangerouslySetInnerHTML={{ __html: item?.location! }}
+                />
+              </Grid>
             </Grid>
-            <Grid
-              item
-              px={2}
-              className="animate__animated animate__zoomIn animate__slow animate__delay-2s"
-            >
-              <Text
-                style={{ letterSpacing: "0.1em" }}
-                dangerouslySetInnerHTML={{ __html: item?.location! }}
-              />
-            </Grid>
-          </Grid>
+            <SubTitle
+              sx={{ mt: 3 }}
+              dangerouslySetInnerHTML={{
+                __html: `#${item?.title1Groom}${item?.title1Bride}`,
+              }}
+            />
+          </Box>
         </Box>
       </Box>
       <Container>
@@ -186,13 +272,13 @@ const Layout1: React.FC = () => {
               __html: locale[item?.language!]?.CARD_INTRO!,
             }}
           />
-          <UbuntuText
+          <Text
             sx={{ fontWeight: "bolder", mb: 3 }}
             dangerouslySetInnerHTML={{
               __html: item?.title2!,
             }}
           />
-          <MiniText
+          <Text
             sx={{ mb: 3 }}
             dangerouslySetInnerHTML={{
               __html: locale[item?.language!]?.CARD_TEXT!,
@@ -214,7 +300,6 @@ const Layout1: React.FC = () => {
 
         <Box
           sx={{
-            background: "#FDE6E8",
             borderTop: "1px solid #FDE6E8",
             borderBottom: "1px solid #FDE6E8",
             mx: -3,
@@ -222,7 +307,8 @@ const Layout1: React.FC = () => {
           }}
         >
           <Box sx={{ mx: 2 }}>
-            <UbuntuText
+            <Text
+              sx={{ fontWeight: "700" }}
               dangerouslySetInnerHTML={{
                 __html: locale[item?.language!]?.CARD_TITLE_FIRST!,
               }}
@@ -259,11 +345,11 @@ const Layout1: React.FC = () => {
             py: 4,
           }}
         >
-          <Title
+          <Text
             dangerouslySetInnerHTML={{
               __html: locale[item?.language!]?.CARD_COUNTDOWN_TITLE!,
             }}
-            sx={{ pb: 2, fontSize: "32px" }}
+            sx={{ pb: 2, fontWeight: "700" }}
           />
           {!isCounting ? (
             <Box
@@ -341,13 +427,13 @@ const Layout1: React.FC = () => {
             py: 4,
           }}
         >
-          <UbuntuText
+          <Text
             dangerouslySetInnerHTML={{
               __html: locale?.[item?.language!]?.CARD_WISH_TITLE!,
             }}
-            sx={{ pb: 2 }}
+            sx={{ pb: 2, fontWeight: "700" }}
           />
-          <MiniText
+          <SubTitle
             dangerouslySetInnerHTML={{
               __html: `#${item?.title1Groom}${item?.title1Bride}`,
             }}
@@ -369,7 +455,7 @@ const Layout1: React.FC = () => {
                     <CommentList
                       {...{ comment, idx }}
                       key={idx}
-                      bgColor="#FDE6E8"
+                      bgColor="#f9ddc5"
                       textColor="#333"
                     />
                   ))}
@@ -382,7 +468,7 @@ const Layout1: React.FC = () => {
       <Box>
         <Widget
           language={item?.language!}
-          color="#FDE6E8"
+          color="#f8e2de"
           location={{ text: item?.location!, mapUrl: item?.mapUrl! }}
           contact={{
             number1: item?.phonePerson1!,
