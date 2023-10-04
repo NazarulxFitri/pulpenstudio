@@ -313,7 +313,30 @@ export const layoutConfig = [
     ],
     description:
       "Potraying purple pastel color combined with some arts in gold, this design is meant to surface hint of soft majestic towards the guests. It is one of our popular design !",
-    demo: "/layout12-example",
+    demo: "/layout13-example",
+    features: [
+      "RSVP + Admin Dashboard incl.",
+      "Wishes",
+      "Google Map Location / Waze Location",
+      "Choose any song from Youtube",
+      "Link to Whatsapp & Phone Call",
+      "Add Photo section (Upon request)",
+      "Live support during Event Day",
+    ],
+  },
+  {
+    layoutid: "014",
+    name: "Morning in Autumn",
+    category: "Wedding",
+    originalPrice: "RM60.00",
+    discountedPrice: "RM50.00",
+    images: [
+      "/media/cardSelection/card-14/main.png",
+      "/media/cardSelection/card-14/2-image.png",
+    ],
+    description:
+      "Autumn is a season rich in symbolism, and it carries a variety of varitety of meanings. This design was created to express cultural, emotional, and natural by using brownish pastel color to highlight those traits",
+    demo: "/layout14-example",
     features: [
       "RSVP + Admin Dashboard incl.",
       "Wishes",
