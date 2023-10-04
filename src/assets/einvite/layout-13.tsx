@@ -1,9 +1,6 @@
 import { Box, Container, Grid, List, Paper, styled } from "@mui/material";
 import {
   Allura,
-  Clicker_Script,
-  Mr_De_Haviland,
-  Ms_Madi,
   Oooh_Baby,
   Parisienne,
   Playfair_Display,
@@ -25,7 +22,6 @@ const playfair = Playfair_Display({
   weight: ["400", "500", "700"],
 });
 const allura = Allura({ subsets: ["latin"], weight: ["400"] });
-const parisienne = Parisienne({ subsets: ["latin"], weight: ["400"] });
 const ooohBaby = Oooh_Baby({ subsets: ["latin"], weight: ["400"] });
 
 interface DateTimeConfig {
@@ -507,7 +503,7 @@ const Layout13: React.FC = () => {
                   overflow: "scroll",
                 }}
               >
-                <List sx={{ p: 0 }}>
+                <List sx={{ p: 0, mb: 4 }}>
                   {/* @ts-ignore */}
                   {listComments?.map((comment: any, idx: string) => (
                     <CommentList

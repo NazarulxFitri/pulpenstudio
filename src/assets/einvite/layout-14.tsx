@@ -1,8 +1,9 @@
 import { Box, Container, Grid, List, Paper, styled } from "@mui/material";
 import {
-  Dancing_Script,
+  Allura,
+  Cormorant_SC,
+  Oooh_Baby,
   Playfair_Display,
-  Tangerine,
   Ubuntu,
 } from "next/font/google";
 import useGetEinvite from "@/data/useGetEinvite";
@@ -15,15 +16,16 @@ import { CommentList } from "@/components";
 import Image from "next/image";
 import { locale } from "@/utils/Locale";
 
-const tangerine = Tangerine({ subsets: ["latin"], weight: "400" });
-const dancingScript = Dancing_Script({
-  subsets: ["latin"],
-  weight: ["400", "500", "700"],
-});
 const ubuntu = Ubuntu({ subsets: ["latin"], weight: "700" });
 const playfair = Playfair_Display({
   subsets: ["latin"],
   weight: ["400", "500", "700"],
+});
+const allura = Allura({ subsets: ["latin"], weight: ["400"] });
+const ooohBaby = Oooh_Baby({ subsets: ["latin"], weight: ["400"] });
+const cormorant = Cormorant_SC({
+  subsets: ["latin"],
+  weight: ["300", "400", "700"],
 });
 
 interface DateTimeConfig {
@@ -35,27 +37,41 @@ interface DateTimeConfig {
   };
 }
 
-const Title = styled("h1")(() => ({
-  fontFamily: `${dancingScript.style.fontFamily} !important` || "auto",
+const Special = styled("p")(() => ({
+  fontFamily: `${allura.style.fontFamily} !important` || "auto",
+  fontSize: "24px",
   textAlign: "center",
+}));
+
+const Title = styled("h1")(() => ({
+  color: "#a96b4e",
+  lineHeight: "0.75em",
+  fontFamily: `${cormorant.style.fontFamily} !important` || "auto",
+  fontSize: "36px",
+  textAlign: "center",
+  fontWeight: "lighter",
 }));
 
 const SubTitle = styled("p")(() => ({
-  fontFamily: `${tangerine.style.fontFamily} !important` || "auto",
-  fontSize: "32px",
+  fontSize: "14px",
+  fontWeight: "300",
+  fontFamily: `${cormorant.style.fontFamily} !important` || "auto",
   textAlign: "center",
+  letterSpacing: "0.25em",
+  textTransform: "uppercase",
 }));
 
 const Text = styled("p")(() => ({
-  fontFamily: `${dancingScript.style.fontFamily} !important` || "auto",
+  fontFamily: `${playfair.style.fontFamily} !important` || "auto",
   fontSize: "16px",
   textAlign: "center",
 }));
 
 const MiniText = styled("p")(() => ({
   fontFamily: `${playfair.style.fontFamily} !important` || "auto",
-  fontSize: "12px",
+  fontSize: "14px",
   textAlign: "center",
+  letterSpacing: "0.1em",
 }));
 
 const UbuntuText = styled("p")(() => ({
@@ -65,7 +81,7 @@ const UbuntuText = styled("p")(() => ({
   textAlign: "center",
 }));
 
-const Layout5: React.FC = () => {
+const Layout14: React.FC = () => {
   const router = useRouter();
   const eInviteId = router.query.eInviteId;
   const [countdownTimer, setCountdownTimer] = useState<DateTimeConfig>();
@@ -76,7 +92,7 @@ const Layout5: React.FC = () => {
   const dateJs = new Date(item?.dateTime!);
   const fullDate = dateJs?.toLocaleString("ms-MY", {
     day: "numeric",
-    month: "long",
+    month: "numeric",
     year: "numeric",
   });
   const timeStart = dateJs.toLocaleTimeString("en-US", {
@@ -86,8 +102,17 @@ const Layout5: React.FC = () => {
   });
 
   const dayRaw = dateJs.getDay();
-  const daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  const daysOfWeek = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
   const dayText = daysOfWeek[dayRaw];
+
   const monthRaw = dateJs.getMonth();
   const monthsList = [
     "Jan",
@@ -95,8 +120,8 @@ const Layout5: React.FC = () => {
     "Mar",
     "Apr",
     "May",
-    "June",
-    "July",
+    "Jun",
+    "Jul",
     "Aug",
     "Sep",
     "Oct",
@@ -126,11 +151,13 @@ const Layout5: React.FC = () => {
     <Box
       maxWidth="400px"
       sx={{
-        background: "#fcf5f3",
-        boxShadow: "0px -10px 10px #fcf5f3",
+        backgroundImage: "url('/media/animation/layout14-background.webp')",
+        backgroundSize: "cover",
+        boxShadow: "1px 1px 10px #f5e1fd",
         m: "auto",
         position: "relative",
         overflow: "hidden",
+        height: "100%",
       }}
       onTouchStart={() => setMusicStart(true)}
       onClick={() => setMusicStart(true)}
@@ -147,103 +174,166 @@ const Layout5: React.FC = () => {
       </Box>
       <Box
         sx={{
-          borderBottom: "1px solid #EFEFEF",
-          position: "relative",
           height: "100vh",
-          overflow: "hidden",
+          position: "relative",
         }}
       >
         <Box
-          sx={{ color: "#5a0819", padding: "344px 16px", position: "relative" }}
+          sx={{
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%,-50%)",
+            marginTop: "-30px",
+            height: "70%",
+            width: "80%",
+            border: "1px solid #ffac6c",
+          }}
         >
-          <Box sx={{ position: "absolute", top: "-56px", left: "-40px" }}>
-            <Image
-              src="/media/animation/layout5-flowers.png"
-              alt="Pulpen Studio - Flourish Gloom"
-              width={400}
-              height={400}
-            />
-          </Box>
-          <Box sx={{ position: "absolute", bottom: "72px", right: "-96px" }}>
-            <Image
-              src="/media/animation/layout5-flowers-1.png"
-              alt="Pulpen Studio - Flourish Gloom"
-              width={400}
-              height={400}
-            />
-          </Box>
-          <Box sx={{ position: "absolute", bottom: "180px", left: "0" }}>
-            <Image
-              src="/media/animation/layout5-art.webp"
-              alt="Pulpen Studio - Flourish Gloom"
-              width={161}
-              height={297}
-            />
-          </Box>
-          <Box>
-            <MiniText
-              style={{ letterSpacing: "0.5em" }}
+          <Box
+            sx={{
+              position: "absolute",
+              top: "50%",
+              left: "50%",
+              transform: "translate(-50%,-50%)",
+            }}
+          >
+            <SubTitle
+              className="animate__animated animate__fadeInDown animate__slow "
+              sx={{ fontWeight: "bolder", fontSize: "12px" }}
               dangerouslySetInnerHTML={{
                 __html: locale?.[item?.language!]?.INTRO_FIRST,
               }}
             />
-            <Title
-              className="animate__animated animate__zoomIn animate__slow"
-              style={{ marginTop: "24px", lineHeight: "0.75em" }}
+            <Box
+              sx={{
+                my: 4,
+                background: "#FFF",
+                border: "1px solid #ffac6c",
+                p: "80px 50px",
+                borderRadius: "50%",
+                position: "relative",
+                boxShadow: "inset 1px 1px 10px #d9d9d9",
+              }}
+            >
+              <Box
+                sx={{
+                  position: "absolute",
+                  bottom: "65px",
+                  left: "-50px",
+                  transform: "rotate(45deg)",
+                }}
+              >
+                <Image
+                  src="/media/animation/layout14-flower-2.webp"
+                  alt="Pulpen Studio Morning in Autumn"
+                  width={143}
+                  height={137}
+                />
+              </Box>
+              <Title
+                className="animate__animated animate__fadeInDown animate__slow animate__delay-1s"
+                dangerouslySetInnerHTML={{ __html: item?.title1Groom! }}
+              />
+              <Title dangerouslySetInnerHTML={{ __html: "&" }} sx={{ my: 2 }} />
+              <Title
+                className="animate__animated animate__fadeInDown animate__slow animate__delay-1s"
+                dangerouslySetInnerHTML={{ __html: item?.title1Bride! }}
+              />
+            </Box>
+            <SubTitle
+              className="animate__animated animate__fadeInDown animate__slow animate__delay-2s"
+              sx={{ fontWeight: "lighter", fontSize: "12px" }}
               dangerouslySetInnerHTML={{
-                __html: `<span style="margin-right: 24px;">${item?.title1Groom}</span> <br><span style="font-size: 20px">&</span><br> <spanstyle="margin-left: 24px;">${item?.title1Bride}</span>`,
+                __html: item?.location!,
               }}
             />
             <Box
-              className="animate__animated animate__zoomIn animate__slow animate__delay-1s"
-              sx={{
-                display: "flex",
-                justifyContent: "center",
-                mt: 3,
-                letterSpacing: "0.15em",
-              }}
+              display="flex"
+              justifyContent="center"
+              gap={1}
+              my={1}
+              className="animate__animated animate__fadeInDown animate__slow animate__delay-3s"
             >
-              <MiniText
-                style={{
-                  fontSize: "16px",
-                  borderRight: "1px solid #5a0819",
-                  marginRight: "12px",
-                  paddingRight: "12px",
-                }}
-                dangerouslySetInnerHTML={{ __html: monthText }}
-              />
-              <MiniText
-                style={{ fontSize: "16px" }}
+              <SubTitle
+                sx={{ fontWeight: "lighter", fontSize: "12px" }}
                 dangerouslySetInnerHTML={{
-                  __html: `${dayText} <br> ${dateText}`,
+                  __html: fullDate,
                 }}
               />
-              <MiniText
-                style={{
-                  fontSize: "16px",
-                  borderLeft: "1px solid #5a0819",
-                  marginLeft: "12px",
-                  paddingLeft: "12px",
+              <SubTitle
+                sx={{ fontWeight: "lighter", fontSize: "12px" }}
+                dangerouslySetInnerHTML={{
+                  __html: timeStart,
                 }}
-                dangerouslySetInnerHTML={{ __html: `${yearText}` }}
               />
             </Box>
-            <MiniText
-              className="animate__animated animate__zoomIn animate__slow animate__delay-2s"
-              style={{
-                marginTop: "24px",
-                fontSize: "12px",
-              }}
-              dangerouslySetInnerHTML={{ __html: item?.location! }}
-            />
-            <MiniText
-              className="animate__animated animate__zoomIn animate__slow animate__delay-3s"
-              style={{
-                fontSize: "12px",
-              }}
+
+            <SubTitle
+              className="animate__animated animate__fadeInDown animate__slow animate__delay-4s"
+              sx={{ fontWeight: "700", fontSize: "12px" }}
               dangerouslySetInnerHTML={{
                 __html: `#${item?.title1Groom}${item?.title1Bride}`,
               }}
+            />
+          </Box>
+          <Box
+            sx={{
+              position: "absolute",
+              bottom: "-36px",
+              right: "-36px",
+              transform: "scaleX(-1)",
+            }}
+          >
+            <Image
+              src="/media/animation/layout14-flower.webp"
+              alt="Pulpen Studio Morning in Autumn"
+              width={184}
+              height={184}
+            />
+          </Box>
+          <Box
+            sx={{
+              position: "absolute",
+              bottom: "-36px",
+              left: "-36px",
+            }}
+          >
+            <Image
+              src="/media/animation/layout14-flower.webp"
+              alt="Pulpen Studio Morning in Autumn"
+              width={184}
+              height={184}
+            />
+          </Box>
+          <Box
+            sx={{
+              position: "absolute",
+              top: "-36px",
+              left: "-36px",
+              transform: "scaleY(-1)",
+            }}
+          >
+            <Image
+              src="/media/animation/layout14-flower.webp"
+              alt="Pulpen Studio Morning in Autumn"
+              width={184}
+              height={184}
+            />
+          </Box>
+          <Box
+            sx={{
+              position: "absolute",
+              top: "-36px",
+              right: "-36px",
+              transform: "scaleY(-1) scaleX(-1)",
+            }}
+          >
+            <Image
+              src="/media/animation/layout14-flower.webp"
+              alt="Pulpen Studio Morning in Autumn"
+              width={184}
+              height={184}
             />
           </Box>
         </Box>
@@ -256,31 +346,28 @@ const Layout5: React.FC = () => {
             p: { xs: "24px 16px", md: 8 },
           }}
         >
-          <MiniText
+          <SubTitle
             sx={{ mb: 3 }}
             dangerouslySetInnerHTML={{
               __html: locale?.[item?.language!]?.CARD_INTRO,
             }}
           />
-          <UbuntuText
-            sx={{ fontWeight: "bolder", mb: 3 }}
+          <SubTitle
+            sx={{ fontWeight: "700", mb: 3 }}
             dangerouslySetInnerHTML={{
               __html: item?.title2!,
             }}
           />
-          <MiniText
+          <SubTitle
             sx={{ mb: 3 }}
             dangerouslySetInnerHTML={{
               __html: locale?.[item?.language!]?.CARD_TEXT,
             }}
           />
-          <Title
+          <SubTitle
             sx={{
-              color: "#5a0819",
-              fontSize: "24px",
-              fontWeight: "bolder",
+              fontWeight: "700",
               mb: 3,
-              textShadow: "1px 1px 10px #FDE6E8",
             }}
             dangerouslySetInnerHTML={{
               __html: `${item?.fullNameGroom} & ${item?.fullNameBride}`,
@@ -290,44 +377,27 @@ const Layout5: React.FC = () => {
 
         <Box
           sx={{
-            borderTop: "1px solid #FDE6E8",
-            borderBottom: "1px solid #FDE6E8",
+            borderTop: "1px solid #f5e1fd",
+            borderBottom: "1px solid #f5e1fd",
             mx: -2,
             py: 8,
             position: "relative",
+            overflow: "hidden",
           }}
         >
           <Box
             sx={{
-              position: "absolute",
-              top: "-60px",
-              right: "-40px",
-              transform: "rotate(90deg)",
+              mx: 2,
             }}
           >
-            <Image
-              src="/media/animation/layout5-flowers.png"
-              alt="Pulpen Studio - Flourish Gloom"
-              width={200}
-              height={200}
-            />
-          </Box>
-          <Box sx={{ position: "absolute", bottom: "180px", left: "0" }}>
-            <Image
-              src="/media/animation/layout5-art.webp"
-              alt="Pulpen Studio - Flourish Gloom"
-              width={100}
-              height={250}
-            />
-          </Box>
-          <Box sx={{ mx: 2 }}>
-            <UbuntuText
+            <SubTitle
+              sx={{ fontWeight: "700" }}
               dangerouslySetInnerHTML={{
                 __html: locale?.[item?.language!]?.CARD_TITLE_FIRST,
               }}
             />
             <Box mt={2} sx={{ textAlign: "center" }}>
-              <MiniText
+              <SubTitle
                 style={{ marginBottom: "8px" }}
                 dangerouslySetInnerHTML={{
                   __html: `${
@@ -335,7 +405,7 @@ const Layout5: React.FC = () => {
                   }: ${fullDate} `,
                 }}
               />
-              <MiniText
+              <SubTitle
                 style={{ marginBottom: "8px" }}
                 dangerouslySetInnerHTML={{
                   __html: `${locale?.[item?.language!]?.CARD_SUBTITLE_TWO} : ${
@@ -343,8 +413,7 @@ const Layout5: React.FC = () => {
                   } `,
                 }}
               />
-              <MiniText
-                style={{ marginBottom: "8px" }}
+              <SubTitle
                 dangerouslySetInnerHTML={{
                   __html: `${
                     locale?.[item?.language!]?.CARD_SUBTITLE_THREE
@@ -361,7 +430,7 @@ const Layout5: React.FC = () => {
             py: 4,
           }}
         >
-          <UbuntuText
+          <Special
             dangerouslySetInnerHTML={{
               __html: locale?.[item?.language!]?.CARD_COUNTDOWN_TITLE,
             }}
@@ -387,7 +456,7 @@ const Layout5: React.FC = () => {
               id="countdown"
               columnGap={2}
               sx={{
-                boxShadow: "1px 10px 10px -10px #656041",
+                boxShadow: "1px 10px 10px -10px #f5e1fd",
                 pb: 1,
                 width: "fit-content",
                 mx: "auto",
@@ -426,7 +495,7 @@ const Layout5: React.FC = () => {
               </Box>
               <Box>
                 <Text
-                  style={{ fontSize: "48px", color: "#5a0819", width: "50px" }}
+                  style={{ fontSize: "48px", color: "#d6753d", width: "50px" }}
                   dangerouslySetInnerHTML={{
                     __html: `${countdownTimer?.countdownTimer.s} `,
                   }}
@@ -443,7 +512,7 @@ const Layout5: React.FC = () => {
             py: 4,
           }}
         >
-          <UbuntuText
+          <Special
             dangerouslySetInnerHTML={{
               __html: locale?.[item?.language!]?.CARD_WISH_TITLE,
             }}
@@ -456,7 +525,7 @@ const Layout5: React.FC = () => {
             sx={{ pb: 2 }}
           />
           <Grid container>
-            <Grid item py={2} xs={12}>
+            <Grid item xs={12}>
               <Paper
                 sx={{
                   background: "transparent",
@@ -471,8 +540,8 @@ const Layout5: React.FC = () => {
                     <CommentList
                       {...{ comment, idx }}
                       key={idx}
-                      bgColor="#fff"
-                      textColor="#5a0819"
+                      bgColor="#f9dab2"
+                      textColor="#131313"
                     />
                   ))}
                 </List>
@@ -484,8 +553,8 @@ const Layout5: React.FC = () => {
       <Box>
         <Widget
           language={item?.language!}
-          iconColor="#333"
-          color="#fbecec"
+          iconColor="#131313"
+          color="#f9dab2"
           location={{ text: item?.location!, mapUrl: item?.mapUrl! }}
           contact={{
             number1: item?.phonePerson1!,
@@ -499,4 +568,4 @@ const Layout5: React.FC = () => {
   );
 };
 
-export default Layout5;
+export default Layout14;

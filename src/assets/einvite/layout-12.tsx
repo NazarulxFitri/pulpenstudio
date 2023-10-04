@@ -529,7 +529,7 @@ const Layout12: React.FC = () => {
                   overflow: "scroll",
                 }}
               >
-                <List sx={{ p: 0 }}>
+                <List sx={{ p: 0, mb: 4 }}>
                   {/* @ts-ignore */}
                   {listComments?.map((comment: any, idx: string) => (
                     <CommentList
