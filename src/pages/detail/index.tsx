@@ -13,7 +13,7 @@ const Detail = () => {
           content="Detail of your selected design of digital card. Pulpen Studio provides you variety of information that can help you to decide your favourite design"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/media/general/pulpenstudioxicon.png" />
+        <link rel="icon" href="/pulpenstudioxicon.png" />
       </Head>
       <DetailModule />
     </Box>

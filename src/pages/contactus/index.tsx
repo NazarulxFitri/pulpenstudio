@@ -12,7 +12,7 @@ const ContactUs = () => {
           content="Reach us through Live Support, Email or Instagram. We will assist you in creating your dream Digital Invitation Card for your big day"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/media/general/pulpenstudioxicon.png" />
+        <link rel="icon" href="/pulpenstudioxicon.png" />
       </Head>
       <ContactUsModule />
     </Box>

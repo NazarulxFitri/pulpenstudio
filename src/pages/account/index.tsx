@@ -26,7 +26,7 @@ const Account = () => {
           content="Pulpen Studio My Account is a for user to see their personal information and card that they have made"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/media/general/pulpenstudioxicon.png" />
+        <link rel="icon" href="/pulpenstudioxicon.png" />
       </Head>
       <AccountModule />
     </Box>

@@ -38,7 +38,7 @@ const EinviteAdmin: React.FC<EinviteAdminProps> = () => {
           content="Pulpen Studio Admin Dashboard for our client to view the card activity"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/media/general/pulpenstudioxicon.png" />
+        <link rel="icon" href="/pulpenstudioxicon.png" />
       </Head>
       <AdminModule {...{ data }} />
     </Box>

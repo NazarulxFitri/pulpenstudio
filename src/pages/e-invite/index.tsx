@@ -23,11 +23,7 @@ const EInvite = () => {
             content="Create your digital invitation card now. Follow the 3 easy steps given and your card will be ready in the blink of eye"
           />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <link
-            rel="icon"
-            href="/media/general/pulpenstudioxicon.png"
-            type="image/png"
-          />
+          <link rel="icon" href="/pulpenstudioxicon.png" />
         </Head>
         <Grid container mt={8} rowGap={4}>
           <Grid item xs={12} md={6}>

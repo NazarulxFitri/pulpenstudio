@@ -25,7 +25,7 @@ const EinviteLive: React.FC<EinviteLiveProps> = () => {
           content="Pulpen Studio Live - Finished product for our client's guest. Enjoy the card !"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/media/general/pulpenstudioxicon.png" />
+        <link rel="icon" href="/pulpenstudioxicon.png" />
       </Head>
       <Grid item xs={12}>
         {!isLoading && !data?.paid && (

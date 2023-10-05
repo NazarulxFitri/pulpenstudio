@@ -28,7 +28,7 @@ export default function Home() {
           content="Pulpen Studio offers service to create digital invitation card specially made for wedding, birthday and any events. Here in Pulpen Studio, user can create their digital card for free and only pay once they confirmed to purchase it"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/media/general/pulpenstudioxicon.png" />
+        <link rel="icon" href="/pulpenstudioxicon.png" />
       </Head>
 
       <BannerModule />

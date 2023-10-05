@@ -12,7 +12,7 @@ const Faq = () => {
           content="Pulpen Studio FAQ to help user get what they need and clear any ambiguition they had"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/media/general/pulpenstudioxicon.png" />
+        <link rel="icon" href="/pulpenstudioxicon.png" />
       </Head>
       <FaqModule />
     </Box>
