@@ -94,8 +94,8 @@ const CatalogueModule: React.FC = ({}) => {
         />
       </Box>
       <Box mt={4}>
-        <Grid container>
-          <Grid item md={2}>
+        <Grid container rowGap={4}>
+          <Grid item xs={12} md={2}>
             <p
               style={{ fontSize: "16px", fontWeight: "700" }}
               dangerouslySetInnerHTML={{ __html: "Filter" }}
@@ -111,9 +111,10 @@ const CatalogueModule: React.FC = ({}) => {
                 sx={{ flexWrap: "wrap", whiteSpace: "break-spaces" }}
                 gap={1}
               >
-                {colorArr?.map((color) => {
+                {colorArr?.map((color, idx) => {
                   return (
                     <Checkbox
+                      key={idx}
                       id={color}
                       onChange={() => {
                         // @ts-ignore
@@ -158,7 +159,7 @@ const CatalogueModule: React.FC = ({}) => {
               </Box>
             </Box>
           </Grid>
-          <Grid item md={10}>
+          <Grid item xs={12} md={10}>
             <Grid container rowGap={6} columnSpacing={2}>
               {selectedCard?.map((item) => (
                 <Grid item xs={6} md={4} lg={3} key={item.name}>
