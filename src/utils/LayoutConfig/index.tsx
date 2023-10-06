@@ -1,34 +1,9 @@
 export const layoutConfig = [
   {
-    layoutid: "000",
-    name: "Customize Design",
-    category: "Custom",
-    originalPrice: "RM70.00",
-    discountedPrice: "RM60.00",
-    images: [
-      "/media/cardSelection/card-0/main.png",
-      "/media/cardSelection/card-3/main.png",
-      "/media/cardSelection/card-5/main.png",
-      "/media/cardSelection/card-6/main.png",
-      "/media/cardSelection/card-9/main.png",
-    ],
-    description:
-      "Customize digital invitation card for those who wants to express their own creativity on digital invitation card",
-    demo: "",
-    features: [
-      "RSVP + Admin Dashboard incl.",
-      "Wishes",
-      "Google Map Location / Waze Location",
-      "Choose any song from Youtube",
-      "Link to Whatsapp & Phone Call",
-      "Add Photo section (Upon request)",
-      "Live support during Event Day",
-    ],
-  },
-  {
     layoutid: "001",
     name: "Light Pink Rosie",
     category: "Wedding",
+    color: "pink",
     originalPrice: "RM60.00",
     discountedPrice: "RM50.00",
     images: [
@@ -52,6 +27,7 @@ export const layoutConfig = [
     layoutid: "002",
     name: "Majestic Dark Brown",
     category: "Wedding",
+    color: "brown",
     originalPrice: "RM60.00",
     discountedPrice: "RM50.00",
     images: [
@@ -75,6 +51,7 @@ export const layoutConfig = [
     layoutid: "003",
     name: "Tulips In The Morning",
     category: "Wedding",
+    color: "purple",
     originalPrice: "RM60.00",
     discountedPrice: "RM50.00",
     images: [
@@ -98,6 +75,7 @@ export const layoutConfig = [
     layoutid: "004",
     name: "Cinnamon Blue Petal",
     category: "Wedding",
+    color: "brown",
     originalPrice: "RM60.00",
     discountedPrice: "RM50.00",
     images: [
@@ -121,6 +99,7 @@ export const layoutConfig = [
     layoutid: "005",
     name: "Flourish Gloom",
     category: "Wedding",
+    color: "red",
     originalPrice: "RM60.00",
     discountedPrice: "RM50.00",
     images: [
@@ -144,6 +123,7 @@ export const layoutConfig = [
     layoutid: "006",
     name: "Sky Ambience Breath",
     category: "Wedding",
+    color: "green",
     originalPrice: "RM60.00",
     discountedPrice: "RM50.00",
     images: [
@@ -167,6 +147,7 @@ export const layoutConfig = [
     layoutid: "007",
     name: "Black Gold Label",
     category: "Wedding",
+    color: "black",
     originalPrice: "RM60.00",
     discountedPrice: "RM50.00",
     images: [
@@ -190,6 +171,7 @@ export const layoutConfig = [
     layoutid: "008",
     name: "Vitamin Sea",
     category: "Wedding",
+    color: "blue",
     originalPrice: "RM60.00",
     discountedPrice: "RM50.00",
     images: [
@@ -212,6 +194,7 @@ export const layoutConfig = [
   {
     layoutid: "009",
     name: "Evening Turquoise Pastel",
+    color: "blue",
     category: "Wedding",
     originalPrice: "RM60.00",
     discountedPrice: "RM50.00",
@@ -236,6 +219,7 @@ export const layoutConfig = [
     layoutid: "010",
     name: "Aurora Glimpse",
     category: "Wedding",
+    color: "brown",
     originalPrice: "RM60.00",
     discountedPrice: "RM50.00",
     images: [
@@ -259,6 +243,7 @@ export const layoutConfig = [
     layoutid: "011",
     name: "Violet Blossom",
     category: "Wedding",
+    color: "purple",
     originalPrice: "RM60.00",
     discountedPrice: "RM50.00",
     images: [
@@ -282,6 +267,7 @@ export const layoutConfig = [
     layoutid: "012",
     name: "Green Leaf",
     category: "Wedding",
+    color: "green",
     originalPrice: "RM60.00",
     discountedPrice: "RM50.00",
     images: [
@@ -305,6 +291,7 @@ export const layoutConfig = [
     layoutid: "013",
     name: "Astral Indigo",
     category: "Wedding",
+    color: "purple",
     originalPrice: "RM60.00",
     discountedPrice: "RM50.00",
     images: [
@@ -328,6 +315,7 @@ export const layoutConfig = [
     layoutid: "014",
     name: "Morning in Autumn",
     category: "Wedding",
+    color: "orange",
     originalPrice: "RM60.00",
     discountedPrice: "RM50.00",
     images: [
