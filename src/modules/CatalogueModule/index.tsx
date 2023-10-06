@@ -94,7 +94,7 @@ const CatalogueModule: React.FC = ({}) => {
         />
       </Box>
       <Box mt={4}>
-        <Grid container rowGap={4}>
+        <Grid container rowGap={4} columnSpacing={1}>
           <Grid item xs={12} md={2}>
             <p
               style={{ fontSize: "16px", fontWeight: "700" }}
@@ -208,25 +208,6 @@ const CatalogueModule: React.FC = ({}) => {
                         <s>{item.originalPrice}</s>
                       </span>
                     </Text>
-                    <Box
-                      sx={{
-                        display: "flex",
-                        mx: "auto",
-                        border: "1px solid #d9d9d9",
-                        width: "fit-content",
-                      }}
-                    >
-                      <Box
-                        sx={{
-                          width: "16px",
-                          height: "16px",
-                          background:
-                            colorSelections[
-                              item.color as keyof typeof colorSelections
-                            ],
-                        }}
-                      />
-                    </Box>
                   </Box>
                   <Box sx={{ width: "fit-content", margin: "24px auto 0" }}>
                     <Button2 href={`/detail?layoutid=${item.layoutid}`}>
