@@ -8,10 +8,12 @@ import BreadcrumbModule from "../BreadcrumbModule";
 import FirstStep from "./FirstStep";
 import SecondStep from "./SecondStep";
 import ThirdStep from "./ThirdStep";
+import BirthdayFlow from "./BirthdayFlow";
 
 const EInviteModule = () => {
   const router = useRouter();
   const { layoutid } = router.query;
+  const { type } = router.query;
   const currDate = new Date();
   const [curTab, setCurTab] = useState<number>(0);
 
@@ -36,6 +38,10 @@ const EInviteModule = () => {
   const { data } = useGetEinvite();
   const { action } = usePostAddEinvite(itemName, layoutid as string);
   const [showPopup, setShowPopup] = useState(false);
+
+  if (type === "birthday") {
+    return <BirthdayFlow />;
+  }
 
   async function handleSubmit() {
     await action(
