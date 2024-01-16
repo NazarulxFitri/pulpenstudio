@@ -12,8 +12,12 @@ export interface EInviteConfig {
     musicUrl: string;
     namePerson1: string;
     namePerson2: string;
+    namePerson3: string;
+    namePerson4: string;
     phonePerson1: string;
     phonePerson2: string;
+    phonePerson3: string;
+    phonePerson4: string;
     title1Bride: string;
     title1Groom: string;
     fullNameGroom: string;

@@ -12,6 +12,7 @@ import RsvpPopup from "./RsvpPopup";
 import PhoneIcon from "../Icons/PhoneIcon";
 
 interface WidgetProps {
+  hideRsvp?: boolean;
   language: string;
   iconColor?: string;
   color: string;
@@ -22,8 +23,12 @@ interface WidgetProps {
   contact: {
     number1: string;
     number2: string;
+    number3?: string;
+    number4?: string;
     name1: string;
     name2: string;
+    name3?: string;
+    name4?: string;
   };
 }
 
@@ -33,6 +38,7 @@ const Widget: React.FC<WidgetProps> = ({
   color,
   location,
   contact,
+  hideRsvp,
 }) => {
   const [commentPopup, setCommentPopup] = useState(false);
   const [locationPopup, setLocationPopup] = useState(false);
@@ -136,16 +142,25 @@ const Widget: React.FC<WidgetProps> = ({
           }}
         />
       )}
-      <Grid item xs={3}>
-        <Box onClick={() => handleClick("rsvp")}>
-          <RsvpIcon />
-        </Box>
-      </Grid>
-      <Grid item xs={3}>
-        <Box onClick={() => handleClick("comment")}>
-          <PenIcon />
-        </Box>
-      </Grid>
+      {!hideRsvp ? (
+        <>
+          <Grid item xs={3}>
+            <Box onClick={() => handleClick("rsvp")}>
+              <RsvpIcon />
+            </Box>
+          </Grid>
+          <Grid item xs={3}>
+            <Box onClick={() => handleClick("comment")}>
+              <PenIcon />
+            </Box>
+          </Grid>
+        </>
+      ) : (
+        <>
+          <Grid item xs={3}></Grid>
+        </>
+      )}
+
       <Grid item xs={3}>
         <Box onClick={() => handleClick("location")}>
           <MapIcon />

@@ -1,5 +1,4 @@
 import CloseIcon from "@/components/Icons/CloseIcon";
-import MapIcon from "@/components/Icons/MapIcon";
 import PhoneIcon from "@/components/Icons/PhoneIcon";
 import WhatsappIcon from "@/components/Icons/WhatsappIcon";
 import { Box } from "@mui/material";
@@ -10,8 +9,12 @@ interface ContactPopupProps {
   contact: {
     number1: string;
     number2: string;
+    number3?: string;
+    number4?: string;
     name1: string;
     name2: string;
+    name3?: string;
+    name4?: string;
   };
   setRsvpPopup: (value: boolean) => void;
   setCommentPopup: (value: boolean) => void;
@@ -106,6 +109,53 @@ const ContactPopup: React.FC<ContactPopupProps> = ({
               </a>
             </Box>
           </Box>
+          {contact?.number3 && (
+            <Box mt={2} sx={{ color: "#333", display: "flex" }}>
+              <p>
+                {contact?.name3} - {contact?.number3}
+              </p>
+              <Box sx={{ m: "0 0 0 auto" }}>
+                <a
+                  style={{ marginRight: "16px", color: "unset" }}
+                  target="__blank"
+                  href={`https://api.whatsapp.com/send?phone=6${contact?.number3}&text=Hi%20%2C%20saya%20datang%20dari%20e-invite%20!%20`}
+                >
+                  <WhatsappIcon />
+                </a>
+                <a
+                  style={{ color: "unset" }}
+                  target="__blank"
+                  href={`tel:6${contact?.number3}`}
+                >
+                  <PhoneIcon size="20" />
+                </a>
+              </Box>
+            </Box>
+          )}
+
+          {contact?.number4 && (
+            <Box mt={2} sx={{ color: "#333", display: "flex" }}>
+              <p>
+                {contact?.name4} - {contact?.number4}
+              </p>
+              <Box sx={{ m: "0 0 0 auto" }}>
+                <a
+                  style={{ marginRight: "16px", color: "unset" }}
+                  target="__blank"
+                  href={`https://api.whatsapp.com/send?phone=6${contact?.number4}&text=Hi%20%2C%20saya%20datang%20dari%20e-invite%20!%20`}
+                >
+                  <WhatsappIcon />
+                </a>
+                <a
+                  style={{ color: "unset" }}
+                  target="__blank"
+                  href={`tel:6${contact?.number4}`}
+                >
+                  <PhoneIcon size="20" />
+                </a>
+              </Box>
+            </Box>
+          )}
         </Box>
       </Box>
     </Box>
