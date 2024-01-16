@@ -11,7 +11,7 @@ import { useEffect, useState } from "react";
 import useGetCountDownTimer from "@/data/useGetCountDownTimer";
 import Widget from "@/components/Widget";
 import ReactPlayer from "react-player";
-import { CommentList } from "@/components";
+import { CommentList, Door } from "@/components";
 import Image from "next/image";
 import { locale } from "@/utils/Locale";
 
@@ -133,6 +133,8 @@ const Layout10: React.FC = () => {
   );
   const [musicStart, setMusicStart] = useState(false);
 
+  const [clickOpen, setClickOpen] = useState(false);
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCountdownTimer(countdownTimerParam);
@@ -145,15 +147,28 @@ const Layout10: React.FC = () => {
       maxWidth="400px"
       sx={{
         backgroundImage: "url('/media/animation/layout10-background.webp')",
-        boxShadow: "1px 1px 10px #e4ecf7",
+        backgroundSize: "cover",
+        boxShadow: "1px 1px 10px #f1f0e5",
         m: "auto",
         position: "relative",
         overflow: "hidden",
-        height: "100%",
+        height: clickOpen ? "100%" : "100vh",
       }}
       onTouchStart={() => setMusicStart(true)}
       onClick={() => setMusicStart(true)}
     >
+      <Door color="#f1f0e5" {...{ clickOpen, setClickOpen }}>
+        <SubTitle
+          dangerouslySetInnerHTML={{
+            __html: item?.title1Groom!,
+          }}
+        />
+        <SubTitle
+          dangerouslySetInnerHTML={{
+            __html: item?.title1Bride!,
+          }}
+        />
+      </Door>
       <Box sx={{ visibility: "hidden", position: "absolute" }}>
         <ReactPlayer
           url={musicUrl}
@@ -348,8 +363,6 @@ const Layout10: React.FC = () => {
 
         <Box
           sx={{
-            borderTop: "1px solid #c4d3ec",
-            borderBottom: "1px solid #c4d3ec",
             mx: -2,
             py: 8,
             position: "relative",
@@ -486,7 +499,8 @@ const Layout10: React.FC = () => {
           mb={2}
           sx={{
             px: 2,
-            py: 4,
+            pt: 4,
+            pb: 10,
           }}
         >
           <UbuntuText

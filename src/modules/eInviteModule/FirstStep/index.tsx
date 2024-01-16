@@ -114,7 +114,7 @@ const FirstStep: React.FC<FirstStepProps> = ({
                 Example of english translation
               </p>
               <Image
-                src="/media/cardSelection/card-8/2-image.png"
+                src="/media/cardSelection/card-4/2-image.png"
                 alt="Pulpen Studio Digital Invitation Card"
                 width={248}
                 height={470}
@@ -131,10 +131,10 @@ const FirstStep: React.FC<FirstStepProps> = ({
                 Example of Bahasa Malaysia translation
               </p>
               <Image
-                src="/media/cardSelection/card-3/2-image.png"
+                src="/media/cardSelection/card-1/2-image.png"
                 alt="Pulpen Studio Digital Invitation Card"
                 width={248}
-                height={480}
+                height={470}
               />
             </Box>
           </Box>

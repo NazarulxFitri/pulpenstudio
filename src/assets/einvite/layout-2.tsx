@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import useGetCountDownTimer from "@/data/useGetCountDownTimer";
 import Widget from "@/components/Widget";
 import ReactPlayer from "react-player";
-import { CommentList } from "@/components";
+import { CommentList, Door } from "@/components";
 import Image from "next/image";
 import { locale } from "@/utils/Locale";
 
@@ -80,6 +80,8 @@ const Layout2: React.FC = () => {
   );
   const [musicStart, setMusicStart] = useState(false);
 
+  const [clickOpen, setClickOpen] = useState(false);
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCountdownTimer(countdownTimerParam);
@@ -95,10 +97,25 @@ const Layout2: React.FC = () => {
         m: "auto",
         position: "relative",
         overflow: "hidden",
+        height: clickOpen ? "100%" : "100vh",
       }}
       onTouchStart={() => setMusicStart(true)}
       onClick={() => setMusicStart(true)}
     >
+      <Door color="#656041" {...{ clickOpen, setClickOpen }}>
+        <SubTitle
+          sx={{ fontSize: "24px", color: "#FFF" }}
+          dangerouslySetInnerHTML={{
+            __html: item?.title1Groom!,
+          }}
+        />
+        <SubTitle
+          sx={{ fontSize: "24px", color: "#FFF" }}
+          dangerouslySetInnerHTML={{
+            __html: item?.title1Bride!,
+          }}
+        />
+      </Door>
       <Box sx={{ visibility: "hidden", position: "absolute" }}>
         <ReactPlayer
           url={musicUrl}
@@ -413,7 +430,8 @@ const Layout2: React.FC = () => {
           mb={2}
           sx={{
             px: 2,
-            py: 4,
+            pt: 4,
+            pb: 10,
           }}
         >
           <MiniText
@@ -454,20 +472,18 @@ const Layout2: React.FC = () => {
           </Grid>
         </Box>
       </Container>
-      <Box>
-        <Widget
-          language={item?.language!}
-          iconColor="#FFF"
-          color="#7d7652"
-          location={{ text: item?.location!, mapUrl: item?.mapUrl! }}
-          contact={{
-            number1: item?.phonePerson1!,
-            number2: item?.phonePerson2!,
-            name1: item?.namePerson1!,
-            name2: item?.namePerson2!,
-          }}
-        />
-      </Box>
+      <Widget
+        language={item?.language!}
+        iconColor="#FFF"
+        color="#7d7652"
+        location={{ text: item?.location!, mapUrl: item?.mapUrl! }}
+        contact={{
+          number1: item?.phonePerson1!,
+          number2: item?.phonePerson2!,
+          name1: item?.namePerson1!,
+          name2: item?.namePerson2!,
+        }}
+      />
     </Box>
   );
 };

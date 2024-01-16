@@ -12,7 +12,7 @@ import { useEffect, useState } from "react";
 import useGetCountDownTimer from "@/data/useGetCountDownTimer";
 import Widget from "@/components/Widget";
 import ReactPlayer from "react-player";
-import { CommentList } from "@/components";
+import { CommentList, Door } from "@/components";
 import Image from "next/image";
 import { locale } from "@/utils/Locale";
 
@@ -140,6 +140,8 @@ const Layout14: React.FC = () => {
   );
   const [musicStart, setMusicStart] = useState(false);
 
+  const [clickOpen, setClickOpen] = useState(false);
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCountdownTimer(countdownTimerParam);
@@ -153,15 +155,27 @@ const Layout14: React.FC = () => {
       sx={{
         backgroundImage: "url('/media/animation/layout14-background.webp')",
         backgroundSize: "cover",
-        boxShadow: "1px 1px 10px #f5e1fd",
+        boxShadow: "1px 1px 10px #f9dab2",
         m: "auto",
         position: "relative",
         overflow: "hidden",
-        height: "100%",
+        height: clickOpen ? "100%" : "100vh",
       }}
       onTouchStart={() => setMusicStart(true)}
       onClick={() => setMusicStart(true)}
     >
+      <Door color="#f9dab2" {...{ clickOpen, setClickOpen }}>
+        <Text
+          dangerouslySetInnerHTML={{
+            __html: item?.title1Groom!,
+          }}
+        />
+        <Text
+          dangerouslySetInnerHTML={{
+            __html: item?.title1Bride!,
+          }}
+        />
+      </Door>
       <Box sx={{ visibility: "hidden", position: "absolute" }}>
         <ReactPlayer
           url={musicUrl}
@@ -509,7 +523,8 @@ const Layout14: React.FC = () => {
           mb={2}
           sx={{
             px: 2,
-            py: 4,
+            pt: 4,
+            pb: 10
           }}
         >
           <Special

@@ -22,7 +22,7 @@ import { useEffect, useState } from "react";
 import useGetCountDownTimer from "@/data/useGetCountDownTimer";
 import Widget from "@/components/Widget";
 import ReactPlayer from "react-player";
-import { CommentList } from "@/components";
+import { CommentList, Door } from "@/components";
 import { locale } from "@/utils/Locale";
 import Image from "next/image";
 
@@ -110,6 +110,8 @@ const Layout1: React.FC = () => {
   );
   const [musicStart, setMusicStart] = useState(false);
 
+  const [clickOpen, setClickOpen] = useState(false);
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCountdownTimer(countdownTimerParam);
@@ -122,15 +124,28 @@ const Layout1: React.FC = () => {
       maxWidth="400px"
       sx={{
         backgroundImage: "url('/media/animation/layout1-background.webp')",
-        backgroundSize: "auto",
+          backgroundSize: "cover",
         boxShadow: "0px -10px 10px #FDE6E8",
         m: "auto",
         position: "relative",
         overflow: "hidden",
+        height: clickOpen ? "100%" : "100vh",
       }}
       onTouchStart={() => setMusicStart(true)}
       onClick={() => setMusicStart(true)}
     >
+      <Door color="#FDE6E8" {...{clickOpen, setClickOpen}}>
+        <SubTitle
+          dangerouslySetInnerHTML={{
+            __html: item?.title1Groom!
+          }}
+        />
+        <SubTitle
+          dangerouslySetInnerHTML={{
+            __html: item?.title1Bride!
+          }}
+        />
+      </Door>
       <Box sx={{ visibility: "hidden", position: "absolute" }}>
         <ReactPlayer
           url={musicUrl}
@@ -231,8 +246,6 @@ const Layout1: React.FC = () => {
                 <Text
                   style={{
                     letterSpacing: "0.1em",
-                    borderTop: "0.5px solid #000",
-                    borderBottom: "0.5px solid #000",
                     padding: "8px 16px",
                   }}
                   dangerouslySetInnerHTML={{ __html: fullDate }}
@@ -300,8 +313,6 @@ const Layout1: React.FC = () => {
 
         <Box
           sx={{
-            borderTop: "1px solid #FDE6E8",
-            borderBottom: "1px solid #FDE6E8",
             mx: -3,
             py: 8,
           }}
@@ -424,7 +435,8 @@ const Layout1: React.FC = () => {
           mb={2}
           sx={{
             px: 2,
-            py: 4,
+            pt: 4,
+            pb: 10,
           }}
         >
           <Text

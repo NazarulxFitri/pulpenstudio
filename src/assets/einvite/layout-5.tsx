@@ -11,7 +11,7 @@ import { useEffect, useState } from "react";
 import useGetCountDownTimer from "@/data/useGetCountDownTimer";
 import Widget from "@/components/Widget";
 import ReactPlayer from "react-player";
-import { CommentList } from "@/components";
+import { CommentList, Door } from "@/components";
 import Image from "next/image";
 import { locale } from "@/utils/Locale";
 
@@ -115,6 +115,8 @@ const Layout5: React.FC = () => {
   );
   const [musicStart, setMusicStart] = useState(false);
 
+  const [clickOpen, setClickOpen] = useState(false);
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCountdownTimer(countdownTimerParam);
@@ -131,10 +133,23 @@ const Layout5: React.FC = () => {
         m: "auto",
         position: "relative",
         overflow: "hidden",
+        height: clickOpen ? "100%" : "100vh",
       }}
       onTouchStart={() => setMusicStart(true)}
       onClick={() => setMusicStart(true)}
     >
+      <Door color="#fcf5f3" {...{ clickOpen, setClickOpen }}>
+        <SubTitle
+          dangerouslySetInnerHTML={{
+            __html: item?.title1Groom!,
+          }}
+        />
+        <SubTitle
+          dangerouslySetInnerHTML={{
+            __html: item?.title1Bride!,
+          }}
+        />
+      </Door>
       <Box sx={{ visibility: "hidden", position: "absolute" }}>
         <ReactPlayer
           url={musicUrl}
@@ -440,7 +455,8 @@ const Layout5: React.FC = () => {
           mb={2}
           sx={{
             px: 2,
-            py: 4,
+            pt: 4,
+            pb: 10
           }}
         >
           <UbuntuText
