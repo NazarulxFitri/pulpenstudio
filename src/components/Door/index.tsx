@@ -52,7 +52,7 @@ const Door: React.FC<DoorProps> = ({
           sx={{
             background: color,
             borderRadius: "80%",
-            boxShadow: `1px 1px 10px ${color}`,
+            boxShadow: `-8px 8px 8px #D0D0D0`,
             px: 3,
             py: 4,
             position: "absolute",

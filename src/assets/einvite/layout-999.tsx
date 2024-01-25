@@ -158,21 +158,21 @@ const Layout999: React.FC = () => {
     >
       <Door color="#b4bca9" {...{ clickOpen, setClickOpen }}>
         <Special
-          sx={{ color: "#FFF", mt: 1 }}
+          sx={{ color: "#FFF", fontSize: "24px", mt: 1 }}
           dangerouslySetInnerHTML={{
-            __html: item?.title1Groom!,
+            __html: "Nurul Izzati",
           }}
         />
         <Special
-          sx={{ color: "#FFF" }}
+          sx={{ color: "#FFF", fontSize: "24px" }}
           dangerouslySetInnerHTML={{
-            __html: item?.title1Bride!,
+            __html: "Nazarul Fitri",
           }}
         />
         <MiniText
           sx={{ color: "#FFF", mt: 1, fontWeight: "700" }}
           dangerouslySetInnerHTML={{
-            __html: "Buka"
+            __html: "Buka",
           }}
         />
       </Door>
@@ -429,7 +429,7 @@ const Layout999: React.FC = () => {
                 }}
               />
               <MiniText
-              style={{ marginBottom: "8px" }}
+                style={{ marginBottom: "8px" }}
                 dangerouslySetInnerHTML={{
                   __html: `Jemputan tetamu : ${timeStart} - 1:00 PM`,
                 }}
