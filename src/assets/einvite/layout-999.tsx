@@ -362,7 +362,7 @@ const Layout999: React.FC = () => {
           <MiniText
             sx={{ mb: 3 }}
             dangerouslySetInnerHTML={{
-              __html: `Kami dengan penuh kesyukuran ke hadrat Ilahi ingin mengundang encik / cik / tuan / puan / dato' / datin' ke majlis pernikahan putri kesayangan kami `,
+              __html: `Kami dengan penuh kesyukuran ke hadrat Ilahi ingin mengundang encik / cik / tuan / puan / dato' / datin' ke majlis pernikahan puteri kesayangan kami `,
             }}
           />
           <UbuntuText
