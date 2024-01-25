@@ -435,8 +435,15 @@ const Layout999: React.FC = () => {
                 }}
               />
               <MiniText
+                style={{ marginBottom: "8px" }}
                 dangerouslySetInnerHTML={{
                   __html: `Akad Nikah : 10:00 AM`,
+                }}
+              />
+              <MiniText
+                
+                dangerouslySetInnerHTML={{
+                  __html: `Tema Pakaian : Off White / Putih`,
                 }}
               />
             </Box>
