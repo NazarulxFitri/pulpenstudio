@@ -157,16 +157,22 @@ const Layout999: React.FC = () => {
       onClick={() => setMusicStart(true)}
     >
       <Door color="#b4bca9" {...{ clickOpen, setClickOpen }}>
-        <Text
-          sx={{ color: "#FFF" }}
+        <Special
+          sx={{ color: "#FFF", mt: 1 }}
           dangerouslySetInnerHTML={{
             __html: item?.title1Groom!,
           }}
         />
-        <Text
+        <Special
           sx={{ color: "#FFF" }}
           dangerouslySetInnerHTML={{
             __html: item?.title1Bride!,
+          }}
+        />
+        <MiniText
+          sx={{ color: "#FFF", mt: 1, fontWeight: "700" }}
+          dangerouslySetInnerHTML={{
+            __html: "Buka"
           }}
         />
       </Door>
@@ -423,10 +429,14 @@ const Layout999: React.FC = () => {
                 }}
               />
               <MiniText
+              style={{ marginBottom: "8px" }}
                 dangerouslySetInnerHTML={{
-                  __html: `${
-                    locale?.[item?.language!]?.CARD_SUBTITLE_THREE
-                  } : ${timeStart} - 1:00 PM (Akad nikah 10:00 AM)`,
+                  __html: `Jemputan tetamu : ${timeStart} - 1:00 PM`,
+                }}
+              />
+              <MiniText
+                dangerouslySetInnerHTML={{
+                  __html: `Akad Nikah : 10:00 AM`,
                 }}
               />
             </Box>
