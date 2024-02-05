@@ -13,6 +13,7 @@ import PhoneIcon from "../Icons/PhoneIcon";
 
 interface WidgetProps {
   hideRsvp?: boolean;
+  hideEdit?: boolean;
   language: string;
   iconColor?: string;
   color: string;
@@ -39,11 +40,14 @@ const Widget: React.FC<WidgetProps> = ({
   location,
   contact,
   hideRsvp,
+  hideEdit,
 }) => {
   const [commentPopup, setCommentPopup] = useState(false);
   const [locationPopup, setLocationPopup] = useState(false);
   const [contactPopup, setContactPopup] = useState(false);
   const [rsvpPopup, setRsvpPopup] = useState(false);
+
+  const offsetSize = hideRsvp && hideEdit ? 3 : hideRsvp && !hideEdit ? 1.5 : 0;
 
   function handleClick(item: string) {
     if (item === "rsvp") {
@@ -142,23 +146,23 @@ const Widget: React.FC<WidgetProps> = ({
           }}
         />
       )}
-      {!hideRsvp ? (
-        <>
-          <Grid item xs={3}>
-            <Box onClick={() => handleClick("rsvp")}>
-              <RsvpIcon />
-            </Box>
-          </Grid>
-          <Grid item xs={3}>
-            <Box onClick={() => handleClick("comment")}>
-              <PenIcon />
-            </Box>
-          </Grid>
-        </>
-      ) : (
-        <>
-          <Grid item xs={3}></Grid>
-        </>
+
+      <Grid item xs={offsetSize} />
+
+      {!hideRsvp && (
+        <Grid item xs={3}>
+          <Box onClick={() => handleClick("rsvp")}>
+            <RsvpIcon />
+          </Box>
+        </Grid>
+      )}
+
+      {!hideEdit && (
+        <Grid item xs={3}>
+          <Box onClick={() => handleClick("comment")}>
+            <PenIcon />
+          </Box>
+        </Grid>
       )}
 
       <Grid item xs={3}>
@@ -166,6 +170,7 @@ const Widget: React.FC<WidgetProps> = ({
           <MapIcon />
         </Box>
       </Grid>
+
       <Grid item xs={3}>
         <Box onClick={() => handleClick("contact")}>
           <PhoneIcon />
