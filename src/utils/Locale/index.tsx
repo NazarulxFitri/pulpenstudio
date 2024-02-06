@@ -41,7 +41,7 @@ export const locale: LocaleConfig = {
     CARD_TITLE_FIRST: "Aturcara Majlis",
     CARD_SUBTITLE_FIRST: "Tarikh",
     CARD_SUBTITLE_TWO: "Lokasi",
-    CARD_SUBTITLE_THREE: "Jamuan Makan",
+    CARD_SUBTITLE_THREE: "Kehadiran tetamu",
     CARD_COUNTDOWN_TITLE: "Menghitung Hari",
     CARD_COUNTDOWN_FINISH_TEXT: "Harinya sudah tiba",
     CARD_WISH_TITLE: "Kongsi ucapan anda bersama kami",

@@ -416,6 +416,14 @@ const Layout998: React.FC = () => {
                   } : ${timeStart} sehingga 4:00pm `,
                 }}
               />
+               <MiniText
+                style={{ marginBottom: "8px" }}
+                dangerouslySetInnerHTML={{
+                  __html: `${
+                    'Ketibaan pengantin'
+                  } : 12:30pm`,
+                }}
+              />
             </Box>
           </Box>
         </Box>
