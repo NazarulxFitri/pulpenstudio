@@ -296,7 +296,7 @@ const Layout998: React.FC = () => {
                 fontSize: "12px",
               }}
               dangerouslySetInnerHTML={{
-                __html: `<span style="font-size: 32px;">11</span>.00am <span style="margin: 0 8px;">sehingga</span> <span style="font-size: 32px;">4</span>.00pm`,
+                __html: `<span style="font-size: 32px;">11</span>.00AM <span style="margin: 0 8px;">sehingga</span> <span style="font-size: 32px;">4</span>.PM`,
               }}
             />
             <MiniText
@@ -417,13 +417,13 @@ const Layout998: React.FC = () => {
                 dangerouslySetInnerHTML={{
                   __html: `${
                     locale?.[item?.language!]?.CARD_SUBTITLE_THREE
-                  } : ${timeStart} sehingga 4:00pm `,
+                  } : ${timeStart} sehingga 4:00PM `,
                 }}
               />
               <MiniText
                 style={{ marginBottom: "8px" }}
                 dangerouslySetInnerHTML={{
-                  __html: `${"Ketibaan pengantin"} : 12:30pm`,
+                  __html: `${"Ketibaan pengantin"} : 12:30PM`,
                 }}
               />
             </Box>
