@@ -140,7 +140,11 @@ const Layout998: React.FC = () => {
       onTouchStart={() => setMusicStart(true)}
       onClick={() => setMusicStart(true)}
     >
-      <Door doorMainColor="#fcf5f3" color="#FFF" {...{ clickOpen, setClickOpen }}>
+      <Door
+        doorMainColor="#fcf5f3"
+        color="#FFF"
+        {...{ clickOpen, setClickOpen }}
+      >
         <Title
           sx={{ color: "", fontWeight: "300", fontSize: "24px", mt: 1 }}
           dangerouslySetInnerHTML={{
@@ -163,7 +167,7 @@ const Layout998: React.FC = () => {
           sx={{
             position: "absolute",
             transform: "translate(-50%,-50%)",
-            top: "40%",
+            top: "20%",
             left: "50%",
             opacity: "0.4",
           }}
@@ -416,12 +420,10 @@ const Layout998: React.FC = () => {
                   } : ${timeStart} sehingga 4:00pm `,
                 }}
               />
-               <MiniText
+              <MiniText
                 style={{ marginBottom: "8px" }}
                 dangerouslySetInnerHTML={{
-                  __html: `${
-                    'Ketibaan pengantin'
-                  } : 12:30pm`,
+                  __html: `${"Ketibaan pengantin"} : 12:30pm`,
                 }}
               />
             </Box>
@@ -560,8 +562,12 @@ const Layout998: React.FC = () => {
           contact={{
             number1: item?.phonePerson1!,
             number2: item?.phonePerson2!,
+            number3: item?.phonePerson3!,
+            number4: item?.phonePerson4!,
             name1: item?.namePerson1!,
             name2: item?.namePerson2!,
+            name3: item?.namePerson3!,
+            name4: item?.namePerson4!,
           }}
         />
       </Box>

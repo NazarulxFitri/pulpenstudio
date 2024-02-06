@@ -31,6 +31,7 @@ const ContactPopup: React.FC<ContactPopupProps> = ({
   setLocationPopup,
   setContactPopup,
 }) => {
+  // console.log("")
   return (
     <Box
       sx={{
