@@ -134,13 +134,13 @@ const Layout998: React.FC = () => {
         boxShadow: "0px -10px 10px #fcf5f3",
         m: "auto",
         position: "relative",
-        // overflow: "hidden",
+        overflow: "hidden",
         height: clickOpen ? "100%" : "100vh",
       }}
       onTouchStart={() => setMusicStart(true)}
       onClick={() => setMusicStart(true)}
     >
-      <Door color="#FFF" {...{ clickOpen, setClickOpen }}>
+      <Door doorMainColor="#fcf5f3" color="#FFF" {...{ clickOpen, setClickOpen }}>
         <Title
           sx={{ color: "", fontWeight: "300", fontSize: "24px", mt: 1 }}
           dangerouslySetInnerHTML={{
@@ -159,6 +159,22 @@ const Layout998: React.FC = () => {
             __html: "Buka",
           }}
         />
+        <Box
+          sx={{
+            position: "absolute",
+            transform: "translate(-50%,-50%)",
+            top: "40%",
+            left: "50%",
+            opacity: "0.4",
+          }}
+        >
+          <Image
+            src="/media/animation/layout-998-flower-falling.gif"
+            alt="Pulpen Studio - Flourish Gloom"
+            width={400}
+            height={280}
+          />
+        </Box>
       </Door>
       <Box sx={{ visibility: "hidden", position: "absolute" }}>
         <ReactPlayer
@@ -187,7 +203,7 @@ const Layout998: React.FC = () => {
               transform: "translate(-50%,-50%)",
               top: "40%",
               left: "50%",
-              opacity: "0.6",
+              opacity: "0.4",
             }}
           >
             <Image
@@ -273,11 +289,10 @@ const Layout998: React.FC = () => {
             <MiniText
               className="animate__animated animate__zoomIn animate__slow animate__delay-2s"
               style={{
-                marginTop: "24px",
                 fontSize: "12px",
               }}
               dangerouslySetInnerHTML={{
-                __html: `<span style="font-size: 32px;">11</span>.00am <span style="margin: 0 8px;">hingga</span> <span style="font-size: 32px;">4</span>.00pm`,
+                __html: `<span style="font-size: 32px;">11</span>.00am <span style="margin: 0 8px;">sehingga</span> <span style="font-size: 32px;">4</span>.00pm`,
               }}
             />
             <MiniText
@@ -337,13 +352,13 @@ const Layout998: React.FC = () => {
             position: "relative",
           }}
         >
-           <Box
+          <Box
             sx={{
               position: "absolute",
               transform: "translate(-50%,-50%)",
               top: "40%",
               left: "50%",
-              opacity: "0.6",
+              opacity: "0.4",
             }}
           >
             <Image

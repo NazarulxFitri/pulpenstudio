@@ -2,6 +2,7 @@ import { Box } from "@mui/material";
 
 interface DoorProps {
   color: string;
+  doorMainColor?: string;
   children: any;
   clickOpen: boolean;
   setClickOpen: (value: boolean) => void;
@@ -12,6 +13,7 @@ const Door: React.FC<DoorProps> = ({
   children,
   clickOpen,
   setClickOpen,
+  doorMainColor
 }) => {
   return (
     <Box sx={{ position: "absolute", width: "100%", height: "100%" }}>
@@ -39,7 +41,7 @@ const Door: React.FC<DoorProps> = ({
           }
           id="right-door"
           sx={{
-            background: "#FFF",
+            background: doorMainColor || "#FFF",
             boxShadow: "-10px 0px 20px #D0D0D0",
             width: "50%",
             height: "100vh",
