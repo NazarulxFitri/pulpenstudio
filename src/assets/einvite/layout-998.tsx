@@ -134,7 +134,7 @@ const Layout998: React.FC = () => {
         boxShadow: "0px -10px 10px #fcf5f3",
         m: "auto",
         position: "relative",
-        overflow: "hidden",
+        // overflow: "hidden",
         height: clickOpen ? "100%" : "100vh",
       }}
       onTouchStart={() => setMusicStart(true)}
