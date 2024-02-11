@@ -192,7 +192,7 @@ const Layout998: React.FC = () => {
       </Box>
       <Box
         sx={{
-          borderBottom: "1px solid #EFEFEF",
+          borderBottom: "16px solid white",
           position: "relative",
           height: "100vh",
           overflow: "hidden",
@@ -217,8 +217,9 @@ const Layout998: React.FC = () => {
               height={280}
             />
           </Box>
-          <Box sx={{ position: "absolute", top: "-56px", left: "-40px" }}>
+          <Box sx={{ position: "absolute", top: "-64px", left: "-48px" }}>
             <Image
+              id="breathing-animation"
               src="/media/animation/layout5-flowers.png"
               alt="Pulpen Studio - Flourish Gloom"
               width={400}
@@ -227,6 +228,7 @@ const Layout998: React.FC = () => {
           </Box>
           <Box sx={{ position: "absolute", bottom: "72px", right: "-96px" }}>
             <Image
+            id="breathing-animation"
               src="/media/animation/layout5-flowers-1.png"
               alt="Pulpen Studio - Flourish Gloom"
               width={400}
@@ -309,14 +311,36 @@ const Layout998: React.FC = () => {
           </Box>
         </Box>
       </Box>
-      <Container>
+
         <Box
           my={5}
           mx="auto"
           sx={{
             p: { xs: "24px 16px", md: "64px 16px" },
+            position: "relative"
           }}
         >
+          <Box
+            sx={{
+              position: "absolute",
+              top: "20%",
+              left: "-10%",
+              opacity: "0.2",
+            }}
+          >
+            <Image
+              src="/media/animation/layout-998-flower-expand.webp"
+              alt="Pulpen Studio - Flourish Gloom"
+              width={184}
+              height={204}
+            />
+          </Box>
+          <MiniText
+            sx={{ mb: 3, fontSize: "24px" }}
+            dangerouslySetInnerHTML={{
+              __html: "﷽",
+            }}
+          />
           <MiniText
             sx={{ mb: 3 }}
             dangerouslySetInnerHTML={{
@@ -333,7 +357,7 @@ const Layout998: React.FC = () => {
             sx={{ mb: 3 }}
             dangerouslySetInnerHTML={{
               __html:
-                "Kami dengan penuh kesyukuran ke hadrat Ilahi ingin mengundang encik / cik / tuan / puan / dato' / datin ke majlis pernikahan puteri kesayangan kami ",
+                "Kami dengan penuh kesyukuran ke hadrat Ilahi ingin mengundang encik / cik / tuan / puan / dato' / datin ke majlis perkahwinan puteri kesayangan kami ",
             }}
           />
           <UbuntuText
@@ -351,6 +375,7 @@ const Layout998: React.FC = () => {
 
         <Box
           sx={{
+            borderBottom: "16px solid white",
             mx: -2,
             py: 8,
             position: "relative",
@@ -429,13 +454,30 @@ const Layout998: React.FC = () => {
             </Box>
           </Box>
         </Box>
-
         <Box
           sx={{
             px: 2,
-            py: 4,
+            pt: 4,
+            pb: 8,
+            position: "relative",
           }}
         >
+          <Box
+            sx={{
+              position: "absolute",
+              top: "20%",
+              right: "-10%",
+              opacity: "0.2",
+              transform: "scaleX(-1)",
+            }}
+          >
+            <Image
+              src="/media/animation/layout-998-flower-expand.webp"
+              alt="Pulpen Studio - Flourish Gloom"
+              width={184}
+              height={204}
+            />
+          </Box>
           <UbuntuText
             dangerouslySetInnerHTML={{
               __html: locale?.[item?.language!]?.CARD_COUNTDOWN_TITLE,
@@ -511,6 +553,43 @@ const Layout998: React.FC = () => {
           )}
         </Box>
         <Box
+          sx={{
+            px: 2,
+            py: 4,
+            position: "relative",
+            mx: "auto",
+            width: "300px",
+          }}
+        >
+          <Box
+            sx={{
+              position: "absolute",
+              bottom: "0",
+              left: "-16%",
+              opacity: "0.2",
+            }}
+          >
+            <Image
+              src="/media/animation/layout-998-flower-expand.webp"
+              alt="Pulpen Studio - Flourish Gloom"
+              width={184}
+              height={204}
+            />
+          </Box>
+          <MiniText
+            sx={{
+              textAlign: "center",
+              fontStyle: "italic",
+              fontSize: "12px",
+              lineHeight: "1.75em",
+            }}
+            dangerouslySetInnerHTML={{
+              __html: `Ya Allah ya Tuhan kami, limpahkanlah rahmat dan keampunan Mu kepada pasangan pengantin, kurniakanlah keduanya ketenangan, kebahagiaan dan jiwa yang tabah menghadapi dugaan dan cabaran. Kurniakanlah keredhaan dan keinsafan kepada kedua pengantin supaya mereka dapat beramal ibadat ke jalan yang benar. Kekalkanlah jodoh mereka untuk selama-lamanya. <br/><br/>Aamin Ya Rabbal Alamin.`,
+            }}
+          />
+        </Box>
+
+        <Box
           id="comment"
           mb={2}
           sx={{
@@ -529,8 +608,9 @@ const Layout998: React.FC = () => {
             <Grid item py={2} xs={12}>
               <Paper
                 sx={{
-                  background: "transparent",
+                  background: "#FFF",
                   boxShadow: "unset",
+                  height: "100%",
                   maxHeight: "400px",
                   overflow: "scroll",
                 }}
@@ -550,7 +630,6 @@ const Layout998: React.FC = () => {
             </Grid>
           </Grid>
         </Box>
-      </Container>
       <Box>
         <Widget
           hideRsvp={true}
