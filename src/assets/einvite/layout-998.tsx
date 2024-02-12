@@ -228,21 +228,36 @@ const Layout998: React.FC = () => {
           </Box>
           <Box sx={{ position: "absolute", bottom: "72px", right: "-96px" }}>
             <Image
-            id="breathing-animation"
+              id="breathing-animation"
               src="/media/animation/layout5-flowers-1.png"
               alt="Pulpen Studio - Flourish Gloom"
               width={400}
               height={400}
             />
           </Box>
-          <Box sx={{ position: "absolute", bottom: "180px", left: "0" }}>
+          <Box
+            sx={{
+              position: "absolute",
+              bottom: "20%",
+              left: "-10%",
+              opacity: "0.2",
+            }}
+          >
+            <Image
+              src="/media/animation/layout-998-flower-expand.webp"
+              alt="Pulpen Studio - Flourish Gloom"
+              width={184}
+              height={204}
+            />
+          </Box>
+          {/* <Box sx={{ position: "absolute", bottom: "180px", left: "0" }}>
             <Image
               src="/media/animation/layout5-art.webp"
               alt="Pulpen Studio - Flourish Gloom"
               width={161}
               height={297}
             />
-          </Box>
+          </Box> */}
           <Box>
             <MiniText
               style={{ letterSpacing: "0.5em" }}
@@ -252,7 +267,12 @@ const Layout998: React.FC = () => {
             />
             <Title
               className="animate__animated animate__zoomIn animate__slow"
-              style={{ marginTop: "24px", lineHeight: "0.75em" }}
+              style={{
+                marginTop: "24px",
+                lineHeight: "0.75em",
+                color: "lavenderblush",
+                textShadow: "0 0 8px #5a0819",
+              }}
               dangerouslySetInnerHTML={{
                 __html: `<span style="margin-right: 24px;">${item?.title1Groom}</span> <br><span style="font-size: 20px">&</span><br> <spanstyle="margin-left: 24px;">${item?.title1Bride}</span>`,
               }}
@@ -312,324 +332,333 @@ const Layout998: React.FC = () => {
         </Box>
       </Box>
 
+      <Box
+        mt={3}
+        mx="auto"
+        sx={{
+          borderBottom: "16px solid #FFF",
+          p: { xs: "24px 16px", md: "64px 16px" },
+          position: "relative",
+        }}
+      >
         <Box
-          my={5}
-          mx="auto"
           sx={{
-            p: { xs: "24px 16px", md: "64px 16px" },
-            position: "relative"
+            position: "absolute",
+            top: "20%",
+            left: "-10%",
+            opacity: "0.2",
           }}
         >
-          <Box
-            sx={{
-              position: "absolute",
-              top: "20%",
-              left: "-10%",
-              opacity: "0.2",
-            }}
-          >
-            <Image
-              src="/media/animation/layout-998-flower-expand.webp"
-              alt="Pulpen Studio - Flourish Gloom"
-              width={184}
-              height={204}
-            />
-          </Box>
-          <MiniText
-            sx={{ mb: 3, fontSize: "24px" }}
-            dangerouslySetInnerHTML={{
-              __html: "﷽",
-            }}
+          <Image
+            src="/media/animation/layout-998-flower-expand.webp"
+            alt="Pulpen Studio - Flourish Gloom"
+            width={184}
+            height={204}
           />
-          <MiniText
-            sx={{ mb: 3 }}
-            dangerouslySetInnerHTML={{
-              __html: locale?.[item?.language!]?.CARD_INTRO,
-            }}
+        </Box>
+        <MiniText
+          sx={{ mb: 3, fontSize: "24px" }}
+          dangerouslySetInnerHTML={{
+            __html: "﷽",
+          }}
+        />
+        <MiniText
+          sx={{ mb: 3 }}
+          dangerouslySetInnerHTML={{
+            __html: locale?.[item?.language!]?.CARD_INTRO,
+          }}
+        />
+        <UbuntuText
+          sx={{ fontWeight: "bolder", mb: 3 }}
+          dangerouslySetInnerHTML={{
+            __html: item?.title2!,
+          }}
+        />
+        <MiniText
+          sx={{ mb: 3 }}
+          dangerouslySetInnerHTML={{
+            __html:
+              "Kami dengan penuh kesyukuran ke hadrat Ilahi ingin mengundang encik / cik / tuan / puan / dato' / datin ke majlis perkahwinan puteri kesayangan kami ",
+          }}
+        />
+        <UbuntuText
+          sx={{
+            color: "#5a0819",
+            fontWeight: "300",
+            mb: 3,
+            textShadow: "1px 1px 10px #FDE6E8",
+          }}
+          dangerouslySetInnerHTML={{
+            __html: `${item?.fullNameGroom} & ${item?.fullNameBride}`,
+          }}
+        />
+      </Box>
+
+      <Box
+        sx={{
+          borderBottom: "16px solid white",
+          mx: -2,
+          mt: 5,
+          pb: 5,
+          position: "relative",
+        }}
+      >
+        <Box
+          sx={{
+            position: "absolute",
+            transform: "translate(-50%,-50%)",
+            top: "40%",
+            left: "50%",
+            opacity: "0.4",
+          }}
+        >
+          <Image
+            src="/media/animation/layout-998-flower-falling.gif"
+            alt="Pulpen Studio - Flourish Gloom"
+            width={400}
+            height={280}
           />
-          <UbuntuText
-            sx={{ fontWeight: "bolder", mb: 3 }}
-            dangerouslySetInnerHTML={{
-              __html: item?.title2!,
-            }}
-          />
-          <MiniText
-            sx={{ mb: 3 }}
-            dangerouslySetInnerHTML={{
-              __html:
-                "Kami dengan penuh kesyukuran ke hadrat Ilahi ingin mengundang encik / cik / tuan / puan / dato' / datin ke majlis perkahwinan puteri kesayangan kami ",
-            }}
-          />
-          <UbuntuText
-            sx={{
-              color: "#5a0819",
-              fontWeight: "300",
-              mb: 3,
-              textShadow: "1px 1px 10px #FDE6E8",
-            }}
-            dangerouslySetInnerHTML={{
-              __html: `${item?.fullNameGroom} & ${item?.fullNameBride}`,
-            }}
+        </Box>
+        <Box
+          sx={{
+            position: "absolute",
+            top: "-60px",
+            right: "-40px",
+            transform: "rotate(90deg)",
+            opacity: "0.4",
+          }}
+        >
+          <Image
+            src="/media/animation/layout5-flowers.png"
+            alt="Pulpen Studio - Flourish Gloom"
+            width={200}
+            height={200}
           />
         </Box>
 
-        <Box
-          sx={{
-            borderBottom: "16px solid white",
-            mx: -2,
-            py: 8,
-            position: "relative",
-          }}
-        >
-          <Box
-            sx={{
-              position: "absolute",
-              transform: "translate(-50%,-50%)",
-              top: "40%",
-              left: "50%",
-              opacity: "0.4",
+        <Box sx={{ mx: 2 }}>
+          <UbuntuText
+            dangerouslySetInnerHTML={{
+              __html: locale?.[item?.language!]?.CARD_TITLE_FIRST,
             }}
-          >
-            <Image
-              src="/media/animation/layout-998-flower-falling.gif"
-              alt="Pulpen Studio - Flourish Gloom"
-              width={400}
-              height={280}
-            />
-          </Box>
-          <Box
-            sx={{
-              position: "absolute",
-              top: "-60px",
-              right: "-40px",
-              transform: "rotate(90deg)",
-              opacity: "0.4",
-            }}
-          >
-            <Image
-              src="/media/animation/layout5-flowers.png"
-              alt="Pulpen Studio - Flourish Gloom"
-              width={200}
-              height={200}
-            />
-          </Box>
-
-          <Box sx={{ mx: 2 }}>
-            <UbuntuText
+          />
+          <Box mt={2} sx={{ textAlign: "center" }}>
+            <MiniText
+              style={{ marginBottom: "8px" }}
               dangerouslySetInnerHTML={{
-                __html: locale?.[item?.language!]?.CARD_TITLE_FIRST,
+                __html: `${
+                  locale?.[item?.language!]?.CARD_SUBTITLE_FIRST
+                }: ${fullDate} `,
               }}
             />
-            <Box mt={2} sx={{ textAlign: "center" }}>
-              <MiniText
-                style={{ marginBottom: "8px" }}
-                dangerouslySetInnerHTML={{
-                  __html: `${
-                    locale?.[item?.language!]?.CARD_SUBTITLE_FIRST
-                  }: ${fullDate} `,
-                }}
-              />
-              <MiniText
-                style={{ marginBottom: "8px" }}
-                dangerouslySetInnerHTML={{
-                  __html: `${locale?.[item?.language!]?.CARD_SUBTITLE_TWO} : ${
-                    item?.location
-                  } `,
-                }}
-              />
-              <MiniText
-                style={{ marginBottom: "8px" }}
-                dangerouslySetInnerHTML={{
-                  __html: `${
-                    locale?.[item?.language!]?.CARD_SUBTITLE_THREE
-                  } : ${timeStart} sehingga 4:00PM `,
-                }}
-              />
-              <MiniText
-                style={{ marginBottom: "8px" }}
-                dangerouslySetInnerHTML={{
-                  __html: `${"Ketibaan pengantin"} : 12:30PM`,
-                }}
-              />
-            </Box>
+            <MiniText
+              style={{ marginBottom: "8px" }}
+              dangerouslySetInnerHTML={{
+                __html: `${locale?.[item?.language!]?.CARD_SUBTITLE_TWO} : ${
+                  item?.location
+                } `,
+              }}
+            />
+            <MiniText
+              style={{ marginBottom: "8px" }}
+              dangerouslySetInnerHTML={{
+                __html: `${
+                  locale?.[item?.language!]?.CARD_SUBTITLE_THREE
+                } : ${timeStart} sehingga 4:00PM `,
+              }}
+            />
+            <MiniText
+              style={{ marginBottom: "8px" }}
+              dangerouslySetInnerHTML={{
+                __html: `${"Ketibaan pengantin"} : 12:30PM`,
+              }}
+            />
           </Box>
         </Box>
+      </Box>
+      <Box
+        sx={{
+          px: 2,
+          pt: 4,
+          pb: 6,
+          position: "relative",
+          borderBottom: "16px solid #FFF",
+        }}
+      >
         <Box
           sx={{
-            px: 2,
-            pt: 4,
-            pb: 8,
-            position: "relative",
+            position: "absolute",
+            top: "20%",
+            right: "-10%",
+            opacity: "0.2",
+            transform: "scaleX(-1)",
           }}
         >
+          <Image
+            src="/media/animation/layout-998-flower-expand.webp"
+            alt="Pulpen Studio - Flourish Gloom"
+            width={184}
+            height={204}
+          />
+        </Box>
+        <UbuntuText
+          dangerouslySetInnerHTML={{
+            __html: locale?.[item?.language!]?.CARD_COUNTDOWN_TITLE,
+          }}
+          sx={{ pb: 2 }}
+        />
+        {!isCounting ? (
           <Box
+            id="countdown"
+            columnGap={2}
             sx={{
-              position: "absolute",
-              top: "20%",
-              right: "-10%",
-              opacity: "0.2",
-              transform: "scaleX(-1)",
+              mx: "auto",
+              width: "fit-content",
             }}
           >
-            <Image
-              src="/media/animation/layout-998-flower-expand.webp"
-              alt="Pulpen Studio - Flourish Gloom"
-              width={184}
-              height={204}
+            <SubTitle
+              dangerouslySetInnerHTML={{
+                __html: locale?.[item?.language!]?.CARD_COUNTDOWN_FINISH_TEXT,
+              }}
             />
           </Box>
-          <UbuntuText
-            dangerouslySetInnerHTML={{
-              __html: locale?.[item?.language!]?.CARD_COUNTDOWN_TITLE,
+        ) : (
+          <Box
+            id="countdown"
+            columnGap={2}
+            sx={{
+              boxShadow: "1px 10px 10px -10px #656041",
+              pb: 1,
+              width: "fit-content",
+              mx: "auto",
+              display: "flex",
             }}
-            sx={{ pb: 2 }}
-          />
-          {!isCounting ? (
-            <Box
-              id="countdown"
-              columnGap={2}
-              sx={{
-                mx: "auto",
-                width: "fit-content",
-              }}
-            >
-              <SubTitle
+          >
+            <Box>
+              <Text
+                style={{ fontSize: "48px" }}
                 dangerouslySetInnerHTML={{
-                  __html: locale?.[item?.language!]?.CARD_COUNTDOWN_FINISH_TEXT,
+                  __html: `${countdownTimer?.countdownTimer.d} `,
                 }}
               />
             </Box>
-          ) : (
-            <Box
-              id="countdown"
-              columnGap={2}
-              sx={{
-                boxShadow: "1px 10px 10px -10px #656041",
-                pb: 1,
-                width: "fit-content",
-                mx: "auto",
-                display: "flex",
-              }}
-            >
-              <Box>
-                <Text
-                  style={{ fontSize: "48px" }}
-                  dangerouslySetInnerHTML={{
-                    __html: `${countdownTimer?.countdownTimer.d} `,
-                  }}
-                />
-              </Box>
-              <Box>
-                <Text
-                  style={{ fontSize: "24px" }}
-                  dangerouslySetInnerHTML={{
-                    __html: `${
-                      countdownTimer?.countdownTimer.h
-                    } <span style="font-size: 12px">${
-                      locale?.[item?.language!]?.COUNTDOWN_HOUR
-                    }</span>`,
-                  }}
-                />
-                <Text
-                  style={{ fontSize: "24px" }}
-                  dangerouslySetInnerHTML={{
-                    __html: `${
-                      countdownTimer?.countdownTimer.m
-                    } <span style="font-size: 12px">${
-                      locale?.[item?.language!]?.COUNTDOWN_MINUTE
-                    }</span>`,
-                  }}
-                />
-              </Box>
-              <Box>
-                <Text
-                  style={{ fontSize: "48px", color: "#5a0819", width: "50px" }}
-                  dangerouslySetInnerHTML={{
-                    __html: `${countdownTimer?.countdownTimer.s} `,
-                  }}
-                />
-              </Box>
+            <Box>
+              <Text
+                style={{ fontSize: "24px" }}
+                dangerouslySetInnerHTML={{
+                  __html: `${
+                    countdownTimer?.countdownTimer.h
+                  } <span style="font-size: 12px">${
+                    locale?.[item?.language!]?.COUNTDOWN_HOUR
+                  }</span>`,
+                }}
+              />
+              <Text
+                style={{ fontSize: "24px" }}
+                dangerouslySetInnerHTML={{
+                  __html: `${
+                    countdownTimer?.countdownTimer.m
+                  } <span style="font-size: 12px">${
+                    locale?.[item?.language!]?.COUNTDOWN_MINUTE
+                  }</span>`,
+                }}
+              />
             </Box>
-          )}
-        </Box>
+            <Box>
+              <Text
+                style={{ fontSize: "48px", color: "#5a0819", width: "50px" }}
+                dangerouslySetInnerHTML={{
+                  __html: `${countdownTimer?.countdownTimer.s} `,
+                }}
+              />
+            </Box>
+          </Box>
+        )}
+      </Box>
+      <Box
+        sx={{
+          borderBottom: "16px solid #FFF",
+          py: 4,
+          position: "relative",
+        }}
+      >
         <Box
           sx={{
-            px: 2,
-            py: 4,
-            position: "relative",
-            mx: "auto",
+            position: "absolute",
+            bottom: "0",
+            left: "-16%",
+            opacity: "0.2",
+          }}
+        >
+          <Image
+            src="/media/animation/layout-998-flower-expand.webp"
+            alt="Pulpen Studio - Flourish Gloom"
+            width={184}
+            height={204}
+          />
+        </Box>
+        <MiniText
+          sx={{ mb: 3, fontSize: "24px" }}
+          dangerouslySetInnerHTML={{
+            __html: "﷽",
+          }}
+        />
+        <MiniText
+          sx={{
+            fontStyle: "italic",
+            fontSize: "12px",
+            lineHeight: "1.75em",
             width: "300px",
+            display: "block",
+            mx: "auto"
           }}
-        >
-          <Box
-            sx={{
-              position: "absolute",
-              bottom: "0",
-              left: "-16%",
-              opacity: "0.2",
-            }}
-          >
-            <Image
-              src="/media/animation/layout-998-flower-expand.webp"
-              alt="Pulpen Studio - Flourish Gloom"
-              width={184}
-              height={204}
-            />
-          </Box>
-          <MiniText
-            sx={{
-              textAlign: "center",
-              fontStyle: "italic",
-              fontSize: "12px",
-              lineHeight: "1.75em",
-            }}
-            dangerouslySetInnerHTML={{
-              __html: `Ya Allah ya Tuhan kami, limpahkanlah rahmat dan keampunan Mu kepada pasangan pengantin, kurniakanlah keduanya ketenangan, kebahagiaan dan jiwa yang tabah menghadapi dugaan dan cabaran. Kurniakanlah keredhaan dan keinsafan kepada kedua pengantin supaya mereka dapat beramal ibadat ke jalan yang benar. Kekalkanlah jodoh mereka untuk selama-lamanya. <br/><br/>Aamin Ya Rabbal Alamin.`,
-            }}
-          />
-        </Box>
+          dangerouslySetInnerHTML={{
+            __html: `Ya Allah ya Tuhan kami, limpahkanlah rahmat dan keampunan Mu kepada pasangan pengantin, kurniakanlah keduanya ketenangan, kebahagiaan dan jiwa yang tabah menghadapi dugaan dan cabaran. Kurniakanlah keredhaan dan keinsafan kepada kedua pengantin supaya mereka dapat beramal ibadat ke jalan yang benar. Kekalkanlah jodoh mereka untuk selama-lamanya. <br/><br/>Aamin Ya Rabbal Alamin.`,
+          }}
+        />
+      </Box>
 
-        <Box
-          id="comment"
-          mb={2}
-          sx={{
-            px: 2,
-            pt: 4,
-            pb: 10,
+      <Box
+        id="comment"
+        mb={2}
+        sx={{
+          px: 2,
+          pt: 4,
+          pb: 10,
+        }}
+      >
+        <UbuntuText
+          dangerouslySetInnerHTML={{
+            __html: locale?.[item?.language!]?.CARD_WISH_TITLE,
           }}
-        >
-          <UbuntuText
-            dangerouslySetInnerHTML={{
-              __html: locale?.[item?.language!]?.CARD_WISH_TITLE,
-            }}
-            sx={{ pb: 2 }}
-          />
-          <Grid container>
-            <Grid item py={2} xs={12}>
-              <Paper
-                sx={{
-                  background: "#FFF",
-                  boxShadow: "unset",
-                  height: "100%",
-                  maxHeight: "400px",
-                  overflow: "scroll",
-                }}
-              >
-                <List sx={{ p: 0, mb: 4 }}>
-                  {/* @ts-ignore */}
-                  {listComments?.map((comment: any, idx: string) => (
-                    <CommentList
-                      {...{ comment, idx }}
-                      key={idx}
-                      bgColor="#fff"
-                      textColor="#5a0819"
-                    />
-                  ))}
-                </List>
-              </Paper>
-            </Grid>
+          sx={{ pb: 2 }}
+        />
+        <Grid container>
+          <Grid item py={2} xs={12}>
+            <Paper
+              sx={{
+                background: "#FFF",
+                boxShadow: "unset",
+                height: "100%",
+                maxHeight: "400px",
+                overflow: "scroll",
+              }}
+            >
+              <List sx={{ p: 0, mb: 4 }}>
+                {/* @ts-ignore */}
+                {listComments?.map((comment: any, idx: string) => (
+                  <CommentList
+                    {...{ comment, idx }}
+                    key={idx}
+                    bgColor="#fff"
+                    textColor="#5a0819"
+                  />
+                ))}
+              </List>
+            </Paper>
           </Grid>
-        </Box>
+        </Grid>
+      </Box>
       <Box>
         <Widget
           hideRsvp={true}
