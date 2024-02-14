@@ -378,7 +378,7 @@ const Layout998: React.FC = () => {
           sx={{ mb: 3 }}
           dangerouslySetInnerHTML={{
             __html:
-              "Kami dengan penuh kesyukuran ke hadrat Ilahi ingin mengundang Datuk Seri / Datin Seri / Datuk / Datin / Tuan / Puan / Encik / Cik  ke majlis perkahwinan puteri kesayangan kami ",
+              "Kami dengan penuh kesyukuran ke hadrat Ilahi ingin mengundang Tan Sri / Puan Sri / Dato' Seri / Datin Seri / Dato' / Datin / Tuan / Puan / Encik / Cik  ke majlis perkahwinan puteri kesayangan kami",
           }}
         />
         <UbuntuText
