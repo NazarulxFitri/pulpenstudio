@@ -16,6 +16,7 @@ import {
   Layout998,
   Layout999,
 } from "@/assets";
+import Layout997 from "@/assets/einvite/layout-997";
 
 export default function useListLayout() {
   const listLayout = {
@@ -33,6 +34,7 @@ export default function useListLayout() {
     "012": <Layout12 />,
     "013": <Layout13 />,
     "014": <Layout14 />,
+    "997": <Layout997 />,
     "998": <Layout998 />,
     "999": <Layout999 />,
   };

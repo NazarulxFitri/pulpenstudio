@@ -250,14 +250,6 @@ const Layout998: React.FC = () => {
               height={204}
             />
           </Box>
-          {/* <Box sx={{ position: "absolute", bottom: "180px", left: "0" }}>
-            <Image
-              src="/media/animation/layout5-art.webp"
-              alt="Pulpen Studio - Flourish Gloom"
-              width={161}
-              height={297}
-            />
-          </Box> */}
           <Box>
             <MiniText
               style={{ letterSpacing: "0.5em" }}
