@@ -169,6 +169,7 @@ const Layout997: React.FC = () => {
           background: "#ebe2d2",
           backgroundImage: "url('/media/animation/layout-997-bg.png')",
           backgroundSize: "contain",
+          backgroundAttachment: "fixed"
         }}
       >
         <Box
@@ -228,6 +229,7 @@ const Layout997: React.FC = () => {
           position: "relative",
           backgroundImage: "url('/media/animation/layout-997-bg.png')",
           backgroundSize: "contain",
+          backgroundAttachment: "fixed",
           py: 8,
           px: 4,
           mt: 2,
