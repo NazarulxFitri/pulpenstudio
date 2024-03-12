@@ -4,6 +4,7 @@ import WhatsappIcon from "@/components/Icons/WhatsappIcon";
 import { Box } from "@mui/material";
 
 interface ContactPopupProps {
+  iconColor?: string;
   title: string;
   color: string;
   contact: {
@@ -23,6 +24,7 @@ interface ContactPopupProps {
 }
 
 const ContactPopup: React.FC<ContactPopupProps> = ({
+  iconColor,
   title,
   color,
   contact,
@@ -52,7 +54,7 @@ const ContactPopup: React.FC<ContactPopupProps> = ({
         }}
       >
         <Box sx={{ display: "flex", p: 2 }}>
-          <p style={{ fontSize: "24px", fontWeight: "700", color: color }}>
+          <p style={{ fontSize: "24px", fontWeight: "700", color: iconColor }}>
             {title}
           </p>
           <Box

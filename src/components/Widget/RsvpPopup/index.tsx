@@ -4,6 +4,7 @@ import { locale } from "@/utils/Locale";
 import { Box } from "@mui/material";
 
 interface RsvpPopupProp {
+  iconColor?: string;
   language: string;
   title: string;
   color: string;
@@ -14,6 +15,7 @@ interface RsvpPopupProp {
 }
 
 const RsvpPopup: React.FC<RsvpPopupProp> = ({
+  iconColor,
   language,
   title,
   color,
@@ -42,7 +44,7 @@ const RsvpPopup: React.FC<RsvpPopupProp> = ({
         }}
       >
         <Box sx={{ display: "flex", p: 2 }}>
-          <p style={{ fontSize: "24px", fontWeight: "700", color: color }}>
+          <p style={{ fontSize: "24px", fontWeight: "700", color: iconColor }}>
             {title}
           </p>
           <Box

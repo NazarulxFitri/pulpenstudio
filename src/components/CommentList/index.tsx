@@ -33,11 +33,10 @@ const CommentList: React.FC<CommentListProps> = ({
   return (
     <Box
       key={comment}
-      mb={2}
       sx={{
         borderRadius: "8px",
-        color: Number(idx) % 2 === 0 ? textColor : "#333",
-        p: "16px 24px",
+        color: textColor,
+        p: "16px 16px",
       }}
     >
       <UbuntuText

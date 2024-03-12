@@ -18,8 +18,8 @@ import ReactPlayer from "react-player";
 import { CommentList, Door } from "@/components";
 import Image from "next/image";
 import { locale } from "@/utils/Locale";
+import CustomDoor from "@/components/Custom/Door";
 
-const tangerine = Tangerine({ subsets: ["latin"], weight: "400" });
 const dancingScript = Dancing_Script({
   subsets: ["latin"],
   weight: ["400", "500", "700"],
@@ -30,6 +30,7 @@ const playfair = Playfair_Display({
   weight: ["400", "500", "700"],
 });
 
+const tangerine = Tangerine({ subsets: ["latin"], weight: ["400", "700"] });
 const pinyon = Pinyon_Script({ subsets: ["latin"], weight: "400" });
 const baskerville = Libre_Baskerville({
   subsets: ["latin"],
@@ -45,7 +46,7 @@ interface DateTimeConfig {
 }
 
 const SubTitle = styled("p")(() => ({
-  fontFamily: `${pinyon.style.fontFamily} !important` || "auto",
+  fontFamily: `${tangerine.style.fontFamily} !important` || "auto",
   textAlign: "center",
   fontWeight: "bolder",
 }));
@@ -119,7 +120,7 @@ const Layout997: React.FC = () => {
   );
   const [musicStart, setMusicStart] = useState(false);
 
-  const [clickOpen, setClickOpen] = useState(true);
+  const [clickOpen, setClickOpen] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -139,7 +140,9 @@ const Layout997: React.FC = () => {
         maxWidth: "400px",
       }}
       onTouchStart={() => setMusicStart(true)}
-      onClick={() => setMusicStart(true)}
+      onClick={() => {
+        setMusicStart(true);
+      }}
     >
       <Box sx={{ visibility: "hidden", position: "absolute" }}>
         <ReactPlayer
@@ -151,13 +154,21 @@ const Layout997: React.FC = () => {
           controls={true}
         />
       </Box>
+
+      <CustomDoor color="ebe2d2" {...{ clickOpen, setClickOpen }}>
+        <h1>TEST</h1>
+      </CustomDoor>
+
       <Box
+        onClick={() => {
+          setClickOpen(true);
+        }}
         sx={{
           position: "relative",
           height: "100vh",
           background: "#ebe2d2",
           backgroundImage: "url('/media/animation/layout-997-bg.png')",
-          backgroundSize: "cover",
+          backgroundSize: "contain",
         }}
       >
         <Box
@@ -175,6 +186,11 @@ const Layout997: React.FC = () => {
           />
         </Box>
         <Box
+          className={
+            clickOpen
+              ? "animate__animated animate__fadeIn animate__slow animate__delay-1s"
+              : ""
+          }
           sx={{
             position: "absolute",
             top: "50%",
@@ -205,12 +221,13 @@ const Layout997: React.FC = () => {
           />
         </Box>
       </Box>
+
       <Box
+        display={clickOpen ? "block" : "none"}
         sx={{
           position: "relative",
-          background: "#ebe2d2",
           backgroundImage: "url('/media/animation/layout-997-bg.png')",
-          backgroundSize: "cover",
+          backgroundSize: "contain",
           py: 8,
           px: 4,
           mt: 2,
@@ -249,36 +266,42 @@ const Layout997: React.FC = () => {
           />
         </Box>
         <SubTitle
-          sx={{ fontSize: "24px", color: "#ac6e29" }}
+          id="marker"
+          className="animate__animated animate__zoomIn animate__slow animate__delay-2s"
+          sx={{ fontSize: "32px", color: "#ac6e29" }}
           dangerouslySetInnerHTML={{
             __html: "﷽",
           }}
         />
         <SubTitle
-          sx={{ fontSize: "24px", mt: 4, color: "#ac6e29" }}
+        className="animate__animated animate__zoomIn animate__slow animate__delay-3s"
+          sx={{ fontSize: "28px", mt: 4, color: "#ac6e29", fontWeight: "700" }}
           dangerouslySetInnerHTML={{
-            __html: "Tuan Suhaimi Salleh & Rohairan Ismail",
+            __html: "Tuan Suhaimi Salleh &<br/>Rohaizan Ismail",
           }}
         />
         <Text
-          sx={{ fontSize: "18px", color: "#ac6e29" }}
+          sx={{ fontSize: "16px", my: 1, color: "#ac6e29" }}
           dangerouslySetInnerHTML={{
             __html: "&",
           }}
         />
         <SubTitle
-          sx={{ fontSize: "24px", mb: 4, color: "#ac6e29" }}
+        className="animate__animated animate__zoomIn animate__slow animate__delay-4s"
+          sx={{ fontSize: "28px", mb: 4, color: "#ac6e29" }}
           dangerouslySetInnerHTML={{
-            __html: "Wohamad Nor Arahim & Nur Maisarah Abdullah",
+            __html: "Mohamad Nor Ibrahim &<br/>Nur Maisarah Abdullah",
           }}
         />
         <Text
+        className="animate__animated animate__zoomIn animate__slow animate__delay-5s"
           sx={{ fontSize: "12px", fontWeight: "bolder", color: "#ac6e29" }}
           dangerouslySetInnerHTML={{
             __html: "DENGAN PENUH KESYUKURAN DAN TAKZIMNYA MENTEMPUT ANDA",
           }}
         />
         <Text
+        className="animate__animated animate__zoomIn animate__slow animate__delay-5s"
           sx={{
             fontSize: "12px",
             mt: 1,
@@ -289,6 +312,7 @@ const Layout997: React.FC = () => {
           }}
         />
         <Text
+        className="animate__animated animate__zoomIn animate__slow animate__delay-5s"
           sx={{
             fontSize: "12px",
             mt: 4,
@@ -300,6 +324,7 @@ const Layout997: React.FC = () => {
           }}
         />
         <Text
+        className="animate__animated animate__zoomIn animate__slow animate__delay-5s"
           sx={{
             fontSize: "12px",
             mt: 1,
@@ -310,19 +335,21 @@ const Layout997: React.FC = () => {
           }}
         />
         <SubTitle
-          sx={{ fontSize: "40px", mt: 4, color: "#ac6e29" }}
+        className="animate__animated animate__zoomIn animate__slow animate__delay-5s"
+          sx={{ fontSize: "28px", mt: 4, color: "#ac6e29" }}
           dangerouslySetInnerHTML={{
             __html: "Nik Iffah Hazirah",
           }}
         />
         <Text
-          sx={{ fontSize: "12px", my: 0.5, color: "#ac6e29" }}
+          sx={{ fontSize: "12px", my: 1, color: "#ac6e29" }}
           dangerouslySetInnerHTML={{
             __html: "<b>DAN</b> | <i>WITH</i>",
           }}
         />
         <SubTitle
-          sx={{ fontSize: "40px", color: "#ac6e29" }}
+        className="animate__animated animate__zoomIn animate__slow animate__delay-5s"
+          sx={{ fontSize: "32px", color: "#ac6e29" }}
           dangerouslySetInnerHTML={{
             __html: "Hilmi Marzuqi",
           }}
@@ -334,13 +361,13 @@ const Layout997: React.FC = () => {
           }}
         />
         <Text
-          sx={{ fontSize: "16px", mt: 0.5, color: "#ac6e29" }}
+          sx={{ fontSize: "12px", mt: 0.5, color: "#ac6e29" }}
           dangerouslySetInnerHTML={{
             __html: "<b>AHAD</b> | <i>SUNDAY</i>",
           }}
         />
         <Text
-          sx={{ fontSize: "16px", mt: 0.5, color: "#ac6e29" }}
+          sx={{ fontSize: "12px", mt: 0.5, color: "#ac6e29" }}
           dangerouslySetInnerHTML={{
             __html: "18.08.2024",
           }}
@@ -410,7 +437,7 @@ const Layout997: React.FC = () => {
               </Box>
               <Box>
                 <Text
-                  style={{ fontSize: "24px", width: "50px" }}
+                  style={{ fontSize: "24px", width: "50px", color: "#ac6e29" }}
                   dangerouslySetInnerHTML={{
                     __html: `${countdownTimer?.countdownTimer.s} `,
                   }}
@@ -426,13 +453,54 @@ const Layout997: React.FC = () => {
           }}
         />
         <Text
-          sx={{ fontSize: "16px", mt: 0.5, mb: 2, color: "#ac6e29" }}
+          sx={{ fontSize: "12px", mt: 0.5, mb: 2, color: "#ac6e29" }}
           dangerouslySetInnerHTML={{
             __html:
               "SEBENING EMBUN GARDENS LOT 15, JALAN DURIAN 1,KAMPUNG SUNGAI BULOH, DENGKIL, SELANGOR",
           }}
         />
+        <Box
+          id="comment"
+          mb={2}
+          sx={{
+            px: 2,
+            pt: 4,
+          }}
+        >
+          <Text
+            sx={{ color: "#ac6e29" }}
+            dangerouslySetInnerHTML={{
+              __html: "<b>Ucapan</b> | <i>Wishes</i>",
+            }}
+          />
+          <Grid container>
+            <Grid item py={2} xs={12}>
+              <Paper
+                sx={{
+                  background: "#FFF",
+                  boxShadow: "unset",
+                  height: "100%",
+                  maxHeight: "400px",
+                  overflow: "scroll",
+                }}
+              >
+                <List sx={{ p: 0 }}>
+                  {/* @ts-ignore */}
+                  {listComments?.map((comment: any, idx: string) => (
+                    <CommentList
+                      {...{ comment, idx }}
+                      key={idx}
+                      bgColor="#fff"
+                      textColor="#ac6e29"
+                    />
+                  ))}
+                </List>
+              </Paper>
+            </Grid>
+          </Grid>
+        </Box>
       </Box>
+
       <Box>
         <Widget
           hideRsvp={true}

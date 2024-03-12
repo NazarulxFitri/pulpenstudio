@@ -4,6 +4,7 @@ import { locale } from "@/utils/Locale";
 import { Box } from "@mui/material";
 
 interface CommentPopupProps {
+  iconColor?: string;
   language: string;
   title: string;
   color: string;
@@ -14,6 +15,7 @@ interface CommentPopupProps {
 }
 
 const CommentPopup: React.FC<CommentPopupProps> = ({
+  iconColor,
   language,
   title,
   color,
@@ -42,7 +44,7 @@ const CommentPopup: React.FC<CommentPopupProps> = ({
         }}
       >
         <Box sx={{ display: "flex", p: 2 }}>
-          <p style={{ fontSize: "24px", fontWeight: "700", color: color }}>
+          <p style={{ fontSize: "24px", fontWeight: "700", color: iconColor }}>
             {title}
           </p>
           <Box

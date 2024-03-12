@@ -99,6 +99,7 @@ const Widget: React.FC<WidgetProps> = ({
           title={locale?.[language!]?.WIDGET_RSVP_TITLE!}
           {...{
             language,
+            iconColor,
             color,
             setRsvpPopup,
             setCommentPopup,
@@ -112,6 +113,7 @@ const Widget: React.FC<WidgetProps> = ({
           title={locale?.[language!]?.WIDGET_WISH_TITLE!}
           {...{
             language,
+            iconColor,
             color,
             setRsvpPopup,
             setCommentPopup,
@@ -124,6 +126,7 @@ const Widget: React.FC<WidgetProps> = ({
         <LocationPopup
           title={locale?.[language!]?.WIDGET_LOCATION_TITLE!}
           {...{
+            iconColor,
             color,
             location,
             setRsvpPopup,
@@ -137,6 +140,7 @@ const Widget: React.FC<WidgetProps> = ({
         <ContactPopup
           title={locale?.[language!]?.WIDGET_CONTACTUS_TITLE!}
           {...{
+            iconColor,
             color,
             contact,
             setRsvpPopup,

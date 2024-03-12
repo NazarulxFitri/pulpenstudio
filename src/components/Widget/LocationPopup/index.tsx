@@ -4,6 +4,7 @@ import MapIcon from "@/components/Icons/MapIcon";
 import { Box } from "@mui/material";
 
 interface LocationPopupProps {
+  iconColor?: string;
   title: string;
   color: string;
   location: {
@@ -17,6 +18,7 @@ interface LocationPopupProps {
 }
 
 const LocationPopup: React.FC<LocationPopupProps> = ({
+  iconColor,
   title,
   color,
   location,
@@ -45,7 +47,7 @@ const LocationPopup: React.FC<LocationPopupProps> = ({
         }}
       >
         <Box sx={{ display: "flex", p: 2 }}>
-          <p style={{ fontSize: "24px", fontWeight: "700", color: color }}>
+          <p style={{ fontSize: "24px", fontWeight: "700", color: iconColor }}>
             {title}
           </p>
           <Box
