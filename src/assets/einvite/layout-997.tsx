@@ -1,5 +1,6 @@
 // Modified layout - 20 Februari 2024 | Hilmi & Nik Iffah
 import { Box, Container, Grid, List, Paper, styled } from "@mui/material";
+import { Fade } from "react-awesome-reveal";
 import {
   Baskervville,
   Dancing_Script,
@@ -155,73 +156,7 @@ const Layout997: React.FC = () => {
         />
       </Box>
 
-      <CustomDoor color="ebe2d2" {...{ clickOpen, setClickOpen }}>
-        <h1>TEST</h1>
-      </CustomDoor>
-
-      <Box
-        onClick={() => {
-          setClickOpen(true);
-        }}
-        sx={{
-          position: "relative",
-          height: "100vh",
-          background: "#ebe2d2",
-          backgroundImage: "url('/media/animation/layout-997-bg.png')",
-          backgroundSize: "contain",
-          backgroundAttachment: "fixed"
-        }}
-      >
-        <Box
-          sx={{
-            position: "absolute",
-            top: "0",
-          }}
-        >
-          <Image
-            src="/media/animation/layout-997-border-top.png"
-            alt="Pulpen Studio Layout 997"
-            width={430}
-            height={100}
-            style={{ display: "block" }}
-          />
-        </Box>
-        <Box
-          className={
-            clickOpen
-              ? "animate__animated animate__fadeIn animate__slow animate__delay-1s"
-              : ""
-          }
-          sx={{
-            position: "absolute",
-            top: "50%",
-            left: "50%",
-            transform: "translate(-50%,-50%)",
-          }}
-        >
-          <Image
-            src="/media/animation/layout-997-full.png"
-            alt="Pulpen Studio Layout 997"
-            width={380}
-            height={360}
-            style={{ display: "block" }}
-          />
-        </Box>
-        <Box
-          sx={{
-            position: "absolute",
-            bottom: "0",
-          }}
-        >
-          <Image
-            src="/media/animation/layout-997-border-bottom.png"
-            alt="Pulpen Studio Layout 997"
-            width={430}
-            height={100}
-            style={{ display: "block" }}
-          />
-        </Box>
-      </Box>
+      <CustomDoor color="ebe2d2" {...{ clickOpen, setClickOpen }} />
 
       <Box
         display={clickOpen ? "block" : "none"}
@@ -232,7 +167,6 @@ const Layout997: React.FC = () => {
           backgroundAttachment: "fixed",
           py: 8,
           px: 4,
-          mt: 2,
         }}
       >
         <Box
@@ -269,41 +203,50 @@ const Layout997: React.FC = () => {
         </Box>
         <SubTitle
           id="marker"
-          className="animate__animated animate__zoomIn animate__slow animate__delay-2s"
+          className="animate__animated animate__zoomIn animate__slow animate__delay-1s"
           sx={{ fontSize: "32px", color: "#ac6e29" }}
           dangerouslySetInnerHTML={{
             __html: "﷽",
           }}
         />
+
         <SubTitle
-        className="animate__animated animate__zoomIn animate__slow animate__delay-3s"
+          className="animate__animated animate__zoomIn animate__slow animate__delay-2s"
           sx={{ fontSize: "28px", mt: 4, color: "#ac6e29", fontWeight: "700" }}
           dangerouslySetInnerHTML={{
             __html: "Tuan Suhaimi Salleh &<br/>Rohaizan Ismail",
           }}
         />
         <Text
+          className="animate__animated animate__zoomIn animate__slow animate__delay-2s"
           sx={{ fontSize: "16px", my: 1, color: "#ac6e29" }}
           dangerouslySetInnerHTML={{
             __html: "&",
           }}
         />
         <SubTitle
-        className="animate__animated animate__zoomIn animate__slow animate__delay-4s"
+          className="animate__animated animate__zoomIn animate__slow animate__delay-2s"
           sx={{ fontSize: "28px", mb: 4, color: "#ac6e29" }}
           dangerouslySetInnerHTML={{
             __html: "Mohamad Nor Ibrahim &<br/>Nur Maisarah Abdullah",
           }}
         />
         <Text
-        className="animate__animated animate__zoomIn animate__slow animate__delay-5s"
-          sx={{ fontSize: "12px", fontWeight: "bolder", color: "#ac6e29" }}
+          className="animate__animated animate__zoomIn animate__slow animate__delay-3s"
+          sx={{ fontSize: "11px", fontWeight: "bolder", color: "#ac6e29" }}
           dangerouslySetInnerHTML={{
-            __html: "DENGAN PENUH KESYUKURAN DAN TAKZIMNYA MENTEMPUT ANDA",
+            __html: "DENGAN PENUH KESYUKURAN DAN TAKZIMNYA",
           }}
         />
         <Text
-        className="animate__animated animate__zoomIn animate__slow animate__delay-5s"
+          className="animate__animated animate__zoomIn animate__slow animate__delay-3s"
+          sx={{ fontSize: "9px", fontWeight: "bolder", color: "#ac6e29" }}
+          dangerouslySetInnerHTML={{
+            __html: "MENJEMPUT TUAN/PUAN/ENCIK/CIK SERTA SEISI KELUARGA",
+          }}
+        />
+        <Text
+          className="animate__animated animate__zoomIn animate__slow animate__delay-3s"
           sx={{
             fontSize: "12px",
             mt: 1,
@@ -314,7 +257,7 @@ const Layout997: React.FC = () => {
           }}
         />
         <Text
-        className="animate__animated animate__zoomIn animate__slow animate__delay-5s"
+          className="animate__animated animate__zoomIn animate__slow animate__delay-4s"
           sx={{
             fontSize: "12px",
             mt: 4,
@@ -326,7 +269,7 @@ const Layout997: React.FC = () => {
           }}
         />
         <Text
-        className="animate__animated animate__zoomIn animate__slow animate__delay-5s"
+          className="animate__animated animate__zoomIn animate__slow animate__delay-4s"
           sx={{
             fontSize: "12px",
             mt: 1,
@@ -337,20 +280,21 @@ const Layout997: React.FC = () => {
           }}
         />
         <SubTitle
-        className="animate__animated animate__zoomIn animate__slow animate__delay-5s"
+          className="animate__animated animate__zoomIn animate__slow animate__delay-5s"
           sx={{ fontSize: "28px", mt: 4, color: "#ac6e29" }}
           dangerouslySetInnerHTML={{
             __html: "Nik Iffah Hazirah",
           }}
         />
         <Text
+        className="animate__animated animate__zoomIn animate__slow animate__delay-5s"
           sx={{ fontSize: "12px", my: 1, color: "#ac6e29" }}
           dangerouslySetInnerHTML={{
             __html: "<b>DAN</b> | <i>WITH</i>",
           }}
         />
         <SubTitle
-        className="animate__animated animate__zoomIn animate__slow animate__delay-5s"
+          className="animate__animated animate__zoomIn animate__slow animate__delay-5s"
           sx={{ fontSize: "32px", color: "#ac6e29" }}
           dangerouslySetInnerHTML={{
             __html: "Hilmi Marzuqi",
@@ -505,7 +449,7 @@ const Layout997: React.FC = () => {
 
       <Box>
         <Widget
-          hideRsvp={true}
+          hideRsvp={false}
           hideEdit={false}
           language={item?.language!}
           iconColor="#ac6e29"

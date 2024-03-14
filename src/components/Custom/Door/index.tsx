@@ -5,7 +5,7 @@ import Image from "next/image";
 interface DoorProps {
   color: string;
   doorMainColor?: string;
-  children: any;
+  children?: any;
   clickOpen: boolean;
   setClickOpen: (value: boolean) => void;
 }
@@ -29,7 +29,13 @@ const CustomDoor: React.FC<DoorProps> = ({
   doorMainColor,
 }) => {
   return (
-    <Box sx={{ position: "absolute", width: "100%", height: "100%" }}>
+    <Box
+      sx={{
+        position: clickOpen ? "absolute" : "relative",
+        width: "100%",
+        height: "100vh",
+      }}
+    >
       <Box
         sx={{
           // background:
@@ -40,17 +46,50 @@ const CustomDoor: React.FC<DoorProps> = ({
       >
         <Box
           className={clickOpen ? "animate__animated animate__slideOutLeft" : ""}
+          sx={{
+            position: "absolute",
+            top: "0",
+            zIndex: 3,
+          }}
+        >
+          <Image
+            src="/media/animation/layout-997-border-top.png"
+            alt="Pulpen Studio Layout 997"
+            width={430}
+            height={100}
+            style={{ display: "block" }}
+          />
+        </Box>
+        <Box
+          className={
+            clickOpen ? "animate__animated animate__slideOutRight" : ""
+          }
+          sx={{
+            position: "absolute",
+            bottom: "0",
+            zIndex: 3,
+          }}
+        >
+          <Image
+            src="/media/animation/layout-997-border-bottom.png"
+            alt="Pulpen Studio Layout 997"
+            width={430}
+            height={100}
+            style={{ display: "block" }}
+          />
+        </Box>
+        <Box
+          className={clickOpen ? "animate__animated animate__slideOutLeft" : ""}
           id="left-door"
           sx={{
             background: "#ebe2d2",
             backgroundImage: "url('/media/animation/layout-997-bg.png')",
             backgroundSize: "cover",
-            boxShadow: "-10px 0px 20px #ebe2d2",
             width: "50%",
             height: "100vh",
             zIndex: "2",
           }}
-        />
+        ></Box>
         <Box
           className={
             clickOpen ? "animate__animated animate__slideOutRight" : ""
@@ -60,12 +99,11 @@ const CustomDoor: React.FC<DoorProps> = ({
             background: "#ebe2d2",
             backgroundImage: "url('/media/animation/layout-997-bg.png')",
             backgroundSize: "cover",
-            boxShadow: "-10px 0px 20px #ebe2d2",
             width: "50%",
             height: "100vh",
             zIndex: "2",
           }}
-        />
+        ></Box>
         <Box
           onClick={() => setClickOpen(true)}
           className={clickOpen ? "animate__animated animate__fadeOut" : ""}
