@@ -78,17 +78,18 @@ const RsvpForm: React.FC<RsvpFormProps> = ({
   const [phoneNumber, setPhoneNumber] = useState("");
   const [attendance, setAttendance] = useState(false);
   const [pax, setPax] = useState<number>(1);
+  const [kidPax, setKidPax] = useState<number>(0);
 
   const [errorMessage, setErrorMessage] = useState(false);
 
-  const disabled = !name || !phoneNumber;
+  const disabled = !name || !phoneNumber || !attendance;
 
   async function handleClick() {
     if (disabled) {
       setErrorMessage(true);
       return null;
     }
-    await action(name, phoneNumber, attendance, pax, rsvpLength!);
+    await action(name, phoneNumber, attendance, pax, kidPax, rsvpLength!);
     router.reload();
   }
 
@@ -108,8 +109,8 @@ const RsvpForm: React.FC<RsvpFormProps> = ({
             </p>
           }
         />
-
         <Input
+        fullWidth
           placeholder="Ahmad Judika"
           InputLabelProps={{ shrink: true }}
           sx={{
@@ -120,6 +121,7 @@ const RsvpForm: React.FC<RsvpFormProps> = ({
               borderBottomColor: themeColor,
             },
             mt: 2,
+            width: "100%"
           }}
           error={errorMessage && !name}
           label={textName}
@@ -147,31 +149,53 @@ const RsvpForm: React.FC<RsvpFormProps> = ({
         />
 
         {attendance && (
-          <Input
-            variant="standard"
-            sx={{
-              "& label.Mui-focused": {
-                color: "#333",
-              },
-              "& .MuiInput-underline:after": {
-                borderBottomColor: themeColor,
-              },
-              mt: 2,
-            }}
-            value={pax}
-            label={textPax}
-            type="number"
-            onChange={(e) => setPax(+e.target.value)}
-            InputLabelProps={{
-              shrink: true,
-            }}
-          />
+          <>
+            <Input
+              variant="standard"
+              sx={{
+                "& label.Mui-focused": {
+                  color: "#333",
+                },
+                "& .MuiInput-underline:after": {
+                  borderBottomColor: themeColor,
+                },
+                mt: 2,
+              }}
+              value={pax}
+              label={"Pax dewasa | Adult pax"}
+              type="number"
+              onChange={(e) => setPax(+e.target.value)}
+              InputLabelProps={{
+                shrink: true,
+              }}
+            />
+            <Input
+              variant="standard"
+              sx={{
+                "& label.Mui-focused": {
+                  color: "#333",
+                },
+                "& .MuiInput-underline:after": {
+                  borderBottomColor: themeColor,
+                },
+                mt: 2,
+              }}
+              value={kidPax}
+              label={"Pax kanak-kanak | Kids pax"}
+              type="number"
+              onChange={(e) => setKidPax(+e.target.value)}
+              InputLabelProps={{
+                shrink: true,
+              }}
+            />
+          </>
         )}
       </FormGroup>
 
       <Box
         sx={{
-          background: themeColor,
+          background: attendance ? themeColor : "#F0F0F0",
+          color: attendance ? "unset" : "#D9D9D9",
           boxShadow: "1px 1px solid #EFEFEF",
           width: "fit-content",
           borderRadius: "8px",

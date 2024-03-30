@@ -10,6 +10,7 @@ export default function usePostUpdateRsvp(eInviteId: string) {
     phoneNumber: string,
     attendance: boolean,
     pax: number,
+    kidPax: number,
     rsvpLength: number
   ) => {
     try {
@@ -21,6 +22,7 @@ export default function usePostUpdateRsvp(eInviteId: string) {
           phoneNumber,
           attendance: attendance ? "true" : "false",
           pax: attendance ? pax : 0,
+          kidPax: kidPax,
         },
       });
     } catch (err) {
