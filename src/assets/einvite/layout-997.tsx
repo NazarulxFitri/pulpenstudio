@@ -1,6 +1,5 @@
 // Modified layout - 20 Februari 2024 | Hilmi & Nik Iffah
-import { Box, Container, Grid, List, Paper, styled } from "@mui/material";
-import { Fade } from "react-awesome-reveal";
+import { Box, Grid, List, Paper, styled } from "@mui/material";
 import {
   Baskervville,
   Dancing_Script,
@@ -153,9 +152,7 @@ const Layout997: React.FC = () => {
         />
       </Box>
 
-      {!clickOpen && (
-        <CustomDoor color="ebe2d2" {...{ clickOpen, setClickOpen }} />
-      )}
+      <CustomDoor color="ebe2d2" {...{ clickOpen, setClickOpen }} />
 
       <Box
         display={clickOpen ? "block" : "none"}
@@ -201,31 +198,28 @@ const Layout997: React.FC = () => {
             style={{ display: "block" }}
           />
         </Box>
-        <Fade>
-          <SubTitle
-            id="marker"
-            className="animate__animated animate__zoomIn animate__slow animate__delay-2s"
-            sx={{ fontSize: "32px", color: "#ac6e29", mt: 2 }}
-            dangerouslySetInnerHTML={{
-              __html: "﷽",
-            }}
-          />
-        </Fade>
 
-        <Fade>
-          <SubTitle
-            className="animate__animated animate__zoomIn animate__slow animate__delay-2s"
-            sx={{
-              fontSize: "28px",
-              mt: 8,
-              color: "#ac6e29",
-              fontWeight: "700",
-            }}
-            dangerouslySetInnerHTML={{
-              __html: "Tuan Suhaimi Salleh &<br/>Rohaizan Ismail",
-            }}
-          />
-        </Fade>
+        <SubTitle
+          id="delay-2s"
+          sx={{ fontSize: "32px", color: "#ac6e29", mt: 2 }}
+          dangerouslySetInnerHTML={{
+            __html: "﷽",
+          }}
+        />
+
+        <SubTitle
+          id="delay-3s"
+          sx={{
+            fontSize: "28px",
+            mt: 8,
+            color: "#ac6e29",
+            fontWeight: "700",
+          }}
+          dangerouslySetInnerHTML={{
+            __html: "Tuan Suhaimi Salleh &<br/>Rohaizan Ismail",
+          }}
+        />
+
         <Box
           sx={{
             background: "#ac6e29",
@@ -235,229 +229,218 @@ const Layout997: React.FC = () => {
             mx: "auto",
           }}
         />
-        <Fade>
-          <SubTitle
-            className="animate__animated animate__zoomIn animate__slow animate__delay-2s"
-            sx={{ fontSize: "28px", mb: 4, color: "#ac6e29" }}
-            dangerouslySetInnerHTML={{
-              __html:
-                "Hj. Mohamad Nor Ibrahim &<br/>Hjh. Nur Maisarah Abdullah",
-            }}
-          />
-        </Fade>
-        <Fade>
-          <Text
-            className="animate__animated animate__zoomIn animate__slow animate__delay-2s"
-            sx={{ fontSize: "11px", fontWeight: "bolder", color: "#ac6e29", mt:6 }}
-            dangerouslySetInnerHTML={{
-              __html: "DENGAN PENUH KESYUKURAN DAN TAKZIMNYA",
-            }}
-          />
-        </Fade>
-        <Fade>
-          <Text
-            className="animate__animated animate__zoomIn animate__slow animate__delay-2s"
-            sx={{ fontSize: "9px", fontWeight: "bolder", color: "#ac6e29" }}
-            dangerouslySetInnerHTML={{
-              __html: "MENJEMPUT TUAN/PUAN/ENCIK/CIK",
-            }}
-          />
-        </Fade>
-        <Fade>
-          <Text
-            className="animate__animated animate__zoomIn animate__slow animate__delay-2s"
-            sx={{
-              fontSize: "12px",
-              mt: 0.5,
-              color: "#ac6e29",
-            }}
-            dangerouslySetInnerHTML={{
-              __html: "<i>REQUEST THE PLEASURE OF YOUR COMPANY</i>",
-            }}
-          />
-        </Fade>
-        <Fade>
-          <Text
-            className="animate__animated animate__zoomIn animate__slow animate__delay-2s"
-            sx={{
-              fontSize: "12px",
-              mt: 6,
-              fontWeight: "bolder",
-              color: "#ac6e29",
-            }}
-            dangerouslySetInnerHTML={{
-              __html: "KE MAJLIS PERSANDINGAN",
-            }}
-          />
-        </Fade>
-        <Fade>
-          <Text
-            className="animate__animated animate__zoomIn animate__slow animate__delay-2s"
-            sx={{
-              fontSize: "12px",
-              mt: 0.5,
-              color: "#ac6e29",
-            }}
-            dangerouslySetInnerHTML={{
-              __html: "<i>TO THE WEDDING RECEPTION OF</i>",
-            }}
-          />
-        </Fade>
-        <Fade>
-          <SubTitle
-            className="animate__animated animate__zoomIn animate__slow animate__delay-2s"
-            sx={{ fontSize: "28px", mt: 6, color: "#ac6e29" }}
-            dangerouslySetInnerHTML={{
-              __html: "Nik Iffah Hazirah",
-            }}
-          />
-        </Fade>
-        <Fade>
-          <Text
-            className="animate__animated animate__zoomIn animate__slow animate__delay-2s"
-            sx={{ fontSize: "12px", my: 1, color: "#ac6e29" }}
-            dangerouslySetInnerHTML={{
-              __html: "<b>DAN</b> | <i>WITH</i>",
-            }}
-          />
-        </Fade>
-        <Fade>
-          <SubTitle
-            className="animate__animated animate__zoomIn animate__slow animate__delay-2s"
-            sx={{ fontSize: "32px", color: "#ac6e29" }}
-            dangerouslySetInnerHTML={{
-              __html: "Hilmi Marzuqi",
-            }}
-          />
-        </Fade>
-        <Fade>
-          <Text
-            className="animate__animated animate__zoomIn animate__slow animate__delay-2s"
-            sx={{ fontSize: "12px", mt: 6, color: "#ac6e29" }}
-            dangerouslySetInnerHTML={{
-              __html: "<b>PADA</b> | <i>ON</i>",
-            }}
-          />
-        </Fade>
-        <Fade>
-          <Text
-            className="animate__animated animate__zoomIn animate__slow animate__delay-2s"
-            sx={{ fontSize: "12px", mt: 0.5, color: "#ac6e29" }}
-            dangerouslySetInnerHTML={{
-              __html: "<b>AHAD</b> | <i>SUNDAY</i>",
-            }}
-          />
-        </Fade>
-        <Fade>
-          <Text
-            className="animate__animated animate__zoomIn animate__slow animate__delay-2s"
-            sx={{ fontSize: "12px", mt: 0.5, color: "#ac6e29" }}
-            dangerouslySetInnerHTML={{
-              __html: "18.08.2024",
-            }}
-          />
-        </Fade>
-        <Fade>
-          <Box
-            className="animate__animated animate__zoomIn animate__slow animate__delay-2s"
-            sx={{
-              mt: 1,
-              position: "relative",
-            }}
-          >
-            {!isCounting ? (
-              <Box
-                id="countdown"
-                columnGap={2}
-                sx={{
-                  mx: "auto",
-                  width: "fit-content",
+
+        <SubTitle
+          id="delay-4s"
+          sx={{ fontSize: "28px", mb: 4, color: "#ac6e29" }}
+          dangerouslySetInnerHTML={{
+            __html: "Hj. Mohamad Nor Ibrahim &<br/>Hjh. Nur Maisarah Abdullah",
+          }}
+        />
+
+        <Text
+          id="delay-5s"
+          sx={{
+            fontSize: "11px",
+            fontWeight: "bolder",
+            color: "#ac6e29",
+            mt: 6,
+          }}
+          dangerouslySetInnerHTML={{
+            __html: "DENGAN PENUH KESYUKURAN DAN TAKZIMNYA",
+          }}
+        />
+
+        <Text
+          id="delay-5s"
+          sx={{ fontSize: "9px", fontWeight: "bolder", color: "#ac6e29" }}
+          dangerouslySetInnerHTML={{
+            __html: "MENJEMPUT TUAN/PUAN/ENCIK/CIK",
+          }}
+        />
+
+        <Text
+          id="delay-6s"
+          sx={{
+            fontSize: "12px",
+            mt: 0.5,
+            color: "#ac6e29",
+          }}
+          dangerouslySetInnerHTML={{
+            __html: "<i>REQUEST THE PLEASURE OF YOUR COMPANY</i>",
+          }}
+        />
+
+        <Text
+          id="delay-6s"
+          sx={{
+            fontSize: "12px",
+            mt: 6,
+            fontWeight: "bolder",
+            color: "#ac6e29",
+          }}
+          dangerouslySetInnerHTML={{
+            __html: "KE MAJLIS PERSANDINGAN",
+          }}
+        />
+
+        <Text
+          id="delay-6s"
+          sx={{
+            fontSize: "12px",
+            mt: 0.5,
+            color: "#ac6e29",
+          }}
+          dangerouslySetInnerHTML={{
+            __html: "<i>TO THE WEDDING RECEPTION OF</i>",
+          }}
+        />
+
+        <SubTitle
+          id="delay-7s"
+          sx={{ fontSize: "28px", mt: 6, color: "#ac6e29" }}
+          dangerouslySetInnerHTML={{
+            __html: "Nik Iffah Hazirah",
+          }}
+        />
+
+        <Text
+          id="delay-8s"
+          sx={{ fontSize: "12px", my: 1, color: "#ac6e29" }}
+          dangerouslySetInnerHTML={{
+            __html: "<b>DAN</b> | <i>WITH</i>",
+          }}
+        />
+
+        <SubTitle
+          id="delay-9s"
+          sx={{ fontSize: "32px", color: "#ac6e29" }}
+          dangerouslySetInnerHTML={{
+            __html: "Hilmi Marzuqi",
+          }}
+        />
+
+        <Text
+          id="delay-11s"
+          sx={{ fontSize: "12px", mt: 6, color: "#ac6e29" }}
+          dangerouslySetInnerHTML={{
+            __html: "<b>PADA</b> | <i>ON</i>",
+          }}
+        />
+
+        <Text
+          id="delay-11s"
+          sx={{ fontSize: "12px", mt: 0.5, color: "#ac6e29" }}
+          dangerouslySetInnerHTML={{
+            __html: "<b>AHAD</b> | <i>SUNDAY</i>",
+          }}
+        />
+
+        <Text
+          id="delay-11s"
+          sx={{ fontSize: "12px", mt: 0.5, color: "#ac6e29" }}
+          dangerouslySetInnerHTML={{
+            __html: "18.08.2024",
+          }}
+        />
+
+        <Box
+          id="delay-11s"
+          sx={{
+            mt: 1,
+            position: "relative",
+          }}
+        >
+          {!isCounting ? (
+            <Box
+              id="countdown"
+              columnGap={2}
+              sx={{
+                mx: "auto",
+                width: "fit-content",
+              }}
+            >
+              <Text
+                sx={{ color: "#ac6e29", fontSize: "12px" }}
+                dangerouslySetInnerHTML={{
+                  __html: locale?.[item?.language!]?.CARD_COUNTDOWN_FINISH_TEXT,
                 }}
-              >
+              />
+            </Box>
+          ) : (
+            <Box
+              id="countdown"
+              columnGap={2}
+              sx={{
+                pb: 1,
+                width: "fit-content",
+                mx: "auto",
+                display: "flex",
+              }}
+            >
+              <Box>
                 <Text
-                  sx={{ color: "#ac6e29", fontSize: "12px" }}
+                  style={{ fontSize: "24px", color: "#ac6e29" }}
                   dangerouslySetInnerHTML={{
-                    __html:
-                      locale?.[item?.language!]?.CARD_COUNTDOWN_FINISH_TEXT,
+                    __html: `${countdownTimer?.countdownTimer.d} `,
                   }}
                 />
               </Box>
-            ) : (
-              <Box
-                id="countdown"
-                columnGap={2}
-                sx={{
-                  pb: 1,
-                  width: "fit-content",
-                  mx: "auto",
-                  display: "flex",
-                }}
-              >
-                <Box>
-                  <Text
-                    style={{ fontSize: "24px", color: "#ac6e29" }}
-                    dangerouslySetInnerHTML={{
-                      __html: `${countdownTimer?.countdownTimer.d} `,
-                    }}
-                  />
-                </Box>
-                <Box>
-                  <Text
-                    style={{ fontSize: "12px", color: "#ac6e29" }}
-                    dangerouslySetInnerHTML={{
-                      __html: `${
-                        countdownTimer?.countdownTimer.h
-                      } <span style="font-size: 12px">${
-                        locale?.[item?.language!]?.COUNTDOWN_HOUR
-                      }</span>`,
-                    }}
-                  />
-                  <Text
-                    style={{ fontSize: "12px", color: "#ac6e29" }}
-                    dangerouslySetInnerHTML={{
-                      __html: `${
-                        countdownTimer?.countdownTimer.m
-                      } <span style="font-size: 12px">${
-                        locale?.[item?.language!]?.COUNTDOWN_MINUTE
-                      }</span>`,
-                    }}
-                  />
-                </Box>
-                <Box>
-                  <Text
-                    style={{
-                      fontSize: "24px",
-                      width: "50px",
-                      color: "#ac6e29",
-                    }}
-                    dangerouslySetInnerHTML={{
-                      __html: `${countdownTimer?.countdownTimer.s} `,
-                    }}
-                  />
-                </Box>
+              <Box>
+                <Text
+                  style={{ fontSize: "12px", color: "#ac6e29" }}
+                  dangerouslySetInnerHTML={{
+                    __html: `${
+                      countdownTimer?.countdownTimer.h
+                    } <span style="font-size: 12px">${
+                      locale?.[item?.language!]?.COUNTDOWN_HOUR
+                    }</span>`,
+                  }}
+                />
+                <Text
+                  style={{ fontSize: "12px", color: "#ac6e29" }}
+                  dangerouslySetInnerHTML={{
+                    __html: `${
+                      countdownTimer?.countdownTimer.m
+                    } <span style="font-size: 12px">${
+                      locale?.[item?.language!]?.COUNTDOWN_MINUTE
+                    }</span>`,
+                  }}
+                />
               </Box>
-            )}
-          </Box>
-        </Fade>
-        <Fade>
-          <Text
-            className="animate__animated animate__zoomIn animate__slow animate__delay-2s"
-            sx={{ fontSize: "12px", mt: 6, color: "#ac6e29" }}
-            dangerouslySetInnerHTML={{
-              __html: "<b>DI</b> | <i>AT</i>",
-            }}
-          />
-        </Fade>
-        <Fade>
-          <Text
-            className="animate__animated animate__zoomIn animate__slow animate__delay-2s"
-            sx={{ fontSize: "12px", mt: 0.5, mb: 2, color: "#ac6e29" }}
-            dangerouslySetInnerHTML={{
-              __html:
-                "SEBENING EMBUN GARDENS LOT 15, JALAN DURIAN 1,KAMPUNG SUNGAI BULOH, DENGKIL, SELANGOR",
-            }}
-          />
-        </Fade>
+              <Box>
+                <Text
+                  style={{
+                    fontSize: "24px",
+                    width: "50px",
+                    color: "#ac6e29",
+                  }}
+                  dangerouslySetInnerHTML={{
+                    __html: `${countdownTimer?.countdownTimer.s} `,
+                  }}
+                />
+              </Box>
+            </Box>
+          )}
+        </Box>
+
+        <Text
+          id="delay-11s"
+          sx={{ fontSize: "12px", mt: 6, color: "#ac6e29" }}
+          dangerouslySetInnerHTML={{
+            __html: "<b>DI</b> | <i>AT</i>",
+          }}
+        />
+
+        <Text
+          id="delay-11s"
+          sx={{ fontSize: "12px", mt: 0.5, mb: 2, color: "#ac6e29" }}
+          dangerouslySetInnerHTML={{
+            __html:
+              "SEBENING EMBUN GARDENS LOT 15, JALAN DURIAN 1,KAMPUNG SUNGAI BULOH, DENGKIL, SELANGOR",
+          }}
+        />
+
         <Box
           id="comment"
           mb={2}

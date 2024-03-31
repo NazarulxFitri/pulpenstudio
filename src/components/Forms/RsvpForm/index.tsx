@@ -2,8 +2,10 @@ import usePostUpdateRsvp from "@/data/postUpdateRsvp";
 import useGetEinvite from "@/data/useGetEinvite";
 import {
   Box,
+  Checkbox,
   FormControlLabel,
   FormGroup,
+  InputLabel,
   Switch,
   TextField,
   styled,
@@ -79,6 +81,7 @@ const RsvpForm: React.FC<RsvpFormProps> = ({
   const [attendance, setAttendance] = useState(false);
   const [pax, setPax] = useState<number>(1);
   const [kidPax, setKidPax] = useState<number>(0);
+  const [guestSide, setGuestSide] = useState("groom");
 
   const [errorMessage, setErrorMessage] = useState(false);
 
@@ -89,7 +92,7 @@ const RsvpForm: React.FC<RsvpFormProps> = ({
       setErrorMessage(true);
       return null;
     }
-    await action(name, phoneNumber, attendance, pax, kidPax, rsvpLength!);
+    await action(name, phoneNumber, attendance, pax, kidPax, rsvpLength!, guestSide);
     router.reload();
   }
 
@@ -110,7 +113,7 @@ const RsvpForm: React.FC<RsvpFormProps> = ({
           }
         />
         <Input
-        fullWidth
+          fullWidth
           placeholder="Ahmad Judika"
           InputLabelProps={{ shrink: true }}
           sx={{
@@ -121,7 +124,7 @@ const RsvpForm: React.FC<RsvpFormProps> = ({
               borderBottomColor: themeColor,
             },
             mt: 2,
-            width: "100%"
+            width: "100%",
           }}
           error={errorMessage && !name}
           label={textName}
@@ -150,6 +153,29 @@ const RsvpForm: React.FC<RsvpFormProps> = ({
 
         {attendance && (
           <>
+            <Box my={2}>
+              <FormControlLabel
+                sx={{
+                  "& .MuiFormControlLabel-label": {
+                    color: "#00000099",
+                    fontSize: "12px",
+                  },
+                }}
+                label="Dari pihak pengantin lelaki | From groom side"
+                control={<Checkbox checked={guestSide === "groom"} onClick={() => setGuestSide("groom")}  />}
+              />
+              <FormControlLabel
+                sx={{
+                  "& .MuiFormControlLabel-label": {
+                    color: "#00000099",
+                    fontSize: "12px",
+                  },
+                }}
+                label="Dari pihak pengantin perempuan | From bride side"
+                control={<Checkbox checked={guestSide === "bride"} onClick={() => setGuestSide("bride")} />}
+              />
+            </Box>
+
             <Input
               variant="standard"
               sx={{

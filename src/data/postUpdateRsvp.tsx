@@ -11,7 +11,8 @@ export default function usePostUpdateRsvp(eInviteId: string) {
     attendance: boolean,
     pax: number,
     kidPax: number,
-    rsvpLength: number
+    rsvpLength: number,
+    guestSide: string
   ) => {
     try {
       const key = rsvpLength;
@@ -23,6 +24,7 @@ export default function usePostUpdateRsvp(eInviteId: string) {
           attendance: attendance ? "true" : "false",
           pax: attendance ? pax : 0,
           kidPax: kidPax,
+          guestSide: guestSide,
         },
       });
     } catch (err) {

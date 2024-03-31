@@ -16,7 +16,9 @@ interface AdminModuleProps {
 }
 
 const AdminModule: React.FC<AdminModuleProps> = ({ data }) => {
-  const [totalPax, setTotalPax] = useState(0);
+  const [adultPax, setAdultPax] = useState(0);
+  const [kidPax, setKidPax] = useState(0);
+  const [totalPax, setTotalPax] = useState(0)
   const rsvpData = data?.rsvp;
 
   useEffect(() => {
@@ -24,12 +26,21 @@ const AdminModule: React.FC<AdminModuleProps> = ({ data }) => {
     rsvpData?.forEach((i) => {
       total += i.pax;
     });
-    setTotalPax(total);
-  }, []);
+    setAdultPax(total);
+
+    let kidTotal = 0;
+    rsvpData?.forEach((i) => {
+      kidTotal += i.kidPax;
+    });
+    setKidPax(kidTotal);
+
+    setTotalPax(adultPax + kidPax)
+
+  }, [adultPax, kidPax]);
 
   return (
     <BoxContainer>
-      <h1 style={{ fontSize: "24px", marginTop: "40px" }}>Admin Dashboard</h1>
+      <h1 style={{ fontSize: "24px", marginTop: "40px" }}>Admin Dashboad</h1>
       <Box mt={2}>
         <Box id="card-detail">
           <Box>
@@ -55,6 +66,18 @@ const AdminModule: React.FC<AdminModuleProps> = ({ data }) => {
               </span>
             </p>
             <p style={{ marginTop: "8px" }}>
+              Adult Pax :{" "}
+              <span style={{ fontSize: "18px", fontWeight: "700" }}>
+                {adultPax}
+              </span>
+            </p>
+            <p style={{ marginTop: "8px" }}>
+              Kid Pax :{" "}
+              <span style={{ fontSize: "18px", fontWeight: "700" }}>
+                {kidPax}
+              </span>
+            </p>
+            <p style={{ marginTop: "8px" }}>
               Total Pax :{" "}
               <span style={{ fontSize: "18px", fontWeight: "700" }}>
                 {totalPax}
@@ -66,24 +89,26 @@ const AdminModule: React.FC<AdminModuleProps> = ({ data }) => {
               <Table>
                 <TableHead>
                   <TableRow>
-                    <TableCell>Attendance</TableCell>
                     <TableCell>Name</TableCell>
                     <TableCell>Phone Number</TableCell>
-                    <TableCell>Total Pax</TableCell>
+                    <TableCell>Adult Pax</TableCell>
+                    <TableCell>Kid Pax</TableCell>
+                    <TableCell>Guest side</TableCell>
                   </TableRow>
                 </TableHead>
                 <TableBody>
                   {rsvpData?.map((item, idx) => (
                     <TableRow key={idx}>
-                      <TableCell>
-                        {item?.attendance === "true"
-                          ? "Attending"
-                          : "Not Attending"}
-                      </TableCell>
                       <TableCell>{item?.name}</TableCell>
                       <TableCell>{item?.phoneNumber}</TableCell>
                       <TableCell>
                         {item?.attendance === "true" ? item?.pax : "N/A"}
+                      </TableCell>
+                      <TableCell>
+                        {item?.attendance === "true" ? item?.kidPax : "N/A"}
+                      </TableCell>
+                      <TableCell>
+                        {item?.guestSide === "groom" ? "Pihak Lelaki | Groom" : "Pihak Perempuan | Bride"}
                       </TableCell>
                     </TableRow>
                   ))}

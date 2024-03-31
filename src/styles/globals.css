@@ -7,7 +7,15 @@ html {
   scroll-behavior: smooth;
 }
 
-p, h1, h2, h3, h4 {
+:root {
+  --animate-delay: 1s;
+}
+
+p,
+h1,
+h2,
+h3,
+h4 {
   align-self: center;
   display: block;
   margin: 0;
@@ -29,62 +37,142 @@ h4 {
   font-weight: 400;
 }
 
-p { 
+p {
   font-size: 16px;
 }
 
 /* Breathing Animation - Begin */
 #breathing-animation {
   -webkit-animation: breathing 3.5s ease-out infinite normal;
-  animation: breathing 3.5s ease-out infinite normal;  
-  }
+  animation: breathing 3.5s ease-out infinite normal;
+}
 
 @-webkit-keyframes breathing {
-0% {
-  -webkit-transform: scale(0.9);
-  transform: scale(0.9);
-}
+  0% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
 
-25% {
-  -webkit-transform: scale(1);
-  transform: scale(1);
-}
+  25% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
 
-60% {
-  -webkit-transform: scale(0.9);
-  transform: scale(0.9);
-}
+  60% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
 
-100% {
-  -webkit-transform: scale(0.9);
-  transform: scale(0.9);
-}
+  100% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
 }
 
 @keyframes breathing {
-0% {
-  -webkit-transform: scale(0.9);
-  -ms-transform: scale(0.9);
-  transform: scale(0.9);
-}
+  0% {
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+  }
 
-25% {
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-}
+  25% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
 
-60% {
-  -webkit-transform: scale(0.9);
-  -ms-transform: scale(0.9);
-  transform: scale(0.9);
-}
+  60% {
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+  }
 
-100% {
-  -webkit-transform: scale(0.9);
-  -ms-transform: scale(0.9);
-  transform: scale(0.9);
+  100% {
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+  }
 }
-}
-
 /* Breathing Animation - End */
+
+/* Custom Delay animation */
+#delay-1s {
+  -webkit-animation: 1s ease 0s normal forwards 1 fadein;
+  animation: 1s ease 0s normal forwards 1 fadein;
+}
+
+#delay-2s {
+  -webkit-animation: 1s ease 0s normal forwards 1 fadein;
+  animation: 1s ease 0s normal forwards 1 fadein;
+}
+
+#delay-3s {
+  -webkit-animation: 3s ease 0s normal forwards 1 fadein;
+  animation: 3s ease 0s normal forwards 1 fadein;
+}
+
+#delay-4s {
+  -webkit-animation: 4s ease 0s normal forwards 1 fadein;
+  animation: 4s ease 0s normal forwards 1 fadein;
+}
+
+#delay-5s {
+  -webkit-animation: 5s ease 0s normal forwards 1 fadein;
+  animation: 5s ease 0s normal forwards 1 fadein;
+}
+
+#delay-6s {
+  -webkit-animation: 6s ease 0s normal forwards 1 fadein;
+  animation: 6s ease 0s normal forwards 1 fadein;
+}
+
+#delay-7s {
+  -webkit-animation: 7s ease 0s normal forwards 1 fadein;
+  animation: 7s ease 0s normal forwards 1 fadein;
+}
+
+#delay-8s {
+  -webkit-animation: 8s ease 0s normal forwards 1 fadein;
+  animation: 8s ease 0s normal forwards 1 fadein;
+}
+
+#delay-9s {
+  -webkit-animation: 9s ease 0s normal forwards 1 fadein;
+  animation: 9s ease 0s normal forwards 1 fadein;
+}
+
+#delay-10s {
+  -webkit-animation: 10s ease 0s normal forwards 1 fadein;
+  animation: 10s ease 0s normal forwards 1 fadein;
+}
+
+#delay-11s {
+  -webkit-animation: 11s ease 0s normal forwards 1 fadein;
+  animation: 11s ease 0s normal forwards 1 fadein;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  66% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  66% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* Custom Delay animation - End */

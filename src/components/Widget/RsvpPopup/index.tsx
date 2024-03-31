@@ -39,7 +39,7 @@ const RsvpPopup: React.FC<RsvpPopupProp> = ({
           background: "#FFF",
           bottom: "0",
           position: "absolute",
-          height: "464px",
+          height: "592px",
           width: "100%",
         }}
       >

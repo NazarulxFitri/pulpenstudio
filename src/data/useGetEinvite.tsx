@@ -35,6 +35,8 @@ export interface EInviteConfig {
     name: string;
     phoneNumber: string;
     pax: number;
+    kidPax: number;
+    guestSide: "groom" | "bride";
   }[];
   comments?: {
     message: string;

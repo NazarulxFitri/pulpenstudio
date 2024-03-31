@@ -38,8 +38,6 @@ const CustomDoor: React.FC<DoorProps> = ({
     >
       <Box
         sx={{
-          // background:
-          //   "linear-gradient(356deg,#fefefe,#f2f2f4 18%,#f1f1f3 45%,#f2f2f2 74%,#f1f1f1)",
           display: "flex",
           position: "relative",
         }}
@@ -106,13 +104,12 @@ const CustomDoor: React.FC<DoorProps> = ({
         ></Box>
         <Box
           onClick={() => setClickOpen(true)}
-          className={clickOpen ? "animate__animated animate__fadeOut" : ""}
           sx={{
             position: "absolute",
-            top: "50%",
+            top: clickOpen ? "-50%" : "50%",
             left: "50%",
             transform: "translate(-50%,-50%)",
-            zIndex: "999",
+            zIndex: "2",
           }}
         >
           <Image
