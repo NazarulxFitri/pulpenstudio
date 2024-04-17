@@ -157,7 +157,6 @@ const Layout997: React.FC = () => {
       <Box
         display={clickOpen ? "block" : "none"}
         sx={{
-          overflowY: "scroll",
           position: "relative",
           backgroundImage: "url('/media/animation/layout-997-bg.png')",
           backgroundSize: "contain",
@@ -221,6 +220,7 @@ const Layout997: React.FC = () => {
         />
 
         <Box
+         id="delay-4s"
           sx={{
             background: "#ac6e29",
             my: 2,
@@ -253,7 +253,7 @@ const Layout997: React.FC = () => {
 
         <Text
           id="delay-5s"
-          sx={{ fontSize: "9px", fontWeight: "bolder", color: "#ac6e29" }}
+          sx={{ fontSize: "11px", fontWeight: "bolder", color: "#ac6e29" }}
           dangerouslySetInnerHTML={{
             __html: "MENJEMPUT TUAN/PUAN/ENCIK/CIK",
           }}
@@ -437,25 +437,110 @@ const Layout997: React.FC = () => {
           sx={{ fontSize: "12px", mt: 0.5, mb: 2, color: "#ac6e29" }}
           dangerouslySetInnerHTML={{
             __html:
-              "SEBENING EMBUN GARDENS LOT 15, JALAN DURIAN 1,KAMPUNG SUNGAI BULOH, DENGKIL, SELANGOR",
+              "SEBENING EMBUN GARDENS LOT 15,<br>JALAN DURIAN 1,KAMPUNG SUNGAI BULOH,<br> DENGKIL, SELANGOR",
           }}
         />
+
+        <Box>
+        <Text
+          id="delay-11s"
+          sx={{ fontSize: "12px", mt: 6, color: "#ac6e29" }}
+          dangerouslySetInnerHTML={{
+            __html: "<b>ATUR CARA</b> | <i>TENTATIVES</i><br><br>11:00a.m - 4:00p.m",
+          }}
+        />
+
+        <Text
+          id="delay-11s"
+          sx={{ fontSize: "12px", mt: 2, mb: 1, color: "#ac6e29" }}
+          dangerouslySetInnerHTML={{
+            __html:
+              "<b>Sesi Pertama</b> | <i>First Session</i>",
+          }}
+        />
+        <Text
+          id="delay-11s"
+          sx={{ fontSize: "12px", my: 0.5, color: "#ac6e29" }}
+          dangerouslySetInnerHTML={{
+            __html:
+              "<b>11:00 Majlis Resepsi Bermula</b> <br> <i>Start of Wedding Reception</i>",
+          }}
+        />
+        <Text
+          id="delay-11s"
+          sx={{ fontSize: "12px", my: 0.5, color: "#ac6e29" }}
+          dangerouslySetInnerHTML={{
+            __html:
+              "<b>11:30 Ketibaan Pengantin</b> <br> <i>Arrival of Bride & Groom</i>",
+          }}
+        />
+        <Text
+          id="delay-11s"
+          sx={{ fontSize: "12px", my: 0.5, color: "#ac6e29" }}
+          dangerouslySetInnerHTML={{
+            __html:
+              "<b>11:45 Salam Restu (Ibu bapa & Saudara-mara)</b> <br> <i>Blessings Ceremony (Parents & Relatives)</i>",
+          }}
+        />
+        <Text
+          id="delay-11s"
+          sx={{ fontSize: "12px", my: 0.5, color: "#ac6e29" }}
+          dangerouslySetInnerHTML={{
+            __html:
+              "<b>12:45 Pengantin Rehat</b> <br> <i>Bride & Groom One-hour Break</i>",
+          }}
+        />
+
+        <Text
+          id="delay-11s"
+          sx={{ fontSize: "12px", mt: 2, mb:1, color: "#ac6e29" }}
+          dangerouslySetInnerHTML={{
+            __html:
+              "<b>Sesi kedua</b> | <i>Second session</i>",
+          }}
+        />
+        <Text
+          id="delay-11s"
+          sx={{ fontSize: "12px", my: 0.5, color: "#ac6e29" }}
+          dangerouslySetInnerHTML={{
+            __html:
+              "<b>13:45 Ketibaan Semula Pengantin</b> <br> <i>Re-arrival of Bride & Groom</i>",
+          }}
+        />
+        <Text
+          id="delay-11s"
+          sx={{ fontSize: "12px", my: 0.5, color: "#ac6e29" }}
+          dangerouslySetInnerHTML={{
+            __html:
+              "<b>14:45 Upacara Memotong Kek</b> <br> <i>Cake Cutting Ceremony</i>",
+          }}
+        />
+        <Text
+          id="delay-11s"
+          sx={{ fontSize: "12px", my: 0.5, color: "#ac6e29" }}
+          dangerouslySetInnerHTML={{
+            __html:
+              "<b>16:00 Majlis Bersurai</b> <br> <i> End of Wedding Reception</i>",
+          }}
+        />       
+        </Box>
 
         <Box
           id="comment"
           mb={2}
           sx={{
-            mt: 6,
+            mt: 2,
             px: 2,
             pt: 4,
           }}
         >
           <Text
-            sx={{ color: "#ac6e29" }}
-            dangerouslySetInnerHTML={{
-              __html: "<b>Ucapan</b> | <i>Wishes</i>",
-            }}
-          />
+          id="delay-11s"
+          sx={{ fontSize: "12px", mt: 2, color: "#ac6e29" }}
+          dangerouslySetInnerHTML={{
+            __html: "<b>UCAPAN</b> | <i>WISHES</i>",
+          }}
+        />
           <Grid container>
             <Grid item py={2} xs={12}>
               <Paper
@@ -463,8 +548,7 @@ const Layout997: React.FC = () => {
                   background: "#FFF",
                   boxShadow: "unset",
                   height: "100%",
-                  maxHeight: "400px",
-                  overflow: "scroll",
+                  maxHeight: "400px"
                 }}
               >
                 <List sx={{ p: 0 }}>

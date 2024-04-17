@@ -81,7 +81,7 @@ const RsvpForm: React.FC<RsvpFormProps> = ({
   const [attendance, setAttendance] = useState(false);
   const [pax, setPax] = useState<number>(1);
   const [kidPax, setKidPax] = useState<number>(0);
-  const [guestSide, setGuestSide] = useState("groom");
+  const [guestSide, setGuestSide] = useState("bride");
 
   const [errorMessage, setErrorMessage] = useState(false);
 
@@ -108,7 +108,7 @@ const RsvpForm: React.FC<RsvpFormProps> = ({
           }
           label={
             <p style={{ color: "#909090", fontSize: "12px" }}>
-              {textAttendance}
+              {textAttendance} | Attendance
             </p>
           }
         />
@@ -127,12 +127,14 @@ const RsvpForm: React.FC<RsvpFormProps> = ({
             width: "100%",
           }}
           error={errorMessage && !name}
-          label={textName}
+          label={<p style={{ color: "#909090", fontSize: "12px" }}>
+          {textName} | Name
+        </p>}
           multiline
           variant="standard"
           onChange={(e) => setName(e.target.value)}
         />
-        <Input
+        {/* <Input
           placeholder="01156271776"
           error={errorMessage && !phoneNumber}
           InputLabelProps={{ shrink: true }}
@@ -149,21 +151,11 @@ const RsvpForm: React.FC<RsvpFormProps> = ({
           multiline
           variant="standard"
           onChange={(e) => setPhoneNumber(e.target.value)}
-        />
+        /> */}
 
         {attendance && (
           <>
-            <Box my={2}>
-              <FormControlLabel
-                sx={{
-                  "& .MuiFormControlLabel-label": {
-                    color: "#00000099",
-                    fontSize: "12px",
-                  },
-                }}
-                label="Dari pihak pengantin lelaki | From groom side"
-                control={<Checkbox checked={guestSide === "groom"} onClick={() => setGuestSide("groom")}  />}
-              />
+            <Box my={2}>  
               <FormControlLabel
                 sx={{
                   "& .MuiFormControlLabel-label": {
@@ -173,6 +165,16 @@ const RsvpForm: React.FC<RsvpFormProps> = ({
                 }}
                 label="Dari pihak pengantin perempuan | From bride side"
                 control={<Checkbox checked={guestSide === "bride"} onClick={() => setGuestSide("bride")} />}
+              />
+               <FormControlLabel
+                sx={{
+                  "& .MuiFormControlLabel-label": {
+                    color: "#00000099",
+                    fontSize: "12px",
+                  },
+                }}
+                label="Dari pihak pengantin lelaki | From groom side"
+                control={<Checkbox checked={guestSide === "groom"} onClick={() => setGuestSide("groom")}  />}
               />
             </Box>
 
@@ -236,7 +238,7 @@ const RsvpForm: React.FC<RsvpFormProps> = ({
             padding: "12px 32px",
             fontWeight: "bolder",
           }}
-          dangerouslySetInnerHTML={{ __html: textButton }}
+          dangerouslySetInnerHTML={{ __html: `${textButton} | Submit` }}
         />
       </Box>
     </Box>
