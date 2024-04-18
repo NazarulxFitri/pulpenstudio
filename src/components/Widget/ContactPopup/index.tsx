@@ -54,8 +54,8 @@ const ContactPopup: React.FC<ContactPopupProps> = ({
         }}
       >
         <Box sx={{ display: "flex", p: 2 }}>
-          <p style={{ fontSize: "24px", fontWeight: "700", color: iconColor }}>
-            {title}
+          <p style={{ fontSize: "20px", fontWeight: "700", color: iconColor }}>
+            {title} | <span style={{ fontWeight: "300"}}>Contact Us</span>
           </p>
           <Box
             sx={{ m: "0 0 0 auto" }}

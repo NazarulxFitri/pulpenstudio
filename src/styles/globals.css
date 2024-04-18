@@ -152,6 +152,42 @@ p {
   animation: 11s ease 0s normal forwards 1 fadein;
 }
 
+#delay-12s {
+  -webkit-animation: 12s ease 0s normal forwards 1 fadein;
+  animation: 12s ease 0s normal forwards 1 fadein;
+}
+
+#delay-13s {
+  -webkit-animation: 13s ease 0s normal forwards 1 fadein;
+  animation: 13s ease 0s normal forwards 1 fadein;
+}
+
+#delay-14s {
+  -webkit-animation: 14s ease 0s normal forwards 1 fadein;
+  animation: 14s ease 0s normal forwards 1 fadein;
+}
+
+#delay-15s {
+  -webkit-animation: 15s ease 0s normal forwards 1 fadein;
+  animation: 15s ease 0s normal forwards 1 fadein;
+}
+
+#delay-16s {
+  -webkit-animation: 16s ease 0s normal forwards 1 fadein;
+  animation: 16s ease 0s normal forwards 1 fadein;
+}
+
+#delay-17s {
+  -webkit-animation: 17s ease 0s normal forwards 1 fadein;
+  animation: 17s ease 0s normal forwards 1 fadein;
+}
+
+#delay-18s {
+  -webkit-animation: 18s ease 0s normal forwards 1 fadein;
+  animation: 18s ease 0s normal forwards 1 fadein;
+}
+
+
 @keyframes fadein {
   0% {
     opacity: 0;

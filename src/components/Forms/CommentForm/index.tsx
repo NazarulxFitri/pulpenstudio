@@ -52,7 +52,7 @@ const CommentForm: React.FC<CommentFormProps> = ({
           },
         }}
         error={errorMessage && !name}
-        label={textName}
+        label={`${textName} | Name`}
         multiline
         variant="standard"
         onChange={(e) => setName(e.target.value)}
@@ -70,7 +70,7 @@ const CommentForm: React.FC<CommentFormProps> = ({
           mt: 2,
         }}
         error={errorMessage && !message}
-        label={textComment}
+        label={`${textComment} | Write wishes here`}
         fullWidth
         multiline
         variant="standard"
@@ -93,7 +93,7 @@ const CommentForm: React.FC<CommentFormProps> = ({
             padding: "12px 32px",
             fontWeight: "bolder",
           }}
-          dangerouslySetInnerHTML={{ __html: textButton }}
+          dangerouslySetInnerHTML={{ __html: `${textButton} | Submit` }}
         />
       </Box>
     </Box>

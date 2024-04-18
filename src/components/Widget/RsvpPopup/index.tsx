@@ -44,7 +44,7 @@ const RsvpPopup: React.FC<RsvpPopupProp> = ({
         }}
       >
         <Box sx={{ display: "flex", p: 2 }}>
-          <p style={{ fontSize: "24px", fontWeight: "700", color: iconColor }}>
+          <p style={{ fontSize: "20px", fontWeight: "700", color: iconColor }}>
             {title}
           </p>
           <Box
