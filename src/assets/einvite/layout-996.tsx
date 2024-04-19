@@ -193,11 +193,11 @@ const Layout996: React.FC = () => {
         }}
       >
         <Box sx={{ position: "absolute", top: "0", left: "0"}}>
-          <Image src="/media/animation/floral-01.png" alt="Layout996 Pulpen Studio" width={400} height={500} />
+          <Image src="/media/animation/floral-01.png" alt="Layout996 Pulpen Studio" width={400} height={250} />
         </Box>
 
         <Box sx={{ position: "absolute", bottom: "56px", left: "0" }}>
-          <Image src="/media/animation/floral-03.png" alt="Layout996 Pulpen Studio" width={400} height={500} />
+          <Image src="/media/animation/floral-03.png" alt="Layout996 Pulpen Studio" width={400} height={250} />
         </Box>
 
         <Box
