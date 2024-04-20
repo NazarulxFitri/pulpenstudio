@@ -34,5 +34,8 @@
     "swiper": "^10.3.1",
     "typescript": "4.9.5",
     "universal-cookie": "^4.0.4"
+  },
+  "devDependencies": {
+    "react-url-loader": "^0.0.4"
   }
 }
