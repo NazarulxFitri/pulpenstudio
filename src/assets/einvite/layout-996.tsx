@@ -279,15 +279,16 @@ const Layout996: React.FC = () => {
           </Box>
         </Box>
       </Box>
-      <Container>
         <Box
           my={5}
-          mx="auto"
+          mx={"auto"}
           sx={{
-py: 8,
-            position: "relative"
+            py: 8,
+            px: 2,
+            position: "relative",
           }}
         >
+          <Box sx={{zIndex: "2"}}>
           <SubTitle
             sx={{ mb: 3 }}
             dangerouslySetInnerHTML={{
@@ -310,15 +311,29 @@ py: 8,
             sx={{
               fontWeight: "700",
               mb: 3,
-              textShadow: "1px 1px 10px skyblue"
             }}
             dangerouslySetInnerHTML={{
               __html: `${item?.fullNameGroom} <br>&<br> ${item?.fullNameBride}`,
             }}
           />
+          </Box>
         </Box>
 
-        <Box sx={{ textAlign: "left", padding: "0 32px"}}>
+        <Box sx={{textAlign: "center"}}>
+          <Image src="/media/animation/996-map.png" alt="Layout996 Pulpen Studio" width={360} height={360} />
+          <Box>
+            <SubTitle
+            sx={{
+              fontWeight: "700",
+              mb: 3,
+            }}
+            dangerouslySetInnerHTML={{
+              __html: `Sebening Embun Garden Event Hall`,
+            }}
+          /></Box>
+        </Box>
+
+        <Box sx={{ textAlign: "left", padding: "0 32px", mt: 10}}>
         <SubTitle
           sx={{ fontSize: "12px", mt: 6, fontWeight: "bold" }}
           dangerouslySetInnerHTML={{
@@ -505,7 +520,7 @@ py: 8,
               id="countdown"
               columnGap={2}
               sx={{
-                boxShadow: "1px 10px 10px -10px #f5e1fd",
+                boxShadow: "1px 10px 10px -10px #dc9c14",
                 pb: 1,
                 width: "fit-content",
                 mx: "auto",
@@ -544,7 +559,7 @@ py: 8,
               </Box>
               <Box>
                 <Text
-                  style={{ fontSize: "48px", color: "#d6753d", width: "50px" }}
+                  style={{ fontSize: "48px", color: "#dc9c14", width: "50px" }}
                   dangerouslySetInnerHTML={{
                     __html: `${countdownTimer?.countdownTimer.s} `,
                   }}
@@ -597,7 +612,7 @@ py: 8,
             </Grid>
           </Grid>
         </Box>
-      </Container>
+
       <Box>
         <Widget
           language={item?.language!}
