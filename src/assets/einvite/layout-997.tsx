@@ -338,7 +338,7 @@ const Layout997: React.FC = () => {
 
         <Text
           id="delay-18s"
-          sx={{ fontSize: "12px", mt: 0.5, color: "#ac6e29" }}
+          sx={{ fontSize: "20px", mt: 0.5, color: "#ac6e29" }}
           dangerouslySetInnerHTML={{
             __html: "18.08.2024",
           }}
@@ -347,7 +347,7 @@ const Layout997: React.FC = () => {
         <Box
           id="delay-18s"
           sx={{
-            mt: 1,
+            mt: 6,
             position: "relative",
           }}
         >
@@ -382,29 +382,27 @@ const Layout997: React.FC = () => {
                 <Text
                   style={{ fontSize: "24px", color: "#ac6e29" }}
                   dangerouslySetInnerHTML={{
-                    __html: `${countdownTimer?.countdownTimer.d} `,
+                    __html: `${countdownTimer?.countdownTimer.d} : `,
                   }}
                 />
               </Box>
               <Box>
                 <Text
-                  style={{ fontSize: "12px", color: "#ac6e29" }}
+                  style={{ fontSize: "24px", color: "#ac6e29" }}
                   dangerouslySetInnerHTML={{
                     __html: `${
                       countdownTimer?.countdownTimer.h
-                    } <span style="font-size: 12px">${
-                      locale?.[item?.language!]?.COUNTDOWN_HOUR
-                    }</span>`,
+                    } : `,
                   }}
                 />
+                </Box>
+                <Box>
                 <Text
-                  style={{ fontSize: "12px", color: "#ac6e29" }}
+                  style={{ fontSize: "24px", color: "#ac6e29" }}
                   dangerouslySetInnerHTML={{
                     __html: `${
                       countdownTimer?.countdownTimer.m
-                    } <span style="font-size: 12px">${
-                      locale?.[item?.language!]?.COUNTDOWN_MINUTE
-                    }</span>`,
+                    } : `,
                   }}
                 />
               </Box>
@@ -412,7 +410,6 @@ const Layout997: React.FC = () => {
                 <Text
                   style={{
                     fontSize: "24px",
-                    width: "50px",
                     color: "#ac6e29",
                   }}
                   dangerouslySetInnerHTML={{
@@ -441,9 +438,8 @@ const Layout997: React.FC = () => {
           }}
         />
 
-        <Box sx={{ textAlign: "left", padding: "0 32px"}}>
+        <Box id="delay-18s" sx={{ textAlign: "left", padding: "0 32px"}}>
         <Text
-          id="delay-18s"
           sx={{ fontSize: "12px", mt: 6, color: "#ac6e29" }}
           dangerouslySetInnerHTML={{
             __html: "<b>ATUR CARA</b> | <i>TENTATIVES</i><br><br>11:00a.m - 4:00p.m",
@@ -451,7 +447,6 @@ const Layout997: React.FC = () => {
         />
 
         <Text
-          id="delay-18s"
           sx={{ fontSize: "12px", mt: 2, mb: 1, color: "#ac6e29" }}
           dangerouslySetInnerHTML={{
             __html:
@@ -501,11 +496,10 @@ const Layout997: React.FC = () => {
             }}
           />
           <Text
-          id="delay-18s"
           sx={{ fontSize: "12px", my: 0.5, color: "#ac6e29", textAlign: "left"  }}
           dangerouslySetInnerHTML={{
             __html:
-              "<b>Salam Restu (Ibu bapa & Saudara-mara)</b> <br> <i>Blessings Ceremony (Parents & Relatives)</i>",
+              "<b>Salam Restu <br/>(Ibu bapa & Saudara-mara)</b> <br> <i>Blessings Ceremony <br/>(Parents & Relatives)</i>",
           }}
         />
         </Box>
@@ -533,7 +527,7 @@ const Layout997: React.FC = () => {
           sx={{ fontSize: "12px", mt: 2, mb:1, color: "#ac6e29" }}
           dangerouslySetInnerHTML={{
             __html:
-              "<b>Sesi kedua</b> | <i>Second session</i>",
+              "<b>Sesi Kedua</b> | <i>Second Session</i>",
           }}
         />
 
@@ -576,7 +570,7 @@ const Layout997: React.FC = () => {
             sx={{ fontSize: "12px", my: 0.5, color: "#ac6e29", display: "block", mr: 2 }}
             dangerouslySetInnerHTML={{
               __html:
-                "<b>16.00</b>",
+                "<b>16:00</b>",
             }}
           />
           <Text
