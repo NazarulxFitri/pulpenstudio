@@ -72,7 +72,7 @@ const LocationPopup: React.FC<LocationPopupProps> = ({
             <Box
               mt={4}
               sx={{
-                background: color,
+                border: `1px solid ${color}`,
                 borderRadius: "8px",
                 cursor: "pointer",
                 display: "flex",
@@ -81,7 +81,7 @@ const LocationPopup: React.FC<LocationPopupProps> = ({
               }}
               gap={2}
             >
-              Google Map <MapIcon />
+              Location <span style={{fontSize: "12px"}}>Google / Waze</span> <MapIcon />
             </Box>
           </a>
         </Box>
