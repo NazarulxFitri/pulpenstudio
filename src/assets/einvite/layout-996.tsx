@@ -283,11 +283,17 @@ const Layout996: React.FC = () => {
           my={5}
           mx={"auto"}
           sx={{
-            py: 8,
+            pt: 8,
+            pb: 4,
             px: 2,
             position: "relative",
           }}
         >
+          <Box sx={{ position: "absolute", top: "0"}}>
+            <Image src="/media/animation/layout9-art-3.webp"   alt="Pulpen Studio - Evening Turqoise Pastel"
+            width={318}
+            height={419}  />
+          </Box>
           <Box sx={{zIndex: "2"}}>
           <SubTitle
             sx={{ mb: 3 }}
@@ -320,7 +326,7 @@ const Layout996: React.FC = () => {
         </Box>
 
         <Box sx={{textAlign: "center"}}>
-          <Image src="/media/animation/996-map.png" alt="Layout996 Pulpen Studio" width={360} height={360} />
+          <Image style={{ width: "100%"}} src="/media/animation/layout-996-map-adibkaman.png" alt="Layout996 Pulpen Studio" width={400} height={360} />
           <Box>
             <SubTitle
             sx={{
@@ -333,7 +339,13 @@ const Layout996: React.FC = () => {
           /></Box>
         </Box>
 
-        <Box sx={{ textAlign: "left", padding: "0 32px", mt: 10}}>
+        <Box sx={{ textAlign: "left", padding: "0 32px", mt: 10, position: "relative"}}>
+          <Box sx={{ position: "absolute", top: "-100px", right: "-200px"}}>
+            <Image src="/media/animation/layout9-art-3.webp"   alt="Pulpen Studio - Evening Turqoise Pastel"
+            width={318}
+            height={419}  />
+          </Box>
+          
         <SubTitle
           sx={{ fontSize: "12px", mt: 6, fontWeight: "bold" }}
           dangerouslySetInnerHTML={{
@@ -492,8 +504,14 @@ const Layout996: React.FC = () => {
           sx={{
             px: 2,
             py: 4,
+            position: "relative"
           }}
         >
+          <Box sx={{ position: "absolute", top: "-100px", left: "-200px"}}>
+            <Image src="/media/animation/layout9-art-3.webp"   alt="Pulpen Studio - Evening Turqoise Pastel"
+            width={318}
+            height={419}  />
+          </Box>
           <SubTitle
             dangerouslySetInnerHTML={{
               __html: locale?.[item?.language!]?.CARD_COUNTDOWN_TITLE,
