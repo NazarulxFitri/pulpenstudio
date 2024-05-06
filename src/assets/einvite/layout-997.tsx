@@ -382,7 +382,7 @@ const Layout997: React.FC = () => {
                 <Text
                   style={{ fontSize: "24px", color: "#ac6e29" }}
                   dangerouslySetInnerHTML={{
-                    __html: `${countdownTimer?.countdownTimer.d} : `,
+                    __html: `<span style="font-size: 12px">Days</span><br><span style="visibility: hidden">.</span>${countdownTimer?.countdownTimer.d} :`,
                   }}
                 />
               </Box>
@@ -390,9 +390,9 @@ const Layout997: React.FC = () => {
                 <Text
                   style={{ fontSize: "24px", color: "#ac6e29" }}
                   dangerouslySetInnerHTML={{
-                    __html: `${
+                    __html: `<span style="font-size: 12px">Hrs</span><br><span style="visibility: hidden">..</span>${
                       countdownTimer?.countdownTimer.h
-                    } : `,
+                    } :`,
                   }}
                 />
                 </Box>
@@ -400,9 +400,9 @@ const Layout997: React.FC = () => {
                 <Text
                   style={{ fontSize: "24px", color: "#ac6e29" }}
                   dangerouslySetInnerHTML={{
-                    __html: `${
+                    __html: `<span style="font-size: 12px">Mins</span><br><span style="visibility: hidden">..</span>${
                       countdownTimer?.countdownTimer.m
-                    } : `,
+                    } :`,
                   }}
                 />
               </Box>
@@ -413,7 +413,7 @@ const Layout997: React.FC = () => {
                     color: "#ac6e29",
                   }}
                   dangerouslySetInnerHTML={{
-                    __html: `${countdownTimer?.countdownTimer.s} `,
+                    __html: `<span style="font-size: 12px">Secs</span><br>${countdownTimer?.countdownTimer.s} `,
                   }}
                 />
               </Box>
