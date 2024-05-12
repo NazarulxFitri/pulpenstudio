@@ -423,7 +423,7 @@ const Layout12: React.FC = () => {
             sx={{ fontSize: "12px", my: 0.5, textAlign: "left" }}
             dangerouslySetInnerHTML={{
               __html:
-                "<b>Majlis Resepsi Bermula</b> <br> <i>Start of Wedding Reception</i>",
+                "<b>Ketibaan tetamu & Ahli keluarga</b>",
             }}
           />
         </Box>
@@ -433,19 +433,104 @@ const Layout12: React.FC = () => {
             sx={{ fontSize: "12px", my: 0.5,  display: "block", mr: 2 }}
             dangerouslySetInnerHTML={{
               __html:
-                "<b>1.00pm</b>",
+                "<b>1.30pm</b>",
             }}
           />
           <Text
           sx={{ fontSize: "12px", my: 0.5, textAlign: "left" }}
           dangerouslySetInnerHTML={{
             __html:
-              "<b>Ketibaan Pengantin</b> <br> <i>Arrival of Bride & Groom</i>",
+              "<b>Ketibaan pengantin & pengantin bersanding di pelamin</b>",
           }}
         />
         </Box>
 
          <Box sx={{ display: "inline-flex"}}>
+          <Text
+            sx={{ fontSize: "12px", my: 0.5, display: "block", mr: 2 }}
+            dangerouslySetInnerHTML={{
+              __html:
+                "<b>1.50pm</b>",
+            }}
+          />
+          <Text
+          sx={{ fontSize: "12px", my: 0.5, textAlign: "left"  }}
+          dangerouslySetInnerHTML={{
+            __html:
+              "<b>Bacaan doa, upacara renjis & Salam restu</b>",
+          }}
+        />
+        </Box> 
+
+         <Box sx={{ display: "inline-flex"}}>
+          <Text
+            sx={{ fontSize: "12px", my: 0.5, display: "block", mr: 2 }}
+            dangerouslySetInnerHTML={{
+              __html:
+                "<b>2.30pm</b>",
+            }}
+          />
+          <Text
+          sx={{ fontSize: "12px", my: 0.5, textAlign: "left"  }}
+          dangerouslySetInnerHTML={{
+            __html:
+              "<b>Makan beradab & Ucapan dari wakil ahli keluarga</b>",
+          }}
+        />
+        </Box> 
+
+         <Box sx={{ display: "inline-flex"}}>
+          <Text
+            sx={{ fontSize: "12px", my: 0.5, display: "block", mr: 2 }}
+            dangerouslySetInnerHTML={{
+              __html:
+                "<b>2.50pm</b>",
+            }}
+          />
+          <Text
+          sx={{ fontSize: "12px", my: 0.5, textAlign: "left"  }}
+          dangerouslySetInnerHTML={{
+            __html:
+              "<b>Ucapan daripada pengantin</b>",
+          }}
+        />
+        </Box> 
+
+         <Box sx={{ display: "inline-flex"}}>
+          <Text
+            sx={{ fontSize: "12px", my: 0.5, display: "block", mr: 2 }}
+            dangerouslySetInnerHTML={{
+              __html:
+                "<b>3.00pm</b>",
+            }}
+          />
+          <Text
+          sx={{ fontSize: "12px", my: 0.5, textAlign: "left"  }}
+          dangerouslySetInnerHTML={{
+            __html:
+              "<b>Upacara memotong kek</b>",
+          }}
+        />
+        </Box> 
+
+        <Box sx={{ display: "inline-flex"}}>
+          <Text
+            sx={{ fontSize: "12px", my: 0.5, display: "block", mr: 2 }}
+            dangerouslySetInnerHTML={{
+              __html:
+                "<b>3.10pm</b>",
+            }}
+          />
+          <Text
+          sx={{ fontSize: "12px", my: 0.5, textAlign: "left"  }}
+          dangerouslySetInnerHTML={{
+            __html:
+              "<b>Sesi bergambar keluarga dan tetamu</b>",
+          }}
+        />
+        </Box> 
+
+        <Box sx={{ display: "inline-flex"}}>
           <Text
             sx={{ fontSize: "12px", my: 0.5, display: "block", mr: 2 }}
             dangerouslySetInnerHTML={{
@@ -457,7 +542,7 @@ const Layout12: React.FC = () => {
           sx={{ fontSize: "12px", my: 0.5, textAlign: "left"  }}
           dangerouslySetInnerHTML={{
             __html:
-              "<b>Majlis Bersurai</b> <br> <i> End of Wedding Reception</i>",
+              "<b>Bersurai & sesi pengantin bergambar (outdoor)</b>",
           }}
         />
         </Box>     
