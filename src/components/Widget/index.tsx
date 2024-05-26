@@ -12,6 +12,8 @@ import RsvpPopup from "./RsvpPopup";
 import PhoneIcon from "../Icons/PhoneIcon";
 
 interface WidgetProps {
+  includePhoneNumber?: boolean;
+  includeOrigin?: boolean;
   hideRsvp?: boolean;
   hideEdit?: boolean;
   language: string;
@@ -34,6 +36,8 @@ interface WidgetProps {
 }
 
 const Widget: React.FC<WidgetProps> = ({
+  includePhoneNumber,
+  includeOrigin,
   language,
   iconColor,
   color,
@@ -105,6 +109,8 @@ const Widget: React.FC<WidgetProps> = ({
             setCommentPopup,
             setLocationPopup,
             setContactPopup,
+            includePhoneNumber,
+            includeOrigin
           }}
         />
       )}

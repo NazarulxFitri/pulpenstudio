@@ -4,6 +4,8 @@ import { locale } from "@/utils/Locale";
 import { Box } from "@mui/material";
 
 interface RsvpPopupProp {
+  includePhoneNumber?: boolean;
+  includeOrigin?: boolean;
   iconColor?: string;
   language: string;
   title: string;
@@ -15,6 +17,8 @@ interface RsvpPopupProp {
 }
 
 const RsvpPopup: React.FC<RsvpPopupProp> = ({
+  includePhoneNumber,
+  includeOrigin,
   iconColor,
   language,
   title,
@@ -61,6 +65,7 @@ const RsvpPopup: React.FC<RsvpPopupProp> = ({
         </Box>
         <Box sx={{ display: "flex", textAlign: "left", p: "0 16px" }}>
           <RsvpForm
+            {...{includePhoneNumber, includeOrigin}}
             localeAttend={locale?.[language]?.WIDGET_RSVP_ATTEND_TEXT}
             localeNotAttend={locale?.[language]?.WIDGET_RSVP_NOTATTEND_TEXT}
             textAttendance={locale?.[language]?.WIDGET_RSVP_PLACEHOLDER_FIRST}

@@ -26,6 +26,7 @@ const MyWork: React.FC<MyWorkProps> = ({ userAssets }) => {
               <TableCell sx={{ fontWeight: "700" }}>Created At</TableCell>
               <TableCell sx={{ fontWeight: "700" }}>Status</TableCell>
               <TableCell sx={{ fontWeight: "700" }}>Url address</TableCell>
+              <TableCell sx={{ fontWeight: "700" }}>RSVP Dashboard</TableCell>
               <TableCell sx={{ fontWeight: "700" }}>Action</TableCell>
             </TableRow>
           </TableHead>
@@ -38,7 +39,7 @@ const MyWork: React.FC<MyWorkProps> = ({ userAssets }) => {
                   <TableCell>
                     {item.paid ? "Paid" : "Pending Payment"}
                   </TableCell>
-                  <TableCell>
+                  <TableCell sx={{ fontWeight: "700" }}>
                     <a
                       style={{
                         color: "unset",
@@ -48,6 +49,20 @@ const MyWork: React.FC<MyWorkProps> = ({ userAssets }) => {
                       href={`/e-invite/live/${item.name}`}
                     >{`/e-invite/live/${item.name}`}</a>
                   </TableCell>
+                  <TableCell sx={{ fontWeight: "700" }}>
+                    <a
+                      style={{
+                        background: "#eeece1",
+                        borderRadius: "20px",
+                        color: "unset",
+                        padding: "8px 16px",
+                        textDecoration: "none",
+                      }}
+                      target="__blank"
+                      href={`/e-invite/admin/${item.name}`}
+                    >RSVP
+                    </a>
+                    </TableCell>
                   <TableCell>
                     {!item.paid && (
                       <a

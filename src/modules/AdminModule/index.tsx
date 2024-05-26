@@ -108,7 +108,7 @@ const AdminModule: React.FC<AdminModuleProps> = ({ data }) => {
                         {item?.attendance === "true" ? item?.kidPax : "N/A"}
                       </TableCell>
                       <TableCell>
-                        {item?.guestSide === "groom" ? "Pihak Lelaki | Groom" : "Pihak Perempuan | Bride"}
+                        {item?.guestSide === "groom" ? "Pihak Lelaki | Groom" : item?.guestSide === "bride" ? "Pihak Perempuan | Bride": "Umum | General"}
                       </TableCell>
                     </TableRow>
                   ))}

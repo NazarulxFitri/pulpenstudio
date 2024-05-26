@@ -499,6 +499,8 @@ const Layout996: React.FC = () => {
 
       <Box>
         <Widget
+          includePhoneNumber={true}
+          includeOrigin={false}
           language={item?.language!}
           iconColor="#dc9c14"
           color="rgba(255,255,255,0.8)"
@@ -506,10 +508,10 @@ const Layout996: React.FC = () => {
           contact={{
             number1: item?.phonePerson1!,
             number2: item?.phonePerson2!,
-            number3: "0176120857 ",
+            number3: "0122502280",
             name1: item?.namePerson1!,
             name2: item?.namePerson2!,
-            name3: "Najmi",
+            name3: "Ezwan",
           }}
         />
       </Box>

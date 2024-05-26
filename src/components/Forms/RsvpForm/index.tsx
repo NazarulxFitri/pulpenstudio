@@ -11,9 +11,11 @@ import {
   styled,
 } from "@mui/material";
 import { useRouter } from "next/router";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 interface RsvpFormProps {
+  includePhoneNumber?: boolean;
+  includeOrigin?: boolean;
   localeAttend: string;
   localeNotAttend: string;
   textAttendance: string;
@@ -62,6 +64,8 @@ const Android12Switch = styled(Switch)(({ theme }) => ({
 }));
 
 const RsvpForm: React.FC<RsvpFormProps> = ({
+  includePhoneNumber,
+  includeOrigin,
   localeAttend,
   localeNotAttend,
   textAttendance,
@@ -85,7 +89,11 @@ const RsvpForm: React.FC<RsvpFormProps> = ({
 
   const [errorMessage, setErrorMessage] = useState(false);
 
-  const disabled = !name || !phoneNumber || !attendance;
+  const disabled = !name;
+
+  useEffect(() => {
+    !includeOrigin && setGuestSide("general")
+  }, [])
 
   async function handleClick() {
     if (disabled) {
@@ -134,7 +142,9 @@ const RsvpForm: React.FC<RsvpFormProps> = ({
           variant="standard"
           onChange={(e) => setName(e.target.value)}
         />
-        {/* <Input
+
+        {includePhoneNumber && 
+        <Input
           placeholder="01156271776"
           error={errorMessage && !phoneNumber}
           InputLabelProps={{ shrink: true }}
@@ -151,10 +161,11 @@ const RsvpForm: React.FC<RsvpFormProps> = ({
           multiline
           variant="standard"
           onChange={(e) => setPhoneNumber(e.target.value)}
-        /> */}
+        />}
 
         {attendance && (
           <>
+            {includeOrigin && 
             <Box my={2}>  
               <FormControlLabel
                 sx={{
@@ -177,6 +188,7 @@ const RsvpForm: React.FC<RsvpFormProps> = ({
                 control={<Checkbox checked={guestSide === "groom"} onClick={() => setGuestSide("groom")}  />}
               />
             </Box>
+            }
 
             <Input
               variant="standard"
