@@ -234,8 +234,8 @@ const RsvpForm: React.FC<RsvpFormProps> = ({
 
       <Box
         sx={{
-          background: attendance ? themeColor : "#F0F0F0",
-          color: attendance ? "unset" : "#D9D9D9",
+          background: themeColor,
+          color: "unset",
           boxShadow: "1px 1px solid #EFEFEF",
           width: "fit-content",
           borderRadius: "8px",
