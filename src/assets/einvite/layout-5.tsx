@@ -47,8 +47,8 @@ const SubTitle = styled("p")(() => ({
 }));
 
 const Text = styled("p")(() => ({
-  fontFamily: `${dancingScript.style.fontFamily} !important` || "auto",
-  fontSize: "16px",
+  fontFamily: `${playfair.style.fontFamily} !important` || "auto",
+  fontSize: "12px",
   textAlign: "center",
 }));
 
@@ -160,7 +160,8 @@ const Layout5: React.FC = () => {
           controls={true}
         />
       </Box>
-      <Box
+      
+      <Box         display={clickOpen ? "block" : "none"}
         sx={{
           borderBottom: "1px solid #EFEFEF",
           position: "relative",
@@ -171,7 +172,7 @@ const Layout5: React.FC = () => {
         <Box
           sx={{ color: "#5a0819", padding: "344px 16px", position: "relative" }}
         >
-          <Box sx={{ position: "absolute", top: "-56px", left: "-40px" }}>
+          <Box sx={{ position: "absolute", top: "-56px", left: "-40px" }} className="animate__animated animate__fadeInDown animate__slow ">
             <Image
               src="/media/animation/layout5-flowers.png"
               alt="Pulpen Studio - Flourish Gloom"
@@ -179,7 +180,7 @@ const Layout5: React.FC = () => {
               height={400}
             />
           </Box>
-          <Box sx={{ position: "absolute", bottom: "72px", right: "-96px" }}>
+          <Box sx={{ position: "absolute", bottom: "72px", right: "-96px" }} className="animate__animated animate__fadeInUp animate__slow">
             <Image
               src="/media/animation/layout5-flowers-1.png"
               alt="Pulpen Studio - Flourish Gloom"
@@ -187,7 +188,7 @@ const Layout5: React.FC = () => {
               height={400}
             />
           </Box>
-          <Box sx={{ position: "absolute", bottom: "180px", left: "0" }}>
+          <Box sx={{ position: "absolute", bottom: "180px", left: "0" }} className="animate__animated animate__fadeInUp animate__slow">
             <Image
               src="/media/animation/layout5-art.webp"
               alt="Pulpen Studio - Flourish Gloom"
@@ -196,10 +197,10 @@ const Layout5: React.FC = () => {
             />
           </Box>
           <Box>
-            <MiniText
+            <Text
               style={{ letterSpacing: "0.5em" }}
               dangerouslySetInnerHTML={{
-                __html: locale?.[item?.language!]?.INTRO_FIRST,
+                __html: "<i>WALIMATULURUS</i>",
               }}
             />
             <Title
@@ -289,16 +290,15 @@ const Layout5: React.FC = () => {
               __html: locale?.[item?.language!]?.CARD_TEXT,
             }}
           />
-          <Title
+          <Text
             sx={{
               color: "#5a0819",
-              fontSize: "24px",
-              fontWeight: "bolder",
+              fontSize: "20px",
               mb: 3,
               textShadow: "1px 1px 10px #FDE6E8",
             }}
             dangerouslySetInnerHTML={{
-              __html: `${item?.fullNameGroom} & ${item?.fullNameBride}`,
+              __html: `${item?.fullNameGroom} <br>&<br> ${item?.fullNameBride}`,
             }}
           />
         </Box>
@@ -336,37 +336,155 @@ const Layout5: React.FC = () => {
             />
           </Box>
           <Box sx={{ mx: 2 }}>
-            <UbuntuText
-              dangerouslySetInnerHTML={{
-                __html: locale?.[item?.language!]?.CARD_TITLE_FIRST,
-              }}
-            />
-            <Box mt={2} sx={{ textAlign: "center" }}>
-              <MiniText
-                style={{ marginBottom: "8px" }}
-                dangerouslySetInnerHTML={{
-                  __html: `${
-                    locale?.[item?.language!]?.CARD_SUBTITLE_FIRST
-                  }: ${fullDate} `,
-                }}
-              />
-              <MiniText
-                style={{ marginBottom: "8px" }}
-                dangerouslySetInnerHTML={{
-                  __html: `${locale?.[item?.language!]?.CARD_SUBTITLE_TWO} : ${
-                    item?.location
-                  } `,
-                }}
-              />
-              <MiniText
-                style={{ marginBottom: "8px" }}
-                dangerouslySetInnerHTML={{
-                  __html: `${
-                    locale?.[item?.language!]?.CARD_SUBTITLE_THREE
-                  } : ${timeStart} `,
-                }}
-              />
-            </Box>
+              <Box
+            sx={{
+              mx: 2,
+            }}
+          >
+            <Box sx={{ textAlign: "left", padding: "0 32px"}}>
+        <Text
+          sx={{ fontSize: "12px", mt: 6,  }}
+          dangerouslySetInnerHTML={{
+            __html: "<b>ATUR CARA</b> | <i>TENTATIVES</i><br><br>11:00a.m - 4:00p.m",
+          }}
+        />
+
+        <Text
+          sx={{ fontSize: "12px", mt: 2, mb: 1,  }}
+          dangerouslySetInnerHTML={{
+            __html:
+              "<b>Sesi Pertama</b> | <i>First Session</i>",
+          }}
+        />
+        <Box sx={{ display: "inline-flex"}}>
+           <Text
+            sx={{ fontSize: "12px", my: 0.5, display: "block", mr: 2 }}
+            dangerouslySetInnerHTML={{
+              __html:
+                "<b>11:00</b>",
+            }}
+          />
+          <Text
+            sx={{ fontSize: "12px", my: 0.5, textAlign: "left" }}
+            dangerouslySetInnerHTML={{
+              __html:
+                "<b>Majlis Resepsi Bermula</b> <br> <i>Start of Wedding Reception</i>",
+            }}
+          />
+        </Box>
+        
+        <Box sx={{ display: "inline-flex"}}>
+          <Text
+            sx={{ fontSize: "12px", my: 0.5, display: "block", mr: 2 }}
+            dangerouslySetInnerHTML={{
+              __html:
+                "<b>11:30</b>",
+            }}
+          />
+          <Text
+          sx={{ fontSize: "12px", my: 0.5,  textAlign: "left" }}
+          dangerouslySetInnerHTML={{
+            __html:
+              "<b>Ketibaan Pengantin</b> <br> <i>Arrival of Bride & Groom</i>",
+          }}
+        />
+        </Box>
+        
+        <Box sx={{ display: "inline-flex"}}>
+          <Text
+            sx={{ fontSize: "12px", my: 0.5, display: "block", mr: 2 }}
+            dangerouslySetInnerHTML={{
+              __html:
+                "<b>11:45</b>",
+            }}
+          />
+          <Text
+          sx={{ fontSize: "12px", my: 0.5, textAlign: "left"  }}
+          dangerouslySetInnerHTML={{
+            __html:
+              "<b>Salam Restu <br/>(Ibu bapa & Saudara-mara)</b> <br> <i>Blessings Ceremony <br/>(Parents & Relatives)</i>",
+          }}
+        />
+        </Box>
+
+        <Box sx={{ display: "inline-flex"}}>
+          <Text
+            sx={{ fontSize: "12px", my: 0.5, display: "block", mr: 2 }}
+            dangerouslySetInnerHTML={{
+              __html:
+                "<b>12:45</b>",
+            }}
+          />
+          <Text
+          sx={{ fontSize: "12px", my: 0.5, textAlign: "left"  }}
+          dangerouslySetInnerHTML={{
+            __html:
+              "<b>Pengantin Rehat</b> <br> <i>Bride & Groom One-hour Break</i>",
+          }}
+        />
+        </Box>
+        
+
+        <Text
+          sx={{ fontSize: "12px", mt: 2, mb:1,  }}
+          dangerouslySetInnerHTML={{
+            __html:
+              "<b>Sesi Kedua</b> | <i>Second Session</i>",
+          }}
+        />
+
+        <Box sx={{ display: "inline-flex"}}>
+          <Text
+            sx={{ fontSize: "12px", my: 0.5, display: "block", mr: 2 }}
+            dangerouslySetInnerHTML={{
+              __html:
+                "<b>13:45</b>",
+            }}
+          />
+          <Text
+          sx={{ fontSize: "12px", my: 0.5, textAlign: "left"  }}
+          dangerouslySetInnerHTML={{
+            __html:
+              "<b>Ketibaan Semula Pengantin</b> <br> <i>Re-arrival of Bride & Groom</i>",
+          }}
+        />
+        </Box>
+
+        <Box sx={{ display: "inline-flex"}}>
+          <Text
+            sx={{ fontSize: "12px", my: 0.5, display: "block", mr: 2 }}
+            dangerouslySetInnerHTML={{
+              __html:
+                "<b>14:45</b>",
+            }}
+          />
+          <Text
+          sx={{ fontSize: "12px", my: 0.5, textAlign: "left"  }}
+          dangerouslySetInnerHTML={{
+            __html:
+              "<b>Upacara Memotong Kek</b> <br> <i>Cake Cutting Ceremony</i>",
+          }}
+        />
+        </Box>
+
+         <Box sx={{ display: "inline-flex"}}>
+          <Text
+            sx={{ fontSize: "12px", my: 0.5, display: "block", mr: 2 }}
+            dangerouslySetInnerHTML={{
+              __html:
+                "<b>16:00</b>",
+            }}
+          />
+          <Text
+          sx={{ fontSize: "12px", my: 0.5, textAlign: "left"  }}
+          dangerouslySetInnerHTML={{
+            __html:
+              "<b>Majlis Bersurai</b> <br> <i> End of Wedding Reception</i>",
+          }}
+        />
+        </Box>     
+        </Box>
+          </Box>
           </Box>
         </Box>
 
@@ -376,9 +494,9 @@ const Layout5: React.FC = () => {
             py: 4,
           }}
         >
-          <UbuntuText
+          <Text
             dangerouslySetInnerHTML={{
-              __html: locale?.[item?.language!]?.CARD_COUNTDOWN_TITLE,
+              __html: "<b>MENGHITUNG HARI</b> | <i>COUNTING THE DAYS</i>",
             }}
             sx={{ pb: 2 }}
           />
@@ -391,7 +509,7 @@ const Layout5: React.FC = () => {
                 width: "fit-content",
               }}
             >
-              <SubTitle
+              <Text
                 dangerouslySetInnerHTML={{
                   __html: locale?.[item?.language!]?.CARD_COUNTDOWN_FINISH_TEXT,
                 }}
@@ -459,9 +577,9 @@ const Layout5: React.FC = () => {
             pb: 10
           }}
         >
-          <UbuntuText
+          <Text
             dangerouslySetInnerHTML={{
-              __html: locale?.[item?.language!]?.CARD_WISH_TITLE,
+              __html: "<b>UCAPAN</b> | <i>WISHES</i>",
             }}
             sx={{ pb: 2 }}
           />

@@ -195,6 +195,7 @@ const Layout15: React.FC = () => {
         />
       </Box>
       <Box
+              display={clickOpen ? "block" : "none"}
         sx={{
         background: "#ccc4bb",
           height: "100vh",
