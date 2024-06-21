@@ -167,7 +167,7 @@ const Layout15: React.FC = () => {
     >
       <Door color="#b45769" {...{ clickOpen, setClickOpen }}>
         <Title
-                    sx={{ color: "#FFF", fontSize: "32px", fontWeight: "100", padding: "0 10px"}}
+                    sx={{ color: "#FFF", fontSize: "32px", fontWeight: "100", padding: "0 10px 0 0"}}
           dangerouslySetInnerHTML={{
             __html: "Izlin",
           }}
