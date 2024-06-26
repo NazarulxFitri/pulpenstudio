@@ -207,7 +207,7 @@ const Layout997jpn: React.FC = () => {
           }}
         />
         <Text
-          id="delay-2s"
+          id="delay-3s"
           sx={{
             fontSize: "14px",
             fontWeight: "bold",
@@ -221,7 +221,7 @@ const Layout997jpn: React.FC = () => {
         />
 
         <Text
-          id="delay-2s"
+          id="delay-3s"
           sx={{
             fontSize: "14px",
             fontWeight: "bold",
@@ -237,7 +237,7 @@ const Layout997jpn: React.FC = () => {
         />
 
         <Text
-          id="delay-2s"
+          id="delay-4s"
           sx={{
             fontSize: "14px",
             fontWeight: "bold",
@@ -251,7 +251,7 @@ const Layout997jpn: React.FC = () => {
         />
 
         <SubTitle
-          id="delay-4s"
+          id="delay-5s"
           sx={{
             fontSize: "28px",
             color: "#ac6e29",
@@ -274,7 +274,7 @@ const Layout997jpn: React.FC = () => {
         />
 
         <Text
-          id="delay-2s"
+          id="delay-7s"
           sx={{
             fontSize: "14px",
             fontWeight: "bold",
@@ -296,7 +296,7 @@ const Layout997jpn: React.FC = () => {
         />
 
         <Text
-          id="delay-10s"
+          id="delay-9s"
           sx={{
             fontSize: "14px",
             px: 2,
@@ -322,7 +322,7 @@ const Layout997jpn: React.FC = () => {
         />
 
         <Text
-          id="delay-12s"
+          id="delay-11s"
           sx={{
             fontSize: "12px",
             mt: 0.5,
@@ -334,14 +334,14 @@ const Layout997jpn: React.FC = () => {
         />
 
         <SubTitle
-          id="delay-14s"
+          id="delay-12s"
           sx={{ fontSize: "28px", mt: 6, color: "#ac6e29" }}
           dangerouslySetInnerHTML={{
             __html: "Nik Iffah Hazirah",
           }}
         />
         <Text
-          id="delay-14s"
+          id="delay-12s"
           sx={{
             fontSize: "14px",
             fontWeight: "bold",
@@ -354,7 +354,7 @@ const Layout997jpn: React.FC = () => {
         />
 
         <Text
-          id="delay-15s"
+          id="delay-13s"
           sx={{ fontSize: "12px", my: 1, color: "#ac6e29" }}
           dangerouslySetInnerHTML={{
             __html: "<b>&</b>",
@@ -362,14 +362,14 @@ const Layout997jpn: React.FC = () => {
         />
 
         <SubTitle
-          id="delay-16s"
+          id="delay-14s"
           sx={{ fontSize: "32px", color: "#ac6e29" }}
           dangerouslySetInnerHTML={{
             __html: "Hilmi Marzuqi",
           }}
         />
         <Text
-          id="delay-16s"
+          id="delay-14s"
           sx={{
             fontSize: "14px",
             fontWeight: "bold",
@@ -382,7 +382,7 @@ const Layout997jpn: React.FC = () => {
         />
 
         <Text
-          id="delay-18s"
+          id="delay-15s"
           sx={{ fontSize: "12px", mt: 6, color: "#ac6e29" }}
           dangerouslySetInnerHTML={{
             __html: "<b>日程</b> | <i>DATE</i>",
@@ -390,7 +390,7 @@ const Layout997jpn: React.FC = () => {
         />
 
         <Text
-          id="delay-18s"
+          id="delay-16s"
           sx={{ fontSize: "12px", mt: 0.5, color: "#ac6e29" }}
           dangerouslySetInnerHTML={{
             __html: "<b><span style='font-size: 16px;'>2024.08.18</span></b><br><i>(日|SUN)</i>",
@@ -398,7 +398,7 @@ const Layout997jpn: React.FC = () => {
         />
 
         <Text
-          id="delay-18s"
+          id="delay-17s"
           sx={{ fontSize: "14px", mt: 4, px: 2, color: "#ac6e29", fontWeight: "bold" }}
           dangerouslySetInnerHTML={{
             __html: `ご多用中まことに恐縮ではございますが、<br>
