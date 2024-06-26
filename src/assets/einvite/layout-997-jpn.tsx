@@ -504,7 +504,7 @@ const Layout997jpn: React.FC = () => {
           sx={{ fontSize: "12px", mt: 0.5, mb: 2, color: "#ac6e29" }}
           dangerouslySetInnerHTML={{
             __html:
-              "SEBENING EMBUN GARDENS LOT 15,<br>JALAN DURIAN 1,KAMPUNG SUNGAI BULOH,<br> DENGKIL, SELANGOR",
+              "SEBENING EMBUN GARDENS LOT 15,<br>JALAN DURIAN 1,KAMPUNG SUNGAI BUAH,<br> DENGKIL, SELANGOR",
           }}
         />
 
