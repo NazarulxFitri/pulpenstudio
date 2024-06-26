@@ -153,7 +153,7 @@ const Layout997jpn: React.FC = () => {
         />
       </Box>
 
-      <CustomDoor color="ebe2d2" {...{ clickOpen, setClickOpen }} />
+      <CustomDoor color="ebe2d2" {...{ clickOpen, setClickOpen }} isJapan={true} />
 
       <Box
         display={clickOpen ? "block" : "none"}
@@ -206,7 +206,6 @@ const Layout997jpn: React.FC = () => {
             __html: "﷽",
           }}
         />
-
         <Text
           id="delay-2s"
           sx={{
@@ -217,9 +216,7 @@ const Layout997jpn: React.FC = () => {
             px: 4,
           }}
           dangerouslySetInnerHTML={{
-            __html: `謹啓　残暑の候
-皆様におかれましてはご健勝のことと
-お慶び申し上げます。`,
+            __html: `謹啓　`,
           }}
         />
 
@@ -233,7 +230,23 @@ const Layout997jpn: React.FC = () => {
             px: 4,
           }}
           dangerouslySetInnerHTML={{
-            __html: `さて、この度、`,
+            __html: `盛夏の候
+                皆様におかれましては<br>ご健勝のことと
+                お慶び申し上げます。`,
+          }}
+        />
+
+        <Text
+          id="delay-2s"
+          sx={{
+            fontSize: "14px",
+            fontWeight: "bold",
+            color: "#ac6e29",
+            mt: 4,
+            px: 4,
+          }}
+          dangerouslySetInnerHTML={{
+            __html: `新婦父母`,
           }}
         />
 
@@ -257,6 +270,20 @@ const Layout997jpn: React.FC = () => {
             height: "1px",
             width: "50%",
             mx: "auto",
+          }}
+        />
+
+        <Text
+          id="delay-2s"
+          sx={{
+            fontSize: "14px",
+            fontWeight: "bold",
+            color: "#ac6e29",
+            mt: 2.5,
+            px: 4,
+          }}
+          dangerouslySetInnerHTML={{
+            __html: `新郎父母`,
           }}
         />
 
@@ -313,6 +340,18 @@ const Layout997jpn: React.FC = () => {
             __html: "Nik Iffah Hazirah",
           }}
         />
+        <Text
+          id="delay-14s"
+          sx={{
+            fontSize: "14px",
+            fontWeight: "bold",
+            color: "#ac6e29",
+            px: 4,
+          }}
+          dangerouslySetInnerHTML={{
+            __html: `ニック イッファ ハジラ`,
+          }}
+        />
 
         <Text
           id="delay-15s"
@@ -329,6 +368,18 @@ const Layout997jpn: React.FC = () => {
             __html: "Hilmi Marzuqi",
           }}
         />
+        <Text
+          id="delay-16s"
+          sx={{
+            fontSize: "14px",
+            fontWeight: "bold",
+            color: "#ac6e29",
+            px: 4,
+          }}
+          dangerouslySetInnerHTML={{
+            __html: `ヒルミ マーズキ`,
+          }}
+        />
 
         <Text
           id="delay-18s"
@@ -342,7 +393,7 @@ const Layout997jpn: React.FC = () => {
           id="delay-18s"
           sx={{ fontSize: "12px", mt: 0.5, color: "#ac6e29" }}
           dangerouslySetInnerHTML={{
-            __html: "<b>2024.08.18</b> | <i>(日|SUN)</i>",
+            __html: "<b><span style='font-size: 16px;'>2024.08.18</span></b><br><i>(日|SUN)</i>",
           }}
         />
 
@@ -350,12 +401,18 @@ const Layout997jpn: React.FC = () => {
           id="delay-18s"
           sx={{ fontSize: "14px", mt: 4, px: 2, color: "#ac6e29", fontWeight: "bold" }}
           dangerouslySetInnerHTML={{
-            __html: `ご多用中まことに恐縮ではございますが、
-ぜひご出席をお願いしたくご案内申し上げます。
-敬白`,
+            __html: `ご多用中まことに恐縮ではございますが、<br>
+          ぜひご出席をお願いしたくご案内申し上げます。`,
           }}
         />
 
+        <Text
+          id="delay-18s"
+          sx={{ fontSize: "14px", mt: 2, px: 2, color: "#ac6e29", fontWeight: "bold" }}
+          dangerouslySetInnerHTML={{
+            __html: `敬白`,
+          }}
+        />
 
         <Box
           id="delay-18s"
@@ -455,7 +512,7 @@ const Layout997jpn: React.FC = () => {
         <Text
           sx={{ fontSize: "14px", mt: 6, color: "#ac6e29" }}
           dangerouslySetInnerHTML={{
-            __html: "<b>開催時間</b> | <i>TENTATIVES</i><br><br>11:00a.m - 4:00p.m",
+            __html: "<b>開催時間</b> | <i>TENTATIVES</i><br><br>11:30a.m - 4:00p.m",
           }}
         />
 

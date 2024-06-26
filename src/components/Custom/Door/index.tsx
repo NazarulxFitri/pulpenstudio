@@ -3,6 +3,7 @@ import { Libre_Baskerville } from "next/font/google";
 import Image from "next/image";
 
 interface DoorProps {
+  isJapan?: boolean;
   color: string;
   doorMainColor?: string;
   children?: any;
@@ -22,6 +23,7 @@ const Text = styled("p")(() => ({
 }));
 
 const CustomDoor: React.FC<DoorProps> = ({
+  isJapan,
   color,
   children,
   clickOpen,
@@ -122,7 +124,7 @@ const CustomDoor: React.FC<DoorProps> = ({
           <Text
             sx={{ fontSize: "12px", mt: 4, color: "#ac6e29" }}
             dangerouslySetInnerHTML={{
-              __html: "<b>Klik untuk BUKA</b> | <i>Click to OPEN</i>",
+              __html: isJapan ? "<i>Click to OPEN</i>" : "<b>Klik untuk BUKA</b> | <i>Click to OPEN</i>",
             }}
           />
         </Box>
