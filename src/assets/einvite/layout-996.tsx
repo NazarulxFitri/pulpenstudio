@@ -474,27 +474,30 @@ const Layout996: React.FC = () => {
             sx={{ pb: 2, fontWeight: "bold" }}
           />
           <Grid container>
-            <Grid item xs={12}>
-              <Paper
-                sx={{
-                  background: "transparent",
-                  boxShadow: "unset",
-                  maxHeight: "400px",                }}
-              >
-                <List sx={{ p: 0, mb: 4 }}>
-                  {/* @ts-ignore */}
-                  {listComments?.map((comment: any, idx: string) => (
-                    <CommentList
-                      {...{ comment, idx }}
-                      key={idx}
-                      bgColor="#f9dab2"
-                      textColor="#131313"
-                    />
-                  ))}
-                </List>
-              </Paper>
-            </Grid>
+          <Grid item py={2} xs={12}>
+            <Paper
+              sx={{
+                background: "#FFF",
+                boxShadow: "unset",
+                height: "100%",
+                maxHeight: "400px",
+                overflow: "scroll",
+              }}
+            >
+              <List sx={{ p: 0, mb: 4 }}>
+                {/* @ts-ignore */}
+                {listComments?.map((comment: any, idx: string) => (
+                  <CommentList
+                    {...{ comment, idx }}
+                    key={idx}
+                    bgColor="#fff"
+                    textColor="#5a0819"
+                  />
+                ))}
+              </List>
+            </Paper>
           </Grid>
+        </Grid>
         </Box>
 
       <Box>
