@@ -226,7 +226,7 @@ const Layout997jpn: React.FC = () => {
             fontSize: "14px",
             fontWeight: "bold",
             color: "#ac6e29",
-            mt: 4,
+            mt: 2,
             px: 4,
           }}
           dangerouslySetInnerHTML={{
@@ -242,7 +242,7 @@ const Layout997jpn: React.FC = () => {
             fontSize: "14px",
             fontWeight: "bold",
             color: "#ac6e29",
-            mt: 4,
+            mt: 6,
             px: 4,
           }}
           dangerouslySetInnerHTML={{
@@ -305,7 +305,7 @@ const Layout997jpn: React.FC = () => {
             mt: 6,
           }}
           dangerouslySetInnerHTML={{
-            __html: "皆様を我が娘、愚息の結婚式に御招待させて頂きたく存じます。",
+            __html: "皆様を我が娘、愚息の結婚式に御招待させて<br>頂きたく存じます。",
           }}
         />
 
@@ -393,13 +393,13 @@ const Layout997jpn: React.FC = () => {
           id="delay-16s"
           sx={{ fontSize: "12px", mt: 0.5, color: "#ac6e29" }}
           dangerouslySetInnerHTML={{
-            __html: "<b><span style='font-size: 16px;'>2024.08.18</span></b><br><i>(日|SUN)</i>",
+            __html: "<b><span style='font-size: 16px;'>2024.08.18</span></b><br>(日|<i>SUN</i>)",
           }}
         />
 
         <Text
           id="delay-17s"
-          sx={{ fontSize: "14px", mt: 4, px: 2, color: "#ac6e29", fontWeight: "bold" }}
+          sx={{ fontSize: "14px", mt: 4, px: 1, color: "#ac6e29", fontWeight: "bold" }}
           dangerouslySetInnerHTML={{
             __html: `ご多用中まことに恐縮ではございますが、<br>
           ぜひご出席をお願いしたくご案内申し上げます。`,
@@ -515,30 +515,6 @@ const Layout997jpn: React.FC = () => {
             __html: "<b>開催時間</b> | <i>TENTATIVES</i><br><br>11:30a.m - 4:00p.m",
           }}
         />
-
-        <Text
-          sx={{ fontSize: "12px", mt: 2, mb: 1, color: "#ac6e29" }}
-          dangerouslySetInnerHTML={{
-            __html:
-              "<b>第一部</b> | <i>First Session</i>",
-          }}
-        />
-        <Box sx={{ display: "inline-flex"}}>
-           <Text
-            sx={{ fontSize: "12px", my: 0.5, color: "#ac6e29", display: "block", mr: 2 }}
-            dangerouslySetInnerHTML={{
-              __html:
-                "<b>11:00</b>",
-            }}
-          />
-          <Text
-            sx={{ fontSize: "12px", my: 0.5, color: "#ac6e29", textAlign: "left" }}
-            dangerouslySetInnerHTML={{
-              __html:
-                "<b>披露宴開始・開場</b> <br> <i>Start of Wedding Reception</i>",
-            }}
-          />
-        </Box>
         
         <Box sx={{ display: "inline-flex"}}>
           <Text
@@ -552,78 +528,34 @@ const Layout997jpn: React.FC = () => {
           sx={{ fontSize: "12px", my: 0.5, color: "#ac6e29" , textAlign: "left" }}
           dangerouslySetInnerHTML={{
             __html:
+              "<b>披露宴開始・開場</b> <br> <i>Start of Wedding Reception</i>",
+          }}
+        />
+        </Box>
+        
+        <Box sx={{ display: "inline-flex"}}>
+          <Text
+            sx={{ fontSize: "12px", my: 0.5, color: "#ac6e29", display: "block", mr: 2 }}
+            dangerouslySetInnerHTML={{
+              __html:
+                "<b>12:30</b>",
+            }}
+          />
+          <Text
+          sx={{ fontSize: "12px", my: 0.5, color: "#ac6e29", textAlign: "left"  }}
+          dangerouslySetInnerHTML={{
+            __html:
               "<b>新郎新婦　入場</b> <br> <i>Arrival of Bride & Groom</i>",
           }}
         />
         </Box>
-        
-        <Box sx={{ display: "inline-flex"}}>
-          <Text
-            sx={{ fontSize: "12px", my: 0.5, color: "#ac6e29", display: "block", mr: 2 }}
-            dangerouslySetInnerHTML={{
-              __html:
-                "<b>11:45</b>",
-            }}
-          />
-          <Text
-          sx={{ fontSize: "12px", my: 0.5, color: "#ac6e29", textAlign: "left"  }}
-          dangerouslySetInnerHTML={{
-            __html:
-              "<b>両親・親族による祝福</b> <br> <i>Blessings Ceremony <br/>(Parents & Relatives)</i>",
-          }}
-        />
-        </Box>
 
         <Box sx={{ display: "inline-flex"}}>
           <Text
             sx={{ fontSize: "12px", my: 0.5, color: "#ac6e29", display: "block", mr: 2 }}
             dangerouslySetInnerHTML={{
               __html:
-                "<b>12:45</b>",
-            }}
-          />
-          <Text
-          sx={{ fontSize: "12px", my: 0.5, color: "#ac6e29", textAlign: "left"  }}
-          dangerouslySetInnerHTML={{
-            __html:
-              "<b>新郎新婦　中座</b> <br> <i>Bride & Groom One-hour Break</i>",
-          }}
-        />
-        </Box>
-        
-
-        <Text
-          id="delay-18s"
-          sx={{ fontSize: "12px", mt: 2, mb:1, color: "#ac6e29" }}
-          dangerouslySetInnerHTML={{
-            __html:
-              "<b>第二部</b> | <i>Second Session</i>",
-          }}
-        />
-
-        <Box sx={{ display: "inline-flex"}}>
-          <Text
-            sx={{ fontSize: "12px", my: 0.5, color: "#ac6e29", display: "block", mr: 2 }}
-            dangerouslySetInnerHTML={{
-              __html:
-                "<b>13:45</b>",
-            }}
-          />
-          <Text
-          sx={{ fontSize: "12px", my: 0.5, color: "#ac6e29", textAlign: "left"  }}
-          dangerouslySetInnerHTML={{
-            __html:
-              "<b>新郎新婦　再入場</b> <br> <i>Re-arrival of Bride & Groom</i>",
-          }}
-        />
-        </Box>
-
-        <Box sx={{ display: "inline-flex"}}>
-          <Text
-            sx={{ fontSize: "12px", my: 0.5, color: "#ac6e29", display: "block", mr: 2 }}
-            dangerouslySetInnerHTML={{
-              __html:
-                "<b>14:45</b>",
+                "<b>14:30</b>",
             }}
           />
           <Text
@@ -635,7 +567,24 @@ const Layout997jpn: React.FC = () => {
         />
         </Box>
 
-         <Box sx={{ display: "inline-flex"}}>
+        <Box sx={{ display: "inline-flex"}}>
+          <Text
+            sx={{ fontSize: "12px", my: 0.5, color: "#ac6e29", display: "block", mr: 2 }}
+            dangerouslySetInnerHTML={{
+              __html:
+                "<b>15:00</b>",
+            }}
+          />
+          <Text
+          sx={{ fontSize: "12px", my: 0.5, color: "#ac6e29", textAlign: "left"  }}
+          dangerouslySetInnerHTML={{
+            __html:
+              "<b> 舞台上　写真撮影</b> <br> <i>Photo Session with Guests</i>",
+          }}
+        />
+        </Box>
+
+        <Box sx={{ display: "inline-flex"}}>
           <Text
             sx={{ fontSize: "12px", my: 0.5, color: "#ac6e29", display: "block", mr: 2 }}
             dangerouslySetInnerHTML={{
@@ -647,10 +596,39 @@ const Layout997jpn: React.FC = () => {
           sx={{ fontSize: "12px", my: 0.5, color: "#ac6e29", textAlign: "left"  }}
           dangerouslySetInnerHTML={{
             __html:
-              "<b>披露宴終了・閉場</b> <br> <i> End of Wedding Reception</i>",
+              "<b>披露宴終了・閉場</b> <br> <i>End of Wedding Reception</i>",
           }}
         />
+        </Box>
+
+          <Box sx={{ display: "inline-flex"}}>
+            <Text
+              sx={{ fontSize: "12px", my: 0.5, color: "#ac6e29", display: "block", mr: 2 }}
+              dangerouslySetInnerHTML={{
+                __html:
+                  "<b>16:00</b>",
+              }}
+            />
+            <Text
+            sx={{ fontSize: "12px", my: 0.5, color: "#ac6e29", textAlign: "left"  }}
+            dangerouslySetInnerHTML={{
+              __html:
+                "<b>披露宴終了・閉場</b> <br> <i> End of Wedding Reception</i>",
+            }}
+          />
+        </Box>   
+
+        <Box sx={{ display: "inline-flex"}} mt={1}>
+            <Text
+              sx={{ fontSize: "12px", my: 0.5, color: "#ac6e29", display: "block", mr: 2, textAlign: "left" }}
+              dangerouslySetInnerHTML={{
+                __html:
+                  "*当日の都合により予定が前後することをご了承頂きますと幸いです。",
+              }}
+            />
         </Box>     
+          
+
         </Box>
 
         <Box
