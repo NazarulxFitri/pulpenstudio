@@ -297,7 +297,7 @@ const Layout15: React.FC = () => {
               className="animate__animated animate__fadeInDown animate__slow "
               sx={{ fontWeight: "bolder", fontSize: "14px" }}
               dangerouslySetInnerHTML={{
-                __html: locale?.[item?.language!]?.INTRO_FIRST,
+                __html: "WALIMATUL URUS",
               }}
             />
             <Box sx={{ my: 3}}>
@@ -316,27 +316,28 @@ const Layout15: React.FC = () => {
     
             <SubTitle
               className="animate__animated animate__fadeInDown animate__slow animate__delay-2s"
-              sx={{ fontSize: "10px", fontWeight: "600" }}
+              sx={{ fontSize: "12px", fontWeight: "600", width: "300px" }}
               dangerouslySetInnerHTML={{
-                __html: item?.location!,
+                __html: "De Majlis Event space B-6-7 Block B, Jalan Ostia Utama, Ostia Bangi Bussiness Park, 43650 Bandar Baru Bangi, Selangor",
               }}
             />
             <Box
               justifyContent="center"
               gap={1}
-              my={1}
+              sx={{ width: "100%", textWrap: "nowrap"}}
+              mt={2}
               className="animate__animated animate__fadeInDown animate__slow animate__delay-3s"
             >
               <SubTitle
                 sx={{  fontSize: "14px", fontWeight: "600" }}
                 dangerouslySetInnerHTML={{
-                  __html: "15 Jun 2024 | Ahad",
+                  __html: "<span style='font-size: 32px;'>6</span> Oktober <span style='font-size: 24px;'>2024</span> <br><span style='font-size: 16px;'>Ahad</span>",
                 }}
               />
               <SubTitle
                 sx={{  fontSize: "14px", fontWeight: "600" }}
                 dangerouslySetInnerHTML={{
-                  __html: "11am - 5pm",
+                  __html: "11pagi - 5petang",
                 }}
               />
             </Box>
@@ -410,144 +411,45 @@ const Layout15: React.FC = () => {
         <Text
           sx={{ fontSize: "14px", mt: 6,  }}
           dangerouslySetInnerHTML={{
-            __html: "<b>ATUR CARA</b> | <i>TENTATIVES</i><br><br>11:00a.m - 4:00p.m",
+            __html: "<b>ATUR CARA</b> | <i>TENTATIVES</i>",
           }}
         />
 
-        <Text
-          sx={{ fontSize: "12px", mt: 2, mb: 1,  }}
-          dangerouslySetInnerHTML={{
-            __html:
-              "<b>Sesi Pertama</b> | <i>First Session</i>",
-          }}
-        />
-        <Box sx={{ display: "inline-flex"}}>
+        <Box mt={1}>
            <Text
-            sx={{ fontSize: "12px", my: 0.5, display: "block", mr: 2, width: "22px" }}
+            sx={{ fontSize: "12px", my: 0.5, display: "block", mr: 2 }}
             dangerouslySetInnerHTML={{
               __html:
-                "<b>11:00</b>",
+                "<b>11am-4pm</b>",
             }}
           />
           <Text
-            sx={{ fontSize: "12px", my: 0.5, textAlign: "left", borderLeft: "1px solid #333", paddingLeft: "16px" }}
+            sx={{ fontSize: "12px", my: 0.5, textAlign: "center"}}
             dangerouslySetInnerHTML={{
               __html:
-                "<b>Majlis Resepsi Bermula</b> <br> <i>Start of Wedding Reception</i>",
+                "Jamuan Makan",
             }}
           />
         </Box>
         
-        <Box sx={{ display: "inline-flex"}}>
-          <Text
-            sx={{ fontSize: "12px", my: 0.5, display: "block", mr: 2, width: "22px" }}
+        <Box mt={1}>
+           <Text
+            sx={{ fontSize: "12px", my: 0.5, display: "block", mr: 2 }}
             dangerouslySetInnerHTML={{
               __html:
-                "<b>11:30</b>",
+                "<b>12.30pm</b>",
             }}
           />
           <Text
-          sx={{ fontSize: "12px", my: 0.5,  textAlign: "left", borderLeft: "1px solid #333", paddingLeft: "16px" }}
-          dangerouslySetInnerHTML={{
-            __html:
-              "<b>Ketibaan Pengantin</b> <br> <i>Arrival of Bride & Groom</i>",
-          }}
-        />
+            sx={{ fontSize: "12px", my: 0.5, textAlign: "center"}}
+            dangerouslySetInnerHTML={{
+              __html:
+                "Ketibaan Pengantin",
+            }}
+          />
         </Box>
         
-        <Box sx={{ display: "inline-flex"}}>
-          <Text
-            sx={{ fontSize: "12px", my: 0.5, display: "block", mr: 2, width: "22px" }}
-            dangerouslySetInnerHTML={{
-              __html:
-                "<b>11:45</b>",
-            }}
-          />
-          <Text
-          sx={{ fontSize: "12px", my: 0.5, textAlign: "left", borderLeft: "1px solid #333", paddingLeft: "16px"  }}
-          dangerouslySetInnerHTML={{
-            __html:
-              "<b>Salam Restu <br/>(Ibu bapa & Saudara-mara)</b> <br> <i>Blessings Ceremony <br/>(Parents & Relatives)</i>",
-          }}
-        />
-        </Box>
-
-        <Box sx={{ display: "inline-flex"}}>
-          <Text
-            sx={{ fontSize: "12px", my: 0.5, display: "block", mr: 2, width: "22px" }}
-            dangerouslySetInnerHTML={{
-              __html:
-                "<b>12:45</b>",
-            }}
-          />
-          <Text
-          sx={{ fontSize: "12px", my: 0.5, textAlign: "left", borderLeft: "1px solid #333", paddingLeft: "16px"  }}
-          dangerouslySetInnerHTML={{
-            __html:
-              "<b>Pengantin Rehat</b> <br> <i>Bride & Groom One-hour Break</i>",
-          }}
-        />
-        </Box>
-        
-
-        <Text
-          sx={{ fontSize: "12px", mt: 2, mb:1,  }}
-          dangerouslySetInnerHTML={{
-            __html:
-              "<b>Sesi Kedua</b> | <i>Second Session</i>",
-          }}
-        />
-
-        <Box sx={{ display: "inline-flex"}}>
-          <Text
-            sx={{ fontSize: "12px", my: 0.5, display: "block", mr: 2, width: "22px" }}
-            dangerouslySetInnerHTML={{
-              __html:
-                "<b>13:45</b>",
-            }}
-          />
-          <Text
-          sx={{ fontSize: "12px", my: 0.5, textAlign: "left", borderLeft: "1px solid #333", paddingLeft: "16px"  }}
-          dangerouslySetInnerHTML={{
-            __html:
-              "<b>Ketibaan Semula Pengantin</b> <br> <i>Re-arrival of Bride & Groom</i>",
-          }}
-        />
-        </Box>
-
-        <Box sx={{ display: "inline-flex"}}>
-          <Text
-            sx={{ fontSize: "12px", my: 0.5, display: "block", mr: 2, width: "22px" }}
-            dangerouslySetInnerHTML={{
-              __html:
-                "<b>14:45</b>",
-            }}
-          />
-          <Text
-          sx={{ fontSize: "12px", my: 0.5, textAlign: "left", borderLeft: "1px solid #333", paddingLeft: "16px"  }}
-          dangerouslySetInnerHTML={{
-            __html:
-              "<b>Upacara Memotong Kek</b> <br> <i>Cake Cutting Ceremony</i>",
-          }}
-        />
-        </Box>
-
-         <Box sx={{ display: "inline-flex"}}>
-          <Text
-            sx={{ fontSize: "12px", my: 0.5, display: "block", mr: 2, width: "22px" }}
-            dangerouslySetInnerHTML={{
-              __html:
-                "<b>16:00</b>",
-            }}
-          />
-          <Text
-          sx={{ fontSize: "12px", my: 0.5, textAlign: "left", borderLeft: "1px solid #333", paddingLeft: "16px"  }}
-          dangerouslySetInnerHTML={{
-            __html:
-              "<b>Majlis Bersurai</b> <br> <i> End of Wedding Reception</i>",
-          }}
-        />
-        </Box>     
+             
         </Box>
           </Box>
         </Box>
