@@ -167,7 +167,7 @@ const Layout15: React.FC = () => {
     >
       <Door color="#b45769" {...{ clickOpen, setClickOpen }}>
         <Title
-                    sx={{ color: "#FFF", fontSize: "32px", fontWeight: "100", padding: "0 10px 0 0"}}
+          sx={{ color: "#FFF", fontSize: "24px", fontWeight: "100", padding: "0 30px 0 20px"}}
           dangerouslySetInnerHTML={{
             __html: "Izlin",
           }}
@@ -179,9 +179,15 @@ const Layout15: React.FC = () => {
           }}
         />
         <Title
-            sx={{ color: "#FFF", fontSize: "32px", fontWeight: "100"}}
+            sx={{ color: "#FFF", fontSize: "24px", fontWeight: "100"}}
           dangerouslySetInnerHTML={{
             __html: "Sharul",
+          }}
+        />
+        <Text
+            sx={{ color: "#FFF", fontSize: "12px", fontWeight: "100", marginTop: "12px"}}
+          dangerouslySetInnerHTML={{
+            __html: "BUKA",
           }}
         />
       </Door>
@@ -318,7 +324,7 @@ const Layout15: React.FC = () => {
               className="animate__animated animate__fadeInDown animate__slow animate__delay-2s"
               sx={{ fontSize: "12px", fontWeight: "600", width: "300px" }}
               dangerouslySetInnerHTML={{
-                __html: "De Majlis Event space B-6-7 Block B, Jalan Ostia Utama, Ostia Bangi Bussiness Park, 43650 Bandar Baru Bangi, Selangor",
+                __html: "De Majlis Event space<br>B-6-7 Block B, Jalan Ostia Utama, Ostia Bangi Bussiness Park, 43650 Bandar Baru Bangi, Selangor",
               }}
             />
             <Box
@@ -331,13 +337,7 @@ const Layout15: React.FC = () => {
               <SubTitle
                 sx={{  fontSize: "14px", fontWeight: "600" }}
                 dangerouslySetInnerHTML={{
-                  __html: "<span style='font-size: 32px;'>6</span> Oktober <span style='font-size: 24px;'>2024</span> <br><span style='font-size: 16px;'>Ahad</span>",
-                }}
-              />
-              <SubTitle
-                sx={{  fontSize: "14px", fontWeight: "600" }}
-                dangerouslySetInnerHTML={{
-                  __html: "11pagi - 5petang",
+                  __html: "<span style='font-size: 32px;'>06</span> Oktober <span style='font-size: 24px;'>2024</span> <br><span style='font-size: 16px;'>Ahad</span>",
                 }}
               />
             </Box>
@@ -345,12 +345,21 @@ const Layout15: React.FC = () => {
         </Box>
       </Box>
         <Box
-          my={8}
+          mb={8}
           mx="auto"
           sx={{
             p: { xs: "24px 16px", md: 1 },
           }}
         >
+          <Box sx={{ display: "block", width: "fit-content", margin: "0 auto"}}>
+            <Image
+              src="/media/animation/salam-logo.png"
+              alt="Pulpen Studio Morning in Autumn"
+              width={150}
+              height={150}
+            />
+          </Box>
+
           <SubTitle
             sx={{ mb: 3 }}
             dangerouslySetInnerHTML={{
@@ -366,7 +375,7 @@ const Layout15: React.FC = () => {
           <SubTitle
             sx={{ mb: 3 }}
             dangerouslySetInnerHTML={{
-              __html: locale?.[item?.language!]?.CARD_TEXT,
+              __html: "Dengan segala hormatnya kami menjemput Dato | Datin | Tuan | Puan | Encik | Cik hadir ke majlis perkahwinan puteri kami",
             }}
           />
           <SubTitle
@@ -411,7 +420,7 @@ const Layout15: React.FC = () => {
         <Text
           sx={{ fontSize: "14px", mt: 6,  }}
           dangerouslySetInnerHTML={{
-            __html: "<b>ATUR CARA</b> | <i>TENTATIVES</i>",
+            __html: "<b>ATUR CARA</b>",
           }}
         />
 
@@ -420,14 +429,14 @@ const Layout15: React.FC = () => {
             sx={{ fontSize: "12px", my: 0.5, display: "block", mr: 2 }}
             dangerouslySetInnerHTML={{
               __html:
-                "<b>11am-4pm</b>",
+                "<b>Jamuan Makan</b>",
             }}
           />
           <Text
             sx={{ fontSize: "12px", my: 0.5, textAlign: "center"}}
             dangerouslySetInnerHTML={{
               __html:
-                "Jamuan Makan",
+                "11.00 pagi - 4.00 petang",
             }}
           />
         </Box>
@@ -437,14 +446,14 @@ const Layout15: React.FC = () => {
             sx={{ fontSize: "12px", my: 0.5, display: "block", mr: 2 }}
             dangerouslySetInnerHTML={{
               __html:
-                "<b>12.30pm</b>",
+                "<b>Ketibaan Pengantin</b>",
             }}
           />
           <Text
             sx={{ fontSize: "12px", my: 0.5, textAlign: "center"}}
             dangerouslySetInnerHTML={{
               __html:
-                "Ketibaan Pengantin",
+                "12.30 tengah hari",
             }}
           />
         </Box>
