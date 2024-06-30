@@ -92,7 +92,7 @@ const ContactPopup: React.FC<ContactPopupProps> = ({
               <a
               style={{ marginRight: "16px", color: "#08c454", textDecoration: "none", border: "1px solid #08c454", padding: "4px 12px",  borderRadius: "8px" }}
                 target="__blank"
-                href={`https://line.me/ti/p/fhK7_3ct4Z`}
+                href={`https://line.me/ti/p/Uc_Zb2Ygqt`}
               >
                 LINE
               </a>
