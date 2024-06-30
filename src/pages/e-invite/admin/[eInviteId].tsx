@@ -17,6 +17,9 @@ const EinviteAdmin: React.FC<EinviteAdminProps> = () => {
   const eInviteId = router.query.eInviteId;
   const { data } = useGetEinvite(eInviteId as string);
 
+  console.log("xxx auth", eInviteId);
+  console.log("xxx uid", data);
+
   if (auth !== data?.userId)
     return (
       <BoxContainer>

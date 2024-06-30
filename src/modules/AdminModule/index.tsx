@@ -60,12 +60,6 @@ const AdminModule: React.FC<AdminModuleProps> = ({ data }) => {
         <Box id="rsvp">
           <Box>
             <p style={{ marginTop: "8px" }}>
-              Total Respondant :{" "}
-              <span style={{ fontSize: "18px", fontWeight: "700" }}>
-                {rsvpData?.length!}
-              </span>
-            </p>
-            <p style={{ marginTop: "8px" }}>
               Adult Pax :{" "}
               <span style={{ fontSize: "18px", fontWeight: "700" }}>
                 {adultPax}
@@ -91,6 +85,7 @@ const AdminModule: React.FC<AdminModuleProps> = ({ data }) => {
                   <TableRow>
                     <TableCell>Name</TableCell>
                     <TableCell>Phone Number</TableCell>
+                    <TableCell>Attendane</TableCell>
                     <TableCell>Adult Pax</TableCell>
                     <TableCell>Kid Pax</TableCell>
                     <TableCell>Guest side</TableCell>
@@ -101,6 +96,7 @@ const AdminModule: React.FC<AdminModuleProps> = ({ data }) => {
                     <TableRow key={idx}>
                       <TableCell>{item?.name}</TableCell>
                       <TableCell>{item?.phoneNumber}</TableCell>
+                      <TableCell sx={{ background : item?.attendance === "true" ? "green" : "red" }}>{item?.attendance === "true" ? "Attend" : "Not Attend"}</TableCell>
                       <TableCell>
                         {item?.attendance === "true" ? item?.pax : "N/A"}
                       </TableCell>
