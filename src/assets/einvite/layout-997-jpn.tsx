@@ -528,7 +528,7 @@ const Layout997jpn: React.FC = () => {
           sx={{ fontSize: "12px", my: 0.5, color: "#ac6e29" , textAlign: "left" }}
           dangerouslySetInnerHTML={{
             __html:
-              "<b>開場•披露宴開始</b> <br> <i>Start of Wedding Reception</i>",
+              "<b>開場・披露宴開始</b> <br> <i>Start of Wedding Reception</i>",
           }}
         />
         </Box>
@@ -606,7 +606,7 @@ const Layout997jpn: React.FC = () => {
               sx={{ fontSize: "12px", my: 0.5, color: "#ac6e29", display: "block", mr: 2, textAlign: "left" }}
               dangerouslySetInnerHTML={{
                 __html:
-                  "*当日の都合により予定が前後することをご了承頂きますと幸いです。",
+                  "*当日の都合により予定が前後することをご了<br>承頂きますと幸いです。",
               }}
             />
         </Box>     
