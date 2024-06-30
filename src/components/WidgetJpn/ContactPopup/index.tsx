@@ -78,7 +78,7 @@ const ContactPopup: React.FC<ContactPopupProps> = ({
               <a
                 style={{ marginRight: "16px", color: "#08c454", textDecoration: "none", border: "1px solid #08c454", padding: "4px 12px",  borderRadius: "8px" }}
                 target="__blank"
-                href={`https://api.whatsapp.com/send?phone=6${contact?.number1}&text=Hi%20%2C%20saya%20datang%20dari%20e-invite%20!%20`}
+                href={`https://line.me/ti/p/fhK7_3ct4Z`}
               >
                 LINE
               </a>
@@ -92,7 +92,7 @@ const ContactPopup: React.FC<ContactPopupProps> = ({
               <a
               style={{ marginRight: "16px", color: "#08c454", textDecoration: "none", border: "1px solid #08c454", padding: "4px 12px",  borderRadius: "8px" }}
                 target="__blank"
-                href={`https://api.whatsapp.com/send?phone=6${contact?.number2}&text=Hi%20%2C%20saya%20datang%20dari%20e-invite%20!%20`}
+                href={`https://line.me/ti/p/fhK7_3ct4Z`}
               >
                 LINE
               </a>
