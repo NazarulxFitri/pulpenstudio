@@ -107,19 +107,24 @@ const RsvpForm: React.FC<RsvpFormProps> = ({
   return (
     <Box>
       <FormGroup>
-        <FormControlLabel
-          control={
-            <Android12Switch
-              sx={{ m: 1 }}
-              onChange={(e) => setAttendance(e.target.checked)}
-            />
-          }
-          label={
-            <p style={{ color: "#909090", fontSize: "12px" }}>
-              {textAttendance} | Attendance
-            </p>
-          }
-        />
+        <Box display='flex'>
+          <p style={{ color: "#909090", fontSize: "12px" }}>
+           Tidak Hadir | <i>Not Attend</i>
+          </p>
+          {/* @ts-ignore */}
+          <FormControlLabel
+          sx={{ width: "fit-content"}}
+            control={
+              <Android12Switch
+                sx={{ m: 1 }}
+                onChange={(e) => setAttendance(e.target.checked)}
+              />
+            }
+          />
+          <p style={{ color: "#909090", fontSize: "12px", display: "block", marginLeft: "-24px" }}>
+           Hadir | <i>Attend</i>
+          </p>
+        </Box>
         <Input
           fullWidth
           placeholder="Ahmad Judika"
