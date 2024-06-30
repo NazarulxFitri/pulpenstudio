@@ -72,7 +72,7 @@ const ContactPopup: React.FC<ContactPopupProps> = ({
         <Box sx={{ textAlign: "left", p: "0 16px" }}>
           <Box sx={{ color: "#333", display: "flex" }}>
             <p>
-              {contact?.name1} - {contact?.number1}
+              {contact?.name1} {contact?.number1}
             </p>
             <Box sx={{ m: "0 0 0 auto" }}>
               <a
@@ -86,7 +86,7 @@ const ContactPopup: React.FC<ContactPopupProps> = ({
           </Box>
           <Box mt={2} sx={{ color: "#333", display: "flex" }}>
             <p>
-              {contact?.name2} - {contact?.number2}
+              {contact?.name2} {contact?.number2}
             </p>
             <Box sx={{ m: "0 0 0 auto" }}>
               <a
