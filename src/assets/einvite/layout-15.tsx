@@ -324,7 +324,7 @@ const Layout15: React.FC = () => {
               className="animate__animated animate__fadeInDown animate__slow animate__delay-2s"
               sx={{ fontSize: "12px", fontWeight: "600", width: "300px" }}
               dangerouslySetInnerHTML={{
-                __html: "De Majlis Event space<br>B-6-7 Block B, Jalan Ostia Utama, Ostia Bangi Bussiness Park, 43650 Bandar Baru Bangi, Selangor",
+                __html: "<span style='font-weight: 500'><i>Lokasi</i></span><br>De Majlis Event space<br>B-6-7 Block B, Jalan Ostia Utama, Ostia Bangi Bussiness Park, 43650 Bandar Baru Bangi, Selangor",
               }}
             />
             <Box
@@ -420,7 +420,7 @@ const Layout15: React.FC = () => {
         <Text
           sx={{ fontSize: "14px", mt: 6,  }}
           dangerouslySetInnerHTML={{
-            __html: "<b>ATUR CARA</b>",
+            __html: "<b>ATUR CARA MAJLIS</b>",
           }}
         />
 

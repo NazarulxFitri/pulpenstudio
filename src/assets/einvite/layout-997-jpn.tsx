@@ -508,14 +508,14 @@ const Layout997jpn: React.FC = () => {
           }}
         />
 
-        <Box id="delay-18s" sx={{ textAlign: "left", padding: "0 30px"}}>
+        <Box id="delay-18s" sx={{ textAlign: "left"}}>
         <Text
           sx={{ fontSize: "14px", mt: 6, color: "#ac6e29" }}
           dangerouslySetInnerHTML={{
             __html: "<b>開催時間</b> | <i>TENTATIVES</i><br><br>11:30a.m - 4:00p.m<br><br>",
           }}
         />
-        
+        <Box sx={{ p: "0 48px"}}>
         <Box sx={{ display: "inline-flex"}}>
           <Text
             sx={{ fontSize: "12px", my: 0.5, color: "#ac6e29", display: "block", mr: 2 }}
@@ -600,13 +600,14 @@ const Layout997jpn: React.FC = () => {
           }}
         />
         </Box>  
+        </Box>
 
-        <Box sx={{ display: "inline-flex"}} mt={1}>
+        <Box sx={{ display: "inline-flex"}} mt={1} px={3}>
             <Text
               sx={{ fontSize: "12px", my: 0.5, color: "#ac6e29", display: "block", mr: 2, textAlign: "left" }}
               dangerouslySetInnerHTML={{
                 __html:
-                  "*当日の都合により予定が前後することをご了<br>承頂きますと幸いです。",
+                  "*当日の都合により予定が前後することをご了承<br>頂きますと幸いです。",
               }}
             />
         </Box>     
