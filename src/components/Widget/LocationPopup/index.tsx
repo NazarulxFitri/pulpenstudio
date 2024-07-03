@@ -1,4 +1,3 @@
-import CommentForm from "@/components/Forms/CommentForm";
 import CloseIcon from "@/components/Icons/CloseIcon";
 import MapIcon from "@/components/Icons/MapIcon";
 import { Box } from "@mui/material";
@@ -15,6 +14,7 @@ interface LocationPopupProps {
   setCommentPopup: (value: boolean) => void;
   setLocationPopup: (value: boolean) => void;
   setContactPopup: (value: boolean) => void;
+  setGiftPopup: (value: boolean) => void;
 }
 
 const LocationPopup: React.FC<LocationPopupProps> = ({
@@ -26,6 +26,7 @@ const LocationPopup: React.FC<LocationPopupProps> = ({
   setCommentPopup,
   setLocationPopup,
   setContactPopup,
+  setGiftPopup,
 }) => {
   return (
     <Box
@@ -57,6 +58,7 @@ const LocationPopup: React.FC<LocationPopupProps> = ({
               setCommentPopup(false);
               setContactPopup(false);
               setLocationPopup(false);
+              setGiftPopup(false)
             }}
           >
             <CloseIcon color="#333" />

@@ -595,6 +595,7 @@ const Layout997: React.FC = () => {
 
       <Box>
         <Widget
+          showGift={true}
           hideRsvp={false}
           hideEdit={false}
           language={item?.language!}

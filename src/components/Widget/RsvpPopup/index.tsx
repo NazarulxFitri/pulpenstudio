@@ -14,6 +14,7 @@ interface RsvpPopupProp {
   setCommentPopup: (value: boolean) => void;
   setLocationPopup: (value: boolean) => void;
   setContactPopup: (value: boolean) => void;
+  setGiftPopup: (value: boolean) => void;
 }
 
 const RsvpPopup: React.FC<RsvpPopupProp> = ({
@@ -27,6 +28,7 @@ const RsvpPopup: React.FC<RsvpPopupProp> = ({
   setCommentPopup,
   setLocationPopup,
   setContactPopup,
+  setGiftPopup,
 }) => {
   return (
     <Box
@@ -58,6 +60,7 @@ const RsvpPopup: React.FC<RsvpPopupProp> = ({
               setCommentPopup(false);
               setContactPopup(false);
               setLocationPopup(false);
+              setGiftPopup(false);
             }}
           >
             <CloseIcon color="#333" />

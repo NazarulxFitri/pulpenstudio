@@ -10,8 +10,11 @@ import { locale } from "@/utils/Locale";
 import RsvpIcon from "../Icons/RsvpIcon";
 import RsvpPopup from "./RsvpPopup";
 import PhoneIcon from "../Icons/PhoneIcon";
+import GiftIcon from "../Icons/GiftIcon";
+import GiftPopup from "./GiftPopup";
 
 interface WidgetProps {
+  showGift?: boolean;
   includePhoneNumber?: boolean;
   includeOrigin?: boolean;
   hideRsvp?: boolean;
@@ -36,6 +39,7 @@ interface WidgetProps {
 }
 
 const Widget: React.FC<WidgetProps> = ({
+  showGift,
   includePhoneNumber,
   includeOrigin,
   language,
@@ -50,6 +54,7 @@ const Widget: React.FC<WidgetProps> = ({
   const [locationPopup, setLocationPopup] = useState(false);
   const [contactPopup, setContactPopup] = useState(false);
   const [rsvpPopup, setRsvpPopup] = useState(false);
+  const [giftPopup, setGiftPopup] = useState(false);
 
   const offsetSize = hideRsvp && hideEdit ? 3 : hideRsvp && !hideEdit ? 1.5 : 0;
 
@@ -58,12 +63,14 @@ const Widget: React.FC<WidgetProps> = ({
       setRsvpPopup(true);
       setCommentPopup(false);
       setLocationPopup(false);
+      setGiftPopup(false);
       setContactPopup(false);
     }
     if (item === "comment") {
       setRsvpPopup(false);
       setCommentPopup(true);
       setLocationPopup(false);
+      setGiftPopup(false);
       setContactPopup(false);
     }
 
@@ -71,6 +78,7 @@ const Widget: React.FC<WidgetProps> = ({
       setRsvpPopup(false);
       setCommentPopup(false);
       setLocationPopup(true);
+      setGiftPopup(false);
       setContactPopup(false);
     }
 
@@ -78,7 +86,16 @@ const Widget: React.FC<WidgetProps> = ({
       setRsvpPopup(false);
       setCommentPopup(false);
       setLocationPopup(false);
+      setGiftPopup(false);
       setContactPopup(true);
+    }
+
+    if (item === "gift") {
+      setRsvpPopup(false);
+      setCommentPopup(false);
+      setLocationPopup(false);
+      setContactPopup(false);
+      setGiftPopup(true);
     }
   }
 
@@ -109,6 +126,7 @@ const Widget: React.FC<WidgetProps> = ({
             setCommentPopup,
             setLocationPopup,
             setContactPopup,
+            setGiftPopup,
             includePhoneNumber,
             includeOrigin
           }}
@@ -125,6 +143,7 @@ const Widget: React.FC<WidgetProps> = ({
             setCommentPopup,
             setLocationPopup,
             setContactPopup,
+            setGiftPopup,
           }}
         />
       )}
@@ -139,6 +158,7 @@ const Widget: React.FC<WidgetProps> = ({
             setCommentPopup,
             setLocationPopup,
             setContactPopup,
+            setGiftPopup,
           }}
         />
       )}
@@ -153,6 +173,21 @@ const Widget: React.FC<WidgetProps> = ({
             setCommentPopup,
             setLocationPopup,
             setContactPopup,
+            setGiftPopup,
+          }}
+        />
+      )}
+      {giftPopup && (
+        <GiftPopup
+          title={"Gift"}
+          {...{
+            iconColor,
+            color,
+            setRsvpPopup,
+            setCommentPopup,
+            setLocationPopup,
+            setContactPopup,
+            setGiftPopup,
           }}
         />
       )}
@@ -160,7 +195,7 @@ const Widget: React.FC<WidgetProps> = ({
       <Grid item xs={offsetSize} />
 
       {!hideRsvp && (
-        <Grid item xs={3}>
+        <Grid item xs>
           <Box onClick={() => handleClick("rsvp")}>
             <RsvpIcon />
           </Box>
@@ -168,24 +203,32 @@ const Widget: React.FC<WidgetProps> = ({
       )}
 
       {!hideEdit && (
-        <Grid item xs={3}>
+        <Grid item xs>
           <Box onClick={() => handleClick("comment")}>
             <PenIcon />
           </Box>
         </Grid>
       )}
 
-      <Grid item xs={3}>
+      <Grid item xs>
         <Box onClick={() => handleClick("location")}>
           <MapIcon />
         </Box>
       </Grid>
 
-      <Grid item xs={3}>
+      <Grid item xs>
         <Box onClick={() => handleClick("contact")}>
           <PhoneIcon />
         </Box>
       </Grid>
+
+      {showGift && 
+        <Grid item xs>
+          <Box onClick={() => handleClick("gift")}>
+            <GiftIcon />
+          </Box>
+        </Grid>
+      }
     </Grid>
   );
 };
