@@ -330,17 +330,17 @@ const Layout997: React.FC = () => {
 
         <Text
           id="delay-18s"
-          sx={{ fontSize: "12px", mt: 0.5, color: "#ac6e29" }}
+          sx={{ fontSize: "20px", mt: 0.5, color: "#ac6e29" }}
           dangerouslySetInnerHTML={{
-            __html: "<b>AHAD</b> | <i>SUNDAY</i>",
+            __html: "18.08.2024",
           }}
         />
 
         <Text
           id="delay-18s"
-          sx={{ fontSize: "20px", mt: 0.5, color: "#ac6e29" }}
+          sx={{ fontSize: "12px", mt: 0.5, color: "#ac6e29" }}
           dangerouslySetInnerHTML={{
-            __html: "18.08.2024",
+            __html: "<b>AHAD</b> | <i>SUNDAY</i>",
           }}
         />
 
@@ -442,7 +442,7 @@ const Layout997: React.FC = () => {
         <Text
           sx={{ fontSize: "12px", mt: 6, color: "#ac6e29" }}
           dangerouslySetInnerHTML={{
-            __html: "<b>ATUR CARA</b> | <i>TENTATIVES</i><br><br>11:30a.m - 4:00p.m<br><br>",
+            __html: "<b>ATUR CARA</b> | <i>TENTATIVES</i><br><br><span style='font-size: 16px; font-weight: 500'>11:30a.m - 4:00p.m</span><br><br>",
           }}
         />
 
@@ -502,7 +502,7 @@ const Layout997: React.FC = () => {
             sx={{ fontSize: "12px", my: 0.5, color: "#ac6e29", display: "block", mr: 2 }}
             dangerouslySetInnerHTML={{
               __html:
-                "<b>13:20 <br>~13:45</b>",
+                "<b>13:20 <br>~<br>13:45</b>",
             }}
           />
           <Text
@@ -595,6 +595,7 @@ const Layout997: React.FC = () => {
 
       <Box>
         <Widget
+          includeOrigin={true}
           showGift={true}
           hideRsvp={false}
           hideEdit={false}

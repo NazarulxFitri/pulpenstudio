@@ -207,7 +207,7 @@ const RsvpForm: React.FC<RsvpFormProps> = ({
                 mt: 2,
               }}
               value={pax}
-              label={"Pax dewasa | Adult pax"}
+              label={"Bil dewasa | Adult pax"}
               type="number"
               onChange={(e) => setPax(+e.target.value)}
               InputLabelProps={{
@@ -226,7 +226,7 @@ const RsvpForm: React.FC<RsvpFormProps> = ({
                 mt: 2,
               }}
               value={kidPax}
-              label={"Pax kanak-kanak | Kids pax"}
+              label={"Bil kanak-kanak | Kids pax (Under 12)"}
               type="number"
               onChange={(e) => setKidPax(+e.target.value)}
               InputLabelProps={{
