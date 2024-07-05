@@ -169,7 +169,7 @@ const Layout15: React.FC = () => {
         <Title
           sx={{ color: "#FFF", fontSize: "24px", fontWeight: "100", padding: "0 30px 0 20px"}}
           dangerouslySetInnerHTML={{
-            __html: "Izlin",
+            __html: "Asyiqin",
           }}
         />
          <Title
@@ -181,7 +181,7 @@ const Layout15: React.FC = () => {
         <Title
             sx={{ color: "#FFF", fontSize: "24px", fontWeight: "100"}}
           dangerouslySetInnerHTML={{
-            __html: "Sharul",
+            __html: "Asyraf",
           }}
         />
         <Text
@@ -310,13 +310,13 @@ const Layout15: React.FC = () => {
               <Title
                 sx={{ color: "#b45769", fontSize: "48px", textWrap: "nowrap", textShadow: "1px 1px 6px white"}}
                 className="animate__animated animate__fadeInDown animate__slow animate__delay-1s"
-                dangerouslySetInnerHTML={{ __html: "Izlin" }}
+                dangerouslySetInnerHTML={{ __html: "Asyiqin" }}
               />
               <Title dangerouslySetInnerHTML={{ __html: "&" }} sx={{ my: 2, color: "#b45769", fontWeight: "light", fontSize: "20px", textShadow: "1px 1px 6px white" }} />
               <Title
                 sx={{ color: "#b45769",  fontSize: "48px", textWrap: "nowrap", textShadow: "1px 1px 6px white"}}
                 className="animate__animated animate__fadeInDown animate__slow animate__delay-1s"
-                dangerouslySetInnerHTML={{ __html: "Sharul" }}
+                dangerouslySetInnerHTML={{ __html: "Asyraf" }}
               />
             </Box>
     
