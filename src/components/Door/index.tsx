@@ -29,7 +29,9 @@ const Door: React.FC<DoorProps> = ({
           className={clickOpen ? "animate__animated animate__slideOutLeft" : ""}
           id="left-door"
           sx={{
-            background: !specialBg ? "" : "#FFF",
+            background: specialBg ? "" : "#FFF",
+            backgroundImage: specialBg ? "url('/media/animation/layout-995-bg.png')" : "",
+            backgroundSize: "contain",
             width: "50%",
             height: "100vh",
             zIndex: "2",
@@ -41,7 +43,9 @@ const Door: React.FC<DoorProps> = ({
           }
           id="right-door"
           sx={{
-            background: doorMainColor || "#FFF",
+            background: specialBg ? "" : "#FFF",
+            backgroundImage: specialBg ? "url('/media/animation/layout-995-bg.png')" : "",
+            backgroundSize: "contain",
             boxShadow: "-10px 0px 20px #D0D0D0",
             width: "50%",
             height: "100vh",
