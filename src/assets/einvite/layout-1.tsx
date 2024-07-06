@@ -124,7 +124,7 @@ const Layout1: React.FC = () => {
       maxWidth="400px"
       sx={{
         backgroundImage: "url('/media/animation/layout1-background.webp')",
-          backgroundSize: "cover",
+        backgroundSize: "cover",
         boxShadow: "0px -10px 10px #FDE6E8",
         m: "auto",
         position: "relative",
