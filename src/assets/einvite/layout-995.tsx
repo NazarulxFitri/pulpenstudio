@@ -169,7 +169,7 @@ const Layout995: React.FC = () => {
       onTouchStart={() => setMusicStart(true)}
       onClick={() => setMusicStart(true)}
     >
-      <Door color="transparent" {...{ clickOpen, setClickOpen }}>
+      <Door color="transparent" {...{ clickOpen, setClickOpen }} specialBg={true}>
         <Title
           sx={{ fontSize: "24px", textShadow: "1px 1px 10px skyblue"}}
           dangerouslySetInnerHTML={{
@@ -206,11 +206,10 @@ const Layout995: React.FC = () => {
           <source src="/media/animation/video-1.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-        <video width="100%" autoPlay muted style={{ display: "block"}}>
-          <source src="/media/animation/video-2.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
       </Box> 
+      <Box>
+        <Image src="/media/animation/image-2.jpeg" alt="Aiman Hafiz" width={400} height={600} />
+      </Box>
       <Box
           sx={{
             px: 2,

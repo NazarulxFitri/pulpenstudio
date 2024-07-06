@@ -6,6 +6,7 @@ interface DoorProps {
   children: any;
   clickOpen: boolean;
   setClickOpen: (value: boolean) => void;
+  specialBg?: boolean;
 }
 
 const Door: React.FC<DoorProps> = ({
@@ -13,14 +14,13 @@ const Door: React.FC<DoorProps> = ({
   children,
   clickOpen,
   setClickOpen,
-  doorMainColor
+  doorMainColor,
+  specialBg
 }) => {
   return (
     <Box sx={{ position: "absolute", width: "100%", height: "100%" }}>
       <Box
         sx={{
-          // background:
-          //   "linear-gradient(356deg,#fefefe,#f2f2f4 18%,#f1f1f3 45%,#f2f2f2 74%,#f1f1f1)",
           display: "flex",
           position: "relative",
         }}
@@ -29,7 +29,7 @@ const Door: React.FC<DoorProps> = ({
           className={clickOpen ? "animate__animated animate__slideOutLeft" : ""}
           id="left-door"
           sx={{
-            background: "#FFF",
+            background: !specialBg ? "" : "#FFF",
             width: "50%",
             height: "100vh",
             zIndex: "2",
