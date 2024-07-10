@@ -1,5 +1,5 @@
 // Modified layout - 20 Februari 2024 | Hilmi & Nik Iffah
-import { Box, Grid, List, Paper, styled } from "@mui/material";
+import { Box, Grid, List, Paper, styled, Switch, FormControlLabel } from "@mui/material";
 import {
   Baskervville,
   Dancing_Script,
@@ -44,6 +44,39 @@ interface DateTimeConfig {
     s: number;
   };
 }
+
+const Android12Switch = styled(Switch)(({ theme }) => ({
+  padding: 8,
+  "& .MuiSwitch-track": {
+    borderRadius: 22 / 2,
+    "&:before, &:after": {
+      content: '""',
+      position: "absolute",
+      top: "50%",
+      transform: "translateY(-50%)",
+      width: 16,
+      height: 16,
+    },
+    "&:before": {
+      backgroundImage: `url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 24 24"><path fill="${encodeURIComponent(
+        theme.palette.getContrastText(theme.palette.primary.main)
+      )}" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"/></svg>')`,
+      left: 12,
+    },
+    "&:after": {
+      backgroundImage: `url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 24 24"><path fill="${encodeURIComponent(
+        theme.palette.getContrastText(theme.palette.primary.main)
+      )}" d="M19,13H5V11H19V13Z" /></svg>')`,
+      right: 12,
+    },
+  },
+  "& .MuiSwitch-thumb": {
+    boxShadow: "none",
+    width: 16,
+    height: 16,
+    margin: 2,
+  },
+}));
 
 const SubTitle = styled("p")(() => ({
   fontFamily: `${tangerine.style.fontFamily} !important` || "auto",
@@ -118,6 +151,8 @@ const Layout997: React.FC = () => {
   const [musicStart, setMusicStart] = useState(false);
 
   const [clickOpen, setClickOpen] = useState(false);
+  const [showQR, setShowQr] = useState('bride');
+  const [showQrArea, setShowQrArea] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -439,115 +474,165 @@ const Layout997: React.FC = () => {
         />
 
         <Box id="delay-18s" sx={{ textAlign: "left", padding: "0 32px"}}>
-        <Text
-          sx={{ fontSize: "12px", mt: 6, color: "#ac6e29" }}
-          dangerouslySetInnerHTML={{
-            __html: "<b>ATUR CARA</b> | <i>TENTATIVES</i><br><br><span style='font-size: 16px; font-weight: 500'>11:30a.m - 4:00p.m</span><br><br>",
-          }}
-        />
+          <Text
+            sx={{ fontSize: "12px", mt: 6, color: "#ac6e29" }}
+            dangerouslySetInnerHTML={{
+              __html: "<b>ATUR CARA</b> | <i>TENTATIVES</i><br><br><span style='font-size: 16px; font-weight: 500'>11:30a.m - 4:00p.m</span><br><br>",
+            }}
+          />
 
-        <Box sx={{ display: "inline-flex"}}>
-           <Text
-            sx={{ fontSize: "12px", my: 0.5, color: "#ac6e29", display: "block", mr: 2 }}
+          <Box sx={{ display: "inline-flex"}}>
+            <Text
+              sx={{ fontSize: "12px", my: 0.5, color: "#ac6e29", display: "block", mr: 2 }}
+              dangerouslySetInnerHTML={{
+                __html:
+                  "<b>11:30</b>",
+              }}
+            />
+            <Text
+              sx={{ fontSize: "12px", my: 0.5, color: "#ac6e29", textAlign: "left" }}
+              dangerouslySetInnerHTML={{
+                __html:
+                  "<b>Majlis Resepsi Bermula</b> <br> <i> Start of Wedding Reception</i>",
+              }}
+            />
+          </Box>
+          
+          <Box sx={{ display: "inline-flex"}}>
+            <Text
+              sx={{ fontSize: "12px", my: 0.5, color: "#ac6e29", display: "block", mr: 2 }}
+              dangerouslySetInnerHTML={{
+                __html:
+                  "<b>12:30</b>",
+              }}
+            />
+            <Text
+            sx={{ fontSize: "12px", my: 0.5, color: "#ac6e29" , textAlign: "left" }}
             dangerouslySetInnerHTML={{
               __html:
-                "<b>11:30</b>",
+                "<b>Ketibaan Pengantin</b> <br> <i>Arrival of Bride & Groom</i>",
             }}
           />
-          <Text
-            sx={{ fontSize: "12px", my: 0.5, color: "#ac6e29", textAlign: "left" }}
+          </Box>
+          
+          <Box sx={{ display: "inline-flex"}}>
+            <Text
+              sx={{ fontSize: "12px", my: 0.5, color: "#ac6e29", display: "block", mr: 2 }}
+              dangerouslySetInnerHTML={{
+                __html:
+                  "<b>12:45</b>",
+              }}
+            />
+            <Text
+            sx={{ fontSize: "12px", my: 0.5, color: "#ac6e29", textAlign: "left"  }}
             dangerouslySetInnerHTML={{
               __html:
-                "<b>Majlis Resepsi Bermula</b> <br> <i> Start of Wedding Reception</i>",
+                "<b>Bacaan Doa</b> <br> <i>Prayer Recitation</i>",
             }}
           />
-        </Box>
-        
-        <Box sx={{ display: "inline-flex"}}>
-          <Text
-            sx={{ fontSize: "12px", my: 0.5, color: "#ac6e29", display: "block", mr: 2 }}
+          </Box>
+
+          <Box sx={{ display: "inline-flex"}}>
+            <Text
+              sx={{ fontSize: "12px", my: 0.5, color: "#ac6e29", display: "block", mr: 2 }}
+              dangerouslySetInnerHTML={{
+                __html:
+                  "<b>13:20 <br>~<br>13:45</b>",
+              }}
+            />
+            <Text
+            sx={{ fontSize: "12px", my: 0.5, color: "#ac6e29", textAlign: "left"  }}
             dangerouslySetInnerHTML={{
               __html:
-                "<b>12:30</b>",
+                "<b>Pengantin Keluar untuk Solat Zohor</b> <br> <i>Bride & Groom Leaves for Zuhr Prayer</i>",
             }}
           />
-          <Text
-          sx={{ fontSize: "12px", my: 0.5, color: "#ac6e29" , textAlign: "left" }}
-          dangerouslySetInnerHTML={{
-            __html:
-              "<b>Ketibaan Pengantin</b> <br> <i>Arrival of Bride & Groom</i>",
-          }}
-        />
-        </Box>
-        
-        <Box sx={{ display: "inline-flex"}}>
-          <Text
-            sx={{ fontSize: "12px", my: 0.5, color: "#ac6e29", display: "block", mr: 2 }}
+          </Box>
+
+          <Box sx={{ display: "inline-flex"}}>
+            <Text
+              sx={{ fontSize: "12px", my: 0.5, color: "#ac6e29", display: "block", mr: 2 }}
+              dangerouslySetInnerHTML={{
+                __html:
+                  "<b>14:30</b>",
+              }}
+            />
+            <Text
+            sx={{ fontSize: "12px", my: 0.5, color: "#ac6e29", textAlign: "left"  }}
             dangerouslySetInnerHTML={{
               __html:
-                "<b>12:45</b>",
+                "<b>Upacara Memotong Kek</b> <br> <i>Cake Cutting Ceremony</i>",
             }}
           />
-          <Text
-          sx={{ fontSize: "12px", my: 0.5, color: "#ac6e29", textAlign: "left"  }}
-          dangerouslySetInnerHTML={{
-            __html:
-              "<b>Bacaan Doa</b> <br> <i>Prayer Recitation</i>",
-          }}
-        />
+          </Box>
+
+          <Box sx={{ display: "inline-flex"}}>
+            <Text
+              sx={{ fontSize: "12px", my: 0.5, color: "#ac6e29", display: "block", mr: 2 }}
+              dangerouslySetInnerHTML={{
+                __html:
+                  "<b>16:00</b>",
+              }}
+            />
+            <Text
+            sx={{ fontSize: "12px", my: 0.5, color: "#ac6e29", textAlign: "left"  }}
+            dangerouslySetInnerHTML={{
+              __html:
+                "<b>Majlis Bersurai</b> <br> <i>End of Wedding Reception</i>",
+            }}
+          />
+          </Box>
         </Box>
 
-        <Box sx={{ display: "inline-flex"}}>
+        <Box sx={{ mt: 6, mb: 4, mx: 3}} id="delay-18s">
           <Text
-            sx={{ fontSize: "12px", my: 0.5, color: "#ac6e29", display: "block", mr: 2 }}
+            sx={{ fontSize: "12px", color: "#ac6e29", textAlign: "justify"  }}
             dangerouslySetInnerHTML={{
               __html:
-                "<b>13:20 <br>~<br>13:45</b>",
+                "<b>Para tetamu yang kami hormati,<br>Kehadiran Tuan/Puan sendiri adalah anugerah buat kami. Namun, sekiranya Tuan/Puan bermurah hati untuk memberi kami hadiah, sudilah kiranya diberi dalam bentuk wang tunai, memandangkan kami akan terus menetap di Jepun selepas ini.</b>",
             }}
           />
           <Text
-          sx={{ fontSize: "12px", my: 0.5, color: "#ac6e29", textAlign: "left"  }}
-          dangerouslySetInnerHTML={{
-            __html:
-              "<b>Pengantin Keluar untuk Solat Zohor</b> <br> <i>Bride & Groom Leaves for Zuhr Prayer</i>",
-          }}
-        />
-        </Box>
+            sx={{ fontSize: "12px", color: "#ac6e29", textAlign: "justify", mt: 2  }}
+            dangerouslySetInnerHTML={{
+              __html:
+                "<i>Dear guests, <br>Your presence at our wedding is a gift in itself. However, if you wish to honour us with a gift, as we will continue living in Japan from now on, a cash gift would be very welcome.</i>",
+            }}
+          />
+          <Box onClick={() => setShowQrArea(true)} mt={3} mb={1}>
+            <Text
+            sx={{ fontSize: "12px", color: "#ac6e29", mt: 2, textAlign: "center"  }}
+            dangerouslySetInnerHTML={{
+              __html:
+                "<b>TUNJUK QR </b> | <i>SHOW QR</i>",
+            }}
+            />
+          </Box>
+          
+          <Box sx={{ display: showQrArea ? "block" : "none"}}>
+            <Box display='flex'>
+              <p style={{ color: "#ac6e29", fontSize: "12px" }}>
+              <b>Pihak Perempuan</b> | <i>Bride's side</i>
+              </p>
+              {/* @ts-ignore */}
+              <FormControlLabel
+              sx={{ width: "fit-content"}}
+                control={
+                  <Android12Switch
+                    sx={{ m: 1 }}
+                    onChange={(e) => showQR === "bride" ? setShowQr("groom") : setShowQr("bride")}
+                  />
+                }
+              />
+              <p style={{ color: "#ac6e29", fontSize: "12px", display: "block", marginLeft: "-24px" }}>
+                <b>Pihak Lelaki</b> | <i>Grooms's side</i>
+              </p>
+            </Box>
 
-        <Box sx={{ display: "inline-flex"}}>
-          <Text
-            sx={{ fontSize: "12px", my: 0.5, color: "#ac6e29", display: "block", mr: 2 }}
-            dangerouslySetInnerHTML={{
-              __html:
-                "<b>14:30</b>",
-            }}
-          />
-          <Text
-          sx={{ fontSize: "12px", my: 0.5, color: "#ac6e29", textAlign: "left"  }}
-          dangerouslySetInnerHTML={{
-            __html:
-              "<b>Upacara Memotong Kek</b> <br> <i>Cake Cutting Ceremony</i>",
-          }}
-        />
-        </Box>
-
-        <Box sx={{ display: "inline-flex"}}>
-          <Text
-            sx={{ fontSize: "12px", my: 0.5, color: "#ac6e29", display: "block", mr: 2 }}
-            dangerouslySetInnerHTML={{
-              __html:
-                "<b>16:00</b>",
-            }}
-          />
-          <Text
-          sx={{ fontSize: "12px", my: 0.5, color: "#ac6e29", textAlign: "left"  }}
-          dangerouslySetInnerHTML={{
-            __html:
-              "<b>Majlis Bersurai</b> <br> <i>End of Wedding Reception</i>",
-          }}
-        />
-        </Box>
-    
+            <Box sx={{ textAlign: "center", mt: 2}} >
+              <Image src={showQR === "bride" ? "/media/animation/QR_PENGANTIN_PEREMPUAN.jpeg" : "/media/animation/QR_PENGANTIN_LELAKI.jpeg"} alt="Nik Iffah" width={260} height={400} />
+            </Box>
+          </Box>
         </Box>
 
         <Box
@@ -596,7 +681,6 @@ const Layout997: React.FC = () => {
       <Box>
         <Widget
           includeOrigin={true}
-          showGift={true}
           hideRsvp={false}
           hideEdit={false}
           language={item?.language!}
