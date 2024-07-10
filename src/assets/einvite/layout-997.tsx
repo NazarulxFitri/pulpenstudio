@@ -612,7 +612,7 @@ const Layout997: React.FC = () => {
           <Box sx={{ display: showQrArea ? "block" : "none"}}>
             <Box display='flex'>
               <p style={{ color: "#ac6e29", fontSize: "12px" }}>
-              <b>Pihak Perempuan</b> | <i>Bride's side</i>
+              <b>Pihak Perempuan</b> | <i>Bride&apos;s side</i>
               </p>
               {/* @ts-ignore */}
               <FormControlLabel
@@ -625,7 +625,7 @@ const Layout997: React.FC = () => {
                 }
               />
               <p style={{ color: "#ac6e29", fontSize: "12px", display: "block", marginLeft: "-24px" }}>
-                <b>Pihak Lelaki</b> | <i>Grooms's side</i>
+                <b>Pihak Lelaki</b> | <i>Grooms&apos;s side</i>
               </p>
             </Box>
 
