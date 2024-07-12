@@ -49,7 +49,7 @@ const Special = styled("p")(() => ({
 const Title = styled("h1")(() => ({
   color: "#a96b4e",
   lineHeight: "0.75em",
-  fontFamily: `${greatVibes.style.fontFamily} !important` || "auto",
+  fontFamily: `${allura.style.fontFamily} !important` || "auto",
   fontSize: "36px",
   textAlign: "center",
   fontWeight: "lighter",
@@ -167,7 +167,7 @@ const Layout15: React.FC = () => {
     >
       <Door color="#b45769" {...{ clickOpen, setClickOpen }}>
         <Title
-          sx={{ color: "#FFF", fontSize: "24px", fontWeight: "100", padding: "0 30px 0 20px"}}
+          sx={{ color: "#FFF", fontSize: "32px", fontWeight: "100", padding: "0 30px 0 20px"}}
           dangerouslySetInnerHTML={{
             __html: "Asyiqin",
           }}
@@ -179,7 +179,7 @@ const Layout15: React.FC = () => {
           }}
         />
         <Title
-            sx={{ color: "#FFF", fontSize: "24px", fontWeight: "100"}}
+            sx={{ color: "#FFF", fontSize: "32px", fontWeight: "100"}}
           dangerouslySetInnerHTML={{
             __html: "Asyraf",
           }}
@@ -331,13 +331,13 @@ const Layout15: React.FC = () => {
               justifyContent="center"
               gap={1}
               sx={{ width: "100%", textWrap: "nowrap"}}
-              mt={2}
+              mt={3}
               className="animate__animated animate__fadeInDown animate__slow animate__delay-3s"
             >
               <SubTitle
                 sx={{  fontSize: "14px", fontWeight: "600" }}
                 dangerouslySetInnerHTML={{
-                  __html: "<span style='font-size: 32px;'>06</span> Oktober <span style='font-size: 24px;'>2024</span> <br><span style='font-size: 16px;'>Ahad</span>",
+                  __html: "<span style='font-size: 16px;'>Ahad</span><br>06 Oktober 2024<br>3 Rabiulakhir 1446 AH",
                 }}
               />
             </Box>
@@ -381,9 +381,17 @@ const Layout15: React.FC = () => {
           <SubTitle
             sx={{
               fontWeight: "700",
+              mb: 3,
             }}
             dangerouslySetInnerHTML={{
               __html: `${item?.fullNameGroom} <br>&<br> ${item?.fullNameBride}`,
+            }}
+          />
+
+          <SubTitle
+            sx={{ mb: 3 }}
+            dangerouslySetInnerHTML={{
+              __html: "Semoga dengan kehadiran hadirin sekalian akan menyerikan lagi majlis kami dan diberkati Allah S.W.T hendaknya. Sekian, Terima Kasih",
             }}
           />
         </Box>
