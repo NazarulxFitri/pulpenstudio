@@ -544,7 +544,7 @@ const Layout997: React.FC = () => {
             sx={{ fontSize: "12px", my: 0.5, color: "#ac6e29", textAlign: "left"  }}
             dangerouslySetInnerHTML={{
               __html:
-                "<b>Pengantin Keluar untuk Solat Zohor</b> <br> <i>Bride & Groom Leaves for Zuhr Prayer</i>",
+                "<b>Pengantin Keluar untuk Solat Zohor</b> <br> <i>Bride & Groom Leave for Zuhr Prayer</i>",
             }}
           />
           </Box>
@@ -581,57 +581,6 @@ const Layout997: React.FC = () => {
                 "<b>Majlis Bersurai</b> <br> <i>End of Wedding Reception</i>",
             }}
           />
-          </Box>
-        </Box>
-
-        <Box sx={{ mt: 6, mb: 4, mx: 3}} id="delay-18s">
-          <Text
-            sx={{ fontSize: "12px", color: "#ac6e29", textAlign: "justify"  }}
-            dangerouslySetInnerHTML={{
-              __html:
-                "<b>Para tetamu yang kami hormati,<br>Kehadiran Tuan/Puan sendiri adalah anugerah buat kami. Namun, sekiranya Tuan/Puan bermurah hati untuk memberi kami hadiah, sudilah kiranya diberi dalam bentuk wang tunai, memandangkan kami akan terus menetap di Jepun selepas ini.</b>",
-            }}
-          />
-          <Text
-            sx={{ fontSize: "12px", color: "#ac6e29", textAlign: "justify", mt: 2  }}
-            dangerouslySetInnerHTML={{
-              __html:
-                "<i>Dear guests, <br>Your presence at our wedding is a gift in itself. However, if you wish to honour us with a gift, as we will continue living in Japan from now on, a cash gift would be very welcome.</i>",
-            }}
-          />
-          <Box onClick={() => setShowQrArea(true)} mt={3} mb={1}>
-            <Text
-            sx={{ fontSize: "12px", color: "#ac6e29", mt: 2, textAlign: "center"  }}
-            dangerouslySetInnerHTML={{
-              __html:
-                "<b>TUNJUK QR </b> | <i>SHOW QR</i>",
-            }}
-            />
-          </Box>
-          
-          <Box sx={{ display: showQrArea ? "block" : "none"}}>
-            <Box display='flex'>
-              <p style={{ color: "#ac6e29", fontSize: "12px" }}>
-              <b>Pihak Perempuan</b> | <i>Bride&apos;s side</i>
-              </p>
-              {/* @ts-ignore */}
-              <FormControlLabel
-              sx={{ width: "fit-content"}}
-                control={
-                  <Android12Switch
-                    sx={{ m: 1 }}
-                    onChange={(e) => showQR === "bride" ? setShowQr("groom") : setShowQr("bride")}
-                  />
-                }
-              />
-              <p style={{ color: "#ac6e29", fontSize: "12px", display: "block", marginLeft: "-24px" }}>
-                <b>Pihak Lelaki</b> | <i>Grooms&apos;s side</i>
-              </p>
-            </Box>
-
-            <Box sx={{ textAlign: "center", mt: 2}} >
-              <Image src={showQR === "bride" ? "/media/animation/QR_PENGANTIN_PEREMPUAN.jpeg" : "/media/animation/QR_PENGANTIN_LELAKI.jpeg"} alt="Nik Iffah" width={260} height={400} />
-            </Box>
           </Box>
         </Box>
 
