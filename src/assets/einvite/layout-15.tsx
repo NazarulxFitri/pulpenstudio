@@ -230,7 +230,7 @@ const Layout15: React.FC = () => {
             sx={{
             position: "absolute",
               bottom: "80px",
-              right: "-80px",
+              right: "-100px",
               transform: "scaleX(-1)",
               opacity: "0.8",
               zIndex:"1",
@@ -247,7 +247,7 @@ const Layout15: React.FC = () => {
             sx={{
             position: "absolute",
               bottom: "0",
-              left: "-60px",
+              left: "-80px",
               opacity: "0.8",
               zIndex:"1",
             }}
@@ -284,7 +284,7 @@ const Layout15: React.FC = () => {
             top: "50%",
             left: "50%",
             transform: "translate(-50%,-50%)",
-            marginTop: "-30px",
+            marginTop: "-40px",
             height: "70%",
             width: "80%",
             border: "1px solid #b45769",
