@@ -90,21 +90,21 @@ const SubTitle = styled("p")(() => ({
   fontFamily: `${tangerine.style.fontFamily} !important` || "auto",
   textAlign: "center",
   fontWeight: "bolder",
-  textShadow: "1px 1px 1px",
+  textShadow: "1px 1px 10px",
 }));
 
 const Text = styled("p")(() => ({
   fontFamily: `${baskerville.style.fontFamily} !important` || "auto",
   fontSize: "16px",
   textAlign: "center",
-  textShadow: "1px 1px 1px",
+  textShadow: "1px 1px 10px",
 }));
 
 const MiniText = styled("p")(() => ({
   fontFamily: `${playfair.style.fontFamily} !important` || "auto",
   fontSize: "12px",
   textAlign: "center",
-  textShadow: "1px 1px 1px",
+  textShadow: "1px 1px 10px",
 }));
 
 const UbuntuText = styled("p")(() => ({
@@ -112,7 +112,7 @@ const UbuntuText = styled("p")(() => ({
   fontWeight: "700",
   fontSize: "16px",
   textAlign: "center",
-  textShadow: "1px 1px 1px",
+  textShadow: "1px 1px 10px",
 }));
 
 const Layout997: React.FC = () => {
