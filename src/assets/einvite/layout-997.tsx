@@ -676,9 +676,10 @@ const Layout997: React.FC = () => {
                   boxShadow: "unset",
                   height: "100%",
                   maxHeight: "400px",
+                  overflow: "scroll",
                 }}
               >
-                <List sx={{ p: 0 }}>
+                <List sx={{ p: 0, mb: 4 }}>
                   {/* @ts-ignore */}
                   {listComments?.map((comment: any, idx: string) => (
                     <CommentList
