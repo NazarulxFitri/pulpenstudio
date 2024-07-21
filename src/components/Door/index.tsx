@@ -7,6 +7,7 @@ interface DoorProps {
   clickOpen: boolean;
   setClickOpen: (value: boolean) => void;
   specialBg?: boolean;
+  removePadding?: boolean;
 }
 
 const Door: React.FC<DoorProps> = ({
@@ -15,7 +16,8 @@ const Door: React.FC<DoorProps> = ({
   clickOpen,
   setClickOpen,
   doorMainColor,
-  specialBg
+  specialBg,
+  removePadding,
 }) => {
   return (
     <Box sx={{ position: "absolute", width: "100%", height: "100%" }}>
@@ -30,7 +32,9 @@ const Door: React.FC<DoorProps> = ({
           id="left-door"
           sx={{
             background: specialBg ? "" : "#FFF",
-            backgroundImage: specialBg ? "url('/media/animation/layout-995-bg.png')" : "",
+            backgroundImage: specialBg
+              ? "url('/media/animation/layout-995-bg.png')"
+              : "",
             backgroundSize: "contain",
             width: "50%",
             height: "100vh",
@@ -44,7 +48,9 @@ const Door: React.FC<DoorProps> = ({
           id="right-door"
           sx={{
             background: specialBg ? "" : "#FFF",
-            backgroundImage: specialBg ? "url('/media/animation/layout-995-bg.png')" : "",
+            backgroundImage: specialBg
+              ? "url('/media/animation/layout-995-bg.png')"
+              : "",
             backgroundSize: "contain",
             boxShadow: "-10px 0px 20px #D0D0D0",
             width: "50%",
@@ -59,8 +65,8 @@ const Door: React.FC<DoorProps> = ({
             background: color,
             borderRadius: "80%",
             boxShadow: `-8px 8px 8px #D0D0D0`,
-            px: 3,
-            py: 4,
+            px: removePadding ? 0 : 3,
+            py: removePadding ? 0 : 4,
             position: "absolute",
             textAlign: "center",
             left: "50%",

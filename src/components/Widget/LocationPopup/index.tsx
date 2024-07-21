@@ -48,8 +48,17 @@ const LocationPopup: React.FC<LocationPopupProps> = ({
         }}
       >
         <Box sx={{ display: "flex", p: 2 }}>
-          <p style={{ fontSize: "20px", fontWeight: "700", color: iconColor }}>
-            {title} | <span style={{ fontWeight: "300"}}>Location</span>
+          <p
+            style={{
+              fontSize: "20px",
+              fontWeight: "700",
+              color:
+                iconColor === "#FFFFFF" || iconColor === "#FFF"
+                  ? "#333"
+                  : iconColor,
+            }}
+          >
+            {title} | <span style={{ fontWeight: "300" }}>Location</span>
           </p>
           <Box
             sx={{ m: "0 0 0 auto" }}
@@ -58,7 +67,7 @@ const LocationPopup: React.FC<LocationPopupProps> = ({
               setCommentPopup(false);
               setContactPopup(false);
               setLocationPopup(false);
-              setGiftPopup(false)
+              setGiftPopup(false);
             }}
           >
             <CloseIcon color="#333" />
@@ -77,13 +86,35 @@ const LocationPopup: React.FC<LocationPopupProps> = ({
                 border: `1px solid ${color}`,
                 borderRadius: "8px",
                 cursor: "pointer",
+                color:
+                  iconColor === "#FFFFFF" || iconColor === "#FFF"
+                    ? "#333"
+                    : iconColor,
                 display: "flex",
                 p: 2,
                 justifyContent: "center",
               }}
               gap={2}
             >
-              Location <span style={{fontSize: "12px"}}>Google / Waze</span> <MapIcon />
+              Location{" "}
+              <span
+                style={{
+                  fontSize: "12px",
+                  color:
+                    iconColor === "#FFFFFF" || iconColor === "#FFF"
+                      ? "#333"
+                      : iconColor,
+                }}
+              >
+                Google / Waze
+              </span>{" "}
+              <MapIcon
+                color={
+                  iconColor === "#FFFFFF" || iconColor === "#FFF"
+                    ? "#333"
+                    : iconColor
+                }
+              />
             </Box>
           </a>
         </Box>

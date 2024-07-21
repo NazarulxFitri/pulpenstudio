@@ -14,6 +14,7 @@ import GiftIcon from "../Icons/GiftIcon";
 import GiftPopup from "./GiftPopup";
 
 interface WidgetProps {
+  hidePhoneNumber?: boolean;
   showGift?: boolean;
   includePhoneNumber?: boolean;
   includeOrigin?: boolean;
@@ -36,6 +37,7 @@ interface WidgetProps {
     name3?: string;
     name4?: string;
   };
+  hideBoxShadow?: boolean;
 }
 
 const Widget: React.FC<WidgetProps> = ({
@@ -49,6 +51,8 @@ const Widget: React.FC<WidgetProps> = ({
   contact,
   hideRsvp,
   hideEdit,
+  hideBoxShadow,
+  hidePhoneNumber,
 }) => {
   const [commentPopup, setCommentPopup] = useState(false);
   const [locationPopup, setLocationPopup] = useState(false);
@@ -128,7 +132,7 @@ const Widget: React.FC<WidgetProps> = ({
             setContactPopup,
             setGiftPopup,
             includePhoneNumber,
-            includeOrigin
+            includeOrigin,
           }}
         />
       )}
@@ -192,8 +196,6 @@ const Widget: React.FC<WidgetProps> = ({
         />
       )}
 
-      <Grid item xs={offsetSize} />
-
       {!hideRsvp && (
         <Grid item xs>
           <Box onClick={() => handleClick("rsvp")}>
@@ -216,19 +218,21 @@ const Widget: React.FC<WidgetProps> = ({
         </Box>
       </Grid>
 
-      <Grid item xs>
-        <Box onClick={() => handleClick("contact")}>
-          <PhoneIcon />
-        </Box>
-      </Grid>
+      {!hidePhoneNumber && (
+        <Grid item xs>
+          <Box onClick={() => handleClick("contact")}>
+            <PhoneIcon />
+          </Box>
+        </Grid>
+      )}
 
-      {showGift && 
+      {showGift && (
         <Grid item xs>
           <Box onClick={() => handleClick("gift")}>
             <GiftIcon />
           </Box>
         </Grid>
-      }
+      )}
     </Grid>
   );
 };

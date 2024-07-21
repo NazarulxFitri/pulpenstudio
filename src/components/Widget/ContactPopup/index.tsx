@@ -33,9 +33,8 @@ const ContactPopup: React.FC<ContactPopupProps> = ({
   setCommentPopup,
   setLocationPopup,
   setContactPopup,
-  setGiftPopup
+  setGiftPopup,
 }) => {
-
   return (
     <Box
       sx={{
@@ -57,7 +56,7 @@ const ContactPopup: React.FC<ContactPopupProps> = ({
       >
         <Box sx={{ display: "flex", p: 2 }}>
           <p style={{ fontSize: "20px", fontWeight: "700", color: iconColor }}>
-            {title} | <span style={{ fontWeight: "300"}}>Contact Us</span>
+            {title} | <span style={{ fontWeight: "300" }}>Contact Us</span>
           </p>
           <Box
             sx={{ m: "0 0 0 auto" }}
@@ -74,8 +73,9 @@ const ContactPopup: React.FC<ContactPopupProps> = ({
         </Box>
         <Box sx={{ textAlign: "left", p: "0 16px" }}>
           <Box sx={{ color: "#333", display: "flex" }}>
-            <p style={{ display: "flex"}}>
-              <span style={{ width: "120px"}}>{contact?.name1}</span> - {contact?.number1}
+            <p style={{ display: "flex" }}>
+              <span style={{ width: "120px" }}>{contact?.name1}</span> -{" "}
+              {contact?.number1}
             </p>
             <Box sx={{ m: "0 0 0 auto" }}>
               <a
@@ -95,8 +95,9 @@ const ContactPopup: React.FC<ContactPopupProps> = ({
             </Box>
           </Box>
           <Box mt={2} sx={{ color: "#333", display: "flex" }}>
-            <p style={{ display: "flex"}}>
-              <span style={{ width: "120px"}}>{contact?.name2}</span> - {contact?.number2}
+            <p style={{ display: "flex" }}>
+              <span style={{ width: "120px" }}>{contact?.name2}</span> -{" "}
+              {contact?.number2}
             </p>
             <Box sx={{ m: "0 0 0 auto" }}>
               <a
@@ -117,8 +118,9 @@ const ContactPopup: React.FC<ContactPopupProps> = ({
           </Box>
           {contact?.number3 && (
             <Box mt={2} sx={{ color: "#333", display: "flex" }}>
-              <p style={{ display: "flex"}}>
-                <span style={{ width: "120px"}}>{contact?.name3}</span> - {contact?.number3}
+              <p style={{ display: "flex" }}>
+                <span style={{ width: "120px" }}>{contact?.name3}</span> -{" "}
+                {contact?.number3}
               </p>
               <Box sx={{ m: "0 0 0 auto" }}>
                 <a
@@ -141,8 +143,9 @@ const ContactPopup: React.FC<ContactPopupProps> = ({
 
           {contact?.number4 && (
             <Box mt={2} sx={{ color: "#333", display: "flex" }}>
-              <p style={{ display: "flex"}}>
-                <span style={{ width: "120px"}}>{contact?.name4}</span> - {contact?.number4}
+              <p style={{ display: "flex" }}>
+                <span style={{ width: "120px" }}>{contact?.name4}</span> -{" "}
+                {contact?.number4}
               </p>
               <Box sx={{ m: "0 0 0 auto" }}>
                 <a
