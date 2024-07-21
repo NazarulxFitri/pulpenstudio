@@ -214,7 +214,7 @@ const Layout994: React.FC = () => {
           language={item?.language!}
           iconColor="#FFF"
           color="#536645"
-          location={{ text: "Teratak Ce'Nor , Shah Alam" }}
+          location={{ text: "Teratak Ce'Nor", mapUrl: item?.mapUrl! }}
           contact={{
             number1: item?.phonePerson1!,
             number2: item?.phonePerson2!,
