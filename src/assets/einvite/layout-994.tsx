@@ -192,70 +192,9 @@ const Layout994: React.FC = () => {
       </Box>
 
       <Box sx={{ display: clickOpen ? "block" : "none", position: "relative" }}>
-        <Box
-          sx={{
-            position: "absolute",
-            left: "-60px",
-            top: "20px",
-            zIndex: "0",
-          }}
-        >
-          <Image
-            src={`/media/animation/coconut-tree.webp`}
-            width={180}
-            alt="Teratak Ce'Nor"
-            height={200}
-            style={{
-              width: "100%",
-              height: "auto",
-              display: "block",
-            }}
-          />
-        </Box>
-        <Box
-          sx={{
-            position: "absolute",
-            left: "-30px",
-            bottom: "20px",
-            zIndex: "0",
-          }}
-        >
-          <Image
-            src={`/media/animation/coconut-tree.webp`}
-            width={180}
-            alt="Teratak Ce'Nor"
-            height={200}
-            style={{
-              width: "100%",
-              height: "auto",
-              display: "block",
-            }}
-          />
-        </Box>
-        <Box
-          sx={{
-            position: "absolute",
-            right: "-90px",
-            top: "600px",
-            transform: "scaleX(-1)",
-            zIndex: "-2",
-          }}
-        >
-          <Image
-            src={`/media/animation/coconut-tree.webp`}
-            width={180}
-            alt="Teratak Ce'Nor"
-            height={200}
-            style={{
-              width: "100%",
-              height: "auto",
-              display: "block",
-            }}
-          />
-        </Box>
         <Box>
           <Image
-            src={`/media/animation/tc-1.png`}
+            src={`/media/animation/teratak-cenor-drenjis.png`}
             width={400}
             alt="Teratak Ce'Nor"
             height={400}
