@@ -215,10 +215,7 @@ const Layout994: React.FC = () => {
             muted
             style={{ display: "block" }}
           >
-            <source
-              src="/media/animation/teratak-cenor-vid.mp4"
-              type="video/mp4"
-            />
+            <source src="/media/animation/video-updated.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         )}
