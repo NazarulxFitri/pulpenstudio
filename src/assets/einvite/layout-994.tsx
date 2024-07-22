@@ -168,19 +168,6 @@ const Layout994: React.FC = () => {
         position: "relative",
         overflow: "hidden",
         height: clickOpen ? "100%" : "100vh",
-        "::before": {
-          backgroundImage: "url('/media/animation/layout-994-background.webp')",
-          content: '""',
-          position: "absolute",
-          opacity: "0.12",
-          height: "100vh",
-          width: "100vw",
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
-          zIndex: -1, // Ensure the pseudo-element is behind the content
-        },
       }}
       onTouchStart={() => setMusicStart(true)}
       onClick={() => setMusicStart(true)}
@@ -204,19 +191,88 @@ const Layout994: React.FC = () => {
         />
       </Box>
 
-      <Box sx={{ display: clickOpen ? "block" : "none" }}>
-        {musicStart && (
-          <video
-            width="100%"
-            autoPlay
-            controls={false}
-            muted
-            style={{ display: "block" }}
-          >
-            <source src="/media/animation/video-updated.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        )}
+      <Box sx={{ display: clickOpen ? "block" : "none", position: "relative" }}>
+        <Box
+          className="animate__animated animate__zoomIn animate__slow"
+          sx={{
+            position: "absolute",
+            left: "-125px",
+            top: "20px",
+            zIndex: "2",
+          }}
+        >
+          <Image
+            src={`/media/animation/coconut-tree.webp`}
+            width={180}
+            alt="Teratak Ce'Nor"
+            height={200}
+            style={{
+              width: "100%",
+              height: "auto",
+              display: "block",
+            }}
+          />
+        </Box>
+        <Box
+          className="animate__animated animate__zoomIn animate__slow"
+          sx={{
+            position: "absolute",
+            left: "-60px",
+            bottom: "20px",
+            zIndex: "2",
+          }}
+        >
+          <Image
+            src={`/media/animation/coconut-tree.webp`}
+            width={180}
+            alt="Teratak Ce'Nor"
+            height={200}
+            style={{
+              width: "100%",
+              height: "auto",
+              display: "block",
+            }}
+          />
+        </Box>
+        <Box
+          className="animate__animated animate__zoomIn animate__slow"
+          sx={{
+            position: "absolute",
+            right: "-105px",
+            top: "600px",
+            transform: "scaleX(-1)",
+          }}
+        >
+          <Image
+            src={`/media/animation/coconut-tree.webp`}
+            width={180}
+            alt="Teratak Ce'Nor"
+            height={200}
+            style={{
+              width: "100%",
+              height: "auto",
+              display: "block",
+            }}
+          />
+        </Box>
+        <Box>
+          <Image
+            src={`/media/animation/tc-1.png`}
+            width={400}
+            alt="Teratak Ce'Nor"
+            height={400}
+            style={{ width: "100%", height: "auto", display: "block" }}
+          />
+        </Box>
+        <Box>
+          <Image
+            src={`/media/animation/tc-2.png`}
+            width={400}
+            alt="Teratak Ce'Nor"
+            height={400}
+            style={{ width: "100%", height: "auto", display: "block" }}
+          />
+        </Box>
       </Box>
 
       <Box>
@@ -227,8 +283,8 @@ const Layout994: React.FC = () => {
           hideRsvp
           includeOrigin={false}
           language={item?.language!}
-          iconColor="#FFF"
-          color="#536645"
+          iconColor="#333"
+          color="#f2e6da"
           location={{ text: "Teratak Ce'Nor", mapUrl: item?.mapUrl! }}
           contact={{
             number1: item?.phonePerson1!,
