@@ -196,30 +196,9 @@ const Layout994: React.FC = () => {
           className="animate__animated animate__zoomIn animate__slow"
           sx={{
             position: "absolute",
-            left: "-125px",
-            top: "20px",
-            zIndex: "2",
-          }}
-        >
-          <Image
-            src={`/media/animation/coconut-tree.webp`}
-            width={180}
-            alt="Teratak Ce'Nor"
-            height={200}
-            style={{
-              width: "100%",
-              height: "auto",
-              display: "block",
-            }}
-          />
-        </Box>
-        <Box
-          className="animate__animated animate__zoomIn animate__slow"
-          sx={{
-            position: "absolute",
             left: "-60px",
-            bottom: "20px",
-            zIndex: "2",
+            top: "20px",
+            zIndex: "0",
           }}
         >
           <Image
@@ -238,9 +217,31 @@ const Layout994: React.FC = () => {
           className="animate__animated animate__zoomIn animate__slow"
           sx={{
             position: "absolute",
-            right: "-105px",
+            left: "-30px",
+            bottom: "20px",
+            zIndex: "0",
+          }}
+        >
+          <Image
+            src={`/media/animation/coconut-tree.webp`}
+            width={180}
+            alt="Teratak Ce'Nor"
+            height={200}
+            style={{
+              width: "100%",
+              height: "auto",
+              display: "block",
+            }}
+          />
+        </Box>
+        <Box
+          className="animate__animated animate__zoomIn animate__slow"
+          sx={{
+            position: "absolute",
+            right: "-90px",
             top: "600px",
             transform: "scaleX(-1)",
+            zIndex: "-2",
           }}
         >
           <Image
