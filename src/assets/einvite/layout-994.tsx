@@ -194,16 +194,14 @@ const Layout994: React.FC = () => {
         />
       </Door>
       <Box sx={{ visibility: "hidden", position: "absolute" }}>
-        {musicStart && (
-          <ReactPlayer
-            url={musicUrl}
-            playing={musicStart}
-            loop={true}
-            width="1%"
-            height="1%"
-            controls={true}
-          />
-        )}
+        <ReactPlayer
+          url={musicUrl}
+          playing={musicStart}
+          loop={true}
+          width="1%"
+          height="1%"
+          controls={false}
+        />
       </Box>
 
       <Box sx={{ display: clickOpen ? "block" : "none" }}>
