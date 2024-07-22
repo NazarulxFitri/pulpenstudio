@@ -185,16 +185,6 @@ const Layout994: React.FC = () => {
       onTouchStart={() => setMusicStart(true)}
       onClick={() => setMusicStart(true)}
     >
-      <Box sx={{ visibility: "hidden", position: "absolute" }}>
-        <ReactPlayer
-          url={musicUrl}
-          playing={musicStart}
-          loop={true}
-          width="1%"
-          height="1%"
-          controls={true}
-        />
-      </Box>
       <Door removePadding color="#FFF" {...{ clickOpen, setClickOpen }}>
         <Image
           src="/media/animation/teratak-cenor.webp"
@@ -203,6 +193,18 @@ const Layout994: React.FC = () => {
           height={180}
         />
       </Door>
+      <Box sx={{ visibility: "hidden", position: "absolute" }}>
+        {musicStart && (
+          <ReactPlayer
+            url={musicUrl}
+            playing={musicStart}
+            loop={true}
+            width="1%"
+            height="1%"
+            controls={true}
+          />
+        )}
+      </Box>
 
       <Box sx={{ display: clickOpen ? "block" : "none" }}>
         <video width="100%" autoPlay muted style={{ display: "block" }}>
