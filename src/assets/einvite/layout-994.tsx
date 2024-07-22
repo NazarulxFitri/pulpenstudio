@@ -193,7 +193,6 @@ const Layout994: React.FC = () => {
 
       <Box sx={{ display: clickOpen ? "block" : "none", position: "relative" }}>
         <Box
-          className="animate__animated animate__zoomIn animate__slow"
           sx={{
             position: "absolute",
             left: "-60px",
@@ -214,7 +213,6 @@ const Layout994: React.FC = () => {
           />
         </Box>
         <Box
-          className="animate__animated animate__zoomIn animate__slow"
           sx={{
             position: "absolute",
             left: "-30px",
@@ -235,7 +233,6 @@ const Layout994: React.FC = () => {
           />
         </Box>
         <Box
-          className="animate__animated animate__zoomIn animate__slow"
           sx={{
             position: "absolute",
             right: "-90px",
