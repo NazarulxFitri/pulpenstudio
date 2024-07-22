@@ -185,6 +185,16 @@ const Layout994: React.FC = () => {
       onTouchStart={() => setMusicStart(true)}
       onClick={() => setMusicStart(true)}
     >
+      <Box sx={{ visibility: "hidden", position: "absolute" }}>
+        <ReactPlayer
+          url={musicUrl}
+          playing={musicStart}
+          loop={true}
+          width="1%"
+          height="1%"
+          controls={true}
+        />
+      </Box>
       <Door removePadding color="#FFF" {...{ clickOpen, setClickOpen }}>
         <Image
           src="/media/animation/teratak-cenor.webp"
@@ -196,10 +206,7 @@ const Layout994: React.FC = () => {
 
       <Box sx={{ display: clickOpen ? "block" : "none" }}>
         <video width="100%" autoPlay muted style={{ display: "block" }}>
-          <source
-            src="/media/animation/layout-994-video.mp4"
-            type="video/mp4"
-          />
+          <source src="/media/animation/video.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </Box>
