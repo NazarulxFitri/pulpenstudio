@@ -206,7 +206,10 @@ const Layout994: React.FC = () => {
 
       <Box sx={{ display: clickOpen ? "block" : "none" }}>
         <video width="100%" autoPlay muted style={{ display: "block" }}>
-          <source src="/media/animation/video.mp4" type="video/mp4" />
+          <source
+            src="/media/animation/teratak-cenor-vid.mp4"
+            type="video/mp4"
+          />
           Your browser does not support the video tag.
         </video>
       </Box>
