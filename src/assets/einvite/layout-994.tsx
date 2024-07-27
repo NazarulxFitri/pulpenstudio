@@ -194,7 +194,7 @@ const Layout994: React.FC = () => {
       <Box sx={{ display: clickOpen ? "block" : "none", position: "relative" }}>
         <Box>
           <Image
-            src={`/media/animation/image-1-updated.png`}
+            src={`/media/animation/updated-image.png`}
             width={400}
             alt="Teratak Ce'Nor"
             height={400}
