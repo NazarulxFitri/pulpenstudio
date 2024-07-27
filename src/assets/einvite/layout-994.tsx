@@ -194,7 +194,7 @@ const Layout994: React.FC = () => {
       <Box sx={{ display: clickOpen ? "block" : "none", position: "relative" }}>
         <Box>
           <Image
-            src={`/media/animation/teratak-cenor-drenjis.png`}
+            src={`/media/animation/image-1-updated.png`}
             width={400}
             alt="Teratak Ce'Nor"
             height={400}
@@ -222,7 +222,10 @@ const Layout994: React.FC = () => {
           language={item?.language!}
           iconColor="#333"
           color="#f2e6da"
-          location={{ text: "Teratak Ce'Nor", mapUrl: item?.mapUrl! }}
+          location={{
+            text: "Teratak Ce'Nor, Lot 1939, Jalan Besar, Kampung Padang Jawa, 40300 Shah Alam, Selangor ",
+            mapUrl: item?.mapUrl!,
+          }}
           contact={{
             number1: item?.phonePerson1!,
             number2: item?.phonePerson2!,
