@@ -199,14 +199,14 @@ const Layout995: React.FC = () => {
           alt="Aiman Hafiz"
           width={400}
           height={600}
-          style={{ display: "block" }}
+          style={{ display: "block", width: "100%" }}
         />
         <Image
           src="/media/animation/aiman-2.jpeg"
           alt="Aiman Hafiz"
           width={400}
           height={600}
-          style={{ display: "block" }}
+          style={{ display: "block", width: "100%" }}
         />
       </Box>
       <Box
