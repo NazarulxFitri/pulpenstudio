@@ -26,7 +26,7 @@ const playfair = Playfair_Display({
   weight: ["400", "500", "700"],
 });
 const allura = Allura({ subsets: ["latin"], weight: ["400"] });
-const imperialScript = Imperial_Script({subsets: ["latin"], weight: ["400"]})
+const imperialScript = Imperial_Script({ subsets: ["latin"], weight: ["400"] });
 const cormorant = Cormorant_SC({
   subsets: ["latin"],
   weight: ["300", "400", "700"],
@@ -54,7 +54,7 @@ const Title = styled("h1")(() => ({
   fontSize: "48px",
   textAlign: "center",
   fontWeight: "lighter",
-  textShadow: "1px 1px 10px"
+  textShadow: "1px 1px 10px",
 }));
 
 const SubTitle = styled("p")(() => ({
@@ -169,23 +169,15 @@ const Layout995: React.FC = () => {
       onTouchStart={() => setMusicStart(true)}
       onClick={() => setMusicStart(true)}
     >
-      <Door color="transparent" {...{ clickOpen, setClickOpen }} specialBg={true}>
+      <Door
+        color="transparent"
+        {...{ clickOpen, setClickOpen }}
+        specialBg={true}
+      >
         <Title
-          sx={{ fontSize: "24px", textShadow: "1px 1px 10px skyblue"}}
+          sx={{ fontSize: "24px", textShadow: "1px 1px 10px skyblue" }}
           dangerouslySetInnerHTML={{
-            __html: `${item?.title1Groom!}`
-          }}
-        />
-        <Title
-        sx={{ fontSize: "24px", display: "block", my: "10px"}}
-          dangerouslySetInnerHTML={{
-            __html: `&`,
-          }}
-        />
-        <Title
-        sx={{ fontSize: "24px" , textShadow: "1px 1px 10px skyblue"}}
-          dangerouslySetInnerHTML={{
-            __html: item?.title1Bride!,
+            __html: `Klik untuk buka`,
           }}
         />
       </Door>
@@ -199,114 +191,121 @@ const Layout995: React.FC = () => {
           height="1%"
           controls={true}
         />
-      </Box> 
+      </Box>
 
-      <Box sx={{ display: clickOpen ? "block" : "none"}}>
-        <video width="100%" autoPlay muted style={{ display: "block"}}>
-          <source src="/media/animation/video-1.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      </Box> 
-      <Box>
-        <Image src="/media/animation/image-2.jpeg" alt="Aiman Hafiz" width={400} height={600} />
+      <Box sx={{ display: clickOpen ? "block" : "none" }}>
+        <Image
+          src="/media/animation/aiman-1.jpeg"
+          alt="Aiman Hafiz"
+          width={400}
+          height={600}
+          style={{ display: "block" }}
+        />
+        <Image
+          src="/media/animation/aiman-2.jpeg"
+          alt="Aiman Hafiz"
+          width={400}
+          height={600}
+          style={{ display: "block" }}
+        />
       </Box>
       <Box
-          sx={{
-            px: 2,
-            py: 4,
-            position: "relative"
+        sx={{
+          px: 2,
+          py: 4,
+          position: "relative",
+        }}
+      >
+        <SubTitle
+          dangerouslySetInnerHTML={{
+            __html: locale?.[item?.language!]?.CARD_COUNTDOWN_TITLE,
           }}
-        >
-          <SubTitle
-            dangerouslySetInnerHTML={{
-              __html: locale?.[item?.language!]?.CARD_COUNTDOWN_TITLE,
+          sx={{ pb: 2, fontWeight: "bold", color: "#e1c1a6" }}
+        />
+        {!isCounting ? (
+          <Box
+            id="countdown"
+            columnGap={2}
+            sx={{
+              mx: "auto",
+              width: "fit-content",
             }}
-            sx={{ pb: 2 , fontWeight: "bold", color: "#e1c1a6"}}
-          />
-          {!isCounting ? (
-            <Box
-              id="countdown"
-              columnGap={2}
-              sx={{
-                mx: "auto",
-                width: "fit-content",
+          >
+            <SubTitle
+              dangerouslySetInnerHTML={{
+                __html: locale?.[item?.language!]?.CARD_COUNTDOWN_FINISH_TEXT,
               }}
-            >
-              <SubTitle
+            />
+          </Box>
+        ) : (
+          <Box
+            id="countdown"
+            columnGap={2}
+            sx={{
+              boxShadow: "1px 10px 10px -10px #e1c1a6",
+              pb: 1,
+              width: "fit-content",
+              mx: "auto",
+              display: "flex",
+            }}
+          >
+            <Box>
+              <Text
+                style={{ fontSize: "48px" }}
                 dangerouslySetInnerHTML={{
-                  __html: locale?.[item?.language!]?.CARD_COUNTDOWN_FINISH_TEXT,
+                  __html: `${countdownTimer?.countdownTimer.d} `,
                 }}
               />
             </Box>
-          ) : (
-            <Box
-              id="countdown"
-              columnGap={2}
-              sx={{
-                boxShadow: "1px 10px 10px -10px #e1c1a6",
-                pb: 1,
-                width: "fit-content",
-                mx: "auto",
-                display: "flex",
-              }}
-            >
-              <Box>
-                <Text
-                  style={{ fontSize: "48px" }}
-                  dangerouslySetInnerHTML={{
-                    __html: `${countdownTimer?.countdownTimer.d} `,
-                  }}
-                />
-              </Box>
-              <Box>
-                <Text
-                  style={{ fontSize: "24px" }}
-                  dangerouslySetInnerHTML={{
-                    __html: `${
-                      countdownTimer?.countdownTimer.h
-                    } <span style="font-size: 12px">${
-                      locale?.[item?.language!]?.COUNTDOWN_HOUR
-                    }</span>`,
-                  }}
-                />
-                <Text
-                  style={{ fontSize: "24px" }}
-                  dangerouslySetInnerHTML={{
-                    __html: `${
-                      countdownTimer?.countdownTimer.m
-                    } <span style="font-size: 12px">${
-                      locale?.[item?.language!]?.COUNTDOWN_MINUTE
-                    }</span>`,
-                  }}
-                />
-              </Box>
-              <Box>
-                <Text
-                  style={{ fontSize: "48px", color: "#e1c1a6", width: "50px" }}
-                  dangerouslySetInnerHTML={{
-                    __html: `${countdownTimer?.countdownTimer.s} `,
-                  }}
-                />
-              </Box>
+            <Box>
+              <Text
+                style={{ fontSize: "24px" }}
+                dangerouslySetInnerHTML={{
+                  __html: `${
+                    countdownTimer?.countdownTimer.h
+                  } <span style="font-size: 12px">${
+                    locale?.[item?.language!]?.COUNTDOWN_HOUR
+                  }</span>`,
+                }}
+              />
+              <Text
+                style={{ fontSize: "24px" }}
+                dangerouslySetInnerHTML={{
+                  __html: `${
+                    countdownTimer?.countdownTimer.m
+                  } <span style="font-size: 12px">${
+                    locale?.[item?.language!]?.COUNTDOWN_MINUTE
+                  }</span>`,
+                }}
+              />
             </Box>
-          )}
-        </Box>
-        <Box
-          id="comment"
-          mb={2}
-          sx={{
-            px: 2,
-            pt: 4,
-            pb: 10
+            <Box>
+              <Text
+                style={{ fontSize: "48px", color: "#e1c1a6", width: "50px" }}
+                dangerouslySetInnerHTML={{
+                  __html: `${countdownTimer?.countdownTimer.s} `,
+                }}
+              />
+            </Box>
+          </Box>
+        )}
+      </Box>
+      <Box
+        id="comment"
+        mb={2}
+        sx={{
+          px: 2,
+          pt: 4,
+          pb: 10,
+        }}
+      >
+        <SubTitle
+          dangerouslySetInnerHTML={{
+            __html: locale?.[item?.language!]?.CARD_WISH_TITLE,
           }}
-        >
-          <SubTitle
-            dangerouslySetInnerHTML={{
-              __html: locale?.[item?.language!]?.CARD_WISH_TITLE,
-            }}
-            sx={{ pb: 2, fontWeight: "bold", color: "#e1c1a6" }}
-          />
-          <Grid container>
+          sx={{ pb: 2, fontWeight: "bold", color: "#e1c1a6" }}
+        />
+        <Grid container>
           <Grid item py={2} xs={12}>
             <Paper
               sx={{
@@ -331,7 +330,7 @@ const Layout995: React.FC = () => {
             </Paper>
           </Grid>
         </Grid>
-        </Box>
+      </Box>
 
       <Box>
         <Widget

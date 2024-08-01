@@ -33,9 +33,9 @@ const Door: React.FC<DoorProps> = ({
           sx={{
             background: specialBg ? "" : "#FFF",
             backgroundImage: specialBg
-              ? "url('/media/animation/layout-995-bg.png')"
+              ? "url('/media/animation/door-aiman.jpeg')"
               : "",
-            backgroundSize: "contain",
+            backgroundSize: "cover",
             width: "50%",
             height: "100vh",
             zIndex: "2",
@@ -49,12 +49,13 @@ const Door: React.FC<DoorProps> = ({
           sx={{
             background: specialBg ? "" : "#FFF",
             backgroundImage: specialBg
-              ? "url('/media/animation/layout-995-bg.png')"
+              ? "url('/media/animation/door-aiman.jpeg')"
               : "",
-            backgroundSize: "contain",
+            backgroundSize: "cover",
             boxShadow: "-10px 0px 20px #D0D0D0",
             width: "50%",
             height: "100vh",
+            transform: "scaleX(-1)",
             zIndex: "2",
           }}
         />
@@ -63,10 +64,11 @@ const Door: React.FC<DoorProps> = ({
           onClick={() => setClickOpen(true)}
           sx={{
             background: color,
-            borderRadius: "80%",
-            boxShadow: `-8px 8px 8px #D0D0D0`,
+            borderRadius: specialBg ? "0" : "80%",
+            boxShadow: specialBg ? "0" : `-8px 8px 8px #D0D0D0`,
             px: removePadding ? 0 : 3,
-            py: removePadding ? 0 : 4,
+            pt: removePadding ? 0 : 4,
+            pb: specialBg ? 6 : removePadding ? 0 : 4,
             position: "absolute",
             textAlign: "center",
             left: "50%",
