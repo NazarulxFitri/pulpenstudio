@@ -174,11 +174,12 @@ const Layout995: React.FC = () => {
         {...{ clickOpen, setClickOpen }}
         specialBg={true}
       >
-        <Title
-          sx={{ fontSize: "24px", textShadow: "1px 1px 10px skyblue" }}
-          dangerouslySetInnerHTML={{
-            __html: `Klik untuk buka`,
-          }}
+        <Image
+          src="/media/animation/logo-door.PNG"
+          alt="Aiman Hafiz"
+          width={900}
+          height={200}
+          style={{ display: "block", width: "100%", height: "auto" }}
         />
       </Door>
 
