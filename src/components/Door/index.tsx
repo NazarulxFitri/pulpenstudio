@@ -51,9 +51,9 @@ const Door: React.FC<DoorProps> = ({
           sx={{
             background: specialBg ? "" : "#FFF",
             backgroundImage: specialBg
-              ? "url('/media/animation/left.png')"
+              ? "url('/media/animation/test12.PNG')"
               : "",
-            backgroundSize: "inherit",
+            backgroundSize: { xs: "contain", sm: "cover" },
             width: "50%",
             height: "100vh",
             zIndex: "2",
@@ -67,9 +67,9 @@ const Door: React.FC<DoorProps> = ({
           sx={{
             background: specialBg ? "" : "#FFF",
             backgroundImage: specialBg
-              ? "url('/media/animation/right.png')"
+              ? "url('/media/animation/test13.PNG')"
               : "",
-            backgroundSize: "inherit",
+            backgroundSize: { xs: "contain", sm: "cover" },
             boxShadow: specialBg ? "unset" : "-10px 0px 20px #D0D0D0",
             width: "50%",
             height: "100vh",
