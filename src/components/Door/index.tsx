@@ -19,6 +19,24 @@ const Door: React.FC<DoorProps> = ({
   specialBg,
   removePadding,
 }) => {
+  // if (specialBg) {
+  //   return (
+  //     <Box
+  //       className={clickOpen ? "animate__animated animate__slideOutLeft" : ""}
+  //       id="left-door"
+  //       sx={{
+  //         background: specialBg ? "" : "#FFF",
+  //         backgroundImage: specialBg ? "url('/media/animation/test5.png')" : "",
+  //         backgroundSize: "cover",
+  //         backgroundRepeat: "no-repeat",
+  //         width: "100%",
+  //         height: "100vh",
+  //         zIndex: "2",
+  //       }}
+  //     />
+  //   );
+  // }
+
   return (
     <Box sx={{ position: "absolute", width: "100%", height: "100%" }}>
       <Box
@@ -33,9 +51,9 @@ const Door: React.FC<DoorProps> = ({
           sx={{
             background: specialBg ? "" : "#FFF",
             backgroundImage: specialBg
-              ? "url('/media/animation/door-aiman.jpeg')"
+              ? "url('/media/animation/left.png')"
               : "",
-            backgroundSize: "cover",
+            backgroundSize: "inherit",
             width: "50%",
             height: "100vh",
             zIndex: "2",
@@ -49,13 +67,12 @@ const Door: React.FC<DoorProps> = ({
           sx={{
             background: specialBg ? "" : "#FFF",
             backgroundImage: specialBg
-              ? "url('/media/animation/door-aiman.jpeg')"
+              ? "url('/media/animation/right.png')"
               : "",
-            backgroundSize: "cover",
-            boxShadow: "-10px 0px 20px #D0D0D0",
+            backgroundSize: "inherit",
+            boxShadow: specialBg ? "unset" : "-10px 0px 20px #D0D0D0",
             width: "50%",
             height: "100vh",
-            transform: "scaleX(-1)",
             zIndex: "2",
           }}
         />
@@ -72,7 +89,10 @@ const Door: React.FC<DoorProps> = ({
             position: "absolute",
             textAlign: "center",
             left: "50%",
-            top: "50%",
+            top: {
+              xs: specialBg ? "46%" : "20%",
+              sm: specialBg ? "57%" : "50%",
+            },
             transform: "translate(-50%,-50%)",
             minWidth: "60px",
             zIndex: "3",
