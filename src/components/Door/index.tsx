@@ -53,7 +53,8 @@ const Door: React.FC<DoorProps> = ({
             backgroundImage: specialBg
               ? "url('/media/animation/test12.PNG')"
               : "",
-            backgroundSize: { xs: "contain", sm: "cover" },
+            backgroundSize: "contain",
+            backgroundRepeat: "round",
             width: "50%",
             height: "100vh",
             zIndex: "2",
@@ -69,7 +70,8 @@ const Door: React.FC<DoorProps> = ({
             backgroundImage: specialBg
               ? "url('/media/animation/test13.PNG')"
               : "",
-            backgroundSize: { xs: "contain", sm: "cover" },
+            backgroundSize: "contain",
+            backgroundRepeat: "round",
             boxShadow: specialBg ? "unset" : "-10px 0px 20px #D0D0D0",
             width: "50%",
             height: "100vh",
@@ -90,8 +92,8 @@ const Door: React.FC<DoorProps> = ({
             textAlign: "center",
             left: "50%",
             top: {
-              xs: specialBg ? "46%" : "20%",
-              sm: specialBg ? "57%" : "50%",
+              xs: specialBg ? "50%" : "20%",
+              sm: specialBg ? "50%" : "50%",
             },
             transform: "translate(-50%,-50%)",
             minWidth: "60px",
