@@ -167,25 +167,8 @@ const Layout9951: React.FC = () => {
       onTouchStart={() => setMusicStart(true)}
       onClick={() => setMusicStart(true)}
     >
-      <Door color="transparent" {...{ clickOpen, setClickOpen }}>
-        <Title
-          sx={{ fontSize: "24px", textShadow: "1px 1px 10px skyblue" }}
-          dangerouslySetInnerHTML={{
-            __html: `${item?.title1Groom!}`,
-          }}
-        />
-        <Title
-          sx={{ fontSize: "24px", display: "block", my: "10px" }}
-          dangerouslySetInnerHTML={{
-            __html: `&`,
-          }}
-        />
-        <Title
-          sx={{ fontSize: "24px", textShadow: "1px 1px 10px skyblue" }}
-          dangerouslySetInnerHTML={{
-            __html: item?.title1Bride!,
-          }}
-        />
+      <Door ainaa color="transparent" {...{ clickOpen, setClickOpen }}>
+        dummy
       </Door>
 
       <Box sx={{ visibility: "hidden", position: "absolute" }}>
@@ -201,14 +184,21 @@ const Layout9951: React.FC = () => {
 
       <Box sx={{ display: clickOpen ? "block" : "none" }}>
         <Image
-          src={`/media/animation/wedding-of-ainaa-aiman-1.png`}
+          src={`/media/animation/wedding-ainaa-aiman-1.jpeg`}
           alt=""
           width={400}
           height={800}
           style={{ width: "100%", height: "auto", display: "block" }}
         />
         <Image
-          src={`/media/animation/wedding-of-ainaa-aiman-2.png`}
+          src={`/media/animation/wedding-ainaa-aiman-2.jpeg`}
+          alt=""
+          width={400}
+          height={800}
+          style={{ width: "100%", height: "auto", display: "block" }}
+        />
+        <Image
+          src={`/media/animation/wedding-ainaa-aiman-3.jpeg`}
           alt=""
           width={400}
           height={800}
@@ -309,7 +299,7 @@ const Layout9951: React.FC = () => {
           dangerouslySetInnerHTML={{
             __html: locale?.[item?.language!]?.CARD_WISH_TITLE,
           }}
-          sx={{ pb: 2, fontWeight: "bold", color: "#e1c1a6" }}
+          sx={{ pb: 2, fontWeight: "bold", color: "#b7aa95" }}
         />
         <Grid container>
           <Grid item py={2} xs={12}>
@@ -343,8 +333,8 @@ const Layout9951: React.FC = () => {
           includePhoneNumber={true}
           includeOrigin={false}
           language={item?.language!}
-          iconColor="#e1c1a6"
-          color="#8795bc"
+          iconColor="#FFFFFF"
+          color="#b7aa95"
           location={{ text: item?.location!, mapUrl: item?.mapUrl! }}
           contact={{
             number1: item?.phonePerson1!,

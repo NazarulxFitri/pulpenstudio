@@ -1,4 +1,5 @@
 import { Box } from "@mui/material";
+import Image from "next/image";
 
 interface DoorProps {
   color: string;
@@ -8,6 +9,7 @@ interface DoorProps {
   setClickOpen: (value: boolean) => void;
   specialBg?: boolean;
   removePadding?: boolean;
+  ainaa?: boolean;
 }
 
 const Door: React.FC<DoorProps> = ({
@@ -18,24 +20,26 @@ const Door: React.FC<DoorProps> = ({
   doorMainColor,
   specialBg,
   removePadding,
+  ainaa,
 }) => {
-  // if (specialBg) {
-  //   return (
-  //     <Box
-  //       className={clickOpen ? "animate__animated animate__slideOutLeft" : ""}
-  //       id="left-door"
-  //       sx={{
-  //         background: specialBg ? "" : "#FFF",
-  //         backgroundImage: specialBg ? "url('/media/animation/test5.png')" : "",
-  //         backgroundSize: "cover",
-  //         backgroundRepeat: "no-repeat",
-  //         width: "100%",
-  //         height: "100vh",
-  //         zIndex: "2",
-  //       }}
-  //     />
-  //   );
-  // }
+  if (ainaa)
+    return (
+      <Box sx={{ position: "absolute", width: "100%", height: "100%" }}>
+        <Box
+          className={clickOpen ? "animate__animated animate__fadeOut" : ""}
+          onClick={() => setClickOpen(true)}
+          sx={{ position: "absolute", height: "100vh", zIndex: 1 }}
+        >
+          <Image
+            src="/media/animation/door-ainaa.jpeg"
+            alt="Pulpen Studio"
+            width={400}
+            height={800}
+            style={{ height: "100%", width: "100%" }}
+          />
+        </Box>
+      </Box>
+    );
 
   return (
     <Box sx={{ position: "absolute", width: "100%", height: "100%" }}>
