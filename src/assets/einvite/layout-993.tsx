@@ -242,7 +242,6 @@ const Layout993: React.FC = () => {
               <Title dangerouslySetInnerHTML={{ __html: "Zolkefli" }} />
             </Box>
             <SubTitle
-              className="animate__animated animate__fadeInDown animate__slow animate__delay-2s"
               sx={{
                 fontWeight: "bold",
                 fontSize: "14px",
@@ -252,13 +251,7 @@ const Layout993: React.FC = () => {
                 __html: "Teratak Ce'Nor , Shah Alam",
               }}
             />
-            <Box
-              display="flex"
-              justifyContent="center"
-              gap={1}
-              my={1}
-              className="animate__animated animate__fadeInDown animate__slow animate__delay-3s"
-            >
+            <Box display="flex" justifyContent="center" gap={1} my={1}>
               <SubTitle
                 sx={{ fontWeight: "lighter", fontSize: "12px" }}
                 dangerouslySetInnerHTML={{
