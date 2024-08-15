@@ -223,7 +223,6 @@ const Layout993: React.FC = () => {
             }}
           >
             <SubTitle
-              className="animate__animated animate__fadeInDown animate__slow "
               sx={{ fontWeight: "bolder" }}
               dangerouslySetInnerHTML={{
                 __html: locale?.[item?.language!]?.INTRO_FIRST,
@@ -235,24 +234,18 @@ const Layout993: React.FC = () => {
                 my: 4,
               }}
             >
-              <Title
-                className="animate__animated animate__fadeInDown animate__slow animate__delay-1s"
-                dangerouslySetInnerHTML={{ __html: "Khairu Amira" }}
-              />
+              <Title dangerouslySetInnerHTML={{ __html: "Khairu Amira" }} />
               <Title
                 dangerouslySetInnerHTML={{ __html: "&" }}
                 sx={{ my: 2, fontSize: "40px" }}
               />
-              <Title
-                className="animate__animated animate__fadeInDown animate__slow animate__delay-1s"
-                dangerouslySetInnerHTML={{ __html: "Zolkefli" }}
-              />
+              <Title dangerouslySetInnerHTML={{ __html: "Zolkefli" }} />
             </Box>
             <SubTitle
               className="animate__animated animate__fadeInDown animate__slow animate__delay-2s"
               sx={{
-                fontWeight: "lighter",
-                fontSize: "12px",
+                fontWeight: "bold",
+                fontSize: "14px",
                 padding: "0 16px",
               }}
               dangerouslySetInnerHTML={{
@@ -281,8 +274,7 @@ const Layout993: React.FC = () => {
                 fontSize: "12px",
               }}
               dangerouslySetInnerHTML={{
-                __html:
-                  "<b><i>Dan Kami menciptakan kamu berpasang-pasangan</i></b><br>An-Naba':8",
+                __html: `<i>"Dan Kami menciptakan kamu <br>berpasang-pasangan"</i><br>78:8`,
               }}
             />
           </Box>
@@ -322,8 +314,8 @@ const Layout993: React.FC = () => {
           <Box
             sx={{
               position: "absolute",
-              left: "-46px",
-              bottom: "0",
+              left: "-60px",
+              bottom: "-20px",
               opacity: "0.75",
             }}
           >
@@ -349,7 +341,7 @@ const Layout993: React.FC = () => {
             <SubTitle
               sx={{ mb: 3 }}
               dangerouslySetInnerHTML={{
-                __html: locale?.[item?.language!]?.CARD_INTRO,
+                __html: "Assalamualaikum WBT <br> Salam Sejahtera",
               }}
             />
             <SubTitle
@@ -371,7 +363,7 @@ const Layout993: React.FC = () => {
                 mb: 3,
               }}
               dangerouslySetInnerHTML={{
-                __html: `${item?.fullNameBride} <br>&<br> ${item?.fullNameGroom}`,
+                __html: `Khairu Amira binti Mohd Sabri <br>&<br> ${item?.fullNameGroom}`,
               }}
             />
           </Box>
@@ -384,18 +376,25 @@ const Layout993: React.FC = () => {
             position: "relative",
           }}
         >
-          <SubTitle
-            sx={{ fontSize: "12px", fontWeight: "bold" }}
-            dangerouslySetInnerHTML={{
-              __html: "<b>ATUR CARA</b><br><br>11am - 4pm",
-            }}
-          />
-
           <Box sx={{ display: "inline-flex" }}>
             <SubTitle
               sx={{ fontSize: "12px", my: 0.5, display: "block", mr: 2 }}
               dangerouslySetInnerHTML={{
-                __html: "<b>12:30</b>",
+                __html: "<b>11am - 4pm</b>",
+              }}
+            />
+            <SubTitle
+              sx={{ fontSize: "12px", my: 0.5, textAlign: "left" }}
+              dangerouslySetInnerHTML={{
+                __html: "Ketibaan Pengantin",
+              }}
+            />
+          </Box>
+          <Box sx={{ display: "inline-flex" }}>
+            <SubTitle
+              sx={{ fontSize: "12px", my: 0.5, display: "block", mr: 2 }}
+              dangerouslySetInnerHTML={{
+                __html: "<b>12.30pm</b>",
               }}
             />
             <SubTitle
@@ -425,9 +424,9 @@ const Layout993: React.FC = () => {
           >
             <Image
               src="/media/animation/layout-993-gif.gif"
-              width={200}
+              width={140}
               alt="Pulpen Studio"
-              height={200}
+              height={180}
             />
           </Box>
           <SubTitle
