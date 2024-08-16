@@ -324,11 +324,11 @@ const Layout993: React.FC = () => {
           <Box sx={{ zIndex: "2" }}>
             <Box textAlign={"center"}>
               <Image
-                src="/media/animation/salam-logo.png"
-                width={120}
+                src="/media/animation/bis-img.png"
+                width={200}
                 alt="Pulpen Studio"
-                height={140}
-                style={{ width: "auto", height: "100%" }}
+                height={50}
+                style={{ marginBottom: "16px" }}
               />
             </Box>
             <SubTitle
@@ -379,7 +379,7 @@ const Layout993: React.FC = () => {
             <SubTitle
               sx={{ fontSize: "12px", my: 0.5, textAlign: "left" }}
               dangerouslySetInnerHTML={{
-                __html: "Ketibaan Pengantin",
+                __html: "Jamuan Makan",
               }}
             />
           </Box>
