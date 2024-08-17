@@ -287,9 +287,8 @@ const Layout993: React.FC = () => {
           sx={{
             backgroundImage: "url('/media/animation/993-bg.jpg')",
             backgroundSize: "cover",
-            backgroundPosition: "center center",
             backgroundRepeat: "no-repeat",
-            opacity: 0.6,
+            opacity: "0.35",
             position: "absolute",
             display: "block",
             top: 0,
