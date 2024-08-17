@@ -171,8 +171,6 @@ const Layout992: React.FC = () => {
       <Door color="#fff" {...{ clickOpen, setClickOpen }}>
         <Box
           sx={{
-            pt: 3,
-            pb: 2,
             position: "relative",
           }}
         >
@@ -194,12 +192,6 @@ const Layout992: React.FC = () => {
           </Box>
           <Box sx={{ display: "flex", alignItems: "center" }}>
             <Image
-              src="/media/animation/flowery-letter-a.webp"
-              alt="Pulpen Studio"
-              width={20}
-              height={22}
-            />
-            <Image
               src="/media/animation/flowery-letter-s.webp"
               alt="Pulpen Studio"
               width={20}
@@ -216,12 +208,6 @@ const Layout992: React.FC = () => {
               id="hori-line"
             />
             <Image
-              src="/media/animation/flowery-letter-n.webp"
-              alt="Pulpen Studio"
-              width={20}
-              height={22}
-            />
-            <Image
               src="/media/animation/flowery-letter-h.webp"
               alt="Pulpen Studio"
               width={20}
@@ -229,7 +215,10 @@ const Layout992: React.FC = () => {
             />
           </Box>
         </Box>
-        <SubTitle dangerouslySetInnerHTML={{ __html: "Buka" }} />
+        <SubTitle
+          style={{ marginTop: "8px", marginBottom: "-8px" }}
+          dangerouslySetInnerHTML={{ __html: "Buka" }}
+        />
       </Door>
       <Box sx={{ visibility: "hidden", position: "absolute" }}>
         <ReactPlayer
@@ -327,6 +316,22 @@ const Layout992: React.FC = () => {
             left: "50%",
           }}
         >
+          <Box sx={{ position: "absolute", top: "60%", right: "0" }}>
+            <Image
+              src="/media/animation/glimpse.gif"
+              alt="Pulpen Studio | Ahmad Salimi Nurul Hidayah"
+              width={200}
+              height={200}
+            />
+          </Box>
+          <Box sx={{ position: "absolute", top: "60%", right: "0" }}>
+            <Image
+              src="/media/animation/glimpse.gif"
+              alt="Pulpen Studio | Ahmad Salimi Nurul Hidayah"
+              width={200}
+              height={200}
+            />
+          </Box>
           <Box sx={{ position: "absolute", top: "0", left: "0" }}>
             <Image
               src="/media/animation/glimpse.gif"
@@ -345,6 +350,13 @@ const Layout992: React.FC = () => {
           </Box>
           <Box mb={2} textAlign={"center"}>
             <Image
+              style={{
+                width: "auto",
+                top: "-32px",
+                display: "block",
+                left: "35%",
+              }}
+              className="moving-image"
               src="/media/animation/bird-flying.png"
               alt="Pulpen Studio | Ahmad Salimi Nurul Hidayah"
               width={60}
@@ -356,13 +368,14 @@ const Layout992: React.FC = () => {
               dangerouslySetInnerHTML={{ __html: `Majlis Perkahwinan` }}
             />
           </Box>
-          <Box sx={{ display: "flex", alignItems: "center" }} id="delay-2s">
-            <Image
-              src="/media/animation/flowery-letter-a.webp"
-              alt="Pulpen Studio"
-              width={49}
-              height={51}
-            />
+          <Box
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+            id="delay-2s"
+          >
             <Image
               src="/media/animation/flowery-letter-s.webp"
               alt="Pulpen Studio"
@@ -380,12 +393,6 @@ const Layout992: React.FC = () => {
               id="hori-line"
             />
             <Image
-              src="/media/animation/flowery-letter-n.webp"
-              alt="Pulpen Studio"
-              width={49}
-              height={51}
-            />
-            <Image
               src="/media/animation/flowery-letter-h.webp"
               alt="Pulpen Studio"
               width={49}
@@ -395,7 +402,7 @@ const Layout992: React.FC = () => {
           <Box mt={4} textAlign={"center"} id="delay-3s">
             <SubTitle
               dangerouslySetInnerHTML={{
-                __html: `Ahmad Salimi <br>&<br> Nurul Hazirah`,
+                __html: `Salimi & Hazirah`,
               }}
             />
           </Box>

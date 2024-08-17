@@ -164,7 +164,7 @@ const Layout993: React.FC = () => {
       onTouchStart={() => setMusicStart(true)}
       onClick={() => setMusicStart(true)}
     >
-      <Door color="transparent" {...{ clickOpen, setClickOpen }}>
+      <Door khairuAmira color="transparent" {...{ clickOpen, setClickOpen }}>
         <Title
           sx={{ fontSize: "24px", textShadow: "1px 1px 10px skyblue" }}
           dangerouslySetInnerHTML={{
@@ -182,6 +182,15 @@ const Layout993: React.FC = () => {
           dangerouslySetInnerHTML={{
             __html: "Zolkefli",
           }}
+        />
+        <SubTitle
+          sx={{
+            marginBottom: "-12px",
+            marginTop: "12px",
+            fontSize: "8px",
+            textAlign: "center",
+          }}
+          dangerouslySetInnerHTML={{ __html: `Sila Klik` }}
         />
       </Door>
       <Box sx={{ visibility: "hidden", position: "absolute" }}>
@@ -273,12 +282,25 @@ const Layout993: React.FC = () => {
           </Box>
         </Box>
       </Box>
-      <Box
-        sx={{
-          backgroundImage: "url('/media/animation/bg-brownish.avif')",
-          backgroundSize: "contain",
-        }}
-      >
+      <Box sx={{ position: "relative", marginTop: "60px" }}>
+        <Box
+          sx={{
+            backgroundImage: "url('/media/animation/993-bg.jpg')",
+            backgroundSize: "cover",
+            backgroundPosition: "center center",
+            backgroundRepeat: "no-repeat",
+            marginTop: "-44px",
+            opacity: 0.5,
+            position: "absolute",
+            display: "block",
+            top: 0,
+            left: 0,
+            height: "100%",
+            width: "100%",
+            zIndex: 0,
+            transform: "scaleX(-1)", // Flip horizontally
+          }}
+        />
         <Box
           mx={"auto"}
           sx={{
@@ -288,7 +310,7 @@ const Layout993: React.FC = () => {
             position: "relative",
           }}
         >
-          <Box
+          {/* <Box
             sx={{
               position: "absolute",
               right: "-46px",
@@ -307,7 +329,7 @@ const Layout993: React.FC = () => {
           <Box
             sx={{
               position: "absolute",
-              left: "-60px",
+              left: "-70px",
               bottom: "-20px",
               opacity: "0.75",
             }}
@@ -320,6 +342,54 @@ const Layout993: React.FC = () => {
               style={{ width: "auto", height: "100%" }}
             />
           </Box>
+          <Box
+            sx={{
+              position: "absolute",
+              left: "-60px",
+              top: "-50px",
+              opacity: "0.75",
+            }}
+          >
+            <Image
+              src="/media/animation/993-image.webp"
+              width={120}
+              alt="Pulpen Studio"
+              height={140}
+              style={{ width: "auto", height: "100%" }}
+            />
+          </Box>
+          <Box
+            sx={{
+              position: "absolute",
+              left: "-60px",
+              top: "-20px",
+              opacity: "0.75",
+            }}
+          >
+            <Image
+              src="/media/animation/993-image.webp"
+              width={120}
+              alt="Pulpen Studio"
+              height={140}
+              style={{ width: "auto", height: "100%" }}
+            />
+          </Box>
+          <Box
+            sx={{
+              position: "absolute",
+              left: "-60px",
+              top: "20px",
+              opacity: "0.75",
+            }}
+          >
+            <Image
+              src="/media/animation/993-image.webp"
+              width={120}
+              alt="Pulpen Studio"
+              height={140}
+              style={{ width: "auto", height: "100%" }}
+            />
+          </Box> */}
 
           <Box sx={{ zIndex: "2" }}>
             <Box textAlign={"center"}>
@@ -406,7 +476,7 @@ const Layout993: React.FC = () => {
             position: "relative",
           }}
         >
-          <Box
+          {/* <Box
             sx={{
               position: "absolute",
               left: "-58px",
@@ -422,6 +492,22 @@ const Layout993: React.FC = () => {
               height={180}
             />
           </Box>
+          <Box
+            sx={{
+              position: "absolute",
+              right: "-58px",
+              top: "0",
+              opacity: "0.8",
+              transform: "rotate(20deg) scaleY(-1)",
+            }}
+          >
+            <Image
+              src="/media/animation/layout-993-gif.gif"
+              width={140}
+              alt="Pulpen Studio"
+              height={180}
+            />
+          </Box> */}
           <SubTitle
             dangerouslySetInnerHTML={{
               __html: locale?.[item?.language!]?.CARD_COUNTDOWN_TITLE,

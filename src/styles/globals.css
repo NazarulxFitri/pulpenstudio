@@ -230,3 +230,31 @@ p {
     transform: translateY(0); /* Return to original position */
   }
 }
+
+@keyframes moveFlower {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(10px, -10px);
+    }
+    50% {
+        transform: translate(-10px, 10px);
+    }
+    75% {
+        transform: translate(10px, 10px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+.flower-animation {
+    position: relative;
+    width: 200px; /* Adjust the width to match your image size */
+    height: 200px; /* Adjust the height to match your image size */
+    background-image: url('/media/flower-1.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: moveFlower 5s infinite;
+}
