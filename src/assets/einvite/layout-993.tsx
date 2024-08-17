@@ -282,22 +282,22 @@ const Layout993: React.FC = () => {
           </Box>
         </Box>
       </Box>
-      <Box sx={{ position: "relative", marginTop: "60px" }}>
+      <Box sx={{ position: "relative" }}>
         <Box
           sx={{
             backgroundImage: "url('/media/animation/993-bg.jpg')",
             backgroundSize: "cover",
             backgroundPosition: "center center",
             backgroundRepeat: "no-repeat",
-            marginTop: "-44px",
-            opacity: 0.5,
+            opacity: 0.6,
             position: "absolute",
             display: "block",
             top: 0,
+            bottom: "334px",
             left: 0,
             height: "100%",
             width: "100%",
-            zIndex: 0,
+            zIndex: -1,
             transform: "scaleX(-1)", // Flip horizontally
           }}
         />
@@ -436,6 +436,8 @@ const Layout993: React.FC = () => {
           sx={{
             textAlign: "center",
             padding: "0 32px",
+            mt: 2,
+            mb: 4,
             position: "relative",
           }}
         >
@@ -464,6 +466,14 @@ const Layout993: React.FC = () => {
               sx={{ fontSize: "12px", my: 0.5, textAlign: "left" }}
               dangerouslySetInnerHTML={{
                 __html: "Ketibaan Pengantin",
+              }}
+            />
+          </Box>
+          <Box sx={{ display: "inline-flex" }}>
+            <SubTitle
+              sx={{ fontSize: "12px", my: 0.5, textAlign: "left" }}
+              dangerouslySetInnerHTML={{
+                __html: "Tema : Busana Orang Kampung",
               }}
             />
           </Box>
