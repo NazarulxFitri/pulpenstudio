@@ -468,7 +468,7 @@ const Layout993: React.FC = () => {
               }}
             />
           </Box>
-          <Box sx={{ display: "inline-flex" }}>
+          <Box sx={{ display: "inline-flex", mt: 6 }}>
             <SubTitle
               sx={{ fontSize: "12px", my: 0.5, textAlign: "left" }}
               dangerouslySetInnerHTML={{
@@ -649,10 +649,14 @@ const Layout993: React.FC = () => {
           color="#ffeeda"
           location={{ text: item?.location!, mapUrl: item?.mapUrl! }}
           contact={{
-            number1: item?.phonePerson1!,
-            number2: item?.phonePerson2!,
-            name1: item?.namePerson1!,
-            name2: item?.namePerson2!,
+            number1: "0123091534",
+            number2: "0193321534",
+            number3: "0136609131",
+            number4: "0192141534",
+            name1: "Sabri",
+            name2: "Nani",
+            name3: "Nisa",
+            name4: "Afif",
           }}
         />
       </Box>
