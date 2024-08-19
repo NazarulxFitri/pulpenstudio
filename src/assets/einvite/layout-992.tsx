@@ -68,7 +68,7 @@ const SubTitle = styled("p")(() => ({
 }));
 
 const Text = styled("p")(() => ({
-  fontFamily: `${lora.style.fontFamily} !important` || "auto",
+  fontFamily: `${playfair.style.fontFamily} !important` || "auto",
   fontSize: "16px",
   textAlign: "center",
 }));
@@ -81,7 +81,7 @@ const MiniText = styled("p")(() => ({
 }));
 
 const UbuntuText = styled("p")(() => ({
-  fontFamily: `${ubuntu.style.fontFamily} !important` || "auto",
+  fontFamily: `${playfair.style.fontFamily} !important` || "auto",
   fontWeight: "700",
   fontSize: "16px",
   textAlign: "center",
@@ -432,16 +432,115 @@ const Layout992: React.FC = () => {
         </Box>
       </Box>
 
-      <Box>
+      <Box sx={{ position: "relative" }}>
+        <Box sx={{ position: "absolute", top: "0", left: "0" }}>
+          <Image
+            src="/media/animation/glimpse.gif"
+            alt="Pulpen Studio | Ahmad Salimi Nurul Hidayah"
+            width={200}
+            height={200}
+          />
+        </Box>
+        <Box sx={{ position: "absolute", top: "0", right: "0" }}>
+          <Image
+            src="/media/animation/glimpse.gif"
+            alt="Pulpen Studio | Ahmad Salimi Nurul Hidayah"
+            width={200}
+            height={200}
+          />
+        </Box>
+        <Box sx={{ position: "absolute", top: "100px", left: "30px" }}>
+          <Image
+            src="/media/animation/glimpse.gif"
+            alt="Pulpen Studio | Ahmad Salimi Nurul Hidayah"
+            width={200}
+            height={200}
+          />
+        </Box>
+        <Box sx={{ position: "absolute", top: "100px", right: "30px" }}>
+          <Image
+            src="/media/animation/glimpse.gif"
+            alt="Pulpen Studio | Ahmad Salimi Nurul Hidayah"
+            width={200}
+            height={200}
+          />
+        </Box>
+        <Box
+          sx={{
+            backgroundImage: "url('/media/animation/layout-992-zbg.webp')",
+            backgroundSize: "cover",
+            backgroundPosition: "center center",
+            backgroundRepeat: "no-repeat",
+            marginTop: "-60px",
+            opacity: 0.6,
+            position: "absolute",
+            top: 0,
+            left: 0,
+            height: "100%",
+            width: "100%",
+            zIndex: -1,
+          }}
+        />
+        <Box sx={{ position: "absolute", top: "50%", left: "-20px" }}>
+          <Image
+            src="/media/animation/layout-992-side.webp"
+            alt="Pulpen Studio"
+            width={50}
+            height={400}
+          />
+        </Box>
+        <Box sx={{ position: "absolute", top: "20%", left: "-20px" }}>
+          <Image
+            src="/media/animation/layout-992-side.webp"
+            alt="Pulpen Studio"
+            width={50}
+            height={400}
+          />
+        </Box>
+        <Box
+          sx={{
+            position: "absolute",
+            top: "50%",
+            right: "-20px",
+            transform: "scaleX(-1)",
+          }}
+        >
+          <Image
+            src="/media/animation/layout-992-side.webp"
+            alt="Pulpen Studio"
+            width={50}
+            height={400}
+          />
+        </Box>
+        <Box
+          sx={{
+            position: "absolute",
+            top: "20%",
+            right: "-20px",
+            transform: "scaleX(-1)",
+          }}
+        >
+          <Image
+            src="/media/animation/layout-992-side.webp"
+            alt="Pulpen Studio"
+            width={50}
+            height={400}
+          />
+        </Box>
         <Box
           mb={8}
           mx="auto"
           sx={{
-            p: { xs: "24px 16px", md: 1 },
+            p: { xs: "24px 16px", md: 3 },
           }}
         >
           <Box
-            sx={{ display: "block", width: "fit-content", margin: "0 auto" }}
+            sx={{
+              display: "block",
+              width: "fit-content",
+              margin: "0 auto",
+              pb: 4,
+            }}
           >
             <Image
               src="/media/animation/bis-img.png"
@@ -452,7 +551,7 @@ const Layout992: React.FC = () => {
           </Box>
 
           <SubTitle
-            sx={{ mb: 3 }}
+            sx={{ mb: 3, textTransform: "none" }}
             dangerouslySetInnerHTML={{
               __html: locale?.[item?.language!]?.CARD_INTRO,
             }}
@@ -464,7 +563,7 @@ const Layout992: React.FC = () => {
             }}
           />
           <SubTitle
-            sx={{ mb: 3 }}
+            sx={{ mb: 3, textTransform: "none" }}
             dangerouslySetInnerHTML={{
               __html:
                 "Dengan segala hormatnya kami menjemput Dato | Datin | Tuan | Puan | Encik | Cik hadir ke majlis perkahwinan puteri kami",
@@ -481,7 +580,7 @@ const Layout992: React.FC = () => {
           />
 
           <SubTitle
-            sx={{ mb: 3 }}
+            sx={{ mb: 3, textTransform: "none" }}
             dangerouslySetInnerHTML={{
               __html:
                 "Semoga dengan kehadiran hadirin sekalian akan menyerikan lagi majlis kami dan diberkati Allah S.W.T hendaknya. Sekian, Terima Kasih",
