@@ -402,7 +402,7 @@ const Layout992: React.FC = () => {
           <Box mt={4} textAlign={"center"} id="delay-3s">
             <SubTitle
               dangerouslySetInnerHTML={{
-                __html: `Salimi & Hazirah`,
+                __html: `Salimi & Hidayah`,
               }}
             />
           </Box>
