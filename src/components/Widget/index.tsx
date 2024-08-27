@@ -195,7 +195,6 @@ const Widget: React.FC<WidgetProps> = ({
           }}
         />
       )}
-
       {!hideRsvp && (
         <Grid item xs>
           <Box onClick={() => handleClick("rsvp")}>
@@ -203,7 +202,6 @@ const Widget: React.FC<WidgetProps> = ({
           </Box>
         </Grid>
       )}
-
       {!hideEdit && (
         <Grid item xs>
           <Box onClick={() => handleClick("comment")}>
@@ -211,13 +209,11 @@ const Widget: React.FC<WidgetProps> = ({
           </Box>
         </Grid>
       )}
-
       <Grid item xs>
         <Box onClick={() => handleClick("location")}>
           <MapIcon />
         </Box>
       </Grid>
-
       {!hidePhoneNumber && (
         <Grid item xs>
           <Box onClick={() => handleClick("contact")}>
@@ -225,7 +221,6 @@ const Widget: React.FC<WidgetProps> = ({
           </Box>
         </Grid>
       )}
-
       {showGift && (
         <Grid item xs>
           <Box onClick={() => handleClick("gift")}>
