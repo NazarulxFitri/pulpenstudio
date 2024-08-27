@@ -418,7 +418,7 @@ const Layout991: React.FC = () => {
             <SubTitle
               sx={{ fontWeight: "700", mb: 3 }}
               dangerouslySetInnerHTML={{
-                __html: "Mohd Sabri bin Hamzah <br>&<br> Rosenani bin Yaakub",
+                __html: "Abd. Aziz bin Ibrahim <br>&<br>Sabariah binti Ahmad",
               }}
             />
             <SubTitle
