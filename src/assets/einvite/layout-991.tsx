@@ -6,6 +6,7 @@ import {
   Cormorant_SC,
   Imperial_Script,
   Playfair_Display,
+  Poppins,
   Ubuntu,
 } from "next/font/google";
 import useGetEinvite from "@/data/useGetEinvite";
@@ -29,6 +30,7 @@ const cormorant = Cormorant_SC({
   subsets: ["latin"],
   weight: ["300", "400", "700"],
 });
+const poppin = Poppins({ subsets: ["latin"], weight: ["300", "500", "700"] });
 
 interface DateTimeConfig {
   countdownTimer: {
@@ -56,7 +58,7 @@ const Title = styled("h1")(() => ({
 const SubTitle = styled("p")(() => ({
   fontSize: "12px",
   fontWeight: "300",
-  fontFamily: `${cormorant.style.fontFamily} !important` || "auto",
+  fontFamily: `${poppin.style.fontFamily} !important` || "auto",
   textAlign: "center",
   letterSpacing: "0.25em",
   textTransform: "uppercase",
@@ -355,6 +357,16 @@ const Layout991: React.FC = () => {
                 />
               </Box>
             </Box>
+            <SubTitle
+              sx={{
+                paddingTop: "24px",
+                fontWeight: "lighter",
+                fontSize: "12px",
+              }}
+              dangerouslySetInnerHTML={{
+                __html: `Welcome to our forever & always <br>#AisyahEffilyEverAfter`,
+              }}
+            />
             <SubTitle
               sx={{
                 paddingTop: "24px",
