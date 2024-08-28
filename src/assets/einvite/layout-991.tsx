@@ -620,6 +620,7 @@ const Layout991: React.FC = () => {
       <Box>
         <Widget
           showGift
+          giftImage={"/media/animation/qr-mira.jpeg"}
           includePhoneNumber={true}
           includeOrigin={false}
           language={item?.language!}

@@ -16,6 +16,7 @@ import GiftPopup from "./GiftPopup";
 interface WidgetProps {
   hidePhoneNumber?: boolean;
   showGift?: boolean;
+  giftImage?: string;
   includePhoneNumber?: boolean;
   includeOrigin?: boolean;
   hideRsvp?: boolean;
@@ -42,6 +43,7 @@ interface WidgetProps {
 
 const Widget: React.FC<WidgetProps> = ({
   showGift,
+  giftImage,
   includePhoneNumber,
   includeOrigin,
   language,
@@ -184,6 +186,7 @@ const Widget: React.FC<WidgetProps> = ({
       {giftPopup && (
         <GiftPopup
           title={"Gift"}
+          giftImage={giftImage!}
           {...{
             iconColor,
             color,

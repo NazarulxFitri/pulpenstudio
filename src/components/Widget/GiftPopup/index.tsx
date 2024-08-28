@@ -6,6 +6,7 @@ interface GiftPopupProps {
   iconColor?: string;
   title: string;
   color: string;
+  giftImage?: string;
   setRsvpPopup: (value: boolean) => void;
   setCommentPopup: (value: boolean) => void;
   setLocationPopup: (value: boolean) => void;
@@ -14,6 +15,7 @@ interface GiftPopupProps {
 }
 
 const GiftPopup: React.FC<GiftPopupProps> = ({
+  giftImage,
   iconColor,
   title,
   color,
@@ -64,7 +66,7 @@ const GiftPopup: React.FC<GiftPopupProps> = ({
             Sumbangan ikhlas boleh disalurkan ke sini :
           </p>
           <Image
-            src={"/media/animation/qr-mira.jpeg"}
+            src={giftImage!}
             width={300}
             alt={"Money gift - Pulpen Studio"}
             height={450}

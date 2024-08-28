@@ -192,7 +192,7 @@ const Layout990: React.FC = () => {
           </Box>
           <Box sx={{ display: "flex", alignItems: "center" }}>
             <Image
-              src="/media/animation/flowery-letter-s.webp"
+              src="/media/animation/flowery-letter-a.webp"
               alt="Pulpen Studio"
               width={20}
               height={22}
@@ -208,7 +208,7 @@ const Layout990: React.FC = () => {
               id="hori-line"
             />
             <Image
-              src="/media/animation/flowery-letter-h.webp"
+              src="/media/animation/flowery-letter-a.webp"
               alt="Pulpen Studio"
               width={20}
               height={22}
@@ -377,7 +377,7 @@ const Layout990: React.FC = () => {
             id="delay-2s"
           >
             <Image
-              src="/media/animation/flowery-letter-s.webp"
+              src="/media/animation/flowery-letter-a.webp"
               alt="Pulpen Studio"
               width={49}
               height={51}
@@ -393,7 +393,7 @@ const Layout990: React.FC = () => {
               id="hori-line"
             />
             <Image
-              src="/media/animation/flowery-letter-h.webp"
+              src="/media/animation/flowery-letter-a.webp"
               alt="Pulpen Studio"
               width={49}
               height={51}
@@ -402,7 +402,7 @@ const Layout990: React.FC = () => {
           <Box mt={4} textAlign={"center"} id="delay-3s">
             <SubTitle
               dangerouslySetInnerHTML={{
-                __html: `Salimi & Hidayah`,
+                __html: `Aisyah & Adam`,
               }}
             />
           </Box>
@@ -413,12 +413,20 @@ const Layout990: React.FC = () => {
           >
             <SubTitle
               dangerouslySetInnerHTML={{
-                __html: `21 . 9 . 2024`,
+                __html: `9 . 8 . 2025`,
               }}
             />
             <SubTitle
               dangerouslySetInnerHTML={{
                 __html: `Sabtu`,
+              }}
+            />
+          </Box>
+          <Box mt={2} textAlign={"center"} id="delay-3s">
+            <SubTitle
+              style={{ fontSize: "10px" }}
+              dangerouslySetInnerHTML={{
+                __html: ` De Majlis Event Space, <br>Ostia Bangi`,
               }}
             />
           </Box>
@@ -472,7 +480,7 @@ const Layout990: React.FC = () => {
             backgroundPosition: "center center",
             backgroundRepeat: "no-repeat",
             marginTop: "-60px",
-            opacity: 0.6,
+            opacity: 0.4,
             position: "absolute",
             top: 0,
             left: 0,
@@ -559,7 +567,8 @@ const Layout990: React.FC = () => {
           <SubTitle
             sx={{ fontWeight: "700", mb: 3 }}
             dangerouslySetInnerHTML={{
-              __html: "Abd. Aziz bin Ibrahim <br> & <br>  Sabariah binti Ahmad",
+              __html:
+                "Mohd Hamin Bin Misran <br>&<br> Anorzaiwati Binti Shar Anuar",
             }}
           />
           <SubTitle
@@ -772,10 +781,15 @@ const Layout990: React.FC = () => {
       </Box>
       <Box>
         <Widget
+          showGift
+          giftImage={"/media/animation/gift-image-adam-aisyah.jpeg"}
           language={item?.language!}
           iconColor="#131313"
           color="#d2dbe7"
-          location={{ text: item?.location!, mapUrl: item?.mapUrl! }}
+          location={{
+            text: " De Majlis Event Space , B-6-7 Block B, Jalan Ostia Utama, Ostia Bangi Bussiness Park, 43650 Bandar Baru Bangi, Selangor",
+            mapUrl: item?.mapUrl!,
+          }}
           contact={{
             number1: item?.phonePerson1!,
             number2: item?.phonePerson2!,
