@@ -163,7 +163,7 @@ const Layout991: React.FC = () => {
       onTouchStart={() => setMusicStart(true)}
       onClick={() => setMusicStart(true)}
     >
-      <Door color="transparent" {...{ clickOpen, setClickOpen }}>
+      <Door aisyahEffi color="transparent" {...{ clickOpen, setClickOpen }}>
         <Title
           sx={{ fontSize: "24px", textShadow: "1px 1px 10px skyblue" }}
           dangerouslySetInnerHTML={{
@@ -329,30 +329,26 @@ const Layout991: React.FC = () => {
             />
             <Box display="flex" justifyContent="center" gap={1} my={1}>
               <SubTitle
-                sx={{ fontWeight: "lighter", fontSize: "12px" }}
+                sx={{ fontWeight: "bold", fontSize: "16px" }}
                 dangerouslySetInnerHTML={{
                   __html: "Sabtu",
                 }}
               />
-              <Box display={"flex"} ml={2}>
+              <Box display={"flex"} ml={1}>
                 <SubTitle
-                  sx={{ fontWeight: "lighter", fontSize: "14px" }}
+                  sx={{ fontWeight: "bold", fontSize: "16px" }}
                   dangerouslySetInnerHTML={{
                     __html: "9",
                   }}
                 />
                 <SubTitle
-                  sx={{
-                    fontWeight: "bold",
-                    fontSize: "48px",
-                    letterSpacing: "0.005em",
-                  }}
+                  sx={{ fontWeight: "bold", fontSize: "16px" }}
                   dangerouslySetInnerHTML={{
-                    __html: "11",
+                    __html: ".11.",
                   }}
                 />
                 <SubTitle
-                  sx={{ fontWeight: "lighter", fontSize: "14px" }}
+                  sx={{ fontWeight: "bold", fontSize: "16px" }}
                   dangerouslySetInnerHTML={{
                     __html: "2024",
                   }}
