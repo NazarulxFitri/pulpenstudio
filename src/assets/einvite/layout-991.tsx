@@ -367,16 +367,6 @@ const Layout991: React.FC = () => {
                 __html: `Welcome to our forever & always <br>#AisyahEffilyEverAfter`,
               }}
             />
-            <SubTitle
-              sx={{
-                paddingTop: "24px",
-                fontWeight: "lighter",
-                fontSize: "12px",
-              }}
-              dangerouslySetInnerHTML={{
-                __html: `<i>"Dan Kami menciptakan kamu <br>berpasang-pasangan"</i><br>78:8`,
-              }}
-            />
           </Box>
         </Box>
       </Box>
@@ -593,7 +583,7 @@ const Layout991: React.FC = () => {
           />
           <SubTitle
             dangerouslySetInnerHTML={{
-              __html: "#ATOZLOVESTORY",
+              __html: "#AisyahEffilyEverAfter",
             }}
             sx={{ pb: 2, fontWeight: "bold" }}
           />
