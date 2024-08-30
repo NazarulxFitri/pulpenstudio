@@ -371,6 +371,7 @@ const Layout991: React.FC = () => {
         </Box>
       </Box>
       <Box sx={{ position: "relative" }}>
+        {/* Comment */}
         <Box
           sx={{
             backgroundImage: "url('/media/animation/painted-bg.jpg')",
