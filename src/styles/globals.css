@@ -258,3 +258,7 @@ p {
     background-repeat: no-repeat;
     animation: moveFlower 5s infinite;
 }
+
+.scrolled {
+  color: #b76e79;
+}

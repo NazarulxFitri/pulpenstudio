@@ -152,6 +152,25 @@ const Layout991: React.FC = () => {
     return () => clearInterval(interval);
   }, [countdownTimerParam]);
 
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const offset = window.scrollY;
+      if (offset > 10) {
+        // adjust this value as needed
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <Box
       maxWidth="400px"
@@ -325,8 +344,10 @@ const Layout991: React.FC = () => {
               }}
             >
               <Title
+                className={scrolled ? "scrolled" : ""}
+                style={{ transition: "color 0.5s ease" }}
                 dangerouslySetInnerHTML={{
-                  __html: `<span style="color: #b76e79">A</span>isyah`,
+                  __html: `<span>A</span>isyah`,
                 }}
               />
               <Title
@@ -334,8 +355,10 @@ const Layout991: React.FC = () => {
                 sx={{ my: 2, fontSize: "40px" }}
               />
               <Title
+                className={scrolled ? "scrolled" : ""}
+                style={{ transition: "color 0.5s ease" }}
                 dangerouslySetInnerHTML={{
-                  __html: `<span style="color: #b76e79">E</span>ffi`,
+                  __html: `<span>E</span>ffi`,
                 }}
               />
             </Box>
