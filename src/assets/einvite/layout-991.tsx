@@ -188,7 +188,7 @@ const Layout991: React.FC = () => {
         <Title
           sx={{ fontSize: "24px", textShadow: "1px 1px 10px skyblue" }}
           dangerouslySetInnerHTML={{
-            __html: `<span style="color: #b76e79">A</span>isyah`,
+            __html: `<span>A</span>isyah`,
           }}
         />
         <Title
@@ -200,7 +200,7 @@ const Layout991: React.FC = () => {
         <Title
           sx={{ fontSize: "24px", textShadow: "1px 1px 10px skyblue" }}
           dangerouslySetInnerHTML={{
-            __html: `<span style="color: #b76e79">E</span>ffi`,
+            __html: `<span">E</span>ffi`,
           }}
         />
         <SubTitle
