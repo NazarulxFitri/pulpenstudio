@@ -208,8 +208,25 @@ const Layout991: React.FC = () => {
         sx={{
           height: "100vh",
           position: "relative",
+          display: clickOpen ? "block" : "none",
         }}
       >
+        <Box sx={{ position: "absolute", top: "0", left: "0", zIndex: 2 }}>
+          <Image
+            src="/media/animation/glimpse.gif"
+            alt="Pulpen Studio | Ahmad Salimi Nurul Hidayah"
+            width={400}
+            height={400}
+          />
+        </Box>
+        <Box sx={{ position: "absolute", top: "50%", left: "0", zIndex: 2 }}>
+          <Image
+            src="/media/animation/glimpse.gif"
+            alt="Pulpen Studio | Ahmad Salimi Nurul Hidayah"
+            width={400}
+            height={400}
+          />
+        </Box>
         <Box
           sx={{
             backgroundImage: "url('/media/animation/painted-bg.jpg')",
@@ -294,12 +311,14 @@ const Layout991: React.FC = () => {
             }}
           >
             <SubTitle
+              className="animate__animated animate__fadeIn animate__delay-1s animate__slower"
               sx={{ fontSize: "14px" }}
               dangerouslySetInnerHTML={{
                 __html: "Majlis Perkahwinan",
               }}
             />
             <Box
+              className="animate__animated animate__fadeIn animate__delay-2s animate__slower"
               sx={{
                 position: "relative",
                 my: 5,
@@ -321,6 +340,7 @@ const Layout991: React.FC = () => {
               />
             </Box>
             <SubTitle
+              className="animate__animated animate__fadeIn animate__delay-3s animate__slower"
               sx={{
                 fontSize: "14px",
                 padding: "0 16px",
@@ -329,7 +349,13 @@ const Layout991: React.FC = () => {
                 __html: "Sebening Embun <br>Garden Event Hall",
               }}
             />
-            <Box display="flex" justifyContent="center" gap={1} my={1}>
+            <Box
+              display="flex"
+              justifyContent="center"
+              gap={1}
+              my={1}
+              className="animate__animated animate__fadeIn animate__delay-3s animate__slower"
+            >
               <SubTitle
                 sx={{ fontWeight: "bold", fontSize: "16px" }}
                 dangerouslySetInnerHTML={{
@@ -358,6 +384,7 @@ const Layout991: React.FC = () => {
               </Box>
             </Box>
             <SubTitle
+              className="animate__animated animate__fadeIn animate__delay-4s animate__slower"
               sx={{
                 paddingTop: "24px",
                 fontWeight: "lighter",
@@ -417,7 +444,8 @@ const Layout991: React.FC = () => {
             <SubTitle
               sx={{ fontWeight: "700", mb: 3 }}
               dangerouslySetInnerHTML={{
-                __html: "Abd. Aziz bin Ibrahim <br>&<br>Sabariah binti Ahmad",
+                __html:
+                  "Hj Abd. Aziz bin Ibrahim <br>&<br>Hjh Sabariah binti Ahmad",
               }}
             />
             <SubTitle
@@ -619,7 +647,7 @@ const Layout991: React.FC = () => {
       <Box>
         <Widget
           showGift
-          giftImage={"/media/animation/qr-mira.jpeg"}
+          giftImage={"/media/animation/qr-asiyah-effi.jpeg"}
           includePhoneNumber={true}
           includeOrigin={false}
           language={item?.language!}
