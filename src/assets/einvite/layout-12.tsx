@@ -153,7 +153,7 @@ const Layout12: React.FC = () => {
       maxWidth="400px"
       sx={{
         backgroundImage: "url('/media/animation/layout1-background.webp')",
-          backgroundSize: "cover",
+        backgroundSize: "cover",
         boxShadow: "1px 1px 10px #b4bca9",
         m: "auto",
         position: "relative",
@@ -163,15 +163,13 @@ const Layout12: React.FC = () => {
       onTouchStart={() => setMusicStart(true)}
       onClick={() => setMusicStart(true)}
     >
-      <Door color="#b4bca9" {...{ clickOpen, setClickOpen }}>
-        <Special
-          sx={{ color: "#FFF" }}
+      <Door color="#b4bca9" {...{ clickOpen, setClickOpen }} asyiqinasyraf>
+        <SubTitle
           dangerouslySetInnerHTML={{
             __html: item?.title1Groom!,
           }}
         />
-        <Special
-          sx={{ color: "#FFF" }}
+        <SubTitle
           dangerouslySetInnerHTML={{
             __html: item?.title1Bride!,
           }}
@@ -187,7 +185,7 @@ const Layout12: React.FC = () => {
           controls={true}
         />
       </Box>
-      <Box sx={{   height: "100vh", position: "relative" }}>
+      <Box sx={{ height: "100vh", position: "relative" }}>
         <Box
           sx={{
             position: "absolute",
@@ -226,7 +224,7 @@ const Layout12: React.FC = () => {
             top: "-160px",
             right: "-60px",
             transform: "rotate(140deg) scaleX(-1)",
-            opacity: "0.8"
+            opacity: "0.8",
           }}
         >
           <Image
@@ -243,7 +241,7 @@ const Layout12: React.FC = () => {
             bottom: "-80px",
             transform: "rotate(40deg)",
             right: "-80px",
-            opacity: "0.8"
+            opacity: "0.8",
           }}
         >
           <Image
@@ -260,7 +258,7 @@ const Layout12: React.FC = () => {
             bottom: "-80px",
             transform: "rotate(-40deg) scaleX(-1)",
             left: "-80px",
-            opacity: "0.8"
+            opacity: "0.8",
           }}
         >
           <Image
@@ -272,6 +270,7 @@ const Layout12: React.FC = () => {
         </Box>
         <Box
           sx={{
+            display: clickOpen ? "block" : "none",
             position: "absolute",
             top: "50%",
             left: "50%",
@@ -288,37 +287,41 @@ const Layout12: React.FC = () => {
               sx={{ mb: 5 }}
             />
             <Box
-              mb={5}
+              mb={4}
               className="animate__animated animate__zoomIn animate__slow animate__delay-1s"
             >
-              <Special
+              <SubTitle
                 dangerouslySetInnerHTML={{
-                  __html: `${item?.title1Groom}`,
+                  __html: `Asyraf`,
                 }}
-                sx={{  ml: -4, fontSize: "40px" , color: "#ac6e29"}}
+                sx={{ fontSize: "28px", textShadow: "1px 1px 10px #d1d3bb" }}
               />
-              <Title
+              <SubTitle
                 dangerouslySetInnerHTML={{
                   __html: "<3",
                 }}
                 sx={{ fontSize: "16px" }}
               />
-              <Special
+              <SubTitle
                 dangerouslySetInnerHTML={{
-                  __html: `${item?.title1Bride}`,
+                  __html: `Asyiqin`,
                 }}
-                sx={{ mr: -4, fontSize: "40px", color: "#ac6e29" }}
+                sx={{ fontSize: "28px", textShadow: "1px 1px 10px #d1d3bb" }}
               />
             </Box>
             <Box
-              sx={{  mb: 1 }}
+              sx={{ mb: 1 }}
               className="animate__animated animate__zoomIn animate__slow animate__delay-2s"
             >
               <SubTitle
-                dangerouslySetInnerHTML={{ __html: `${dayText}, <span style="font-size: 32px">${dateText}</span> ${monthText} ${yearText}` }}
+                sx={{ fontSize: "12px" }}
+                dangerouslySetInnerHTML={{
+                  __html: `Sabtu, <span style="font-size: 32px">${dateText}</span> ${monthText} ${yearText}`,
+                }}
               />
             </Box>
             <SubTitle
+              sx={{ fontSize: "12px" }}
               dangerouslySetInnerHTML={{ __html: item?.location! }}
               className="animate__animated animate__zoomIn animate__slow animate__delay-3s"
             />
@@ -331,24 +334,24 @@ const Layout12: React.FC = () => {
           mx="auto"
           sx={{
             p: { xs: "24px 16px", md: 8 },
-            position: "relative"
+            position: "relative",
           }}
         >
           <Box
-          sx={{
-            position: "absolute",
-            top: "0",
-            right: "-102px",
-            opacity: "0.8",
-          }}
-        >
-          <Image
-            src="/media/animation/layout-12-leaf.gif"
-            alt="Pulpen Studio - Flourish Gloom"
-            width={160}
-            height={280}
-          />
-        </Box>
+            sx={{
+              position: "absolute",
+              top: "0",
+              right: "-102px",
+              opacity: "0.8",
+            }}
+          >
+            <Image
+              src="/media/animation/layout-12-leaf.gif"
+              alt="Pulpen Studio - Flourish Gloom"
+              width={160}
+              height={280}
+            />
+          </Box>
           <Text
             sx={{ mb: 3 }}
             dangerouslySetInnerHTML={{
@@ -356,9 +359,9 @@ const Layout12: React.FC = () => {
             }}
           />
           <Text
-            sx={{ fontWeight: "bolder", mb: 3, fontSize: "14px", }}
+            sx={{ fontWeight: "bolder", mb: 3, fontSize: "14px" }}
             dangerouslySetInnerHTML={{
-              __html: "Abdul Razak bin Jamaluddin <br>Suzana binti Mat Isa",
+              __html: "MOHD ASRI BIN AWANG<br>&<br>ROSILAH BINTI ABU BAKAR",
             }}
           />
           <Text
@@ -375,7 +378,14 @@ const Layout12: React.FC = () => {
               mb: 3,
             }}
             dangerouslySetInnerHTML={{
-              __html: `${item?.fullNameGroom} <br> ${item?.fullNameBride}`,
+              __html: `MUHAMMAD ASYRAF BIN MOHD ASRI<br>&<br>NUR ASYIQIN BINTI RAMZI`,
+            }}
+          />
+          <Text
+            dangerouslySetInnerHTML={{
+              __html: `Semoga dengan kehadiran hadirin sekalian
+akan menyerikan lagi majlis kami dan diberkati Allah S.W.T hendaknya.
+Sekian, Terima Kasih`,
             }}
           />
         </Box>
@@ -389,165 +399,75 @@ const Layout12: React.FC = () => {
           }}
         >
           <Box
-          sx={{
-            position: "absolute",
-            top: "0",
-            left: "-100px",
-            opacity: "0.8",
-          }}
-        >
-          <Image
-            src="/media/animation/layout-12-leaf.gif"
-            alt="Pulpen Studio - Flourish Gloom"
-            width={160}
-            height={280}
-          />
-        </Box>
-          <Box sx={{ textAlign: "left", padding: "0 32px"}}>
-        <Text
-          sx={{ fontSize: "12px"}}
-          dangerouslySetInnerHTML={{
-            __html: "<b>ATUR CARA</b> | <i>TENTATIVES</i><br><br>12pm - 5pm",
-          }}
-        />
+            sx={{
+              position: "absolute",
+              top: "0",
+              left: "-100px",
+              opacity: "0.8",
+            }}
+          >
+            <Image
+              src="/media/animation/layout-12-leaf.gif"
+              alt="Pulpen Studio - Flourish Gloom"
+              width={160}
+              height={280}
+            />
+          </Box>
+          <Box sx={{ textAlign: "left", padding: "0 32px" }}>
+            <Text
+              sx={{ fontSize: "12px" }}
+              dangerouslySetInnerHTML={{
+                __html:
+                  "<b>ATUR CARA</b> | <i>TENTATIVES</i><br><br>12pm - 4pm",
+              }}
+            />
 
-        <Box sx={{ display: "inline-flex"}}>
-           <Text
-            sx={{ fontSize: "12px", my: 0.5, display: "block", mr: 2 }}
-            dangerouslySetInnerHTML={{
-              __html:
-                "<b>12.00pm</b>",
-            }}
-          />
-          <Text
-            sx={{ fontSize: "12px", my: 0.5, textAlign: "left" }}
-            dangerouslySetInnerHTML={{
-              __html:
-                "<b>Ketibaan tetamu & Ahli keluarga</b>",
-            }}
-          />
-        </Box>
-        
-        <Box sx={{ display: "inline-flex"}}>
-          <Text
-            sx={{ fontSize: "12px", my: 0.5,  display: "block", mr: 2 }}
-            dangerouslySetInnerHTML={{
-              __html:
-                "<b>1.30pm</b>",
-            }}
-          />
-          <Text
-          sx={{ fontSize: "12px", my: 0.5, textAlign: "left" }}
-          dangerouslySetInnerHTML={{
-            __html:
-              "<b>Ketibaan pengantin & pengantin bersanding di pelamin</b>",
-          }}
-        />
-        </Box>
+            <Box sx={{ display: "inline-flex" }}>
+              <Text
+                sx={{ fontSize: "12px", my: 0.5, display: "block", mr: 2 }}
+                dangerouslySetInnerHTML={{
+                  __html: "<b>12.00pm</b>",
+                }}
+              />
+              <Text
+                sx={{ fontSize: "12px", my: 0.5, textAlign: "left" }}
+                dangerouslySetInnerHTML={{
+                  __html: "<b>Ketibaan tetamu & Ahli keluarga</b>",
+                }}
+              />
+            </Box>
 
-         <Box sx={{ display: "inline-flex"}}>
-          <Text
-            sx={{ fontSize: "12px", my: 0.5, display: "block", mr: 2 }}
-            dangerouslySetInnerHTML={{
-              __html:
-                "<b>1.50pm</b>",
-            }}
-          />
-          <Text
-          sx={{ fontSize: "12px", my: 0.5, textAlign: "left"  }}
-          dangerouslySetInnerHTML={{
-            __html:
-              "<b>Bacaan doa, upacara renjis & Salam restu</b>",
-          }}
-        />
-        </Box> 
-
-         <Box sx={{ display: "inline-flex"}}>
-          <Text
-            sx={{ fontSize: "12px", my: 0.5, display: "block", mr: 2 }}
-            dangerouslySetInnerHTML={{
-              __html:
-                "<b>2.30pm</b>",
-            }}
-          />
-          <Text
-          sx={{ fontSize: "12px", my: 0.5, textAlign: "left"  }}
-          dangerouslySetInnerHTML={{
-            __html:
-              "<b>Makan beradab & Ucapan dari wakil ahli keluarga</b>",
-          }}
-        />
-        </Box> 
-
-         <Box sx={{ display: "inline-flex"}}>
-          <Text
-            sx={{ fontSize: "12px", my: 0.5, display: "block", mr: 2 }}
-            dangerouslySetInnerHTML={{
-              __html:
-                "<b>2.50pm</b>",
-            }}
-          />
-          <Text
-          sx={{ fontSize: "12px", my: 0.5, textAlign: "left"  }}
-          dangerouslySetInnerHTML={{
-            __html:
-              "<b>Ucapan daripada pengantin</b>",
-          }}
-        />
-        </Box> 
-
-         <Box sx={{ display: "inline-flex"}}>
-          <Text
-            sx={{ fontSize: "12px", my: 0.5, display: "block", mr: 2 }}
-            dangerouslySetInnerHTML={{
-              __html:
-                "<b>3.00pm</b>",
-            }}
-          />
-          <Text
-          sx={{ fontSize: "12px", my: 0.5, textAlign: "left"  }}
-          dangerouslySetInnerHTML={{
-            __html:
-              "<b>Upacara memotong kek</b>",
-          }}
-        />
-        </Box> 
-
-        <Box sx={{ display: "inline-flex"}}>
-          <Text
-            sx={{ fontSize: "12px", my: 0.5, display: "block", mr: 2 }}
-            dangerouslySetInnerHTML={{
-              __html:
-                "<b>3.10pm</b>",
-            }}
-          />
-          <Text
-          sx={{ fontSize: "12px", my: 0.5, textAlign: "left"  }}
-          dangerouslySetInnerHTML={{
-            __html:
-              "<b>Sesi bergambar keluarga dan tetamu</b>",
-          }}
-        />
-        </Box> 
-
-        <Box sx={{ display: "inline-flex"}}>
-          <Text
-            sx={{ fontSize: "12px", my: 0.5, display: "block", mr: 2 }}
-            dangerouslySetInnerHTML={{
-              __html:
-                "<b>5.00pm</b>",
-            }}
-          />
-          <Text
-          sx={{ fontSize: "12px", my: 0.5, textAlign: "left"  }}
-          dangerouslySetInnerHTML={{
-            __html:
-              "<b>Bersurai & sesi pengantin bergambar (outdoor)</b>",
-          }}
-        />
-        </Box>     
-        </Box>
-
+            <Box sx={{ display: "inline-flex" }}>
+              <Text
+                sx={{ fontSize: "12px", my: 0.5, display: "block", mr: 2 }}
+                dangerouslySetInnerHTML={{
+                  __html: "<b>1.30pm</b>",
+                }}
+              />
+              <Text
+                sx={{ fontSize: "12px", my: 0.5, textAlign: "left" }}
+                dangerouslySetInnerHTML={{
+                  __html:
+                    "<b>Ketibaan pengantin & pengantin bersanding di pelamin</b>",
+                }}
+              />
+            </Box>
+            <Box sx={{ display: "inline-flex" }}>
+              <Text
+                sx={{ fontSize: "12px", my: 0.5, display: "block", mr: 2 }}
+                dangerouslySetInnerHTML={{
+                  __html: "<b>4.00pm</b>",
+                }}
+              />
+              <Text
+                sx={{ fontSize: "12px", my: 0.5, textAlign: "left" }}
+                dangerouslySetInnerHTML={{
+                  __html:
+                    "<b>Bersurai & sesi pengantin bergambar (outdoor)</b>",
+                }}
+              />
+            </Box>
+          </Box>
         </Box>
 
         <Box
@@ -636,18 +556,12 @@ const Layout12: React.FC = () => {
           sx={{
             px: 2,
             pt: 4,
-            pb: 10
+            pb: 10,
           }}
         >
           <Text
             dangerouslySetInnerHTML={{
               __html: locale?.[item?.language!]?.CARD_WISH_TITLE,
-            }}
-            sx={{ pb: 2 }}
-          />
-          <MiniText
-            dangerouslySetInnerHTML={{
-              __html: `#${item?.title1Groom}${item?.title1Bride}`,
             }}
             sx={{ pb: 2 }}
           />
@@ -676,12 +590,18 @@ const Layout12: React.FC = () => {
           </Grid>
         </Box>
       </Box>
-      <Box>
+      <Box display={clickOpen ? "block" : "none"}>
         <Widget
+          showGift
+          giftImage="/media/animation/wedding-of-asyiqin-asyraf.png"
           language={item?.language!}
           iconColor="#131313"
           color="#b4bca9"
-          location={{ text: item?.location!, mapUrl: item?.mapUrl! }}
+          location={{
+            text: `HOMESTAY DAMAI 
+LOT 843, JALAN SUNGAI JAGONG, SUNGAI LAYAR, 08000 SUNGAI PETANI KEDAH `,
+            mapUrl: item?.mapUrl!,
+          }}
           contact={{
             number1: item?.phonePerson1!,
             number2: item?.phonePerson2!,
