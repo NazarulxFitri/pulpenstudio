@@ -298,7 +298,7 @@ const Layout12: React.FC = () => {
               />
               <SubTitle
                 dangerouslySetInnerHTML={{
-                  __html: "<3",
+                  __html: "&",
                 }}
                 sx={{ fontSize: "16px" }}
               />
