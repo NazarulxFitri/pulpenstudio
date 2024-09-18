@@ -166,12 +166,12 @@ const Layout12: React.FC = () => {
       <Door color="#b4bca9" {...{ clickOpen, setClickOpen }} asyiqinasyraf>
         <SubTitle
           dangerouslySetInnerHTML={{
-            __html: item?.title1Groom!,
+            __html: item?.title1Bride!,
           }}
         />
         <SubTitle
           dangerouslySetInnerHTML={{
-            __html: item?.title1Bride!,
+            __html: item?.title1Groom!,
           }}
         />
       </Door>
@@ -322,7 +322,10 @@ const Layout12: React.FC = () => {
             </Box>
             <SubTitle
               sx={{ fontSize: "12px" }}
-              dangerouslySetInnerHTML={{ __html: item?.location! }}
+              dangerouslySetInnerHTML={{
+                __html: `HOMESTAY DAMAI 
+<br>LOT 843, JALAN SUNGAI JAGONG, SUNGAI LAYAR, 08000 SUNGAI PETANI KEDAH`,
+              }}
               className="animate__animated animate__zoomIn animate__slow animate__delay-3s"
             />
           </Box>
@@ -350,6 +353,21 @@ const Layout12: React.FC = () => {
               alt="Pulpen Studio - Flourish Gloom"
               width={160}
               height={280}
+            />
+          </Box>
+          <Box
+            sx={{
+              display: "block",
+              width: "fit-content",
+              margin: "0 auto",
+              pb: 4,
+            }}
+          >
+            <Image
+              src="/media/animation/bis-img.png"
+              alt="Pulpen Studio Morning in Autumn"
+              width={180}
+              height={50}
             />
           </Box>
           <Text
