@@ -621,10 +621,14 @@ LOT 843, JALAN SUNGAI JAGONG, SUNGAI LAYAR, 08000 SUNGAI PETANI KEDAH `,
             mapUrl: item?.mapUrl!,
           }}
           contact={{
-            number1: item?.phonePerson1!,
-            number2: item?.phonePerson2!,
-            name1: item?.namePerson1!,
-            name2: item?.namePerson2!,
+            number1: "0199104160",
+            number2: "0174553889",
+            number3: "01133000417",
+            number4: "0164288190",
+            name1: "Asri",
+            name2: "Ayu",
+            name3: "Izyan",
+            name4: "Iffah",
           }}
         />
       </Box>
