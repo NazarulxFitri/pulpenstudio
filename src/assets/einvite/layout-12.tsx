@@ -174,6 +174,12 @@ const Layout12: React.FC = () => {
             __html: item?.title1Groom!,
           }}
         />
+        <SubTitle
+          sx={{ fontSize: "8px", mt: 2 }}
+          dangerouslySetInnerHTML={{
+            __html: "Klik disini",
+          }}
+        />
       </Door>
       <Box sx={{ visibility: "hidden", position: "absolute" }}>
         <ReactPlayer
