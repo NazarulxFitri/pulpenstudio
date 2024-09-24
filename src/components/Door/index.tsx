@@ -62,7 +62,7 @@ const Door: React.FC<DoorProps> = ({
             }
             id="right-door"
             sx={{
-              backgroundImage: "url('/media/animation/slice.svg')",
+              backgroundImage: "url('/media/animation/slice-2.svg')",
               backgroundSize: "cover",
               boxShadow: specialBg ? "unset" : "-10px 0px 20px #D0D0D0",
               width: "50%",
@@ -74,7 +74,7 @@ const Door: React.FC<DoorProps> = ({
             className={clickOpen ? "animate__animated animate__fadeOut" : ""}
             onClick={() => setClickOpen(true)}
             sx={{
-              background: "#FFF",
+              background: "#fff",
               borderRadius: specialBg ? "0" : "80%",
               boxShadow: specialBg ? "0" : `-8px 8px 8px #D0D0D0`,
               px: removePadding ? 0 : 3,

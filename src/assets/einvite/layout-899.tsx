@@ -166,10 +166,16 @@ const Layout899: React.FC = () => {
     >
       <Door color="transparent" {...{ clickOpen, setClickOpen }} yasminFaiz>
         <Text
-          sx={{ fontSize: "10px", pt: 1, mb: -1 }}
-          dangerouslySetInnerHTML={{
-            __html: "Sila klik",
-          }}
+          sx={{ fontSize: "12px" }}
+          dangerouslySetInnerHTML={{ __html: "Ain Yasmin" }}
+        />
+        <Text
+          sx={{ fontSize: "12px" }}
+          dangerouslySetInnerHTML={{ __html: "Amirul Faiz" }}
+        />
+        <Text
+          sx={{ fontSize: "8px", mt: 2, mb: -1 }}
+          dangerouslySetInnerHTML={{ __html: "Klik untuk buka" }}
         />
       </Door>
       <Box sx={{ visibility: "hidden", position: "absolute" }}>
@@ -194,7 +200,7 @@ const Layout899: React.FC = () => {
             alt="Yasmin Faiz"
             width={400}
             height={800}
-            style={{ display: "block" }}
+            style={{ display: "block", width: "100%" }}
           />
         </Box>
       </Box>
@@ -204,7 +210,7 @@ const Layout899: React.FC = () => {
         alt="Yasmin Faiz"
         width={400}
         height={800}
-        style={{ display: "block" }}
+        style={{ display: "block", width: "100%" }}
       />
       <Container>
         <Box
