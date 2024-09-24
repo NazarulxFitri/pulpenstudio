@@ -13,6 +13,7 @@ interface DoorProps {
   khairuAmira?: boolean;
   aisyahEffi?: boolean;
   asyiqinasyraf?: boolean;
+  yasminFaiz?: boolean;
 }
 
 const Door: React.FC<DoorProps> = ({
@@ -27,7 +28,76 @@ const Door: React.FC<DoorProps> = ({
   khairuAmira,
   aisyahEffi,
   asyiqinasyraf,
+  yasminFaiz,
 }) => {
+  if (yasminFaiz)
+    return (
+      <Box sx={{ position: "absolute", width: "100%", height: "100%" }}>
+        <Box
+          sx={{
+            display: "flex",
+            position: "relative",
+          }}
+        >
+          <Box
+            className={
+              clickOpen ? "animate__animated animate__slideOutLeft" : ""
+            }
+            id="left-door"
+            sx={{
+              background: specialBg ? "" : "#FFF",
+              backgroundImage: specialBg
+                ? "url('/media/animation/test12.PNG')"
+                : "",
+              backgroundSize: "contain",
+              backgroundRepeat: "round",
+              width: "50%",
+              height: "100vh",
+              zIndex: "2",
+            }}
+          />
+          <Box
+            className={
+              clickOpen ? "animate__animated animate__slideOutRight" : ""
+            }
+            id="right-door"
+            sx={{
+              backgroundImage: "url('/media/animation/slice.svg')",
+              backgroundSize: "cover",
+              boxShadow: specialBg ? "unset" : "-10px 0px 20px #D0D0D0",
+              width: "50%",
+              height: "100vh",
+              zIndex: "2",
+            }}
+          />
+          <Box
+            className={clickOpen ? "animate__animated animate__fadeOut" : ""}
+            onClick={() => setClickOpen(true)}
+            sx={{
+              background: "#FFF",
+              borderRadius: specialBg ? "0" : "80%",
+              boxShadow: specialBg ? "0" : `-8px 8px 8px #D0D0D0`,
+              px: removePadding ? 0 : 3,
+              pt: removePadding ? 0 : 4,
+              pb: specialBg ? 6 : removePadding ? 0 : 4,
+              position: "absolute",
+              textAlign: "center",
+              left: "50%",
+              top: {
+                xs: specialBg ? "50%" : "20%",
+                sm: specialBg ? "50%" : "50%",
+              },
+              transform: "translate(-50%,-50%)",
+              minWidth: "60px",
+              zIndex: "3",
+            }}
+          >
+            {children}
+          </Box>
+        </Box>
+      </Box>
+    );
+
   if (asyiqinasyraf)
     return (
       <Box sx={{ position: "absolute", width: "100%", height: "100%" }}>
