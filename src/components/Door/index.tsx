@@ -62,7 +62,7 @@ const Door: React.FC<DoorProps> = ({
             }
             id="right-door"
             sx={{
-              backgroundImage: "url('/media/animation/slice-2.svg')",
+              backgroundImage: "url('/media/animation/slice-yasmin.png')",
               backgroundSize: "cover",
               boxShadow: specialBg ? "unset" : "-10px 0px 20px #D0D0D0",
               width: "50%",

@@ -165,17 +165,11 @@ const Layout899: React.FC = () => {
       onClick={() => setMusicStart(true)}
     >
       <Door color="transparent" {...{ clickOpen, setClickOpen }} yasminFaiz>
-        <Text
-          sx={{ fontSize: "12px" }}
-          dangerouslySetInnerHTML={{ __html: "Ain Yasmin" }}
-        />
-        <Text
-          sx={{ fontSize: "12px" }}
-          dangerouslySetInnerHTML={{ __html: "Amirul Faiz" }}
-        />
-        <Text
-          sx={{ fontSize: "8px", mt: 2, mb: -1 }}
-          dangerouslySetInnerHTML={{ __html: "Klik untuk buka" }}
+        <Image
+          src="/media/animation/gold-logo.png"
+          alt="Yasmin Faiz wedding"
+          width={120}
+          height={90}
         />
       </Door>
       <Box sx={{ visibility: "hidden", position: "absolute" }}>
@@ -194,7 +188,7 @@ const Layout899: React.FC = () => {
           position: "relative",
         }}
       >
-        <Box>
+        <Box sx={{ mt: -10 }}>
           <Image
             src="/media/animation/yasmin-faiz.svg"
             alt="Yasmin Faiz"
@@ -205,14 +199,99 @@ const Layout899: React.FC = () => {
         </Box>
       </Box>
 
-      <Image
-        src="/media/animation/content-yasmin-faiz.svg"
-        alt="Yasmin Faiz"
-        width={400}
-        height={800}
-        style={{ display: "block", width: "100%" }}
-      />
+      <Box sx={{ mt: -10 }}>
+        <Image
+          src="/media/animation/content-yasmin-faiz.svg"
+          alt="Yasmin Faiz"
+          width={400}
+          height={800}
+          style={{ display: "block", width: "100%" }}
+        />
+      </Box>
       <Container>
+        <Box
+          sx={{
+            px: 2,
+            mt: -4,
+            py: 4,
+            mb: 6,
+          }}
+        >
+          <Text
+            dangerouslySetInnerHTML={{
+              __html: "<b>MENGHITUNG HARI</b> | <i>COUNTING THE DAYS</i>",
+            }}
+            sx={{ pb: 2, fontSize: "14px" }}
+          />
+          {!isCounting ? (
+            <Box
+              id="countdown"
+              columnGap={2}
+              sx={{
+                mx: "auto",
+                width: "fit-content",
+              }}
+            >
+              <Text
+                sx={{ fontSize: "14px", fontWeight: "bold" }}
+                dangerouslySetInnerHTML={{
+                  __html: locale?.[item?.language!]?.CARD_COUNTDOWN_FINISH_TEXT,
+                }}
+              />
+            </Box>
+          ) : (
+            <Box
+              id="countdown"
+              columnGap={2}
+              sx={{
+                boxShadow: "1px 10px 10px -10px #efefef",
+                pb: 1,
+                width: "fit-content",
+                mx: "auto",
+                display: "flex",
+              }}
+            >
+              <Box>
+                <Text
+                  style={{ fontSize: "48px" }}
+                  dangerouslySetInnerHTML={{
+                    __html: `${countdownTimer?.countdownTimer.d} `,
+                  }}
+                />
+              </Box>
+              <Box>
+                <Text
+                  style={{ fontSize: "24px" }}
+                  dangerouslySetInnerHTML={{
+                    __html: `${
+                      countdownTimer?.countdownTimer.h
+                    } <span style="font-size: 12px">${
+                      locale?.[item?.language!]?.COUNTDOWN_HOUR
+                    }</span>`,
+                  }}
+                />
+                <Text
+                  style={{ fontSize: "24px" }}
+                  dangerouslySetInnerHTML={{
+                    __html: `${
+                      countdownTimer?.countdownTimer.m
+                    } <span style="font-size: 12px">${
+                      locale?.[item?.language!]?.COUNTDOWN_MINUTE
+                    }</span>`,
+                  }}
+                />
+              </Box>
+              <Box>
+                <Text
+                  style={{ fontSize: "48px", color: "#d2dbe7", width: "50px" }}
+                  dangerouslySetInnerHTML={{
+                    __html: `${countdownTimer?.countdownTimer.s} `,
+                  }}
+                />
+              </Box>
+            </Box>
+          )}
+        </Box>
         <Box
           id="comment"
           mb={2}
@@ -260,10 +339,14 @@ const Layout899: React.FC = () => {
           color="#fff9ea"
           location={{ text: item?.location!, mapUrl: item?.mapUrl! }}
           contact={{
-            number1: item?.phonePerson1!,
-            number2: item?.phonePerson2!,
-            name1: item?.namePerson1!,
-            name2: item?.namePerson2!,
+            number1: "0123998455",
+            number2: "0123450696",
+            number3: "0126935818",
+            number4: "0192229091",
+            name1: "Hj Firhat",
+            name2: "⁠Hjh Rujitah",
+            name3: "Farah Natasha",
+            name4: "Syafiq",
           }}
         />
       </Box>
