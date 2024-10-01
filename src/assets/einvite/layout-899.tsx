@@ -168,8 +168,8 @@ const Layout899: React.FC = () => {
         <Image
           src="/media/animation/gold-logo.png"
           alt="Yasmin Faiz wedding"
-          width={120}
-          height={90}
+          width={140}
+          height={100}
         />
       </Door>
       <Box sx={{ visibility: "hidden", position: "absolute" }}>
@@ -199,9 +199,9 @@ const Layout899: React.FC = () => {
         </Box>
       </Box>
 
-      <Box sx={{ mt: -10 }}>
+      <Box sx={{ mt: { xs: -27, sm: -14 } }}>
         <Image
-          src="/media/animation/content-yasmin-faiz.svg"
+          src="/media/animation/second-yasmin-faiz.svg"
           alt="Yasmin Faiz"
           width={400}
           height={800}
@@ -212,14 +212,14 @@ const Layout899: React.FC = () => {
         <Box
           sx={{
             px: 2,
-            mt: -4,
+            mt: -10,
             py: 4,
             mb: 6,
           }}
         >
           <Text
             dangerouslySetInnerHTML={{
-              __html: "<b>MENGHITUNG HARI</b> | <i>COUNTING THE DAYS</i>",
+              __html: "<b>Menghitung Hari</b> | <i>Counting The Days</i>",
             }}
             sx={{ pb: 2, fontSize: "14px" }}
           />

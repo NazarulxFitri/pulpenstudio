@@ -84,7 +84,7 @@ const Door: React.FC<DoorProps> = ({
               textAlign: "center",
               left: "50%",
               top: {
-                xs: specialBg ? "50%" : "20%",
+                xs: specialBg ? "50%" : "45%",
                 sm: specialBg ? "50%" : "50%",
               },
               transform: "translate(-50%,-50%)",
