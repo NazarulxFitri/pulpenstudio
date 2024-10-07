@@ -166,10 +166,10 @@ const Layout899: React.FC = () => {
     >
       <Door color="transparent" {...{ clickOpen, setClickOpen }} yasminFaiz>
         <Image
-          src="/media/animation/gold-logo.png"
+          src="/media/animation/yasmin-faiz-new-logo.png"
           alt="Yasmin Faiz wedding"
-          width={140}
-          height={100}
+          width={120}
+          height={70}
         />
       </Door>
       <Box sx={{ visibility: "hidden", position: "absolute" }}>
