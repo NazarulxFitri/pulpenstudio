@@ -166,7 +166,7 @@ const Layout899: React.FC = () => {
     >
       <Door color="transparent" {...{ clickOpen, setClickOpen }} yasminFaiz>
         <Image
-          src="/media/animation/yasmin-faiz-new-logo.png"
+          src="/media/animation/logo-yasmin-2.svg"
           alt="Yasmin Faiz wedding"
           width={120}
           height={70}
