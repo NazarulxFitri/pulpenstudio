@@ -162,7 +162,7 @@ const Layout888: React.FC = () => {
       maxWidth="400px"
       sx={{
         background: "#f6f4f5",
-        boxShadow: "1px 1px 10px #fff9ea",
+        boxShadow: "1px 1px 10px #fbcccd",
         m: "auto",
         position: "relative",
         overflow: "hidden",
@@ -172,11 +172,23 @@ const Layout888: React.FC = () => {
       onClick={() => setMusicStart(true)}
     >
       <Door color="transparent" {...{ clickOpen, setClickOpen }}>
-        <Image
-          src="/media/animation/yasmin-faiz-new-logo.png"
-          alt="Yasmin Faiz wedding"
-          width={120}
-          height={70}
+        <Title
+          sx={{ fontSize: "24px", textShadow: "1px 1px 10px #fff9ea" }}
+          dangerouslySetInnerHTML={{
+            __html: `Khairina`,
+          }}
+        />
+        <Title
+          sx={{ fontSize: "24px", display: "block", my: "10px" }}
+          dangerouslySetInnerHTML={{
+            __html: `&`,
+          }}
+        />
+        <Title
+          sx={{ fontSize: "24px", textShadow: "1px 1px 10px #fff9ea" }}
+          dangerouslySetInnerHTML={{
+            __html: "Sabri",
+          }}
         />
       </Door>
       <Box sx={{ visibility: "hidden", position: "absolute" }}>
@@ -361,7 +373,7 @@ const Layout888: React.FC = () => {
               id="countdown"
               columnGap={2}
               sx={{
-                boxShadow: "1px 10px 10px -10px #b45769",
+                boxShadow: "1px 10px 10px -10px #fbcccd",
                 pb: 1,
                 width: "fit-content",
                 mx: "auto",
@@ -431,7 +443,7 @@ const Layout888: React.FC = () => {
               <Paper
                 sx={{
                   background: "#fff",
-                  boxShadow: "unset",
+                  boxShadow: "#fbcccd",
                   maxHeight: "400px",
                   overflow: "scroll",
                 }}
@@ -456,7 +468,7 @@ const Layout888: React.FC = () => {
         <Widget
           language={item?.language!}
           iconColor="#131313"
-          color="#fbe0e1"
+          color="#fbcccd"
           location={{ text: item?.location!, mapUrl: item?.mapUrl! }}
           contact={{
             number1: "0123998455",
