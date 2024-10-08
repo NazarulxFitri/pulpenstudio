@@ -44,7 +44,7 @@ const Special = styled("p")(() => ({
   fontFamily: `${allura.style.fontFamily} !important` || "auto",
   fontSize: "24px",
   textAlign: "center",
-   color: "#ad998f",
+  color: "#ad998f",
 }));
 
 const Title = styled("h1")(() => ({
@@ -59,7 +59,7 @@ const Title = styled("h1")(() => ({
 const SubTitle = styled("p")(() => ({
   fontSize: "14px",
   fontWeight: "300",
-   color: "#ad998f",
+  color: "#ad998f",
   fontFamily: `${cormorant.style.fontFamily} !important` || "auto",
   textAlign: "center",
   letterSpacing: "0.25em",
@@ -70,7 +70,7 @@ const Text = styled("p")(() => ({
   fontFamily: `${lora.style.fontFamily} !important` || "auto",
   fontSize: "16px",
   textAlign: "center",
-   color: "#ad998f",
+  color: "#ad998f",
 }));
 
 const MiniText = styled("p")(() => ({
@@ -78,7 +78,7 @@ const MiniText = styled("p")(() => ({
   fontSize: "14px",
   textAlign: "center",
   letterSpacing: "0.1em",
-   color: "#ad998f",
+  color: "#ad998f",
 }));
 
 const UbuntuText = styled("p")(() => ({
@@ -86,7 +86,7 @@ const UbuntuText = styled("p")(() => ({
   fontWeight: "700",
   fontSize: "16px",
   textAlign: "center",
-   color: "#ad998f",
+  color: "#ad998f",
 }));
 
 const Layout888: React.FC = () => {
@@ -209,7 +209,7 @@ const Layout888: React.FC = () => {
       >
         <Box sx={{ mt: -10 }}>
           <Image
-            src="/media/animation/Khairina.svg"
+            src="/media/animation/hairina.svg"
             alt="Yasmin Faiz"
             width={400}
             height={800}
@@ -392,21 +392,17 @@ const Layout888: React.FC = () => {
                 <SubTitle
                   style={{ fontSize: "24px" }}
                   dangerouslySetInnerHTML={{
-                    __html: `${
-                      countdownTimer?.countdownTimer.h
-                    } <span style="font-size: 12px">${
-                      locale?.[item?.language!]?.COUNTDOWN_HOUR
-                    }</span>`,
+                    __html: `${countdownTimer?.countdownTimer.h
+                      } <span style="font-size: 12px">${locale?.[item?.language!]?.COUNTDOWN_HOUR
+                      }</span>`,
                   }}
                 />
                 <SubTitle
                   style={{ fontSize: "24px" }}
                   dangerouslySetInnerHTML={{
-                    __html: `${
-                      countdownTimer?.countdownTimer.m
-                    } <span style="font-size: 12px">${
-                      locale?.[item?.language!]?.COUNTDOWN_MINUTE
-                    }</span>`,
+                    __html: `${countdownTimer?.countdownTimer.m
+                      } <span style="font-size: 12px">${locale?.[item?.language!]?.COUNTDOWN_MINUTE
+                      }</span>`,
                   }}
                 />
               </Box>
