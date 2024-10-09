@@ -483,7 +483,7 @@ const Layout888: React.FC = () => {
           language={item?.language!}
           iconColor="#131313"
           color="#fbcccd"
-          location={{ text: item?.location!, mapUrl: item?.mapUrl! }}
+          location={{ text: "Nafoura Shaftsbury, Putrajaya", mapUrl: item?.mapUrl! }}
           contact={{
             number1: "0173211494",
             number2: "0173490527",
