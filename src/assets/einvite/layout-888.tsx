@@ -467,14 +467,12 @@ const Layout888: React.FC = () => {
           color="#fbcccd"
           location={{ text: item?.location!, mapUrl: item?.mapUrl! }}
           contact={{
-            number1: "0123998455",
-            number2: "0123450696",
-            number3: "0126935818",
-            number4: "0192229091",
-            name1: "Hj Firhat",
-            name2: "⁠Hjh Rujitah",
-            name3: "Farah Natasha",
-            name4: "Syafiq",
+            number1: "0173211494",
+            number2: "0173490527",
+            number3: " 0176190492",
+            name1: "Khalid",
+            name2: "⁠Kamariah",
+            name3: "Ain",
           }}
         />
       </Box>
