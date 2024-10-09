@@ -205,12 +205,13 @@ const Layout888: React.FC = () => {
         sx={{
           height: "100vh",
           position: "relative",
+          overflow: "hidden",
         }}
       >
-        <Box sx={{ mt: -10 }}>
+        <Box>
           <Image
-            src="/media/animation/hairina.svg"
-            alt="Yasmin Faiz"
+            src="/media/animation/khairina-sabri.svg"
+            alt="Khairina Sabri"
             width={400}
             height={800}
             style={{ display: "block", width: "100%" }}
@@ -231,7 +232,8 @@ const Layout888: React.FC = () => {
               display: "block",
               width: "fit-content",
               margin: "0 auto",
-              pb: 4,
+              pb: 1,
+              mt: 5
             }}
           >
             <Image
@@ -252,7 +254,7 @@ const Layout888: React.FC = () => {
             sx={{ fontWeight: "700", mb: 3 }}
             dangerouslySetInnerHTML={{
               __html:
-                "Mohd Hamin Bin Misran <br>&<br> Anorzaiwati Binti Shar Anuar",
+                "Mohamad Khalid Bin Kamaruddin<br>&<br>Kamariah Binti Aziz",
             }}
           />
           <SubTitle
@@ -265,15 +267,16 @@ const Layout888: React.FC = () => {
           <SubTitle
             sx={{
               fontWeight: "700",
-              mb: 3,
+              mb: 1,
+              mt: 3
             }}
             dangerouslySetInnerHTML={{
-              __html: `${item?.fullNameGroom} <br>&<br> ${item?.fullNameBride}`,
+              __html: `Nurkhairina binti Mohamad Khalid <br>&<br> Sabri Bin Azman`,
             }}
           />
 
           <SubTitle
-            sx={{ mb: 3, textTransform: "none" }}
+            sx={{ textTransform: "none", mt: 6 }}
             dangerouslySetInnerHTML={{
               __html:
                 "Semoga dengan kehadiran hadirin sekalian akan menyerikan lagi majlis kami dan diberkati Allah S.W.T hendaknya. Sekian, Terima Kasih",
@@ -283,7 +286,7 @@ const Layout888: React.FC = () => {
 
         <Box
           sx={{
-            mx: -3,
+            mx: -2,
             mt: 2,
             position: "relative",
             overflow: "hidden",
@@ -307,6 +310,36 @@ const Layout888: React.FC = () => {
                 }}
               />
 
+              <Box mt={3}>
+                <SubTitle
+                  sx={{ fontSize: "12px", my: 0.5, display: "block", mr: 2 }}
+                  dangerouslySetInnerHTML={{
+                    __html: "<b>Ketibaan Pengantin</b>",
+                  }}
+                />
+                <SubTitle
+                  sx={{ fontSize: "12px", my: 0.5, textAlign: "center" }}
+                  dangerouslySetInnerHTML={{
+                    __html: "3.00 pm",
+                  }}
+                />
+              </Box>
+
+              <Box mt={1}>
+                <SubTitle
+                  sx={{ fontSize: "12px", my: 0.5, display: "block", mr: 2 }}
+                  dangerouslySetInnerHTML={{
+                    __html: "<b>Akad Nikah</b>",
+                  }}
+                />
+                <SubTitle
+                  sx={{ fontSize: "12px", my: 0.5, textAlign: "center" }}
+                  dangerouslySetInnerHTML={{
+                    __html: "3.30 pm",
+                  }}
+                />
+              </Box>
+
               <Box mt={1}>
                 <SubTitle
                   sx={{ fontSize: "12px", my: 0.5, display: "block", mr: 2 }}
@@ -317,22 +350,7 @@ const Layout888: React.FC = () => {
                 <SubTitle
                   sx={{ fontSize: "12px", my: 0.5, textAlign: "center" }}
                   dangerouslySetInnerHTML={{
-                    __html: "11.00 pagi - 4.00 petang",
-                  }}
-                />
-              </Box>
-
-              <Box mt={1}>
-                <SubTitle
-                  sx={{ fontSize: "12px", my: 0.5, display: "block", mr: 2 }}
-                  dangerouslySetInnerHTML={{
-                    __html: "<b>Ketibaan Pengantin</b>",
-                  }}
-                />
-                <SubTitle
-                  sx={{ fontSize: "12px", my: 0.5, textAlign: "center" }}
-                  dangerouslySetInnerHTML={{
-                    __html: "12.30 tengah hari",
+                    __html: "4.00 pm",
                   }}
                 />
               </Box>
