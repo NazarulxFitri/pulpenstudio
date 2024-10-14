@@ -68,7 +68,7 @@ const RsvpPopup: React.FC<RsvpPopupProp> = ({
         </Box>
         <Box sx={{ display: "flex", textAlign: "left", p: "0 16px" }}>
           <RsvpForm
-            {...{includePhoneNumber, includeOrigin}}
+            {...{ includePhoneNumber, includeOrigin }}
             localeAttend={locale?.[language]?.WIDGET_RSVP_ATTEND_TEXT}
             localeNotAttend={locale?.[language]?.WIDGET_RSVP_NOTATTEND_TEXT}
             textAttendance={locale?.[language]?.WIDGET_RSVP_PLACEHOLDER_FIRST}

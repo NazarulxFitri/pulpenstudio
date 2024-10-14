@@ -82,7 +82,7 @@ const RsvpForm: React.FC<RsvpFormProps> = ({
   const { action } = usePostUpdateRsvp(id as string);
   const [name, setName] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
-  const [attendance, setAttendance] = useState(false);
+  const [attendance, setAttendance] = useState(true);
   const [pax, setPax] = useState<number>(1);
   const [kidPax, setKidPax] = useState<number>(0);
   const [guestSide, setGuestSide] = useState("bride");
@@ -109,11 +109,12 @@ const RsvpForm: React.FC<RsvpFormProps> = ({
       <FormGroup>
         <Box display='flex'>
           <p style={{ color: "#909090", fontSize: "12px" }}>
-           Tidak Hadir | <i>Not Attend</i>
+            Tidak Hadir | <i>Not Attend</i>
           </p>
           {/* @ts-ignore */}
           <FormControlLabel
-          sx={{ width: "fit-content"}}
+            checked={attendance}
+            sx={{ width: "fit-content" }}
             control={
               <Android12Switch
                 sx={{ m: 1 }}
@@ -122,7 +123,7 @@ const RsvpForm: React.FC<RsvpFormProps> = ({
             }
           />
           <p style={{ color: "#909090", fontSize: "12px", display: "block", marginLeft: "-24px" }}>
-           Hadir | <i>Attend</i>
+            Hadir | <i>Attend</i>
           </p>
         </Box>
         <Input
@@ -141,58 +142,58 @@ const RsvpForm: React.FC<RsvpFormProps> = ({
           }}
           error={errorMessage && !name}
           label={<p style={{ color: "#909090", fontSize: "12px" }}>
-          {textName} | Name
-        </p>}
+            {textName} | Name
+          </p>}
           multiline
           variant="standard"
           onChange={(e) => setName(e.target.value)}
         />
 
-        {includePhoneNumber && 
-        <Input
-          placeholder="01156271776"
-          error={errorMessage && !phoneNumber}
-          InputLabelProps={{ shrink: true }}
-          sx={{
-            "& label.Mui-focused": {
-              color: "#333",
-            },
-            "& .MuiInput-underline:after": {
-              borderBottomColor: themeColor,
-            },
-            mt: 2,
-          }}
-          label={textPhoneNumber}
-          multiline
-          variant="standard"
-          onChange={(e) => setPhoneNumber(e.target.value)}
-        />}
+        {includePhoneNumber &&
+          <Input
+            placeholder="01156271776"
+            error={errorMessage && !phoneNumber}
+            InputLabelProps={{ shrink: true }}
+            sx={{
+              "& label.Mui-focused": {
+                color: "#333",
+              },
+              "& .MuiInput-underline:after": {
+                borderBottomColor: themeColor,
+              },
+              mt: 2,
+            }}
+            label={textPhoneNumber}
+            multiline
+            variant="standard"
+            onChange={(e) => setPhoneNumber(e.target.value)}
+          />}
 
         {attendance && (
           <>
-            {includeOrigin && 
-            <Box my={2}>  
-              <FormControlLabel
-                sx={{
-                  "& .MuiFormControlLabel-label": {
-                    color: "#00000099",
-                    fontSize: "12px",
-                  },
-                }}
-                label="Dari pihak pengantin perempuan | From bride side"
-                control={<Checkbox checked={guestSide === "bride"} onClick={() => setGuestSide("bride")} />}
-              />
-               <FormControlLabel
-                sx={{
-                  "& .MuiFormControlLabel-label": {
-                    color: "#00000099",
-                    fontSize: "12px",
-                  },
-                }}
-                label="Dari pihak pengantin lelaki | From groom side"
-                control={<Checkbox checked={guestSide === "groom"} onClick={() => setGuestSide("groom")}  />}
-              />
-            </Box>
+            {includeOrigin &&
+              <Box my={2}>
+                <FormControlLabel
+                  sx={{
+                    "& .MuiFormControlLabel-label": {
+                      color: "#00000099",
+                      fontSize: "12px",
+                    },
+                  }}
+                  label="Dari pihak pengantin perempuan | From bride side"
+                  control={<Checkbox checked={guestSide === "bride"} onClick={() => setGuestSide("bride")} />}
+                />
+                <FormControlLabel
+                  sx={{
+                    "& .MuiFormControlLabel-label": {
+                      color: "#00000099",
+                      fontSize: "12px",
+                    },
+                  }}
+                  label="Dari pihak pengantin lelaki | From groom side"
+                  control={<Checkbox checked={guestSide === "groom"} onClick={() => setGuestSide("groom")} />}
+                />
+              </Box>
             }
 
             <Input
