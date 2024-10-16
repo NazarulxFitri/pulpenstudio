@@ -175,7 +175,7 @@ const Layout888: React.FC = () => {
         <Title
           sx={{ fontSize: "24px", textShadow: "1px 1px 10px #fff9ea" }}
           dangerouslySetInnerHTML={{
-            __html: `Khairina`,
+            __html: `Nurkhairina`,
           }}
         />
         <Title
@@ -210,7 +210,7 @@ const Layout888: React.FC = () => {
       >
         <Box>
           <Image
-            src="/media/animation/khairina-sabri.svg"
+            src="/media/animation/n.svg"
             alt="Khairina Sabri"
             width={400}
             height={800}
