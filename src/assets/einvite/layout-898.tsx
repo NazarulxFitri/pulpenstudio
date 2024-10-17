@@ -165,23 +165,13 @@ const Layout898: React.FC = () => {
             onTouchStart={() => setMusicStart(true)}
             onClick={() => setMusicStart(true)}
         >
-            <Door color="transparent" {...{ clickOpen, setClickOpen }}>
-                <Title
-                    sx={{ fontSize: "24px", textShadow: "1px 1px 10px #fff9ea" }}
+            <Door color="transparent" {...{ clickOpen, setClickOpen }} shahida>
+                <Image src="/media/animation/S-2.webp" alt="Shahida Immran" height={30} width={20} />
+                <Image src="/media/animation/I-2.webp" alt="Shahida Immran" height={30} width={20} />
+                <SubTitle
+                    sx={{ fontSize: "12px", mb: -1, mt: 1 }}
                     dangerouslySetInnerHTML={{
-                        __html: `Shida`,
-                    }}
-                />
-                <Title
-                    sx={{ fontSize: "24px", display: "block", my: "10px" }}
-                    dangerouslySetInnerHTML={{
-                        __html: `&`,
-                    }}
-                />
-                <Title
-                    sx={{ fontSize: "24px", textShadow: "1px 1px 10px #fff9ea" }}
-                    dangerouslySetInnerHTML={{
-                        __html: "Contoh",
+                        __html: "Buka",
                     }}
                 />
             </Door>
@@ -204,7 +194,7 @@ const Layout898: React.FC = () => {
             >
                 <Box>
                     <Image
-                        src="/media/animation/wedding-of-shida.svg"
+                        src="/media/animation/SHAHIDA-1.svg"
                         alt="Wedding of Shida"
                         width={400}
                         height={800}
@@ -225,7 +215,7 @@ const Layout898: React.FC = () => {
                         position: "relative",
                     }}
                 >
-                    <Box sx={{ zIndex: "2" }}>
+                    <Box sx={{ zIndex: "2", px: 3 }}>
                         <Box textAlign={"center"}>
                             <Image
                                 src="/media/animation/bis-img.png"
@@ -245,7 +235,7 @@ const Layout898: React.FC = () => {
                             sx={{ fontWeight: "700", mb: 3 }}
                             dangerouslySetInnerHTML={{
                                 __html:
-                                    "Hj Abd. Aziz bin Ibrahim <br>&<br>Hjh Sabariah binti Ahmad",
+                                    "OTHMAN BIN MOHD NAWI<br>&<br>AMINAH BINTI AWANG",
                             }}
                         />
                         <SubTitle
@@ -261,23 +251,23 @@ const Layout898: React.FC = () => {
                                 mb: 3,
                             }}
                             dangerouslySetInnerHTML={{
-                                __html: `Shida<br>&<br>Contoh `,
+                                __html: `NUR SHAHIDA BINTI OTHMAN<br>&<br>MUHAMMAD IMRAN BIN HJ SHAMSHUL ANUAR `,
                             }}
                         />
                     </Box>
                 </Box>
                 <Box
                     sx={{
-                        textAlign: "center",
+                        // textAlign: "center",
                         padding: "0 32px",
                         mt: 2,
                         mb: 4,
                         position: "relative",
                     }}
                 >
-                    <Box sx={{ display: "inline-flex" }}>
+                    <Box>
                         <SubTitle
-                            sx={{ fontSize: "12px", my: 0.5, textAlign: "left", fontWeight: "900" }}
+                            sx={{ fontSize: "12px", my: 0.5, textAlign: "center", fontWeight: "900" }}
                             dangerouslySetInnerHTML={{
                                 __html: "Atur Cara Majlis",
                             }}
@@ -285,9 +275,9 @@ const Layout898: React.FC = () => {
                     </Box>
                     <Box sx={{ display: "inline-flex" }}>
                         <SubTitle
-                            sx={{ fontSize: "12px", my: 0.5, display: "block", mr: 2 }}
+                            sx={{ fontSize: "12px", my: 0.5, display: "block", mr: 2, ml: 4 }}
                             dangerouslySetInnerHTML={{
-                                __html: "<b>1130 - 1600</b>",
+                                __html: "<b>11.00am</b>",
                             }}
                         />
                         <SubTitle
@@ -299,15 +289,29 @@ const Layout898: React.FC = () => {
                     </Box>
                     <Box sx={{ display: "inline-flex" }}>
                         <SubTitle
-                            sx={{ fontSize: "12px", my: 0.5, display: "block", mr: 2 }}
+                            sx={{ fontSize: "12px", my: 0.5, display: "block", mr: 2, ml: 4 }}
                             dangerouslySetInnerHTML={{
-                                __html: "<b>1230</b>",
+                                __html: "<b>12.30pm</b>",
                             }}
                         />
                         <SubTitle
                             sx={{ fontSize: "12px", my: 0.5, textAlign: "left" }}
                             dangerouslySetInnerHTML={{
-                                __html: "Ketibaan Pengantin",
+                                __html: "Ketibaan rombongan pengantin lelaki",
+                            }}
+                        />
+                    </Box>
+                    <Box sx={{ display: "inline-flex" }}>
+                        <SubTitle
+                            sx={{ fontSize: "12px", my: 0.5, display: "block", mr: 2, ml: 4 }}
+                            dangerouslySetInnerHTML={{
+                                __html: "<b>4.00pm</b>",
+                            }}
+                        />
+                        <SubTitle
+                            sx={{ fontSize: "12px", my: 0.5, textAlign: "left" }}
+                            dangerouslySetInnerHTML={{
+                                __html: "Majlis bersurai",
                             }}
                         />
                     </Box>
@@ -323,7 +327,7 @@ const Layout898: React.FC = () => {
                         dangerouslySetInnerHTML={{
                             __html: "<b>Menghitung Hari</b> | <i>Counting Days</i>",
                         }}
-                        sx={{ pb: 2, fontSize: "14px" }}
+                        sx={{ pb: 2, fontSize: "14px", px: 3 }}
                     />
                     {!isCounting ? (
                         <Box
@@ -435,16 +439,14 @@ const Layout898: React.FC = () => {
                     language={item?.language!}
                     iconColor="#333"
                     color="#fff9ea"
-                    location={{ text: item?.location!, mapUrl: item?.mapUrl! }}
+                    location={{ text: "De Majlis Event Space, B-6-7 Block B, Jalan Ostia Utama, Ostia Bangi Bussiness Park, 43650 Bandar Baru Bangi, Selangor", mapUrl: item?.mapUrl! }}
                     contact={{
-                        number1: "0123998455",
-                        number2: "0123450696",
-                        number3: "0126935818",
-                        number4: "0192229091",
-                        name1: "Hj Firhat",
-                        name2: "⁠Hjh Rujitah",
-                        name3: "Farah Natasha",
-                        name4: "Syafiq",
+                        number1: "0196124934",
+                        number2: "0176284173",
+                        number3: "0108211027",
+                        name1: "Sazwan",
+                        name2: "⁠Shahidan",
+                        name3: "Shafina",
                     }}
                 />
             </Box>
