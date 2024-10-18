@@ -194,7 +194,7 @@ const Layout898: React.FC = () => {
             >
                 <Box>
                     <Image
-                        src="/media/animation/SHAHIDA-1.svg"
+                        src="/media/animation/shida-main-page.svg"
                         alt="Wedding of Shida"
                         width={400}
                         height={800}
