@@ -488,9 +488,9 @@ const Layout888: React.FC = () => {
             number1: "0173211494",
             number2: "0173490527",
             number3: " 0176190492",
-            name1: "Khalid",
-            name2: "⁠Kamariah",
-            name3: "Ain",
+            name1: "Khalid(Abah)",
+            name2: "⁠Kamariah (Ibu)",
+            name3: "Ain (Kakak)",
           }}
         />
       </Box>
