@@ -156,7 +156,7 @@ const Layout898: React.FC = () => {
             maxWidth="400px"
             sx={{
                 background: "#fffcfa",
-                boxShadow: "1px 1px 10px #fbcccd",
+                boxShadow: "1px 1px 10px #efefef",
                 m: "auto",
                 position: "relative",
                 overflow: "hidden",
@@ -194,7 +194,7 @@ const Layout898: React.FC = () => {
             >
                 <Box>
                     <Image
-                        src="/media/animation/shida-main-page.svg"
+                        src="/media/animation/w-o-s.svg"
                         alt="Wedding of Shida"
                         width={400}
                         height={800}
@@ -258,7 +258,6 @@ const Layout898: React.FC = () => {
                 </Box>
                 <Box
                     sx={{
-                        // textAlign: "center",
                         padding: "0 32px",
                         mt: 2,
                         mb: 4,
@@ -297,7 +296,7 @@ const Layout898: React.FC = () => {
                         <SubTitle
                             sx={{ fontSize: "12px", my: 0.5, textAlign: "left" }}
                             dangerouslySetInnerHTML={{
-                                __html: "Ketibaan rombongan pengantin lelaki",
+                                __html: "Ketibaan pengantin dan rombongan pengantin lelaki",
                             }}
                         />
                     </Box>
@@ -316,6 +315,16 @@ const Layout898: React.FC = () => {
                         />
                     </Box>
                 </Box>
+
+                <Box>
+                    <SubTitle
+                        sx={{ fontSize: "12px", my: 0.5, textAlign: "center", pt: 4, pb: 4 }}
+                        dangerouslySetInnerHTML={{
+                            __html: "Semoga dengan kehadiran anda dapat memeriahkan lagi majlis kami.",
+                        }}
+                    />
+                </Box>
+
                 <Box
                     sx={{
                         px: 2,
@@ -436,6 +445,8 @@ const Layout898: React.FC = () => {
             </Box>
             <Box>
                 <Widget
+                    showGift
+                    giftImage="/media/animation/bank-acc-shida.jpeg"
                     language={item?.language!}
                     iconColor="#333"
                     color="#fff9ea"
