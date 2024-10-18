@@ -173,21 +173,27 @@ const Layout888: React.FC = () => {
     >
       <Door color="transparent" {...{ clickOpen, setClickOpen }}>
         <Title
-          sx={{ fontSize: "24px", textShadow: "1px 1px 10px #fff9ea" }}
+          sx={{ fontSize: "18px", textShadow: "1px 1px 10px #fff9ea", fontWeight: "900" }}
           dangerouslySetInnerHTML={{
             __html: `Nurkhairina`,
           }}
         />
         <Title
-          sx={{ fontSize: "24px", display: "block", my: "10px" }}
+          sx={{ fontSize: "14px", display: "block", my: "10px" }}
           dangerouslySetInnerHTML={{
             __html: `&`,
           }}
         />
         <Title
-          sx={{ fontSize: "24px", textShadow: "1px 1px 10px #fff9ea" }}
+          sx={{ fontSize: "18px", textShadow: "1px 1px 10px #fff9ea", fontWeight: "900" }}
           dangerouslySetInnerHTML={{
             __html: "Sabri",
+          }}
+        />
+        <SubTitle
+          sx={{ fontSize: "12px", mb: -1, mt: 1 }}
+          dangerouslySetInnerHTML={{
+            __html: "Buka",
           }}
         />
       </Door>
