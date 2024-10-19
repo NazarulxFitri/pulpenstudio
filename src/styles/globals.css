@@ -214,8 +214,6 @@ p {
 /* Custom Delay animation - End */
 
 .moving-image {
-  width: 100%; /* Adjust to fit the container */
-  position: absolute;
   animation: floatImage 8s ease-in-out infinite;
 }
 

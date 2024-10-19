@@ -192,6 +192,9 @@ const Layout898: React.FC = () => {
                     overflow: "hidden",
                 }}
             >
+                <Box className="moving-image" sx={{ position: "absolute", left: "40%", top: "135px", transform: "translate(-50%,-50%)", }}>
+                    <Image src="/media/animation/bird-flying.png" alt="Shahida Imran" width={80} height={40} />
+                </Box>
                 <Box>
                     <Image
                         src="/media/animation/w-o-s.svg"
