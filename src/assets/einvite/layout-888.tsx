@@ -267,7 +267,7 @@ const Layout888: React.FC = () => {
             sx={{ mb: 3, textTransform: "none" }}
             dangerouslySetInnerHTML={{
               __html:
-                "Dengan segala hormatnya kami menjemput Dato | Datin | Tuan | Puan | Encik | Cik hadir ke majlis perkahwinan puteri kami",
+                "Dengan segala hormatnya kami menjemput Dato | Datin | Tuan | Puan | Encik | Cik hadir ke majlis perkahwinan puteri kami & pasangannya",
             }}
           />
           <SubTitle
