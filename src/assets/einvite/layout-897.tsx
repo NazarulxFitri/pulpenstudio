@@ -234,13 +234,13 @@ const Layout897: React.FC = () => {
 
                 </Box>
                 <Box
-                    id="delay-9s"
                     sx={{
                         backgroundImage: "url('/media/animation/fakhruz-updated.svg')",
                         backgroundSize: "cover",
                         backgroundPosition: "inherit",
                     }}>
                     <Box
+                        id="delay-9s"
                         mx={"auto"}
                         sx={{
 
