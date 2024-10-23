@@ -372,7 +372,7 @@ const Door: React.FC<DoorProps> = ({
             }
             id="right-door"
             sx={{
-              backgroundImage: "url('/media/animation/slice-door-fakhruz.svg')",
+              backgroundImage: "url('/media/animation/slice-f-h.svg')",
               backgroundSize: "cover",
               boxShadow: specialBg ? "unset" : "-10px 0px 20px #D0D0D0",
               width: "50%",
@@ -398,11 +398,19 @@ const Door: React.FC<DoorProps> = ({
                 sm: specialBg ? "50%" : "50%",
               },
               transform: "translate(-50%,-50%)",
-              minWidth: "60px",
+              width: "104px",
+              height: "80px",
               zIndex: "3",
             }}
           >
-            {children}
+            <Image style={{
+              color: "transparent",
+              top: "50%",
+              position: "absolute",
+              left: "50%",
+              transform: "translate(-50%,-50%)"
+            }}
+              src="/media/animation/fh-signage.png" alt="Fakhruz" width={220} height={80} />
           </Box>
         </Box>
       </Box>

@@ -263,7 +263,7 @@ const Layout997jpn: React.FC = () => {
         />
 
         <Box
-         id="delay-6s"
+          id="delay-6s"
           sx={{
             background: "#ac6e29",
             my: 2,
@@ -460,19 +460,17 @@ const Layout997jpn: React.FC = () => {
                 <Text
                   style={{ fontSize: "24px", color: "#ac6e29" }}
                   dangerouslySetInnerHTML={{
-                    __html: `<span style="font-size: 12px">Hrs</span><br><span style="visibility: hidden">..</span>${
-                      countdownTimer?.countdownTimer.h
-                    } :`,
+                    __html: `<span style="font-size: 12px">Hrs</span><br><span style="visibility: hidden">..</span>${countdownTimer?.countdownTimer.h
+                      } :`,
                   }}
                 />
-                </Box>
-                <Box>
+              </Box>
+              <Box>
                 <Text
                   style={{ fontSize: "24px", color: "#ac6e29" }}
                   dangerouslySetInnerHTML={{
-                    __html: `<span style="font-size: 12px">Mins</span><br><span style="visibility: hidden">..</span>${
-                      countdownTimer?.countdownTimer.m
-                    } :`,
+                    __html: `<span style="font-size: 12px">Mins</span><br><span style="visibility: hidden">..</span>${countdownTimer?.countdownTimer.m
+                      } :`,
                   }}
                 />
               </Box>
@@ -508,101 +506,101 @@ const Layout997jpn: React.FC = () => {
           }}
         />
 
-        <Box id="delay-18s" sx={{ textAlign: "left"}}>
-        <Text
-          sx={{ fontSize: "14px", mt: 6, color: "#ac6e29" }}
-          dangerouslySetInnerHTML={{
-            __html: "<b>開催時間</b> | <i>TENTATIVES</i><br><br>11:30a.m - 4:00p.m<br><br>",
-          }}
-        />
-        <Box sx={{ p: "0 48px"}}>
-        <Box sx={{ display: "inline-flex"}}>
+        <Box id="delay-18s" sx={{ textAlign: "left" }}>
           <Text
-            sx={{ fontSize: "12px", my: 0.5, color: "#ac6e29", display: "block", mr: 2 }}
+            sx={{ fontSize: "14px", mt: 6, color: "#ac6e29" }}
             dangerouslySetInnerHTML={{
-              __html:
-                "<b>11:30</b>",
+              __html: "<b>開催時間</b> | <i>TENTATIVES</i><br><br>11:30a.m - 4:00p.m<br><br>",
             }}
           />
-          <Text
-          sx={{ fontSize: "12px", my: 0.5, color: "#ac6e29" , textAlign: "left" }}
-          dangerouslySetInnerHTML={{
-            __html:
-              "<b>開場・披露宴開始</b> <br> <i>Start of Wedding Reception</i>",
-          }}
-        />
-        </Box>
-        
-        <Box sx={{ display: "inline-flex"}}>
-          <Text
-            sx={{ fontSize: "12px", my: 0.5, color: "#ac6e29", display: "block", mr: 2 }}
-            dangerouslySetInnerHTML={{
-              __html:
-                "<b>12:30</b>",
-            }}
-          />
-          <Text
-          sx={{ fontSize: "12px", my: 0.5, color: "#ac6e29", textAlign: "left"  }}
-          dangerouslySetInnerHTML={{
-            __html:
-              "<b>新郎新婦　入場</b> <br> <i>Arrival of Bride & Groom</i>",
-          }}
-        />
-        </Box>
+          <Box sx={{ p: "0 48px" }}>
+            <Box sx={{ display: "inline-flex" }}>
+              <Text
+                sx={{ fontSize: "12px", my: 0.5, color: "#ac6e29", display: "block", mr: 2 }}
+                dangerouslySetInnerHTML={{
+                  __html:
+                    "<b>11:30</b>",
+                }}
+              />
+              <Text
+                sx={{ fontSize: "12px", my: 0.5, color: "#ac6e29", textAlign: "left" }}
+                dangerouslySetInnerHTML={{
+                  __html:
+                    "<b>開場・披露宴開始</b> <br> <i>Start of Wedding Reception</i>",
+                }}
+              />
+            </Box>
 
-        <Box sx={{ display: "inline-flex"}}>
-          <Text
-            sx={{ fontSize: "12px", my: 0.5, color: "#ac6e29", display: "block", mr: 2 }}
-            dangerouslySetInnerHTML={{
-              __html:
-                "<b>14:30</b>",
-            }}
-          />
-          <Text
-          sx={{ fontSize: "12px", my: 0.5, color: "#ac6e29", textAlign: "left"  }}
-          dangerouslySetInnerHTML={{
-            __html:
-              "<b>ケーキ入刀</b> <br> <i>Cake Cutting Ceremony</i>",
-          }}
-        />
-        </Box>
+            <Box sx={{ display: "inline-flex" }}>
+              <Text
+                sx={{ fontSize: "12px", my: 0.5, color: "#ac6e29", display: "block", mr: 2 }}
+                dangerouslySetInnerHTML={{
+                  __html:
+                    "<b>12:30</b>",
+                }}
+              />
+              <Text
+                sx={{ fontSize: "12px", my: 0.5, color: "#ac6e29", textAlign: "left" }}
+                dangerouslySetInnerHTML={{
+                  __html:
+                    "<b>新郎新婦　入場</b> <br> <i>Arrival of Bride & Groom</i>",
+                }}
+              />
+            </Box>
 
-        <Box sx={{ display: "inline-flex"}}>
-          <Text
-            sx={{ fontSize: "12px", my: 0.5, color: "#ac6e29", display: "block", mr: 2 }}
-            dangerouslySetInnerHTML={{
-              __html:
-                "<b>15:00</b>",
-            }}
-          />
-          <Text
-          sx={{ fontSize: "12px", my: 0.5, color: "#ac6e29", textAlign: "left"  }}
-          dangerouslySetInnerHTML={{
-            __html:
-              "<b> 舞台上　写真撮影</b> <br> <i>Photo Session with Guests</i>",
-          }}
-        />
-        </Box>
+            <Box sx={{ display: "inline-flex" }}>
+              <Text
+                sx={{ fontSize: "12px", my: 0.5, color: "#ac6e29", display: "block", mr: 2 }}
+                dangerouslySetInnerHTML={{
+                  __html:
+                    "<b>14:30</b>",
+                }}
+              />
+              <Text
+                sx={{ fontSize: "12px", my: 0.5, color: "#ac6e29", textAlign: "left" }}
+                dangerouslySetInnerHTML={{
+                  __html:
+                    "<b>ケーキ入刀</b> <br> <i>Cake Cutting Ceremony</i>",
+                }}
+              />
+            </Box>
 
-        <Box sx={{ display: "inline-flex"}}>
-          <Text
-            sx={{ fontSize: "12px", my: 0.5, color: "#ac6e29", display: "block", mr: 2 }}
-            dangerouslySetInnerHTML={{
-              __html:
-                "<b>16:00</b>",
-            }}
-          />
-          <Text
-          sx={{ fontSize: "12px", my: 0.5, color: "#ac6e29", textAlign: "left"  }}
-          dangerouslySetInnerHTML={{
-            __html:
-              "<b>披露宴終了・閉場</b> <br> <i>End of Wedding Reception</i>",
-          }}
-        />
-        </Box>  
-        </Box>
+            <Box sx={{ display: "inline-flex" }}>
+              <Text
+                sx={{ fontSize: "12px", my: 0.5, color: "#ac6e29", display: "block", mr: 2 }}
+                dangerouslySetInnerHTML={{
+                  __html:
+                    "<b>15:00</b>",
+                }}
+              />
+              <Text
+                sx={{ fontSize: "12px", my: 0.5, color: "#ac6e29", textAlign: "left" }}
+                dangerouslySetInnerHTML={{
+                  __html:
+                    "<b> 舞台上　写真撮影</b> <br> <i>Photo Session with Guests</i>",
+                }}
+              />
+            </Box>
 
-        <Box sx={{ display: "inline-flex"}} mt={1} px={3}>
+            <Box sx={{ display: "inline-flex" }}>
+              <Text
+                sx={{ fontSize: "12px", my: 0.5, color: "#ac6e29", display: "block", mr: 2 }}
+                dangerouslySetInnerHTML={{
+                  __html:
+                    "<b>16:00</b>",
+                }}
+              />
+              <Text
+                sx={{ fontSize: "12px", my: 0.5, color: "#ac6e29", textAlign: "left" }}
+                dangerouslySetInnerHTML={{
+                  __html:
+                    "<b>披露宴終了・閉場</b> <br> <i>End of Wedding Reception</i>",
+                }}
+              />
+            </Box>
+          </Box>
+
+          <Box sx={{ display: "inline-flex" }} mt={1} px={3}>
             <Text
               sx={{ fontSize: "12px", my: 0.5, color: "#ac6e29", display: "block", mr: 2, textAlign: "left" }}
               dangerouslySetInnerHTML={{
@@ -610,8 +608,8 @@ const Layout997jpn: React.FC = () => {
                   "*当日の都合により予定が前後することをご了承<br>頂きますと幸いです。",
               }}
             />
-        </Box>     
-          
+          </Box>
+
 
         </Box>
 
@@ -625,37 +623,37 @@ const Layout997jpn: React.FC = () => {
           }}
         >
           <Text
-          id="delay-18s"
-          sx={{ fontSize: "14px", mt: 2, color: "#ac6e29" }}
-          dangerouslySetInnerHTML={{
-            __html: "<b>新郎新婦へのメッセージ</b> | <i>WISHES</i>",
-          }}
-        />
+            id="delay-18s"
+            sx={{ fontSize: "14px", mt: 2, color: "#ac6e29" }}
+            dangerouslySetInnerHTML={{
+              __html: "<b>新郎新婦へのメッセージ</b> | <i>WISHES</i>",
+            }}
+          />
           <Grid container>
-          <Grid item py={2} xs={12}>
-            <Paper
-              sx={{
-                background: "#FFF",
-                boxShadow: "unset",
-                height: "100%",
-                maxHeight: "400px",
-                overflow: "scroll",
-              }}
-            >
-              <List sx={{ p: 0, mb: 4 }}>
-                {/* @ts-ignore */}
-                {listComments?.map((comment: any, idx: string) => (
-                  <CommentList
-                    {...{ comment, idx }}
-                    key={idx}
-                    bgColor="#fff"
-                    textColor="#ac6e29"
-                  />
-                ))}
-              </List>
-            </Paper>
+            <Grid item py={2} xs={12}>
+              <Paper
+                sx={{
+                  background: "#FFF",
+                  boxShadow: "unset",
+                  height: "100%",
+                  maxHeight: "400px",
+                  overflow: "scroll",
+                }}
+              >
+                <List sx={{ p: 0, mb: 4 }}>
+                  {/* @ts-ignore */}
+                  {listComments?.map((comment: any, idx: string) => (
+                    <CommentList
+                      {...{ comment, idx }}
+                      key={idx}
+                      bgColor="#fff"
+                      textColor="#ac6e29"
+                    />
+                  ))}
+                </List>
+              </Paper>
+            </Grid>
           </Grid>
-        </Grid>
         </Box>
       </Box>
 

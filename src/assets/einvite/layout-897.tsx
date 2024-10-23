@@ -164,24 +164,7 @@ const Layout897: React.FC = () => {
             onClick={() => setMusicStart(true)}
         >
             <Door color="transparent" {...{ clickOpen, setClickOpen }} fakhruz>
-                <Title
-                    sx={{ fontSize: "24px", textShadow: "1px 1px 10px #fff9ea" }}
-                    dangerouslySetInnerHTML={{
-                        __html: `Fakhruz`,
-                    }}
-                />
-                <Title
-                    sx={{ fontSize: "24px", display: "block", my: "10px" }}
-                    dangerouslySetInnerHTML={{
-                        __html: `&`,
-                    }}
-                />
-                <Title
-                    sx={{ fontSize: "24px", textShadow: "1px 1px 10px #fff9ea" }}
-                    dangerouslySetInnerHTML={{
-                        __html: "Hafsah",
-                    }}
-                />
+                <span>Fakhruz</span>
             </Door>
             <Box sx={{ visibility: "hidden", position: "absolute" }}>
                 <ReactPlayer
@@ -193,259 +176,312 @@ const Layout897: React.FC = () => {
                     controls={true}
                 />
             </Box>
-            <Box
-                sx={{
-                    position: "relative",
-                    overflow: "hidden",
-                }}
-            >
-                <Image
-                    src="/media/animation/fakhruz-hafsah.svg"
-                    alt="Wedding of Shida"
-                    width={400}
-                    height={800}
-                    style={{ display: "block", width: "100%", height: "auto" }}
-                />
-
-            </Box>
-            <Box sx={{
-                backgroundImage: "url('/media/animation/background-f.svg')",
-                backgroundSize: "cover",
-                backgroundPosition: "inherit",
-            }}>
+            <Box sx={{ display: clickOpen ? "block" : "none" }}>
                 <Box
-                    mx={"auto"}
                     sx={{
-
-                        pb: 4,
-                        px: 2,
-                        pt: 6,
                         position: "relative",
+                        overflow: "hidden",
+                        height: "auto"
                     }}
                 >
-                    <Box sx={{ zIndex: "2" }}>
-                        <Box textAlign={"center"}>
-                            <Image
-                                src="/media/animation/bis-2.png"
-                                width={160}
-                                alt="Pulpen Studio"
-                                height={30}
-                                style={{ marginBottom: "16px" }}
-                            />
-                        </Box>
+
+                    <Image src="/media/animation/887-new-bg.svg" alt="" width={400} height={600} style={{ width: "100%", height: "auto", display: "block" }} />
+
+                    <Box sx={{ position: "absolute", top: "45%", left: "50%", transform: "translate(-50%, -50%)" }}>
                         <SubTitle
-                            sx={{ mb: 3, mt: 3 }}
-                            dangerouslySetInnerHTML={{
-                                __html: "Assalamualaikum WBT <br> Salam Sejahtera",
-                            }}
-                        />
-                        <SubTitle
-                            sx={{ fontWeight: "700", mb: 3 }}
+                            id="delay-3s"
+                            sx={{ mb: 4 }}
                             dangerouslySetInnerHTML={{
                                 __html:
-                                    "Nama ayah pengantin <br>&<br>Nama ibu pengantin",
-                            }}
-                        />
+                                    "WALIMATULURUS",
+                            }} />
+                        <Image id="delay-5s" src="/media/animation/fh-signage.png" alt="" width={220} height={80} />
                         <SubTitle
-                            sx={{ mb: 3, px: 2 }}
+                            id="delay-5s"
+                            sx={{ mt: 4 }}
                             dangerouslySetInnerHTML={{
                                 __html:
-                                    "DENGAN PENUH RASA KESYUKURAN KE HADRAT ILAHI KAMI MENJEMPUT DATO' / DATIN' / TUAN' / PUAN' / ENCIK / CIK KE MAJLIS PERKAHWINAN PUTERI KAMI",
-                            }}
-                        />
-                        <SubTitle
-                            sx={{
-                                fontWeight: "700",
-                                mb: 3,
-                                px: 2
-                            }}
-                            dangerouslySetInnerHTML={{
-                                __html: `Nama penuh pengantin lelaki<br>&<br>Nama penuh pengantin perempuan `,
-                            }}
-                        />
+                                    "FAKHRUZ & HAFSAH",
+                            }} />
+
                     </Box>
-                </Box>
-                <Box
-                    sx={{
-                        textAlign: "center",
-                        padding: "0 32px",
-                        mt: 2,
-                        mb: 4,
-                        position: "relative",
-                    }}
-                >
-                    <Box sx={{ display: "inline-flex" }}>
+                    <Box id="delay-7s" sx={{ position: "absolute", bottom: "5%", left: "50%", transform: "translate(-50%, -50%)" }}>
                         <SubTitle
-                            sx={{ fontSize: "12px", my: 0.5, textAlign: "left", fontWeight: "900" }}
+                            sx={{ mt: 6, fontWeight: "900" }}
                             dangerouslySetInnerHTML={{
-                                __html: "Atur Cara Majlis",
-                            }}
-                        />
-                    </Box>
-                    <Box sx={{ display: "inline-flex" }}>
-                        <SubTitle
-                            sx={{ fontSize: "12px", my: 0.5, display: "block", mr: 2 }}
-                            dangerouslySetInnerHTML={{
-                                __html: "<b>1130 - 1600</b>",
-                            }}
-                        />
-                        <SubTitle
-                            sx={{ fontSize: "12px", my: 0.5, textAlign: "left" }}
-                            dangerouslySetInnerHTML={{
-                                __html: "Jamuan Makan",
-                            }}
-                        />
-                    </Box>
-                    <Box sx={{ display: "inline-flex" }}>
-                        <SubTitle
-                            sx={{ fontSize: "12px", my: 0.5, display: "block", mr: 2 }}
-                            dangerouslySetInnerHTML={{
-                                __html: "<b>1230</b>",
-                            }}
-                        />
-                        <SubTitle
-                            sx={{ fontSize: "12px", my: 0.5, textAlign: "left" }}
-                            dangerouslySetInnerHTML={{
-                                __html: "Ketibaan Pengantin",
-                            }}
-                        />
-                    </Box>
-                </Box>
-                <Box
-                    sx={{
-                        px: 2,
-                        py: 4,
-                        mb: 6,
-                    }}
-                >
-                    <SubTitle
-                        dangerouslySetInnerHTML={{
-                            __html: "<b>Menghitung Hari</b> | <i>Counting Days</i>",
-                        }}
-                        sx={{ pb: 2, fontSize: "14px", px: 2 }}
-                    />
-                    {!isCounting ? (
-                        <Box
-                            id="countdown"
-                            columnGap={2}
-                            sx={{
-                                mx: "auto",
-                                width: "fit-content",
-                            }}
-                        >
-                            <Text
-                                sx={{ fontSize: "14px", fontWeight: "bold" }}
+                                __html:
+                                    "21.12.2024",
+                            }} />
+                        <Box sx={{ display: "flex" }} gap={1}>
+                            <Box sx={{ display: "block", height: "1px", width: "60px", background: "#333", alignSelf: "center" }} />
+                            <SubTitle
                                 dangerouslySetInnerHTML={{
-                                    __html: locale?.[item?.language!]?.CARD_COUNTDOWN_FINISH_TEXT,
+                                    __html:
+                                        "SABTU",
+                                }} />
+                            <Box sx={{ display: "block", height: "1px", width: "60px", background: "#333", alignSelf: "center" }} />
+                        </Box>
+
+
+                        <SubTitle
+                            sx={{ mt: 2 }}
+                            dangerouslySetInnerHTML={{
+                                __html:
+                                    "Dewan Sutera, <br>Kolej Ibu Zain, UKM",
+                            }} />
+
+                    </Box>
+
+                </Box>
+                <Box sx={{
+                    backgroundImage: "url('/media/animation/fakhruz-updated.svg')",
+                    backgroundSize: "cover",
+                    backgroundPosition: "inherit",
+                }}>
+                    <Box
+                        mx={"auto"}
+                        sx={{
+
+                            pb: 4,
+                            px: 2,
+                            pt: 6,
+                            position: "relative",
+                        }}
+                    >
+                        <Box sx={{ zIndex: "2" }}>
+                            <Box textAlign={"center"}>
+                                <Image
+                                    src="/media/animation/bis-2.png"
+                                    width={160}
+                                    alt="Pulpen Studio"
+                                    height={30}
+                                    style={{ marginBottom: "16px" }}
+                                />
+                            </Box>
+                            <SubTitle
+                                sx={{ mb: 3, mt: 3 }}
+                                dangerouslySetInnerHTML={{
+                                    __html: "Assalamualaikum WBT <br> Salam Sejahtera",
+                                }}
+                            />
+                            <SubTitle
+                                sx={{ fontWeight: "700", mb: 3 }}
+                                dangerouslySetInnerHTML={{
+                                    __html:
+                                        "HASADID ABD HAMID<br>&<br>JUSNAINI BINTI JAAMAN",
+                                }}
+                            />
+                            <SubTitle
+                                sx={{ mb: 3, px: 2 }}
+                                dangerouslySetInnerHTML={{
+                                    __html:
+                                        "DENGAN PENUH RASA KESYUKURAN KE HADRAT ILAHI KAMI MENJEMPUT DATO' / DATIN' / TUAN' / PUAN' / ENCIK / CIK KE MAJLIS PERKAHWINAN PUTERI KAMI",
+                                }}
+                            />
+                            <SubTitle
+                                sx={{
+                                    fontWeight: "700",
+                                    mb: 3,
+                                    px: 2
+                                }}
+                                dangerouslySetInnerHTML={{
+                                    __html: `MOHD FAKHRUZ ZAMAN BIN HASADID<br>&<br>Dr. HAFSAH BINTI KOLONEL (B) TS. SAZALI`,
                                 }}
                             />
                         </Box>
-                    ) : (
-                        <Box
-                            id="countdown"
-                            columnGap={2}
-                            sx={{
-                                boxShadow: "1px 10px 10px -10px #efefef",
-                                pb: 1,
-                                width: "fit-content",
-                                mx: "auto",
-                                display: "flex",
-                            }}
-                        >
-                            <Box>
-                                <Text
-                                    style={{ fontSize: "48px" }}
-                                    dangerouslySetInnerHTML={{
-                                        __html: `${countdownTimer?.countdownTimer.d} `,
-                                    }}
-                                />
-                            </Box>
-                            <Box>
-                                <Text
-                                    style={{ fontSize: "24px" }}
-                                    dangerouslySetInnerHTML={{
-                                        __html: `${countdownTimer?.countdownTimer.h
-                                            } <span style="font-size: 12px">${locale?.[item?.language!]?.COUNTDOWN_HOUR
-                                            }</span>`,
-                                    }}
-                                />
-                                <Text
-                                    style={{ fontSize: "24px" }}
-                                    dangerouslySetInnerHTML={{
-                                        __html: `${countdownTimer?.countdownTimer.m
-                                            } <span style="font-size: 12px">${locale?.[item?.language!]?.COUNTDOWN_MINUTE
-                                            }</span>`,
-                                    }}
-                                />
-                            </Box>
-                            <Box>
-                                <Text
-                                    style={{ fontSize: "48px", color: "#718062", width: "50px" }}
-                                    dangerouslySetInnerHTML={{
-                                        __html: `${countdownTimer?.countdownTimer.s} `,
-                                    }}
-                                />
-                            </Box>
-                        </Box>
-                    )}
-                </Box>
-                <Box
-                    id="comment"
-                    mb={2}
-                    sx={{
-                        px: 2,
-                        pb: 10,
-                    }}
-                >
-                    <SubTitle
-                        dangerouslySetInnerHTML={{
-                            __html: "<b>Ucapan</b> | <i>Wishes</i>",
+                    </Box>
+                    <Box
+                        sx={{
+                            textAlign: "center",
+                            padding: "0 32px",
+                            mt: 2,
+                            mb: 4,
+                            position: "relative",
                         }}
-                        sx={{ pb: 2, fontSize: "16px" }}
-                    />
-                    <Grid container>
-                        <Grid item xs={12}>
-                            <Paper
+                    >
+                        <Box sx={{ display: "inline-flex" }}>
+                            <SubTitle
+                                sx={{ fontSize: "12px", my: 0.5, textAlign: "left", fontWeight: "900" }}
+                                dangerouslySetInnerHTML={{
+                                    __html: "Atur Cara Majlis",
+                                }}
+                            />
+                        </Box>
+                        <Box sx={{ display: "inline-flex" }}>
+                            <SubTitle
+                                sx={{ fontSize: "12px", my: 0.5, display: "block", mr: 2 }}
+                                dangerouslySetInnerHTML={{
+                                    __html: "<b>11.00am</b>",
+                                }}
+                            />
+                            <SubTitle
+                                sx={{ fontSize: "12px", my: 0.5, textAlign: "left" }}
+                                dangerouslySetInnerHTML={{
+                                    __html: "Majlis Bermula",
+                                }}
+                            />
+                        </Box>
+                        <Box sx={{ display: "inline-flex" }}>
+                            <SubTitle
+                                sx={{ fontSize: "12px", my: 0.5, display: "block", mr: 2 }}
+                                dangerouslySetInnerHTML={{
+                                    __html: "<b>12.30pm</b>",
+                                }}
+                            />
+                            <SubTitle
+                                sx={{ fontSize: "12px", my: 0.5, textAlign: "left" }}
+                                dangerouslySetInnerHTML={{
+                                    __html: "Ketibaan Pengantin",
+                                }}
+                            />
+                        </Box>
+                        <Box sx={{ display: "inline-flex" }}>
+                            <SubTitle
+                                sx={{ fontSize: "12px", my: 0.5, display: "block", mr: 2 }}
+                                dangerouslySetInnerHTML={{
+                                    __html: "<b>4.00pm</b>",
+                                }}
+                            />
+                            <SubTitle
+                                sx={{ fontSize: "12px", my: 0.5, textAlign: "left" }}
+                                dangerouslySetInnerHTML={{
+                                    __html: "Majlis Bersurai",
+                                }}
+                            />
+                        </Box>
+                    </Box>
+                    <Box
+                        sx={{
+                            px: 2,
+                            py: 4,
+                            mb: 6,
+                        }}
+                    >
+                        <SubTitle
+                            dangerouslySetInnerHTML={{
+                                __html: "<b>Menghitung Hari</b> | <i>Counting Days</i>",
+                            }}
+                            sx={{ pb: 2, fontSize: "14px", px: 2 }}
+                        />
+                        {!isCounting ? (
+                            <Box
+                                id="countdown"
+                                columnGap={2}
                                 sx={{
-                                    background: "#fff",
-                                    boxShadow: "unset",
-                                    maxHeight: "400px",
-                                    overflow: "scroll",
+                                    mx: "auto",
+                                    width: "fit-content",
                                 }}
                             >
-                                <List sx={{ p: 0, mb: 4 }}>
-                                    {/* @ts-ignore */}
-                                    {listComments?.map((comment: any, idx: string) => (
-                                        <CommentList
-                                            {...{ comment, idx }}
-                                            key={idx}
-                                            bgColor="#fff"
-                                            textColor="#131313"
-                                        />
-                                    ))}
-                                </List>
-                            </Paper>
+                                <Text
+                                    sx={{ fontSize: "14px", fontWeight: "bold" }}
+                                    dangerouslySetInnerHTML={{
+                                        __html: locale?.[item?.language!]?.CARD_COUNTDOWN_FINISH_TEXT,
+                                    }}
+                                />
+                            </Box>
+                        ) : (
+                            <Box
+                                id="countdown"
+                                columnGap={2}
+                                sx={{
+                                    boxShadow: "1px 10px 10px -10px #efefef",
+                                    pb: 1,
+                                    width: "fit-content",
+                                    mx: "auto",
+                                    display: "flex",
+                                }}
+                            >
+                                <Box>
+                                    <Text
+                                        style={{ fontSize: "48px" }}
+                                        dangerouslySetInnerHTML={{
+                                            __html: `${countdownTimer?.countdownTimer.d} `,
+                                        }}
+                                    />
+                                </Box>
+                                <Box>
+                                    <Text
+                                        style={{ fontSize: "24px" }}
+                                        dangerouslySetInnerHTML={{
+                                            __html: `${countdownTimer?.countdownTimer.h
+                                                } <span style="font-size: 12px">${locale?.[item?.language!]?.COUNTDOWN_HOUR
+                                                }</span>`,
+                                        }}
+                                    />
+                                    <Text
+                                        style={{ fontSize: "24px" }}
+                                        dangerouslySetInnerHTML={{
+                                            __html: `${countdownTimer?.countdownTimer.m
+                                                } <span style="font-size: 12px">${locale?.[item?.language!]?.COUNTDOWN_MINUTE
+                                                }</span>`,
+                                        }}
+                                    />
+                                </Box>
+                                <Box>
+                                    <Text
+                                        style={{ fontSize: "48px", color: "#718062", width: "50px" }}
+                                        dangerouslySetInnerHTML={{
+                                            __html: `${countdownTimer?.countdownTimer.s} `,
+                                        }}
+                                    />
+                                </Box>
+                            </Box>
+                        )}
+                    </Box>
+                    <Box
+                        id="comment"
+                        mb={2}
+                        sx={{
+                            px: 2,
+                            pb: 10,
+                        }}
+                    >
+                        <SubTitle
+                            dangerouslySetInnerHTML={{
+                                __html: "<b>Ucapan</b> | <i>Wishes</i>",
+                            }}
+                            sx={{ pb: 2, fontSize: "16px" }}
+                        />
+                        <Grid container>
+                            <Grid item xs={12}>
+                                <Paper
+                                    sx={{
+                                        background: "#fff",
+                                        boxShadow: "unset",
+                                        maxHeight: "400px",
+                                        overflow: "scroll",
+                                    }}
+                                >
+                                    <List sx={{ p: 0, mb: 4 }}>
+                                        {/* @ts-ignore */}
+                                        {listComments?.map((comment: any, idx: string) => (
+                                            <CommentList
+                                                {...{ comment, idx }}
+                                                key={idx}
+                                                bgColor="#fff"
+                                                textColor="#131313"
+                                            />
+                                        ))}
+                                    </List>
+                                </Paper>
+                            </Grid>
                         </Grid>
-                    </Grid>
+                    </Box>
                 </Box>
-            </Box>
-            <Box>
-                <Widget
-                    language={item?.language!}
-                    iconColor="#333"
-                    color="#f7f6f4"
-                    location={{ text: item?.location!, mapUrl: item?.mapUrl! }}
-                    contact={{
-                        number1: "0123456789",
-                        number2: "0123456789",
-                        number3: "0123456789",
-                        number4: "0123456789",
-                        name1: "Contoh",
-                        name2: "⁠Contoh",
-                        name3: "Contoh",
-                        name4: "Contoh",
-                    }}
-                />
+                <Box>
+                    <Widget
+                        language={item?.language!}
+                        iconColor="#333"
+                        color="#f7f6f4"
+                        location={{ text: "Dewan Sutera, Kolej Ibu Zain UKM", mapUrl: item?.mapUrl! }}
+                        contact={{
+                            number1: "0172255156",
+                            number2: "0125782689",
+                            name1: "Muhammad Khairol Nizam",
+                            name2: "Nor Lyiana Asyeken",
+                        }}
+                    />
+                </Box>
             </Box>
         </Box >
     );
