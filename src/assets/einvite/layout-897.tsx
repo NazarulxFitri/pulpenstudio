@@ -277,7 +277,7 @@ const Layout897: React.FC = () => {
                                 sx={{ mb: 3, px: 2 }}
                                 dangerouslySetInnerHTML={{
                                     __html:
-                                        "DENGAN PENUH RASA KESYUKURAN KE HADRAT ILAHI KAMI MENJEMPUT DATO' / DATIN' / TUAN' / PUAN' / ENCIK / CIK KE MAJLIS PERKAHWINAN PUTERI KAMI",
+                                        "Dengan penuh rasa kesyukuran ke hadrat ilahi kami menjemput Tan Sri / Puan Sri / Dato Sri / Datin Sri / Dato' / Datin / Tuan / Puan / Encik / Cik ke majlis perkahwinan putera kami",
                                 }}
                             />
                             <SubTitle
@@ -293,6 +293,7 @@ const Layout897: React.FC = () => {
                         </Box>
                     </Box>
                     <Box
+                        id="delay-9s"
                         sx={{
                             textAlign: "center",
                             padding: "0 32px",
@@ -353,6 +354,7 @@ const Layout897: React.FC = () => {
                         </Box>
                     </Box>
                     <Box
+                        id="delay-9s"
                         sx={{
                             px: 2,
                             py: 4,
