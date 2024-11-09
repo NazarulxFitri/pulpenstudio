@@ -216,7 +216,7 @@ const Layout888: React.FC = () => {
       >
         <Box>
           <Image
-            src="/media/animation/n.svg"
+            src="/media/animation/khairina-new-bg.svg"
             alt="Khairina Sabri"
             width={400}
             height={800}
@@ -489,7 +489,7 @@ const Layout888: React.FC = () => {
           language={item?.language!}
           iconColor="#131313"
           color="#fbcccd"
-          location={{ text: "Nafoura Shaftsbury, Putrajaya", mapUrl: item?.mapUrl! }}
+          location={{ text: "Nafoura Ruang Majlis, Sky Funnel, LG01, Easy Court, Shaftsbury Putrajaya", mapUrl: item?.mapUrl! }}
           contact={{
             number1: "0173211494",
             number2: "0173490527",
