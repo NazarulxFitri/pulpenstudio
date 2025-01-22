@@ -53,11 +53,11 @@ const CustomDoor: React.FC<DoorProps> = ({
           }}
         >
           <Image
-            src="/media/animation/layout-997-border-top.png"
+            src="/media/animation/layout-997-border-bottom.png"
             alt="Pulpen Studio Layout 997"
             width={430}
             height={100}
-            style={{ display: "block" }}
+            style={{ display: "block", transform: 'scaleY(-1)' }}
           />
         </Box>
         <Box
@@ -102,6 +102,7 @@ const CustomDoor: React.FC<DoorProps> = ({
             width: "50%",
             height: "100vh",
             zIndex: "2",
+            boxShadow: "1px 1px 10px #666666"
           }}
         ></Box>
         <Box
@@ -115,11 +116,11 @@ const CustomDoor: React.FC<DoorProps> = ({
           }}
         >
           <Image
-            src="/media/animation/layout-997-full.png"
+            src="/media/animation/nice-ad.png"
             alt="Pulpen Studio Layout 997"
-            width={380}
-            height={360}
-            style={{ display: "block" }}
+            width={200}
+            height={200}
+            style={{ display: "block", filter: "drop-shadow(5px 5px 5px #666666)", padding: "24px" }}
           />
           <Text
             sx={{ fontSize: "12px", mt: 4, color: "#ac6e29" }}
