@@ -623,13 +623,13 @@ const Layout887: React.FC = () => {
           color="rgba(235, 226, 210, .6)"
           location={{ text: item?.location!, mapUrl: item?.mapUrl! }}
           contact={{
-            number1: item?.phonePerson1!,
-            number2: item?.phonePerson2!,
-            number3: item?.phonePerson3!,
+            number1: "0192288095",
+            number2: "0133926669",
+            number3: "0192200885",
             number4: item?.phonePerson4!,
-            name1: item?.namePerson1!,
-            name2: item?.namePerson2!,
-            name3: item?.namePerson3!,
+            name1: "Faten",
+            name2: "Fadzel",
+            name3: "Nazihah",
             name4: item?.namePerson4!,
           }}
         />
