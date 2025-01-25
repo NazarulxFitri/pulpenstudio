@@ -102,7 +102,7 @@ const Text = styled("p")(() => ({
 
 const MiniText = styled("p")(() => ({
   fontFamily: `${playfair.style.fontFamily} !important` || "auto",
-  fontSize: "12px",
+  fontSize: "14px",
   textAlign: "center",
   textShadow: "1px 1px 10px",
 }));
@@ -205,11 +205,9 @@ const Layout887: React.FC = () => {
         display={clickOpen ? "block" : "none"}
         sx={{
           position: "relative",
-          backgroundImage: "url('/media/animation/layout-997-bg.png')",
-          backgroundSize: "contain",
-          backgroundAttachment: "fixed",
+          background: "#fefaf1",
           py: 8,
-          px: 4,
+          px: 5,
         }}
       >
         <Box
@@ -288,7 +286,7 @@ const Layout887: React.FC = () => {
         <Text
           id="delay-10s"
           sx={{
-            fontSize: "11px",
+            fontSize: "14px",
             fontWeight: "bolder",
             color: "#ac6e29",
             mt: 6,
@@ -300,7 +298,7 @@ const Layout887: React.FC = () => {
 
         <Text
           id="delay-10s"
-          sx={{ fontSize: "11px", fontWeight: "bolder", color: "#ac6e29" }}
+          sx={{ fontSize: "14px", fontWeight: "bolder", color: "#ac6e29" }}
           dangerouslySetInnerHTML={{
             __html: "MENJEMPUT TUAN/PUAN/ENCIK/CIK",
           }}
@@ -321,7 +319,7 @@ const Layout887: React.FC = () => {
         <Text
           id="delay-12s"
           sx={{
-            fontSize: "12px",
+            fontSize: "14px",
             mt: 6,
             fontWeight: "bolder",
             color: "#ac6e29",
@@ -344,6 +342,7 @@ const Layout887: React.FC = () => {
         />
 
         <SubTitle
+          id="delay-12s"
           sx={{ fontSize: "28px", mt: 6, color: "#ac6e29" }}
           dangerouslySetInnerHTML={{
             __html: "Ain Najdah Binti Fadzel",
@@ -351,14 +350,15 @@ const Layout887: React.FC = () => {
         />
 
         <Text
-          id="delay-15s"
-          sx={{ fontSize: "12px", my: 1, color: "#ac6e29" }}
+          id="delay-12s"
+          sx={{ fontSize: "14px", my: 1, color: "#ac6e29" }}
           dangerouslySetInnerHTML={{
             __html: "<b>DAN</b> | <i>WITH</i>",
           }}
         />
 
         <SubTitle
+          id="delay-12s"
           sx={{ fontSize: "32px", color: "#ac6e29" }}
           dangerouslySetInnerHTML={{
             __html: "Muhammad Dzulihar Bin Muhammad Rashid",
@@ -367,7 +367,7 @@ const Layout887: React.FC = () => {
 
         <Text
           id="delay-18s"
-          sx={{ fontSize: "12px", mt: 6, color: "#ac6e29" }}
+          sx={{ fontSize: "14px", mt: 6, color: "#ac6e29" }}
           dangerouslySetInnerHTML={{
             __html: "<b>PADA</b> | <i>ON</i>",
           }}
@@ -383,9 +383,9 @@ const Layout887: React.FC = () => {
 
         <Text
           id="delay-18s"
-          sx={{ fontSize: "12px", mt: 0.5, color: "#ac6e29" }}
+          sx={{ fontSize: "14px", mt: 0.5, color: "#ac6e29" }}
           dangerouslySetInnerHTML={{
-            __html: "<b>AHAD</b> | <i>SUNDAY</i>",
+            __html: "<b>Sabtu</b> | <i>Saturday</i>",
           }}
         />
 
@@ -406,7 +406,7 @@ const Layout887: React.FC = () => {
               }}
             >
               <Text
-                sx={{ color: "#ac6e29", fontSize: "12px" }}
+                sx={{ color: "#ac6e29", fontSize: "14px" }}
                 dangerouslySetInnerHTML={{
                   __html: locale?.[item?.language!]?.CARD_COUNTDOWN_FINISH_TEXT,
                 }}
@@ -464,7 +464,7 @@ const Layout887: React.FC = () => {
 
         <Text
           id="delay-18s"
-          sx={{ fontSize: "12px", mt: 6, color: "#ac6e29" }}
+          sx={{ fontSize: "14px", mt: 6, color: "#ac6e29" }}
           dangerouslySetInnerHTML={{
             __html: "<b>DI</b> | <i>AT</i>",
           }}
@@ -472,7 +472,7 @@ const Layout887: React.FC = () => {
 
         <Text
           id="delay-18s"
-          sx={{ fontSize: "12px", mt: 0.5, mb: 2, color: "#ac6e29" }}
+          sx={{ fontSize: "14px", mt: 0.5, mb: 2, color: "#ac6e29" }}
           dangerouslySetInnerHTML={{
             __html:
               "SEBENING EMBUN GARDENS LOT 15,<br>JALAN DURIAN 1,KAMPUNG SUNGAI BUAH,<br> DENGKIL, SELANGOR",
@@ -481,7 +481,7 @@ const Layout887: React.FC = () => {
 
         <Box id="delay-18s" sx={{ textAlign: "left", padding: "0 32px" }}>
           <Text
-            sx={{ fontSize: "12px", mt: 6, color: "#ac6e29" }}
+            sx={{ fontSize: "14px", mt: 6, color: "#ac6e29" }}
             dangerouslySetInnerHTML={{
               __html:
                 "<b>ATUR CARA</b> | <i>TENTATIVES</i><br><br><span style='font-size: 16px; font-weight: 500'>11:30a.m - 4:00p.m</span><br><br>",
@@ -491,7 +491,7 @@ const Layout887: React.FC = () => {
           <Box sx={{ display: "inline-flex" }}>
             <Text
               sx={{
-                fontSize: "12px",
+                fontSize: "14px",
                 my: 0.5,
                 color: "#ac6e29",
                 display: "block",
@@ -503,7 +503,7 @@ const Layout887: React.FC = () => {
             />
             <Text
               sx={{
-                fontSize: "12px",
+                fontSize: "14px",
                 my: 0.5,
                 color: "#ac6e29",
                 textAlign: "left",
@@ -518,19 +518,19 @@ const Layout887: React.FC = () => {
           <Box sx={{ display: "inline-flex" }}>
             <Text
               sx={{
-                fontSize: "12px",
+                fontSize: "14px",
                 my: 0.5,
                 color: "#ac6e29",
                 display: "block",
                 mr: 2,
               }}
               dangerouslySetInnerHTML={{
-                __html: "<b>12:30</b>",
+                __html: "<b>1:30</b>",
               }}
             />
             <Text
               sx={{
-                fontSize: "12px",
+                fontSize: "14px",
                 my: 0.5,
                 color: "#ac6e29",
                 textAlign: "left",
@@ -541,91 +541,10 @@ const Layout887: React.FC = () => {
               }}
             />
           </Box>
-
           <Box sx={{ display: "inline-flex" }}>
             <Text
               sx={{
-                fontSize: "12px",
-                my: 0.5,
-                color: "#ac6e29",
-                display: "block",
-                mr: 2,
-              }}
-              dangerouslySetInnerHTML={{
-                __html: "<b>12:45</b>",
-              }}
-            />
-            <Text
-              sx={{
-                fontSize: "12px",
-                my: 0.5,
-                color: "#ac6e29",
-                textAlign: "left",
-              }}
-              dangerouslySetInnerHTML={{
-                __html: "<b>Bacaan Doa</b> <br> <i>Prayer Recitation</i>",
-              }}
-            />
-          </Box>
-
-          <Box sx={{ display: "inline-flex" }}>
-            <Text
-              sx={{
-                fontSize: "12px",
-                my: 0.5,
-                color: "#ac6e29",
-                display: "block",
-                mr: 2,
-              }}
-              dangerouslySetInnerHTML={{
-                __html: "<b>13:20 <br>~<br>13:45</b>",
-              }}
-            />
-            <Text
-              sx={{
-                fontSize: "12px",
-                my: 0.5,
-                color: "#ac6e29",
-                textAlign: "left",
-              }}
-              dangerouslySetInnerHTML={{
-                __html:
-                  "<b>Pengantin Keluar untuk Solat Zohor</b> <br> <i>Bride & Groom Leave for Zuhr Prayer</i>",
-              }}
-            />
-          </Box>
-
-          <Box sx={{ display: "inline-flex" }}>
-            <Text
-              sx={{
-                fontSize: "12px",
-                my: 0.5,
-                color: "#ac6e29",
-                display: "block",
-                mr: 2,
-              }}
-              dangerouslySetInnerHTML={{
-                __html: "<b>14:30</b>",
-              }}
-            />
-            <Text
-              sx={{
-                fontSize: "12px",
-                my: 0.5,
-                color: "#ac6e29",
-                textAlign: "left",
-              }}
-              dangerouslySetInnerHTML={{
-                __html:
-                  "<b>Upacara Memotong Kek</b> <br> <i>Cake Cutting Ceremony</i>",
-              }}
-            />
-          </Box>
-
-          <Box sx={{ display: "inline-flex" }}>
-            <Text
-              sx={{
-                fontSize: "12px",
+                fontSize: "14px",
                 my: 0.5,
                 color: "#ac6e29",
                 display: "block",
@@ -637,7 +556,7 @@ const Layout887: React.FC = () => {
             />
             <Text
               sx={{
-                fontSize: "12px",
+                fontSize: "14px",
                 my: 0.5,
                 color: "#ac6e29",
                 textAlign: "left",
@@ -661,7 +580,7 @@ const Layout887: React.FC = () => {
         >
           <Text
             id="delay-18s"
-            sx={{ fontSize: "12px", mt: 2, color: "#ac6e29" }}
+            sx={{ fontSize: "14px", mt: 2, color: "#ac6e29" }}
             dangerouslySetInnerHTML={{
               __html: "<b>UCAPAN</b> | <i>WISHES</i>",
             }}
