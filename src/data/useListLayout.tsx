@@ -31,6 +31,7 @@ import {
   Layout888,
   Layout897,
   Layout887,
+  Layout886,
 } from "@/assets";
 
 export default function useListLayout() {
@@ -50,6 +51,7 @@ export default function useListLayout() {
     "013": <Layout13 />,
     "014": <Layout14 />,
     "015": <Layout15 />,
+    "886": <Layout886 />,
     "887": <Layout887 />,
     "888": <Layout888 />,
     "897": <Layout897 />,
