@@ -74,14 +74,17 @@ const Door: React.FC<DoorProps> = ({
               height: "100vh",
               zIndex: "2",
             }}
-          ><Box sx={{ position: "absolute", right: "-20px" }}>
-              <Image src="/media/animation/loveme.png" alt="Laily Dinie" width={120} height={900} style={{ height: "100%", width: "auto" }} />
+          ><Box sx={{ position: "absolute", right: "-30px", bottom: "450px" }}>
+              <Image src="/media/animation/flower-bottom.jpg" alt="Laily Dinie" width={120} height={900} style={{ height: "100%", width: "auto" }} />
             </Box>
-            <Box sx={{ position: "absolute", right: "-20px", top: "240px" }}>
-              <Image src="/media/animation/loveme.png" alt="Laily Dinie" width={120} height={900} style={{ height: "100%", width: "auto", transform: "scaleX(-1)" }} />
+            <Box sx={{ position: "absolute", right: "-30px", bottom: "300px" }}>
+              <Image src="/media/animation/flower-bottom.jpg" alt="Laily Dinie" width={120} height={900} style={{ height: "100%", width: "auto" }} />
             </Box>
-            <Box sx={{ position: "absolute", right: "-20px", top: "540px" }}>
-              <Image src="/media/animation/loveme.png" alt="Laily Dinie" width={120} height={900} style={{ height: "100%", width: "auto", transform: "scaleX(-1)" }} />
+            <Box sx={{ position: "absolute", right: "-30px", bottom: "150px" }}>
+              <Image src="/media/animation/flower-bottom.jpg" alt="Laily Dinie" width={120} height={900} style={{ height: "100%", width: "auto" }} />
+            </Box>
+            <Box sx={{ position: "absolute", right: "-30px", bottom: "-40px" }}>
+              <Image src="/media/animation/flower-bottom.jpg" alt="Laily Dinie" width={120} height={900} style={{ height: "100%", width: "auto" }} />
             </Box>
           </Box>
           <Box
@@ -91,7 +94,7 @@ const Door: React.FC<DoorProps> = ({
               background: "#fff",
               borderRadius: specialBg ? "0" : "80%",
               boxShadow: specialBg ? "0" : `-8px 8px 8px #D0D0D0`,
-              px: removePadding ? 0 : 3,
+              px: removePadding ? 0 : 6,
               pt: removePadding ? 0 : 4,
               pb: specialBg ? 6 : removePadding ? 0 : 4,
               position: "absolute",

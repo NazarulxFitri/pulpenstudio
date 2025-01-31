@@ -215,7 +215,7 @@ const Layout886: React.FC = () => {
       </Door>
       <Box sx={{ visibility: "hidden", position: "absolute" }}>
         <ReactPlayer
-          url={"https://www.youtube.com/watch?v=Qe2G6Vs1V_Q&t=20s"}
+          // url={"https://www.youtube.com/watch?v=Qe2G6Vs1V_Q&t=20s"}
           playing={musicStart}
           loop={true}
           width="1%"
@@ -234,11 +234,14 @@ const Layout886: React.FC = () => {
           <Image src="/media/animation/ribbon.png" alt="Laily Dinie" width={50} height={80} style={{ height: "100%", width: "auto" }} />
         </Box>
 
-        <Box sx={{ position: "absolute", left: "-30px" }}>
-          <Image src="/media/animation/loveme.png" alt="Laily Dinie" width={120} height={900} style={{ height: "100%", width: "auto" }} />
+        <Box sx={{ position: "absolute", left: "-30px", bottom: "500px" }}>
+          <Image src="/media/animation/flower-bottom.jpg" alt="Laily Dinie" width={120} height={900} style={{ height: "100%", width: "auto", transform: "scaleX(-1)" }} />
         </Box>
-        <Box sx={{ position: "absolute", left: "-30px", top: "240px" }}>
-          <Image src="/media/animation/loveme.png" alt="Laily Dinie" width={120} height={900} style={{ height: "100%", width: "auto", transform: "scaleX(-1)" }} />
+        <Box sx={{ position: "absolute", left: "-30px", bottom: "300px" }}>
+          <Image src="/media/animation/flower-bottom.jpg" alt="Laily Dinie" width={120} height={900} style={{ height: "100%", width: "auto", transform: "scaleX(-1)" }} />
+        </Box>
+        <Box sx={{ position: "absolute", left: "-30px", bottom: "100px" }}>
+          <Image src="/media/animation/flower-bottom.jpg" alt="Laily Dinie" width={120} height={900} style={{ height: "100%", width: "auto", transform: "scaleX(-1)" }} />
         </Box>
 
         <Box sx={{ position: "absolute", bottom: "-68px", left: "0", transform: "rotate(285deg)" }}>
@@ -248,11 +251,14 @@ const Layout886: React.FC = () => {
           <Image src="/media/animation/flower-bottom.jpg" alt="Laily Dinie" width={160} height={900} style={{ height: "auto", transform: "scaleY(-1)" }} />
         </Box>
 
-        <Box sx={{ position: "absolute", right: "-30px" }}>
-          <Image src="/media/animation/loveme.png" alt="Laily Dinie" width={120} height={900} style={{ height: "100%", width: "auto" }} />
+        <Box sx={{ position: "absolute", right: "-30px", bottom: "500px" }}>
+          <Image src="/media/animation/flower-bottom.jpg" alt="Laily Dinie" width={120} height={900} style={{ height: "100%", width: "auto" }} />
         </Box>
-        <Box sx={{ position: "absolute", right: "-30px", top: "240px" }}>
-          <Image src="/media/animation/loveme.png" alt="Laily Dinie" width={120} height={900} style={{ height: "100%", width: "auto", transform: "scaleX(-1)" }} />
+        <Box sx={{ position: "absolute", right: "-30px", bottom: "300px" }}>
+          <Image src="/media/animation/flower-bottom.jpg" alt="Laily Dinie" width={120} height={900} style={{ height: "100%", width: "auto" }} />
+        </Box>
+        <Box sx={{ position: "absolute", right: "-30px", bottom: "100px" }}>
+          <Image src="/media/animation/flower-bottom.jpg" alt="Laily Dinie" width={120} height={900} style={{ height: "100%", width: "auto" }} />
         </Box>
 
         <Box sx={{ position: "absolute", top: "40%", left: "50%", transform: "translate(-50%, -50%)", opacity: "0.1", width: "280px" }}>
