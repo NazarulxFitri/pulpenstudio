@@ -74,16 +74,16 @@ const Door: React.FC<DoorProps> = ({
               height: "100vh",
               zIndex: "2",
             }}
-          ><Box sx={{ position: "absolute", right: "-1px", bottom: "450px" }}>
+          ><Box sx={{ position: "absolute", right: "0", bottom: "450px", marginRight: "-10px" }}>
               <Image src="/media/animation/flower-bottom.jpg" alt="Laily Dinie" width={120} height={900} style={{ height: "100%", width: "auto" }} />
             </Box>
-            <Box sx={{ position: "absolute", right: "-5px", bottom: "300px" }}>
+            <Box sx={{ position: "absolute", right: "0", bottom: "300px", marginRight: "-10px" }}>
               <Image src="/media/animation/flower-bottom.jpg" alt="Laily Dinie" width={120} height={900} style={{ height: "100%", width: "auto" }} />
             </Box>
-            <Box sx={{ position: "absolute", right: "0", bottom: "150px" }}>
+            <Box sx={{ position: "absolute", right: "0", bottom: "150px", marginRight: "-10px" }}>
               <Image src="/media/animation/flower-bottom.jpg" alt="Laily Dinie" width={120} height={900} style={{ height: "100%", width: "auto" }} />
             </Box>
-            <Box sx={{ position: "absolute", right: "0", bottom: "-40px" }}>
+            <Box sx={{ position: "absolute", right: "0", bottom: "-40px", marginRight: "-10px" }}>
               <Image src="/media/animation/flower-bottom.jpg" alt="Laily Dinie" width={120} height={900} style={{ height: "100%", width: "auto" }} />
             </Box>
           </Box>

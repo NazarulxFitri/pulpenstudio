@@ -234,13 +234,13 @@ const Layout886: React.FC = () => {
           <Image src="/media/animation/ribbon.png" alt="Laily Dinie" width={50} height={80} style={{ height: "100%", width: "auto" }} />
         </Box>
 
-        <Box sx={{ position: "absolute", left: "-10px", bottom: "500px" }}>
+        <Box sx={{ position: "absolute", left: "0", bottom: "500px", marginLeft: "-10px" }}>
           <Image src="/media/animation/flower-bottom.jpg" alt="Laily Dinie" width={120} height={900} style={{ height: "100%", width: "auto", transform: "scaleX(-1)" }} />
         </Box>
-        <Box sx={{ position: "absolute", left: "-10px", bottom: "300px" }}>
+        <Box sx={{ position: "absolute", left: "0", bottom: "300px", marginLeft: "-10px" }}>
           <Image src="/media/animation/flower-bottom.jpg" alt="Laily Dinie" width={120} height={900} style={{ height: "100%", width: "auto", transform: "scaleX(-1)" }} />
         </Box>
-        <Box sx={{ position: "absolute", left: "-10px", bottom: "100px" }}>
+        <Box sx={{ position: "absolute", left: "0", bottom: "100px", marginLeft: "-10px" }}>
           <Image src="/media/animation/flower-bottom.jpg" alt="Laily Dinie" width={120} height={900} style={{ height: "100%", width: "auto", transform: "scaleX(-1)" }} />
         </Box>
 
@@ -251,13 +251,13 @@ const Layout886: React.FC = () => {
           <Image src="/media/animation/flower-bottom.jpg" alt="Laily Dinie" width={160} height={900} style={{ height: "auto", transform: "scaleY(-1)" }} />
         </Box>
 
-        <Box sx={{ position: "absolute", right: "-1px", bottom: "500px" }}>
+        <Box sx={{ position: "absolute", right: "0", bottom: "500px", marginRight: "-10px" }}>
           <Image src="/media/animation/flower-bottom.jpg" alt="Laily Dinie" width={120} height={900} style={{ height: "100%", width: "auto" }} />
         </Box>
-        <Box sx={{ position: "absolute", right: "-5px", bottom: "300px" }}>
+        <Box sx={{ position: "absolute", right: "0", bottom: "300px", marginRight: "-10px" }}>
           <Image src="/media/animation/flower-bottom.jpg" alt="Laily Dinie" width={120} height={900} style={{ height: "100%", width: "auto" }} />
         </Box>
-        <Box sx={{ position: "absolute", right: "0px", bottom: "100px" }}>
+        <Box sx={{ position: "absolute", right: "0", bottom: "100px", marginRight: "-10px" }}>
           <Image src="/media/animation/flower-bottom.jpg" alt="Laily Dinie" width={120} height={900} style={{ height: "100%", width: "auto" }} />
         </Box>
 
