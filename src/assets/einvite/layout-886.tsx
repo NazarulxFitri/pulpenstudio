@@ -234,10 +234,10 @@ const Layout886: React.FC = () => {
           <Image src="/media/animation/ribbon.png" alt="Laily Dinie" width={50} height={80} style={{ height: "100%", width: "auto" }} />
         </Box>
 
-        <Box sx={{ position: "absolute", left: "-10px" }}>
+        <Box sx={{ position: "absolute", left: "-30px" }}>
           <Image src="/media/animation/loveme.png" alt="Laily Dinie" width={120} height={900} style={{ height: "100%", width: "auto" }} />
         </Box>
-        <Box sx={{ position: "absolute", left: "-10px", top: "240px" }}>
+        <Box sx={{ position: "absolute", left: "-30px", top: "240px" }}>
           <Image src="/media/animation/loveme.png" alt="Laily Dinie" width={120} height={900} style={{ height: "100%", width: "auto", transform: "scaleX(-1)" }} />
         </Box>
 
@@ -248,10 +248,10 @@ const Layout886: React.FC = () => {
           <Image src="/media/animation/flower-bottom.jpg" alt="Laily Dinie" width={160} height={900} style={{ height: "auto", transform: "scaleY(-1)" }} />
         </Box>
 
-        <Box sx={{ position: "absolute", right: "-10px" }}>
+        <Box sx={{ position: "absolute", right: "-30px" }}>
           <Image src="/media/animation/loveme.png" alt="Laily Dinie" width={120} height={900} style={{ height: "100%", width: "auto" }} />
         </Box>
-        <Box sx={{ position: "absolute", right: "-10px", top: "240px" }}>
+        <Box sx={{ position: "absolute", right: "-30px", top: "240px" }}>
           <Image src="/media/animation/loveme.png" alt="Laily Dinie" width={120} height={900} style={{ height: "100%", width: "auto", transform: "scaleX(-1)" }} />
         </Box>
 
