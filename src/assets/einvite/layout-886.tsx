@@ -251,13 +251,13 @@ const Layout886: React.FC = () => {
           <Image src="/media/animation/flower-bottom.jpg" alt="Laily Dinie" width={160} height={900} style={{ height: "auto", transform: "scaleY(-1)" }} />
         </Box>
 
-        <Box sx={{ position: "absolute", right: "-10px", bottom: "500px" }}>
+        <Box sx={{ position: "absolute", right: "-1px", bottom: "500px" }}>
           <Image src="/media/animation/flower-bottom.jpg" alt="Laily Dinie" width={120} height={900} style={{ height: "100%", width: "auto" }} />
         </Box>
-        <Box sx={{ position: "absolute", right: "-10px", bottom: "300px" }}>
+        <Box sx={{ position: "absolute", right: "-5px", bottom: "300px" }}>
           <Image src="/media/animation/flower-bottom.jpg" alt="Laily Dinie" width={120} height={900} style={{ height: "100%", width: "auto" }} />
         </Box>
-        <Box sx={{ position: "absolute", right: "-10px", bottom: "100px" }}>
+        <Box sx={{ position: "absolute", right: "0px", bottom: "100px" }}>
           <Image src="/media/animation/flower-bottom.jpg" alt="Laily Dinie" width={120} height={900} style={{ height: "100%", width: "auto" }} />
         </Box>
 
