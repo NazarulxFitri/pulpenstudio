@@ -215,7 +215,7 @@ const Layout886: React.FC = () => {
       </Door>
       <Box sx={{ visibility: "hidden", position: "absolute" }}>
         <ReactPlayer
-          // url={"https://www.youtube.com/watch?v=Qe2G6Vs1V_Q&t=20s"}
+          url={"https://www.youtube.com/watch?v=Qe2G6Vs1V_Q&t=20s"}
           playing={musicStart}
           loop={true}
           width="1%"
@@ -367,11 +367,11 @@ const Layout886: React.FC = () => {
           }}
         >
           <Box sx={{ position: "absolute", left: "0" }}>
-            <Image src="/media/animation/flower-bottom.png" alt="Laily Dinie" width={120} height={900} style={{ height: "100%", width: "auto" }} />
+            <Image src="/media/animation/flower-bottom.jpg" alt="Laily Dinie" width={120} height={900} style={{ height: "100%", width: "auto" }} />
           </Box>
 
           <Box sx={{ position: "absolute", left: "0", bottom: "300px" }}>
-            <Image src="/media/animation/flower-bottom.png" alt="Laily Dinie" width={120} height={900} style={{ height: "100%", width: "auto", transform: "scaleX(-1)" }} />
+            <Image src="/media/animation/flower-bottom.jpg" alt="Laily Dinie" width={120} height={900} style={{ height: "100%", width: "auto", transform: "scaleX(-1)" }} />
           </Box>
 
           <Box sx={{ zIndex: "2" }}>
@@ -427,11 +427,11 @@ const Layout886: React.FC = () => {
         >
 
           <Box sx={{ position: "absolute", bottom: "0", right: "0px" }}>
-            <Image src="/media/animation/flower-bottom.png" alt="Laily Dinie" width={120} height={900} style={{ height: "100%", width: "auto" }} />
+            <Image src="/media/animation/flower-bottom.jpg" alt="Laily Dinie" width={120} height={900} style={{ height: "100%", width: "auto" }} />
           </Box>
 
           <Box sx={{ position: "absolute", right: "0px", bottom: "20px" }}>
-            <Image src="/media/animation/flower-bottom.png" alt="Laily Dinie" width={120} height={900} style={{ height: "100%", width: "auto", transform: "scaleX(-1)" }} />
+            <Image src="/media/animation/flower-bottom.jpg" alt="Laily Dinie" width={120} height={900} style={{ height: "100%", width: "auto", transform: "scaleX(-1)" }} />
           </Box>
 
           <Box sx={{ display: "inline-flex" }}>
@@ -480,11 +480,11 @@ const Layout886: React.FC = () => {
           }}
         >
           <Box sx={{ position: "absolute", bottom: "0", left: "0" }}>
-            <Image src="/media/animation/flower-bottom.png" alt="Laily Dinie" width={120} height={900} style={{ height: "100%", width: "auto" }} />
+            <Image src="/media/animation/flower-bottom.jpg" alt="Laily Dinie" width={120} height={900} style={{ height: "100%", width: "auto" }} />
           </Box>
 
           <Box sx={{ position: "absolute", left: "0", bottom: "20px" }}>
-            <Image src="/media/animation/flower-bottom.png" alt="Laily Dinie" width={120} height={900} style={{ height: "100%", width: "auto", transform: "scaleX(-1)" }} />
+            <Image src="/media/animation/flower-bottom.jpg" alt="Laily Dinie" width={120} height={900} style={{ height: "100%", width: "auto", transform: "scaleX(-1)" }} />
           </Box>
           <SubTitle
             dangerouslySetInnerHTML={{
