@@ -74,14 +74,14 @@ const Door: React.FC<DoorProps> = ({
               height: "100vh",
               zIndex: "2",
             }}
-          ><Box sx={{ position: "absolute", right: "-60px" }}>
-              <Image src="/media/animation/flower-top.png" alt="Laily Dinie" width={120} height={900} style={{ height: "100%", width: "auto" }} />
+          ><Box sx={{ position: "absolute", right: "-20px" }}>
+              <Image src="/media/animation/loveme.png" alt="Laily Dinie" width={120} height={900} style={{ height: "100%", width: "auto" }} />
             </Box>
-            <Box sx={{ position: "absolute", right: "-60px", top: "240px" }}>
-              <Image src="/media/animation/flower-top.png" alt="Laily Dinie" width={120} height={900} style={{ height: "100%", width: "auto", transform: "scaleX(-1)" }} />
+            <Box sx={{ position: "absolute", right: "-20px", top: "240px" }}>
+              <Image src="/media/animation/loveme.png" alt="Laily Dinie" width={120} height={900} style={{ height: "100%", width: "auto", transform: "scaleX(-1)" }} />
             </Box>
-            <Box sx={{ position: "absolute", right: "-60px", top: "540px" }}>
-              <Image src="/media/animation/flower-top.png" alt="Laily Dinie" width={120} height={900} style={{ height: "100%", width: "auto", transform: "scaleX(-1)" }} />
+            <Box sx={{ position: "absolute", right: "-20px", top: "540px" }}>
+              <Image src="/media/animation/loveme.png" alt="Laily Dinie" width={120} height={900} style={{ height: "100%", width: "auto", transform: "scaleX(-1)" }} />
             </Box>
           </Box>
           <Box
