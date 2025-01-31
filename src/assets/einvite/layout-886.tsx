@@ -200,7 +200,7 @@ const Layout886: React.FC = () => {
         <Title
           sx={{ fontSize: "24px", textShadow: "1px 1px 10px skyblue" }}
           dangerouslySetInnerHTML={{
-            __html: `<span style="color: #ee7f97">D</span>innie`,
+            __html: `<span style="color: #ee7f97">D</span>inie`,
           }}
         />
         <SubTitle
@@ -235,10 +235,10 @@ const Layout886: React.FC = () => {
         </Box>
 
         <Box sx={{ position: "absolute", left: "-60px" }}>
-          <Image src="/media/animation/flower-top.png" alt="Laily Dinie" width={120} height={900} style={{ height: "100%", width: "auto" }} />
+          <Image src="/media/animation/loveme.png" alt="Laily Dinie" width={120} height={900} style={{ height: "100%", width: "auto" }} />
         </Box>
         <Box sx={{ position: "absolute", left: "-60px", top: "240px" }}>
-          <Image src="/media/animation/flower-top.png" alt="Laily Dinie" width={120} height={900} style={{ height: "100%", width: "auto", transform: "scaleX(-1)" }} />
+          <Image src="/media/animation/loveme.png" alt="Laily Dinie" width={120} height={900} style={{ height: "100%", width: "auto", transform: "scaleX(-1)" }} />
         </Box>
 
         <Box sx={{ position: "absolute", bottom: "-68px", left: "0", transform: "rotate(285deg)" }}>
@@ -249,10 +249,10 @@ const Layout886: React.FC = () => {
         </Box>
 
         <Box sx={{ position: "absolute", right: "-60px" }}>
-          <Image src="/media/animation/flower-top.png" alt="Laily Dinie" width={120} height={900} style={{ height: "100%", width: "auto" }} />
+          <Image src="/media/animation/loveme.png" alt="Laily Dinie" width={120} height={900} style={{ height: "100%", width: "auto" }} />
         </Box>
         <Box sx={{ position: "absolute", right: "-60px", top: "240px" }}>
-          <Image src="/media/animation/flower-top.png" alt="Laily Dinie" width={120} height={900} style={{ height: "100%", width: "auto", transform: "scaleX(-1)" }} />
+          <Image src="/media/animation/loveme.png" alt="Laily Dinie" width={120} height={900} style={{ height: "100%", width: "auto", transform: "scaleX(-1)" }} />
         </Box>
 
         <Box sx={{ position: "absolute", top: "40%", left: "50%", transform: "translate(-50%, -50%)", opacity: "0.1", width: "280px" }}>
