@@ -361,7 +361,7 @@ const Layout887: React.FC = () => {
           id="delay-12s"
           sx={{ fontSize: "32px", color: "#ac6e29" }}
           dangerouslySetInnerHTML={{
-            __html: "Muhammad Dzulihar Bin Muhammad Rashid",
+            __html: "Muhammad Dzulizhar Bin Muhammad Rashid",
           }}
         />
 
