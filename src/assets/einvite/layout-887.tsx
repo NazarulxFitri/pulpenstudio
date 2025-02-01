@@ -260,7 +260,7 @@ const Layout887: React.FC = () => {
             fontWeight: "700",
           }}
           dangerouslySetInnerHTML={{
-            __html: "Nazihah Binti Mohd Ali",
+            __html: "Nazihah bt Mohd Ali & Keluarga",
           }}
         />
 
@@ -279,7 +279,7 @@ const Layout887: React.FC = () => {
           id="delay-8s"
           sx={{ fontSize: "28px", mb: 4, color: "#ac6e29" }}
           dangerouslySetInnerHTML={{
-            __html: "Fadzel Bin Sulaiman",
+            __html: "Fadzel bin Sulaiman & Jumila Norsaziha bt Che Husin",
           }}
         />
 
