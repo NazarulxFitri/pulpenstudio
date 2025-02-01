@@ -366,11 +366,11 @@ const Layout886: React.FC = () => {
             position: "relative",
           }}
         >
-          <Box sx={{ position: "absolute", left: "0" }}>
+          <Box sx={{ position: "absolute", left: "0", opacity: "0.4" }}>
             <Image src="/media/animation/flower-bottom.jpg" alt="Laily Dinie" width={120} height={900} style={{ height: "100%", width: "auto" }} />
           </Box>
 
-          <Box sx={{ position: "absolute", left: "0", bottom: "300px" }}>
+          <Box sx={{ position: "absolute", left: "0", bottom: "300px", opacity: "0.4" }}>
             <Image src="/media/animation/flower-bottom.jpg" alt="Laily Dinie" width={120} height={900} style={{ height: "100%", width: "auto", transform: "scaleX(-1)" }} />
           </Box>
 
@@ -394,7 +394,7 @@ const Layout886: React.FC = () => {
               sx={{ fontWeight: "700", mb: 3 }}
               dangerouslySetInnerHTML={{
                 __html:
-                  "Nama ayah<br>&<br>Nama ibu",
+                  "Asmuri bin Amir <br />&<br /> Rebiatun binti Hj Idris",
               }}
             />
             <SubTitle
@@ -410,7 +410,7 @@ const Layout886: React.FC = () => {
                 mb: 3,
               }}
               dangerouslySetInnerHTML={{
-                __html: `Laily <br>&<br>Dinie `,
+                __html: `Norshafiza Laily binti Asmuri <br>&<br>Muhammad Dinie Afiq bin Basari `,
               }}
             />
           </Box>
@@ -426,11 +426,11 @@ const Layout886: React.FC = () => {
           }}
         >
 
-          <Box sx={{ position: "absolute", bottom: "0", right: "0px" }}>
+          <Box sx={{ position: "absolute", bottom: "0", right: "0px", opacity: "0.4" }}>
             <Image src="/media/animation/flower-bottom.jpg" alt="Laily Dinie" width={120} height={900} style={{ height: "100%", width: "auto" }} />
           </Box>
 
-          <Box sx={{ position: "absolute", right: "0px", bottom: "20px" }}>
+          <Box sx={{ position: "absolute", right: "0px", bottom: "20px", opacity: "0.4" }}>
             <Image src="/media/animation/flower-bottom.jpg" alt="Laily Dinie" width={120} height={900} style={{ height: "100%", width: "auto", transform: "scaleX(-1)" }} />
           </Box>
 
@@ -446,13 +446,13 @@ const Layout886: React.FC = () => {
             <SubTitle
               sx={{ fontSize: "12px", my: 0.5, display: "block", mr: 2 }}
               dangerouslySetInnerHTML={{
-                __html: "<b>1130 - 1600</b>",
+                __html: "<b>11.30am</b>",
               }}
             />
             <SubTitle
               sx={{ fontSize: "12px", my: 0.5, textAlign: "left" }}
               dangerouslySetInnerHTML={{
-                __html: "Jamuan Makan",
+                __html: "Ketibaan tetamu",
               }}
             />
           </Box>
@@ -460,13 +460,69 @@ const Layout886: React.FC = () => {
             <SubTitle
               sx={{ fontSize: "12px", my: 0.5, display: "block", mr: 2 }}
               dangerouslySetInnerHTML={{
-                __html: "<b>1230</b>",
+                __html: "<b>12.30pm</b>",
               }}
             />
             <SubTitle
               sx={{ fontSize: "12px", my: 0.5, textAlign: "left" }}
               dangerouslySetInnerHTML={{
-                __html: "Ketibaan Pengantin",
+                __html: "Ketibaan Raja Sehari",
+              }}
+            />
+          </Box>
+          <Box sx={{ display: "inline-flex" }}>
+            <SubTitle
+              sx={{ fontSize: "12px", my: 0.5, display: "block", mr: 2 }}
+              dangerouslySetInnerHTML={{
+                __html: "<b>12.45pm</b>",
+              }}
+            />
+            <SubTitle
+              sx={{ fontSize: "12px", my: 0.5, textAlign: "left" }}
+              dangerouslySetInnerHTML={{
+                __html: "Majlis Persandingan",
+              }}
+            />
+          </Box>
+          <Box sx={{ display: "inline-flex" }}>
+            <SubTitle
+              sx={{ fontSize: "12px", my: 0.5, display: "block", mr: 2 }}
+              dangerouslySetInnerHTML={{
+                __html: "<b>1.30pm</b>",
+              }}
+            />
+            <SubTitle
+              sx={{ fontSize: "12px", my: 0.5, textAlign: "left" }}
+              dangerouslySetInnerHTML={{
+                __html: "Makan Beradab",
+              }}
+            />
+          </Box>
+          <Box sx={{ display: "inline-flex" }}>
+            <SubTitle
+              sx={{ fontSize: "12px", my: 0.5, display: "block", mr: 2 }}
+              dangerouslySetInnerHTML={{
+                __html: "<b>2.00pm</b>",
+              }}
+            />
+            <SubTitle
+              sx={{ fontSize: "12px", my: 0.5, textAlign: "left" }}
+              dangerouslySetInnerHTML={{
+                __html: "Sesi bergambar",
+              }}
+            />
+          </Box>
+          <Box sx={{ display: "inline-flex" }}>
+            <SubTitle
+              sx={{ fontSize: "12px", my: 0.5, display: "block", mr: 2 }}
+              dangerouslySetInnerHTML={{
+                __html: "<b>4.00pm</b>",
+              }}
+            />
+            <SubTitle
+              sx={{ fontSize: "12px", my: 0.5, textAlign: "left" }}
+              dangerouslySetInnerHTML={{
+                __html: "Majlis berakhir",
               }}
             />
           </Box>
@@ -479,11 +535,11 @@ const Layout886: React.FC = () => {
             position: "relative",
           }}
         >
-          <Box sx={{ position: "absolute", bottom: "0", left: "0" }}>
+          <Box sx={{ position: "absolute", bottom: "0", left: "0", opacity: "0.4" }}>
             <Image src="/media/animation/flower-bottom.jpg" alt="Laily Dinie" width={120} height={900} style={{ height: "100%", width: "auto" }} />
           </Box>
 
-          <Box sx={{ position: "absolute", left: "0", bottom: "20px" }}>
+          <Box sx={{ position: "absolute", left: "0", bottom: "20px", opacity: "0.4" }}>
             <Image src="/media/animation/flower-bottom.jpg" alt="Laily Dinie" width={120} height={900} style={{ height: "100%", width: "auto", transform: "scaleX(-1)" }} />
           </Box>
           <SubTitle
@@ -615,10 +671,12 @@ const Layout886: React.FC = () => {
           color="#f6e8ed"
           location={{ text: item?.location!, mapUrl: item?.mapUrl! }}
           contact={{
-            number1: item?.phonePerson1!,
-            number2: item?.phonePerson2!,
-            name1: item?.namePerson1!,
-            name2: item?.namePerson2!,
+            number1: "0196101053",
+            number2: "0193758638",
+            number3: "0192860679",
+            name1: "Asmuri",
+            name2: "Rebiatun",
+            name3: "Shawall",
           }}
         />
       </Box>
