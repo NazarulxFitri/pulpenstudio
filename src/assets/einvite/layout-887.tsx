@@ -551,7 +551,7 @@ const Layout887: React.FC = () => {
                 mr: 2,
               }}
               dangerouslySetInnerHTML={{
-                __html: "<b>16:00</b>",
+                __html: "<b>4:00</b>",
               }}
             />
             <Text
