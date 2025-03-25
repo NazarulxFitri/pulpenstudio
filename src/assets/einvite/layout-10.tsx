@@ -193,13 +193,17 @@ const Layout10: React.FC = () => {
         />
       </Box>
       <Box sx={{ height: "100vh", position: "relative" }}>
-        <Box sx={{ position: "absolute", top: "-85px", left: "-75px", transform: "scaleY(-1)", zIndex: 1 }}>
+
+        <Box sx={{ position: "absolute", top: { xs: "-65px", md: "-75px" }, left: "-75px", transform: "scaleY(-1)", zIndex: 1 }}>
+          <Image src="/media/syafiq/syafiq_flower.webp" alt="Syafiq Nabilah | Pulpen Studio" width={260} height={200} />
+        </Box>
+        <Box sx={{ position: "absolute", top: { xs: "-65px", md: "-75px" }, left: "65px", transform: "scaleY(-1)", zIndex: 1 }}>
           <Image src="/media/syafiq/syafiq_flower.webp" alt="Syafiq Nabilah | Pulpen Studio" width={260} height={200} />
         </Box>
         <Box
           sx={{
             position: "absolute",
-            top: "-85px",
+            top: { xs: "-65px", md: "-75px" },
             right: "-75px",
             transform: "scaleX(-1) scaleY(-1)",
             zIndex: 1
@@ -212,13 +216,13 @@ const Layout10: React.FC = () => {
             height={200}
           />
         </Box>
-        <Box sx={{ position: "absolute", bottom: "-65px", right: "-75px", transform: "scaleX(-1)", zIndex: 1 }}>
+        <Box sx={{ position: "absolute", bottom: { xs: "65px", md: "-65px" }, right: "-75px", transform: "scaleX(-1)", zIndex: 1 }}>
           <Image src="/media/syafiq/syafiq_flower.webp" alt="Syafiq Nabilah | Pulpen Studio" width={260} height={200} />
         </Box>
-        <Box sx={{ position: "absolute", bottom: "-65px", left: "-75px", transform: "scaleX(-1)", zIndex: 1 }}>
+        <Box sx={{ position: "absolute", bottom: { xs: "65px", md: "-65px" }, left: "-75px", transform: "scaleX(-1)", zIndex: 1 }}>
           <Image src="/media/syafiq/syafiq_flower.webp" alt="Syafiq Nabilah | Pulpen Studio" width={260} height={200} />
         </Box>
-        <Box sx={{ position: "absolute", bottom: "-65px", left: "60px", transform: "scaleX(-50px)", zIndex: 1 }}>
+        <Box sx={{ position: "absolute", bottom: { xs: "65px", md: "-65px" }, left: "60px", transform: "scaleX(-50px)", zIndex: 1 }}>
           <Image src="/media/syafiq/syafiq_flower.webp" alt="Syafiq Nabilah | Pulpen Studio" width={260} height={200} />
         </Box>
         <Box sx={{
@@ -245,7 +249,7 @@ const Layout10: React.FC = () => {
 
         <Box sx={{
           position: "absolute",
-          top: "50%",
+          top: { xs: "45%", md: "50%" },
           left: "50%",
           transform: "translate(-50%,-50%)",
         }}>
@@ -271,36 +275,36 @@ const Layout10: React.FC = () => {
 
       </Box>
       <Container sx={{ position: "relative" }}>
-        <Box sx={{ position: "absolute", top: "0", right: "-200px", transform: "scaleX(-1)", zIndex: 1 }}>
+        <Box sx={{ position: "absolute", top: "0", right: "-200px", transform: "scaleX(-1)", zIndex: 0 }}>
           <Image src="/media/syafiq/syafiq_flower.webp" alt="Syafiq Nabilah | Pulpen Studio" width={260} height={200} />
         </Box>
-        <Box sx={{ position: "absolute", top: "290px", right: "-200px", transform: "scaleY(-1)", zIndex: 1 }}>
-          <Image src="/media/syafiq/syafiq_flower.webp" alt="Syafiq Nabilah | Pulpen Studio" width={260} height={200} />
-        </Box>
-
-        <Box sx={{ position: "absolute", top: "60px", left: "-200px", transform: "scaleX(-1)", zIndex: 1 }}>
-          <Image src="/media/syafiq/syafiq_flower.webp" alt="Syafiq Nabilah | Pulpen Studio" width={260} height={200} />
-        </Box>
-        <Box sx={{ position: "absolute", top: "320px", left: "-200px", transform: "scaleY(-1)", zIndex: 1 }}>
+        <Box sx={{ position: "absolute", top: "290px", right: "-200px", transform: "scaleY(-1)", zIndex: 0 }}>
           <Image src="/media/syafiq/syafiq_flower.webp" alt="Syafiq Nabilah | Pulpen Studio" width={260} height={200} />
         </Box>
 
-        <Box sx={{ position: "absolute", top: "270px", left: "-200px", transform: "scaleX(-1)", zIndex: 1 }}>
+        <Box sx={{ position: "absolute", top: "60px", left: "-200px", transform: "scaleX(-1)", zIndex: 0 }}>
           <Image src="/media/syafiq/syafiq_flower.webp" alt="Syafiq Nabilah | Pulpen Studio" width={260} height={200} />
         </Box>
-        <Box sx={{ position: "absolute", top: "440px", left: "-200px", transform: "scaleX(-1)", zIndex: 1 }}>
-          <Image src="/media/syafiq/syafiq_flower.webp" alt="Syafiq Nabilah | Pulpen Studio" width={260} height={200} />
-        </Box>
-
-        <Box sx={{ position: "absolute", top: "730px", right: "-200px", transform: "scaleY(-1)", zIndex: 1 }}>
-          <Image src="/media/syafiq/syafiq_flower.webp" alt="Syafiq Nabilah | Pulpen Studio" width={260} height={200} />
-        </Box>
-        <Box sx={{ position: "absolute", top: "620px", right: "-200px", transform: "scaleX(-1)", zIndex: 1 }}>
+        <Box sx={{ position: "absolute", top: "320px", left: "-200px", transform: "scaleY(-1)", zIndex: 0 }}>
           <Image src="/media/syafiq/syafiq_flower.webp" alt="Syafiq Nabilah | Pulpen Studio" width={260} height={200} />
         </Box>
 
+        <Box sx={{ position: "absolute", top: "270px", left: "-200px", transform: "scaleX(-1)", zIndex: 0 }}>
+          <Image src="/media/syafiq/syafiq_flower.webp" alt="Syafiq Nabilah | Pulpen Studio" width={260} height={200} />
+        </Box>
+        <Box sx={{ position: "absolute", top: "440px", left: "-200px", transform: "scaleX(-1)", zIndex: 0 }}>
+          <Image src="/media/syafiq/syafiq_flower.webp" alt="Syafiq Nabilah | Pulpen Studio" width={260} height={200} />
+        </Box>
 
-        <Box sx={{ background: "#ffe6dc", position: "relative", pt: "24px" }}>
+        <Box sx={{ position: "absolute", top: "730px", right: "-200px", transform: "scaleY(-1)", zIndex: 0 }}>
+          <Image src="/media/syafiq/syafiq_flower.webp" alt="Syafiq Nabilah | Pulpen Studio" width={260} height={200} />
+        </Box>
+        <Box sx={{ position: "absolute", top: "620px", right: "-200px", transform: "scaleX(-1)", zIndex: 0 }}>
+          <Image src="/media/syafiq/syafiq_flower.webp" alt="Syafiq Nabilah | Pulpen Studio" width={260} height={200} />
+        </Box>
+
+
+        <Box sx={{ background: "#ffe6dc", position: "relative", pt: "24px", mt: { xs: "-110px", md: "0" } }}>
           <Box
             mt={1}
             mb={5}
@@ -473,7 +477,7 @@ const Layout10: React.FC = () => {
               <Grid item xs={12}>
                 <Paper
                   sx={{
-                    background: "transparent",
+                    background: "#FFF",
                     boxShadow: "unset",
                     maxHeight: "400px",
                     overflow: "scroll",
@@ -499,14 +503,16 @@ const Layout10: React.FC = () => {
       <Box>
         <Widget
           language={item?.language!}
-          iconColor="#FFFAEB"
-          color="rgba(149,8,43, 0.8)"
+          iconColor="rgba(149,8,43)"
+          color="#fffaeb"
           location={{ text: item?.location!, mapUrl: item?.mapUrl! }}
           contact={{
             number1: item?.phonePerson1!,
             number2: item?.phonePerson2!,
+            number3: "01110008890",
             name1: item?.namePerson1!,
             name2: item?.namePerson2!,
+            name3: "Adik"
           }}
         />
       </Box>

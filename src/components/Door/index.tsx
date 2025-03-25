@@ -80,25 +80,8 @@ const Door: React.FC<DoorProps> = ({
             <Box sx={{ position: "absolute", top: "-65px", right: "-80px", transform: "scaleY(-1)", zIndex: 1 }}>
               <Image src="/media/syafiq/syafiq_flower.webp" alt="Syafiq Nabilah | Pulpen Studio" width={260} height={200} />
             </Box>
-            <Box sx={{ position: "absolute", top: "-10px", right: "-80px", transform: "scaleX(-1)", zIndex: 1 }}>
-              <Image src="/media/syafiq/syafiq_flower.webp" alt="Syafiq Nabilah | Pulpen Studio" width={260} height={200} />
-            </Box>
-            <Box sx={{ position: "absolute", top: "105px", right: "-80px", transform: "scaleY(-1)", zIndex: 1 }}>
-              <Image src="/media/syafiq/syafiq_flower.webp" alt="Syafiq Nabilah | Pulpen Studio" width={260} height={200} />
-            </Box>
-            <Box sx={{ position: "absolute", top: "505px", right: "-80px", transform: "scaleY(-1)", zIndex: 1 }}>
-              <Image src="/media/syafiq/syafiq_flower.webp" alt="Syafiq Nabilah | Pulpen Studio" width={260} height={200} />
-            </Box>
-            <Box sx={{ position: "absolute", bottom: "100px", right: "-80px", transform: "scaleX(-1)", zIndex: 1 }}>
-              <Image src="/media/syafiq/syafiq_flower.webp" alt="Syafiq Nabilah | Pulpen Studio" width={260} height={200} />
-            </Box>
-            <Box sx={{ position: "absolute", bottom: "300px", right: "-80px", transform: "scaleX(-1)", zIndex: 1 }}>
-              <Image src="/media/syafiq/syafiq_flower.webp" alt="Syafiq Nabilah | Pulpen Studio" width={260} height={200} />
-            </Box>
-            <Box sx={{ position: "absolute", bottom: "20px", right: "-80px", transform: "scaleX(-1)", zIndex: 1 }}>
-              <Image src="/media/syafiq/syafiq_flower.webp" alt="Syafiq Nabilah | Pulpen Studio" width={260} height={200} />
-            </Box>
-            <Box sx={{ position: "absolute", bottom: "190px", right: "-80px", transform: "scaleX(-1)", zIndex: 1 }}>
+
+            <Box sx={{ position: "absolute", bottom: "-56px", right: "-80px", transform: "scaleX(-1)", zIndex: 1 }}>
               <Image src="/media/syafiq/syafiq_flower.webp" alt="Syafiq Nabilah | Pulpen Studio" width={260} height={200} />
             </Box>
 
