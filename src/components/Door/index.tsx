@@ -17,6 +17,7 @@ interface DoorProps {
   fakhruz?: boolean;
   shahida?: boolean;
   lailyDinie?: boolean;
+  syafiqKhairi?: boolean;
 }
 
 const Door: React.FC<DoorProps> = ({
@@ -34,8 +35,102 @@ const Door: React.FC<DoorProps> = ({
   yasminFaiz,
   fakhruz,
   shahida,
-  lailyDinie
+  lailyDinie,
+  syafiqKhairi
 }) => {
+  if (syafiqKhairi)
+    return (
+      <Box sx={{ position: "absolute", width: "100%", height: "100%" }}>
+        <Box
+          sx={{
+            display: "flex",
+            position: "relative",
+          }}
+        >
+          <Box
+            className={
+              clickOpen ? "animate__animated animate__slideOutLeft" : ""
+            }
+            id="left-door"
+            sx={{
+              background: specialBg ? "" : "#FFF",
+              backgroundImage: specialBg
+                ? "url('/media/animation/test12.PNG')"
+                : "",
+              backgroundSize: "contain",
+              backgroundRepeat: "round",
+              width: "50%",
+              height: "100vh",
+              zIndex: "2",
+            }}
+          />
+          <Box
+            className={
+              clickOpen ? "animate__animated animate__slideOutRight" : ""
+            }
+            id="right-door"
+            sx={{
+              background: "#fffaeb",
+              boxShadow: specialBg ? "unset" : "-10px 0px 20px #D0D0D0",
+              width: "50%",
+              height: "100vh",
+              zIndex: "2",
+            }}
+          >
+            <Box sx={{ position: "absolute", top: "-65px", right: "-80px", transform: "scaleY(-1)", zIndex: 1 }}>
+              <Image src="/media/syafiq/syafiq_flower.webp" alt="Syafiq Nabilah | Pulpen Studio" width={260} height={200} />
+            </Box>
+            <Box sx={{ position: "absolute", top: "-10px", right: "-80px", transform: "scaleX(-1)", zIndex: 1 }}>
+              <Image src="/media/syafiq/syafiq_flower.webp" alt="Syafiq Nabilah | Pulpen Studio" width={260} height={200} />
+            </Box>
+            <Box sx={{ position: "absolute", top: "105px", right: "-80px", transform: "scaleY(-1)", zIndex: 1 }}>
+              <Image src="/media/syafiq/syafiq_flower.webp" alt="Syafiq Nabilah | Pulpen Studio" width={260} height={200} />
+            </Box>
+            <Box sx={{ position: "absolute", top: "505px", right: "-80px", transform: "scaleY(-1)", zIndex: 1 }}>
+              <Image src="/media/syafiq/syafiq_flower.webp" alt="Syafiq Nabilah | Pulpen Studio" width={260} height={200} />
+            </Box>
+            <Box sx={{ position: "absolute", bottom: "100px", right: "-80px", transform: "scaleX(-1)", zIndex: 1 }}>
+              <Image src="/media/syafiq/syafiq_flower.webp" alt="Syafiq Nabilah | Pulpen Studio" width={260} height={200} />
+            </Box>
+            <Box sx={{ position: "absolute", bottom: "300px", right: "-80px", transform: "scaleX(-1)", zIndex: 1 }}>
+              <Image src="/media/syafiq/syafiq_flower.webp" alt="Syafiq Nabilah | Pulpen Studio" width={260} height={200} />
+            </Box>
+            <Box sx={{ position: "absolute", bottom: "20px", right: "-80px", transform: "scaleX(-1)", zIndex: 1 }}>
+              <Image src="/media/syafiq/syafiq_flower.webp" alt="Syafiq Nabilah | Pulpen Studio" width={260} height={200} />
+            </Box>
+            <Box sx={{ position: "absolute", bottom: "190px", right: "-80px", transform: "scaleX(-1)", zIndex: 1 }}>
+              <Image src="/media/syafiq/syafiq_flower.webp" alt="Syafiq Nabilah | Pulpen Studio" width={260} height={200} />
+            </Box>
+
+          </Box>
+          <Box
+            className={clickOpen ? "animate__animated animate__fadeOut" : ""}
+            onClick={() => setClickOpen(true)}
+            sx={{
+              background: "#fff",
+              borderRadius: specialBg ? "0" : "80%",
+              boxShadow: specialBg ? "0" : `-8px 8px 8px #ffe6dc`,
+              px: removePadding ? 0 : 4,
+              pt: removePadding ? 0 : 4,
+              pb: specialBg ? 6 : removePadding ? 0 : 4,
+              position: "absolute",
+              textAlign: "center",
+              left: "50%",
+              top: {
+                xs: specialBg ? "50%" : "45%",
+                sm: specialBg ? "50%" : "50%",
+              },
+              transform: "translate(-50%,-50%)",
+              minWidth: "60px",
+              zIndex: "3",
+            }}
+          >
+            {children}
+          </Box>
+        </Box>
+      </Box>
+    )
+
   if (lailyDinie)
     return (
       <Box sx={{ position: "absolute", width: "100%", height: "100%" }}>
