@@ -90,9 +90,9 @@ const Door: React.FC<DoorProps> = ({
             className={clickOpen ? "animate__animated animate__fadeOut" : ""}
             onClick={() => setClickOpen(true)}
             sx={{
-              background: "#fff",
+              background: "#ffe6dc",
               borderRadius: specialBg ? "0" : "80%",
-              boxShadow: specialBg ? "0" : `-8px 8px 8px #ffe6dc`,
+              boxShadow: specialBg ? "0" : `-8px 8px 8px #efefef`,
               px: removePadding ? 0 : 4,
               pt: removePadding ? 0 : 4,
               pb: specialBg ? 6 : removePadding ? 0 : 4,
