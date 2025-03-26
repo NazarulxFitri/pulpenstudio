@@ -498,7 +498,7 @@ const Layout10: React.FC = () => {
                     }}
                   >
                     <Box>
-                      <Text
+                      <MiniText
                         style={{ fontSize: "48px" }}
                         dangerouslySetInnerHTML={{
                           __html: `${countdownTimer?.countdownTimer.d} `,
@@ -506,7 +506,7 @@ const Layout10: React.FC = () => {
                       />
                     </Box>
                     <Box>
-                      <Text
+                      <MiniText
                         style={{ fontSize: "24px" }}
                         dangerouslySetInnerHTML={{
                           __html: `${countdownTimer?.countdownTimer.h
@@ -514,7 +514,7 @@ const Layout10: React.FC = () => {
                             }</span>`,
                         }}
                       />
-                      <Text
+                      <MiniText
                         style={{ fontSize: "24px" }}
                         dangerouslySetInnerHTML={{
                           __html: `${countdownTimer?.countdownTimer.m
@@ -524,7 +524,7 @@ const Layout10: React.FC = () => {
                       />
                     </Box>
                     <Box>
-                      <Text
+                      <MiniText
                         style={{
                           fontSize: "48px", color: "#aa344e", width: "50px"
                         }}
