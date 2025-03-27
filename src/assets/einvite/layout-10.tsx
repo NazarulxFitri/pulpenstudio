@@ -197,7 +197,7 @@ const Layout10: React.FC = () => {
       </Box>
       {musicStart &&
         <Box>
-          <Box sx={{ height: "100vh", position: "relative" }}>
+          <Box sx={{ height: { xs: "120vh", md: "100vh" }, position: "relative" }}>
 
             <Box sx={{ position: "absolute", top: { xs: "-65px", md: "-75px" }, left: "-75px", transform: "scaleY(-1)", zIndex: 1 }}>
               <Image src="/media/syafiq/syafiq_flower.webp" alt="Syafiq Nabilah | Pulpen Studio" width={260} height={200} />
@@ -258,8 +258,8 @@ const Layout10: React.FC = () => {
               left: "50%",
               transform: "translate(-50%,-50%)",
             }}>
-              <MiniText className="animate__animated animate__fadeIn animate__delay-1s animate__slower" sx={{ fontSize: "30px", fontWeight: "bolder" }} dangerouslySetInnerHTML={{ __html: "Majlis Perkahwinan" }} />
-              <Box mt={2} mb={4}>
+              <MiniText className="animate__animated animate__fadeIn animate__delay-1s animate__slower" sx={{ fontSize: "30px", fontWeight: "bold", whiteSpace: "nowrap" }} dangerouslySetInnerHTML={{ __html: "Majlis Perkahwinan" }} />
+              <Box mt={4} mb={4}>
                 <SubTitle className="animate__animated animate__fadeIn animate__delay-2s animate__slower" sx={{ fontSize: "48px", ml: "-56px" }} dangerouslySetInnerHTML={{ __html: "SYAFIQ" }} />
                 <SubTitle className="animate__animated animate__fadeIn animate__delay-2s animate__slower" sx={{ fontSize: "24px" }} dangerouslySetInnerHTML={{ __html: "&" }} />
                 <SubTitle className="animate__animated animate__fadeIn animate__delay-3s animate__slower" sx={{ fontSize: "48px", mr: "-56px" }} dangerouslySetInnerHTML={{ __html: "NABILAH" }} />
@@ -277,12 +277,10 @@ const Layout10: React.FC = () => {
               </Box>
 
               <Text className="animate__animated animate__fadeIn animate__delay-4s animate__slower" sx={{ fontSize: "14px", mt: -1 }} dangerouslySetInnerHTML={{ __html: "5 ZULKAEDAH 1446" }} />
-              <Text className="animate__animated animate__fadeIn animate__delay-4s animate__slower" sx={{ fontSize: "12px", mt: 3 }} dangerouslySetInnerHTML={{ __html: '<i>"Dan Kami menciptakan kamu berpasang-pasangan"</i>' }} />
-              <Text className="animate__animated animate__fadeIn animate__delay-4s animate__slower" sx={{ fontSize: "10px" }} dangerouslySetInnerHTML={{ __html: "Surah An- Naba' [78:8]" }} />
-
             </Box>
 
           </Box>
+
           <Container sx={{ position: "relative" }}>
             <Box sx={{ position: "absolute", top: "0", right: "-200px", transform: "scaleX(-1)", zIndex: 0 }}>
               <Image src="/media/syafiq/syafiq_flower.webp" alt="Syafiq Nabilah | Pulpen Studio" width={260} height={200} />
@@ -457,6 +455,10 @@ const Layout10: React.FC = () => {
 
               <Box sx={{ textAlign: "center", mt: 4 }}>
                 <Image src="/media/syafiq/flower-border.png" alt="Syafiq & Nabilah | Pulpen Studio" width={200} height={30} />
+              </Box>
+              <Box>
+                <Text sx={{ fontSize: "14px", mt: 3 }} dangerouslySetInnerHTML={{ __html: '<i>"Dan Kami menciptakan <br />kamu berpasang-pasangan"</i>' }} />
+                <Text sx={{ fontSize: "12px", mt: .5 }} dangerouslySetInnerHTML={{ __html: "Surah An- Naba' [78:8]" }} />
               </Box>
               <Box
                 sx={{

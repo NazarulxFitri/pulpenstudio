@@ -116,9 +116,11 @@ const Widget: React.FC<WidgetProps> = ({
         display: "flex",
         py: 2,
         position: "fixed",
+        zIndex: "2",
         width: "100%",
         maxWidth: "400px",
         textAlign: "center",
+        cursor: "pointer"
       }}
     >
       {rsvpPopup && (
