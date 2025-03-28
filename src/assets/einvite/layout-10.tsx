@@ -19,6 +19,7 @@ import ReactPlayer from "react-player";
 import { CommentList, Door } from "@/components";
 import Image from "next/image";
 import { locale } from "@/utils/Locale";
+import Head from "next/head";
 
 const ubuntu = Ubuntu({ subsets: ["latin"], weight: "700" });
 const playfair = Playfair_Display({
@@ -167,6 +168,11 @@ const Layout10: React.FC = () => {
       onTouchStart={() => setMusicStart(true)}
       onClick={() => setMusicStart(true)}
     >
+      <Head>
+        <title>Majlis Perkahwinan Syafiq & Nabilah</title>
+        <meta name="description" content="Syafiq & Nabilah | 3 Mei 2025 | Grand Airiz Hall | Dan Kami menciptakan
+kamu berpasang-pasangan" />
+      </Head>
       <Door color="#f1f0e5" {...{ clickOpen, setClickOpen }} syafiqKhairi>
         <Box display={"flex"}>
           <Title
