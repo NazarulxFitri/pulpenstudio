@@ -40,7 +40,7 @@ const GiftPopup: React.FC<GiftPopupProps> = ({
           background: "#FFF",
           bottom: "0",
           position: "absolute",
-          height: "540px",
+          height: "480px",
           width: "100%",
         }}
       >

@@ -197,8 +197,8 @@ const Layout10: React.FC = () => {
       </Box>
       {musicStart &&
         <Box>
-          <Box sx={{ height: { xs: "120vh", md: "100vh" }, position: "relative" }}>
-
+          <Box sx={{ height: { xs: ' 800px', md: "600px" }, position: "relative" }}>
+            {/* <Box sx={{ height: { xs: "120vh", md: "100vh" }, position: "relative" }}> */}
             <Box sx={{ position: "absolute", top: { xs: "-65px", md: "-75px" }, left: "-75px", transform: "scaleY(-1)", zIndex: 1 }}>
               <Image src="/media/syafiq/syafiq_flower.webp" alt="Syafiq Nabilah | Pulpen Studio" width={260} height={200} />
             </Box>
@@ -588,6 +588,8 @@ const Layout10: React.FC = () => {
           </Container>
           <Box>
             <Widget
+              showGift
+              giftImage="/media/syafiq/qr_syqfiq.jpeg"
               language={item?.language!}
               iconColor="rgba(149,8,43)"
               color="#fffaeb"
