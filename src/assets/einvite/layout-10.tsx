@@ -321,7 +321,7 @@ const Layout10: React.FC = () => {
                 }}
               >
                 <MiniText
-                  sx={{ mb: 3, mt: -3, fontWeight: "bolder" }}
+                  sx={{ mb: 3, mt: -3, fontWeight: "bolder", whiteSpace: "nowrap" }}
                   dangerouslySetInnerHTML={{
                     __html: 'Undangan Majlis Perkahwinan',
                   }}
