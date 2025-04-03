@@ -170,9 +170,21 @@ const Layout10: React.FC = () => {
     >
       <Head>
         <title>Majlis Perkahwinan Syafiq & Nabilah</title>
-        <meta name="description" content="Syafiq & Nabilah | 3 Mei 2025 | Grand Airiz Hall | Dan Kami menciptakan
-kamu berpasang-pasangan" />
+        <meta name="description" content="Syafiq & Nabilah | 3 Mei 2025 | Grand Airiz Hall | Dan Kami menciptakan kamu berpasang-pasangan" />
+
+        {/* Open Graph Meta Tags */}
+        <meta property="og:title" content="Majlis Perkahwinan Syafiq & Nabilah" />
+        <meta property="og:description" content="Syafiq & Nabilah | 3 Mei 2025 | Grand Airiz Hall" />
+        <meta property="og:image" content="/media/syafiq/syafiq-nabilah-logo.png" />
+        <meta property="og:type" content="website" />
+
+        {/* Twitter Card (Optional) */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Majlis Perkahwinan Syafiq & Nabilah" />
+        <meta name="twitter:description" content="Syafiq & Nabilah | 3 Mei 2025 | Grand Airiz Hall" />
+        <meta name="twitter:image" content="/media/syafiq/syafiq-nabilah-logo.png" />
       </Head>
+
       <Door color="#f1f0e5" {...{ clickOpen, setClickOpen }} syafiqKhairi>
         <Box display={"flex"}>
           <Title
