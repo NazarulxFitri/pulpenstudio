@@ -440,6 +440,7 @@ const Layout885: React.FC = () => {
             navigation={true}
             slidesPerView={1.5}
             onSlideChange={() => console.log('slide change')}
+            // @ts-ignore
             onSwiper={(swiper) => console.log(swiper)}
             modules={[Autoplay, Pagination, Navigation]}
           >
