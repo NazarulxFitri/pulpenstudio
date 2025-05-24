@@ -19,6 +19,10 @@ import ReactPlayer from "react-player";
 import { CommentList, Door } from "@/components";
 import Image from "next/image";
 import { locale } from "@/utils/Locale";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+
+import 'swiper/css';
 
 const ubuntu = Ubuntu({ subsets: ["latin"], weight: "700" });
 const playfair = Playfair_Display({
@@ -172,6 +176,21 @@ const Layout885: React.FC = () => {
     };
   }, []);
 
+  const listImages = [
+    {
+      path: "/media/alif-natasha/alif-1.jpeg"
+    },
+    {
+      path: "/media/alif-natasha/alif-2.jpeg"
+    },
+    {
+      path: "/media/alif-natasha/alif-3.jpeg"
+    },
+    {
+      path: "/media/alif-natasha/alif-4.jpeg"
+    }
+  ]
+
   return (
     <Box
       maxWidth="400px"
@@ -179,7 +198,7 @@ const Layout885: React.FC = () => {
         boxShadow: "1px 1px 10px #efefef",
         m: "auto",
         position: "relative",
-        overflow: "hidden",
+        // overflow: "hidden",
         height: clickOpen ? "100%" : "100vh",
       }}
       onTouchStart={() => setMusicStart(true)}
@@ -244,7 +263,7 @@ const Layout885: React.FC = () => {
             mr: -2
           }}
         />
-        <Box sx={{ position: "absolute", top: "0", right: { xs: "-104px", sm: "-60px", md: "-50px" } }}>
+        <Box sx={{ position: "absolute", top: "0", right: { xs: "-80px", md: "-50px" } }}>
           <Image
             src="/media/alif-natasha/9368-removebg-preview.png"
             alt="Pulpen Studio"
@@ -256,17 +275,17 @@ const Layout885: React.FC = () => {
 
         <Box sx={{ position: "absolute", top: "26%", left: "5%", color: "#FFF" }}>
           <Title id="delay-4s"
-            sx={{ textAlign: "left", fontSize: "16px", letterSpacing: "0.15em", color: "gold" }} dangerouslySetInnerHTML={{ __html: "THE WEDDING OF" }} />
+            sx={{ textAlign: "left", fontSize: { xs: "14px", md: "16px" }, letterSpacing: "0.15em", color: "gold" }} dangerouslySetInnerHTML={{ __html: "THE WEDDING OF" }} />
           <Box sx={{ my: 6 }}>
-            <Title className="animate__animated animate__fadeIn animate__delay-1s animate__slower" sx={{ textAlign: "left" }} dangerouslySetInnerHTML={{ __html: "<span style='color: gold;'>A</span>lif Asyraf" }} />
+            <Title className="animate__animated animate__fadeIn animate__delay-1s animate__slower" sx={{ textAlign: "left", fontSize: { xs: "34px", md: "40px" } }} dangerouslySetInnerHTML={{ __html: "<span style='color: gold;'>A</span>lif Asyraf" }} />
             <Title className="animate__animated animate__fadeIn animate__delay-1s animate__slower" sx={{ fontSize: "24px", textAlign: "left", my: "4px", mx: "16px" }} dangerouslySetInnerHTML={{ __html: "&" }} />
-            <Title className="animate__animated animate__fadeIn animate__delay-1s animate__slower" sx={{ textAlign: "left" }} dangerouslySetInnerHTML={{ __html: "Nor <span style='color: gold;'>N</span>athasya" }} />
+            <Title className="animate__animated animate__fadeIn animate__delay-1s animate__slower" sx={{ textAlign: "left", fontSize: { xs: "34px", md: "40px" } }} dangerouslySetInnerHTML={{ __html: "Nor <span style='color: gold;'>N</span>athasya" }} />
           </Box>
-          <Title id="delay-5s" sx={{ textAlign: "left", fontSize: "16px", letterSpacing: "0.15em" }} dangerouslySetInnerHTML={{ __html: "14 . 06 . 2025" }} />
-          <Title id="delay-6s" sx={{ textAlign: "left", fontSize: "16px", letterSpacing: "0.15em", mt: 1.5 }} dangerouslySetInnerHTML={{ __html: "8pm - 11pm" }} />
-          <Title id="delay-7s" sx={{ textAlign: "left", fontSize: "16px", letterSpacing: "0.15em", mt: 1.5, maxWidth: "260px", lineHeight: "1.045em" }} dangerouslySetInnerHTML={{ __html: "391, Jalan Batik 1/7, Taman Batik, 08000 Sungai Petani, Kedah" }} />
+          <Title id="delay-5s" sx={{ textAlign: "left", fontSize: { xs: "14px", md: "16px" }, letterSpacing: "0.15em" }} dangerouslySetInnerHTML={{ __html: "14 . 06 . 2025" }} />
+          <Title id="delay-6s" sx={{ textAlign: "left", fontSize: { xs: "14px", md: "16px" }, letterSpacing: "0.15em", mt: 1.5 }} dangerouslySetInnerHTML={{ __html: "8pm - 11pm" }} />
+          <Title id="delay-7s" sx={{ textAlign: "left", fontSize: { xs: "14px", md: "16px" }, letterSpacing: "0.15em", mt: 1.5, maxWidth: "260px", lineHeight: "1.045em" }} dangerouslySetInnerHTML={{ __html: "391, Jalan Batik 1/7, Taman Batik, 08000 Sungai Petani, Kedah" }} />
 
-          <Title id="delay-8s" sx={{ textAlign: "left", fontSize: "16px", letterSpacing: "0.15em", mt: 4, color: "gold" }} dangerouslySetInnerHTML={{ __html: "#ALIFeBeginsWithNathasya" }} />
+          <Title id="delay-8s" sx={{ textAlign: "left", fontSize: { xs: "14px", md: "16px" }, letterSpacing: "0.15em", mt: 4, color: "gold" }} dangerouslySetInnerHTML={{ __html: "#ALIFeBeginsWithNathasya" }} />
         </Box>
 
       </Box>
@@ -278,7 +297,7 @@ const Layout885: React.FC = () => {
           height: "100%",
           width: "100%",
           backgroundColor: "#121212",
-          overflow: "hidden",
+          overflow: "auto",
           color: "#FFF"
         }}
       >
@@ -411,6 +430,90 @@ const Layout885: React.FC = () => {
             />
           </Box>
         </Box>
+
+        <Box>
+          <Swiper
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }} spaceBetween={4}
+            navigation={true}
+            slidesPerView={1.5}
+            onSlideChange={() => console.log('slide change')}
+            onSwiper={(swiper) => console.log(swiper)}
+            modules={[Autoplay, Pagination, Navigation]}
+          >
+            <SwiperSlide>
+              <Image
+                src={"/media/alif-natasha/alif-1.jpeg"}
+                alt="Pulpen Studio"
+                width={300}
+                height={500}
+                style={{
+                  height: "auto",
+                  width: "100%",  // Fix width to allow horizontal scrolling
+                  flexShrink: 0,   // Prevent shrinking
+                }}
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Image
+                src={"/media/alif-natasha/alif-2.jpeg"}
+                alt="Pulpen Studio"
+                width={300}
+                height={500}
+                style={{
+                  height: "auto",
+                  width: "100%",  // Fix width to allow horizontal scrolling
+                  flexShrink: 0,   // Prevent shrinking
+                }}
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Image
+                src={"/media/alif-natasha/alif-3.jpeg"}
+                alt="Pulpen Studio"
+                width={300}
+                height={500}
+                style={{
+                  height: "auto",
+                  width: "100%",  // Fix width to allow horizontal scrolling
+                  flexShrink: 0,   // Prevent shrinking
+                }}
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Image
+                src={"/media/alif-natasha/alif-4.jpeg"}
+                alt="Pulpen Studio"
+                width={300}
+                height={500}
+                style={{
+                  height: "auto",
+                  width: "100%",  // Fix width to allow horizontal scrolling
+                  flexShrink: 0,   // Prevent shrinking
+                }}
+              />
+            </SwiperSlide>
+          </Swiper>
+        </Box>
+
+
+        {/* {listImages?.map((item, idx) => (
+          <Image
+            key={idx}
+            src={item?.path}
+            alt="Pulpen Studio"
+            width={300}
+            height={500}
+            style={{
+              height: "auto",
+              width: "300px",  // Fix width to allow horizontal scrolling
+              flexShrink: 0,   // Prevent shrinking
+            }}
+          />
+        ))} */}
+
 
         <Box
           sx={{
