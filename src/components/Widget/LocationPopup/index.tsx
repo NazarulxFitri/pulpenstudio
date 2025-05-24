@@ -15,6 +15,7 @@ interface LocationPopupProps {
   setLocationPopup: (value: boolean) => void;
   setContactPopup: (value: boolean) => void;
   setGiftPopup: (value: boolean) => void;
+  textInsideColor?: string;
 }
 
 const LocationPopup: React.FC<LocationPopupProps> = ({
@@ -27,6 +28,7 @@ const LocationPopup: React.FC<LocationPopupProps> = ({
   setLocationPopup,
   setContactPopup,
   setGiftPopup,
+  textInsideColor
 }) => {
   return (
     <Box
@@ -52,10 +54,7 @@ const LocationPopup: React.FC<LocationPopupProps> = ({
             style={{
               fontSize: "20px",
               fontWeight: "700",
-              color:
-                iconColor === "#FFFFFF" || iconColor === "#FFF"
-                  ? "#333"
-                  : iconColor,
+              color: textInsideColor || iconColor
             }}
           >
             {title} | <span style={{ fontWeight: "300" }}>Location</span>
@@ -86,10 +85,7 @@ const LocationPopup: React.FC<LocationPopupProps> = ({
                 border: `1px solid ${color}`,
                 borderRadius: "8px",
                 cursor: "pointer",
-                color:
-                  iconColor === "#FFFFFF" || iconColor === "#FFF"
-                    ? "#333"
-                    : iconColor,
+                color: textInsideColor || iconColor,
                 display: "flex",
                 p: 2,
                 justifyContent: "center",
@@ -100,20 +96,13 @@ const LocationPopup: React.FC<LocationPopupProps> = ({
               <span
                 style={{
                   fontSize: "12px",
-                  color:
-                    iconColor === "#FFFFFF" || iconColor === "#FFF"
-                      ? "#333"
-                      : iconColor,
+                  color: textInsideColor || iconColor
                 }}
               >
                 Google / Waze
               </span>{" "}
               <MapIcon
-                color={
-                  iconColor === "#FFFFFF" || iconColor === "#FFF"
-                    ? "#333"
-                    : iconColor
-                }
+                color={textInsideColor || iconColor}
               />
             </Box>
           </a>

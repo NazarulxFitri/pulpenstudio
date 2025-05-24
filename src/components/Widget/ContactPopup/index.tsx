@@ -22,6 +22,7 @@ interface ContactPopupProps {
   setLocationPopup: (value: boolean) => void;
   setContactPopup: (value: boolean) => void;
   setGiftPopup: (value: boolean) => void;
+  textInsideColor?: string;
 }
 
 const ContactPopup: React.FC<ContactPopupProps> = ({
@@ -34,6 +35,7 @@ const ContactPopup: React.FC<ContactPopupProps> = ({
   setLocationPopup,
   setContactPopup,
   setGiftPopup,
+  textInsideColor
 }) => {
   return (
     <Box
@@ -55,7 +57,7 @@ const ContactPopup: React.FC<ContactPopupProps> = ({
         }}
       >
         <Box sx={{ display: "flex", p: 2 }}>
-          <p style={{ fontSize: "20px", fontWeight: "700", color: iconColor }}>
+          <p style={{ fontSize: "20px", fontWeight: "700", color: textInsideColor || iconColor }}>
             {title} | <span style={{ fontWeight: "300" }}>Contact Us</span>
           </p>
           <Box

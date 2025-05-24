@@ -15,6 +15,7 @@ interface RsvpPopupProp {
   setLocationPopup: (value: boolean) => void;
   setContactPopup: (value: boolean) => void;
   setGiftPopup: (value: boolean) => void;
+  textInsideColor?: string;
 }
 
 const RsvpPopup: React.FC<RsvpPopupProp> = ({
@@ -29,6 +30,7 @@ const RsvpPopup: React.FC<RsvpPopupProp> = ({
   setLocationPopup,
   setContactPopup,
   setGiftPopup,
+  textInsideColor
 }) => {
   return (
     <Box
@@ -50,7 +52,7 @@ const RsvpPopup: React.FC<RsvpPopupProp> = ({
         }}
       >
         <Box sx={{ display: "flex", p: 2 }}>
-          <p style={{ fontSize: "20px", fontWeight: "700", color: iconColor }}>
+          <p style={{ fontSize: "20px", fontWeight: "700", color: textInsideColor || iconColor }}>
             {title}
           </p>
           <Box

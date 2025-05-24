@@ -39,6 +39,7 @@ interface WidgetProps {
     name4?: string;
   };
   hideBoxShadow?: boolean;
+  textInsideColor?: string;
 }
 
 const Widget: React.FC<WidgetProps> = ({
@@ -55,6 +56,7 @@ const Widget: React.FC<WidgetProps> = ({
   hideEdit,
   hideBoxShadow,
   hidePhoneNumber,
+  textInsideColor
 }) => {
   const [commentPopup, setCommentPopup] = useState(false);
   const [locationPopup, setLocationPopup] = useState(false);
@@ -110,13 +112,12 @@ const Widget: React.FC<WidgetProps> = ({
       container
       sx={{
         background: color,
-        boxShadow: `1px 1px 10px ${color}`,
         bottom: "0",
         color: iconColor || "unset",
         display: "flex",
         py: 2,
         position: "fixed",
-        zIndex: "2",
+        zIndex: "1",
         width: "100%",
         maxWidth: "400px",
         textAlign: "center",
@@ -137,6 +138,7 @@ const Widget: React.FC<WidgetProps> = ({
             setGiftPopup,
             includePhoneNumber,
             includeOrigin,
+            textInsideColor
           }}
         />
       )}
@@ -152,6 +154,7 @@ const Widget: React.FC<WidgetProps> = ({
             setLocationPopup,
             setContactPopup,
             setGiftPopup,
+            textInsideColor
           }}
         />
       )}
@@ -167,6 +170,7 @@ const Widget: React.FC<WidgetProps> = ({
             setLocationPopup,
             setContactPopup,
             setGiftPopup,
+            textInsideColor
           }}
         />
       )}
@@ -182,6 +186,7 @@ const Widget: React.FC<WidgetProps> = ({
             setLocationPopup,
             setContactPopup,
             setGiftPopup,
+            textInsideColor
           }}
         />
       )}
@@ -197,6 +202,7 @@ const Widget: React.FC<WidgetProps> = ({
             setLocationPopup,
             setContactPopup,
             setGiftPopup,
+            textInsideColor
           }}
         />
       )}

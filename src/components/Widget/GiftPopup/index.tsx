@@ -12,6 +12,7 @@ interface GiftPopupProps {
   setLocationPopup: (value: boolean) => void;
   setContactPopup: (value: boolean) => void;
   setGiftPopup: (value: boolean) => void;
+  textInsideColor?: string;
 }
 
 const GiftPopup: React.FC<GiftPopupProps> = ({
@@ -24,6 +25,7 @@ const GiftPopup: React.FC<GiftPopupProps> = ({
   setLocationPopup,
   setContactPopup,
   setGiftPopup,
+  textInsideColor
 }) => {
   return (
     <Box
@@ -45,7 +47,7 @@ const GiftPopup: React.FC<GiftPopupProps> = ({
         }}
       >
         <Box sx={{ display: "flex", p: 2 }}>
-          <p style={{ fontSize: "20px", fontWeight: "700", color: iconColor }}>
+          <p style={{ fontSize: "20px", fontWeight: "700", color: textInsideColor || iconColor }}>
             {title} | <span style={{ fontWeight: "300" }}>Gift</span>
           </p>
           <Box
@@ -62,7 +64,7 @@ const GiftPopup: React.FC<GiftPopupProps> = ({
           </Box>
         </Box>
         <Box>
-          <p style={{ fontSize: "14px", marginBottom: "10px" }}>
+          <p style={{ fontSize: "14px", marginBottom: "10px", color: textInsideColor || iconColor }}>
             Sumbangan ikhlas boleh disalurkan ke sini :
           </p>
           <Image
@@ -70,7 +72,7 @@ const GiftPopup: React.FC<GiftPopupProps> = ({
             width={300}
             alt={"Money gift - Pulpen Studio"}
             height={450}
-            style={{ width: "220px", height: "auto" }}
+            style={{ width: "280px", height: "auto" }}
           />
         </Box>
       </Box>

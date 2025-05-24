@@ -13,7 +13,7 @@ interface CommentPopupProps {
   setLocationPopup: (value: boolean) => void;
   setContactPopup: (value: boolean) => void;
   setGiftPopup: (value: boolean) => void;
-
+  textInsideColor?: string;
 }
 
 const CommentPopup: React.FC<CommentPopupProps> = ({
@@ -26,6 +26,7 @@ const CommentPopup: React.FC<CommentPopupProps> = ({
   setLocationPopup,
   setContactPopup,
   setGiftPopup,
+  textInsideColor
 }) => {
   return (
     <Box
@@ -47,8 +48,8 @@ const CommentPopup: React.FC<CommentPopupProps> = ({
         }}
       >
         <Box sx={{ display: "flex", p: 2 }}>
-          <p style={{ fontSize: "20px", fontWeight: "700", color: iconColor }}>
-            {title} | <span style={{ fontWeight: "300"}}>Wishes</span>
+          <p style={{ fontSize: "20px", fontWeight: "700", color: textInsideColor || iconColor }}>
+            {title} | <span style={{ fontWeight: "300" }}>Wishes</span>
           </p>
           <Box
             sx={{ m: "0 0 0 auto" }}
