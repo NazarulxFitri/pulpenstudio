@@ -187,7 +187,7 @@ const Layout885: React.FC = () => {
     >
       <Door color="#FFF" {...{ clickOpen, setClickOpen }}>
         <Title
-          sx={{ fontSize: "24px", textShadow: "1px 1px 10px skyblue" }}
+          sx={{ fontSize: "24px", textShadow: "1px 1px 10px #efefef" }}
           dangerouslySetInnerHTML={{
             __html: `<span>A</span>lif`,
           }}
@@ -199,7 +199,7 @@ const Layout885: React.FC = () => {
           }}
         />
         <Title
-          sx={{ fontSize: "24px", textShadow: "1px 1px 10px skyblue" }}
+          sx={{ fontSize: "24px", textShadow: "1px 1px 10px #efefef" }}
           dangerouslySetInnerHTML={{
             __html: `<span">N</span>athasya`,
           }}
@@ -244,7 +244,7 @@ const Layout885: React.FC = () => {
             mr: -2
           }}
         />
-        <Box sx={{ position: "absolute", top: "0", right: { xs: "-80px", md: "-50px" } }}>
+        <Box sx={{ position: "absolute", top: "0", right: { xs: "-104px", sm: "-60px", md: "-50px" } }}>
           <Image
             src="/media/alif-natasha/9368-removebg-preview.png"
             alt="Pulpen Studio"
@@ -255,17 +255,18 @@ const Layout885: React.FC = () => {
         </Box>
 
         <Box sx={{ position: "absolute", top: "26%", left: "5%", color: "#FFF" }}>
-          <Title sx={{ textAlign: "left", fontSize: "16px", letterSpacing: "0.15em", color: "gold" }} dangerouslySetInnerHTML={{ __html: "THE WEDDING OF" }} />
+          <Title id="delay-4s"
+            sx={{ textAlign: "left", fontSize: "16px", letterSpacing: "0.15em", color: "gold" }} dangerouslySetInnerHTML={{ __html: "THE WEDDING OF" }} />
           <Box sx={{ my: 6 }}>
-            <Title sx={{ textAlign: "left" }} dangerouslySetInnerHTML={{ __html: "<span style='color: gold;'>A</span>lif Asyraf" }} />
-            <Title sx={{ fontSize: "24px", textAlign: "left", my: "4px", mx: "16px" }} dangerouslySetInnerHTML={{ __html: "&" }} />
-            <Title sx={{ textAlign: "left" }} dangerouslySetInnerHTML={{ __html: "Nor <span style='color: gold;'>N</span>athasya" }} />
+            <Title className="animate__animated animate__fadeIn animate__delay-1s animate__slower" sx={{ textAlign: "left" }} dangerouslySetInnerHTML={{ __html: "<span style='color: gold;'>A</span>lif Asyraf" }} />
+            <Title className="animate__animated animate__fadeIn animate__delay-1s animate__slower" sx={{ fontSize: "24px", textAlign: "left", my: "4px", mx: "16px" }} dangerouslySetInnerHTML={{ __html: "&" }} />
+            <Title className="animate__animated animate__fadeIn animate__delay-1s animate__slower" sx={{ textAlign: "left" }} dangerouslySetInnerHTML={{ __html: "Nor <span style='color: gold;'>N</span>athasya" }} />
           </Box>
-          <Title sx={{ textAlign: "left", fontSize: "16px", letterSpacing: "0.15em" }} dangerouslySetInnerHTML={{ __html: "14 . 06 . 2025" }} />
-          <Title sx={{ textAlign: "left", fontSize: "16px", letterSpacing: "0.15em", mt: 1.5 }} dangerouslySetInnerHTML={{ __html: "8pm - 11pm" }} />
-          <Title sx={{ textAlign: "left", fontSize: "16px", letterSpacing: "0.15em", mt: 1.5, maxWidth: "260px", lineHeight: "1.045em" }} dangerouslySetInnerHTML={{ __html: "391, Jalan Batik 1/7, Taman Batik, 08000 Sungai Petani, Kedah" }} />
+          <Title id="delay-5s" sx={{ textAlign: "left", fontSize: "16px", letterSpacing: "0.15em" }} dangerouslySetInnerHTML={{ __html: "14 . 06 . 2025" }} />
+          <Title id="delay-6s" sx={{ textAlign: "left", fontSize: "16px", letterSpacing: "0.15em", mt: 1.5 }} dangerouslySetInnerHTML={{ __html: "8pm - 11pm" }} />
+          <Title id="delay-7s" sx={{ textAlign: "left", fontSize: "16px", letterSpacing: "0.15em", mt: 1.5, maxWidth: "260px", lineHeight: "1.045em" }} dangerouslySetInnerHTML={{ __html: "391, Jalan Batik 1/7, Taman Batik, 08000 Sungai Petani, Kedah" }} />
 
-          <Title sx={{ textAlign: "left", fontSize: "16px", letterSpacing: "0.15em", mt: 4, color: "gold" }} dangerouslySetInnerHTML={{ __html: "#ALIFeBeginsWithNathasya" }} />
+          <Title id="delay-8s" sx={{ textAlign: "left", fontSize: "16px", letterSpacing: "0.15em", mt: 4, color: "gold" }} dangerouslySetInnerHTML={{ __html: "#ALIFeBeginsWithNathasya" }} />
         </Box>
 
       </Box>
