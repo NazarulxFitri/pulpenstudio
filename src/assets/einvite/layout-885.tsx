@@ -188,6 +188,21 @@ const Layout885: React.FC = () => {
     },
     {
       path: "/media/alif-natasha/alif-4.jpeg"
+    },
+    {
+      path: "/media/alif-natasha/alif-5.jpeg"
+    },
+    {
+      path: "/media/alif-natasha/alif-6.jpeg"
+    },
+    {
+      path: "/media/alif-natasha/alif-7.jpeg"
+    },
+    {
+      path: "/media/alif-natasha/alif-8.jpeg"
+    },
+    {
+      path: "/media/alif-natasha/alif-9.jpeg"
     }
   ]
 
@@ -486,6 +501,71 @@ const Layout885: React.FC = () => {
             <SwiperSlide>
               <Image
                 src={"/media/alif-natasha/alif-4.jpeg"}
+                alt="Pulpen Studio"
+                width={300}
+                height={500}
+                style={{
+                  height: "auto",
+                  width: "100%",  // Fix width to allow horizontal scrolling
+                  flexShrink: 0,   // Prevent shrinking
+                }}
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Image
+                src={"/media/alif-natasha/alif-5.JPG"}
+                alt="Pulpen Studio"
+                width={300}
+                height={500}
+                style={{
+                  height: "auto",
+                  width: "100%",  // Fix width to allow horizontal scrolling
+                  flexShrink: 0,   // Prevent shrinking
+                }}
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Image
+                src={"/media/alif-natasha/alif-6.JPG"}
+                alt="Pulpen Studio"
+                width={300}
+                height={500}
+                style={{
+                  height: "auto",
+                  width: "100%",  // Fix width to allow horizontal scrolling
+                  flexShrink: 0,   // Prevent shrinking
+                }}
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Image
+                src={"/media/alif-natasha/alif-7.JPG"}
+                alt="Pulpen Studio"
+                width={300}
+                height={500}
+                style={{
+                  height: "auto",
+                  width: "100%",  // Fix width to allow horizontal scrolling
+                  flexShrink: 0,   // Prevent shrinking
+                }}
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Image
+                src={"/media/alif-natasha/alif-8.JPG"}
+                alt="Pulpen Studio"
+                width={300}
+                height={500}
+                style={{
+                  height: "auto",
+                  width: "100%",  // Fix width to allow horizontal scrolling
+                  flexShrink: 0,   // Prevent shrinking
+                }}
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Image
+                src={"/media/alif-natasha/alif-9.JPG"}
                 alt="Pulpen Studio"
                 width={300}
                 height={500}
