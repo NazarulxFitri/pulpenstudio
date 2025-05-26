@@ -14,6 +14,7 @@ export { default as Layout13 } from "./einvite/layout-13";
 export { default as Layout14 } from "./einvite/layout-14";
 
 // Custom for client
+export { default as Layout884 } from "./einvite/layout-884";
 export { default as Layout885 } from "./einvite/layout-885";
 export { default as Layout886 } from "./einvite/layout-886";
 export { default as Layout887 } from "./einvite/layout-887";
