@@ -35,6 +35,7 @@ import {
   Layout885,
   Layout884,
 } from "@/assets";
+import Layout883 from "@/assets/einvite/layout-883";
 
 export default function useListLayout() {
   const listLayout = {
@@ -53,6 +54,7 @@ export default function useListLayout() {
     "013": <Layout13 />,
     "014": <Layout14 />,
     "015": <Layout15 />,
+    "883": <Layout883 />,
     "884": <Layout884 />,
     "885": <Layout885 />,
     "886": <Layout886 />,

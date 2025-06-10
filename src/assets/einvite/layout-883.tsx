@@ -1,4 +1,4 @@
-// Alif Nathasya
+// Qayyum & Amirah
 
 import { Box, Grid, List, Paper, styled } from "@mui/material";
 import {
@@ -89,7 +89,7 @@ const UbuntuText = styled("p")(() => ({
   textAlign: "center",
 }));
 
-const Layout885: React.FC = () => {
+const Layout883: React.FC = () => {
   const router = useRouter();
   const eInviteId = router.query.eInviteId;
   const [countdownTimer, setCountdownTimer] = useState<DateTimeConfig>();
@@ -354,7 +354,7 @@ const Layout885: React.FC = () => {
               sx={{ fontWeight: "700", mb: 3 }}
               dangerouslySetInnerHTML={{
                 __html:
-                  "Mohd Nasruddin Awang Kechik & Nafishah Inson",
+                  "Mohd Nasruddin & Nafishah Inson",
               }}
             />
             <SubTitle
@@ -446,7 +446,7 @@ const Layout885: React.FC = () => {
           </Box>
         </Box>
 
-        <Box>
+        {/* <Box>
           <Swiper
             autoplay={{
               delay: 2500,
@@ -577,7 +577,24 @@ const Layout885: React.FC = () => {
               />
             </SwiperSlide>
           </Swiper>
-        </Box>
+        </Box> */}
+
+
+        {/* {listImages?.map((item, idx) => (
+          <Image
+            key={idx}
+            src={item?.path}
+            alt="Pulpen Studio"
+            width={300}
+            height={500}
+            style={{
+              height: "auto",
+              width: "300px",  // Fix width to allow horizontal scrolling
+              flexShrink: 0,   // Prevent shrinking
+            }}
+          />
+        ))} */}
+
 
         <Box
           sx={{
@@ -707,8 +724,9 @@ const Layout885: React.FC = () => {
 
       <Box>
         <Widget
+          hideRsvp
           showGift
-          // giftImage={"/media/alif-natasha/alif-qr.jpeg"}
+          giftImage={"/media/alif-natasha/alif-qr.jpeg"}
           includePhoneNumber={true}
           includeOrigin={false}
           language={item?.language!}
@@ -730,4 +748,4 @@ const Layout885: React.FC = () => {
   );
 };
 
-export default Layout885;
+export default Layout883;
