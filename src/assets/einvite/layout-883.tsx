@@ -229,14 +229,36 @@ const Layout883: React.FC = () => {
           width: "90%",
         }} />
         <Box sx={{ color: "#B79B64", textAlign: "center" }}>
-          <Image
-            src="/media/qayyum-amirah/883-ornament.webp"
-            alt="Pulpen Studio"
-            height={400}
-            width={100}
-            style={{ width: "100%", height: "100%" }}
-            className="animate__animated animate__fadeIn animate__delay-1s animate__slower"
-          />
+
+          <Box position="relative" width="100%" height="100%">
+            <Image
+              src="/media/qayyum-amirah/883-ornament.webp"
+              alt="Pulpen Studio"
+              height={400}
+              width={100}
+              style={{ width: "100%", height: "100%" }}
+              className="animate__animated animate__fadeIn animate__delay-1s animate__slower"
+            />
+            <Box
+              position="absolute"
+              top="50%"
+              left="50%"
+              sx={{
+                transform: "translate(-50%, -44%)",
+                width: "45%",
+              }}
+            >
+              <Image
+                src="/media/qayyum-amirah/883-qa-logo.png"
+                alt="Pulpen Studio"
+                width={400}
+                height={400}
+                style={{ width: "100%", height: "auto" }}
+                className="animate__animated animate__fadeIn animate__delay-1s animate__slower"
+              />
+            </Box>
+          </Box>
+
           <Title className="animate__animated animate__fadeIn animate__delay-2s animate__slower"
             sx={{ fontSize: { xs: "14px", md: "16px" }, mt: 2 }} dangerouslySetInnerHTML={{ __html: "MAHLIGAI KASIH" }} />
           <Box sx={{ my: 3 }}>
