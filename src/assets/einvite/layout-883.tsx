@@ -9,6 +9,8 @@ import {
   Playfair_Display,
   Poppins,
   Ubuntu,
+  Antic_Didone,
+  Bellefair
 } from "next/font/google";
 import useGetEinvite from "@/data/useGetEinvite";
 import { useRouter } from "next/router";
@@ -24,6 +26,14 @@ import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
 import 'swiper/css';
 
+const bellefair = Bellefair({
+  subsets: ['latin'],
+  weight: '400',
+});
+const anticDidone = Antic_Didone({
+  subsets: ['latin'],
+  weight: '400',
+});
 const ubuntu = Ubuntu({ subsets: ["latin"], weight: "700" });
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -52,20 +62,40 @@ const Special = styled("p")(() => ({
   textAlign: "center",
 }));
 
+const MainTitle = styled("h1")(() => ({
+  fontSize: "22px",
+  fontWeight: "300",
+  fontFamily: `${anticDidone.style.fontFamily} !important` || "auto",
+  textAlign: "center",
+  letterSpacing: "0.2em",
+  color: "#B79B64",
+}));
+
+const ParentNameTitle = styled("h2")(() => ({
+  fontSize: "12px",
+  fontWeight: "300",
+  fontFamily: `${anticDidone.style.fontFamily} !important` || "auto",
+  textAlign: "center",
+  letterSpacing: "0.2em",
+  color: "#B79B64",
+}));
+
 const Title = styled("h1")(() => ({
   lineHeight: "0.75em",
-  fontFamily: `${cormorant.style.fontFamily} !important` || "auto",
+  fontFamily: `${bellefair.style.fontFamily} !important` || "auto",
   fontSize: "40px",
   textAlign: "center",
   fontWeight: "lighter",
+  color: "#B79B64",
+  letterSpacing: "0.2em",
 }));
 
 const SubTitle = styled("p")(() => ({
   fontSize: "12px",
   fontWeight: "300",
-  fontFamily: `${cormorant.style.fontFamily} !important` || "auto",
+  fontFamily: `${bellefair.style.fontFamily} !important` || "auto",
   textAlign: "center",
-  letterSpacing: "0.25em",
+  letterSpacing: "0.2em",
   color: "#B79B64",
 }));
 
@@ -73,6 +103,7 @@ const Text = styled("p")(() => ({
   fontFamily: `${playfair.style.fontFamily} !important` || "auto",
   fontSize: "16px",
   textAlign: "center",
+  color: "#B79B64",
 }));
 
 const MiniText = styled("p")(() => ({
@@ -284,16 +315,16 @@ const Layout883: React.FC = () => {
             className="animate__animated animate__fadeIn animate__delay-1s animate__slower"
           />
           <Title className="animate__animated animate__fadeIn animate__delay-2s animate__slower"
-            sx={{ fontSize: { xs: "14px", md: "16px" } }} dangerouslySetInnerHTML={{ __html: "MAHLIGAI KASIH" }} />
+            sx={{ fontSize: { xs: "14px", md: "16px" }, mt: 2 }} dangerouslySetInnerHTML={{ __html: "MAHLIGAI KASIH" }} />
           <Box sx={{ my: 3 }}>
-            <Title className="animate__animated animate__fadeIn animate__delay-3s animate__slower" sx={{ fontSize: { xs: "34px", md: "40px" } }} dangerouslySetInnerHTML={{ __html: "Qayyum & Amirah" }} />
+            <MainTitle className="animate__animated animate__fadeIn animate__delay-3s animate__slower" sx={{}} dangerouslySetInnerHTML={{ __html: "QAYYUM & AMIRAH" }} />
           </Box>
-          <Title id="delay-5s" sx={{ fontSize: { xs: "14px", md: "16px" }, letterSpacing: "0.15em" }} dangerouslySetInnerHTML={{ __html: "20 . 09 . 2025" }} />
-          <Title id="delay-6s" sx={{ fontSize: { xs: "14px", md: "16px" }, letterSpacing: "0.15em", mt: 1 }} dangerouslySetInnerHTML={{ __html: "SABTU" }} />
-          <Title id="delay-7s" sx={{ fontSize: { xs: "14px", md: "16px" }, letterSpacing: "0.15em", mt: 3, lineHeight: "1.045em" }} dangerouslySetInnerHTML={{ __html: "SEKAMAT GRAND PALACE" }} />
-          <Title id="delay-7s" sx={{ fontSize: { xs: "14px", md: "16px" }, letterSpacing: "0.15em", mt: 1, lineHeight: "1.045em" }} dangerouslySetInnerHTML={{ __html: "JLN. SG. SEKAMAT" }} />
-          <Title id="delay-7s" sx={{ fontSize: { xs: "14px", md: "16px" }, letterSpacing: "0.15em", mt: 1, lineHeight: "1.045em" }} dangerouslySetInnerHTML={{ __html: "KG. SEKAMAT, 43000 KAJANG," }} />
-          <Title id="delay-7s" sx={{ fontSize: { xs: "14px", md: "16px" }, letterSpacing: "0.15em", mt: 1, lineHeight: "1.045em" }} dangerouslySetInnerHTML={{ __html: "SELANGOR" }} />
+          <Title id="delay-5s" className={bellefair.className} sx={{ fontSize: { xs: "14px", md: "16px" } }} dangerouslySetInnerHTML={{ __html: "20 . 09 . 2025" }} />
+          <Title id="delay-6s" sx={{ fontSize: { xs: "14px", md: "16px" }, mt: 1 }} dangerouslySetInnerHTML={{ __html: "SABTU" }} />
+          <Title id="delay-7s" sx={{ fontSize: { xs: "14px", md: "16px" }, mt: 3, lineHeight: "1.045em" }} dangerouslySetInnerHTML={{ __html: "SEKAMAT GRAND PALACE" }} />
+          <Title id="delay-7s" sx={{ fontSize: { xs: "14px", md: "16px" }, mt: 1, lineHeight: "1.045em" }} dangerouslySetInnerHTML={{ __html: "JLN. SG. SEKAMAT," }} />
+          <Title id="delay-7s" sx={{ fontSize: { xs: "14px", md: "16px" }, mt: 1, lineHeight: "1.045em" }} dangerouslySetInnerHTML={{ __html: "KG. SEKAMAT, 43000 KAJANG," }} />
+          <Title id="delay-7s" sx={{ fontSize: { xs: "14px", md: "16px" }, mt: 1, lineHeight: "1.045em" }} dangerouslySetInnerHTML={{ __html: "SELANGOR" }} />
         </Box>
 
       </Box>
@@ -313,11 +344,14 @@ const Layout883: React.FC = () => {
           mx={"auto"}
           sx={{
             pt: 7,
-            pb: 4,
+            // pb: 4,
             px: 2,
             position: "relative",
           }}
         >
+          <Box dir="rtl" textAlign="center" fontSize="22px" fontFamily="'Amiri Quran', sans-serif" color="#B79B64">
+            بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ
+          </Box>
           <Box sx={{ zIndex: "2" }}>
             <SubTitle
               sx={{ mb: 3, mt: 3 }}
@@ -326,46 +360,40 @@ const Layout883: React.FC = () => {
               }}
             />
             <SubTitle
-              sx={{ mb: 3, px: 2 }}
+              sx={{ mb: 3 }}
               dangerouslySetInnerHTML={{
                 __html:
-                  "Mengarak bunga rampai bertabur harum, Mengiringi restu dari segenap penjuru, Kami,",
+                  "Mengarak bunga rampai bertabur harum,<br>Mengiringi restu dari segenap penjuru,<br>Kami,",
               }}
             />
-            <SubTitle
-              sx={{
-                fontWeight: "700",
-                mb: 3,
-              }}
+            <MainTitle
+              sx={{ mb: 3, lineHeight: "1.5em" }}
               dangerouslySetInnerHTML={{
                 __html: `AHMAD TAQUWA<br>&<br>NOR FAIZAH</span>`,
               }}
             />
+            <SubTitle
+              sx={{ mb: 3 }}
+              dangerouslySetInnerHTML={{
+                __html:
+                  "Menjemput dengan penuh adab dan kasih,<br>Dato’, Datin, Tuan, Puan, Encik & Cik<br>ke majlis perkahwinan putera kami,",
+              }}
+            />
           </Box>
         </Box>
-        <SubTitle
-          sx={{ mb: 3, px: 2 }}
+
+
+        <MainTitle
+          sx={{ mb: 3, lineHeight: "1.5em" }}
           dangerouslySetInnerHTML={{
-            __html:
-              "Mengarak bunga rampai bertabur harum, Mengiringi restu dari segenap penjuru, Kami,",
+            __html: `QAYYUM<br>&<br>AMIRAH</span>`,
           }}
         />
 
         <SubTitle
-          sx={{
-            fontWeight: "700",
-            mb: 3,
-          }}
-          dangerouslySetInnerHTML={{
-            __html: `AHMAD TAQUWA<br>&<br>NOR FAIZAH</span>`,
-          }}
-        />
-
-        <SubTitle
-          sx={{ mb: 3, px: 2 }}
           dangerouslySetInnerHTML={{
             __html:
-              "Semoga Qayyum & Amirah berjaya dan bahagia di dunia akhirat",
+              "Semoga Qayyum & Amirah berjaya dan<br>bahagia di dunia akhirat",
           }}
         />
 
@@ -474,7 +502,7 @@ const Layout883: React.FC = () => {
           />
           <Title
             dangerouslySetInnerHTML={{
-              __html: "#ALIFeBeginsWithNathasya",
+              __html: "#QayyumAmirah",
             }}
             sx={{ pb: 2, fontSize: "14px" }}
           />
