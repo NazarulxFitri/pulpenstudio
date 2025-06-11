@@ -2,13 +2,7 @@
 
 import { Box, Grid, List, Paper, styled } from "@mui/material";
 import {
-  Allura,
-  Corinthia,
-  Cormorant_SC,
-  Imperial_Script,
   Playfair_Display,
-  Poppins,
-  Ubuntu,
   Antic_Didone,
   Bellefair
 } from "next/font/google";
@@ -21,10 +15,6 @@ import ReactPlayer from "react-player";
 import { CommentList, Door } from "@/components";
 import Image from "next/image";
 import { locale } from "@/utils/Locale";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination, Navigation } from 'swiper/modules';
-
-import 'swiper/css';
 
 const bellefair = Bellefair({
   subsets: ['latin'],
@@ -34,18 +24,10 @@ const anticDidone = Antic_Didone({
   subsets: ['latin'],
   weight: '400',
 });
-const ubuntu = Ubuntu({ subsets: ["latin"], weight: "700" });
 const playfair = Playfair_Display({
   subsets: ["latin"],
   weight: ["400", "500", "700"],
 });
-const coronthia = Corinthia({ subsets: ["latin"], weight: ["400", "700"] });
-const imperialScript = Imperial_Script({ subsets: ["latin"], weight: ["400"] });
-const cormorant = Cormorant_SC({
-  subsets: ["latin"],
-  weight: ["300", "400", "700"],
-});
-const poppin = Poppins({ subsets: ["latin"], weight: ["300", "500", "700"] });
 
 interface DateTimeConfig {
   countdownTimer: {
@@ -56,23 +38,8 @@ interface DateTimeConfig {
   };
 }
 
-const Special = styled("p")(() => ({
-  fontFamily: `${coronthia.style.fontFamily} !important` || "auto",
-  fontSize: "56px",
-  textAlign: "center",
-}));
-
 const MainTitle = styled("h1")(() => ({
   fontSize: "22px",
-  fontWeight: "300",
-  fontFamily: `${anticDidone.style.fontFamily} !important` || "auto",
-  textAlign: "center",
-  letterSpacing: "0.2em",
-  color: "#B79B64",
-}));
-
-const ParentNameTitle = styled("h2")(() => ({
-  fontSize: "12px",
   fontWeight: "300",
   fontFamily: `${anticDidone.style.fontFamily} !important` || "auto",
   textAlign: "center",
@@ -104,20 +71,6 @@ const Text = styled("p")(() => ({
   fontSize: "16px",
   textAlign: "center",
   color: "#B79B64",
-}));
-
-const MiniText = styled("p")(() => ({
-  fontFamily: `${playfair.style.fontFamily} !important` || "auto",
-  fontSize: "14px",
-  textAlign: "center",
-  letterSpacing: "0.1em",
-}));
-
-const UbuntuText = styled("p")(() => ({
-  fontFamily: `${ubuntu.style.fontFamily} !important` || "auto",
-  fontWeight: "700",
-  fontSize: "16px",
-  textAlign: "center",
 }));
 
 const Layout883: React.FC = () => {
@@ -206,36 +159,6 @@ const Layout883: React.FC = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
-  const listImages = [
-    {
-      path: "/media/alif-natasha/alif-1.jpeg"
-    },
-    {
-      path: "/media/alif-natasha/alif-2.jpeg"
-    },
-    {
-      path: "/media/alif-natasha/alif-3.jpeg"
-    },
-    {
-      path: "/media/alif-natasha/alif-4.jpeg"
-    },
-    {
-      path: "/media/alif-natasha/alif-5.jpeg"
-    },
-    {
-      path: "/media/alif-natasha/alif-6.jpeg"
-    },
-    {
-      path: "/media/alif-natasha/alif-7.jpeg"
-    },
-    {
-      path: "/media/alif-natasha/alif-8.jpeg"
-    },
-    {
-      path: "/media/alif-natasha/alif-9.jpeg"
-    }
-  ]
 
   return (
     <Box
@@ -352,7 +275,7 @@ const Layout883: React.FC = () => {
           <Box dir="rtl" textAlign="center" fontSize="22px" fontFamily="'Amiri Quran', sans-serif" color="#B79B64">
             بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ
           </Box>
-          <Box sx={{ zIndex: "2" }}>
+          <Box>
             <SubTitle
               sx={{ mb: 3, mt: 3 }}
               dangerouslySetInnerHTML={{
