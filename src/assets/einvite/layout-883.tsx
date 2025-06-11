@@ -537,22 +537,22 @@ const Layout883: React.FC = () => {
       <Box>
         <Widget
           hideRsvp
-          showGift
-          giftImage={"/media/alif-natasha/alif-qr.jpeg"}
+          showGift={false}
+          // giftImage={"/media/alif-natasha/alif-qr.jpeg"}
           includePhoneNumber={true}
           includeOrigin={false}
           language={item?.language!}
           textInsideColor="#121212"
-          iconColor="#efefef"
+          iconColor="#B79B64"
           color="#1b1b1b"
-          location={{ text: "391, Jalan Batik 1/7, Taman Batik, 08000 Sungai Petani, Kedah", mapUrl: item?.mapUrl! }}
+          location={{ text: "Sekamat Grand Palace Event Hall, Jalan Sungai Sekamat, Kampung Sungai Sekamat, 43000 Kajang, Selangor", mapUrl: item?.mapUrl! }}
           contact={{
-            number1: "0176715337",
-            number2: "0173144726",
-            number3: "0194104233",
-            name1: "Nafishah Inson",
-            name2: "Aida Nabila",
-            name3: "Nasruddin",
+            number1: "0112233445566",
+            number2: "0112233445566",
+            number3: "0112233445566",
+            name1: "Contact 1",
+            name2: "Contact 2",
+            name3: "Contact 3",
           }}
         />
       </Box>
