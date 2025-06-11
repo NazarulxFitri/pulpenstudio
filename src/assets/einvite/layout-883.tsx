@@ -63,10 +63,10 @@ const Title = styled("h1")(() => ({
 const SubTitle = styled("p")(() => ({
   fontSize: "12px",
   fontWeight: "300",
-  fontFamily: `${poppin.style.fontFamily} !important` || "auto",
+  fontFamily: `${cormorant.style.fontFamily} !important` || "auto",
   textAlign: "center",
   letterSpacing: "0.25em",
-  textTransform: "uppercase",
+  color: "#B79B64",
 }));
 
 const Text = styled("p")(() => ({
@@ -276,7 +276,7 @@ const Layout883: React.FC = () => {
         }} />
         <Box sx={{ color: "#B79B64", textAlign: "center" }}>
           <Image
-            src="/media/qayyum-amirah/883-main-kerawang.png"
+            src="/media/qayyum-amirah/883-ornament.webp"
             alt="Pulpen Studio"
             height={400}
             width={100}
@@ -304,29 +304,11 @@ const Layout883: React.FC = () => {
           position: "relative",
           height: "100%",
           width: "100%",
-          backgroundColor: "#121212",
+          backgroundImage: 'url("/media/qayyum-amirah/883-main-bg.png")',
           overflow: "auto",
           color: "#FFF"
         }}
       >
-        {/* Background image with opacity */}
-        <Box
-          sx={{
-            position: "absolute",
-            top: 0,
-            left: 0,
-            height: "100%",
-            mt: -2.2,
-            width: "100%",
-            backgroundImage: 'url("/media/alif-natasha/background.png")',
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "cover",
-            opacity: 0.04,
-            zIndex: 0,
-          }}
-        />
-
-
         <Box
           mx={"auto"}
           sx={{
@@ -340,21 +322,14 @@ const Layout883: React.FC = () => {
             <SubTitle
               sx={{ mb: 3, mt: 3 }}
               dangerouslySetInnerHTML={{
-                __html: "Assalamualaikum WBT <br> Salam Sejahtera",
-              }}
-            />
-            <SubTitle
-              sx={{ fontWeight: "700", mb: 3 }}
-              dangerouslySetInnerHTML={{
-                __html:
-                  "Mohd Nasruddin & Nafishah Inson",
+                __html: "Assalamualaikum & Salam Sejahtera",
               }}
             />
             <SubTitle
               sx={{ mb: 3, px: 2 }}
               dangerouslySetInnerHTML={{
                 __html:
-                  "DENGAN PENUH RASA KESYUKURAN KE HADRAT ILAHI KAMI MENJEMPUT DATO' / DATIN' / TUAN' / PUAN' / ENCIK / CIK KE MAJLIS PERKAHWINAN PUTERA KAMI",
+                  "Mengarak bunga rampai bertabur harum, Mengiringi restu dari segenap penjuru, Kami,",
               }}
             />
             <SubTitle
@@ -363,11 +338,36 @@ const Layout883: React.FC = () => {
                 mb: 3,
               }}
               dangerouslySetInnerHTML={{
-                __html: `<span style='color: gold'>Muhammad Alif Asyraf bin Badrulhisham</span><br>&<br><span style='color: gold'>Nor Nathasya Syaqila binti Noor Iskhandar</span>`,
+                __html: `AHMAD TAQUWA<br>&<br>NOR FAIZAH</span>`,
               }}
             />
           </Box>
         </Box>
+        <SubTitle
+          sx={{ mb: 3, px: 2 }}
+          dangerouslySetInnerHTML={{
+            __html:
+              "Mengarak bunga rampai bertabur harum, Mengiringi restu dari segenap penjuru, Kami,",
+          }}
+        />
+
+        <SubTitle
+          sx={{
+            fontWeight: "700",
+            mb: 3,
+          }}
+          dangerouslySetInnerHTML={{
+            __html: `AHMAD TAQUWA<br>&<br>NOR FAIZAH</span>`,
+          }}
+        />
+
+        <SubTitle
+          sx={{ mb: 3, px: 2 }}
+          dangerouslySetInnerHTML={{
+            __html:
+              "Semoga Qayyum & Amirah berjaya dan bahagia di dunia akhirat",
+          }}
+        />
 
         <Box
           sx={{
@@ -378,65 +378,6 @@ const Layout883: React.FC = () => {
             position: "relative",
           }}
         >
-          <Box sx={{ display: "inline-flex" }}>
-            <SubTitle
-              sx={{ fontSize: "12px", my: 0.5, textAlign: "left", color: "gold" }}
-              dangerouslySetInnerHTML={{
-                __html: "Atur Cara Majlis",
-              }}
-            />
-          </Box>
-          <Box sx={{ display: "block" }}>
-            <SubTitle
-              sx={{ fontSize: "12px", my: 0.5, textAlign: "center" }}
-              dangerouslySetInnerHTML={{
-                __html: "14 . 06 . 2025",
-              }}
-            />
-          </Box>
-          <Box sx={{ display: "inline-flex" }}>
-            <SubTitle
-              sx={{ fontSize: "12px", my: 0.5, display: "block", mr: 2 }}
-              dangerouslySetInnerHTML={{
-                __html: "<b>8.00pm - 11.00pm</b>",
-              }}
-            />
-            <SubTitle
-              sx={{ fontSize: "12px", my: 0.5, textAlign: "left" }}
-              dangerouslySetInnerHTML={{
-                __html: "Jamuan Makan",
-              }}
-            />
-          </Box>
-          <Box sx={{ display: "inline-flex" }}>
-            <SubTitle
-              sx={{ fontSize: "12px", my: 0.5, display: "block", mr: 2 }}
-              dangerouslySetInnerHTML={{
-                __html: "<b>8.30pm</b>",
-              }}
-            />
-            <SubTitle
-              sx={{ fontSize: "12px", my: 0.5, textAlign: "left" }}
-              dangerouslySetInnerHTML={{
-                __html: "Ketibaan Pengantin",
-              }}
-            />
-          </Box>
-
-          <Box sx={{ mt: 4 }}>
-            <SubTitle
-              sx={{ fontSize: "12px", my: 0.5, display: "block", mr: 2, color: "gold" }}
-              dangerouslySetInnerHTML={{
-                __html: "Lokasi",
-              }}
-            />
-            <SubTitle
-              sx={{ fontSize: "12px", my: 0.5, textAlign: "center" }}
-              dangerouslySetInnerHTML={{
-                __html: "391, Jalan Batik 1/7, Taman Batik, 08000 Sungai Petani, Kedah",
-              }}
-            />
-          </Box>
         </Box>
 
         <Box
