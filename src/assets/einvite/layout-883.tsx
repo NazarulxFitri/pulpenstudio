@@ -44,7 +44,7 @@ const MainTitle = styled("h1")(() => ({
   fontFamily: `${anticDidone.style.fontFamily} !important` || "auto",
   textAlign: "center",
   letterSpacing: "0.2em",
-  color: "#B79B64",
+  color: "#c7ad7e",
 }));
 
 const Title = styled("h1")(() => ({
@@ -53,24 +53,24 @@ const Title = styled("h1")(() => ({
   fontSize: "40px",
   textAlign: "center",
   fontWeight: "lighter",
-  color: "#B79B64",
+  color: "#c7ad7e",
   letterSpacing: "0.2em",
 }));
 
 const SubTitle = styled("p")(() => ({
-  fontSize: "12px",
+  fontSize: "14px",
   fontWeight: "300",
   fontFamily: `${bellefair.style.fontFamily} !important` || "auto",
   textAlign: "center",
   letterSpacing: "0.2em",
-  color: "#B79B64",
+  color: "#c7ad7e",
 }));
 
 const Text = styled("p")(() => ({
   fontFamily: `${playfair.style.fontFamily} !important` || "auto",
   fontSize: "16px",
   textAlign: "center",
-  color: "#B79B64",
+  color: "#c7ad7e",
 }));
 
 const Layout883: React.FC = () => {
@@ -167,36 +167,25 @@ const Layout883: React.FC = () => {
         boxShadow: "1px 1px 10px #efefef",
         m: "auto",
         position: "relative",
-        // overflow: "hidden",
+        overflow: "hidden",
         height: clickOpen ? "100%" : "100vh",
       }}
       onTouchStart={() => setMusicStart(true)}
       onClick={() => setMusicStart(true)}
     >
-      <Door color="#FFF" {...{ clickOpen, setClickOpen }}>
-        <Title
-          sx={{ fontSize: "24px", textShadow: "1px 1px 10px #efefef" }}
-          dangerouslySetInnerHTML={{
-            __html: `<span>Q</span>ayyum`,
-          }}
+      <Door forQayyum color="#FFF" {...{ clickOpen, setClickOpen }}>
+        <Image
+          src="/media/qayyum-amirah/883-qa-logo.png"
+          alt="Pulpen Studio"
+          width={220}
+          height={220}
+          style={{ width: "50%", height: "auto" }}
         />
-        <Title
-          sx={{ fontSize: "24px", display: "block", my: "10px" }}
-          dangerouslySetInnerHTML={{
-            __html: `&`,
-          }}
-        />
-        <Title
-          sx={{ fontSize: "24px", textShadow: "1px 1px 10px #efefef" }}
-          dangerouslySetInnerHTML={{
-            __html: `<span">A</span>mirah`,
-          }}
-        />
-        <SubTitle
+        <Text
           sx={{
             marginBottom: "-12px",
-            marginTop: "12px",
-            fontSize: "8px",
+            marginTop: "-12px",
+            fontSize: "12px",
             textAlign: "center",
           }}
           dangerouslySetInnerHTML={{ __html: `Sila Klik` }}
@@ -223,12 +212,14 @@ const Layout883: React.FC = () => {
         }}
       >
         <Box sx={{
-          border: "1px solid #B79B64",
+          border: "1px solid #c7ad7e",
           position: "absolute",
           height: "94%",
           width: "90%",
         }} />
-        <Box sx={{ color: "#B79B64", textAlign: "center" }}>
+        <Box sx={{
+          color: "#c7ad7e", textAlign: "center"
+        }}>
 
           <Box position="relative" width="100%" height="100%">
             <Image
@@ -262,14 +253,11 @@ const Layout883: React.FC = () => {
           <Title className="animate__animated animate__fadeIn animate__delay-2s animate__slower"
             sx={{ fontSize: { xs: "14px", md: "16px" }, mt: 2 }} dangerouslySetInnerHTML={{ __html: "MAHLIGAI KASIH" }} />
           <Box sx={{ my: 3 }}>
-            <MainTitle className="animate__animated animate__fadeIn animate__delay-3s animate__slower" sx={{}} dangerouslySetInnerHTML={{ __html: "QAYYUM & AMIRAH" }} />
+            <MainTitle className="animate__animated animate__fadeIn animate__delay-3s animate__slower" sx={{ fontWeight: "700" }} dangerouslySetInnerHTML={{ __html: "QAYYUM & AMIRAH" }} />
           </Box>
           <Title id="delay-5s" className={bellefair.className} sx={{ fontSize: { xs: "14px", md: "16px" } }} dangerouslySetInnerHTML={{ __html: "20 . 09 . 2025" }} />
           <Title id="delay-6s" sx={{ fontSize: { xs: "14px", md: "16px" }, mt: 1 }} dangerouslySetInnerHTML={{ __html: "SABTU" }} />
           <Title id="delay-7s" sx={{ fontSize: { xs: "14px", md: "16px" }, mt: 3, lineHeight: "1.045em" }} dangerouslySetInnerHTML={{ __html: "SEKAMAT GRAND PALACE" }} />
-          <Title id="delay-7s" sx={{ fontSize: { xs: "14px", md: "16px" }, mt: 1, lineHeight: "1.045em" }} dangerouslySetInnerHTML={{ __html: "JLN. SG. SEKAMAT," }} />
-          <Title id="delay-7s" sx={{ fontSize: { xs: "14px", md: "16px" }, mt: 1, lineHeight: "1.045em" }} dangerouslySetInnerHTML={{ __html: "KG. SEKAMAT, 43000 KAJANG," }} />
-          <Title id="delay-7s" sx={{ fontSize: { xs: "14px", md: "16px" }, mt: 1, lineHeight: "1.045em" }} dangerouslySetInnerHTML={{ __html: "SELANGOR" }} />
         </Box>
 
       </Box>
@@ -311,8 +299,8 @@ const Layout883: React.FC = () => {
                   "Mengarak bunga rampai bertabur harum,<br>Mengiringi restu dari segenap penjuru,<br>Kami,",
               }}
             />
-            <MainTitle
-              sx={{ mb: 3, lineHeight: "1.5em" }}
+            <SubTitle
+              sx={{ mb: 3, lineHeight: "1.5em", fontWeight: "700" }}
               dangerouslySetInnerHTML={{
                 __html: `AHMAD TAQUWA<br>&<br>NOR FAIZAH</span>`,
               }}
@@ -328,8 +316,8 @@ const Layout883: React.FC = () => {
         </Box>
 
 
-        <MainTitle
-          sx={{ mb: 3, lineHeight: "1.5em" }}
+        <SubTitle
+          sx={{ mb: 3, lineHeight: "1.5em", fontWeight: "700" }}
           dangerouslySetInnerHTML={{
             __html: `QAYYUM<br>&<br>AMIRAH</span>`,
           }}
@@ -443,13 +431,7 @@ const Layout883: React.FC = () => {
             dangerouslySetInnerHTML={{
               __html: locale?.[item?.language!]?.CARD_WISH_TITLE,
             }}
-            sx={{ pb: 2, fontSize: "12px" }}
-          />
-          <Title
-            dangerouslySetInnerHTML={{
-              __html: "#QayyumAmirah",
-            }}
-            sx={{ pb: 2, fontSize: "14px" }}
+            sx={{ pb: 2 }}
           />
           <Grid container>
             <Grid item py={2} xs={12}>
@@ -482,22 +464,20 @@ const Layout883: React.FC = () => {
       <Box>
         <Widget
           hideRsvp
-          showGift={false}
+          // showGift={true}
           // giftImage={"/media/alif-natasha/alif-qr.jpeg"}
           includePhoneNumber={true}
           includeOrigin={false}
           language={item?.language!}
           textInsideColor="#121212"
           iconColor="#B79B64"
-          color="#1b1b1b"
+          color="rgba(0, 0, 0, 0.2)"
           location={{ text: "Sekamat Grand Palace Event Hall, Jalan Sungai Sekamat, Kampung Sungai Sekamat, 43000 Kajang, Selangor", mapUrl: item?.mapUrl! }}
           contact={{
-            number1: "0112233445566",
-            number2: "0112233445566",
-            number3: "0112233445566",
-            name1: "Contact 1",
-            name2: "Contact 2",
-            name3: "Contact 3",
+            number1: "0126169632",
+            number2: "0122703717",
+            name1: "En Taquwa (Ayah)",
+            name2: "Puan Faizah (Ibu)",
           }}
         />
       </Box>
