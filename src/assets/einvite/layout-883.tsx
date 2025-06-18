@@ -1,4 +1,4 @@
-// Qayyum & Amirah
+// Qayyum & Amirah card
 
 import { Box, Grid, List, Paper, styled } from "@mui/material";
 import {
