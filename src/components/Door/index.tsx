@@ -73,7 +73,7 @@ const Door: React.FC<DoorProps> = ({
             }
             id="right-door"
             sx={{
-              backgroundImage: 'url("/media/qayyum-amirah/883-main-bg.png")',
+              background: '#FFF',
               boxShadow: specialBg ? "unset" : "-10px 0px 20px #D0D0D0",
               width: "50%",
               height: "100vh",
@@ -85,7 +85,7 @@ const Door: React.FC<DoorProps> = ({
             className={clickOpen ? "animate__animated animate__fadeOut" : ""}
             onClick={() => setClickOpen(true)}
             sx={{
-              background: "#fff",
+              backgroundImage: `url("/media/qayyum-amirah/883-main-bg.png")`,
               borderRadius: specialBg ? "0" : "80%",
               boxShadow: specialBg ? "0" : `-8px 8px 8px #efefef`,
               px: removePadding ? 0 : 1,
