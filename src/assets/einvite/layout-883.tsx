@@ -15,6 +15,7 @@ import ReactPlayer from "react-player";
 import { CommentList, Door } from "@/components";
 import Image from "next/image";
 import { locale } from "@/utils/Locale";
+import Head from "next/head";
 
 const bellefair = Bellefair({
   subsets: ['latin'],
@@ -161,6 +162,38 @@ const Layout883: React.FC = () => {
   }, []);
 
   return (
+    <>
+    <Head>
+  <title>Wedding of Qayyum & Amirah</title>
+
+  {/* Override Open Graph tags */}
+  <meta property="og:title" content="Qayyum & Amirah's Wedding Invitation" />
+  <meta
+    property="og:description"
+    content="Join us to celebrate the wedding of Qayyum & Amirah. Tap to view the invitation."
+  />
+  <meta
+    property="og:image"
+    content="https://www.pulpenstudio.com/media/qayyum-amirah/og-preview.jpg"
+  />
+  <meta
+    property="og:url"
+    content="https://www.pulpenstudio.com/e-invite/live/wedding-of-qayyum-and-amirah"
+  />
+  <meta property="og:type" content="website" />
+
+  {/* Optional: Twitter card override */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Qayyum & Amirah's Wedding Invitation" />
+  <meta
+    name="twitter:description"
+    content="Join us to celebrate the wedding of Qayyum & Amirah. Tap to view the invitation."
+  />
+  <meta
+    name="twitter:image"
+    content="https://www.pulpenstudio.com/media/qayyum-amirah/og-preview.jpg"
+  />
+</Head>
     <Box
       maxWidth="400px"
       sx={{
@@ -482,6 +515,7 @@ const Layout883: React.FC = () => {
         />
       </Box>
     </Box>
+    </>
   );
 };
 
