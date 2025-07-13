@@ -496,7 +496,6 @@ const Layout883: React.FC = () => {
 
       <Box>
         <Widget
-          hideRsvp
           // showGift={true}
           // giftImage={"/media/alif-natasha/alif-qr.jpeg"}
           includePhoneNumber={true}
@@ -504,7 +503,7 @@ const Layout883: React.FC = () => {
           language={item?.language!}
           textInsideColor="#121212"
           iconColor="#B79B64"
-          color="rgba(0, 0, 0, 0.2)"
+          color="rgba(0, 0, 0, 0.4)"
           location={{ text: "Sekamat Grand Palace Event Hall, Jalan Sungai Sekamat, Kampung Sungai Sekamat, 43000 Kajang, Selangor", mapUrl: item?.mapUrl! }}
           contact={{
             number1: "0126169632",
