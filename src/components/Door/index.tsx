@@ -19,6 +19,7 @@ interface DoorProps {
   lailyDinie?: boolean;
   syafiqKhairi?: boolean;
   forQayyum?: boolean;
+  ashrafNatasha?: boolean;
 }
 
 const Door: React.FC<DoorProps> = ({
@@ -38,8 +39,92 @@ const Door: React.FC<DoorProps> = ({
   shahida,
   lailyDinie,
   syafiqKhairi,
-  forQayyum
+  forQayyum,
+  ashrafNatasha,
 }) => {
+
+  if (ashrafNatasha)
+    return (
+      <Box sx={{ position: "absolute", width: "100%", height: "100%" }}>
+        <Box sx={{ display: "flex", position: "relative" }}>
+          <Box
+            className={clickOpen ? "animate__animated animate__slideOutLeft" : ""}
+            id="left-door"
+            sx={{
+              width: "50%",
+              height: "100vh",
+              zIndex: "2",
+            }}
+          />
+          <Box className={clickOpen ? "animate__animated animate__fadeOut" : ""} sx={{ zIndex: "1" }}>
+            <Box
+              sx={{
+                position: "absolute",
+                bottom: "0",
+                left: "0%",
+                opacity: "0.5",
+              }}
+            >
+              <Image
+                src="/media/animation/layout12-art.webp"
+                alt="Pulpen Studio Green Leaf"
+                width={400}
+                height={400}
+              />
+            </Box>
+      
+            <Box
+              className="animate__animated animate__zoomIn animate__slow"
+              sx={{ position: "absolute", top: "-160px", right: "-60px", transform: "rotate(140deg) scaleX(-1)", opacity: "0.8" }}
+            >
+              <Image src="/media/animation/layout12-flower.webp" alt="Pulpen Studio Green Leaf" width={231} height={441} />
+            </Box>
+            <Box
+              className="animate__animated animate__zoomIn animate__slow"
+              sx={{ position: "absolute", bottom: "-80px", transform: "rotate(40deg)", right: "-80px", opacity: "0.8" }}
+            >
+              <Image src="/media/animation/layout12-flower.webp" alt="Pulpen Studio Green Leaf" width={231} height={441} />
+            </Box>
+            <Box
+              className="animate__animated animate__zoomIn animate__slow"
+              sx={{ position: "absolute", bottom: "-80px", transform: "rotate(-40deg) scaleX(-1)", left: "-80px", opacity: "0.8" }}
+            >
+              <Image src="/media/animation/layout12-flower.webp" alt="Pulpen Studio Green Leaf" width={231} height={441} />
+            </Box>
+          </Box>
+          <Box
+            className={clickOpen ? "animate__animated animate__slideOutRight" : ""}
+            id="right-door"
+            sx={{
+              width: "50%",
+              height: "100vh",
+              zIndex: "2",
+            }}
+          />
+          <Box
+            className={clickOpen ? "animate__animated animate__fadeOut" : ""}
+            onClick={() => setClickOpen(true)}
+            sx={{
+              background: color,
+              borderRadius: "80%",
+              boxShadow: `-8px 8px 8px #D0D0D0`,
+              px: 3,
+              pt: 4,
+              pb: 4,
+              position: "absolute",
+              textAlign: "center",
+              left: "50%",
+              top: "50%",
+              transform: "translate(-50%,-50%)",
+              minWidth: "60px",
+              zIndex: "3",
+            }}
+          >
+            {children}
+          </Box>
+        </Box>
+      </Box>
+    );
 
   if (forQayyum)
     return (
