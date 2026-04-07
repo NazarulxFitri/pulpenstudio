@@ -12,6 +12,10 @@ const AshrafNatasha = () => {
           name="description"
           content="Walimatulurus Muhammad Ashraf & Nurul Natasha"
         />
+        <meta property="og:title" content="Walimatulurus Muhammad Ashraf & Nurul Natasha Izzati" />
+        <meta property="og:url" content="https://www.pulpenstudio.com/e-invite/live/ashraf-dan-natasha" />
+        <meta property="og:description" content="Walimatulurus Muhammad Ashraf & Nurul Natasha Izzati" />
+        <meta property="og:type" content="website" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/pulpenstudioxicon.png" />
       </Head>
