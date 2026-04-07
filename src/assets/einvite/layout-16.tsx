@@ -346,7 +346,7 @@ Sekian, Terima Kasih`,
               height={280}
             />
           </Box>
-          <Box sx={{ textAlign: "left", padding: "0 32px" }}>
+          <Box sx={{ textAlign: "center", padding: "0 32px" }}>
             <Text
               sx={{ fontSize: "12px" }}
               dangerouslySetInnerHTML={{
@@ -354,21 +354,21 @@ Sekian, Terima Kasih`,
                   "<b>ATUR CARA</b> | <i>TENTATIVES</i><br><br>12pm - 4pm<br><br>",
               }}
             />
-            <Box sx={{ display: "inline-flex" }}>
-              <Text
+            <Box sx={{ display: "flex", justifyContent: "center" }}>
+              {/* <Text
                 sx={{ fontSize: "12px", my: 0.5, display: "block", mr: 2 }}
                 dangerouslySetInnerHTML={{
                   __html: "<b>12.00pm</b>",
                 }}
-              />
+              /> */}
               <Text
-                sx={{ fontSize: "12px", my: 0.5, textAlign: "left" }}
+                sx={{ fontSize: "12px", my: 0.5, textAlign: "center" }}
                 dangerouslySetInnerHTML={{
-                  __html: "<b>Majlis bermula</b>",
+                  __html: "<b>Majlis bermula 12:00pm hingga 4:00pm</b>",
                 }}
               />
             </Box>
-            <Box sx={{ display: "inline-flex" }}>
+            {/* <Box sx={{ display: "inline-flex" }}>
               <Text
                 sx={{ fontSize: "12px", my: 0.5, display: "block", mr: 2 }}
                 dangerouslySetInnerHTML={{
@@ -381,8 +381,8 @@ Sekian, Terima Kasih`,
                   __html: "<b>Ketibaan pengantin</b>",
                 }}
               />
-            </Box>
-            <Box sx={{ display: "inline-flex" }}>
+            </Box> */}
+            {/* <Box sx={{ display: "inline-flex" }}>
               <Text
                 sx={{ fontSize: "12px", my: 0.5, display: "block", mr: 2 }}
                 dangerouslySetInnerHTML={{
@@ -395,7 +395,7 @@ Sekian, Terima Kasih`,
                   __html: "<b>Majlis bersurai</b>",
                 }}
               />
-            </Box>
+            </Box> */}
           </Box>
         </Box>
 
