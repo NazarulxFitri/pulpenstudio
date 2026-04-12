@@ -13,13 +13,14 @@ export { default as Layout12 } from "./einvite/layout-12";
 export { default as Layout13 } from "./einvite/layout-13";
 export { default as Layout14 } from "./einvite/layout-14";
 
+export { default as Layout16 } from "./einvite/layout-16";
+
 // Custom for client
 export { default as Layout884 } from "./einvite/layout-884";
 export { default as Layout885 } from "./einvite/layout-885";
 export { default as Layout886 } from "./einvite/layout-886";
 export { default as Layout887 } from "./einvite/layout-887";
 
-export { default as Layout888 } from "./einvite/layout-888";
 export { default as Layout897 } from "./einvite/layout-897";
 export { default as Layout898 } from "./einvite/layout-898";
 export { default as Layout899 } from "./einvite/layout-899";
@@ -32,7 +33,6 @@ export { default as Layout994 } from "./einvite/layout-994";
 export { default as Layout995 } from "./einvite/layout-995";
 export { default as Layout9951 } from "./einvite/layout-995-1";
 export { default as Layout996 } from "./einvite/layout-996";
-export { default as Layout997 } from "./einvite/layout-997";
 export { default as Layout997jpn } from "./einvite/layout-997-jpn";
 export { default as Layout998 } from "./einvite/layout-998";
 export { default as Layout999 } from "./einvite/layout-999";
