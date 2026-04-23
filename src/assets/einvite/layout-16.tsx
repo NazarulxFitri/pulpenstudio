@@ -136,7 +136,8 @@ const Layout16: React.FC = () => {
         boxShadow: "1px 1px 10px #b4bca9",
         m: "auto",
         position: "relative",
-        overflow: "hidden",
+        overflowX: "hidden",
+        overflowY: "auto",
         height: clickOpen ? "100%" : "100vh",
       }}
       onTouchStart={() => setMusicStart(true)}
@@ -482,6 +483,8 @@ Sekian, Terima Kasih`,
                   background: "transparent",
                   boxShadow: "unset",
                   maxHeight: "400px",
+                  overflowY: "auto",
+                  WebkitOverflowScrolling: "touch",
                 }}
               >
                 <List sx={{ p: 0, mb: 4 }}>
